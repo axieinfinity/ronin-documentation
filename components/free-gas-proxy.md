@@ -1,8 +1,8 @@
 # Free Gas Proxy
 
-![Interactive flow from users to Ronin network](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c24caedc-5707-42ce-a72a-e07e0fdaac90/Untitled\_\(2\).png?X-Amz-Algorithm=AWS4-HMAC-SHA256\&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD\&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220210%2Fus-west-2%2Fs3%2Faws4\_request\&X-Amz-Date=20220210T102009Z\&X-Amz-Expires=86400\&X-Amz-Signature=b2d73a8d46cc1c25ba1010b1a97d5d1c677b5b3432bce0282b190551cdf3bfe8\&X-Amz-SignedHeaders=host\&response-content-disposition=filename%20%3D%22Untitled%2520%282%29.png%22\&x-id=GetObject)
+![Interactive flow from users to Ronin network](<../.gitbook/assets/Untitled (2).png>)
 
-A service allows Axie users to access the Ronin blockchain and send transactions without paying any RON - the Ronin native currency. The number of free transactions per day depends on holding Axie's NFTs, according to the below configurations**:**
+A service allows Axie users to access the Ronin blockchain and send transactions without paying any RON - the Ronin native currency. The number of free transactions per day depends on holding Axie's NFTs, according to the below configurations\*\*:\*\*
 
 Amount free transactions from holding Axies:
 
@@ -76,5 +76,4 @@ Returns number of free gas requests of a given address.
     "result": 100,
     "error": null
 }
-
 ```
