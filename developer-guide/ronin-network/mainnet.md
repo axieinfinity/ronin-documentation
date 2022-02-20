@@ -2,10 +2,11 @@
 
 ### Specification
 
-* Chain id: `2020 or 0x7e4`&#x20;
+* Chain id (network id): `2020`
 * RPC endpoint: [https://api.roninchain.com/rpc](https://api.roninchain.com/rpc)
 * Consensus: POA (Consortium)
 * Stats: [https://stats.roninchain.com/](https://stats.roninchain.com)
+* Explorer:
 * Genesis file: [https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json)
 
 ### Genesis contracts
@@ -31,7 +32,7 @@
 ### Boot nodes
 
 ```
-TBD.
+enode://a166ab6437cf370bc604097529a0fb6a8a4836bb85833fbf588b130cb73fe0517940d10c5d89c0e3e1c2800a774ac1ae2108d62cb4608556e41bc1fc4482241a@35.193.159.26:30303
 ```
 
 ### Validators

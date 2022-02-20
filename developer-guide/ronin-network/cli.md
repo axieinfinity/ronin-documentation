@@ -1,4 +1,36 @@
-# CLI
+# Getting started
+
+### Install Ronin
+
+```
+make ronin
+```
+
+### Genesis
+
+Before starting new node, you must init genesis block with the following command:
+
+```
+ronin init <path-to-your-genesis-file>.json --datadir <path-to-your-node-directory>
+```
+
+* genesis files can be found in package **genesis**
+
+### Start a node
+
+To start a node, run the following command:
+
+```
+ronin --networkid 2020 \
+--bootnodes enode://a166ab6437cf370bc604097529a0fb6a8a4836bb85833fbf588b130cb73fe0517940d10c5d89c0e3e1c2800a774ac1ae2108d62cb4608556e41bc1fc4482241a@35.193.159.26:30303 \
+--syncmode snap \
+--datadir /ronin/data \
+--port 30303 \
+--http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' \
+--ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*'
+```
+
+### All commands
 
 ```
 NAME:
@@ -245,5 +277,4 @@ MISC OPTIONS:
   --help, -h                          show help
   --catalyst                          Catalyst mode (eth2 integration testing)
   --override.arrowglacier value       Manually specify Arrow Glacier fork-block, overriding the bundled setting (default: 0)
-
 ```

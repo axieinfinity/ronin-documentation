@@ -4,7 +4,7 @@
 * [Developer Guide](developer-guide/README.md)
   * [APIs](https://documenter.getpostman.com/view/1372857/UVeKqQMn)
   * [Ronin Network](developer-guide/ronin-network/README.md)
-    * [CLI](developer-guide/ronin-network/cli.md)
+    * [Getting started](developer-guide/ronin-network/cli.md)
     * [Mainnet](developer-guide/ronin-network/mainnet.md)
     * [Testnet](developer-guide/ronin-network/testnet.md)
   * [Smart contract deploying](developer-guide/smart-contract-deploying/README.md)
