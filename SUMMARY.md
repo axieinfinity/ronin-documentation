@@ -10,7 +10,7 @@
   * [Smart contract deploying](developer-guide/smart-contract-deploying/README.md)
     * [Using Truffle](developer-guide/smart-contract-deploying/using-truffle.md)
     * [Using Hardhat](developer-guide/smart-contract-deploying/using-hardhat.md)
-  * [Minimum requirements](developer-guide/minimum-requirements.md)
+  * [Minimum technical requirements](developer-guide/minimum-requirements.md)
 * [Platform](platform/README.md)
   * [Comparison](platform/comparison.md)
   * [Road Map](platform/road-map.md)
