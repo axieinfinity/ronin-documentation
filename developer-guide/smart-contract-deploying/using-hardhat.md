@@ -3,7 +3,7 @@
 ### Install Hardhat
 
 ```
-npm init && npm --save-dev hardhat
+npm init && npm install dotenv && npm install --save-dev hardhat
 ```
 
 To use your local installation of Hardhat, you need to use `npx` to run it (i.e. `npx hardhat`).
@@ -142,7 +142,7 @@ main()
 By running:
 
 ```
-npx hardhat run scripts/sample-script.js
+npx hardhat run scripts/sample-script.js --network ronin
 ```
 
 The result should be like this:
