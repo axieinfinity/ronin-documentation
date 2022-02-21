@@ -34,7 +34,7 @@
 ### Boot nodes
 
 ```
-TBD.
+enode://4c1cb7c693cfbeb7122a6c69aee3c4d111a5b7b360fd9166d4dd670ec0046d671383bf94e187055124e7ef87161f68eb14d24d5a3b0ed551e70e3915387f1f53@34.121.185.56:30303
 ```
 
 ### Validators
