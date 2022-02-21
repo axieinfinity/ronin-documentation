@@ -45,6 +45,8 @@ module.exports = {
 
 Add your wallet mnemonic to `.secret` file
 
+### Deploying smart contract
+
 * Add `Greeter.sol` into `contracts` folder
 
 ```
