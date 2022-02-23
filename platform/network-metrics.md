@@ -6,4 +6,3 @@
    * Suggestion: 1GB SSD, prune cache after 2 or 3 weeks
 2. Block Time: 3 seconds
 3. Gas Price: 1 GWEI
-4. Number of validators: 139
