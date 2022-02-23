@@ -16,6 +16,7 @@
   * [Road Map](platform/road-map.md)
   * [Lite Paper](platform/lite-paper.md)
   * [Tokenomic](platform/tokenomic.md)
+  * [Network Metrics](platform/network-metrics.md)
 * [Components](components/README.md)
   * [Validators](components/validators.md)
   * [Transfer Gateways and Ronin Bridge](components/untitled.md)
