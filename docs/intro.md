@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Introduction
 
 Ronin is a Byzantine Fault Tolerant proof of authority (POA) network operated by validators. Carefully selected, trusted validators are predefined at the bootstrap of the network. Later, new validators can be added or old validators can be removed if the decision is approved by the majority of currently active validators.&#x20;
