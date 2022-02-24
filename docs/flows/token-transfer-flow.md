@@ -10,7 +10,7 @@ To allow users to transfer their tokens on Ronin, they have to transfer them fir
 
 This deposit event is then picked up by the Ronin Bridge which transmits these events to the `MainchainGateway`and `SidechainGateway` contracts on the Ronin. As soon as the Gateway smart contract on Ronin has information about the deposited tokens on the Ethereum Gateway and enough validators have acknowledged,  `SidechainGateway` creates a clone of these tokens on Ronin.
 
-![Token deposit flow](<../.gitbook/assets/Blank diagram (7).png>)
+![Token deposit flow](<./token-transfer-flow.png>)
 
 ### Token Withdrawal
 
@@ -20,4 +20,4 @@ The withdrawal event is then picked up by the Ronin Bridge, which transmits obse
 
 
 
-![Token withdrawal flow](<../.gitbook/assets/Blank diagram (9).png>)
+![Token withdrawal flow](<./token-witdrawal-flow.png>)

@@ -8,6 +8,12 @@
 * Stats: [https://stats.roninchain.com/](https://stats.roninchain.com)
 * Explorer:
 * Genesis file: [https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json)
+* Full node size:
+   * The pruned cache is 160GB (updated on 23/2/2020)
+   * 0.5GB daily increment for pruned cache data
+   * Suggestion: Prune cache after 2 or 3 weeks
+* Block Time: 3 seconds
+* Gas Price: 1 GWEI
 
 ### Genesis contracts
 
