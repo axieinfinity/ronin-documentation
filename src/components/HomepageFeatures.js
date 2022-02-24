@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
-import { string } from 'joi';
 const dapp = require('./building-dapp.jpg').default;
 const games = require('./building-games.jpg').default;
 const validators = require('./runing-validator.jpg').default;
