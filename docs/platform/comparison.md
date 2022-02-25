@@ -1,5 +1,6 @@
 ---
 description: 'Blockchain comparison overview: Ronin Chain, Ethereum.'
+sidebar_position: 1
 ---
 
 # Comparison

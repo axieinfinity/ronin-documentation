@@ -2,6 +2,7 @@
 description: >-
   Transfer Gateways and Ronin Bridge represent the gate between Ethereum and
   Ronin.
+sidebar_position: 2
 ---
 
 # Transfer Gateways and Ronin Bridge

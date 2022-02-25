@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Free Gas Proxy
 
 ![Interactive flow from users to Ronin network](<./free-gas-proxy.png>)

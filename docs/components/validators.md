@@ -2,6 +2,7 @@
 description: >-
   Validators are responsible for validating transactions and generating blocks,
   ensuring the network’s security and the consistency of the ledger.
+sidebar_position: 1
 ---
 
 # Validators
