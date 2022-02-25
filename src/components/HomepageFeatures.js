@@ -28,7 +28,7 @@ const FeatureList = [
     },
     description: (
       <>
-        Build your games with Axie Infinity IP, marketplace and Mavis Hub.
+        Build your game with Axie Infinity IP, marketplace and Mavis Hub.
       </>
     ),
 
