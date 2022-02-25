@@ -15,7 +15,7 @@ const FeatureList = [
     image: dapp,
     description: (
       <>
-        Get started building your Ronin Network decantralize application.
+        Get started building your Ronin Network decentralized application.
       </>
     ),
   },
