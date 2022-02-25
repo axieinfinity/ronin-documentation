@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Network Metrics
 
 1. Full node size:&#x20;
