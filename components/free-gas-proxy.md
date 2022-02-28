@@ -2,7 +2,7 @@
 
 ![Interactive flow from users to Ronin network](<../.gitbook/assets/Untitled (2).png>)
 
-A service allows Axie users to access the Ronin blockchain and send transactions without paying any RON - the Ronin native currency. The number of free transactions per day depends on holding Axie's NFTs, according to the below configurations\*\*:\*\*
+A service allows Axie users to access the Ronin blockchain and send transactions without paying any RON - the Ronin native currency. The number of free transactions per day depends on holding Axie's NFTs, according to the below configurations:
 
 Amount free transactions from holding Axies:
 

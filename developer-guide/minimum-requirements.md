@@ -1,7 +1,17 @@
-# Minimum technical requirements
+# Minimum hardware requirements
 
-### Minimal hardware Configuration for Full Node
+{% hint style="info" %}
+Running a node requires a lot of disk space and drives with fast read/write speed (IOPS)
+{% endhint %}
 
-* RAM: 16-32 GB
-* CPU: 4-8 core CPU (t3 xLarge)
-* Storage: Minimum 650GB SSD (make sure it is extendable)
+## Running a full Ronin node
+
+* 4 CPU Cores
+* 8 GB RAM
+* At least 1 TB high-speed SSD
+
+## Running an archive Ronin node
+
+* 8 CPU Cores
+* 8 GB RAM
+* At least 4TB high-speed SSD

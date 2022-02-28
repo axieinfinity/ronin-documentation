@@ -1,4 +1,4 @@
-# Getting started
+# Getting Started with CLI
 
 ### Install Ronin
 
@@ -14,7 +14,7 @@ Before starting new node, you must init genesis block with the following command
 ronin init <path-to-your-genesis-file>.json --datadir <path-to-your-node-directory>
 ```
 
-* genesis files can be found in package **genesis**
+* Genesis files can be found in package **genesis**
 
 ### Start a node
 
