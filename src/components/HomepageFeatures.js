@@ -10,7 +10,7 @@ const FeatureList = [
     title: 'Build your dApp',
     link: {
       href: '/docs/intro',
-      title: 'Start builiding dApp'
+      title: 'Start building dApp'
     },
     image: dapp,
     description: (

@@ -20,7 +20,7 @@ sidebar_position: 4
 * Sky Mavis: 30%
 * Ecosystem Fund: 15%
 
-![](<../.gitbook/assets/image (3) (1).png>)
+![](<./image_3_1.png>)
 
 After 5 years, gas and protocol fees will totally replace Staking Rewards.
 
@@ -28,4 +28,4 @@ After 5 years, gas and protocol fees will totally replace Staking Rewards.
 
 The maximum supply of RON will be released after 294 months the issuance begins.
 
-![](<../.gitbook/assets/image (2).png>)
+![](<./image_2.png>)

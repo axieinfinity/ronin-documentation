@@ -29,4 +29,4 @@ The transaction drop is not only related to the forwarding mechanism of the free
 
 The transaction is considered to be dropped when the pool is full and the submitted transaction is cheaper than (or as cheap as) the lowest priced transaction currently being tracked.
 
-![Ronin Transaction Lifecycle Diagram](<../.gitbook/assets/image (3).png>)
+![Ronin Transaction Lifecycle Diagram](<./image_3.png>)

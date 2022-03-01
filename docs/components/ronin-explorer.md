@@ -8,8 +8,8 @@ Ronin Explorer allows you to explore and search the Ronin blockchain for transac
 
 ### Mainnet Explorer
 
-{% embed url="https://explorer.roninchain.com" %}
+[https://explorer.roninchain.com](https://explorer.roninchain.com)
 
 ### Testnet Explorer
 
-{% embed url="https://testnet-explorer.roninchain.com" %}
+[https://testnet-explorer.roninchain.com](https://testnet-explorer.roninchain.com)
