@@ -27,6 +27,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Getting Started',
+      link: {type: 'doc', id: 'developer-guide/README'},
       items: [
         {
           type: 'link',
@@ -74,6 +75,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Platform',
+      link: {type: 'doc', id: 'platform/README'},
       items: [
         {
           type: 'category',
