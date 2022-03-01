@@ -86,7 +86,7 @@ const sidebars = {
             },
             {
               type: 'doc',
-              label: 'Mainnet',
+              label: 'Testnet',
               id: 'platform/ronin-network/testnet',
             },
           ]
