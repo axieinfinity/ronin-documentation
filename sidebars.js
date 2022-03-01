@@ -94,9 +94,9 @@ const sidebars = {
           ]
         },
         {
-          type: 'doc',
+          type: 'link',
           label: 'Lite Paper',
-          id: 'platform/lite-paper',
+          href: 'https://litepaper.roninchain.com/',
         },
         {
           type: 'doc',
