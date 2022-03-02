@@ -1,56 +1,44 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
-const dapp = require('./building-dapp.jpg').default;
-const games = require('./building-games.jpg').default;
-const validators = require('./runing-validator.jpg').default;
+import clsx from 'clsx'
+import React from 'react'
+
+import styles from './HomepageFeatures.module.css'
+const dapp = require('./building-dapp.jpg').default
+const games = require('./building-games.jpg').default
+const validators = require('./runing-validator.jpg').default
 
 const FeatureList = [
   {
     title: 'Build your dApp',
     link: {
       href: '/docs/intro',
-      title: 'Start building dApp'
+      title: 'Start building dApp',
     },
     image: dapp,
-    description: (
-      <>
-        Get started building your Ronin Network decentralized application.
-      </>
-    ),
+    description: <>Get started building your Ronin Network decentralized application.</>,
   },
   {
     title: 'Build your Axie Game',
     image: games,
     link: {
       href: '/docs/intro',
-      title: 'Build your game'
+      title: 'Build your game',
     },
-    description: (
-      <>
-        Build your game with Axie Infinity IP, marketplace and Mavis Hub.
-      </>
-    ),
-
+    description: <>Build your game with Axie Infinity IP, marketplace and Mavis Hub.</>,
   },
   {
     title: 'Run a Validators node',
     image: validators,
     link: {
       href: '',
-      title: ''
+      title: '',
     },
-    description: (
-      <>
-        Take part in securing Ronin Network and earn rewards.
-      </>
-    ),
+    description: <>Take part in securing Ronin Network and earn rewards.</>,
     link: {
       href: '/docs/developer-guide/minimum-requirements',
-      title: 'Running a Validator'
+      title: 'Running a Validator',
     },
   },
-];
+]
 
 function Feature({ title, description, image, link }) {
   return (
@@ -64,7 +52,7 @@ function Feature({ title, description, image, link }) {
         <a href={link.href}>{link.title}</a>
       </div>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures() {
@@ -78,5 +66,5 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
-  );
+  )
 }

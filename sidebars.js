@@ -1,12 +1,12 @@
 /**
  * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
+  - create an ordered group of docs
+  - render a sidebar for each doc of that group
+  - provide next/previous navigation
 
- The sidebars can be generated from the filesystem, or explicitly defined here.
+  The sidebars can be generated from the filesystem, or explicitly defined here.
 
- Create as many sidebars as you want.
+  Create as many sidebars as you want.
  */
 
 // @ts-check
@@ -27,32 +27,32 @@ const sidebars = {
     {
       type: 'category',
       label: 'Getting Started',
-      link: {type: 'doc', id: 'developer-guide/README'},
+      link: { type: 'doc', id: 'developer-guide/README' },
       items: [
         {
           type: 'link',
           label: 'API',
-          href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn'
+          href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
         },
         {
           type: 'doc',
           label: 'CLI',
-          id: 'developer-guide/cli'
+          id: 'developer-guide/cli',
         },
         {
           type: 'doc',
           label: 'Run a validator node',
-          id: 'developer-guide/running-validating-node'
+          id: 'developer-guide/running-validating-node',
         },
         {
           type: 'doc',
           label: 'Run a non-validator node',
-          id: 'developer-guide/running-non-validating-node'
+          id: 'developer-guide/running-non-validating-node',
         },
         {
           type: 'doc',
           label: 'Minimum requirements',
-          id: 'developer-guide/minimum-requirements'
+          id: 'developer-guide/minimum-requirements',
         },
         {
           type: 'category',
@@ -61,21 +61,21 @@ const sidebars = {
             {
               type: 'doc',
               label: 'Using Truffle',
-              id: 'developer-guide/smart-contract-deploying/using-truffle'
+              id: 'developer-guide/smart-contract-deploying/using-truffle',
             },
             {
               type: 'doc',
               label: 'Using Hardhat',
-              id: 'developer-guide/smart-contract-deploying/using-hardhat'
+              id: 'developer-guide/smart-contract-deploying/using-hardhat',
             },
-          ]
+          ],
         },
-      ]
+      ],
     },
     {
       type: 'category',
       label: 'Platform',
-      link: {type: 'doc', id: 'platform/README'},
+      link: { type: 'doc', id: 'platform/README' },
       items: [
         {
           type: 'category',
@@ -91,7 +91,7 @@ const sidebars = {
               label: 'Testnet',
               id: 'platform/ronin-network/testnet',
             },
-          ]
+          ],
         },
         {
           type: 'link',
@@ -118,12 +118,12 @@ const sidebars = {
           label: 'Transaction life cycle',
           id: 'platform/transaction-lifecycle',
         },
-      ]
+      ],
     },
     {
       type: 'category',
       label: 'Components',
-      link: {type: 'doc', id: 'components/README'},
+      link: { type: 'doc', id: 'components/README' },
       items: [
         {
           type: 'doc',
@@ -161,10 +161,9 @@ const sidebars = {
           label: 'Update validator configs',
           id: 'flows/update-validator-configs-flow',
         },
-      ]
+      ],
     },
   ],
+}
 
-};
-
-module.exports = sidebars;
+module.exports = sidebars
