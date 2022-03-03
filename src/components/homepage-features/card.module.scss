@@ -22,16 +22,9 @@
   background: #ffffff;
   transition: 0.1s;
 
-  svg {
-    transition: 0.2s;
-  }
-
   &:hover {
+    box-shadow: 0px 4px 16px #dee6f1;
     border-color: var(--ifm-color-primary);
-
-    svg {
-      transform: scale(1.15);
-    }
   }
 }
 
@@ -41,6 +34,7 @@ html[data-theme="dark"] .content {
   color: #f0f4fa;
 
   &:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
     border-color: var(--ifm-color-primary);
   }
 }
