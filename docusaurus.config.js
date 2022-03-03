@@ -61,11 +61,6 @@ const config = {
             label: 'Documentation',
           },
           {
-            to: '/blog',
-            label: 'Blog',
-            position: 'left',
-          },
-          {
             href: 'https://github.com/axieinfinity/ronin-document',
             label: 'GitHub',
             position: 'right',
@@ -104,10 +99,6 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/axieinfinity/',
