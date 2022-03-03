@@ -4,6 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
+const currentYear = new Date().getFullYear()
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ronin Network',
@@ -16,6 +18,9 @@ const config = {
   organizationName: 'axieinfinity', // Usually your GitHub org/user name.
   projectName: 'ronin-document', // Usually your repo name.
 
+  staticDirectories: ['public', 'static'],
+
+  plugins: ['docusaurus-plugin-sass'],
   presets: [
     [
       'classic',
@@ -56,7 +61,11 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left'
+          },
           {
             href: 'https://github.com/axieinfinity/ronin-document',
             label: 'GitHub',
@@ -103,7 +112,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Sky Mavis`,
+        copyright: `© ${currentYear - 1} - ${currentYear} Sky Mavis`,
       },
       prism: {
         theme: lightCodeTheme,

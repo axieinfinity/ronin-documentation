@@ -1,0 +1,37 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.background {
+  background-image: url("/img/welcome/background.png");
+  background-position: center 31px;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+.heroBanner {
+  padding: 40px 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBannerHeading {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--ifm-text-color);
+}
+
+.heroBannerSubHeading {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--ifm-subtext-color);
+}
+
+.main {
+  padding: 0 16px 40px;
+}
