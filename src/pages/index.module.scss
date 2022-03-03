@@ -8,6 +8,11 @@
   background-position: center 31px;
   background-repeat: no-repeat;
   background-size: 80%;
+  transition: 0.1s;
+}
+
+html[data-theme="dark"] .background {
+  background-image: url("/img/welcome/background-dark.png");
 }
 
 .heroBanner {
@@ -34,4 +39,17 @@
 
 .main {
   padding: 0 16px 40px;
+}
+
+.mascot {
+  display: none;
+}
+
+@media only screen and (min-width: 996px) {
+  .mascot {
+    display: initial;
+    position: fixed;
+    right: 124px;
+    bottom: 0;
+  }
 }

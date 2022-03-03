@@ -15,6 +15,10 @@ const Home: React.FC = () => {
         </header>
 
         <main className={styles.main}>
+          <div>
+            <img src="/img/mascot.svg" className={styles.mascot} />
+          </div>
+
           <Features />
         </main>
       </div>

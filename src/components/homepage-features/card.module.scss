@@ -30,7 +30,7 @@
 
 html[data-theme="dark"] .content {
   border: 1px solid #3d4354;
-  background: transparent;
+  background: var(--ifm-background-surface-color);
   color: #f0f4fa;
 
   &:hover {
