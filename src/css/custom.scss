@@ -45,7 +45,7 @@ html[data-theme="dark"] {
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  .toggleTrackThumb_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module {
+  div[class^="toggleTrackThumb"] {
     background-color: var(--ifm-background-surface-color);
   }
 }
@@ -54,7 +54,7 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
-.toggleTrackThumb_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module {
+div[class^="toggleTrackThumb"] {
   box-shadow: none !important;
 }
 
