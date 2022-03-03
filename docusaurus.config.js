@@ -62,11 +62,6 @@ const config = {
             label: 'Documentation',
           },
           {
-            to: '/blog',
-            label: 'Blog',
-            position: 'left',
-          },
-          {
             href: 'https://github.com/axieinfinity/ronin-document',
             label: 'GitHub',
             position: 'right',
