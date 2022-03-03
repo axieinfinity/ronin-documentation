@@ -18,7 +18,7 @@ const config = {
   organizationName: 'axieinfinity', // Usually your GitHub org/user name.
   projectName: 'ronin-document', // Usually your repo name.
 
-  staticDirectories: ['public', 'static'],
+  staticDirectories: ['static'],
 
   plugins: ['docusaurus-plugin-sass'],
   presets: [
@@ -64,7 +64,7 @@ const config = {
           {
             to: '/blog',
             label: 'Blog',
-            position: 'left'
+            position: 'left',
           },
           {
             href: 'https://github.com/axieinfinity/ronin-document',
