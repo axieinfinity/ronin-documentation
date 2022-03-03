@@ -1,6 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
@@ -20,7 +19,7 @@ const config = {
 
   staticDirectories: ['static'],
 
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: ['docusaurus-plugin-sass', require.resolve('docusaurus-lunr-search')],
   presets: [
     [
       'classic',
@@ -71,6 +70,10 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'search',
+            position: 'right',
+          }
         ],
       },
       footer: {
