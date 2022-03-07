@@ -19,7 +19,7 @@ One other important difference in Clique is the fix minimum value of block time.
 
 ### Decentralization <a href="#4da0" id="4da0"></a>
 
-Due to the design, POA is nearly perfect for private networks but not appropriate for public networks. All the validators of Ronin blockchain right now belong to Axie Infinity. In the near future, we will allow reliable, cooperated partners to join the network of validators. Validators act as partners to the network and must help Ronin through the business, growth, economic investment.
+Due to the design, POA is nearly perfect for private networks but not appropriate for public networks. Currently, validators act as partners to the network and help Ronin through the business, growth, economic investment.
 
 If the demand for complete decentralization is high in the future, we may move to Proof of Stake protocol, but this decision is not finalized yet.
 

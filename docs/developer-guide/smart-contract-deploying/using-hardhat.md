@@ -1,5 +1,7 @@
 # Using Hardhat
 
+Deploying smart contract is only available on testnet. For mainnet, please refer [builder program](https://axie.substack.com/p/axie-infinity-builders-program) for more information
+
 ### Install Hardhat
 
 ```

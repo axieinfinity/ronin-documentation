@@ -1,8 +1,6 @@
 # Minimum hardware requirements
 
-{% hint style="info" %}
 Running a node requires a lot of disk space and drives with fast read/write speed (IOPS)
-{% endhint %}
 
 ## Running a full Ronin node
 
@@ -14,4 +12,4 @@ Running a node requires a lot of disk space and drives with fast read/write spee
 
 * 8 CPU Cores
 * 8 GB RAM
-* At least 4TB high-speed SSD
+* At least 5TB high-speed SSD
