@@ -7,6 +7,8 @@ sidebar_position: 2
 
 # Transfer Gateways and Ronin Bridge
 
+## Transfer Gateway
+
 Transfer Gateway is the gate for token transfer onto the sidechain and the subsequent transfer back to Ethereum. At the moment we support our users depositing on ETH, ERC20, and ERC721.
 
 Transfer Gateway contracts include:
