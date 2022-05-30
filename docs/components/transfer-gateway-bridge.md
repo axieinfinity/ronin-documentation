@@ -7,8 +7,6 @@ sidebar_position: 2
 
 # Transfer Gateways and Ronin Bridge
 
-## Transfer Gateway
-
 Transfer Gateway is the gate for token transfer onto the sidechain and the subsequent transfer back to Ethereum. At the moment we support our users depositing on ETH, ERC20, and ERC721.
 
 Transfer Gateway contracts include:
@@ -20,4 +18,4 @@ Whenever users deposit or withdraw their assets these contracts will emit corres
 
 ## Ronin Bridge
 
-Ronin Bridge is actually a service to track events from `MainchainGateway` and `SidechainGateway` contract. Each validator has to run the Bridge so that this service can do acknowledge for the validator.
+Ronin Bridge is actually a service to track events from the MainchainGateway and SidechainGateway contracts. Each validator has to run the Bridge so that this service can be acknowledged for the validator.
