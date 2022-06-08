@@ -20,4 +20,4 @@ Whenever users deposit or withdraw their assets these contracts will emit corres
 
 ## Ronin Bridge
 
-Ronin Bridge is actually a service to track events from `MainchainGateway` and `SidechainGateway` contract. Each validator has to run the Bridge so that this service can do acknowledge for the validator.
+Ronin Bridge is actually a service to track events from the MainchainGateway and SidechainGateway contracts. Each validator has to run the Bridge so that this service can be acknowledged for the validator.

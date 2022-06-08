@@ -9,34 +9,39 @@ sidebar_position: 1
 
 ### Consensus <a href="#2ab4" id="2ab4"></a>
 
-One of the implementations of Proof of Authority (POA) is Clique, which is proposed in [EIP-225](https://eips.ethereum.org/EIPS/eip-225). The implementation of POA which the Ronin network is using is called **Consortium.** This implementation is similar to Clique, except that in Consortium, the list of validators is stored in a smart contract defined in the genesis block, while in Clique, that list is stored in the header of the genesis block. This protocol is appropriate for a private network because all the validators are predefined, known, and hence reliable.
+The Ronin Network’s Proof of Authority (POA) consensus implementation is called Consortium, and when compared to other POA implementations, Consortium shows similarities but has a few key differences. 
 
-The basic idea is: The set of validators (or authority nodes) are predefined in the genesis block when setting up the network. A new validator can be added later when the network needs to scale. But, such a validator can be added successfully if half of the current authority nodes approve it. The same mechanism is used when a validator is removed from the network.
+For example, in Clique (the POA implementation proposed in EIP-225) the list of validators is stored in the header of the genesis block, whereas in Consortium, the list of validators is stored in a smart contract defined in the genesis block. Also, in Clique, there is a fixed minimum value of block time which can be set in the header of genesis block. Ronin’s current minimum block time network is 3 seconds. 
 
-To make sure a malicious signer cannot do too much harm to the network, any signer can sign at most `(floor(VALIDATOR_COUNT / 2) + 1)`consecutive blocks, where VALIDATOR\_COUNT is the number of current approved validators. For example, if there are 7 validators right now, each validator can only sign at most 4 consecutive blocks.
+The basic idea can be described as follows: the set of validators (or authority nodes) are predefined in the genesis block when setting up the network. However, when the network needs to scale, a new validator can be added. Such a validator can be added successfully if and only if half of the current authority nodes approve it. The same mechanism holds true for successful removal of a validator from the network.
 
-One other important difference in Clique is the fix minimum value of block time. This value can be set in the header of genesis block. The current value of minimum block time in Ronin network is 3 seconds
+Moreover, to make sure a malicious signer cannot do too much harm to the network, any signer can sign at most (floor(VALIDATOR_COUNT / 2) + 1)consecutive blocks, where VALIDATOR_COUNT is the number of current approved validators. In other words, if there are 7 validators right now, each validator can only sign at most 4 consecutive blocks.
 
 ### Decentralization <a href="#4da0" id="4da0"></a>
 
-Due to the design, POA is nearly perfect for private networks but not appropriate for public networks. Currently, validators act as partners to the network and help Ronin through the business, growth, economic investment.
+Due to the design, POA is nearly perfect for private networks since all the validators are predefined, known, and hence reliable; however, it’s not appropriate for public networks. Currently, validators act as partners to the network encompassing business partnerships, growth, economic investment.
 
-If the demand for complete decentralization is high in the future, we may move to Proof of Stake protocol, but this decision is not finalized yet.
+If the demand for complete decentralization is high, we may move to Proof of Stake protocol, but this decision is not finalized yet.
+
+The current plan to achieve more complete decentralization is to move to Proof of Stake protocol.
 
 ### Security
 
 The POA scheme design allows a bit of scale with the increase of the number of signers. We have a plan to integrate layer-2 rollup solution to our blockchain in the future ([https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/](https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/)).
 
-Moreover, we have strong security and Infra teams for protecting the chain from attack types such as double-spending, nothing-at-stake, spamming, DDoS, and long-range attacks. Blockchain-based cryptocurrency systems must not only deal with these attacks but also ensure the stability of the system, which includes safety and liveness.
+We have strong security and infrastructure teams to protect the chain from attack types such as double-spending, nothing-at-stake, spamming, DDoS, and long-range attacks. 
+
+Blockchain-based cryptocurrency systems must be able to deal with these attacks while ensuring stability and safety of the system and maintaining perfect uptime.
 
 ### Scalability <a href="#55b8" id="55b8"></a>
 
-Our platform is built in the Cloud Infras which support high Scalability and reliability in multi regions. In the future, layer 2 scaling solutions will be implemented for making unlimited scaling for the Ronin Chain.
+Our platform is built in the Cloud Infrastructure which supports high Scalability and reliability in various regions. In the future, layer 2 scaling solutions will be implemented allowing Ronin to scale infinitely. 
 
 ### Ecosystem <a href="#08c1" id="08c1"></a>
 
-The ronin chain ecosystem includes Explorer, Wallet, Bridge, and its Dapps such as Katana, MarketPlace, MavisHub. The stronger the infrastructure and its support, the more Dapps can be based on it for creating a strong ecosystem. Moreover, a strong ecosystem of Dapps will attract more users of the infrastructure, which in turn motivates improvements and entails the development of the underlying infrastructure. Each of the above blockchain projects provides a PoS-based consensus that can handle thousands of transactions per second, thus promising many potential Dapps for the ecosystem.
+The Ronin Chain ecosystem includes the Explorer, the Wallet, and the Bridge, as well as Dapps such as Katana, MarketPlace, MavisHub. The stronger the chain’s infrastructure and support is, the more Dapps can be created, and the stronger the ecosystem of Dapps, the more users the chain will have. This mechanism is notable because having more users will motivate underlying infrastructure improvements, essentially creating a positive feedback loop. Each of the above blockchain projects provides a PoS-based consensus that can handle thousands of transactions per second, thus promising many potential Dapps for the ecosystem.
+
 
 ### Gas Fee
 
-We built the Free Gas proxy which makes the users who hold Axie NFTS will get a certain number of free transactions per day. This should scale linearly. Being a new user gets you 20 free transactions to start. 50% of the gas fee is burnt, 50% is sent to validators. Part of the Gas fee must be burnt to prevent a DDOS attack by hostile validators in the future. For details, please go to Free Gas Proxy Component.
+We built the Free Gas proxy to allow for users who hold Axie NFTs to get a linearly scaling number of free transactions per day and for new users to get a fixed 20 free transactions to start their journey into Axie. For these transactions, 50% of the gas fee is burnt and 50% is sent to validators. Part of the Gas fee must be burnt to prevent a DDOS attack by hostile validators in the future. For details, please go to the Free Gas Proxy Section.

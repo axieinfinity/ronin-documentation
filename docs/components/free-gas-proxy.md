@@ -6,9 +6,9 @@ sidebar_position: 4
 
 ![Interactive flow from users to Ronin network](<./free-gas-proxy.png>)
 
-A service allows Axie users to access the Ronin blockchain and send transactions without paying any RON - the Ronin native currency. The number of free transactions per day depends on holding Axie's NFTs, according to the below configurations:
+This service allows Axie users to access the Ronin blockchain and send transactions without paying any RON - the Ronin native currency. The number of free transactions per day depends a user’s Axie Infinity NFT holdings according to the below configurations:
 
-Amount free transactions from holding Axies:
+Amount of free transactions from holding Axies:
 
 * 1 Normal Axie: 3 free txs/day
 * 1 MEO Axie: 10 free txs/day
@@ -22,13 +22,15 @@ Amount free transactions from holding Lands:
 * 1 Arctic land: 180 txs/day
 * 1 Mystic Land: 350 txs/day
 
-New users of Axie will have **20 one-time transactions** to start. Those 20 transactions will not be reset after a day and will be decreased first if the user also has daily free transactions.
+New Axie users will have 20 one-time transactions to start. These 20 transactions will not be reset daily and will be decreased first if the user also has daily free transactions.
 
 The block to recalculate free gas transactions for each user is the first block confirmed from 00:00 UTC.
 
 For example:
 
-> On the first day, you create an account on the Axie marketplace and get 20 free transactions. You buy 3 Axies, the number of remain free transactions is 7. On the second day, you have 7 free one-time transactions and 9 daily transactions - from having 3 Axies.
+> On the first day, a user creates an account on the Axie marketplace and gets 20 free transactions. Next, they buy 3 Axies, leaving them with 17 remaining free transactions. 
+
+Now, on the second day, they now have 17 free one-time transactions and 9 daily transactions - from having 3 Axies.
 
 ## Technical Specifications
 

@@ -8,7 +8,7 @@ make ronin
 
 ### Genesis
 
-Before starting new node, you must init genesis block with the following command:
+Before starting a new node, you must initialize the genesis block with the following command:
 
 ```
 ronin init <path-to-your-genesis-file>.json --datadir <path-to-your-node-directory>

@@ -8,7 +8,7 @@ $ curl -O -L -k https://stats.roninchain.com/downloads/ronin-manager-linux-lates
 $ tar xf ronin-manager-linux-latest.tar.gz
 ```
 
-* Move to Ronin manager directory and init environment:
+* Move to Ronin manager directory and initialize the environment:
 
 ```
 $ cd pkg-ronin-manager-0.8.x
