@@ -1,10 +1,10 @@
-# Ronin Wallet tutorial
+# Integrate Ronin Wallet
 
 Ronin Wallet is a non-custodial crypto wallet. It is available as a browser extension and as a mobile application. Ronin Wallet lets you interact with Ronin Network Dapps and manage your assets.
 
 ## Allowed List
 
-If you are here, you are probably thinking about building a cool products on Ronin Network. For now we only allow certain sites to work with Ronin Wallet. Although you can always start developing with Ronin Wallet with a `localhost` dApp project. 
+If you are here, you are probably thinking about shipping a cool product on Ronin Network. For now we only allow certain sites to work with Ronin Wallet. Although you can always start developing with Ronin Wallet with a `localhost` dApp project. 
 
 To make it to production you can apply to our [builder program](https://axieinfinity.com/builders-terms/). We are excited to see your idea.
 
@@ -87,4 +87,4 @@ export const signMessage = async (message: string) => {
 }
 ```
 
-For more examples with Ethers please go throught [Ether](https://docs.ethers.io/) document.
+For more examples with Ethers please go throught [Ethers](https://docs.ethers.io/) document.
