@@ -6,31 +6,32 @@ sidebar_position: 4
 
 ![Interactive flow from users to Ronin network](<./free-gas-proxy.png>)
 
-This service allows Axie users to access the Ronin blockchain and send transactions without paying any RON - the Ronin native currency. The number of free transactions per day depends a user’s Axie Infinity NFT holdings according to the below configurations:
+A service allows Axie users to access the Ronin blockchain and send transactions without paying any RON - the Ronin native currency. The number of free transactions per day depends on holding Axie's NFTs, according to the below configurations:
 
-Amount of free transactions from holding Axies:
+Amount free transactions from holding Axies:
 
-* 1 Normal Axie: 3 free txs/day
-* 1 MEO Axie: 10 free txs/day
-* 1 Origin Axie: 100 free txs/day
-* 1 Mystic Axie: 500 free txs/day
+* 1 or more normal Axies: 0 txs/month
+* 1 or more MEO Axies: 2 txs/month
+* 1 or more Origin Axies: 10 txs/month
+* 1 or more Mystic Axies: 80 txs/month
 
 Amount free transactions from holding Lands:
 
-* 1 Savannah Land: 20 free txs/day
-* 1 Forest Land: 60 txs/day
-* 1 Arctic land: 180 txs/day
-* 1 Mystic Land: 350 txs/day
+* 1 or more Savannah Land: 8 txs/month
+* 1 or more Forest Lands: 26 txs/month
+* 1 or more Arctic Lands: 72 txs/month
+* 1 or more Mystic Lands: 160 txs/month
 
-New Axie users will have 20 one-time transactions to start. These 20 transactions will not be reset daily and will be decreased first if the user also has daily free transactions.
+Free Transaction Calculation Mechanism
+
+Each account will receive a certain number of free transactions per month based on the highest value NFT it has. For example, if an account has 1 Arctic land and 1 Mystic land it gets 160 tx/month rather than 72 + 160 tx/month.
+
+Your total free transactions are based on an average of the Axie assets you owned and the amount of days you owned them in the month. For example, if you only owned a Mystic Axie for one day in a 30 day month then the formula is (1 Mystic Axie * 1 day) / 30 = 0 (decimal is not considered). You would not have any free transactions for the month. In order to receive the free transactions your wallet would need to hold the Mystic Axie for the entire month.
+
+
+New users of Axie will have **20 one-time transactions** to start. Those 20 transactions will not be reset after a day and will be decreased first if the user also has daily free transactions.
 
 The block to recalculate free gas transactions for each user is the first block confirmed from 00:00 UTC.
-
-For example:
-
-> On the first day, a user creates an account on the Axie marketplace and gets 20 free transactions. Next, they buy 3 Axies, leaving them with 17 remaining free transactions. 
-
-Now, on the second day, they now have 17 free one-time transactions and 9 daily transactions - from having 3 Axies.
 
 ## Technical Specifications
 
