@@ -55,6 +55,11 @@ const sidebars = {
           id: 'developer-guide/minimum-requirements',
         },
         {
+          type: 'doc',
+          label: 'Integrate Ronin Wallet',
+          id: 'developer-guide/integrate-ronin-wallet',
+        },
+        {
           type: 'category',
           label: 'Smart contract deploying',
           items: [

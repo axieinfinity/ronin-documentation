@@ -9,21 +9,21 @@ const featureList = [
   {
     title: 'Build your dApp',
     link: {
-      href: '/docs/intro',
+      href: '/docs/developer-guide/integrate-ronin-wallet',
       title: 'Start building dApp',
     },
     Icon: FilledAppIcon,
     description: <>Get started building your Ronin Network decentralized application.</>,
   },
-  {
-    title: 'Build your Axie Game',
-    Icon: FilledConsoleIcon,
-    link: {
-      href: '/docs/intro',
-      title: 'Build your game',
-    },
-    description: <>Build your game with Axie Infinity IP, marketplace and Mavis Hub.</>,
-  },
+  // {
+  //   title: 'Build your Axie Game',
+  //   Icon: FilledConsoleIcon,
+  //   link: {
+  //     href: '/docs/intro',
+  //     title: 'Build your game',
+  //   },
+  //   description: <>Build your game with Axie Infinity IP, marketplace and Mavis Hub.</>,
+  // },
   {
     title: 'Run a Validators node',
     Icon: FilledBoxIcon,
