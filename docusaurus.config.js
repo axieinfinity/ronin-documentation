@@ -34,6 +34,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
         },
+        googleAnalytics: {
+          trackingID: 'UA-150383258-4'
+        }
       }),
     ],
   ],
@@ -75,10 +78,10 @@ const config = {
           {
             title: 'Community',
             items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/P5GgF7SK',
-              },
+              // {
+              //   label: 'Discord',
+              //   href: 'https://discord.gg/P5GgF7SK',
+              // },
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/ronin_network',
