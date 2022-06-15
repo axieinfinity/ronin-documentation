@@ -9,7 +9,7 @@
 * Consensus: POA (Consortium)
 * Stats: [https://testnet.skymavis.one/](https://testnet.skymavis.one)
 * Explorer: [https://testnet-explorer.skymavis.one/](https://testnet-explorer.skymavis.one)
-* Genesis file: [https://github.com/axieinfinity/ronin/blob/master/genesis/testnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json)
+* Genesis file: [testnet.json](/assets/genesis-testnet.json)
 
 ### Genesis contracts
 
