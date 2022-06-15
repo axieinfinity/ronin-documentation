@@ -25,7 +25,7 @@ const featureList = [
   //   description: <>Build your game with Axie Infinity IP, marketplace and Mavis Hub.</>,
   // },
   {
-    title: 'Run a Validators node',
+    title: 'Run a validator node',
     Icon: FilledBoxIcon,
     description: <>Take part in securing Ronin Network and earn rewards.</>,
     link: {

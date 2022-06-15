@@ -6,7 +6,7 @@
 * RPC endpoint: [https://api.roninchain.com/rpc](https://api.roninchain.com/rpc)
 * Consensus: POA (Consortium)
 * Stats: [https://stats.roninchain.com/](https://stats.roninchain.com)
-* Explorer:
+* Explorer: [https://explorer.roninchain.com/](https://explorer.roninchain.com/)
 * Genesis file: [https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json)
 * Full node size:
    * The pruned cache is 160GB (updated on 23/2/2020)
