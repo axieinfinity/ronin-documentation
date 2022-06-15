@@ -1,6 +1,6 @@
 # Using Hardhat
 
-Deployment of smart contracts is only available on testnet. For mainnet, please refer [builder program](https://axie.substack.com/p/axie-infinity-builders-program) for more information
+For now we only allow certain projects to deploy smart contract on Ronin Network. Please refer to [builder program](https://axie.substack.com/p/axie-infinity-builders-program) for more information.
 
 ### Install Hardhat
 

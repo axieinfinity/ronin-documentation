@@ -41,6 +41,11 @@ const sidebars = {
         },
         {
           type: 'doc',
+          label: 'Minimum requirements',
+          id: 'developer-guide/minimum-requirements',
+        },
+        {
+          type: 'doc',
           label: 'Run a validator node',
           id: 'developer-guide/running-validating-node',
         },
@@ -48,16 +53,6 @@ const sidebars = {
           type: 'doc',
           label: 'Run a non-validator node',
           id: 'developer-guide/running-non-validating-node',
-        },
-        {
-          type: 'doc',
-          label: 'Minimum requirements',
-          id: 'developer-guide/minimum-requirements',
-        },
-        {
-          type: 'doc',
-          label: 'Integrate Ronin Wallet',
-          id: 'developer-guide/integrate-ronin-wallet',
         },
         {
           type: 'category',
@@ -74,6 +69,11 @@ const sidebars = {
               id: 'developer-guide/smart-contract-deploying/using-hardhat',
             },
           ],
+        },
+        {
+          type: 'doc',
+          label: 'Integrate Ronin Wallet',
+          id: 'developer-guide/integrate-ronin-wallet',
         },
       ],
     },
