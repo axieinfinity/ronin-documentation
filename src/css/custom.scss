@@ -19,6 +19,11 @@
   --ifm-text-color: #1d273d;
   --ifm-subtext-color: #57627b;
   --ifm-footer-background-color: #f5f8fc;
+
+  --ifm-navbar-padding-vertical: 12px;
+  --ifm-navbar-padding-horizontal: 32px;
+  --ifm-navbar-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.05);
+  --ifm-heading-font-weight: 600;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -51,7 +56,8 @@ html[data-theme="dark"] {
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
 }
 
 .toggleTrackThumb_node_modules-\@docusaurus-theme-classic-lib-next-theme-Toggle-styles-module {
@@ -75,6 +81,47 @@ body {
 
 .theme-doc-markdown {
   p {
-    line-height: 24px;
+    line-height: 1.75rem;
+  }
+  pre code {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.navbar__search-input {
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  height: 2.25rem;
+}
+
+@media (min-width: 997px) {
+  nav.menu_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocSidebar-styles-module {
+    padding: 1rem 1rem 4rem;
+  }
+}
+
+.menu__link {
+  line-height: 1.5rem;
+  --ifm-menu-link-padding-vertical: 0.5rem;
+  --ifm-menu-link-padding-horizontal: 0.5rem;
+}
+
+.menu__caret::before {
+  margin-top: 0.125rem;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module
+  .container {
+  padding: 1rem 2rem 2rem;
+}
+
+@media (max-width: 996px) {
+  .navbar__toggle {
+    margin-right: 1rem;
   }
 }
