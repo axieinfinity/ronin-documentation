@@ -40,7 +40,7 @@ We will discuss how to connect Ronin Wallet extension with a web project in the 
 1. Install Ethers umbrella packages
 
 ```bash
-yarn install ethers
+yarn add ethers
 ```
 
  2. Create a ronin-connect file
