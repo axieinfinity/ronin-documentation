@@ -55,6 +55,11 @@ const sidebars = {
           id: 'developer-guide/running-non-validating-node',
         },
         {
+          type: 'doc',
+          label: 'Upgrade Ronin Manager',
+          id: 'developer-guide/upgrade-ronin-manager',
+        },
+        {
           type: 'category',
           label: 'Smart contract deploying',
           items: [
