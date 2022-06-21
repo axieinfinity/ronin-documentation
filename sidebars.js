@@ -150,6 +150,11 @@ const sidebars = {
           label: 'Validators',
           id: 'components/validators',
         },
+        {
+          type: 'doc',
+          label: 'Ronin Bridge V2',
+          id: 'components/ronin-bridge-v2',
+        },
       ],
     },
     {
