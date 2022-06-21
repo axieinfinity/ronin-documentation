@@ -12,13 +12,15 @@ The governor credentials are ideally stored inside a hardware wallet and should 
 
 ## Withrawal Limits
 
-Withdrawal limits are based on overall value of each withdrawal. The thresholds are:
+Following this network upgrade, the withdrawal process will be segregated into new tiered methods corresponding to the overall value of the transaction.  Here is our proposed list of tiers for this iteration:
 
 | Tier   | Withdrawal value | Threshold                                                                                   |
 |--------|------------------|---------------------------------------------------------------------------------------------|
 | Tier 1 | -                | The normal withdrawal / deposit threshold                                                   |
 | Tier 2 | >$1,000,000             | 90% signatures from validators are required                                                 |
 | Tier 3 | >$10,000,000            |  90% signatures from validators are required <br/>Up to 5 days of human review to unlock the fund |
+
+For Tier 3 review, it will cost a fee (~$100) mainly to cover the fund for unlocking transaction.
 
 ### Daily Withdrawal Limits
 
