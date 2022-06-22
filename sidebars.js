@@ -45,9 +45,20 @@ const sidebars = {
           id: 'developer-guide/minimum-requirements',
         },
         {
-          type: 'doc',
-          label: 'Run a validator node',
-          id: 'developer-guide/running-validating-node',
+          type: 'category',
+          label: 'Validator',
+          items: [
+            {
+              type: 'doc',
+              label: 'Run a Validator node',
+              id: 'developer-guide/running-validating-node',
+            },
+            {
+              type: 'doc',
+              label: 'Upgrade Ronin Manager',
+              id: 'developer-guide/upgrade-ronin-manager',
+            },
+          ],
         },
         {
           type: 'doc',
@@ -150,6 +161,11 @@ const sidebars = {
           label: 'Validators',
           id: 'components/validators',
         },
+        // {
+        //   type: 'doc',
+        //   label: 'Ronin Bridge V2',
+        //   id: 'components/ronin-bridge-v2',
+        // },
       ],
     },
     {
