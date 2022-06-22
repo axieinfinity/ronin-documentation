@@ -1,59 +1,59 @@
-# Upgrade to Ronin Manager v1.0.0
+# Upgrade Ronin Manager
 
-The following tutorial walks you through updating ronin-manager from v0.8.0 to v1.0.0
 
-1. Download new version 
+## Change log v0.9.0
 
-```
+Ronin hard fork to facilitate the reopening of Ronin Bridge.
+
+## Upgrade ronin-manager to v0.9.0
+
+1. Download new ronin-manager version
+
+```bash
 $ curl -O -L -k https://stats.roninchain.com/downloads/ronin-manager-linux-latest.tar.gz
-
 $ tar xf ronin-manager-linux-latest.tar.gz
 ```
 
-2. Stop the current services, copy .env file over:
+1. Stop the current ronin-manager, copy .env file over:
 
-```
+```bash
 # Change dir to your current ronin-manager version
 $ cd pkg-ronin-manager-0.8.0
-
 $ ./ronin-manager stop
-
-$ cp .env ../pkg-ronin-manager-1.0.0
+$ cp .env ../pkg-ronin-manager-0.9.0
 ```
 
 3. Move to the new ronin-manager version and update the environment file:
 
-```
-$ cd pkg-ronin-manager-1.0.0
-$ vi .env 
-```
-
-Add those envs 
-
-```
-RONIN_VALIDATOR_KEY=Ronin__<PRIVATE_KEY>
-
-ETHEREUM_RPC=<Replace with your ETHERUM RPC URL>
-Example: Ethereum__https://eth.alchemyapi.io/v2/<your_api_key>
-
-# Tunning Performances
-DB_MAX_OPEN_CONNS=500
+```bash
+$ cd pkg-ronin-manager–0.9.0
+$ vi .env
 ```
 
-Replace/Add 2 lines to your env file 
+Replace node and bridge images to the below value
 
-```
-NODE_IMAGE=axieinfinity/ronin-mainnet:<tag> # Update latter
-BRIDGE_IMAGE=axieinfinity/bridge:v2.0.0-147d873
-```
-
-4. Pull the latest images and start service: 
-
-```
-./ronin-manager pull
-./ronin-manager start
+```bash
+NODE_IMAGE=axieinfinity/ronin-mainnet:v2.4.0-6034a62cf
+BRIDGE_IMAGE=axieinfinity/bridge:v2.0.1-4d803fc
 ```
 
-5. After some minutes, verify your node is connected and up to date with the network at stats.roninchain.com. 
+Make sure the below environment keys exist in your `.env` file
+
+```bash
+VALIDATOR_PRIVATE_KEY
+ETHEREUM_ENDPOINT
+POSTGRES_DB
+POSTGRES_USER
+POSTGRES_PASSWORD
+```
+
+4. Pull the latest images and start ronin-manager
+
+```bash
+$ ./ronin-manager pull
+$ ./ronin-manager start
+```
+
+5. After some minutes, verify your node is connected and up to date with the network at https://stats.roninchain.com.
 
 6. Optionally remove old pkg-ronin-manager-0.8.x

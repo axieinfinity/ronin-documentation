@@ -56,7 +56,7 @@ services:
       - 30303:30303/udp
       - 6060:6060
     volumes:
-      - ~/.skymavis/chaindata:/ronin
+      - $HOME/chaindata:/ronin
     environment:
       - SYNC_MODE=snap
       - PASSWORD=${PASSWORD}
@@ -79,3 +79,47 @@ $ ./ronin-manager start
 ```
 
 * After some minutes, verify your node is connecting and up to date with the network at [stats.roninchain.com](https://stats.roninchain.com)
+
+## Start node from a snapshot
+
+A snapshot is a complete view of the Ronin Network state at a given block. 
+You can use a snapshot to setup your Ronin node and get it up-to-dated faster. 
+
+1. Stop your node
+
+```
+$ ./ronin-manager stop
+```
+
+2. Download chaindata and checksum
+
+```
+$ curl -O -L -k https://storage.googleapis.com/chaindata/chaindata-0xe14eea.tar
+$ curl -O -L -k https://storage.googleapis.com/chaindata/checksum-0xe14eea.md5
+$ md5sum -c checksum-0xe14eea.md5
+```
+
+3. Uncompress downloaded files
+
+```
+$ tar -xvf chaindata-0xe14eea.tar
+```
+
+4. Remove the current chaindata folder
+
+Consider backing up this folder before removing
+
+```
+$ rm -rf $HOME/chaindata/data/ronin/chaindata
+```
+
+5. Move snapshot data to your chaindata folder
+
+```
+$ mv chaindata $HOME/chaindata/data/ronin/
+```
+
+6. Start your Ronin node
+```
+$ ./ronin-manager start
+```
