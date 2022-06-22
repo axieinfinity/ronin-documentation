@@ -1,6 +1,5 @@
 # Upgrade Ronin Manager
 
-
 ## Change log v0.9.0
 
 Ronin hard fork to facilitate the reopening of Ronin Bridge.
