@@ -11,7 +11,7 @@ $ tar xf ronin-manager-linux-latest.tar.gz
 * Initialize the environment by filling your params and instance name (you can check it on stats.roninchain.com later) and replacing the node image with the current version in the `.env` file:
 
 ```
-$ cd pkg-ronin-manager-0.8.x
+$ cd pkg-ronin-manager-0.9.x
 
 $ cp config/main.env .env
 
@@ -24,10 +24,8 @@ INSTANCE_NAME=
 # Additional Params
 RONIN_PARAMS=--http.api eth,web3,personal
 
-# Old node image should be removed
-NODE_IMAGE=axieinfinity/ronin-mainnet:v2.2.2-7bfba31d6
-# New tag for node image
-NODE_IMAGE=axieinfinity/ronin-mainnet:v2.3.0-f07cd8d1e
+# Replace latest NODE_IMAGE
+NODE_IMAGE=axieinfinity/ronin-mainnet:v2.4.0-6034a62cf
 ```
 
 * Remove the `docker-compose.yml` file and create a new one. The default configuration is for Ronin validators, running non-validating should use the new one:
@@ -38,7 +36,7 @@ $ rm -rf docker-compose.yml
 $ vi docker-compose.yml
 ```
 
-Your new docker-compose file should be like this:
+Your new docker-compose file must contain only node service, it should be like this:
 
 ```
 version: "3"
@@ -82,6 +80,8 @@ $ ./ronin-manager start
 
 ## Start node from a snapshot
 
+This is optional.
+
 A snapshot is a complete view of the Ronin Network state at a given block. 
 You can use a snapshot to setup your Ronin node and get it up-to-dated faster. 
 
@@ -92,6 +92,8 @@ $ ./ronin-manager stop
 ```
 
 2. Download chaindata and checksum
+
+You can get the lastest snapshot version from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repository.
 
 ```
 $ curl -O -L -k https://storage.googleapis.com/chaindata/chaindata-0xe14eea.tar

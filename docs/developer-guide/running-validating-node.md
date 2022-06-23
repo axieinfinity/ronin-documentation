@@ -11,7 +11,7 @@ $ tar xf ronin-manager-linux-latest.tar.gz
 * Move to Ronin manager directory and initialize the environment:
 
 ```
-$ cd pkg-ronin-manager-0.8.x
+$ cd pkg-ronin-manager-0.9.x
 
 $ cp config/main.env .env
 
@@ -28,10 +28,9 @@ VALIDATOR_PRIVATE_KEY=
 # Http(s) endpoint to connect to Ethereum Ropsten mainnet, e.g Infura or Alchemy key
 ETHEREUM_ENDPOINT=
 
-# Old node image should be removed
-NODE_IMAGE=axieinfinity/ronin-mainnet:v2.2.2-7bfba31d6
-# New tag for node image
-NODE_IMAGE=axieinfinity/ronin-mainnet:v2.3.0-f07cd8d1e
+# Replace node and bridge image env keys with
+NODE_IMAGE=axieinfinity/ronin-mainnet:v2.4.0-6034a62cf
+BRIDGE_IMAGE=axieinfinity/bridge:v2.0.1-4d803fc
 ```
 
 * Pull the latest image and run node:

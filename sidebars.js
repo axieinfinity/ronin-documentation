@@ -61,9 +61,20 @@ const sidebars = {
           ],
         },
         {
-          type: 'doc',
-          label: 'Run a non-validator node',
-          id: 'developer-guide/running-non-validating-node',
+          type: 'category',
+          label: 'Non Validator',
+          items: [
+            {
+              type: 'doc',
+              label: 'Run a Non Validator node',
+              id: 'developer-guide/running-non-validating-node',
+            },
+            {
+              type: 'doc',
+              label: 'Upgrade Ronin Node',
+              id: 'developer-guide/upgrade-ronin-node',
+            },
+          ],
         },
         {
           type: 'category',
