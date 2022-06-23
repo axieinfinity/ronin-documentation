@@ -54,7 +54,7 @@ services:
       - 30303:30303/udp
       - 6060:6060
     volumes:
-      - $HOME/chaindata:/ronin
+      - ~/.skymavis/chaindata:/ronin
     environment:
       - SYNC_MODE=snap
       - PASSWORD=${PASSWORD}
@@ -112,13 +112,13 @@ $ tar -xvf chaindata-0xe14eea.tar
 Consider backing up this folder before removing
 
 ```
-$ rm -rf $HOME/chaindata/data/ronin/chaindata
+$ rm -rf ~/.skymavis/chaindata/data/ronin/chaindata
 ```
 
 5. Move snapshot data to your chaindata folder
 
 ```
-$ mv chaindata $HOME/chaindata/data/ronin/
+$ mv chaindata ~/.skymavis/chaindata/data/ronin/
 ```
 
 6. Start your Ronin node
