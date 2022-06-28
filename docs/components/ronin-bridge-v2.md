@@ -12,13 +12,14 @@ The governor credentials are ideally stored inside a hardware wallet and should 
 
 ## Withrawal Limits
 
-Following this network upgrade, the withdrawal process will be segregated into new tiered methods corresponding to the overall value of the transaction.  Here is our proposed list of tiers for this iteration:
+Following this network upgrade, the withdrawal process will be segregated into new tiered methods corresponding to the overall value of the transaction. Below is the initial setting for Tier limits:
 
-| Tier   | Withdrawal value | Threshold                                                                                   |
-|--------|------------------|---------------------------------------------------------------------------------------------|
-| Tier 1 | -                | The normal withdrawal / deposit threshold                                                   |
-| Tier 2 | >$1,000,000             | 90% signatures from validators are required                                                 |
-| Tier 3 | >$10,000,000            |  90% signatures from validators are required <br/>Up to 5 days of human review to unlock the fund |
+| #    | Tier 1        | Tier 2      | Tier 3        | Daily Limit    |
+|------|---------------|-------------|---------------|----------------|
+| AXS  | < 71,429      |      71,429 |       714,290 |      3,571,450 |
+| WETH | < 918         |         918 |         9,180 |         45,900 |
+| SLP  | < 273,972,602 | 273,972,602 | 2,739,726,020 | 13,698,630,100 |
+| USDC | < 1,000,000   |   1,000,000 |    10,000,000 |     50,000,000 |
 
 For Tier 3 review, it will cost a fee (~$100) mainly to cover the fund for unlocking transaction.
 
@@ -26,3 +27,8 @@ For Tier 3 review, it will cost a fee (~$100) mainly to cover the fund for unloc
 
 We have also updated the software so that a total maximum withdrawal volume per day can be set. The initial value cap of $50M. Since a Tier 3 withdrawal already requires human review, it will not be counted in this daily withdrawal limit.
 
+## Security Audits
+
+Ronin Bridge smart contracts has been security audit by Verichains. 
+
+[Verichains Bridge Audit v1.1](https://cdn.axieinfinity.com/ronin-doc/Verichains%20Public%20Audit%20Report%20-%20Ronin%20Bridge%20-%20v1.1.pdf)
