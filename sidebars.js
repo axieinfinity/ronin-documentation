@@ -54,9 +54,20 @@ const sidebars = {
               id: 'developer-guide/running-validating-node',
             },
             {
-              type: 'doc',
-              label: 'Upgrade Ronin Manager',
-              id: 'developer-guide/upgrade-ronin-manager',
+              type: 'category',
+              label: 'Change logs',
+              items: [
+                {
+                  type: 'doc',
+                  label: 'CL2 - Bridge Upgrade',
+                  id: 'developer-guide/upgrade-ronin-bridge',
+                },
+                {
+                  type: 'doc',
+                  label: 'CL1 - Ronin Hardfork',
+                  id: 'developer-guide/upgrade-ronin-node',
+                },
+              ],
             },
           ],
         },

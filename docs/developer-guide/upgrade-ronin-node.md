@@ -1,3 +1,7 @@
+# CL1 - Ronin Hardfork 
+
+**Date: 28th June 2022**
+
 # Upgrade the Ronin node
 
 Update node image to the latest version.
