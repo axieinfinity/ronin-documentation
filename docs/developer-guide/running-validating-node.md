@@ -30,7 +30,7 @@ ETHEREUM_ENDPOINT=
 
 # Replace node and bridge image env keys with
 NODE_IMAGE=axieinfinity/ronin-mainnet:v2.4.0-6034a62cf
-BRIDGE_IMAGE=axieinfinity/bridge:v2.0.1-4d803fc
+BRIDGE_IMAGE=axieinfinity/bridge:v2.0.1-8e3d254
 ```
 
 * Pull the latest image and run node:
