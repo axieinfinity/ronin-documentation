@@ -29,7 +29,7 @@ ETHEREUM_GET_LOGS_BATCH_SIZE=100
 Set miner.gaslimit into the RONIN_PARAMS env. E.g
 
 ```bash
-RONIN_PARAMS='--miner.gaslimit 100000000'
+RONIN_PARAMS=--miner.gaslimit 100000000
 ```
 
 Replace the image:
@@ -76,21 +76,14 @@ $ docker stop bridge -t 300
 **4. Stop the current node**
 
 ```bash
-$ docker stop node -t 300
+$ docker stop node -t 300
 ```
 
-**5. Start the current node** 
-
-```bash
-$ docker start node
-```
-
-After some minutes, verify your node is connected and up to date with the network at [https://stats.roninchain.com](https://stats.roninchain.com/).
-
-
-**6. Start the bridge and recreating the bridge db again**
+**5. Start the node, bridge and recreating the bridge db again**
 
 ```bash
 $ ./ronin-manager pull
 $ ./ronin-manager start
 ```
+
+After some minutes, verify your node is connected and up to date with the network at [https://stats.roninchain.com](https://stats.roninchain.com/).
