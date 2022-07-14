@@ -66,7 +66,17 @@ BRIDGE_IMAGE=axieinfinity/bridge:v2.0.1-8e3d254
       - ETHEREUM_GET_LOGS_BATCH_SIZE=${ETHEREUM_GET_LOGS_BATCH_SIZE}
       …
   ```
-    
+  3. Add log rotate  into the current bridge
+
+  ```bash
+  bridge:
+    image: ${BRIDGE_IMAGE}
+    ...
+    logging:
+      options:
+        max-file: "2"
+        max-size: "100m"
+  ```
 **3. Stop the current bridge**
 
 ```bash
