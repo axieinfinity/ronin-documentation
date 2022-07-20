@@ -37,4 +37,5 @@ We have also updated the software so that a total maximum withdrawal volume per 
 ## Security Audits
 
 [Verichains Bridge Audit v1.1](https://cdn.axieinfinity.com/ronin-doc/verichains-audit-bridge-v1.1.pdf)
+
 [Certik Audit](https://cdn.axieinfinity.com/ronin-doc/REP-final-20220621T172752Z.pdf)
