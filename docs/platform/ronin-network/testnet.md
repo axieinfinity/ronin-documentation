@@ -7,7 +7,7 @@
 * Chain id (network id): `2021`
 * RPC endpoint: [https://saigon-testnet.roninchain.come/rpc](https://saigon-testnet.roninchain.com/rpc)
 * Consensus: POA (Consortium)
-* Stats: [https://testnet.skymavis.one/](https://testnet.skymavis.one)
+* Stats: [https://saigon-testnet-stats.roninchain.com/](https://saigon-testnet-stats.roninchain.com/)
 * Explorer: [https://testnet-explorer.skymavis.one/](https://testnet-explorer.skymavis.one)
 * Genesis file: [testnet.json](/assets/genesis-testnet.json)
 
