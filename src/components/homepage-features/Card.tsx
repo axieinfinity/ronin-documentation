@@ -4,6 +4,7 @@ import React from 'react'
 import styles from './card.module.scss'
 
 export type CardProps = {
+  iconColor: string
   title: string
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
   description?: string | React.ReactNode
@@ -13,13 +14,13 @@ export type CardProps = {
   }
 }
 
-export const Card: React.FC<CardProps> = ({ title, description, Icon, link }) => {
+export const Card: React.FC<CardProps> = ({ title, description, Icon, link, iconColor }) => {
   return (
     <div className={clsx('col col--4', styles.wrapper)}>
       <a className={styles.container} href={link.href}>
         <div className={styles.content}>
           <div className={styles.icon}>
-            <Icon width={60} height={60} />
+            <Icon width={60} height={60} color={iconColor} />
           </div>
           <div>
             <p className={styles.headingText}>{title}</p>

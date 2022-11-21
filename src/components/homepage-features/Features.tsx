@@ -1,14 +1,18 @@
-import FilledAppIcon from '@site/static/img/welcome/filled-apps.svg'
-import FilledBoxIcon from '@site/static/img/welcome/filled-box.svg'
-import FilledConsoleIcon from '@site/static/img/welcome/filled-console.svg'
+import ListViewIcon from './list-view.svg';
+import CoinIcon from './coins.svg';
+import BoxTickIcon from './box-tick.svg';
+import SignDirectionIcon from './signs-direction.svg';
+import LaptopCodeIcon from './laptop-code.svg';
+import UserShieldIcon from './user-shield.svg';
+
 import React from 'react'
 
 import { Card } from './Card'
 
 const featureList = [
   {
-    title: 'Introduction to Ronin Network',
-    Icon: FilledBoxIcon,
+    title: 'Introduction',
+    Icon: ListViewIcon,
     link: {
       href: '/docs/intro/introduction',
       title: 'Introduction to Ronin Network',
@@ -17,7 +21,7 @@ const featureList = [
   },
   {
     title: 'Staking',
-    Icon: FilledBoxIcon,
+    Icon: CoinIcon,
     link: {
       href: '/docs/stake/staking',
       title: 'Staking',
@@ -26,7 +30,7 @@ const featureList = [
   },
   {
     title: 'Validator',
-    Icon: FilledBoxIcon,
+    Icon: BoxTickIcon,
     description: <>Secure the network by staking and operating a node to validate on Ronin Network.</>,
     link: {
       href: '/docs/validator/responsibility',
@@ -35,7 +39,7 @@ const featureList = [
   },
   {
     title: 'Bridge',
-    Icon: FilledBoxIcon,
+    Icon: SignDirectionIcon,
     description: <>Validate cross chain transactions.</>,
     link: {
       href: '/docs/bridge/ronin-bridge-v2',
@@ -44,8 +48,8 @@ const featureList = [
   },
   {
     title: 'Governor',
-    Icon: FilledBoxIcon,
-    description: <>Create, view, and vote on proposals</>,
+    Icon: UserShieldIcon,
+    description: <>Create, view, and vote on proposals.</>,
     link: {
       href: '/docs/governance/create',
       title: 'Governor',
@@ -53,12 +57,12 @@ const featureList = [
   },
   {
     title: 'Developer',
+    Icon: LaptopCodeIcon,
     link: {
       href: '/docs/developer-guide/smart-contract-deploying/using-truffle',
       title: 'Start building dApp',
     },
-    Icon: FilledAppIcon,
-    description: <>Get started building your Ronin Network decentralized application.</>,
+    description: <>Build your Ronin Network decentralized application.</>,
   },
 ]
 
@@ -67,7 +71,7 @@ export const Features: React.FC = () => {
     <section className="container">
       <div className="row">
         {featureList.map((props, idx) => (
-          <Card key={idx} {...props} />
+          <Card key={idx} {...props} iconColor="var(--ifm-color-primary-dark)" />
         ))}
       </div>
     </section>
