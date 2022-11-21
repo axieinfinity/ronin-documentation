@@ -7,31 +7,58 @@ import { Card } from './Card'
 
 const featureList = [
   {
-    title: 'Build your dApp',
+    title: 'Introduction to Ronin Network',
+    Icon: FilledBoxIcon,
     link: {
-      href: '/docs/developer-guide/integrate-ronin-wallet',
+      href: '/docs/intro/introduction',
+      title: 'Introduction to Ronin Network',
+    },
+    description: <>Learn about the basic of blockchain and Ronin Network.</>,
+  },
+  {
+    title: 'Staking',
+    Icon: FilledBoxIcon,
+    link: {
+      href: '/docs/stake/staking',
+      title: 'Staking',
+    },
+    description: <>Secure the network by staking tokens & delegating your stake to validators.</>,
+  },
+  {
+    title: 'Validator',
+    Icon: FilledBoxIcon,
+    description: <>Secure the network by staking and operating a node to validate on Ronin Network.</>,
+    link: {
+      href: '/docs/validator/responsibility',
+      title: 'Validator',
+    },
+  },
+  {
+    title: 'Bridge',
+    Icon: FilledBoxIcon,
+    description: <>Validate cross chain transactions.</>,
+    link: {
+      href: '/docs/bridge/ronin-bridge-v2',
+      title: 'Bridge',
+    },
+  },
+  {
+    title: 'Governor',
+    Icon: FilledBoxIcon,
+    description: <>Create, view, and vote on proposals</>,
+    link: {
+      href: '/docs/governance/create',
+      title: 'Governor',
+    },
+  },
+  {
+    title: 'Developer',
+    link: {
+      href: '/docs/developer-guide/smart-contract-deploying/using-truffle',
       title: 'Start building dApp',
     },
     Icon: FilledAppIcon,
     description: <>Get started building your Ronin Network decentralized application.</>,
-  },
-  // {
-  //   title: 'Build your Axie Game',
-  //   Icon: FilledConsoleIcon,
-  //   link: {
-  //     href: '/docs/intro',
-  //     title: 'Build your game',
-  //   },
-  //   description: <>Build your game with Axie Infinity IP, marketplace and Mavis Hub.</>,
-  // },
-  {
-    title: 'Run a validator node',
-    Icon: FilledBoxIcon,
-    description: <>Take part in securing Ronin Network and earn rewards.</>,
-    link: {
-      href: '/docs/developer-guide/minimum-requirements',
-      title: 'Running a Validator',
-    },
   },
 ]
 
