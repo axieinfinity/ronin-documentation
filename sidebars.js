@@ -44,17 +44,33 @@ const sidebars = {
     {
       type: 'category',
       label: 'Staking',
+      link: { type: 'doc', id: 'stake/staking' },
       items: [
         {
           type: 'doc',
-          label: 'How to Delegate',
-          id: 'stake/staking',
+          label: 'Access the dashboard',
+          id: 'stake/dashboard',
         },
         {
           type: 'doc',
-          label: 'Reward',
-          id: 'stake/reward',
+          label: 'Delegate to a validator',
+          id: 'stake/delegate',
         },
+        {
+          type: 'doc',
+          label: 'Withdraw and move stake',
+          id: 'stake/withdraw&move',
+        },
+        {
+          type: 'doc',
+          label: 'Claim reward',
+          id: 'stake/claim',
+        },
+        // {
+        //   type: 'doc',
+        //   label: 'Reward',
+        //   id: 'stake/reward',
+        // },
       ],
     },
     {
