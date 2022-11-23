@@ -4,15 +4,15 @@
  */
 
 .background {
-  background-image: url("/img/welcome/background.png");
+  background-image: url('/img/welcome/background.png');
   background-position: center 31px;
   background-repeat: no-repeat;
   background-size: 80%;
   transition: 0.1s;
 }
 
-html[data-theme="dark"] .background {
-  background-image: url("/img/welcome/background-dark.png");
+html[data-theme='dark'] .background {
+  background-image: url('/img/welcome/background-dark.png');
 }
 
 .heroBanner {
@@ -52,4 +52,27 @@ html[data-theme="dark"] .background {
     right: 124px;
     bottom: 0;
   }
+}
+
+.alertBanner {
+  background: linear-gradient(0deg, #ffefc3, #ffefc3),
+    linear-gradient(0deg, #ffde81, #ffde81);
+  border-bottom: 1px solid #ffde81;
+  padding: 8px 0px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.link {
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.pin {
+  margin-right: 8px;
 }
