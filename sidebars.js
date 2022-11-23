@@ -146,6 +146,11 @@ const sidebars = {
           label: 'Integrate Ronin Wallet',
           id: 'developer-guide/integrate-ronin-wallet',
         },
+        {
+          type: 'doc',
+          label: 'Switch Ronin Wallet network',
+          id: 'developer-guide/switch-wallet-to-testnet',
+        },
       ],
     },
     // {
