@@ -7,7 +7,8 @@ Ronin means “a samurai without a master,” and this idea mirrors the motivati
 
 Currently, the Ronin mainnet uses a Proof-of-Authority (POA) consensus algorithm. At the bootstrap of the network, carefully selected, trusted validators were predefined to secure the network. After that, validators can be added or removed if the decision is approved by the majority of currently active validators.
 
-We are migrating Ronin consensus using Proof-of-Staked-Authority (PoSA), a combination of Delegated-Proof-of-Stake (DPoS) and PoA, to increase the level of decentralization and allows the token holders to join the network as validators. DPoS is a more democratic way of choosing who verifies the next block since it’s based on earned reputation as a lawful staker and not overall wealth. This allows for a more diverse group of people to participate in the process.
+We are migrating Ronin consensus to Proof-of-Staked-Authority (PoSA), a combination of Delegated-Proof-of-Stake (DPoS) and PoA, to increase the level of decentralization and allow the token holders to join the network as validators. DPoS is a more democratic way of choosing who verifies the next block since it’s based on earned reputation as a lawful staker and not overall wealth. This allows for a more diverse group of people to participate in the process.
+
 
 
 ### What is a Blockchain?
