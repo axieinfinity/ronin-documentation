@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div className={styles.alertBanner}>
-        <span className={styles.pin}>📌</span>
+        <span className={styles.pin}>🎉</span>
         <strong>Saigon</strong> - an open testnet for Ronin, is live!
         <a
           className={styles.link}

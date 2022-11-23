@@ -55,9 +55,9 @@ html[data-theme='dark'] .background {
 }
 
 .alertBanner {
-  background: linear-gradient(0deg, #ffefc3, #ffefc3),
-    linear-gradient(0deg, #ffde81, #ffde81);
-  border-bottom: 1px solid #ffde81;
+  background: linear-gradient(0deg, #E0F6F4, #E0F6F4),
+  linear-gradient(0deg, #AEF3DF, #AEF3DF);  
+  border-bottom: 1px solid #AEF3DF;
   padding: 8px 0px;
   align-items: center;
   justify-content: center;
@@ -76,4 +76,5 @@ html[data-theme='dark'] .background {
 
 .pin {
   margin-right: 8px;
+  font-size: 16px;
 }
