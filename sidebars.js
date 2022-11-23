@@ -127,8 +127,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'Developer',
-      link: { type: 'doc', id: 'developer/dev' },
+      // link: { type: 'doc', id: 'developer/dev' },
       items: [
+        {
+          type: 'doc',
+          label: 'Switch Ronin Wallet network',
+          id: 'developer-guide/switch-wallet-to-testnet',
+        },
         // {
         //   type: 'category',
         //   label: 'Smart contract deploying',
