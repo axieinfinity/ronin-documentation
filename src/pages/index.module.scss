@@ -53,36 +53,3 @@ html[data-theme='dark'] .background {
     bottom: 0;
   }
 }
-
-.alertBanner {
-  background: linear-gradient(0deg, #E0F6F4, #E0F6F4),
-  linear-gradient(0deg, #AEF3DF, #AEF3DF);  
-  border-bottom: 1px solid #AEF3DF;
-  padding: 8px 0px;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 14px;
-  text-align: center;
-}
-
-html[data-theme='dark'] .alertBanner {
-  background: #12573F;
-  border: none;
-}
-
-html[data-theme='dark'] .link {
-  color:#0BE094;
-}
-
-.link {
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  margin-left: 8px;
-}
-
-.pin {
-  margin-right: 8px;
-  font-size: 16px;
-}
