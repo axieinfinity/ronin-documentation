@@ -66,10 +66,10 @@ The validators have two sources of rewards: transaction fees and 90% of staking 
 
 Each validator can set a commission rate that indicates the percentage of self-allocated rewards. The remaining rewards will be allocated based on the staked amount. For example, consider a validator A with a commission rate of 10%. The validator A self-delegates 1000 Ronin tokens. There are 3 delegators, named B,C,D, who delegate their tokens to validator A with the amounts of 500, 250,250, respectively. Here, the total amount of staked tokens to validator A is 1000+500+250+250=2000.  If 10 tokens are rewarded to validator A and her/his delegators, we allocate the rewards as follows:
 
-- Validator A receives 5.5 tokens
-- Delegator B receives 2.25 tokens
-- Delegator C receives 1.125 tokens
-- Delegator D receives 1.125 tokens
+- Validator A receives 10x10%+10x90%x1000/2000=5.5 tokens
+- Delegator B receives 10x90%x500/2000=2.25 tokens
+- Delegator C receives 10x90%x250/2000=1.125 tokens
+- Delegator D receives 10x90%x250/2000=1.125 tokens
 
 ### Rewarding for bridge relayers
 
