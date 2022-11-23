@@ -1,4 +1,4 @@
-# Switch Wallet network
+# Switch Ronin Wallet network
 
 1. Go to Settings
 
