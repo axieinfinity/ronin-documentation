@@ -3,13 +3,13 @@
 ![Delegate](<./delegate.png>)
  2. Confirm the delegate transaction.
 
-![Confirm](<./confirm1.png>)
+![Confirm](<./Confirmation.jpg>)
 
 After the delegation transaction completes, you will see the transaction success message.
 
-![Success](<./success.png>)
+![Success](<./success.jpg>)
 
 # View your delegations
 You can clink **My staking** to view the list of validators that you delegated to.
 
-![View](<./view.png>)
+![View](<./MyStaking.jpg>)
