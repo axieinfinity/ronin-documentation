@@ -29,11 +29,11 @@ const sidebars = {
           label: 'Welcome to Ronin',
           id: 'intro/introduction',
         },
-        // {
-        //   type: 'doc',
-        //   label: 'Blockchain Basic',
-        //   id: 'intro/blockchain',
-        // },
+        {
+          type: 'doc',
+          label: 'Saigon Testnet',
+          id: 'intro/saigon-testnet',
+        },
         {
           type: 'doc',
           label: 'Whitepaper',
