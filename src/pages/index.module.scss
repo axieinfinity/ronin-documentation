@@ -66,12 +66,20 @@ html[data-theme='dark'] .background {
   text-align: center;
 }
 
+html[data-theme='dark'] .alertBanner {
+  background: #12573F;
+  border: none;
+}
+
+html[data-theme='dark'] .link {
+  color:#0BE094;
+}
+
 .link {
   font-weight: 500;
   display: inline-flex;
   align-items: center;
   margin-left: 8px;
-  gap: 6px;
 }
 
 .pin {

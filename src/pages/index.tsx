@@ -19,7 +19,7 @@ const Home: React.FC = () => {
           rel='noopener noreferrer'
         >
           Checkout Saigon documentation
-          <ExternalLink />
+          <ExternalLink className={styles.link}/>
         </a>
       </div>
       <Layout title={`Ronin Network`} description='Ronin Documentation'>
