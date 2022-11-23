@@ -33,7 +33,7 @@ const featureList = [
     Icon: BoxTickIcon,
     description: <>Secure the network by staking and operating a node to validate on Ronin Network.</>,
     link: {
-      href: '/docs/validator/responsibility',
+      href: '/docs/validator/val',
       title: 'Validator',
     },
   },
@@ -42,7 +42,7 @@ const featureList = [
     Icon: SignDirectionIcon,
     description: <>Validate cross chain transactions.</>,
     link: {
-      href: '/docs/bridge/ronin-bridge-v2',
+      href: '/docs/bridge/bridge-relayer',
       title: 'Bridge',
     },
   },
@@ -51,7 +51,7 @@ const featureList = [
     Icon: UserShieldIcon,
     description: <>Create, view, and vote on proposals.</>,
     link: {
-      href: '/docs/governance/create',
+      href: '/docs/governance/gov',
       title: 'Governor',
     },
   },
@@ -59,7 +59,7 @@ const featureList = [
     title: 'Developer',
     Icon: LaptopCodeIcon,
     link: {
-      href: '/docs/developer-guide/smart-contract-deploying/using-truffle',
+      href: '/docs/developer-guide/dev',
       title: 'Start building dApp',
     },
     description: <>Build your Ronin Network decentralized application.</>,

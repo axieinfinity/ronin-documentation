@@ -1,8 +1,7 @@
 # Delegate to a validator
- 1. Pick a specific validator and click **Delegate**.
- 2. Provide the amount of RON.
+ 1. Pick a specific validator, click **Delegate**, and provide the amount of RON.
 ![Delegate](<./delegate.png>)
- 3. Confirm the delegate transaction.
+ 2. Confirm the delegate transaction.
 ![Confirm](<./confirm.png>)
 
 After the delegation transaction completes, you will see the transaction success message.

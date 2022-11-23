@@ -76,76 +76,80 @@ const sidebars = {
     {
       type: 'category',
       label: 'Validator',
-      items: [
-        {
-          type: 'doc',
-          label: 'Validator responsibility',
-          id: 'validator/responsibility',
-        },
-        {
-          type: 'doc',
-          label: 'Set up a validator node',
-          id: 'validator/setup',
-        },
-        {
-          type: 'doc',
-          label: 'Registration',
-          id: 'validator/registration',
-        },
+      link: { type: 'doc', id: 'validator/val' },
+      items: [ 
+        // {
+        //   type: 'doc',
+        //   label: 'Validator responsibility',
+        //   id: 'validator/responsibility',
+        // },
+        // {
+        //   type: 'doc',
+        //   label: 'Set up a validator node',
+        //   id: 'validator/setup',
+        // },
+        // {
+        //   type: 'doc',
+        //   label: 'Registration',
+        //   id: 'validator/registration',
+        // },
       ],
     },
     {
       type: 'category',
       label: 'Bridge',
+      link: { type: 'doc', id: 'bridge/bridge-relayer' },
       items: [
-        {
-          type: 'doc',
-          label: 'Bridge V2',
-          id: 'bridge/ronin-bridge-v2',
-        },
+        // {
+        //   type: 'doc',
+        //   label: 'Bridge V2',
+        //   id: 'bridge/ronin-bridge-v2',
+        // },
       ],
     },
     {
       type: 'category',
       label: 'Governance',
+      link: { type: 'doc', id: 'governance/gov' },
       items: [
-        {
-          type: 'doc',
-          label: 'Create a proposal',
-          id: 'governance/create',
-        },
-        {
-          type: 'doc',
-          label: 'Vote on a proposal',
-          id: 'governance/vote',
-        },
+        // {
+        //   type: 'doc',
+        //   label: 'Create a proposal',
+        //   id: 'governance/create',
+        // },
+        // {
+        //   type: 'doc',
+        //   label: 'Vote on a proposal',
+        //   id: 'governance/vote',
+        // },
       ],
     },
     {
       type: 'category',
       label: 'Developer',
+      link: { type: 'doc', id: 'developer/dev' },
       items: [
-        {
-          type: 'category',
-          label: 'Smart contract deploying',
-          items: [
-            {
-              type: 'doc',
-              label: 'Using Truffle',
-              id: 'developer-guide/smart-contract-deploying/using-truffle',
-            },
-            {
-              type: 'doc',
-              label: 'Using Hardhat',
-              id: 'developer-guide/smart-contract-deploying/using-hardhat',
-            },
-          ],
-        },
-        {
-          type: 'doc',
-          label: 'Integrate Ronin Wallet',
-          id: 'developer-guide/integrate-ronin-wallet',
-        },
+        // {
+        //   type: 'category',
+        //   label: 'Smart contract deploying',
+        //   items: [
+        //     {
+        //       type: 'doc',
+        //       label: 'Using Truffle',
+        //       id: 'developer-guide/smart-contract-deploying/using-truffle',
+        //     },
+        //     {
+        //       type: 'doc',
+        //       label: 'Using Hardhat',
+        //       id: 'developer-guide/smart-contract-deploying/using-hardhat',
+        //     },
+        //   ],
+        // },
+        // {
+        //   type: 'doc',
+        //   label: 'Integrate Ronin Wallet',
+        //   id: 'developer-guide/integrate-ronin-wallet',
+        // },
       ],
     },
     // {
