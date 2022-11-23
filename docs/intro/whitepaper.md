@@ -87,7 +87,7 @@ Anyone can submit a slash request with the double sign evidence, which should co
 
 - (S)he cannot claim the reward on that day.
 - (S)he will be slashed 500,000 self-delegated RON
-- (S)he will be put in jail for $2^{63}-1$ blocks, i.e., (s)he is not allowed to be a validator in the future.
+- (S)he will be put in jail for 2^{63}-1 blocks, i.e., (s)he is not allowed to be a validator in the future.
 
 ### Unavailability validators
 

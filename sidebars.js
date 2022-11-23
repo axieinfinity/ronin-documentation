@@ -126,7 +126,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Developer',
+      label: 'Developer Guides',
       // link: { type: 'doc', id: 'developer/dev' },
       items: [
         {

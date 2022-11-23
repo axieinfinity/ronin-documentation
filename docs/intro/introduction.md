@@ -13,7 +13,7 @@ We are migrating Ronin consensus use Proof-of-Staked-Authority (PoSA), a combina
 
 ### What is a Blockchain?
 
-Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets.
+Blockchain is a decentralised, immutable ledger that facilitates the process of recording transactions and tracking assets. Blockchains are typically managed by a peer-to-peer (P2P) network, where nodes collectively execute a consensus algorithm protocol to add and validate new transaction blocks.
 
 ### Proof-of-Authority
 
@@ -22,7 +22,7 @@ In proof-of-authority, machines earn the right to generate new blocks by passing
 
 ### Delegated-Proof-of-Stake
 
-Delegated Proof of Stake (DPoS) is a consensus mechanism that is a variation of the classic Proof of Stake (PoS) system. DPoS evolved from PoS and allows users of the network to vote in delegates who then validate blocks.
+Delegated Proof of Stake (DPoS) is a consensus algorithm that is a variation of the classic Proof of Stake (PoS) system. DPoS evolved from PoS and allows users of the network to vote in delegates who then validate blocks.
 
 ### Proof-of-Staked-Authority
 
