@@ -59,7 +59,7 @@ const featureList = [
     title: 'Developer',
     Icon: LaptopCodeIcon,
     link: {
-      href: '/docs/developer-guide/dev',
+      href: '/docs/developer-guide/switch-wallet-to-testnet',
       title: 'Start building dApp',
     },
     description: <>Build your Ronin Network decentralized application.</>,
