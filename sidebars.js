@@ -21,19 +21,19 @@ const sidebars = {
   tutorialSidebar: [
     {
       type: 'category',
-      label: 'Introduction to Ronin Network',
+      label: 'Overview',
       // link: { type: 'doc', id: 'intro/introduction' },
       items: [
         {
           type: 'doc',
-          label: 'Introduction',
+          label: 'Welcome to Ronin',
           id: 'intro/introduction',
         },
-        {
-          type: 'doc',
-          label: 'Blockchain Basic',
-          id: 'intro/blockchain',
-        },
+        // {
+        //   type: 'doc',
+        //   label: 'Blockchain Basic',
+        //   id: 'intro/blockchain',
+        // },
         {
           type: 'doc',
           label: 'Whitepaper',

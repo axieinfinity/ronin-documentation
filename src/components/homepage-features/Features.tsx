@@ -11,11 +11,11 @@ import { Card } from './Card'
 
 const featureList = [
   {
-    title: 'Introduction',
+    title: 'Overview',
     Icon: ListViewIcon,
     link: {
       href: '/docs/intro/introduction',
-      title: 'Introduction to Ronin Network',
+      title: 'Overview',
     },
     description: <>Learn about the basic of blockchain and Ronin Network.</>,
   },
