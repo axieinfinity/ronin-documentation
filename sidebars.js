@@ -130,31 +130,37 @@ const sidebars = {
       // link: { type: 'doc', id: 'developer/dev' },
       items: [
         {
-          type: 'doc',
-          label: 'Switch Ronin Wallet network',
-          id: 'developer-guide/switch-wallet-to-testnet',
+          type: 'category',
+          label: 'Ronin Wallet Integration',
+          items: [
+            {
+              type: 'doc',
+              label: 'Wallet provider',
+              id: 'developer-guide/integrate-ronin-wallet',
+            },
+            {
+              type: 'doc',
+              label: 'Network switching',
+              id: 'developer-guide/switch-wallet-to-testnet',
+            },
+          ]
         },
-        // {
-        //   type: 'category',
-        //   label: 'Smart contract deploying',
-        //   items: [
-        //     {
-        //       type: 'doc',
-        //       label: 'Using Truffle',
-        //       id: 'developer-guide/smart-contract-deploying/using-truffle',
-        //     },
-        //     {
-        //       type: 'doc',
-        //       label: 'Using Hardhat',
-        //       id: 'developer-guide/smart-contract-deploying/using-hardhat',
-        //     },
-        //   ],
-        // },
-        // {
-        //   type: 'doc',
-        //   label: 'Integrate Ronin Wallet',
-        //   id: 'developer-guide/integrate-ronin-wallet',
-        // },
+        {
+          type: 'category',
+          label: 'Smart contract deploying',
+          items: [
+            {
+              type: 'doc',
+              label: 'Using Truffle',
+              id: 'developer-guide/smart-contract-deploying/using-truffle',
+            },
+            {
+              type: 'doc',
+              label: 'Using Hardhat',
+              id: 'developer-guide/smart-contract-deploying/using-hardhat',
+            },
+          ],
+        },
       ],
     },
     // {
