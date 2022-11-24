@@ -34,11 +34,11 @@ All token holders are allowed to register as validators candidates. They can als
 Token holders can put their tokens “bonded” into the stake. Token holders can register to become validator candidates or delegate their tokens to any validator or validator candidate. The core logic for staking is summarized below.
 
 - The staking token is RON.
-- Token holders must stake at least 500,000 RON to become validator candidates.
+- Token holders (including trusted organizations) must stake at least 500,000 RON to become validator candidates.
 - The staking will take effect at the beginning of the next day.
 - The validator set includes the top 10 validator candidates with the highest staked amount.
 - The validators can renounce, unstake, and withdraw the tokens after waiting for a period of 7 days.
-- The delegators can instantly unstake and withdraw the tokens. However, they need to stake for at least 3 days, i.e., they can unstake after 3 after the last staking operation.
+- The delegators can instantly unstake and withdraw the tokens. However, they need to stake for at least 3 days, i.e., they can unstake after 3 days since the last staking operation.
 
 #### Trusted organizations
 
