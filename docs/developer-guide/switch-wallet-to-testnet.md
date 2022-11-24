@@ -1,6 +1,6 @@
-# Switch Ronin Wallet network
+# Switch network on Ronin Wallet extension
 
-1. Go to Settings
+1. From your Ronin Wallet extension, go to Settings
 
 ![Wallet Settings](<./wallet/wallet-1.png>)
 
