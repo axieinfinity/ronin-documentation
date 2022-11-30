@@ -31,19 +31,40 @@ const sidebars = {
         },
         {
           type: 'doc',
-          label: 'Saigon Testnet',
-          id: 'intro/saigon-testnet',
+          label: 'Whitepaper (Testnet)',
+          id: 'intro/whitepaper',
+        },
+        {
+          type: 'category',
+          label: 'Ronin Network',
+          items: [
+            {
+              type: 'doc',
+              label: 'Mainnet',
+              id: 'platform/ronin-network/mainnet',
+            },
+            {
+              type: 'doc',
+              label: 'Saigon Testnet',
+              id: 'intro/saigon-testnet',
+            },
+          ],       
+        },  
+        {
+          type: 'doc',
+          label: 'Tokenomic',
+          id: 'platform/tokenomic',
         },
         {
           type: 'doc',
-          label: 'Whitepaper',
-          id: 'intro/whitepaper',
-        },
+          label: 'Transaction life cycle',
+          id: 'platform/transaction-lifecycle',
+        },      
       ],
     },
     {
       type: 'category',
-      label: 'Staking',
+      label: 'Staking (Testnet)',
       link: { type: 'doc', id: 'stake/staking' },
       items: [
         {
@@ -66,18 +87,56 @@ const sidebars = {
           label: 'Claim reward',
           id: 'stake/claim',
         },
-        // {
-        //   type: 'doc',
-        //   label: 'Reward',
-        //   id: 'stake/reward',
-        // },
       ],
     },
     {
       type: 'category',
       label: 'Validator',
-      link: { type: 'doc', id: 'validator/val' },
+      link: { type: 'doc', id: 'components/validators' },
       items: [ 
+        {
+          type: 'category',
+          label: 'Mainnet',          
+          items: [
+                {
+                  type: 'link',
+                  label: 'API',
+                  href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
+                },
+                {
+                  type: 'doc',
+                  label: 'CLI',
+                  id: 'developer-guide/cli',
+                },
+                {
+                  type: 'doc',
+                  label: 'Minimum requirements',
+                  id: 'developer-guide/minimum-requirements',
+                },
+                {
+                  type: 'doc',
+                  label: 'Run a Validator node',
+                  id: 'developer-guide/running-validating-node',
+                },
+                {
+                  type: 'doc',
+                  label: 'Run a Non Validator node',
+                  id: 'developer-guide/running-non-validating-node',
+                },
+                {
+                  type: 'doc',
+                  label: 'Upgrade Ronin Node',
+                  id: 'developer-guide/upgrade-ronin-node',
+                },
+          ],
+        }, 
+        {
+          type: 'category',
+          label: 'Testnet',
+          link: { type: 'doc', id: 'validator/val' },
+          items: [
+          ],
+        },
         // {
         //   type: 'doc',
         //   label: 'Validator responsibility',
@@ -98,7 +157,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Bridge',
-      link: { type: 'doc', id: 'bridge/bridge-relayer' },
+      link: { type: 'doc', id: 'components/ronin-bridge-v2' },
       items: [
         // {
         //   type: 'doc',
