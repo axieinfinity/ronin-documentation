@@ -115,6 +115,15 @@ services:
 * Create .env (Replacing credential env)
 
 ```
+# BOOTNODES address of the bootnode to connect to the network, will be auto-filled
+BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303,enode://7b9d7d6d8193ac8ac888e9b373dc6cfcab826fd400d9cf92cc661ba4e00d9628b24bb44132bff536416b7ef1d0092d356f2843c8c88457ce528083f42cd2323b@34.170.224.188:30303
+# NETWORK_ID network id
+NETWORK_ID=40925
+# Setting for oracle services, staging = rinkey + testnet, production = ethereum + mainnnet
+DEPLOYMENT=test
+# Setting nodekey
+GASPRICE=20000000000
+
 # INSTANCE_NAME the name of your instance that you want to display in stats website
 INSTANCE_NAME=xxxx
 
