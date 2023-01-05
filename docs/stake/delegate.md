@@ -10,6 +10,6 @@ After the delegation transaction completes, you will see the transaction success
 ![Success](<./success.jpg>)
 
 # View your delegations
-You can clink **My staking** to view the list of validators that you delegated to.
+You can click **My staking** to view the list of validators that you delegated to.
 
 ![View](<./MyStaking.jpg>)
