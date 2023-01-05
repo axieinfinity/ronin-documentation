@@ -163,4 +163,4 @@ mv chaindata-4-1-2023 chaindata
 ```
 cd  /axie/ronin-manager && docker-compose up -d 
 ```
-After some minutes, verify your node is connecting and up to date with the network at https://saigon-stats.roninchain.com/
+After a few minutes, you can verify your node is connecting and up to date with the network at https://saigon-stats.roninchain.com/
