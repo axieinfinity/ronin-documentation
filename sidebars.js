@@ -150,6 +150,11 @@ const sidebars = {
               label: 'Validator onboarding',
               id: 'validator/registration',
             },
+            {
+              type: 'doc',
+              label: 'Setup a Validator node',
+              id: 'validator/setup',
+            },
           ],
         },
         // {

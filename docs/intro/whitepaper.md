@@ -156,3 +156,6 @@ Trusted organizations also take the role of governance. The governance is respon
 - Sync the set of bridge operators to the Ethereum chain every day.
 
 We require 9/11 trusted organizations’ votes to perform the above tasks. The trusted organization that does not sync the set of bridge operators to the Ethereum chain for 3 consecutive days will get slashed 10,000 RON.
+
+
+**Disclaimer:**  This whitepaper is a work in progress and can be updated in the future.
