@@ -1,5 +1,6 @@
 # Ronin Whitepaper
 
+
 ## Motivation
 
 Decentralization is a hallmark of blockchain technology and one of the most prominent forces of innovation going forward. Our goal is to gradually increase the decentralization of Sky Mavis's products.
@@ -46,11 +47,11 @@ While increasing the decentralization of the system, the validator selection pro
 
 To prevent such attacks, we rely on a group of 11 trusted organizations, that are chosen by the community and Sky Mavis. As the trusted organizations take 11/21 slots in the validators set, the attackers cannot control the majority of the validators and take over the blockchains. 
 
-## Bridge relayer
+## Bridge operator
 
-The bridge relayers take the responsibility of acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. The bridge relayers have their own reward and slash system (see the “Rewarding” and “Slashing” sections).
+The bridge operators take the responsibility of acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. The bridge operators have their own reward and slash system (see the “Rewarding” and “Slashing” sections).
 
-Each validator has the responsibility to maintain a bridge relayer. The validator who does not run the bridge relayer cannot claim its block rewards.
+Each validator has the responsibility to maintain a bridge operator. The validator who does not run the bridge operator cannot claim its block rewards.
 
 ## Rewarding
 
@@ -71,13 +72,13 @@ Each validator can set a commission rate that indicates the percentage of self-a
 - Delegator C receives 10x90%x250/2000=1.125 tokens
 - Delegator D receives 10x90%x250/2000=1.125 tokens
 
-### Rewarding for bridge relayers
+### Rewarding for bridge operators
 
-The bridge relayers will get 10% of staking rewards. The rewards will be distributed to the bridge relayers (the delegators will not be received these rewards) at the end of each day based on the number of votes from the bridge relayers on that day. 
+The bridge operators will get 10% of staking rewards. The rewards will be distributed to the bridge operators (the delegators will not be received these rewards) at the end of each day based on the number of votes from the bridge operators on that day. 
 
 ## Slashing
 
-We use slashing logic to ensure that malicious or negative behaviors are punished. We have two slashable cases for validators and one slashable case for bridge relayers. 
+We use slashing logic to ensure that malicious or negative behaviors are punished. We have two slashable cases for validators and one slashable case for bridge operators. 
 
 ### Double sign validators
 
@@ -129,17 +130,17 @@ After being put in jail and getting bailed out, if the validator missed 50 more 
 
 Similar to the design of BSC, validators will be slashed in their absence (even when it is due to scheduled maintenance). Inspired by [BNB Evolution Proposal (BEP) 127](https://github.com/bnb-chain/BEPs/blob/master/BEP127.md), we allow the validators scheduling to enter a maintenance mode.
 
-### Unavailability bridge relayers
+### Unavailability bridge operators
 
-We will slash the bridge relayers who do not provide enough signatures. We use a smart contract to record the number of votes of the bridge relayers.
+We will slash the bridge operators who do not provide enough signatures. We use a smart contract to record the number of votes of the bridge operators.
 
-#### Tier 1 relayer slashing
+#### Tier 1 operators slashing
 
-If the bridge relayers missed more than 10% votes, (s)he cannot claim the bridge reward on that day.
+If the bridge operators missed more than 10% votes, (s)he cannot claim the bridge reward on that day.
 
-#### Tier 2 relayer slashing
+#### Tier 2 operators slashing
 
-If the bridge relayers missed more than 20% votes, the offending governor will be slashed as follows.
+If the bridge operators missed more than 20% votes, the offending governor will be slashed as follows.
 
 - (S)he cannot claim the bridge reward on that day.
 - The corresponding validator cannot claim the reward on that day.
@@ -152,6 +153,6 @@ Note that, after the corresponding validator is put in jail, (s)he can also use 
 Trusted organizations also take the role of governance. The governance is responsible for the following tasks:
 
 - Update the system parameters, e.g., slash thresholds. Add/remove trusted organizations.
-- Sync the set of bridge relayers to the Ethereum chain every day.
+- Sync the set of bridge operators to the Ethereum chain every day.
 
-We require 9/11 trusted organizations’ votes to perform the above tasks. The trusted organization that does not sync the set of bridge relayers to the Ethereum chain for 3 consecutive days will get slashed 10,000 RON.
+We require 9/11 trusted organizations’ votes to perform the above tasks. The trusted organization that does not sync the set of bridge operators to the Ethereum chain for 3 consecutive days will get slashed 10,000 RON.

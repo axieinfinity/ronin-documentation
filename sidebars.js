@@ -120,6 +120,11 @@ const sidebars = {
                 },
                 {
                   type: 'doc',
+                  label: 'Responsibilities',
+                  id: 'validator/responsibilities',
+                },
+                {
+                  type: 'doc',
                   label: 'Run a Validator node',
                   id: 'validator/running-validating-node',
                 },
@@ -167,13 +172,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'Bridge',
-      link: { type: 'doc', id: 'components/ronin-bridge-v2' },
+      // link: { type: 'doc', id: 'components/ronin-bridge-v2' },
       items: [
-        // {
-        //   type: 'doc',
-        //   label: 'Bridge V2',
-        //   id: 'bridge/ronin-bridge-v2',
-        // },
+        {
+          type: 'doc',
+          label: 'Bridge V2',
+          id: 'bridge/ronin-bridge-v2',
+        },
       ],
     },
     {
