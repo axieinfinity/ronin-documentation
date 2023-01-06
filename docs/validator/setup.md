@@ -26,22 +26,22 @@ axieinfinity/bridge:v0.2.0-1d64d68
 ```
 
 # Steps ( Using root user default)
+* Install docker-compose Dependencies
+```
+apt install -y docker-compose
+```
 
-* Make path
+* Make subdirs
 ```
 mkdir -p  /axie/ronin-manager
 mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-* Create docker-compose
+* Create docker-compose configuration
 
 ```
-cd /axie/ronin-manager 
-```
-
-```
-vim docker-compose.yml
+cd /axie/ronin-manager  && vim docker-compose.yml
 ```
 
 ```
@@ -94,8 +94,6 @@ services:
       - RONIN_BRIDGE_VOTER_KEY=${BRIDGE_VOTER_PRIVATE_KEY}
       - RONIN_RELAYER_KEY=${VALIDATOR_PRIVATE_KEY}
       - ETHEREUM_RPC=${ETHEREUM_ENDPOINT}
-      - ETHEREUM_VALIDATOR_KEY=${ETHEREUM_VALIDATOR_KEY}
-      - ETHEREUM_RELAYER_KEY=${ETHEREUM_RELAYER_KEY}
       - DB_HOST=db
       - DB_NAME=${DB_NAME}
       - DB_PORT=5432
@@ -112,7 +110,11 @@ services:
       - node
 ```
 
-* Create .env (Replacing credential env)
+* Create .env (Replace xxx with your credentials )
+
+```
+vim .env
+```
 
 ```
 # BOOTNODES address of the bootnode to connect to the network, will be auto-filled
