@@ -90,9 +90,8 @@ services:
     container_name: bridge
     environment:
       - RONIN_RPC=http://node:8545
-      - RONIN_VALIDATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
       - RONIN_BRIDGE_VOTER_KEY=${BRIDGE_VOTER_PRIVATE_KEY}
-      - RONIN_RELAYER_KEY=${VALIDATOR_PRIVATE_KEY}
+      - RONIN_VALIDATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
       - ETHEREUM_RPC=${ETHEREUM_ENDPOINT}
       - DB_HOST=db
       - DB_NAME=${DB_NAME}
@@ -157,9 +156,13 @@ CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
 GENESIS_PATH=testnet.json
 
-BRIDGE_OPERATOR_PRIVATE_KEY=xxx
-BRIDGE_VOTER_PRIVATE_KEY=xxx
 RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000
+
+# Key for acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains
+BRIDGE_OPERATOR_PRIVATE_KEY=xxx
+
+# Only Trusted Org need to set it otherwise leave it empty
+BRIDGE_VOTER_PRIVATE_KEY=
 ```
 
 * Restore snapshot (We can’t sync from the scratch) 
