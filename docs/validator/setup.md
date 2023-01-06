@@ -17,6 +17,8 @@ axieinfinity/ronin-testnet:v2.5.0-4abacb213
 https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar
 ```
 
+##### Checksum Snapshot Using Md5sum:  f7b467cdc879e3ab2ade41a7d4a40653
+
 ### Bridge Operator
 
 ```
@@ -26,22 +28,22 @@ axieinfinity/bridge:v0.2.0-1d64d68
 ```
 
 # Steps ( Using root user default)
+* Install docker-compose Dependencies
+```
+apt install -y docker-compose
+```
 
-* Make path
+* Make subdirs
 ```
 mkdir -p  /axie/ronin-manager
 mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-* Create docker-compose
+* Create docker-compose configuration
 
 ```
-cd /axie/ronin-manager 
-```
-
-```
-vim docker-compose.yml
+cd /axie/ronin-manager  && vim docker-compose.yml
 ```
 
 ```
@@ -90,12 +92,9 @@ services:
     container_name: bridge
     environment:
       - RONIN_RPC=http://node:8545
-      - RONIN_VALIDATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
       - RONIN_BRIDGE_VOTER_KEY=${BRIDGE_VOTER_PRIVATE_KEY}
-      - RONIN_RELAYER_KEY=${VALIDATOR_PRIVATE_KEY}
+      - RONIN_VALIDATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
       - ETHEREUM_RPC=${ETHEREUM_ENDPOINT}
-      - ETHEREUM_VALIDATOR_KEY=${ETHEREUM_VALIDATOR_KEY}
-      - ETHEREUM_RELAYER_KEY=${ETHEREUM_RELAYER_KEY}
       - DB_HOST=db
       - DB_NAME=${DB_NAME}
       - DB_PORT=5432
@@ -112,7 +111,11 @@ services:
       - node
 ```
 
-* Create .env (Replacing credential env)
+* Create .env (Replace xxx with your credentials )
+
+```
+vim .env
+```
 
 ```
 # BOOTNODES address of the bootnode to connect to the network, will be auto-filled
@@ -155,9 +158,13 @@ CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
 GENESIS_PATH=testnet.json
 
-BRIDGE_OPERATOR_PRIVATE_KEY=xxx
-BRIDGE_VOTER_PRIVATE_KEY=xxx
 RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000
+
+# Key for acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains
+BRIDGE_OPERATOR_PRIVATE_KEY=xxx
+
+# Only Trusted Org need to set it otherwise leave it empty
+BRIDGE_VOTER_PRIVATE_KEY=
 ```
 
 * Restore snapshot (We can’t sync from the scratch) 
