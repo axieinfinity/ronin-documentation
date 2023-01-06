@@ -17,6 +17,8 @@ axieinfinity/ronin-testnet:v2.5.0-4abacb213
 https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar
 ```
 
+##### Checksum Snapshot Using Md5sum:  f7b467cdc879e3ab2ade41a7d4a40653
+
 ### Bridge Operator
 
 ```
