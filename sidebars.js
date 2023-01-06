@@ -97,7 +97,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Validator',
-      link: { type: 'doc', id: 'components/validators' },
+      link: { type: 'doc', id: 'validator/responsibilities' },
       items: [ 
         {
           type: 'category',
@@ -118,11 +118,11 @@ const sidebars = {
                   label: 'Minimum requirements',
                   id: 'validator/minimum-requirements',
                 },
-                {
-                  type: 'doc',
-                  label: 'Responsibilities',
-                  id: 'validator/responsibilities',
-                },
+                // {
+                //   type: 'doc',
+                //   label: 'Responsibilities',
+                //   id: 'validator/responsibilities',
+                // },
                 {
                   type: 'doc',
                   label: 'Run a Validator node',

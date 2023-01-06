@@ -33,7 +33,7 @@ const featureList = [
     Icon: BoxTickIcon,
     description: <>Secure the network by staking and operating a node to validate on Ronin Network.</>,
     link: {
-      href: '/docs/validator/val',
+      href: '/docs/validator/responsibilities',
       title: 'Validator',
     },
   },
@@ -42,7 +42,7 @@ const featureList = [
     Icon: SignDirectionIcon,
     description: <>Validate cross chain transactions.</>,
     link: {
-      href: '/docs/bridge/bridge-relayer',
+      href: '/docs/bridge/ronin-bridge-v2',
       title: 'Bridge',
     },
   },
