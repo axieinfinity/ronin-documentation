@@ -143,7 +143,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Testnet',
-          link: { type: 'doc', id: 'validator/val' },
+          // link: { type: 'doc', id: 'validator/val' },
           items: [
             {
               type: 'doc',
