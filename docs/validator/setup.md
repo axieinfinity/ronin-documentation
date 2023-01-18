@@ -5,11 +5,9 @@
 
 ##### Release Doc:
 
-```
-[https://github.com/axieinfinity/ronin/releases/tag/v2.5.0](https://github.com/axieinfinity/ronin/releases/tag/v2.5.0)
+- [https://github.com/axieinfinity/ronin/releases/tag/v2.5.0](https://github.com/axieinfinity/ronin/releases/tag/v2.5.0)
 
-[axieinfinity/ronin-testnet:v2.5.0-4abacb213](https://hub.docker.com/layers/axieinfinity/ronin-testnet/v2.5.0-4abacb213/images/sha256-ca991312b48c7cc2d41bc9456c64b2efa39d6351bfc98c3ebb58e8996b852112)
-```
+- [axieinfinity/ronin-testnet:v2.5.0-4abacb213](https://hub.docker.com/layers/axieinfinity/ronin-testnet/v2.5.0-4abacb213/images/sha256-ca991312b48c7cc2d41bc9456c64b2efa39d6351bfc98c3ebb58e8996b852112)
 
 ##### Snapshot:
 
@@ -21,11 +19,9 @@ https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar
 
 ### Bridge Operator
 
-```
-[https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.0](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.0)
+- [https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.0](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.0)
 
-[axieinfinity/bridge:v0.2.0-1d64d68](https://hub.docker.com/layers/axieinfinity/bridge/v0.2.0-1d64d68/images/sha256-2697e6054082a9e3addec58fbb778a5cc93018b9ef633d52f4e38c9db9e0c292?context=explore)
-```
+- [axieinfinity/bridge:v0.2.0-1d64d68](https://hub.docker.com/layers/axieinfinity/bridge/v0.2.0-1d64d68/images/sha256-2697e6054082a9e3addec58fbb778a5cc93018b9ef633d52f4e38c9db9e0c292?context=explore)
 
 # Steps ( Using root user default)
 * Install docker-compose Dependencies
