@@ -5,9 +5,9 @@
 
 ##### Release Doc:
 
-- [https://github.com/axieinfinity/ronin/releases/tag/v2.5.0](https://github.com/axieinfinity/ronin/releases/tag/v2.5.0)
+- [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
 
-- [axieinfinity/ronin-testnet:v2.5.0-4abacb213](https://hub.docker.com/layers/axieinfinity/ronin-testnet/v2.5.0-4abacb213/images/sha256-ca991312b48c7cc2d41bc9456c64b2efa39d6351bfc98c3ebb58e8996b852112)
+- [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 
 ##### Snapshot:
 
@@ -19,9 +19,9 @@ https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar
 
 ### Bridge Operator
 
-- [https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.0](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.0)
+- [https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1)
 
-- [axieinfinity/bridge:v0.2.0-1d64d68](https://hub.docker.com/layers/axieinfinity/bridge/v0.2.0-1d64d68/images/sha256-2697e6054082a9e3addec58fbb778a5cc93018b9ef633d52f4e38c9db9e0c292?context=explore)
+- [ghcr.io/axieinfinity/bridge:0.2.1-c15a725](https://github.com/axieinfinity/bridge-v2/pkgs/container/bridge/67046431?tag=0.2.1-c15a725)
 
 # Steps ( Using root user default)
 * Install docker-compose Dependencies
@@ -154,7 +154,7 @@ CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
 GENESIS_PATH=testnet.json
 
-RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000
+RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 2000000
 
 # Key for acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains, without 0x
 BRIDGE_OPERATOR_PRIVATE_KEY=xxx
