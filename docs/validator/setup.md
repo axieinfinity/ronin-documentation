@@ -142,8 +142,8 @@ ETHEREUM_ENDPOINT=https://eth-goerli.g.alchemy.com/v2/xxxxx
 MINE=true
 
 CONFIG_PATH=config.testnet.json
-NODE_IMAGE=axieinfinity/ronin-testnet:v2.5.0-4abacb213
-BRIDGE_IMAGE=axieinfinity/bridge:v0.2.0-1d64d68
+NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9
+BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:0.2.1-c15a725
 VERBOSITY=3
 
 RONIN_TASK_INTERVAL=3
