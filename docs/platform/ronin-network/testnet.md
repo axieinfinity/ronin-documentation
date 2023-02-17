@@ -8,7 +8,7 @@
 * RPC endpoint: [https://testnet.skymavis.one/rpc](https://testnet.skymavis.one/rpc)
 * Consensus: POA (Consortium)
 * Stats: [https://testnet.skymavis.one/](https://testnet.skymavis.one)
-* Explorer: [https://testnet-explorer.skymavis.one/](https://testnet-explorer.skymavis.one)
+* Explorer: [https://testnet-explorer.roninchain.com/](https://testnet-explorer.roninchain.com)
 * Genesis file: [testnet.json](/assets/genesis-testnet.json)
 
 ### Genesis contracts
