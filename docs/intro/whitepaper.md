@@ -28,24 +28,24 @@ To perform non-detectable attacks, i.e., the Byzantine validators can only seal 
 
 ### Validators Selection
 
-All token holders are allowed to register as validators candidates. They can also play the role of delegators by staking their tokens to the validator candidates. The staking of validators and delegators is updated at the beginning of each day. Afterward, we select the set of 21 validators (including 11 trusted organizations and 10 most staked token holders). However, during the day, some validators may be (temporarily) removed from the validator set (they can either be in jail or in maintenance mode). Those changes will be updated in every epoch (which consists of 200 blocks ~ 10 minutes).
+All token holders are allowed to register as validators candidates. They can also play the role of delegators by staking their tokens to the validator candidates. The staking of validators and delegators is updated at the beginning of each day. Afterward, we select the set of 21 validators (including 11 governing validators and 10 most staked token holders). However, during the day, some validators may be (temporarily) removed from the validator set (they can either be in jail or in maintenance mode). Those changes will be updated in every epoch (which consists of 200 blocks ~ 10 minutes).
 
 #### Staking
 
 Token holders can put their tokens “bonded” into the stake. Token holders can register to become validator candidates or delegate their tokens to any validator or validator candidate. The core logic for staking is summarized below.
 
 - The staking token is RON.
-- Token holders (including trusted organizations) must stake at least 500,000 RON to become validator candidates.
+- Token holders (including governing validators) must stake at least 500,000 RON to become validator candidates.
 - The staking will take effect at the beginning of the next day.
 - The validator set includes the top 10 validator candidates with the highest staked amount.
 - The validators can renounce, unstake, and withdraw the tokens after waiting for a period of 7 days.
 - The delegators can instantly unstake and withdraw the tokens. However, they need to stake for at least 3 days, i.e., they can unstake after 3 days since the last staking operation.
 
-#### Trusted organizations
+#### Governing validators
 
 While increasing the decentralization of the system, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
 
-To prevent such attacks, we rely on a group of 11 trusted organizations, that are chosen by the community and Sky Mavis. As the trusted organizations take 11/21 slots in the validators set, the attackers cannot control the majority of the validators and take over the blockchains. 
+To prevent such attacks, we rely on a group of 11 governing validators, that are chosen by the community and Sky Mavis. As the governing validators take 11/21 slots in the validators set, the attackers cannot control the majority of the validators and take over the blockchains. 
 
 ## Bridge operator
 
@@ -110,7 +110,7 @@ If a validator missed more than 150 blocks in a day, the offending validator wil
 
 #### Credit score and bail out for tier 2 validator slashing
 
-While we encourage the validators to be online and produce blocks in turn, technical issues can happen sometimes. As we describe in the “Tier 2 validator slashing” paragraph, if a validator is unavailable (e.g., the validator's machine crashed), the validator may get slashed and be put in jail. If the validators are trusted organizations, we may not able to guarantee that 51% of the validators are honest (trusted).   
+While we encourage the validators to be online and produce blocks in turn, technical issues can happen sometimes. As we describe in the “Tier 2 validator slashing” paragraph, if a validator is unavailable (e.g., the validator's machine crashed), the validator may get slashed and be put in jail. If the validators are governing validators, we may not able to guarantee that 51% of the validators are honest.   
 
 We introduce a credit score system to allow the well-performance validators to bail out of jail. We award the well-performance validators (i.e., the validators who always produce blocks on turn) with some credits. When a validator gets slashed and put in jail, she/he can use the credit score to bail out of jail.
 
@@ -150,12 +150,12 @@ Note that, after the corresponding validator is put in jail, (s)he cannot use th
 
 ## Governance
 
-Trusted organizations also take the role of governance. The governance is responsible for the following tasks:
+Governing validators also take the role of governance. The governance is responsible for the following tasks:
 
-- Update the system parameters, e.g., slash thresholds. Add/remove trusted organizations.
+- Update the system parameters, e.g., slash thresholds. Add/remove governing validators.
 - Sync the set of bridge operators to the Ethereum chain every day.
 
-We require 9/11 trusted organizations’ votes to perform the above tasks. The trusted organization that does not sync the set of bridge operators to the Ethereum chain for 3 consecutive days will get slashed 10,000 RON.
+We require 9/11 governing validators' votes to perform the above tasks. The governing validator that does not sync the set of bridge operators to the Ethereum chain for 3 consecutive days will get slashed 10,000 RON.
 
 
 **Disclaimer:**  This whitepaper is a work in progress and can be updated in the future.
