@@ -6,7 +6,7 @@
 
 * Chain id (network id): `2021`
 * RPC endpoint: [https://saigon-testnet.roninchain.com/rpc](https://saigon-testnet.roninchain.com/rpc)
-* Consensus: PoSA (Consortium)
+* Consensus: DPoS (Consortium)
 * Stats: [https://saigon-stats.roninchain.com/](https://saigon-stats.roninchain.com/)
 * Explorer: [https://saigon-explorer.roninchain.com/](https://saigon-explorer.roninchain.com/)
 * Genesis file: [testnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/testnet.json)

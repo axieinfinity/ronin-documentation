@@ -17,7 +17,7 @@ Validators are in charge of:
 
 * Generating blocks during their turn.
 * Helping other validators generate blocks when they miss their turn.
-* Acknowledging deposit and withdrawal events to facilitate asset assets transfers.
+* Acknowledging deposit and withdrawal events to facilitate assets transfers.
 * Updating validator events.
 * Updating effective threshold events.
 

@@ -5,11 +5,9 @@
 
 ##### Release Doc:
 
-```
-https://github.com/axieinfinity/ronin/releases/tag/v2.5.0
+- [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
 
-axieinfinity/ronin-testnet:v2.5.0-4abacb213
-```
+- [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 
 ##### Snapshot:
 
@@ -17,31 +15,31 @@ axieinfinity/ronin-testnet:v2.5.0-4abacb213
 https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar
 ```
 
+##### Checksum Snapshot Using Md5sum:  f7b467cdc879e3ab2ade41a7d4a40653
+
 ### Bridge Operator
 
-```
-https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.0
+- [https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1)
 
-axieinfinity/bridge:v0.2.0-1d64d68
-```
+- [ghcr.io/axieinfinity/bridge:0.2.1-c15a725](https://github.com/axieinfinity/bridge-v2/pkgs/container/bridge/67046431?tag=0.2.1-c15a725)
 
 # Steps ( Using root user default)
+* Install docker-compose Dependencies
+```
+apt install -y docker-compose
+```
 
-* Make path
+* Make subdirs
 ```
 mkdir -p  /axie/ronin-manager
 mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-* Create docker-compose
+* Create docker-compose configuration
 
 ```
-cd /axie/ronin-manager 
-```
-
-```
-vim docker-compose.yml
+cd /axie/ronin-manager  && vim docker-compose.yml
 ```
 
 ```
@@ -90,12 +88,9 @@ services:
     container_name: bridge
     environment:
       - RONIN_RPC=http://node:8545
-      - RONIN_VALIDATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
       - RONIN_BRIDGE_VOTER_KEY=${BRIDGE_VOTER_PRIVATE_KEY}
-      - RONIN_RELAYER_KEY=${VALIDATOR_PRIVATE_KEY}
+      - RONIN_VALIDATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
       - ETHEREUM_RPC=${ETHEREUM_ENDPOINT}
-      - ETHEREUM_VALIDATOR_KEY=${ETHEREUM_VALIDATOR_KEY}
-      - ETHEREUM_RELAYER_KEY=${ETHEREUM_RELAYER_KEY}
       - DB_HOST=db
       - DB_NAME=${DB_NAME}
       - DB_PORT=5432
@@ -112,9 +107,22 @@ services:
       - node
 ```
 
-* Create .env (Replacing credential env)
+* Create .env (Replace xxx with your credentials )
 
 ```
+vim .env
+```
+
+```
+# BOOTNODES address of the bootnode to connect to the network, will be auto-filled
+BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
+# NETWORK_ID network id
+NETWORK_ID=40925
+# Setting for oracle services, staging = rinkey + testnet, production = ethereum + mainnnet
+DEPLOYMENT=test
+# Setting nodekey
+GASPRICE=20000000000
+
 # INSTANCE_NAME the name of your instance that you want to display in stats website
 INSTANCE_NAME=xxxx
 
@@ -134,8 +142,8 @@ ETHEREUM_ENDPOINT=https://eth-goerli.g.alchemy.com/v2/xxxxx
 MINE=true
 
 CONFIG_PATH=config.testnet.json
-NODE_IMAGE=axieinfinity/ronin-testnet:v2.5.0-4abacb213
-BRIDGE_IMAGE=axieinfinity/bridge:v0.2.0-1d64d68
+NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9
+BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:0.2.1-c15a725
 VERBOSITY=3
 
 RONIN_TASK_INTERVAL=3
@@ -146,9 +154,13 @@ CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
 GENESIS_PATH=testnet.json
 
+RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 2000000
+
+# Key for acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains, without 0x
 BRIDGE_OPERATOR_PRIVATE_KEY=xxx
-BRIDGE_VOTER_PRIVATE_KEY=xxx
-RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000
+
+# Only Trusted Org need to set it otherwise leave it empty, without 0x
+BRIDGE_VOTER_PRIVATE_KEY=
 ```
 
 * Restore snapshot (We can’t sync from the scratch) 
