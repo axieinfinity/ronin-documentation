@@ -17,7 +17,7 @@ const featureList = [
       href: '/docs/intro/introduction',
       title: 'Overview',
     },
-    description: <>Learn about the basic of blockchain and Ronin Network.</>,
+    description: <>Learn the basics of blockchain and Ronin Network.</>,
   },
   {
     title: 'Staking',
@@ -26,7 +26,7 @@ const featureList = [
       href: '/docs/stake/staking',
       title: 'Staking',
     },
-    description: <>Secure the network by staking tokens & delegating your stake to validators.</>,
+    description: <>Secure the network by staking tokens and delegating your stake to validators.</>,
   },
   {
     title: 'Validator',
@@ -40,7 +40,7 @@ const featureList = [
   {
     title: 'Bridge',
     Icon: SignDirectionIcon,
-    description: <>Validate cross chain transactions.</>,
+    description: <>Validate cross-chain transactions.</>,
     link: {
       href: '/docs/bridge/ronin-bridge-v2',
       title: 'Bridge',

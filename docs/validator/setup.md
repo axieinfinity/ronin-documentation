@@ -1,42 +1,38 @@
-# Release Information
+# Run a validator node
 
+This page describes how to set up a validator node and bridge operator node on the Ronin network.
 
-### Validator
+### Latest release
+#### Validator
+* [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
+* [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 
-##### Release Doc:
+Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar`
+Snapshot checksum using md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 
-- [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
+#### Bridge operator
 
-- [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
+* [https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1)
+* [ghcr.io/axieinfinity/bridge:0.2.1-c15a725](https://github.com/axieinfinity/bridge-v2/pkgs/container/bridge/67046431?tag=0.2.1-c15a725)
 
-##### Snapshot:
+### Prerequisites
 
-```
-https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar
-```
+* You must be a root user.
+* Your machine must meet the minimum hardware requirements:
+  * 8 CPU cores
+  * 16 GB RAM
+  * 1 TB SSD
+* You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
-##### Checksum Snapshot Using Md5sum:  f7b467cdc879e3ab2ade41a7d4a40653
+### Steps
 
-### Bridge Operator
-
-- [https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1)
-
-- [ghcr.io/axieinfinity/bridge:0.2.1-c15a725](https://github.com/axieinfinity/bridge-v2/pkgs/container/bridge/67046431?tag=0.2.1-c15a725)
-
-# Steps ( Using root user default)
-* Install docker-compose Dependencies
-```
-apt install -y docker-compose
-```
-
-* Make subdirs
+1. Create subdirectories.
 ```
 mkdir -p  /axie/ronin-manager
 mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
-
-* Create docker-compose configuration
+2. Create a docker-compose configuration.
 
 ```
 cd /axie/ronin-manager  && vim docker-compose.yml
@@ -107,7 +103,7 @@ services:
       - node
 ```
 
-* Create .env (Replace xxx with your credentials )
+1. Create an .env file. Make sure to replace `insert-your-...` with your actual credentials.
 
 ```
 vim .env
@@ -123,8 +119,8 @@ DEPLOYMENT=test
 # Setting nodekey
 GASPRICE=20000000000
 
-# INSTANCE_NAME the name of your instance that you want to display in stats website
-INSTANCE_NAME=xxxx
+# INSTANCE_NAME the name of your instance that you want to display on the stats page.
+INSTANCE_NAME=insert-your-instance-name
 
 # User for postgres account
 DB_USERNAME=postgres
@@ -136,9 +132,9 @@ POSTGRES_DB=bridge
 # Password to protect your private key
 PASSWORD=123456
 
-# Private key of validator address, without 0x
-VALIDATOR_PRIVATE_KEY=xxxx
-ETHEREUM_ENDPOINT=https://eth-goerli.g.alchemy.com/v2/xxxxx
+# Private key of validator address, without 0x. 
+VALIDATOR_PRIVATE_KEY=insert-your-validator-private-key
+ETHEREUM_ENDPOINT=https://eth-goerli.g.alchemy.com/v2/your-ethereum-endpoint
 MINE=true
 
 CONFIG_PATH=config.testnet.json
@@ -156,14 +152,14 @@ GENESIS_PATH=testnet.json
 
 RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 2000000
 
-# Key for acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains, without 0x
-BRIDGE_OPERATOR_PRIVATE_KEY=xxx
+# Private key of the bridge operator, used for acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains, without 0x.
+BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-operator-private-key
 
-# Only Trusted Org need to set it otherwise leave it empty, without 0x
-BRIDGE_VOTER_PRIVATE_KEY=
+# Private key of the bridge voter (also known as "governor") without 0x. Only governor roles need to set this, otherwise you can leave it blank. 
+BRIDGE_VOTER_PRIVATE_KEY=insert-your-voter-private-key
 ```
 
-* Restore snapshot (We can’t sync from the scratch) 
+4. Download the snapshot.
 
 ```
 cd ~/.skymavis/chaindata/data/ronin/
@@ -171,8 +167,9 @@ curl https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar -o 
 mv chaindata-4-1-2023 chaindata
 ```
 
-* Start node
+5. Start the node.
 ```
 cd  /axie/ronin-manager && docker-compose up -d 
 ```
-After a few minutes, you can verify your node is connecting and up to date with the network at https://saigon-stats.roninchain.com/
+
+After a few minutes, you can go to the [stats page](https://saigon-stats.roninchain.com/) to verify that your node is connected and up to date with the network.

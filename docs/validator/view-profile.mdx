@@ -1,0 +1,29 @@
+import viewProfile from './profile.png';
+import governingAddresses from './governing-addresses.png';
+
+# View your profile
+
+:::info
+
+This feature will be released soon.
+
+:::
+
+You can see the list of addresses linking to your validator account by going to your connected wallet and clicking **My profile**.
+
+<img src={viewProfile} width={280} />
+
+If you’re a standard validator or a validator candidate, your profile has a set of three different addresses:
+
+* **Admin address.** The address to manage your profile, staking activities, and claiming rewards.
+* **Validator address.** The address used for minting blocks. This address is displayed to delegators and also called “consensus address”.
+* **Bridge operator address.** The address used for operating Ronin Bridge.
+
+If you’re a governing validator, your profile has an additional two addresses:
+* **Chain governor address.** The address used to create proposals and vote for changes.
+* **Bridge voter address.** The address used for syncing the set of bridge operators.
+
+<img src={governingAddresses} width={416} />
+
+
+

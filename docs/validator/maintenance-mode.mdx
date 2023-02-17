@@ -1,0 +1,22 @@
+import scheduleMaintenanceMode from './schedule-maintenance.png';
+import ongoingMaintenanceMode from './ongoing-maintenance.png';
+import upcomingMaintenanceMode from './upcoming-maintenance.png';
+
+# Schedule maintenance mode
+When running a node, you might need to put it in maintenance mode at a scheduled time. This feature is available only to standard validators and governing validators.
+
+:::note
+
+There can be up to three validators scheduling maintenance mode at a time. If you’re unable to schedule yours, check with the other validators when their maintenance mode ends.
+
+:::
+
+To schedule maintenance, follow these steps:
+1. Go to **My Profile > Maintenance mode** and specify the duration of the maintenance period in epochs. The valid duration is 1-144 epochs (~10 minutes to ~24 hours), where 1 epoch equals 200 blocks. You can choose from the valid start epoch, then decide on the end epoch.
+
+<img src={scheduleMaintenanceMode} width={416} />
+
+2. After you submit the request, the system displays your maintenance time, status, and estimated time until the maintenance period starts or ends.
+
+<img src={upcomingMaintenanceMode} width={280} />
+<img src={ongoingMaintenanceMode} width={280} />

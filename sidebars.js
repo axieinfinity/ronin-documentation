@@ -57,8 +57,8 @@ const sidebars = {
         },  
         {
           type: 'doc',
-          label: 'Tokenomic',
-          id: 'intro/tokenomic',
+          label: 'Tokenomics',
+          id: 'intro/tokenomics',
         },
         {
           type: 'doc',
@@ -147,14 +147,98 @@ const sidebars = {
           items: [
             {
               type: 'doc',
-              label: 'Validator onboarding',
-              id: 'validator/registration',
+              label: 'Get onboarded',
+              id: 'validator/onboarding',
             },
             {
               type: 'doc',
-              label: 'Setup a Validator node',
+              label: 'Run a validator node',
               id: 'validator/setup',
             },
+            {
+            type: 'category',
+            label: 'Manage your profile',
+            items: [
+              {
+                type: 'doc',
+                label: 'Change commission rate',
+                id: 'validator/commission-rate',
+              },
+              {
+                type: 'doc',
+                label: 'Schedule maintenance mode',
+                id: 'validator/maintenance-mode',
+              },
+              {
+                type: 'doc',
+                label: 'Renounce your role',
+                id: 'validator/renounce',
+              },
+              {
+                type: 'doc',
+                label: 'View your activities',
+                id: 'validator/view-activities',
+              },
+              {
+                type: 'doc',
+                label: 'View your profile',
+                id: 'validator/view-profile',
+              },
+              {
+                type: 'doc',
+                label: 'View your analytics',
+                id: 'validator/view-analytics',
+              },
+            ],
+            },
+            {
+              type: 'category',
+              label: 'Stake',
+              items: [
+                {
+                  type: 'doc',
+                  label: 'Increase your stake',
+                  id: 'validator/increase-stake',
+                },
+                {
+                  type: 'doc',
+                  label: 'Withdraw your stake',
+                  id: 'validator/withdraw-stake',
+                },
+              ],
+              },
+              {
+                type: 'category',
+                label: 'Rewards',
+                items: [
+                  {
+                    type: 'doc',
+                    label: 'Types of rewards',
+                    id: 'validator/reward-types',
+                  },
+                  {
+                    type: 'doc',
+                    label: 'Claim your rewards',
+                    id: 'validator/claim-rewards',
+                  },
+                ],
+              },
+              {
+                type: 'category',
+                label: 'Slashing and bailout',
+                items: [
+                  {
+                    type: 'doc',
+                    label: 'Slashing',
+                    id: 'validator/slashing',
+                  },
+                  {
+                    type: 'doc',
+                    label: 'Claim your rewards',
+                    id: 'validator/bailout',
+                  },
+                ],
+              },
           ],
         },
         // {
