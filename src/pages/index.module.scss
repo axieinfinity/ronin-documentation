@@ -4,15 +4,15 @@
  */
 
 .background {
-  background-image: url("/img/welcome/background.png");
+  background-image: url('/img/welcome/background.png');
   background-position: center 31px;
   background-repeat: no-repeat;
   background-size: 80%;
   transition: 0.1s;
 }
 
-html[data-theme="dark"] .background {
-  background-image: url("/img/welcome/background-dark.png");
+html[data-theme='dark'] .background {
+  background-image: url('/img/welcome/background-dark.png');
 }
 
 .heroBanner {

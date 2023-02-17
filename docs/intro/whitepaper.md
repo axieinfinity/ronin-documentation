@@ -146,7 +146,11 @@ If the bridge operators missed more than 20% votes, the offending governor will 
 - The corresponding validator cannot claim the reward on that day.
 - The corresponding validator will be put in jail for at most 2 days (57,600 blocks).
 
+<<<<<<< HEAD
 Note that, after the corresponding validator is put in jail, (s)he cannot use the credit score to bail out. 
+=======
+Note that, after the corresponding validator is put in jail, (s)he can also use the credit score to bail out (same as tier 2 validator slashing). 
+>>>>>>> main
 
 ## Governance
 
