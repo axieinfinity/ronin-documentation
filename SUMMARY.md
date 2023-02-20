@@ -14,7 +14,7 @@
   - [Comparison](platform/comparison.md)
   - [Road Map](platform/road-map.md)
   - [Lite Paper](https://documenter.getpostman.com/view/1372857/UVeKqQMn)
-  - [Tokenomic](platform/tokenomic.md)
+  - [Tokenomics](platform/tokenomics.md)
   - [Configurations](docs/platform/ronin-network/README.md)
     - [Mainnet](docs/platform/ronin-network/mainnet.md)
     - [Testnet](docs/platform/ronin-network/testnet.md)
