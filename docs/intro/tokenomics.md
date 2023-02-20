@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Tokenomic
+# Tokenomics
 
 #### Key Metrics <a href="#key_metrics_c98" id="key_metrics_c98"></a>
 

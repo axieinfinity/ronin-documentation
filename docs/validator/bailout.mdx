@@ -1,0 +1,40 @@
+import creditScore from './credit-score.png';
+import bailoutStepOne from './val-slash-tier-2.png';
+import bailoutStepTwo from './confirm-bailout.png';
+
+# Bailout
+
+:::info
+
+This feature might not be available on testnet until mainnet launch.
+
+:::
+
+## Overview
+
+If you're in [tier 2 validator slashing](slashing#unavailability-validator), you can _bail out_ of jail at any time using your credit score.
+
+The credit score is calculated as follows:
+* All validators start with a 0 credit score.
+* Every day, each validator (who is not in jail) is given 50 credits if they miss no block. The validator loses 1 credit for every missed block. 
+* The maximum number of credits for a validator is 1,800.
+
+## Check your credit score
+
+Go to the **My Staking** page and find your current credit score under **CREDIT SCORE**, next to your total self-stake amount.
+
+<img src={creditScore} width={1280} />
+
+## Use credit score to bail out
+
+It takes 5 credits to bail out for each epoch.
+
+1. On **My Staking**, find the warning banner, and then click **Bail out**. If the button is inactive, it means that your current credit score is less than 5.
+
+<img src={bailoutStepOne} width={1224} />
+
+2. Review the conditions and click **Confirm**.
+
+<img src={bailoutStepTwo} width={416} />
+
+If you bail out on the same day you got slashed, you still receive 50% of the block reward (commission and staking) from the time you bailed out until the end of the day.
