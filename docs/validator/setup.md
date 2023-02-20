@@ -2,20 +2,20 @@
 
 This page describes how to set up a validator node and bridge operator node on the Ronin network.
 
-### Latest release
-#### Validator
+## Latest release
+### Validator
 * [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
 * [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 
 Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar`
 Snapshot checksum using md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 
-#### Bridge operator
+### Bridge operator
 
 * [https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1)
 * [ghcr.io/axieinfinity/bridge:0.2.1-c15a725](https://github.com/axieinfinity/bridge-v2/pkgs/container/bridge/67046431?tag=0.2.1-c15a725)
 
-### Prerequisites
+## Prerequisites
 
 * You must be a root user.
 * Your machine must meet the minimum hardware requirements:
@@ -24,7 +24,8 @@ Snapshot checksum using md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
   * 1 TB SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
-### Steps
+## Steps
+To set up a node, follow these steps:
 
 1. Create subdirectories.
 ```
@@ -103,7 +104,7 @@ services:
       - node
 ```
 
-1. Create an .env file. Make sure to replace `insert-your-...` with your actual credentials.
+3. Create an .env file with the following content, replacing the `insert-your-` placeholders with your credentials.
 
 ```
 vim .env
@@ -114,22 +115,22 @@ vim .env
 BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
 # NETWORK_ID network id
 NETWORK_ID=40925
-# Setting for oracle services, staging = rinkey + testnet, production = ethereum + mainnnet
+# Setting for oracle services, where staging = rinkey + testnet, and production = ethereum + mainnnet.
 DEPLOYMENT=test
 # Setting nodekey
 GASPRICE=20000000000
 
-# INSTANCE_NAME the name of your instance that you want to display on the stats page.
+# INSTANCE_NAME is the name of your instance that you want to display on the stats page.
 INSTANCE_NAME=insert-your-instance-name
 
-# User for postgres account
+# User for postgres account.
 DB_USERNAME=postgres
-# Password for postgres account
+# Password for postgres account.
 DB_PASSWORD=example
 DB_NAME=bridge
-# Database to store oracle
+# Database to store oracle.
 POSTGRES_DB=bridge
-# Password to protect your private key
+# Password to protect your private key.
 PASSWORD=123456
 
 # Private key of validator address, without 0x. 

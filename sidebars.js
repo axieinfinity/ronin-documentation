@@ -147,8 +147,8 @@ const sidebars = {
           items: [
             {
               type: 'doc',
-              label: 'Get onboarded',
-              id: 'validator/onboarding',
+              label: 'Become a validator',
+              id: 'validator/become-validator',
             },
             {
               type: 'doc',
@@ -213,31 +213,15 @@ const sidebars = {
                 items: [
                   {
                     type: 'doc',
-                    label: 'Types of rewards',
-                    id: 'validator/reward-types',
-                  },
-                  {
-                    type: 'doc',
                     label: 'Claim your rewards',
-                    id: 'validator/claim-rewards',
+                    id: 'validator/rewards',
                   },
                 ],
               },
               {
-                type: 'category',
-                label: 'Slashing and bailout',
-                items: [
-                  {
-                    type: 'doc',
-                    label: 'Slashing',
-                    id: 'validator/slashing',
-                  },
-                  {
-                    type: 'doc',
-                    label: 'Claim your rewards',
-                    id: 'validator/bailout',
-                  },
-                ],
+                type: 'doc',
+                label: 'Slashing',
+                id: 'validator/slashing',
               },
           ],
         },
