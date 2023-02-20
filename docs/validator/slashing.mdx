@@ -21,11 +21,11 @@ In addition, the validator may be temporarily or permanently banned from the net
 
 ## Slashable behavior
 
-There are four types of slashable behavior on the Ronin blockchain, where the penalties described apply in combination.
+There are four types of slashable behavior on the Ronin blockchain, where the penalties described apply in combination. 
 
 ### Double-sign validator
 
-The case in which a validator signs more than one block with the same height. Their status will be set to **In jail**. They will be slashed the minimum staking amount from their self-stake, put in jail for 263-1 blocks and won’t receive commission or staking rewards during this time. They are not allowed to be a validator in the future.
+The case in which a validator signs more than one block with the same height. Their status will be set to **In jail**. They will be slashed the minimum staking amount from their self-stake, put in jail for 2^63-1 blocks and won’t receive commission or staking rewards during this time. They are not allowed to be a validator in the future.
 
 <img src={doubleSign} width={1224} />
 
