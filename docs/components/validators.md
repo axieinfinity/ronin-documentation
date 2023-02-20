@@ -7,11 +7,11 @@ sidebar_position: 1
 
 # Validators
 
-## Node Recognition
+## Node recognition
 
 The Ronin nodes must have a validator list so they can specify which validator will generate the next block. There is a mechanism executed every 30 minutes to sync the validator list from a contract named `SidechainValidator`. When we want to add or remove a validator, this contract is modified.
 
-## Validator Responsibilities
+## Validator responsibilities
 
 Validators are in charge of:
 
@@ -33,6 +33,6 @@ The validators have to acknowledge every event related to the transfer gateway a
 
 The validators acknowledge the deposit event and withdrawal event to facilitate asset transferring. In the SidechainValidator contract, there is a threshold setting indicating that an event needs to have at least that ratio of acknowledgment from validators, whether it is adding or removing validators, depositing or withdrawing assets, or also updating that defined threshold.
 
-## To become a validator
+## Become a validator
 
-Please contact us at hello@axieinfinity.com
+Follow [Become a validator](../validator/become-validator.mdx).
