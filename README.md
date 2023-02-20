@@ -22,7 +22,7 @@ yarn start
 
 ## Check content against the style guide
 
-Ronin documentatoin is gradually edited to comply with
+Ronin documentation is gradually edited to comply with
 the [Google developer documentation style guide](https://developers.google.com/style).
 
 Before publishing a new or edited page, you must review the content using
