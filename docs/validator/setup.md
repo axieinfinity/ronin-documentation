@@ -8,7 +8,7 @@ This page describes how to set up a validator node and bridge operator node on t
 * [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 
 Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar`
-Snapshot checksum using md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
+Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 
 ### Bridge operator
 
@@ -19,9 +19,9 @@ Snapshot checksum using md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 
 * You must be a root user.
 * Your machine must meet the minimum hardware requirements:
-  * 8 CPU cores
-  * 16 GB RAM
-  * 1 TB SSD
+  * 2 CPU cores
+  * 8 GB RAM
+  * 100 GB SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
 ## Steps
@@ -33,7 +33,8 @@ mkdir -p  /axie/ronin-manager
 mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
-2. Create a docker-compose configuration.
+
+2. Create a `docker-compose` configuration with the following contents.
 
 ```
 cd /axie/ronin-manager  && vim docker-compose.yml
@@ -104,7 +105,7 @@ services:
       - node
 ```
 
-3. Create an .env file with the following content, replacing the `insert-your-` placeholders with your credentials.
+3. Create an `.env` file with the following contents, replacing the `insert-your-` placeholders with your credentials.
 
 ```
 vim .env
@@ -115,7 +116,7 @@ vim .env
 BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
 # NETWORK_ID network id
 NETWORK_ID=40925
-# Setting for oracle services, where staging = rinkey + testnet, and production = ethereum + mainnnet.
+# Setting for oracle services, where staging = rinkey + testnet, and production = ethereum + mainnet.
 DEPLOYMENT=test
 # Setting nodekey
 GASPRICE=20000000000
@@ -173,4 +174,4 @@ mv chaindata-4-1-2023 chaindata
 cd  /axie/ronin-manager && docker-compose up -d 
 ```
 
-After a few minutes, you can go to the [stats page](https://saigon-stats.roninchain.com/) to verify that your node is connected and up to date with the network.
+After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to verify that your node is connected and up to date with the network.
