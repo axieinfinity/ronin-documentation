@@ -8,7 +8,7 @@ This page describes how to set up a validator node and bridge operator node on t
 * [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 
 Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar`
-Snapshot checksum using md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
+Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 
 ### Bridge operator
 
@@ -19,9 +19,9 @@ Snapshot checksum using md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 
 * You must be a root user.
 * Your machine must meet the minimum hardware requirements:
-  * 8 CPU cores
-  * 16 GB RAM
-  * 1 TB SSD
+  * 2 CPU cores
+  * 8 GB RAM
+  * 100 GB SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
 ## Steps
@@ -33,7 +33,7 @@ mkdir -p  /axie/ronin-manager
 mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
-1. Create a `docker-compose` configuration with the following content.
+2. Create a `docker-compose` configuration with the following contents.
 
 ```
 cd /axie/ronin-manager  && vim docker-compose.yml
@@ -104,7 +104,7 @@ services:
       - node
 ```
 
-3. Create an `.env` file with the following content, replacing the `insert-your-` placeholders with your credentials.
+3. Create an `.env` file with the following contents, replacing the `insert-your-` placeholders with your credentials.
 
 ```
 vim .env
