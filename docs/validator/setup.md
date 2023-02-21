@@ -33,6 +33,7 @@ mkdir -p  /axie/ronin-manager
 mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
+
 2. Create a `docker-compose` configuration with the following contents.
 
 ```
