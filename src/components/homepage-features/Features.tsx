@@ -23,15 +23,15 @@ const featureList = [
     title: 'Staking',
     Icon: CoinIcon,
     link: {
-      href: '/docs/stake/staking',
+      href: '/docs/category/staking',
       title: 'Staking',
     },
     description: <>Secure the network by staking tokens and delegating your stake to validators.</>,
   },
   {
-    title: 'Validator',
+    title: 'Validators',
     Icon: BoxTickIcon,
-    description: <>Secure the network by staking and operating a node to validate on Ronin Network.</>,
+    description: <>Secure the network and earn rewards by staking tokens and running a node to validate on Ronin.</>,
     link: {
       href: '/docs/validator/responsibilities',
       title: 'Validator',
@@ -47,7 +47,7 @@ const featureList = [
     },
   },
   {
-    title: 'Governor',
+    title: 'Governors',
     Icon: UserShieldIcon,
     description: <>Create, view, and vote on proposals.</>,
     link: {
@@ -56,7 +56,7 @@ const featureList = [
     },
   },
   {
-    title: 'Developer',
+    title: 'Developers',
     Icon: LaptopCodeIcon,
     link: {
       href: '/docs/developer-guide/switch-wallet-to-testnet',
