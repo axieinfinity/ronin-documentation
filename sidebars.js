@@ -69,28 +69,31 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Staking (Testnet)',
-      link: { type: 'doc', id: 'stake/staking' },
+      label: 'Staking',
+      link: { 
+        type: 'generated-index',
+        title: 'Staking', 
+        description: 'Learn how to delegate your stake to preferred validators and claim rewards.'},
       items: [
         {
           type: 'doc',
-          label: 'Access the dashboard',
-          id: 'stake/dashboard',
+          label: 'Become a delegator',
+          id: 'stake/become-delegator',
         },
         {
           type: 'doc',
-          label: 'Delegate to a validator',
-          id: 'stake/delegate',
+          label: 'Withdraw stake',
+          id: 'stake/withdraw-stake',
         },
         {
           type: 'doc',
-          label: 'Withdraw and move stake',
-          id: 'stake/withdraw&move',
+          label: 'Move stake',
+          id: 'stake/move-stake',
         },
         {
           type: 'doc',
-          label: 'Claim reward',
-          id: 'stake/claim',
+          label: 'Claim rewards',
+          id: 'stake/claim-rewards',
         },
       ],
     },

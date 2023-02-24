@@ -23,7 +23,7 @@ const featureList = [
     title: 'Staking',
     Icon: CoinIcon,
     link: {
-      href: '/docs/stake/staking',
+      href: '/docs/category/staking',
       title: 'Staking',
     },
     description: <>Secure the network by staking tokens and delegating your stake to validators.</>,
@@ -31,7 +31,7 @@ const featureList = [
   {
     title: 'Validator',
     Icon: BoxTickIcon,
-    description: <>Secure the network by staking and operating a node to validate on Ronin Network.</>,
+    description: <>Secure the network and earn rewards by staking tokens and running a node to validate on Ronin.</>,
     link: {
       href: '/docs/validator/responsibilities',
       title: 'Validator',
