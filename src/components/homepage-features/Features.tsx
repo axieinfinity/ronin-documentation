@@ -29,7 +29,7 @@ const featureList = [
     description: <>Secure the network by staking tokens and delegating your stake to validators.</>,
   },
   {
-    title: 'Validators',
+    title: 'Validator',
     Icon: BoxTickIcon,
     description: <>Secure the network and earn rewards by staking tokens and running a node to validate on Ronin.</>,
     link: {
@@ -47,7 +47,7 @@ const featureList = [
     },
   },
   {
-    title: 'Governors',
+    title: 'Governor',
     Icon: UserShieldIcon,
     description: <>Create, view, and vote on proposals.</>,
     link: {
@@ -56,7 +56,7 @@ const featureList = [
     },
   },
   {
-    title: 'Developers',
+    title: 'Developer',
     Icon: LaptopCodeIcon,
     link: {
       href: '/docs/developer-guide/switch-wallet-to-testnet',
