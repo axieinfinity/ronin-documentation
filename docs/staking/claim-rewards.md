@@ -7,6 +7,7 @@ import stepThree from './confirm-transaction.png'
 import stepFour from './claimed-rewards.png'
 
 # Claim your rewards
+This page explains how to claim staking rewards to your Ronin Wallet. There's no option to automatically re-stake RON to your delegated validators.
 
 1. Go to the [staking dashboard](https://saigon-staking.roninchain.com/) and select **My Staking**.
 2. Under **CLAIMABLE REWARDS**, click **Claim all**.
