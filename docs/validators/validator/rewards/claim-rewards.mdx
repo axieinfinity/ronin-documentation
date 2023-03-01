@@ -1,0 +1,41 @@
+---
+label: Claim rewards
+description: Which rewards can be claimed and how to do it.
+---
+
+import automaticRewards from './assets/automatic-rewards.png';
+import claimStepOne from './assets/claim-step-1.png';
+import claimStepTwo from './assets/claim-step-2.png';
+import confirmTransaction from './assets/confirm-transaction.png';
+
+# Claim rewards
+
+## Types of rewards
+
+As a validator, you can earn three types of rewards:
+* **Bridge rewards.** Rewards received for verifying transactions via Ronin Bridge. 
+* **Commission.** Rewards derived from the block rewards times the commission rate.
+* **Staking rewards.** Rewards derived from your self-stake and divided proportionally with your delegators.
+
+## Claim commission and bridge rewards
+Commission and bridge rewards are transferred to you automatically at the end of each period (roughly at the end of each day), so no action is required from your side.
+
+<img src={automaticRewards} width={1280} />
+
+## Claim staking rewards
+Staking rewards are calculated each period (roughly equal to one day) and displayed as “claimable rewards”. You need to claim these rewards manually.
+
+To claim, follow these steps:
+1. On the **My Staking** page, click **Claim all**.
+
+<img src={claimStepOne} width={480} />
+
+2. Click **Claim now**.
+
+<img src={claimStepTwo} width={416} />
+
+3. Confirm the transaction.
+
+<img src={confirmTransaction} width={375} />
+
+After the transaction is confirmed, the rewards are credited to your wallet.

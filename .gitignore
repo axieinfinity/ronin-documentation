@@ -21,3 +21,5 @@ yarn-error.log*
 
 .npmrc
 .vale
+
+frontmatter.json
