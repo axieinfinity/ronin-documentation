@@ -48,4 +48,4 @@ $ ./ronin-manager start
 
 * After some minutes, verify your node is connecting and up to date with the network at [stats.roninchain.com](https://stats.roninchain.com)
 
-Optionally you can [start node from a snapshot](/docs/developer-guide/running-non-validating-node#start-node-from-a-snapshot).
+Optionally you can [start node from a snapshot](./run-non-validator-node.md#start-node-from-a-snapshot).

@@ -14,7 +14,7 @@ Ronin means “a samurai without a master,” and this idea mirrors the motivati
 
 ## Tokenomics
 
-The token is RON. For more information, see [Tokenomics](./platform/tokenomics).
+The token is RON. For more information, see [Tokenomics](./platform/tokenomics.md).
 
 ## Networks
 
@@ -22,8 +22,8 @@ Mainnet and testnet
 
 ## Roadmap
 
-See [Roadmap](./platform/roadmap).
+See [Roadmap](./platform/roadmap.md).
 
 ## White paper
 
-See [White paper](./white-paper)
+See [White paper](./platform/white-paper.md)
