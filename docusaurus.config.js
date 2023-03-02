@@ -56,9 +56,99 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'introduction',
+            docId: 'get-started',
             position: 'left',
-            label: 'Documentation',
+            label: 'Get started',
+          },
+          {
+            type: 'dropdown',
+            label: 'Basics',
+            items: [
+              {
+                label: 'Blockchain basics',
+                to: 'docs/category/blockchain-basics',
+              },
+              {
+                label: 'Ronin Network basics',
+                to: 'docs/category/ronin-network-basics',
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: 'Delegators',
+            items: [
+              {
+                label: 'Purchase RON',
+                to: 'docs/delegators/onboarding/purchase',
+              },
+              {
+                label: 'Become a delegator',
+                to: 'docs/delegators/onboarding/become-delegator',
+              },
+              {
+                label: 'Claim rewards',
+                to: 'docs/delegators/rewards/claim',
+              },
+              {
+                label: 'Move stake',
+                to: 'docs/delegators/stake/move',
+              },
+              {
+                label: 'Withdraw stake',
+                to: 'docs/delegators/stake/withdraw',
+              },
+              {
+                label: 'FAQ',
+                to: 'docs/delegators/faq',
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: 'Validators',
+            items: [
+              {
+                label: 'Run a validator node',
+                to: 'docs/validators/technician/setup',
+              },
+              {
+                label: 'Become a validator',
+                to: 'docs/validators/validator/onboarding/become-validator',
+              },
+              {
+                label: 'Claim rewards',
+                to: 'docs/validators/validator/rewards/claim',
+              },
+              {
+                label: 'Increase stake',
+                to: 'docs/validators/validator/stake/increase',
+              },
+              {
+                label: 'Withdraw stake',
+                to: 'docs/validator/validator/stake/withdraw',
+              },
+              {
+                label: 'Manage your profile',
+                to: 'docs/category/manage-your-profile',
+              },
+              {
+                label: 'FAQ',
+                to: 'docs/validators/faq',
+              },
+            ],
+          },
+          {
+            to: 'docs/category/developers',
+            label: 'Developers',
+          },
+          {
+            to: 'docs/category/community',
+            label: 'Community',
+          },
+          {
+            to: 'docs/category/reference',
+            label: 'Reference',
           },
           {
             type: 'search',

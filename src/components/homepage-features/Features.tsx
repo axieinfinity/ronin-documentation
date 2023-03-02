@@ -14,8 +14,8 @@ const featureList = [
   //   title: 'Introduction',
   //   Icon: ListViewIcon,
   //   link: {
-  //     href: '/docs/introduction',
-  //     title: 'Introduction',
+  //     href: '/docs/get-started',
+  //     title: 'Get started',
   //   },
   //   description: <>Learn the basics of blockchain and Ronin Network.</>,
   // },
@@ -53,12 +53,12 @@ const featureList = [
       href: '/docs/category/developers',
       title: 'Developers',
     },
-    description: <>Build your Ronin Network decentralized application.</>,
+    description: <>Build your decentralized application on Ronin Network.</>,
   },
   {
     title: 'Community',
     Icon: UserShieldIcon,
-    description: <>Join our community and contribute to documentation.</>,
+    description: <>Join our community and become a contributor.</>,
     link: {
       href: '/docs/category/community',
       title: 'Community',
@@ -67,7 +67,7 @@ const featureList = [
   {
     title: 'Reference',
     Icon: SignDirectionIcon,
-    description: <>Find answers to common questions and browse our other documentation.</>,
+    description: <>Find answers to common questions.</>,
     link: {
       href: '/docs/category/reference',
       title: 'Reference',

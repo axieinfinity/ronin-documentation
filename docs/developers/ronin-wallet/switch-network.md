@@ -1,3 +1,7 @@
+---
+description: Switch between mainnet and testnet in Ronin Wallet.
+---
+
 # Switch network on Ronin Wallet extension
 
 1. From your Ronin Wallet extension, go to Settings

@@ -1,4 +1,7 @@
-# How to run
+---
+label: Set up and run a bridge operator node. 
+---
+# Run a bridge operator node
 ## Requirements
 
 - Ronin RPC URL is used to listen/trigger events from Ronin chain

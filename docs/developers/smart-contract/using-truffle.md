@@ -1,4 +1,7 @@
-# Using Truffle
+---
+description: Deploy smart contracts using the Truffle set of tools.
+---
+# Deploy using Truffle
 
 Deployment of smart contracts is only available on testnet. For mainnet, please refer to the [Builders Program](https://axie.substack.com/p/axie-infinity-builders-program) for more information.
 
