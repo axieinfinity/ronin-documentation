@@ -246,7 +246,11 @@ const sidebars = {
             // Node setup tutorials
             {
               type: 'category',
-              label: 'Follow the steps to set up a node on well-known cloud providers.',
+              label: 'Tutorials',
+              link: {
+                type: 'generated-index',
+                title: 'Tutorials',
+              },
               items: [
                 // Run a validator node on AWS
                 'validators/technician/tutorials/run-node-on-aws',
