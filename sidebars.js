@@ -26,37 +26,61 @@ const sidebars = {
       id: 'introduction',
     },
     // Basics
+    // {
+    //   type: 'category',
+    //   label: 'Basics',
+    //   link: {
+    //     type: 'generated-index',
+    //     title: 'Basics', 
+    //     description: 'Learn the basic concepts of blockchain and Ronin Network.',
+    //   },
+    //   items: [
+    //     {
+    //       // Blockchain basics
+    //       type: 'category',
+    //       label: 'Blockchain basics',
+    //       link: {
+    //         type: 'generated-index',
+    //         title: 'Blockchain basics', 
+    //       },
+    //       items: [
+    //         'basics/blockchain/blockchain',
+    //         'basics/blockchain/blockchain-network',
+    //         'basics/blockchain/bridge',
+    //         'basics/blockchain/client',
+    //         'basics/blockchain/consensus',
+    //         'basics/blockchain/dapp',
+    //         'basics/blockchain/ethereum',
+    //         'basics/blockchain/gas',
+    //         'basics/blockchain/node',
+    //         'basics/blockchain/sidechain',
+    //         'basics/blockchain/solidity',
+    //       ],
+    //     },
+    //   ],
+    // }, 
     {
+      // Blockchain basics
       type: 'category',
-      label: 'Basics',
+      label: 'Blockchain basics',
       link: {
         type: 'generated-index',
-        title: 'Basics', 
-        description: 'Learn the basic concepts of blockchain and Ronin Network.',
+        title: 'Blockchain basics', 
       },
       items: [
-        {
-          // Blockchain basics
-          type: 'category',
-          label: 'Blockchain basics',
-          link: {
-            type: 'generated-index',
-            title: 'Blockchain basics', 
-          },
-          items: [
-            'basics/blockchain/blockchain',
-            'basics/blockchain/blockchain-network',
-            'basics/blockchain/bridge',
-            'basics/blockchain/client',
-            'basics/blockchain/consensus',
-            'basics/blockchain/dapp',
-            'basics/blockchain/ethereum',
-            'basics/blockchain/gas',
-            'basics/blockchain/node',
-            'basics/blockchain/sidechain',
-            'basics/blockchain/solidity',
-          ],
-        },
+        'basics/blockchain/blockchain',
+        'basics/blockchain/blockchain-network',
+        'basics/blockchain/bridge',
+        'basics/blockchain/client',
+        'basics/blockchain/consensus',
+        'basics/blockchain/dapp',
+        'basics/blockchain/ethereum',
+        'basics/blockchain/gas',
+        'basics/blockchain/node',
+        'basics/blockchain/sidechain',
+        'basics/blockchain/solidity',
+      ],
+    },
         {
           // Ronin basics
           type: 'category',
@@ -145,14 +169,10 @@ const sidebars = {
                 'basics/ronin/roles/validator',
                 // Delegator
                 'basics/ronin/roles/delegator',
-                // Bridge operator
-                'basics/ronin/roles/bridge-operator',
               ],
             },
           ],
         },
-      ],
-    },
     // Delegators
     {
       type: 'category',
@@ -217,134 +237,78 @@ const sidebars = {
         description: 'Learn how to set up nodes, manage profile, stake, and claim rewards.',
       },
       items: [
+        'validators/validator/onboarding/become-validator',
+        // Stake
         {
-          // Validator technician
           type: 'category',
-          label: 'Validator technicians',
+          label: 'Stake',
           link: {
             type: 'generated-index',
-            title: 'Validator technicians',
-            description: 'Learn how to set up and run a validator node.',
+            title: 'Stake',
+            description: 'Learn how to increase or withdraw your stake.'
           },
           items: [
-            // API
-            {
-              type: 'link',
-              label: 'API',
-              href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
-            },
-            // CLI guide
-            'validators/technician/cli',
-            // Minimum requirements
-            'validators/technician/minimum-requirements',
-            // Run a validator node (testnet)
-            'validators/technician/setup',
-            // Run a validator node (PoA mainnet)
-            'validators/technician/run-validator-node',
-            // Run a non-validator-node (PoA mainnet)
-            'validators/technician/run-non-validator-node',
-            // Node setup tutorials
-            {
-              type: 'category',
-              label: 'Tutorials',
-              link: {
-                type: 'generated-index',
-                title: 'Tutorials',
-              },
-              items: [
-                // Run a validator node on AWS
-                'validators/technician/tutorials/run-node-on-aws',
-                // Run a validator node on GCP
-                'validators/technician/tutorials/run-node-on-gcp',
-              ],
-            },
+            // Increase stake
+            'validators/validator/stake/increase',
+            // Withdraw stake
+            'validators/validator/stake/withdraw',
           ],
         },
+        // Rewards
         {
-          // Validator
           type: 'category',
-          label: 'Validators',
+          label: 'Rewards',
           link: {
             type: 'generated-index',
-            title: 'Validators', 
-            description: 'Learn how to stake tokens, claim rewards, and manage your validator profile.',
+            title: 'Rewards',
+            description: 'Learn about reward types and how to claim rewards.'
           },
           items: [
-            // Become a validator
-            'validators/validator/onboarding/become-validator',
-            // Stake
+            // Reward types
+            'validators/validator/rewards/types',
+            // Claim rewards
+            'validators/validator/rewards/claim',
+          ],
+        },
+        // Manage profile
+        {
+          type: 'category',
+          label: 'Manage profile',
+          link: {
+            type: 'generated-index',
+            title: 'Manage profile', 
+            description: 'Learn how to set commission rate, schedule maintenance, and view your analytics and activities.',
+          },
+          items: [
             {
-              type: 'category',
-              label: 'Stake',
-              link: {
-                type: 'generated-index',
-                title: 'Stake',
-                description: 'Learn how to increase or withdraw your stake.'
-              },
-              items: [
-                // Increase stake
-                'validators/validator/stake/increase',
-                // Withdraw stake
-                'validators/validator/stake/withdraw',
-              ],
+              type: 'doc',
+              label: 'Change commission rate',
+              id: 'validators/validator/manage-profile/commission',
             },
-            // Rewards
             {
-              type: 'category',
-              label: 'Rewards',
-              link: {
-                type: 'generated-index',
-                title: 'Rewards',
-                description: 'Learn about reward types and how to claim rewards.'
-              },
-              items: [
-                // Reward types
-                'validators/validator/rewards/types',
-                // Claim rewards
-                'validators/validator/rewards/claim',
-              ],
+              type: 'doc',
+              label: 'Schedule maintenance mode',
+              id: 'validators/validator/manage-profile/maintenance',
             },
-            // Manage profile
             {
-              type: 'category',
-              label: 'Manage profile',
-              link: {
-                type: 'generated-index',
-                title: 'Manage profile', 
-                description: 'Learn how to set commission rate, schedule maintenance, and view your analytics and activities.',
-              },
-              items: [
-                {
-                  type: 'doc',
-                  label: 'Change commission rate',
-                  id: 'validators/validator/manage-profile/commission',
-                },
-                {
-                  type: 'doc',
-                  label: 'Schedule maintenance mode',
-                  id: 'validators/validator/manage-profile/maintenance',
-                },
-                {
-                  type: 'doc',
-                  label: 'Renounce your role',
-                  id: 'validators/validator/manage-profile/renounce',
-                },
-                {
-                  type: 'doc',
-                  label: 'View activities',
-                  id: 'validators/validator/manage-profile/activities',
-                },
-                {
-                  type: 'doc',
-                  label: 'View profile',
-                  id: 'validators/validator/manage-profile/profile',
-                },
-                {
-                  type: 'doc',
-                  label: 'View analytics',
-                  id: 'validators/validator/manage-profile/analytics',
-                },
-              ],
+              type: 'doc',
+              label: 'Renounce your role',
+              id: 'validators/validator/manage-profile/renounce',
+            },
+            {
+              type: 'doc',
+              label: 'View activities',
+              id: 'validators/validator/manage-profile/activities',
+            },
+            {
+              type: 'doc',
+              label: 'View profile',
+              id: 'validators/validator/manage-profile/profile',
+            },
+            {
+              type: 'doc',
+              label: 'View analytics',
+              id: 'validators/validator/manage-profile/analytics',
             },
           ],
         },
@@ -362,22 +326,9 @@ const sidebars = {
             'validators/bridge-operator/setup',
           ],
         },
-        {
-          // Slashing and bailout
-          type: 'category',
-          label: 'Slashing and bailout',
-          link: {
-            type: 'generated-index',
-            title: 'Slashing and bailout', 
-            description: 'Learn about the slashing penalties and rules for bailout.',
-          },
-          items: [
-            // Slashing
-            'validators/slashing/slashing',
-            // Bailout
-            'validators/slashing/bailout',
-          ],
-        },
+        'validators/slashing/slashing',
+        // Bailout
+        'validators/slashing/bailout',
         // FAQ
         {
           type: 'doc',
@@ -387,6 +338,51 @@ const sidebars = {
       ],
     },
     // Developers
+    {
+      // Validator technician
+      type: 'category',
+      label: 'Node operators',
+      link: {
+        type: 'generated-index',
+        title: 'Validator technicians',
+        description: 'Learn how to set up and run a validator node.',
+      },
+      items: [
+        // API
+        {
+          type: 'link',
+          label: 'API',
+          href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
+        },
+        // CLI guide
+        'validators/technician/cli',
+        // Minimum requirements
+        'validators/technician/minimum-requirements',
+        // Run a validator node (testnet)
+        'validators/technician/setup',
+        // Run a validator node (PoA mainnet)
+        'validators/technician/run-validator-node',
+        // Run a non-validator-node (PoA mainnet)
+        'validators/technician/run-non-validator-node',
+        // Bridge operator
+        'basics/ronin/roles/bridge-operator',
+        // Node setup tutorials
+        {
+          type: 'category',
+          label: 'Tutorials',
+          link: {
+            type: 'generated-index',
+            title: 'Tutorials',
+          },
+          items: [
+            // Run a validator node on AWS
+            'validators/technician/tutorials/run-node-on-aws',
+            // Run a validator node on GCP
+            'validators/technician/tutorials/run-node-on-gcp',
+          ],
+        },
+      ],
+    },
     {
       type: 'category',
       label: 'Developers',

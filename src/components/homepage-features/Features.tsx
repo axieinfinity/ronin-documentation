@@ -10,20 +10,11 @@ import React from 'react'
 import { Card } from './Card'
 
 const featureList = [
-  // {
-  //   title: 'Introduction',
-  //   Icon: ListViewIcon,
-  //   link: {
-  //     href: '/docs/get-started',
-  //     title: 'Get started',
-  //   },
-  //   description: <>Learn the basics of blockchain and Ronin Network.</>,
-  // },
   {
     title: 'Basics',
     Icon: ListViewIcon,
     link: {
-      href: '/docs/category/basics',
+      href: '/docs/category/blockchain-basics',
       title: 'Basics',
     },
     description: <>Learn the basics of blockchain and Ronin Network.</>,

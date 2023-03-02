@@ -59,23 +59,23 @@ const config = {
             type: 'doc',
             docId: 'introduction',
             position: 'left',
-            label: 'Introduction',
+            label: 'Welcome',
           },
           // Basics
-          {
-            type: 'dropdown',
-            label: 'Basics',
-            items: [
-              {
-                label: 'Blockchain',
-                to: 'docs/category/blockchain-basics',
-              },
-              {
-                label: 'Ronin Network',
-                to: 'docs/category/ronin-network-basics',
-              },
-            ],
-          },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Basics',
+          //   items: [
+          //     {
+          //       label: 'Blockchain',
+          //       to: 'docs/category/blockchain-basics',
+          //     },
+          //     {
+          //       label: 'Ronin Network',
+          //       to: 'docs/category/ronin-network-basics',
+          //     },
+          //   ],
+          // },
           // Delegators
           {
             type: 'dropdown',
