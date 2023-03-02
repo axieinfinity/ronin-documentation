@@ -22,8 +22,8 @@ const sidebars = {
     // Introduction
     {
       type: 'doc',
-      label: 'Get started',
-      id: 'get-started',
+      label: 'Introduction',
+      id: 'introduction',
     },
     // Basics
     {
@@ -55,7 +55,6 @@ const sidebars = {
             'basics/blockchain/node',
             'basics/blockchain/sidechain',
             'basics/blockchain/solidity',
-            'basics/blockchain/transaction',
           ],
         },
         {
@@ -67,59 +66,89 @@ const sidebars = {
             title: 'Ronin Network basics',
           },
           items: [
-            // Ronin overview
-            'basics/ronin/overview',
-            // Whitepaper
-            'basics/ronin/whitepaper',
+            // Introduction
+            'basics/ronin/introduction',
+            // Components
             {
-              // Ronin Bridge
               type: 'category',
-              label: 'Ronin Bridge',
+              label: 'Components',
+              link: {
+                type: 'generated-index',
+                title: 'Components',
+              },
               items: [
-                // Overview
-                'basics/ronin/ronin-bridge/overview',
-                // Governance
-                'basics/ronin/ronin-bridge/governance',
-                // Fee structure
-                'basics/ronin/ronin-bridge/fee-structure',
-                // Withdrawal limits
-                'basics/ronin/ronin-bridge/withdrawal-limits',
+                // Ronin Bridge
+                {
+                  type: 'category',
+                  label: 'Ronin Bridge',
+                  link: {
+                    type: 'doc',
+                    id: 'basics/ronin/components/ronin-bridge/ronin-bridge',
+                  },
+                  items: [
+                    // Governance
+                    'basics/ronin/components/ronin-bridge/governance',
+                    // Fee structure
+                    'basics/ronin/components/ronin-bridge/fee-structure',
+                    // Withdrawal limits
+                    'basics/ronin/components/ronin-bridge/withdrawal-limits',
+                  ],
+                },
+                // Ronin Explorer
+                'basics/ronin/components/ronin-explorer',
+                // dApps
+                'basics/ronin/components/dapps',
               ],
             },
+            // Platform
             {
-              // Networks
               type: 'category',
-              label: 'Networks',
+              label: 'Platform',
+              link: {
+                type: 'generated-index',
+                title: 'Platform',
+              },
               items: [
-                // Mainnet
-                'basics/ronin/networks/mainnet',
-                // Testnet
-                'basics/ronin/networks/testnet',
+                // Comparison
+                'basics/ronin/platform/comparison',
+                // Roadmap
+                'basics/ronin/platform/roadmap',
+                // Tokenomics
+                'basics/ronin/platform/tokenomics',
+                // Configurations
+                {
+                  type: 'category',
+                  label: 'Configurations',
+                  items: [
+                    // Mainnet
+                    'basics/ronin/platform/configs/mainnet',
+                    // Testnet
+                    'basics/ronin/platform/configs/testnet',
+                  ],
+                },
+                // Transaction life cycle
+                'basics/ronin/platform/transaction',
+                // White paper
+                'basics/ronin/platform/white-paper',
               ],
             },
+            // Roles
             {
-              // Roles
               type: 'category',
               label: 'Roles',
+              link: {
+                type: 'generated-index',
+                title: 'Roles',
+              },
               items: [
-                // Delegator
-                'basics/ronin/roles/delegator',
                 // Validator
                 'basics/ronin/roles/validator',
+                // Delegator
+                'basics/ronin/roles/delegator',
                 // Bridge operator
                 'basics/ronin/roles/bridge-operator',
               ],
             },
-            // dApps
-            'basics/ronin/dapps/overview',
-            // Roadmap
-            'basics/ronin/roadmap',
-            // Tokenomics
-            'basics/ronin/tokenomics',
-            // Transaction life cycle
-            'basics/ronin/transaction',
-            // Comparison
-            'basics/ronin/comparison',
           ],
         },
       ],
@@ -158,7 +187,14 @@ const sidebars = {
         {
           type: 'category',
           label: 'Rewards',
+          link: {
+            type: 'generated-index',
+            title: 'Rewards',
+            description: 'Learn about reward types and how to claim rewards.',
+          },
           items: [
+            // Reward types
+            'delegators/rewards/types',
             // Claim rewards
             'delegators/rewards/claim',
           ],
@@ -178,16 +214,16 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'Validators', 
-        description: 'Guides for validator technicians, validators, and bridge operators.',
+        description: 'Learn how to set up nodes, manage profile, stake, and claim rewards.',
       },
       items: [
         {
           // Validator technician
           type: 'category',
-          label: 'Validator technician',
+          label: 'Validator technicians',
           link: {
             type: 'generated-index',
-            title: 'Validator technician',
+            title: 'Validator technicians',
             description: 'Learn how to set up and run a validator node.',
           },
           items: [
@@ -210,7 +246,7 @@ const sidebars = {
             // Node setup tutorials
             {
               type: 'category',
-              label: 'Node setup tutorials',
+              label: 'Follow the steps to set up a node on well-known cloud providers.',
               items: [
                 // Run a validator node on AWS
                 'validators/technician/tutorials/run-node-on-aws',
@@ -223,10 +259,10 @@ const sidebars = {
         {
           // Validator
           type: 'category',
-          label: 'Validator',
+          label: 'Validators',
           link: {
             type: 'generated-index',
-            title: 'Validator', 
+            title: 'Validators', 
             description: 'Learn how to stake tokens, claim rewards, and manage your validator profile.',
           },
           items: [
@@ -236,6 +272,11 @@ const sidebars = {
             {
               type: 'category',
               label: 'Stake',
+              link: {
+                type: 'generated-index',
+                title: 'Stake',
+                description: 'Learn how to increase or withdraw your stake.'
+              },
               items: [
                 // Increase stake
                 'validators/validator/stake/increase',
@@ -247,30 +288,37 @@ const sidebars = {
             {
               type: 'category',
               label: 'Rewards',
+              link: {
+                type: 'generated-index',
+                title: 'Rewards',
+                description: 'Learn about reward types and how to claim rewards.'
+              },
               items: [
+                // Reward types
+                'validators/validator/rewards/types',
                 // Claim rewards
                 'validators/validator/rewards/claim',
               ],
             },
-            // Manage your profile
+            // Manage profile
             {
               type: 'category',
-              label: 'Manage your profile',
+              label: 'Manage profile',
               link: {
                 type: 'generated-index',
-                title: 'Manage your profile', 
-                description: 'Set commission rate, schedule maintenance, and more.',
+                title: 'Manage profile', 
+                description: 'Learn how to set commission rate, schedule maintenance, and view your analytics and activities.',
               },
               items: [
                 {
                   type: 'doc',
                   label: 'Change commission rate',
-                  id: 'validators/validator/manage-profile/commission-rate',
+                  id: 'validators/validator/manage-profile/commission',
                 },
                 {
                   type: 'doc',
                   label: 'Schedule maintenance mode',
-                  id: 'validators/validator/manage-profile/maintenance-mode',
+                  id: 'validators/validator/manage-profile/maintenance',
                 },
                 {
                   type: 'doc',
@@ -279,18 +327,18 @@ const sidebars = {
                 },
                 {
                   type: 'doc',
-                  label: 'View your activities',
-                  id: 'validators/validator/manage-profile/view-activities',
+                  label: 'View activities',
+                  id: 'validators/validator/manage-profile/activities',
                 },
                 {
                   type: 'doc',
-                  label: 'View your profile',
-                  id: 'validators/validator/manage-profile/view-profile',
+                  label: 'View profile',
+                  id: 'validators/validator/manage-profile/profile',
                 },
                 {
                   type: 'doc',
-                  label: 'View your analytics',
-                  id: 'validators/validator/manage-profile/view-analytics',
+                  label: 'View analytics',
+                  id: 'validators/validator/manage-profile/analytics',
                 },
               ],
             },
@@ -299,7 +347,7 @@ const sidebars = {
         {
           // Bridge operator
           type: 'category',
-          label: 'Bridge operator',
+          label: 'Bridge operators',
           link: {
             type: 'generated-index',
             title: 'Bridge operator', 
@@ -317,7 +365,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Slashing and bailout', 
-            description: 'Slashing penalties and rules for bailout.',
+            description: 'Learn about the slashing penalties and rules for bailout.',
           },
           items: [
             // Slashing
@@ -349,7 +397,7 @@ const sidebars = {
           label: 'Smart contracts',
           link: {
             type: 'generated-index',
-            title: 'Smart contracts', 
+            title: 'Deploy smart contracts', 
             description: 'Guides for smart contract deployment.',
           },
           items: [
@@ -362,7 +410,7 @@ const sidebars = {
           label: 'Ronin Wallet',
           link: {
             type: 'generated-index',
-            title: 'Ronin Wallet', 
+            title: 'Integrate Ronin Wallet', 
             description: 'Guides for Ronin Wallet integration.',
           },
           items: [
@@ -378,56 +426,48 @@ const sidebars = {
         },
       ],
     },
-    // Community
+    // Contributors
     {
       type: 'category',
-      label: 'Community',
+      label: 'Contributors',
       link: {
         type: 'generated-index',
-        title: 'Community', 
-        description: 'Contribution guidelines and community resources.',
+        title: 'Contributors', 
+        description: 'Contribution guide, style guide, and a bug bounty program.',
       },
       items: [
+        'contributors/contribution-guide',
+        'contributors/style-guide',
         {
           type: 'category',
-          label: 'Contribution',
+          label: 'Templates',
           link: {
             type: 'generated-index',
-            title: 'Contribution', 
-            description: 'Guides for contributing to this documentation.',
+            title: 'Templates', 
+            description: 'Learn about the templates used to create this documentation.',
           },
           items: [
-            'community/contribution/contribution-guide',
-            'community/contribution/style-guide',
-            {
-              type: 'category',
-              label: 'Templates',
-              items: [
-                'community/contribution/templates/concept',
-                'community/contribution/templates/task',
-                'community/contribution/templates/reference',
-                'community/contribution/templates/troubleshooting',
-              ],
-            },
+            'contributors/templates/concept',
+            'contributors/templates/task',
+            'contributors/templates/reference',
+            'contributors/templates/troubleshooting',
           ],
         },
-        'community/bug-bounty',
-        'community/resources',
+        'contributors/bug-bounty',
       ],
     },
-    // Reference
+    // Resources
     {
       type: 'category',
-      label: 'Reference',
+      label: 'Resources',
       link: {
         type: 'generated-index',
-        title: 'Reference', 
-        description: 'Glossary and links to non-Ronin documentation.',
+        title: 'Resources', 
       },
       items: [
-        'reference/faq',
-        'reference/glossary',
-        'reference/resources',
+        'resources/glossary',
+        'resources/audits',
+        'resources/resources',
       ],
     },
   ],

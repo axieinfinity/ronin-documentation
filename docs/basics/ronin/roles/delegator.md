@@ -1,3 +1,6 @@
 ---
-description: What is a delegator?
+label: Delegators
+description: Delegator role and responsibility
 ---
+
+# Delegator

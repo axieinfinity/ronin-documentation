@@ -1,3 +1,7 @@
 ---
-description: What is a node?
+description: Node definition and examples
 ---
+
+# Node
+
+Definition and examples

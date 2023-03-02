@@ -1,5 +1,5 @@
 ---
-description: Switch between mainnet and testnet in Ronin Wallet.
+description: Switch between mainnet and testnet in Ronin Wallet
 ---
 
 # Switch network on Ronin Wallet extension

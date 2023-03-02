@@ -1,3 +1,7 @@
 ---
-description: What is Ethereum?
+description: Ethereum definition
 ---
+
+# Ethereum
+
+Definition

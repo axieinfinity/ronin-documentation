@@ -1,5 +1,5 @@
 ---
-description: Claim staking rewards.
+description: Claim staking rewards
 ---
 import stepOne from './assets/claim-step-1.png'
 import stepTwo from './assets/claim-step-2.png'

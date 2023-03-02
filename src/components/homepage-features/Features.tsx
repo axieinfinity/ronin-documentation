@@ -56,21 +56,21 @@ const featureList = [
     description: <>Build your decentralized application on Ronin Network.</>,
   },
   {
-    title: 'Community',
+    title: 'Contributors',
     Icon: UserShieldIcon,
     description: <>Join our community and become a contributor.</>,
     link: {
-      href: '/docs/category/community',
-      title: 'Community',
+      href: '/docs/category/contributors',
+      title: 'Contributors',
     },
   },
   {
-    title: 'Reference',
+    title: 'Resources',
     Icon: SignDirectionIcon,
-    description: <>Find answers to common questions.</>,
+    description: <>Read the white paper, lite paper, and refer to the glossary.</>,
     link: {
-      href: '/docs/category/reference',
-      title: 'Reference',
+      href: '/docs/category/resources',
+      title: 'Resources',
     },
   },
 ]

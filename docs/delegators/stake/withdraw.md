@@ -1,5 +1,5 @@
 ---
-description: Withdraw your stake.
+description: Withdraw your stake partially or completely
 ---
 
 import stepOne from './assets/withdraw-step-1.png'

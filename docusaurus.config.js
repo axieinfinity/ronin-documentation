@@ -54,26 +54,29 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          // Introduction
           {
             type: 'doc',
-            docId: 'get-started',
+            docId: 'introduction',
             position: 'left',
-            label: 'Get started',
+            label: 'Introduction',
           },
+          // Basics
           {
             type: 'dropdown',
             label: 'Basics',
             items: [
               {
-                label: 'Blockchain basics',
+                label: 'Blockchain',
                 to: 'docs/category/blockchain-basics',
               },
               {
-                label: 'Ronin Network basics',
+                label: 'Ronin Network',
                 to: 'docs/category/ronin-network-basics',
               },
             ],
           },
+          // Delegators
           {
             type: 'dropdown',
             label: 'Delegators',
@@ -104,6 +107,7 @@ const config = {
               },
             ],
           },
+          // Validators
           {
             type: 'dropdown',
             label: 'Validators',
@@ -126,11 +130,15 @@ const config = {
               },
               {
                 label: 'Withdraw stake',
-                to: 'docs/validator/validator/stake/withdraw',
+                to: 'docs/validators/validator/stake/withdraw',
               },
               {
-                label: 'Manage your profile',
-                to: 'docs/category/manage-your-profile',
+                label: 'Manage profile',
+                to: 'docs/category/manage-profile',
+              },
+              {
+                label: 'Slashing and bailout',
+                to: 'docs/category/slashing-and-bailout'
               },
               {
                 label: 'FAQ',
@@ -138,18 +146,68 @@ const config = {
               },
             ],
           },
+          // Developers
           {
-            to: 'docs/category/developers',
+            type: 'dropdown',
             label: 'Developers',
+            items: [
+              {
+                to: 'docs/category/smart-contracts',
+                label: 'Deploy smart contracts',
+              },
+              {
+                to: 'docs/category/ronin-wallet',
+                label: 'Integrate Ronin Wallet',
+              },
+              {
+                to: 'docs/developers/faq',
+                label: 'FAQ',
+              },
+            ],
           },
+          // Contributors
           {
-            to: 'docs/category/community',
-            label: 'Community',
+            type: 'dropdown',
+            label: 'Contributors',
+            items: [
+              {
+                to: 'docs/contributors/contribution-guide',
+                label: 'Contribution guide',
+              },
+              {
+                to: 'docs/contributors/style-guide',
+                label: 'Style guide',
+              },
+              {
+                to: 'docs/contributors/bug-bounty',
+                label: 'Bug bounty program',
+              },
+            ],
           },
+          // Resources
           {
-            to: 'docs/category/reference',
-            label: 'Reference',
+            type: 'dropdown',
+            label: 'Resources',
+            items: [
+              {
+                to: 'docs/basics/ronin/platform/white-paper',
+                label: 'White paper',
+              },
+              {
+                to: 'docs/resources/glossary',
+                label: 'Glossary',
+              },
+              {
+                to: 'docs/resources/audits',
+                label: 'Security audits',
+              },
+              {
+                to: 'docs/resources',
+                label: 'Related documentation',
+              },
+            ],
           },
+          // Search
           {
             type: 'search',
             position: 'right',
@@ -171,18 +229,26 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Documentation',
-                to: '/',
+                label: 'Delegators',
+                to: 'docs/category/delegators',
+              },
+              {
+                label: 'Validators',
+                to: 'docs/category/validators',
+              },
+              {
+                label: 'Developers',
+                to: 'docs/category/developers',
               },
             ],
           },
           {
             title: 'Community',
             items: [
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discord.gg/P5GgF7SK',
-              // },
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/P5GgF7SK',
+              },
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/ronin_network',

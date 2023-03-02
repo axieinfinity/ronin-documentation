@@ -1,7 +1,9 @@
 ---
-description: What is consensus?
+description: Consensus definition and examples
 ---
-# What is consensus?
+# Consensus
+
+Definition
 ## Types of consensus
 ### Proof-of-Authority
 Proof-of-authority is a consensus algorithm that delivers an efficient solution for blockchains, specifically private ones. The term was coined in 2017 by Gavin Wood, a co-founder of the Ethereum blockchain. 

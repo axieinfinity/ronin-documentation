@@ -1,5 +1,5 @@
 ---
-description: Interact with Ronin Network dApps using Ronin Wallet.
+description: Integrate Ronin Wallet to interact with the dApps in Ronin Network 
 ---
 
 # Integrate Ronin Wallet

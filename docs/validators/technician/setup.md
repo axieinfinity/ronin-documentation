@@ -1,3 +1,6 @@
+---
+description: Run a validator node
+---
 # Run a validator node
 
 This page describes how to set up a validator node and bridge operator node on the Ronin network.

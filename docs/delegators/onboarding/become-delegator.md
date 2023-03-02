@@ -1,7 +1,5 @@
 ---
-
-description: Delegate your RON tokens to a validator.
-
+description: Delegate your RON tokens to a validator
 ---
 
 import delegatorDashboard from './assets/delegator-dashboard.png'

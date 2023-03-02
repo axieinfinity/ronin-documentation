@@ -1,3 +1,6 @@
+---
+description: (POA MAINNET) Run a non-validator node
+---
 # Running Non-validating Node
 
 * Download the latest version of Ronin manager and uncompress:

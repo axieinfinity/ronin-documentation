@@ -1,5 +1,5 @@
 ---
-description: Move your stake to another validator.
+description: Move your stake to another validator
 ---
 
 import stepOne from './assets/move-step-1.png'

@@ -1,3 +1,7 @@
 ---
-description: What is Solidity?
+description: Solidity definition
 ---
+
+# Solidity
+
+Definition

@@ -1,4 +1,4 @@
 ---
 title: Purchase RON
-description: How to purchase RON
+description: Learn where to purchase RON
 ---

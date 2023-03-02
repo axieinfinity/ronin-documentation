@@ -1,3 +1,7 @@
 ---
-description: What is a blockchain network?
+description: Blockchain network definition and examples
 ---
+
+# Blockchain network
+
+Definition and examples

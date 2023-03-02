@@ -25,8 +25,3 @@
   - [Transfer Gateways and Ronin Bridge](components/untitled.md)
   - [Ronin Explorer](components/ronin-explorer.md)
   - [Free Gas Proxy](components/free-gas-proxy.md)
-
-## Flows <a href="#flows-1" id="flows-1"></a>
-
-- [Token transfer flows](flows-1/token-transfer-flow.md)
-- [Update validator configs flow](flows-1/update-validator-configs-flow.md)

@@ -1,3 +1,7 @@
 ---
-description: What is gas?
+description: Gas definition and examples
 ---
+
+# Gas
+
+Definition and examples

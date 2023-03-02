@@ -1,3 +1,7 @@
 ---
-description: What is a client?
+description: Client definition and examples
 ---
+
+# Client
+
+Definition and examples

@@ -1,5 +1,6 @@
 ---
-description: What is a bridge operator?
+label: Bridge operators
+description: Bridge operator role and responsibility
 ---
 
 # Bridge operator

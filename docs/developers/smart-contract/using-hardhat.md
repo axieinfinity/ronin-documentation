@@ -1,5 +1,5 @@
 ---
-description: Deploy smart contracts using the Hardhat development environment.
+description: Deploy smart contracts using Hardhat
 ---
 # Deploy using Hardhat
 

@@ -1,10 +1,11 @@
 ---
-description: >-
-  Validators are responsible for validating transactions and generating blocks,
-  ensuring the network’s security and the consistency of the ledger.
+label: Validators
+description: Validator role and responsibility
 ---
 
-A blockchain validator is someone who is responsible for validating transactions within a blockchain. 
+# Validator
+
+A blockchain validators is an individual who is responsible for validating transactions and generating blocks within a blockchain. 
 
 ## Node recognition
 

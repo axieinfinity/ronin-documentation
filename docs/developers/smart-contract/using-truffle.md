@@ -1,5 +1,5 @@
 ---
-description: Deploy smart contracts using the Truffle set of tools.
+description: Deploy smart contracts using Truffle
 ---
 # Deploy using Truffle
 

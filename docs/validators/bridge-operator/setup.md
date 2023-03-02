@@ -1,5 +1,5 @@
 ---
-label: Set up and run a bridge operator node. 
+description: Set up and run a bridge operator node
 ---
 # Run a bridge operator node
 ## Requirements

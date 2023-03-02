@@ -1,3 +1,7 @@
 ---
-description: What is a transaction?
+description: Transaction definition and examples
 ---
+
+# Transaction
+
+Definition and examples

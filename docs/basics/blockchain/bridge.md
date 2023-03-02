@@ -1,3 +1,7 @@
 ---
-description: What is a bridge?
+description: Bridge definition and examples
 ---
+
+# Bridge
+
+Definition and examples

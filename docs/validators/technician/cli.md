@@ -1,4 +1,8 @@
-# Getting Started with CLI
+---
+description: Use Ronin CLI
+---
+
+# Get started with CLI
 
 ### Install Ronin
 
