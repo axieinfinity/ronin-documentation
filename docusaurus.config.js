@@ -59,154 +59,154 @@ const config = {
             type: 'doc',
             docId: 'introduction',
             position: 'left',
-            label: 'Introduction',
+            label: 'Welcome',
           },
           // Basics
-          {
-            type: 'dropdown',
-            label: 'Basics',
-            items: [
-              {
-                label: 'Blockchain',
-                to: 'docs/category/blockchain-basics',
-              },
-              {
-                label: 'Ronin Network',
-                to: 'docs/category/ronin-network-basics',
-              },
-            ],
-          },
-          // Delegators
-          {
-            type: 'dropdown',
-            label: 'Delegators',
-            items: [
-              {
-                label: 'Purchase RON',
-                to: 'docs/delegators/onboarding/purchase',
-              },
-              {
-                label: 'Become a delegator',
-                to: 'docs/delegators/onboarding/become-delegator',
-              },
-              {
-                label: 'Claim rewards',
-                to: 'docs/delegators/rewards/claim',
-              },
-              {
-                label: 'Move stake',
-                to: 'docs/delegators/stake/move',
-              },
-              {
-                label: 'Withdraw stake',
-                to: 'docs/delegators/stake/withdraw',
-              },
-              {
-                label: 'FAQ',
-                to: 'docs/delegators/faq',
-              },
-            ],
-          },
-          // Validators
-          {
-            type: 'dropdown',
-            label: 'Validators',
-            items: [
-              {
-                label: 'Run a validator node',
-                to: 'docs/validators/technician/setup',
-              },
-              {
-                label: 'Become a validator',
-                to: 'docs/validators/validator/onboarding/become-validator',
-              },
-              {
-                label: 'Claim rewards',
-                to: 'docs/validators/validator/rewards/claim',
-              },
-              {
-                label: 'Increase stake',
-                to: 'docs/validators/validator/stake/increase',
-              },
-              {
-                label: 'Withdraw stake',
-                to: 'docs/validators/validator/stake/withdraw',
-              },
-              {
-                label: 'Manage profile',
-                to: 'docs/category/manage-profile',
-              },
-              {
-                label: 'Slashing and bailout',
-                to: 'docs/category/slashing-and-bailout'
-              },
-              {
-                label: 'FAQ',
-                to: 'docs/validators/faq',
-              },
-            ],
-          },
-          // Developers
-          {
-            type: 'dropdown',
-            label: 'Developers',
-            items: [
-              {
-                to: 'docs/category/smart-contracts',
-                label: 'Deploy smart contracts',
-              },
-              {
-                to: 'docs/category/ronin-wallet',
-                label: 'Integrate Ronin Wallet',
-              },
-              {
-                to: 'docs/developers/faq',
-                label: 'FAQ',
-              },
-            ],
-          },
-          // Contributors
-          {
-            type: 'dropdown',
-            label: 'Contributors',
-            items: [
-              {
-                to: 'docs/contributors/contribution-guide',
-                label: 'Contribution guide',
-              },
-              {
-                to: 'docs/contributors/style-guide',
-                label: 'Style guide',
-              },
-              {
-                to: 'docs/contributors/bug-bounty',
-                label: 'Bug bounty program',
-              },
-            ],
-          },
-          // Resources
-          {
-            type: 'dropdown',
-            label: 'Resources',
-            items: [
-              {
-                to: 'docs/basics/ronin/platform/white-paper',
-                label: 'White paper',
-              },
-              {
-                to: 'docs/resources/glossary',
-                label: 'Glossary',
-              },
-              {
-                to: 'docs/resources/audits',
-                label: 'Security audits',
-              },
-              {
-                to: 'docs/resources',
-                label: 'Related documentation',
-              },
-            ],
-          },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Basics',
+          //   items: [
+          //     {
+          //       label: 'Blockchain',
+          //       to: 'docs/category/basics',
+          //     },
+          //     {
+          //       label: 'Ronin Network',
+          //       to: 'docs/category/ronin-network-basics',
+          //     },
+          //   ],
+          // },
+          // // Delegators
+          // {
+          //   type: 'dropdown',
+          //   label: 'Delegators',
+          //   items: [
+          //     {
+          //       label: 'Purchase RON',
+          //       to: 'docs/delegators/onboarding/purchase',
+          //     },
+          //     {
+          //       label: 'Become a delegator',
+          //       to: 'docs/delegators/onboarding/become-delegator',
+          //     },
+          //     {
+          //       label: 'Claim rewards',
+          //       to: 'docs/delegators/rewards/claim',
+          //     },
+          //     {
+          //       label: 'Move stake',
+          //       to: 'docs/delegators/stake/move',
+          //     },
+          //     {
+          //       label: 'Withdraw stake',
+          //       to: 'docs/delegators/stake/withdraw',
+          //     },
+          //     {
+          //       label: 'FAQ',
+          //       to: 'docs/delegators/faq',
+          //     },
+          //   ],
+          // },
+          // // Validators
+          // {
+          //   type: 'dropdown',
+          //   label: 'Validators',
+          //   items: [
+          //     {
+          //       label: 'Run a validator node',
+          //       to: 'docs/validators/technician/setup',
+          //     },
+          //     {
+          //       label: 'Become a validator',
+          //       to: 'docs/validators/validator/onboarding/become-validator',
+          //     },
+          //     {
+          //       label: 'Claim rewards',
+          //       to: 'docs/validators/validator/rewards/claim',
+          //     },
+          //     {
+          //       label: 'Increase stake',
+          //       to: 'docs/validators/validator/stake/increase',
+          //     },
+          //     {
+          //       label: 'Withdraw stake',
+          //       to: 'docs/validators/validator/stake/withdraw',
+          //     },
+          //     {
+          //       label: 'Manage profile',
+          //       to: 'docs/category/manage-profile',
+          //     },
+          //     {
+          //       label: 'Slashing and bailout',
+          //       to: 'docs/category/slashing-and-bailout'
+          //     },
+          //     {
+          //       label: 'FAQ',
+          //       to: 'docs/validators/faq',
+          //     },
+          //   ],
+          // },
+          // // Developers
+          // {
+          //   type: 'dropdown',
+          //   label: 'Developers',
+          //   items: [
+          //     {
+          //       to: 'docs/category/smart-contracts',
+          //       label: 'Deploy smart contracts',
+          //     },
+          //     {
+          //       to: 'docs/category/ronin-wallet',
+          //       label: 'Integrate Ronin Wallet',
+          //     },
+          //     {
+          //       to: 'docs/developers/faq',
+          //       label: 'FAQ',
+          //     },
+          //   ],
+          // },
+          // // Contributors
+          // {
+          //   type: 'dropdown',
+          //   label: 'Contributors',
+          //   items: [
+          //     {
+          //       to: 'docs/contributors/contribution-guide',
+          //       label: 'Contribution guide',
+          //     },
+          //     {
+          //       to: 'docs/contributors/style-guide',
+          //       label: 'Style guide',
+          //     },
+          //     {
+          //       to: 'docs/contributors/bug-bounty',
+          //       label: 'Bug bounty program',
+          //     },
+          //   ],
+          // },
+          // // Resources
+          // {
+          //   type: 'dropdown',
+          //   label: 'Resources',
+          //   items: [
+          //     {
+          //       to: 'docs/basics/ronin/platform/white-paper',
+          //       label: 'White paper',
+          //     },
+          //     {
+          //       to: 'docs/resources/glossary',
+          //       label: 'Glossary',
+          //     },
+          //     {
+          //       to: 'docs/resources/audits',
+          //       label: 'Security audits',
+          //     },
+          //     {
+          //       to: 'docs/resources',
+          //       label: 'Related documentation',
+          //     },
+          //   ],
+          // },
           // Search
           {
             type: 'search',
@@ -235,6 +235,10 @@ const config = {
               {
                 label: 'Validators',
                 to: 'docs/category/validators',
+              },
+              {
+                label: 'Node operators',
+                to: 'docs/category/node-operators',
               },
               {
                 label: 'Developers',

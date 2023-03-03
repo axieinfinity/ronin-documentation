@@ -26,7 +26,7 @@ const featureList = [
       href: '/docs/category/basics',
       title: 'Basics',
     },
-    description: <>Learn the basics of blockchain and Ronin Network.</>,
+    description: <>Learn the basics of Ronin Network.</>,
   },
   {
     title: 'Delegators',
@@ -40,7 +40,7 @@ const featureList = [
   {
     title: 'Validators',
     Icon: BoxTickIcon,
-    description: <>Secure the network and earn rewards by staking tokens and running a node to validate on Ronin.</>,
+    description: <>Secure the network and earn rewards by staking tokens and running a node to validate.</>,
     link: {
       href: '/docs/category/validators',
       title: 'Validators',
@@ -67,7 +67,7 @@ const featureList = [
   {
     title: 'Resources',
     Icon: SignDirectionIcon,
-    description: <>Read the white paper, lite paper, and refer to the glossary.</>,
+    description: <>Browse reference information and other documentation.</>,
     link: {
       href: '/docs/category/resources',
       title: 'Resources',

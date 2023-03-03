@@ -2,7 +2,7 @@
 description: Ronin Network white paper
 ---
 
-# Ronin Whitepaper
+# White paper
 
 
 ## Motivation
