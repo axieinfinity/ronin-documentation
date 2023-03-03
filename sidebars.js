@@ -25,40 +25,6 @@ const sidebars = {
       label: 'Introduction',
       id: 'introduction',
     },
-    // Basics
-    // {
-    //   type: 'category',
-    //   label: 'Basics',
-    //   link: {
-    //     type: 'generated-index',
-    //     title: 'Basics', 
-    //     description: 'Learn the basic concepts of blockchain and Ronin Network.',
-    //   },
-    //   items: [
-    //     {
-    //       // Blockchain basics
-    //       type: 'category',
-    //       label: 'Blockchain basics',
-    //       link: {
-    //         type: 'generated-index',
-    //         title: 'Blockchain basics', 
-    //       },
-    //       items: [
-    //         'basics/blockchain/blockchain',
-    //         'basics/blockchain/blockchain-network',
-    //         'basics/blockchain/bridge',
-    //         'basics/blockchain/client',
-    //         'basics/blockchain/consensus',
-    //         'basics/blockchain/dapp',
-    //         'basics/blockchain/ethereum',
-    //         'basics/blockchain/gas',
-    //         'basics/blockchain/node',
-    //         'basics/blockchain/sidechain',
-    //         'basics/blockchain/solidity',
-    //       ],
-    //     },
-    //   ],
-    // }, 
     {
       // Blockchain basics
       type: 'category',
@@ -81,98 +47,98 @@ const sidebars = {
         'basics/blockchain/solidity',
       ],
     },
+    {
+      // Ronin basics
+      type: 'category',
+      label: 'Ronin Network basics',
+      link: {
+        type: 'generated-index',
+        title: 'Ronin Network basics',
+      },
+      items: [
+        // Introduction
+        'basics/ronin/introduction',
+        // Components
         {
-          // Ronin basics
           type: 'category',
-          label: 'Ronin Network basics',
+          label: 'Components',
           link: {
             type: 'generated-index',
-            title: 'Ronin Network basics',
+            title: 'Components',
           },
           items: [
-            // Introduction
-            'basics/ronin/introduction',
-            // Components
+            // Ronin Bridge
             {
               type: 'category',
-              label: 'Components',
+              label: 'Ronin Bridge',
               link: {
-                type: 'generated-index',
-                title: 'Components',
+                type: 'doc',
+                id: 'basics/ronin/components/ronin-bridge/ronin-bridge',
               },
               items: [
-                // Ronin Bridge
-                {
-                  type: 'category',
-                  label: 'Ronin Bridge',
-                  link: {
-                    type: 'doc',
-                    id: 'basics/ronin/components/ronin-bridge/ronin-bridge',
-                  },
-                  items: [
-                    // Governance
-                    'basics/ronin/components/ronin-bridge/governance',
-                    // Fee structure
-                    'basics/ronin/components/ronin-bridge/fee-structure',
-                    // Withdrawal limits
-                    'basics/ronin/components/ronin-bridge/withdrawal-limits',
-                  ],
-                },
-                // Ronin Explorer
-                'basics/ronin/components/ronin-explorer',
-                // dApps
-                'basics/ronin/components/dapps',
+                // Governance
+                'basics/ronin/components/ronin-bridge/governance',
+                // Fee structure
+                'basics/ronin/components/ronin-bridge/fee-structure',
+                // Withdrawal limits
+                'basics/ronin/components/ronin-bridge/withdrawal-limits',
               ],
             },
-            // Platform
-            {
-              type: 'category',
-              label: 'Platform',
-              link: {
-                type: 'generated-index',
-                title: 'Platform',
-              },
-              items: [
-                // Comparison
-                'basics/ronin/platform/comparison',
-                // Roadmap
-                'basics/ronin/platform/roadmap',
-                // Tokenomics
-                'basics/ronin/platform/tokenomics',
-                // Configurations
-                {
-                  type: 'category',
-                  label: 'Configurations',
-                  items: [
-                    // Mainnet
-                    'basics/ronin/platform/configs/mainnet',
-                    // Testnet
-                    'basics/ronin/platform/configs/testnet',
-                  ],
-                },
-                // Transaction life cycle
-                'basics/ronin/platform/transaction',
-                // White paper
-                'basics/ronin/platform/white-paper',
-              ],
-            },
-            // Roles
-            {
-              type: 'category',
-              label: 'Roles',
-              link: {
-                type: 'generated-index',
-                title: 'Roles',
-              },
-              items: [
-                // Validator
-                'basics/ronin/roles/validator',
-                // Delegator
-                'basics/ronin/roles/delegator',
-              ],
-            },
+            // Ronin Explorer
+            'basics/ronin/components/ronin-explorer',
+            // dApps
+            'basics/ronin/components/dapps',
           ],
         },
+        // Platform
+        {
+          type: 'category',
+          label: 'Platform',
+          link: {
+            type: 'generated-index',
+            title: 'Platform',
+          },
+          items: [
+            // Comparison
+            'basics/ronin/platform/comparison',
+            // Roadmap
+            'basics/ronin/platform/roadmap',
+            // Tokenomics
+            'basics/ronin/platform/tokenomics',
+            // Configurations
+            {
+              type: 'category',
+              label: 'Configurations',
+              items: [
+                // Mainnet
+                'basics/ronin/platform/configs/mainnet',
+                // Testnet
+                'basics/ronin/platform/configs/testnet',
+              ],
+            },
+            // Transaction life cycle
+            'basics/ronin/platform/transaction',
+            // White paper
+            'basics/ronin/platform/white-paper',
+          ],
+        },
+        // Roles
+        {
+          type: 'category',
+          label: 'Roles',
+          link: {
+            type: 'generated-index',
+            title: 'Roles',
+          },
+          items: [
+            // Validator
+            'basics/ronin/roles/validator',
+            // Delegator
+            'basics/ronin/roles/delegator',
+          ],
+        },
+      ],
+    },
     // Delegators
     {
       type: 'category',
