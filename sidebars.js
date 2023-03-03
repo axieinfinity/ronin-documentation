@@ -185,7 +185,7 @@ const sidebars = {
       },
       items: [
         // Become a validator
-        'validators/validator/onboarding/become-validator',
+        'validators/onboarding/become-validator',
         // Stake
         {
           type: 'category',
@@ -197,9 +197,9 @@ const sidebars = {
           },
           items: [
             // Increase stake
-            'validators/validator/stake/increase',
+            'validators/stake/increase',
             // Withdraw stake
-            'validators/validator/stake/withdraw',
+            'validators/stake/withdraw',
           ],
         },
         // Rewards
@@ -213,9 +213,9 @@ const sidebars = {
           },
           items: [
             // Reward types
-            'validators/validator/rewards/types',
+            'validators/rewards/types',
             // Claim rewards
-            'validators/validator/rewards/claim',
+            'validators/rewards/claim',
           ],
         },
         // Manage profile
@@ -229,17 +229,17 @@ const sidebars = {
           },
           items: [
             // Change commission rate
-            'validators/validator/manage-profile/commission',
+            'validators/manage-profile/commission',
             // Schedule maintenance
-            'validators/validator/manage-profile/maintenance',
+            'validators/manage-profile/maintenance',
             // Renounce role
-            'validators/validator/manage-profile/renounce',
+            'validators/manage-profile/renounce',
             // View activity log
-            'validators/validator/manage-profile/activities',
+            'validators/manage-profile/activities',
             // View profile
-            'validators/validator/manage-profile/profile',
+            'validators/manage-profile/profile',
             // View analytics
-            'validators/validator/manage-profile/analytics',
+            'validators/manage-profile/analytics',
           ],
         },
         {
@@ -283,17 +283,17 @@ const sidebars = {
           href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
         },
         // CLI guide
-        'validators/technician/cli',
+        'node-operators/cli',
         // Minimum requirements
-        'validators/technician/minimum-requirements',
+        'node-operators/minimum-requirements',
         // Run a validator node (testnet)
-        'validators/technician/setup',
+        'node-operators/validator-setup',
         // Run a bridge operator node (PoA mainnet)
-        'validators/bridge-operator/setup',
+        'node-operators/bridge-setup',
         // Run a validator node (PoA mainnet)
-        'validators/technician/run-validator-node',
+        'node-operators/run-validator-node',
         // Run a non-validator-node (PoA mainnet)
-        'validators/technician/run-non-validator-node',
+        'node-operators/run-non-validator-node',
         // Node setup tutorials
         {
           type: 'category',
@@ -304,9 +304,9 @@ const sidebars = {
           },
           items: [
             // Run a validator node on AWS
-            'validators/technician/tutorials/run-node-on-aws',
+            'node-operators/tutorials/run-node-on-aws',
             // Run a validator node on GCP
-            'validators/technician/tutorials/run-node-on-gcp',
+            'node-operators/tutorials/run-node-on-gcp',
           ],
         },
       ],

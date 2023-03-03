@@ -37,5 +37,5 @@ The validators acknowledge the deposit event and withdrawal event to facilitate 
 
 Depending on the network, the ways to become a validator are different:
 
-* Testnet: Follow the steps in [Become a validator](./../../../validators/validator/onboarding/become-validator.mdx).
+* Testnet: Follow the steps in [Become a validator](./../../validators/onboarding/become-validator.mdx).
 * Mainnet: Contact us at hello@axieinfinity.com.

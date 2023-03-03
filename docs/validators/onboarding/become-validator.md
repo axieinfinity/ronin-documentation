@@ -26,16 +26,16 @@ To become a validator, follow these steps:
 1. Go to the [staking dashboard](https://saigon-staking.roninchain.com/) and click **Become a validator**. 
 <img src={becomeValidator} width={1280} />
 
-2. Familiarize yourself with the requirements and slashing penalties applied to validators. It's also highly recommended that you read the [white paper](./../../../basics/ronin/platform/white-paper.md).
+1. Familiarize yourself with the requirements and slashing penalties applied to validators. It's also highly recommended that you read the [white paper](./../../basics/platform/white-paper.md).
 <img src={stepOne} width={1280} />
 
-3. Set up your validator and bridge operator nodes following the [guide](./../../technician/setup.md).
+1. Set up your validator and bridge operator nodes following [Run a validator node](./../../node-operators/validator-setup.md) and [Run a bridge operator node](./../../node-operators/bridge-setup.md), respectively.
 <img src={stepTwo} width={1280} />
 
-4. Fill in your [addresses](./../manage-profile/profile.mdx) and specify your commission rate.
+1. Fill in your [addresses](./../manage-profile/profile.mdx) and specify your commission rate.
 <img src={stepThree} width={1280} />
 
-5. Provide the initial stake of RON.
+1. Provide the initial stake of RON.
 <img src={stepFour} width={1280} />
 
 Done! Now that you're a Validator Candidate, you're eligible for becoming a Standard Validator on the next day.
