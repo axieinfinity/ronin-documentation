@@ -1,7 +1,7 @@
 ---
 description: Set up and run a bridge operator node
 ---
-# Run a bridge operator node
+# Run a bridge operator node (mainnet)
 ## Requirements
 
 - Ronin RPC URL is used to listen/trigger events from Ronin chain

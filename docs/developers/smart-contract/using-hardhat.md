@@ -3,9 +3,11 @@ description: Deploy smart contracts using Hardhat
 ---
 # Deploy using Hardhat
 
-Deployment of smart contracts is only available on testnet. For mainnet, please refer to the [Builders Program](https://axie.substack.com/p/axie-infinity-builders-program) for more information
+For deploying on testnet, use the [Saigon RPC](../../basics/platform/configs/testnet.md) in the config files.
 
-### Install Hardhat
+For mainnet, refer to the [Builders Program](https://axie.substack.com/p/axie-infinity-builders-program) for more information
+
+## Install Hardhat
 
 ```
 npm init && npm install dotenv && npm install --save-dev hardhat
@@ -21,7 +23,7 @@ npx hardhat
 
 Follow the instruction on the terminal to finish setting project
 
-### Configuration
+## Configuration
 
 Add the following configuration into `hardhat.config.js`
 
@@ -72,7 +74,7 @@ module.exports = {
 };
 ```
 
-### Compiling & deploying smart contract
+## Compile and deploy the smart contract
 
 * You can easily find `Greeter.sol` in contracts folder. If you don't, add `Greeter.sol` to `contracts` folder with the following code
 

@@ -288,12 +288,14 @@ const sidebars = {
         'node-operators/minimum-requirements',
         // Run a validator node (testnet)
         'node-operators/validator-setup',
-        // Run a bridge operator node (PoA mainnet)
-        'node-operators/bridge-setup',
-        // Run a validator node (PoA mainnet)
+        // Run a validator node (mainnet)
         'node-operators/run-validator-node',
-        // Run a non-validator-node (PoA mainnet)
+        // Run a bridge operator node (mainnet)
+        'node-operators/bridge-setup',
+        // Run a non-validator-node (mainnet)
         'node-operators/run-non-validator-node',
+        // Run a full archive node (mainnet)
+        'node-operators/archive-setup',
         // Node setup tutorials
         {
           type: 'category',
@@ -308,6 +310,12 @@ const sidebars = {
             // Run a validator node on GCP
             'node-operators/tutorials/run-node-on-gcp',
           ],
+        },
+        // FAQ
+        {
+          type: 'doc',
+          label: 'FAQ',
+          id: 'node-operators/faq',
         },
       ],
     },
@@ -355,34 +363,58 @@ const sidebars = {
         },
       ],
     },
-    // Contributors
+    // Community
     {
       type: 'category',
-      label: 'Contributors',
+      label: 'Community',
       link: {
         type: 'generated-index',
-        title: 'Contributors', 
-        description: 'Contribution guide, style guide, and a bug bounty program.',
+        title: 'Community', 
+        description: 'Community information and a contribution guide.',
       },
       items: [
-        'contributors/contribution-guide',
-        'contributors/style-guide',
         {
           type: 'category',
-          label: 'Templates',
+          label: 'Contribution',
           link: {
             type: 'generated-index',
-            title: 'Templates', 
-            description: 'Learn about the templates used to create this documentation.',
+            title: 'Contribution',
+            description: 'Contribute to this documentation.'
           },
           items: [
-            'contributors/templates/concept',
-            'contributors/templates/task',
-            'contributors/templates/reference',
-            'contributors/templates/troubleshooting',
+            'community/contribution/contribution-guide',
+            'community/contribution/style-guide',
+            {
+              type: 'category',
+              label: 'Templates',
+              link: {
+              type: 'generated-index',
+              title: 'Templates', 
+              description: 'Templates used to create this documentation.',
+            },
+            items: [
+              'community/contribution/templates/concept',
+              'community/contribution/templates/task',
+              'community/contribution/templates/reference',
+              'community/contribution/templates/troubleshooting',
+              ],
+            },
           ],
         },
-        'contributors/bug-bounty',
+        'community/bug-bounty',
+        'community/council',
+        'community/governance',
+        'community/grants',
+        {
+          type: 'link',
+          label: 'Discord',
+          href: 'https://discord.gg/P5GgF7SK',
+        },
+        {
+          type: 'link',
+          label: 'Twitter',
+          href: 'https://twitter.com/ronin_network',
+        },
       ],
     },
     // Resources
@@ -396,6 +428,11 @@ const sidebars = {
       items: [
         'resources/audits',
         'resources/related',
+        {
+          type: 'link',
+          label: 'GitHub',
+          href: 'https://github.com/axieinfinity/',
+        },
       ],
     },
   ],

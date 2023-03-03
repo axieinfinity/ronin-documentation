@@ -4,6 +4,12 @@ description: Switch between mainnet and testnet in Ronin Wallet
 
 # Switch network on Ronin Wallet extension
 
+:::caution
+
+This is outdated, the new wallet version changed this.
+
+:::
+
 1. From your Ronin Wallet extension, go to Settings
 
 ![Wallet Settings](<./assets/wallet-1.png>)

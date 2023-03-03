@@ -4,7 +4,7 @@ description: Overview of RON economy
 
 # Tokenomics
 
-#### Key Metrics <a href="#key_metrics_c98" id="key_metrics_c98"></a>
+## Key metrics
 
 * Token Name: **RON**.
 * Ticker: **RON**.
@@ -13,7 +13,7 @@ description: Overview of RON economy
 * Total Supply: 1,000,000,000 RON.
 * Max Supply: 1,000,000,000 RON
 
-**RON Allocation**
+## RON allocation**
 
 * Staking Rewards: 25%
 * Incentives: 30%
@@ -24,8 +24,10 @@ description: Overview of RON economy
 
 After 5 years, gas and protocol fees will totally replace Staking Rewards.
 
-**RON Token Release Schedule**
+## RON release schedule**
 
 The maximum supply of RON will be released after 294 months the issuance begins.
 
 ![](<./assets/total-supply.png>)
+
+## RON treasury addresses

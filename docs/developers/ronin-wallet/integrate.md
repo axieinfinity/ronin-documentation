@@ -4,6 +4,12 @@ description: Integrate Ronin Wallet to interact with the dApps in Ronin Network
 
 # Integrate Ronin Wallet
 
+:::caution
+
+Include code examples on how to interact with mobile wallet as well
+
+:::
+
 Ronin Wallet is a non-custodial crypto wallet. It is available as a browser extension and as a mobile application. Ronin Wallet lets you interact with Ronin Network Dapps and manage your assets.
 
 ## Allowed List
