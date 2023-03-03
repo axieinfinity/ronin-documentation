@@ -38,7 +38,7 @@ const sidebars = {
         // Introduction
         'basics/introduction',
         // Blockchain basics
-        'basics/key-concepts',
+        'basics/concepts',
         // Components
         {
           type: 'category',

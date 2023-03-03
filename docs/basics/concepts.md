@@ -1,8 +1,8 @@
 ---
-description: Blockchain concepts essential to understanding how Ronin Network functions 
+description: General blockchain concepts essential to understanding how Ronin Network functions 
 ---
 
-# Key concepts
+# General concepts
 
 ## Blockchain
 
