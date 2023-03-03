@@ -10,7 +10,7 @@ Here's a list of most common questions.
 Only the validator gets slashed, while delegators can find a new validator to re-stake their RON.
 
 ## 2. Do RON rewards automatically re-stake to my delegated validator?
-No, these are the rewards that you need to manually [claim](claim-rewards) to your Ronin Wallet.
+No, these are the rewards that you need to manually [claim](./rewards/claim.md) to your Ronin Wallet.
 
 ## 3. Can I unstake whenever I want without penalties and risk of losing my stake?
 Yes, you can unstake at any time without penalties. The only constraint is that it has to be at least three days since you last staked in.
