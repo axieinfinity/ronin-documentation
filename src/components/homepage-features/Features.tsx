@@ -47,6 +47,15 @@ const featureList = [
     },
   },
   {
+    title: 'Node operators',
+    Icon: SignDirectionIcon,
+    description: <>Set up validator and bridge operator nodes and ensure their stable operation.</>,
+    link: {
+      href: '/docs/category/node-operators',
+      title: 'Node operators',
+    },
+  },
+  {
     title: 'Developers',
     Icon: LaptopCodeIcon,
     link: {
@@ -62,15 +71,6 @@ const featureList = [
     link: {
       href: '/docs/category/contributors',
       title: 'Contributors',
-    },
-  },
-  {
-    title: 'Resources',
-    Icon: SignDirectionIcon,
-    description: <>Browse reference information and other documentation.</>,
-    link: {
-      href: '/docs/category/resources',
-      title: 'Resources',
     },
   },
 ]
