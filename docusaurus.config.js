@@ -67,13 +67,6 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          // Introduction
-          {
-            type: 'doc',
-            docId: 'introduction',
-            position: 'left',
-            label: 'Welcome',
-          },
           // Basics
           {
             label: 'Basics',

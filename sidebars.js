@@ -18,16 +18,11 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
-  sidebar: [
-    // Introduction
-    {
-      type: 'doc',
-      label: 'Introduction',
-      id: 'introduction',
-    },
+  basicsSidebar: [
     // Ronin Network basics
     {
       type: 'category',
+      collapsible: false,
       label: 'Basics',
       link: {
         type: 'generated-index',
@@ -35,10 +30,24 @@ const sidebars = {
         description: 'Learn the basic concepts of Ronin Network.',
       },
       items: [
-        // Introduction
-        'basics/introduction',
-        // Blockchain basics
-        'basics/concepts',
+        // Introduction to Ronin
+        {
+          type: 'doc',
+          label: 'Introduction to Ronin',
+          id: 'introduction',
+        },
+        // Ronin overview
+        {
+          type: 'doc',
+          label: 'History of Ronin',
+          id: 'basics/introduction',
+        },
+        // Terminology
+        {
+          type: 'doc',
+          label: 'Terminology',
+          id: 'basics/concepts',
+        },
         // Components
         {
           type: 'category',
@@ -120,6 +129,9 @@ const sidebars = {
         },
       ],
     },
+  ],
+  
+  delegatorSidebar: [
     // Delegators
     {
       type: 'category',
@@ -127,7 +139,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'Delegators',
-        description: 'Learn how to stake tokens, delegate your stake to validators, and claim rewards.'
+        description: 'Stake tokens, delegate your stake to validators, and claim rewards.'
       },
       items: [
         // Purchase RON
@@ -174,6 +186,9 @@ const sidebars = {
         },
       ],
     },
+  ],
+  
+  validatorSidebar: [
     // Validators
     {
       type: 'category',
@@ -181,7 +196,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'Validators', 
-        description: 'Learn how to stake tokens, claim rewards, and manage your validator profile.',
+        description: 'Stake tokens, claim rewards, and manage your validator profile.',
       },
       items: [
         // Become a validator
@@ -193,7 +208,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Stake',
-            description: 'Learn how to increase or withdraw your stake.'
+            description: 'Increase or withdraw your RON stake.'
           },
           items: [
             // Increase stake
@@ -225,7 +240,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Manage profile', 
-            description: 'Learn how to set commission rate, schedule maintenance, and view your analytics and activities.',
+            description: 'Manage your profile, view analytics and activities.',
           },
           items: [
             // Change commission rate
@@ -266,6 +281,8 @@ const sidebars = {
         },
       ],
     },
+  ],
+  nodeOperatorSidebar: [
     {
       // Node operators
       type: 'category',
@@ -273,7 +290,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'Node operators',
-        description: 'Learn how to set up and run Ronin nodes.',
+        description: 'Set up and run a Ronin node.',
       },
       items: [
         // API
@@ -286,16 +303,38 @@ const sidebars = {
         'node-operators/cli',
         // Minimum requirements
         'node-operators/minimum-requirements',
-        // Run a validator node (testnet)
-        'node-operators/validator-setup',
-        // Run a validator node (mainnet)
-        'node-operators/run-validator-node',
-        // Run a bridge operator node (mainnet)
-        'node-operators/bridge-setup',
-        // Run a non-validator-node (mainnet)
-        'node-operators/run-non-validator-node',
-        // Run a full archive node (mainnet)
-        'node-operators/archive-setup',
+        {
+          type: 'category',
+          label: 'Mainnet guides',
+          link: {
+            type: 'generated-index',
+            title: 'Mainnet guides',
+          },
+          items: [
+            // Run a validator node (mainnet)
+            'node-operators/run-validator-node',
+            // Run a bridge operator node (mainnet)
+            'node-operators/bridge-setup-testnet',
+            // Run a non-validator-node (mainnet)
+            'node-operators/run-non-validator-node',
+            // Run a full archive node (mainnet)
+            'node-operators/archive-setup',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Testnet guides',
+          link: {
+            type: 'generated-index',
+            title: 'Testnet guides',
+          },
+          items: [
+            // Run a validator node (testnet)
+            'node-operators/validator-setup',
+            // Run a bridge node (testnet)
+            'node-operators/bridge-setup-mainnet',
+          ],
+        },
         // Node setup tutorials
         {
           type: 'category',
@@ -319,6 +358,8 @@ const sidebars = {
         },
       ],
     },
+  ],
+  developerSidebar: [
     // Developers
     {
       type: 'category',
@@ -332,6 +373,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Smart contracts',
+          collapsible: false,
           link: {
             type: 'generated-index',
             title: 'Deploy smart contracts', 
@@ -345,6 +387,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Ronin Wallet',
+          collapsible: false,
           link: {
             type: 'generated-index',
             title: 'Integrate Ronin Wallet', 
@@ -363,10 +406,14 @@ const sidebars = {
         },
       ],
     },
+  ],
+
+  communitySidebar: [
     // Community
     {
       type: 'category',
       label: 'Community',
+      collapsible: false,
       link: {
         type: 'generated-index',
         title: 'Community', 
@@ -417,22 +464,31 @@ const sidebars = {
         },
       ],
     },
+  ],
+  
+  resourceSidebar: [
     // Resources
     {
       type: 'category',
       label: 'Resources',
+      collapsible: false,
       link: {
         type: 'generated-index',
         title: 'Resources', 
       },
       items: [
         'resources/audits',
-        'resources/related',
         {
           type: 'link',
           label: 'GitHub',
           href: 'https://github.com/axieinfinity/',
         },
+        {
+          type: 'link',
+          label: 'Newsletter',
+          href: 'https://roninblockchain.substack.com/',
+        },
+        'resources/related',
       ],
     },
   ],

@@ -10,4 +10,3 @@ This page describes how to set up and run an archive Ronin node.
 
 
 ## Steps
-To set up a node, follow these steps:
