@@ -124,6 +124,10 @@ const config = {
             title: 'Docs',
             items: [
               {
+                label: 'Basics',
+                to: 'docs/category/basics',
+              },
+              {
                 label: 'Delegators',
                 to: 'docs/category/delegators',
               },
@@ -145,12 +149,21 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'Contribution',
+                to: 'docs/category/contribution',
+              },
+              {
                 label: 'Discord',
                 href: 'https://discord.gg/P5GgF7SK',
               },
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/ronin_network',
+              },
+              {
+                type: 'link',
+                label: 'Newsletter',
+                href: 'https://roninblockchain.substack.com/',
               },
             ],
           },

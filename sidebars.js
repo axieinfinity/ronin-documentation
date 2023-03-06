@@ -34,20 +34,22 @@ const sidebars = {
         {
           type: 'doc',
           label: 'Introduction to Ronin',
-          id: 'introduction',
+          id: 'basics/introduction',
         },
-        // Ronin overview
+        // History of Ronin
         {
           type: 'doc',
           label: 'History of Ronin',
-          id: 'basics/introduction',
+          id: 'basics/history',
         },
         // Terminology
         {
           type: 'doc',
           label: 'Terminology',
-          id: 'basics/concepts',
+          id: 'basics/terminology',
         },
+        // Decentralization
+        'basics/decentralization',
         // Components
         {
           type: 'category',
@@ -89,8 +91,6 @@ const sidebars = {
             title: 'Platform',
           },
           items: [
-            // Comparison
-            'basics/platform/comparison',
             // Roadmap
             'basics/platform/roadmap',
             // Tokenomics
@@ -108,8 +108,6 @@ const sidebars = {
             },
             // Transaction life cycle
             'basics/platform/transaction',
-            // White paper
-            'basics/platform/white-paper',
           ],
         },
         // Roles
@@ -125,7 +123,19 @@ const sidebars = {
             'basics/roles/validator',
             // Delegator
             'basics/roles/delegator',
+            // Developer
+            'basics/roles/developer',
           ],
+        },
+        // White paper
+        'basics/white-paper',
+        // Security audits
+        'basics/audits',
+        // Introduction to wiki
+        {
+          type: 'doc',
+          label: 'Wiki overview',
+          id: 'basics/wiki',
         },
       ],
     },
@@ -293,12 +303,6 @@ const sidebars = {
         description: 'Set up and run a Ronin node.',
       },
       items: [
-        // API
-        {
-          type: 'link',
-          label: 'API',
-          href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
-        },
         // CLI guide
         'node-operators/cli',
         // Minimum requirements
@@ -312,13 +316,13 @@ const sidebars = {
           },
           items: [
             // Run a validator node (mainnet)
-            'node-operators/run-validator-node',
+            'node-operators/validator-setup-m',
             // Run a bridge operator node (mainnet)
-            'node-operators/bridge-setup-mainnet',
+            'node-operators/bridge-setup-m',
             // Run a non-validator-node (mainnet)
-            'node-operators/run-non-validator-node',
+            'node-operators/non-validator-setup-m',
             // Run a full archive node (mainnet)
-            'node-operators/archive-setup',
+            'node-operators/archive-setup-m',
           ],
         },
         {
@@ -330,9 +334,13 @@ const sidebars = {
           },
           items: [
             // Run a validator node (testnet)
-            'node-operators/validator-setup',
+            'node-operators/validator-setup-t',
             // Run a bridge node (testnet)
-            'node-operators/bridge-setup',
+            'node-operators/bridge-setup-t',
+            // Run a non-validator-node (testnet)
+            'node-operators/non-validator-setup-t',
+            // Run a full archive node (testnet)
+            'node-operators/archive-setup-t',
           ],
         },
         // Node setup tutorials
@@ -370,6 +378,12 @@ const sidebars = {
         description: 'Build your decentralized application on Ronin Network.',
       },
       items: [
+        // API
+        {
+          type: 'link',
+          label: 'API',
+          href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
+        },
         {
           type: 'category',
           label: 'Smart contracts',
@@ -462,6 +476,11 @@ const sidebars = {
           label: 'Twitter',
           href: 'https://twitter.com/ronin_network',
         },
+        {
+          type: 'link',
+          label: 'Newsletter',
+          href: 'https://roninblockchain.substack.com/',
+        },
       ],
     },
   ],
@@ -477,18 +496,12 @@ const sidebars = {
         title: 'Resources', 
       },
       items: [
-        'resources/audits',
         {
           type: 'link',
           label: 'GitHub',
           href: 'https://github.com/axieinfinity/',
         },
-        {
-          type: 'link',
-          label: 'Newsletter',
-          href: 'https://roninblockchain.substack.com/',
-        },
-        'resources/related',
+        'resources/other',
       ],
     },
   ],

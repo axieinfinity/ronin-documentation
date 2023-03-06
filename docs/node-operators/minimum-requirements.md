@@ -1,7 +1,7 @@
 ---
-description: Minimum requirements for running a Ronin node
+description: Requirements for running a Ronin node
 ---
-# Minimum hardware requirements
+# Hardware requirements
 
 Running a node requires a lot of disk space and drives with fast read/write speed (IOPS)
 

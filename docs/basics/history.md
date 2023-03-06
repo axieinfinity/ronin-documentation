@@ -1,8 +1,10 @@
 ---
-description: Blockchain comparison
+description: History of Ronin
 ---
 
-# Comparison
+# History
+
+This page used to be called "Comparison".
 
 ## Comparison criteria
 

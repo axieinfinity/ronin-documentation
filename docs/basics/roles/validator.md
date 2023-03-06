@@ -5,7 +5,7 @@ description: Validator role and responsibility
 
 # Validator
 
-A blockchain validators is an individual who is responsible for validating transactions and generating blocks within a blockchain. 
+A validator is an individual who is responsible for validating transactions and generating blocks within a blockchain. A node operator is a part of the validator entity who is responsible for setting up and running the node.
 
 ## Node recognition
 
@@ -39,3 +39,8 @@ Depending on the network, the ways to become a validator are different:
 
 * Testnet: Follow the steps in [Become a validator](./../../validators/onboarding/become-validator.mdx).
 * Mainnet: Contact us at hello@axieinfinity.com.
+
+### RON requirements for validators
+Each Ronin validator is required to stake 250,000 RON.
+
+If a validator fails at producing the correct blocks, their RON stake is at risk of being slashed. RON staked by the public is also at risk of being slashed, so choose wisely.

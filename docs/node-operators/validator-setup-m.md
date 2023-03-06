@@ -1,5 +1,5 @@
 ---
-description: (POA MAINNET) Run a validator node
+description: Set up and run a validator node
 ---
 # Run a validator node (mainnet)
 
