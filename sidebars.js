@@ -314,7 +314,7 @@ const sidebars = {
             // Run a validator node (mainnet)
             'node-operators/run-validator-node',
             // Run a bridge operator node (mainnet)
-            'node-operators/bridge-setup-testnet',
+            'node-operators/bridge-setup-mainnet',
             // Run a non-validator-node (mainnet)
             'node-operators/run-non-validator-node',
             // Run a full archive node (mainnet)
@@ -332,7 +332,7 @@ const sidebars = {
             // Run a validator node (testnet)
             'node-operators/validator-setup',
             // Run a bridge node (testnet)
-            'node-operators/bridge-setup-mainnet',
+            'node-operators/bridge-setup',
           ],
         },
         // Node setup tutorials
