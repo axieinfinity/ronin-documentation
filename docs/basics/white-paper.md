@@ -9,47 +9,41 @@ description: Ronin Network white paper
 
 Decentralization is a key aspect of blockchain technology and one of the most prominent forces of its innovation. Our goal is to gradually increase the decentralization of Sky Mavis's products.
 
-Initially, Ronin used [Proof-of-Authority (PoA)](https://en.wikipedia.org/wiki/Proof_of_authority) as its consensus protocol. In PoA systems, transactions and blocks are validated by approved accounts known as validators. The PoA protocol, however, is often criticized for being less decentralized than Proof-of-stake (PoS) and Proof-of-work (PoW), because validators have all the authority and are prone to corruption and security attacks.
+At launch, Ronin used [Proof-of-Authority (PoA)](https://en.wikipedia.org/wiki/Proof_of_authority) as its consensus protocol. In PoA systems, transactions and blocks are validated by approved accounts known as validators. The PoA protocol, however, is often criticized for being less decentralized than Proof of stake (PoS) and Proof of Work (PoW).
 
-As the next step toward decentralization, we adopted [Delegated Proof of Stake (DPoS)](https://en.wikipedia.org/wiki/Proof_of_stake#Delegated_proof_of_stake_(DPoS)) as Ronin's consensus mechanism. DPoS allows token holders to vote and elect the validator set, and favors community governance.
+As the next step toward decentralization, we integrated the [Delegated Proof of Stake (DPoS)](https://en.wikipedia.org/wiki/Proof_of_stake#Delegated_proof_of_stake_(DPoS)) features such as delegation, validator selection, and community governance, while retaining an element of PoA.
 
 ## Consensus
 
-### DPoS
-Known for its voting and delegation structure, DPoS is integrated into Ronin Network as follows:
+### Overview
+Ronin's DPoS variation is a combination of PoA and DPoS. 
 
-* Token holders—known as *delegators*—delegate their own stake to a *validator* node of their choosing, and vote for the validators to earn block validation access.
+Here's how it works:
+* The validator set consists of $N$ validators, of which $X$ are selected in the PoA manner and referred to as *Governing Validators*. The remaining $Y$ slots are open to anyone who wish to become a validator—these entities are called Standard Validators.
+* Token holders—known as *delegators*—delegate their own stake to a validator of their choosing, and vote for the validators to earn block production access.
 * Elected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with their delegators.
 
 ### Delegation
-Delegation is the contribution of some amount of tokens to another user for participation in a DPoS staking mechanism. Through the delegation mechanism, token holders who do not have a large enough RON supply to meet the minimum staking requirements on their own, can earn staking rewards and participate in the network as delegators.
+Delegation is the contribution of some amount of RON tokens to another user for participation in the DPoS staking mechanism. Through delegation, token holders who do not have a large enough RON supply to meet the minimum staking requirements on their own, can earn staking rewards and participate in the network as delegators.
 
 ### Validator selection
+All token holders can register as Validator Candidates. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of $N$ validators, which includes $Y$ Standard Validators chosen among the Validator Candidates with the highest staked amount, and $X$ Governing Validators.
 
-All token holders can register as Validator Candidates. They can also play the role of delegators by staking their tokens to the Validator Candidates. The staking of validators and delegators is updated at the beginning of each day. The system then selects a set of $N$ validators, which includes $X$ Standard Validators chosen among the Validator Candidates with the highest staked amount, and $Y$ Governing Validators.
+While increasing the decentralization of the network, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
 
-During the day, some validators might be temporarily removed from the validator set due to being in jail for malicious behavior or because of scheduled maintenance. Such changes are updated every epoch, which consists of $200$ blocks or roughly $10$ minutes.
+The group of $X$ Governing Validators chosen by the community and Sky Mavis is meant to help prevent such attacks. Because the Governing Validators take $X/N$ slots in the validator set, the attackers cannot control the majority of the validators and take over the blockchain.
 
-#### Governing Validators
+During the day, some validators might be temporarily removed from the validator set. For example, due to "jailing", which is a form of slashing, or because of scheduled maintenance. These changes are updated every epoch, where one epoch consists of $200$ blocks or $\approx10$ minutes.
 
-While increasing the decentralization of the system, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
+### Security and finality
 
-To prevent such attacks, we rely on a group of $N$ Governing Validators that are chosen by the community and Sky Mavis. Because the Governing Validators take $X/N$ slots in the validator set, the attackers cannot control the majority of the validators and take over the blockchain.
+The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least 2N/3+1 sealed blocks. With $N=21$ validators and block time $=3\space seconds$, the users should wait for 45 seconds to confirm transactions in a block.
 
-**CONTINUE EDITING FROM HERE**
+To perform the Clone attack, the Byzantine validators must create two blocks on the same block height (double sign). This behavior is detectable by other validators in the system. Thus, we use a [slashing logic](../validators/slashing/slashing.mdx) logic to penalize Byzantine validators. This slashing logic exposes malicious validators in a very short time and makes the Clone attack non-beneficial.
 
-### Security and Finality
+To perform a non-detectable attack, that is, when the Byzantine validators can only seal at most one block on each block height, the attacker must control at least $N/2+1$ validators.
 
-The [Clone attack paper](https://arxiv.org/abs/1902.10244) has shown that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least 2N/3+1 sealed blocks. With N=21 validators and the block time is 3 seconds, the users should wait for 45 seconds to confirm transactions in a block.
-
-To perform the Clone attack, the Byzantine validators must create two blocks on the same block height (double sign). This behavior is detectable by other validators in the system. Thus, we use a slashing logic to penalize Byzantine validators (which will be covered in the “Slashing” section later). This slashing logic will expose the malicious validators in a very short time and make the Clone attack non-beneficial.
-
-To perform non-detectable attacks, i.e., the Byzantine validators can only seal at most one block on each block height, the attacker must control at least $N/2+1$ validators.
-
-### Validators Selection
-
-All token holders are allowed to register as validators candidates. They can also play the role of delegators by staking their tokens to the validator candidates. The staking of validators and delegators is updated at the beginning of each day. Afterward, we select the set of 21 validators (including 11 trusted organizations and 10 most staked token holders). However, during the day, some validators may be (temporarily) removed from the validator set (they can either be in jail or in maintenance mode). Those changes will be updated in every epoch (which consists of 200 blocks ~ 10 minutes).
-
+-CONTINUE EDITING FROM HERE-
 #### Staking
 
 Token holders can put their tokens “bonded” into the stake. Token holders can register to become validator candidates or delegate their tokens to any validator or validator candidate. The core logic for staking is summarized below.
