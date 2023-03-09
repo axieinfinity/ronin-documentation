@@ -18,11 +18,10 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
-  basicsSidebar: [
+  sidebar: [
     // Ronin Network basics
     {
       type: 'category',
-      collapsible: false,
       label: 'Basics',
       link: {
         type: 'generated-index',
@@ -139,9 +138,6 @@ const sidebars = {
         },
       ],
     },
-  ],
-  
-  delegatorSidebar: [
     // Delegators
     {
       type: 'category',
@@ -196,9 +192,6 @@ const sidebars = {
         },
       ],
     },
-  ],
-  
-  validatorSidebar: [
     // Validators
     {
       type: 'category',
@@ -291,8 +284,6 @@ const sidebars = {
         },
       ],
     },
-  ],
-  nodeOperatorSidebar: [
     {
       // Node operators
       type: 'category',
@@ -366,8 +357,6 @@ const sidebars = {
         },
       ],
     },
-  ],
-  developerSidebar: [
     // Developers
     {
       type: 'category',
@@ -387,7 +376,6 @@ const sidebars = {
         {
           type: 'category',
           label: 'Smart contracts',
-          collapsible: false,
           link: {
             type: 'generated-index',
             title: 'Deploy smart contracts', 
@@ -401,7 +389,6 @@ const sidebars = {
         {
           type: 'category',
           label: 'Ronin Wallet',
-          collapsible: false,
           link: {
             type: 'generated-index',
             title: 'Integrate Ronin Wallet', 
@@ -420,14 +407,10 @@ const sidebars = {
         },
       ],
     },
-  ],
-
-  communitySidebar: [
     // Community
     {
       type: 'category',
       label: 'Community',
-      collapsible: false,
       link: {
         type: 'generated-index',
         title: 'Community', 
@@ -483,14 +466,10 @@ const sidebars = {
         },
       ],
     },
-  ],
-  
-  resourceSidebar: [
     // Resources
     {
       type: 'category',
       label: 'Resources',
-      collapsible: false,
       link: {
         type: 'generated-index',
         title: 'Resources', 
