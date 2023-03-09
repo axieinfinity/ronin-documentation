@@ -78,43 +78,27 @@ const sidebars = {
         {
           type: 'doc',
           label: 'Become a delegator',
-<<<<<<< HEAD
           id: 'staking/become-delegator',
-=======
-          id: 'stake/become-delegator',
->>>>>>> origin/staging
         },
         {
           type: 'doc',
           label: 'Withdraw stake',
-<<<<<<< HEAD
           id: 'staking/withdraw-stake',
-=======
-          id: 'stake/withdraw-stake',
->>>>>>> origin/staging
         },
         {
           type: 'doc',
           label: 'Move stake',
-<<<<<<< HEAD
           id: 'staking/move-stake',
-=======
-          id: 'stake/move-stake',
->>>>>>> origin/staging
         },
         {
           type: 'doc',
           label: 'Claim rewards',
-<<<<<<< HEAD
           id: 'staking/claim-rewards',
         },
         {
           type: 'doc',
           label: 'FAQ',
           id: 'staking/faq',
-=======
-          id: 'stake/claim-rewards',
->>>>>>> origin/staging
         },
       ],
     },
