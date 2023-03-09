@@ -9,7 +9,11 @@ import transactionSuccess from './transaction-success.png'
 
 # Withdraw stake
 
+<<<<<<< HEAD:docs/staking/withdraw-stake.md
+You can withdraw part of, or all RON from a validator without penalties. The only requirement for withdrawal is it has to be at least three days since the last time you staked in.
+=======
 You can withdraw your stake as long as it's been 3 days since your last stake.
+>>>>>>> origin/staging:docs/stake/withdraw-stake.md
 
 1. Go to the [staking dashboard](https://saigon-staking.roninchain.com/) and select **My Staking**.
 2. Click **Action > Withdraw stake**. 
