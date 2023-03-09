@@ -165,7 +165,7 @@ const sidebars = {
             },
             {
             type: 'category',
-            label: 'Manage your profile',
+            label: 'Manage profile',
             items: [
               {
                 type: 'doc',
@@ -179,22 +179,22 @@ const sidebars = {
               },
               {
                 type: 'doc',
-                label: 'Renounce your role',
+                label: 'Renounce role',
                 id: 'validator/renounce',
               },
               {
                 type: 'doc',
-                label: 'View your activities',
+                label: 'View activities',
                 id: 'validator/view-activities',
               },
               {
                 type: 'doc',
-                label: 'View your profile',
+                label: 'View profile',
                 id: 'validator/view-profile',
               },
               {
                 type: 'doc',
-                label: 'View your analytics',
+                label: 'View analytics',
                 id: 'validator/view-analytics',
               },
             ],
@@ -205,49 +205,39 @@ const sidebars = {
               items: [
                 {
                   type: 'doc',
-                  label: 'Increase your stake',
+                  label: 'Increase stake',
                   id: 'validator/increase-stake',
                 },
                 {
                   type: 'doc',
-                  label: 'Withdraw your stake',
+                  label: 'Withdraw stake',
                   id: 'validator/withdraw-stake',
                 },
               ],
               },
               {
+                type: 'doc',
+                label: 'Claim rewards',
+                id: 'validator/rewards'
+              },
+              {
                 type: 'category',
-                label: 'Rewards',
+                label: 'Slashing and bailout',
                 items: [
                   {
                     type: 'doc',
-                    label: 'Claim your rewards',
-                    id: 'validator/rewards',
+                    label: 'Slashing',
+                    id: 'validator/slashing',
+                  },
+                  {
+                    type: 'doc',
+                    label: 'Bailout',
+                    id: 'validator/bailout',
                   },
                 ],
               },
-              {
-                type: 'doc',
-                label: 'Slashing',
-                id: 'validator/slashing',
-              },
           ],
-        },
-        // {
-        //   type: 'doc',
-        //   label: 'Validator responsibility',
-        //   id: 'validator/responsibility',
-        // },
-        // {
-        //   type: 'doc',
-        //   label: 'Set up a validator node',
-        //   id: 'validator/setup',
-        // },
-        // {
-        //   type: 'doc',
-        //   label: 'Registration',
-        //   id: 'validator/registration',
-        // },
+        }
       ],
     },
     {
