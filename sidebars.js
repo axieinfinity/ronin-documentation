@@ -165,7 +165,7 @@ const sidebars = {
             },
             {
             type: 'category',
-            label: 'Manage your profile',
+            label: 'Manage profile',
             items: [
               {
                 type: 'doc',
@@ -179,22 +179,22 @@ const sidebars = {
               },
               {
                 type: 'doc',
-                label: 'Renounce your role',
+                label: 'Renounce role',
                 id: 'validator/renounce',
               },
               {
                 type: 'doc',
-                label: 'View your activities',
+                label: 'View activities',
                 id: 'validator/view-activities',
               },
               {
                 type: 'doc',
-                label: 'View your profile',
+                label: 'View profile',
                 id: 'validator/view-profile',
               },
               {
                 type: 'doc',
-                label: 'View your analytics',
+                label: 'View analytics',
                 id: 'validator/view-analytics',
               },
             ],
@@ -205,12 +205,12 @@ const sidebars = {
               items: [
                 {
                   type: 'doc',
-                  label: 'Increase your stake',
+                  label: 'Increase stake',
                   id: 'validator/increase-stake',
                 },
                 {
                   type: 'doc',
-                  label: 'Withdraw your stake',
+                  label: 'Withdraw stake',
                   id: 'validator/withdraw-stake',
                 },
               ],
