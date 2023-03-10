@@ -221,20 +221,21 @@ const sidebars = {
                 id: 'validator/rewards'
               },
               {
-                type: 'category',
+                type: 'doc',
                 label: 'Slashing and bailout',
-                items: [
-                  {
-                    type: 'doc',
-                    label: 'Slashing',
-                    id: 'validator/slashing',
-                  },
-                  {
-                    type: 'doc',
-                    label: 'Bailout',
-                    id: 'validator/bailout',
-                  },
-                ],
+                id: 'validator/slashing',
+                // items: [
+                //   {
+                //     type: 'doc',
+                //     label: 'Slashing',
+                //     id: 'validator/slashing',
+                //   },
+                //   {
+                //     type: 'doc',
+                //     label: 'Bailout',
+                //     id: 'validator/bailout',
+                //   },
+                // ],
               },
           ],
         }

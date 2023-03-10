@@ -13,7 +13,7 @@
    * 0.5GB daily increment for pruned cache data
    * Suggestion: Prune cache after 2 or 3 weeks
 * Block Time: 3 seconds
-* Gas Price: 1 GWEI
+* Gas Price: 20 GWEI
 
 ### Genesis contracts
 
