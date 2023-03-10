@@ -10,6 +10,86 @@ description: Set up and run a bridge operator node
 
 ## Install and run
 ### Using docker
+
+1. Create a `docker-compose` configuration with the following contents.
+
+```
+cd /axie/ronin-manager  && vim docker-compose.yml
+```
+
+```
+version: "3"
+services:
+  db:
+    image: postgres:14.3
+    restart: always
+    command: postgres -c 'max_connections=1000'
+    hostname: db
+    container_name: db
+    ports:
+      - 127.0.0.1:5432:5432
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - ~/bridgedata-v2:/var/lib/postgresql/data
+  bridge:
+    image: ${BRIDGE_IMAGE}
+    restart: always
+    container_name: bridge
+    environment:
+      - RONIN_RPC=${RPC_ENDPOINT}
+      - RONIN_BRIDGE_VOTER_KEY=${BRIDGE_VOTER_PRIVATE_KEY}
+      - RONIN_BRIDGE_OPERATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
+      - ETHEREUM_RPC=${ETHEREUM_ENDPOINT}
+      - DB_HOST=db
+      - DB_NAME=${DB_NAME}
+      - DB_PORT=5432
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - VERBOSITY=${VERBOSITY}
+      - CONFIG_PATH=${CONFIG_PATH}
+      - RONIN_TASK_INTERVAL=${RONIN_TASK_INTERVAL}
+      - RONIN_TRANSACTION_CHECK_PERIOD=${RONIN_TRANSACTION_CHECK_PERIOD}
+      - RONIN_MAX_PROCESSING_TASKS=${RONIN_MAX_PROCESSING_TASKS}
+      - ETHEREUM_GET_LOGS_BATCH_SIZE=${ETHEREUM_GET_LOGS_BATCH_SIZE}
+    depends_on:
+      - db
+```
+3. Create an `.env` file with the following contents, replacing the `insert-your-` placeholders with your credentials.
+
+```
+vim .env
+```
+
+```
+# User for postgres account.
+DB_USERNAME=postgres
+# Password for postgres account.
+DB_PASSWORD=example
+DB_NAME=bridge
+# Database to store oracle.
+POSTGRES_DB=bridge
+# Password to protect your private key.
+PASSWORD=123456
+
+RPC_ENDPOINT=your-rpc-endpoint
+ETHEREUM_ENDPOINT=https://eth-goerli.g.alchemy.com/v2/your-ethereum-endpoint
+CONFIG_PATH=config.testnet.json
+BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:v0.2.2-da196d9
+VERBOSITY=3
+
+RONIN_TASK_INTERVAL=3
+RONIN_TRANSACTION_CHECK_PERIOD=50
+RONIN_MAX_PROCESSING_TASKS=200
+ETHEREUM_GET_LOGS_BATCH_SIZE=100
+
+# Private key of the bridge operator, used for acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains, without 0x.
+BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-operator-private-key
+
+# Private key of the bridge voter (also known as "governor") without 0x. Only governor roles need to set this, otherwise you can leave it blank. 
+BRIDGE_VOTER_PRIVATE_KEY=insert-your-voter-private-key
+```
+
 There is a `docker-compose.yaml` file in `docker` directory. Modify `.env` file and run `bridge` with the following command
 ```
 docker-compose -f docker/docker-compose.yaml --env-file .env up -d
@@ -78,37 +158,9 @@ it will try 3 more times to ensure the transaction is not replaced because of re
 - type: `object`
 
 Stores private key of validator and relayer. These fields can be empty and passed via environment variables
-through 2 variables: `RONIN_VALIDATOR_KEY`, `RONIN_RELAYER_KEY` and Ethereum are: `ETHEREUM_VALIDATOR_KEY`, `ETHEREUM_RELAYER_KEY`
+through 2 variables: `BRIDGE_OPERATOR_PRIVATE_KEY`, `BRIDGE_VOTER_PRIVATE_KEY` and Ethereum are: `ETHEREUM_ENDPOINT`
 ##### syntax: `<key>`
 ##### example: `xxxx4563e6591c1eba4b932a3513006cb5bcd1a6f69c32295dxxxx`
-If KMS is used, set these environments
-- `RONIN_VALIDATOR_KMS_KEY_TOKEN_PATH`
-- `RONIN_VALIDATOR_KMS_SSL_CERT_PATH`
-- `RONIN_VALIDATOR_KMS_SERVER_ADDR`
-- `RONIN_VALIDATOR_KMS_SOURCE_ADDR`
-- `RONIN_VALIDATOR_KMS_SIGN_TIMEOUT`
-
-Replace `RONIN` with `ETHEREUM`, `VALIDATOR` with `RELAYER` when needed
-
-This is the sample secret's config
-```json5
-{
-  "secret": {
-    "validator": {
-      "kmsConfig": {
-        "keyTokenPath": "./key",
-        "sslCertPath": "./ssl.crt",
-        "kmsServerAddr": "127.0.0.1:1234",
-        "kmsSourceAddr": ":5000",
-        "signTimeout": 3000
-      }
-    },
-    "relayer": {
-      "plainPrivateKey": "" // Raw private key
-    }
-  }
-}
-```
 
 #### 8. fromHeight:
 - type: `number`

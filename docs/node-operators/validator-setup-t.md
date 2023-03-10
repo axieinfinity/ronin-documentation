@@ -36,7 +36,7 @@ mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-1. Create a `docker-compose` configuration with the following contents.
+2. Create a `docker-compose` configuration with the following contents.
 
 ```
 cd /axie/ronin-manager  && vim docker-compose.yml
@@ -89,7 +89,7 @@ services:
     environment:
       - RONIN_RPC=http://node:8545
       - RONIN_BRIDGE_VOTER_KEY=${BRIDGE_VOTER_PRIVATE_KEY}
-      - RONIN_VALIDATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
+      - RONIN_BRIDGE_OPERATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
       - ETHEREUM_RPC=${ETHEREUM_ENDPOINT}
       - DB_HOST=db
       - DB_NAME=${DB_NAME}
