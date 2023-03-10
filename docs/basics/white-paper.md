@@ -11,23 +11,22 @@ Decentralization is a key aspect of blockchain technology and one of the most pr
 
 At launch, Ronin used [Proof-of-Authority (PoA)](https://en.wikipedia.org/wiki/Proof_of_authority) as its consensus protocol. In PoA systems, transactions and blocks are validated by approved accounts known as validators. The PoA protocol, however, is often criticized for being less decentralized than Proof of stake (PoS) and Proof of Work (PoW).
 
-As the next step toward decentralization, we integrated the [Delegated Proof of Stake (DPoS)](https://en.wikipedia.org/wiki/Proof_of_stake#Delegated_proof_of_stake_(DPoS)) features such as delegation, validator selection, and community governance, while retaining an element of PoA.
+As the next step toward decentralization, we integrated the [Delegated Proof of Stake (DPoS)](https://en.wikipedia.org/wiki/Proof_of_stake#Delegated_proof_of_stake_(DPoS)) features such as delegation and validator selection, while retaining an element of PoA.
 
 ## Consensus
 
 ### Overview
-Ronin's DPoS variation is a combination of PoA and DPoS. 
-
-Here's how it works:
-* The validator set consists of $N$ validators, of which $X$ are selected in the PoA manner and referred to as *Governing Validators*. The remaining $Y$ slots are open to anyone who wish to become a validator—these entities are called Standard Validators.
-* Token holders—known as *delegators*—delegate their own stake to a validator of their choosing, and vote for the validators to earn block production access.
-* Elected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with their delegators.
+Ronin's DPoS variation is a combination of PoA and DPoS. Here's how it works:
+* The set of block producers—*validators*—consists of $22$ slots, of which $12$ are reserved for Governing Validators who are selected in the PoA manner. The remaining $10$ slots are open for anyone who wishes to become a validator and meets the minimum staking requirements. These are referred to as Standard Validators.
+* Users who registered to become a validator have the role of a Validator Candidate until they're selected to become a Standard Validator.
+* Token holders—known as *delegators*—delegate their own stake to any validator of their choosing, increasing the validator's chance to be selected as a Standard Validator and earn block production access.
+* Selected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with their delegators.
 
 ### Delegation
 Delegation is the contribution of some amount of RON tokens to another user for participation in the DPoS staking mechanism. Through delegation, token holders who do not have a large enough RON supply to meet the minimum staking requirements on their own, can earn staking rewards and participate in the network as delegators.
 
 ### Validator selection
-All token holders can register as Validator Candidates. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of $N$ validators, which includes $Y$ Standard Validators chosen among the Validator Candidates with the highest staked amount, and $X$ Governing Validators.
+Any token holder can register as a Validator Candidate. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of $22$ validators, which includes $12$ Governing Validators, and $10$ Standard Validators chosen among the Validator Candidates with the highest staked amount.
 
 While increasing the decentralization of the network, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
 
