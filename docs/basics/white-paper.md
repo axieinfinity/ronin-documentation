@@ -28,49 +28,44 @@ Delegation is the contribution of some amount of RON tokens to another user for 
 ### Validator selection
 Any token holder can register as a Validator Candidate. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of $22$ validators, which includes $12$ Governing Validators, and $10$ Standard Validators chosen among the Validator Candidates with the highest staked amount.
 
-While increasing the decentralization of the network, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
-
-The group of $X$ Governing Validators chosen by the community and Sky Mavis is meant to help prevent such attacks. Because the Governing Validators take $X/N$ slots in the validator set, the attackers cannot control the majority of the validators and take over the blockchain.
-
 During the day, some validators might be temporarily removed from the validator set. For example, due to "jailing", which is a form of slashing, or because of scheduled maintenance. These changes are updated every epoch, where one epoch consists of $200$ blocks or $\approx10$ minutes.
+
+### Staking
+RON holders can lock their tokens up as a stake. They can register to become a Validator Candidate themselves or delegate their tokens to any validator (Validator Candidate, Standard Validator, or Governing Validator). 
+
+Here's the core logic of staking:
+
+* The staking token is RON.
+* Token holders (including Governing Validators) must stake at least $250,000$ RON to become Validator Candidates.
+- Staking takes effect at the beginning of the next day.
+- Standard Validators are selected daily from the top $10$ Validator Candidates with the highest staked amount.
+- Validators can renounce their role and unstake (withdraw their tokens) after a waiting period of $7$ days.
+- Delegators can unstake instantly as long as it's been at least $3$ days since their last staking operation.
 
 ### Security and finality
 
-The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least 2N/3+1 sealed blocks. With $N=21$ validators and block time $=3\space seconds$, the users should wait for 45 seconds to confirm transactions in a block.
+The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time $=3\space seconds$, the users should wait for 45 seconds to confirm transactions in a block.
 
-To perform the Clone attack, the Byzantine validators must create two blocks on the same block height (double sign). This behavior is detectable by other validators in the system. Thus, we use a [slashing logic](../validators/slashing/slashing.mdx) logic to penalize Byzantine validators. This slashing logic exposes malicious validators in a very short time and makes the Clone attack non-beneficial.
+To perform the Clone attack, the Byzantine validators must create two blocks on the same block height (double sign). This behavior is detectable by other validators in the system. Thus, we use a [slashing logic](./../validators/slashing/slashing.mdx) logic to penalize Byzantine validators. This slashing logic exposes malicious validators in a very short time and makes the Clone attack non-beneficial.
 
 To perform a non-detectable attack, that is, when the Byzantine validators can only seal at most one block on each block height, the attacker must control at least $N/2+1$ validators.
 
--CONTINUE EDITING FROM HERE-
-#### Staking
+#### Governing Validators
+While increasing the decentralization of the network, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
 
-Token holders can put their tokens “bonded” into the stake. Token holders can register to become validator candidates or delegate their tokens to any validator or validator candidate. The core logic for staking is summarized below.
+The group of $X$ Governing Validators chosen by the community and Sky Mavis is meant to help prevent such attacks. Because the Governing Validators take $12/22$ slots in the validator set, the attackers cannot control the majority of the validators and take over the blockchain.
 
-- The staking token is RON.
-- Token holders (including trusted organizations) must stake at least 500,000 RON to become validator candidates.
-- The staking will take effect at the beginning of the next day.
-- The validator set includes the top 10 validator candidates with the highest staked amount.
-- The validators can renounce, unstake, and withdraw the tokens after waiting for a period of 7 days.
-- The delegators can instantly unstake and withdraw the tokens. However, they need to stake for at least 3 days, i.e., they can unstake after 3 days since the last staking operation.
-
-#### Trusted organizations
-
-While increasing the decentralization of the system, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
-
-To prevent such attacks, we rely on a group of 11 trusted organizations, that are chosen by the community and Sky Mavis. As the trusted organizations take 11/21 slots in the validators set, the attackers cannot control the majority of the validators and take over the blockchains. 
-
-## Bridge operator
+## Bridge operators
 
 The bridge operators take the responsibility of acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. The bridge operators have their own reward and slash system (see the “Rewarding” and “Slashing” sections).
 
 Each validator has the responsibility to maintain a bridge operator. The validator who does not run the bridge operator cannot claim its block rewards.
 
-## Rewarding
+## Rewards
 
 We allocate 25% of its total supply of 1 billion tokens to fund the staking rewards. The staking rewards are allocated for 294 months (see [unlocking schedule](https://litepaper.roninchain.com/ronin-token-usdron/issuance)).
 
-### Rewarding for validators
+### Rewards for validators
 
 The validators have two sources of rewards: transaction fees and 90% of staking rewards. When the validator generates a block, (s)he will receive the transaction fees in that block and some fixed amount of staking rewards.
 
@@ -85,7 +80,7 @@ Each validator can set a commission rate that indicates the percentage of self-a
 - Delegator C receives 10x90%x250/2000=1.125 tokens
 - Delegator D receives 10x90%x250/2000=1.125 tokens
 
-### Rewarding for bridge operators
+### Rewards for bridge operators
 
 The bridge operators will get 10% of staking rewards. The rewards will be distributed to the bridge operators (the delegators will not be received these rewards) at the end of each day based on the number of votes from the bridge operators on that day. 
 
@@ -163,12 +158,11 @@ Note that, after the corresponding validator is put in jail, (s)he cannot use th
 
 ## Governance
 
-Trusted organizations also take the role of governance. The governance is responsible for the following tasks:
+Governing Validators also take the role of governance. The governance is responsible for the following tasks:
 
 - Update the system parameters, e.g., slash thresholds. Add/remove trusted organizations.
 - Sync the set of bridge operators to the Ethereum chain every day.
 
 We require 9/11 trusted organizations’ votes to perform the above tasks. The trusted organization that does not sync the set of bridge operators to the Ethereum chain for 3 consecutive days will get slashed 10,000 RON.
-
 
 **Disclaimer:**  This whitepaper is a work in progress and can be updated in the future.
