@@ -66,6 +66,10 @@ const config = {
           autoCollapseCategories: true,
         },
       },
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
       navbar: {
         title: 'Ronin Network',
         logo: {
