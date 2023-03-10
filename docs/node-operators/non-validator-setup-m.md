@@ -59,7 +59,8 @@ services:
     volumes:
       - ~/.skymavis/chaindata:/ronin
     environment:
-      - SYNC_MODE=snap
+      - MINE=false
+      - SYNC_MODE=full
       - PASSWORD=${PASSWORD}
       - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
       - BOOTNODES=${BOOTNODES}
