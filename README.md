@@ -4,7 +4,7 @@ The documentation for Ronin is built with [Docusaurus](https://docusaurus.io/).
 
 ## Run locally
 
-1. Install [Node.js](https://nodejs.org/en/download/) version >= 14.0
+1. Install [Node.js](https://nodejs.org/en/download/) version >= 16.14
 2. Install [Yarn](https://classic.yarnpkg.com/en/docs/install) classic
 3. Install [Vale](https://vale.sh/docs/vale-cli/installation/) for style guide checks
 4. Install dependencies
