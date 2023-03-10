@@ -2,7 +2,7 @@
 description: List of most common questions
 ---
 
-# Frequently asked questions
+# Delegator FAQ
 
 Here's a list of most common questions.
 
