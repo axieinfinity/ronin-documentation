@@ -18,294 +18,469 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
-  tutorialSidebar: [
+  sidebar: [
+    // Ronin Network basics
     {
       type: 'category',
-      label: 'Overview',
-      // link: { type: 'doc', id: 'intro/introduction' },
+      label: 'Basics',
+      link: {
+        type: 'generated-index',
+        title: 'Basics',
+        description: 'Learn the basic concepts of Ronin Network.',
+      },
       items: [
+        // Introduction to Ronin
         {
           type: 'doc',
-          label: 'Welcome to Ronin',
-          id: 'intro/introduction',
+          label: 'Introduction to Ronin',
+          id: 'basics/introduction',
         },
+        // History of Ronin
         {
           type: 'doc',
-          label: 'Whitepaper (Testnet)',
-          id: 'intro/whitepaper',
+          label: 'History of Ronin',
+          id: 'basics/history',
         },
+        // Terminology
         {
           type: 'doc',
-          label: 'Roadmap',
-          id: 'intro/road-map',
+          label: 'Terminology',
+          id: 'basics/terminology',
         },
+        // Decentralization
+        'basics/decentralization',
+        // Components
         {
           type: 'category',
-          label: 'Ronin Network',
+          label: 'Components',
+          link: {
+            type: 'generated-index',
+            title: 'Components',
+          },
           items: [
+            // Ronin Bridge
             {
-              type: 'doc',
-              label: 'Mainnet',
-              id: 'intro/mainnet',
+              type: 'category',
+              label: 'Ronin Bridge',
+              link: {
+                type: 'doc',
+                id: 'basics/components/ronin-bridge/ronin-bridge',
+              },
+              items: [
+                // Governance
+                'basics/components/ronin-bridge/governance',
+                // Fee structure
+                'basics/components/ronin-bridge/fee-structure',
+                // Withdrawal limits
+                'basics/components/ronin-bridge/withdrawal-limits',
+              ],
             },
-            {
-              type: 'doc',
-              label: 'Saigon Testnet',
-              id: 'intro/saigon-testnet',
-            },
-          ],       
-        },  
-        {
-          type: 'doc',
-          label: 'Tokenomics',
-          id: 'intro/tokenomics',
+            // Ronin Explorer
+            'basics/components/ronin-explorer',
+            // dApps
+            'basics/components/dapps',
+          ],
         },
+        // Platform
+        {
+          type: 'category',
+          label: 'Platform',
+          link: {
+            type: 'generated-index',
+            title: 'Platform',
+          },
+          items: [
+            // Roadmap
+            'basics/platform/roadmap',
+            // Tokenomics
+            'basics/platform/tokenomics',
+            // Configurations
+            {
+              type: 'category',
+              label: 'Configurations',
+              items: [
+                // Mainnet
+                'basics/platform/configs/mainnet',
+                // Testnet
+                'basics/platform/configs/testnet',
+              ],
+            },
+            // Transaction life cycle
+            'basics/platform/transaction',
+          ],
+        },
+        // Roles
+        {
+          type: 'category',
+          label: 'Roles',
+          link: {
+            type: 'generated-index',
+            title: 'Roles',
+          },
+          items: [
+            // Validator
+            'basics/roles/validator',
+            // Delegator
+            'basics/roles/delegator',
+            // Developer
+            'basics/roles/developer',
+          ],
+        },
+        // White paper
+        'basics/white-paper',
+        // Security audits
+        'basics/audits',
+        // Introduction to wiki
         {
           type: 'doc',
-          label: 'Transaction life cycle',
-          id: 'intro/transaction-lifecycle',
-        },      
+          label: 'Wiki overview',
+          id: 'basics/wiki',
+        },
       ],
     },
+    // Delegators
     {
       type: 'category',
-      label: 'Staking',
-      link: { 
+      label: 'Delegators',
+      link: {
         type: 'generated-index',
-        title: 'Staking', 
-        description: 'Learn how to delegate your stake to preferred validators and claim rewards.'},
+        title: 'Delegators',
+        description: 'Stake tokens, delegate your stake to validators, and claim rewards.'
+      },
       items: [
+        // Purchase RON
+        'delegators/onboarding/purchase',
+        // Become a delegator
+        'delegators/onboarding/become-delegator',
+        // Stake
         {
-          type: 'doc',
-          label: 'Become a delegator',
-          id: 'staking/become-delegator',
+          type: 'category',
+          label: 'Stake',
+          link: {
+            type: 'generated-index',
+            title: 'Stake',
+            description: 'Move or withdraw your stake.',
+          },
+          items: [
+            // Move stake
+            'delegators/stake/move',
+            // Withdraw stake
+            'delegators/stake/withdraw',
+          ],
         },
+        // Rewards
         {
-          type: 'doc',
-          label: 'Withdraw stake',
-          id: 'staking/withdraw-stake',
+          type: 'category',
+          label: 'Rewards',
+          link: {
+            type: 'generated-index',
+            title: 'Rewards',
+            description: 'Learn about reward types and how to claim rewards.',
+          },
+          items: [
+            // Reward types
+            'delegators/rewards/types',
+            // Claim rewards
+            'delegators/rewards/claim',
+          ],
         },
-        {
-          type: 'doc',
-          label: 'Move stake',
-          id: 'staking/move-stake',
-        },
-        {
-          type: 'doc',
-          label: 'Claim rewards',
-          id: 'staking/claim-rewards',
-        },
+        // FAQ
         {
           type: 'doc',
           label: 'FAQ',
-          id: 'staking/faq',
+          id: 'delegators/faq',
         },
       ],
     },
+    // Validators
     {
       type: 'category',
-      label: 'Validator',
-      link: { type: 'doc', id: 'validator/responsibilities' },
-      items: [ 
-        {
-          type: 'category',
-          label: 'Mainnet',          
-          items: [
-                {
-                  type: 'link',
-                  label: 'API',
-                  href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
-                },
-                {
-                  type: 'doc',
-                  label: 'CLI',
-                  id: 'validator/cli',
-                },
-                {
-                  type: 'doc',
-                  label: 'Minimum requirements',
-                  id: 'validator/minimum-requirements',
-                },
-                // {
-                //   type: 'doc',
-                //   label: 'Responsibilities',
-                //   id: 'validator/responsibilities',
-                // },
-                {
-                  type: 'doc',
-                  label: 'Run a Validator node',
-                  id: 'validator/running-validating-node',
-                },
-                {
-                  type: 'doc',
-                  label: 'Run a Non Validator node',
-                  id: 'validator/running-non-validating-node',
-                },
-                {
-                  type: 'doc',
-                  label: 'Upgrade Ronin Node',
-                  id: 'validator/upgrade-ronin-node',
-                },
-          ],
-        }, 
-        {
-          type: 'category',
-          label: 'Testnet',
-          // link: { type: 'doc', id: 'validator/val' },
-          items: [
-            {
-              type: 'doc',
-              label: 'Become a validator',
-              id: 'validator/become-validator',
-            },
-            {
-              type: 'doc',
-              label: 'Run a validator node',
-              id: 'validator/setup',
-            },
-            {
-            type: 'category',
-            label: 'Manage profile',
-            items: [
-              {
-                type: 'doc',
-                label: 'Change commission rate',
-                id: 'validator/commission-rate',
-              },
-              {
-                type: 'doc',
-                label: 'Schedule maintenance mode',
-                id: 'validator/maintenance-mode',
-              },
-              {
-                type: 'doc',
-                label: 'Renounce role',
-                id: 'validator/renounce',
-              },
-              {
-                type: 'doc',
-                label: 'View activities',
-                id: 'validator/view-activities',
-              },
-              {
-                type: 'doc',
-                label: 'View profile',
-                id: 'validator/view-profile',
-              },
-              {
-                type: 'doc',
-                label: 'View analytics',
-                id: 'validator/view-analytics',
-              },
-            ],
-            },
-            {
-              type: 'category',
-              label: 'Stake',
-              items: [
-                {
-                  type: 'doc',
-                  label: 'Increase stake',
-                  id: 'validator/increase-stake',
-                },
-                {
-                  type: 'doc',
-                  label: 'Withdraw stake',
-                  id: 'validator/withdraw-stake',
-                },
-              ],
-              },
-              {
-                type: 'doc',
-                label: 'Claim rewards',
-                id: 'validator/rewards'
-              },
-              {
-                type: 'category',
-                label: 'Slashing and bailout',
-                items: [
-                  {
-                    type: 'doc',
-                    label: 'Slashing',
-                    id: 'validator/slashing',
-                  },
-                  {
-                    type: 'doc',
-                    label: 'Bailout',
-                    id: 'validator/bailout',
-                  },
-                ],
-              },
-          ],
-        }
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Bridge',
-      // link: { type: 'doc', id: 'components/ronin-bridge-v2' },
+      label: 'Validators',
+      link: {
+        type: 'generated-index',
+        title: 'Validators', 
+        description: 'Stake tokens, claim rewards, and manage your validator profile.',
+      },
       items: [
+        // Become a validator
+        'validators/onboarding/become-validator',
+        // Stake
+        {
+          type: 'category',
+          label: 'Stake',
+          link: {
+            type: 'generated-index',
+            title: 'Stake',
+            description: 'Increase or withdraw your RON stake.'
+          },
+          items: [
+            // Increase stake
+            'validators/stake/increase',
+            // Withdraw stake
+            'validators/stake/withdraw',
+          ],
+        },
+        // Rewards
+        {
+          type: 'category',
+          label: 'Rewards',
+          link: {
+            type: 'generated-index',
+            title: 'Rewards',
+            description: 'Learn about reward types and how to claim rewards.'
+          },
+          items: [
+            // Reward types
+            'validators/rewards/types',
+            // Claim rewards
+            'validators/rewards/claim',
+          ],
+        },
+        // Manage profile
+        {
+          type: 'category',
+          label: 'Manage profile',
+          link: {
+            type: 'generated-index',
+            title: 'Manage profile', 
+            description: 'Manage your profile, view analytics and activities.',
+          },
+          items: [
+            // Change commission rate
+            'validators/manage-profile/commission',
+            // Schedule maintenance
+            'validators/manage-profile/maintenance',
+            // Renounce role
+            'validators/manage-profile/renounce',
+            // View activity log
+            'validators/manage-profile/activities',
+            // View profile
+            'validators/manage-profile/profile',
+            // View analytics
+            'validators/manage-profile/analytics',
+          ],
+        },
+        {
+          // Slashing and bailout
+          type: 'category',
+          label: 'Slashing and bailout',
+          link: {
+            type: 'generated-index',
+            title: 'Slashing and bailout', 
+            description: 'Learn about the slashing penalties and rules for bailout.',
+          },
+          items: [
+            // Slashing
+            'validators/slashing/slashing',
+            // Bailout
+            'validators/slashing/bailout',
+          ],
+        },
+        // FAQ
         {
           type: 'doc',
-          label: 'Bridge V2',
-          id: 'bridge/ronin-bridge-v2',
+          label: 'FAQ',
+          id: 'validators/faq',
         },
       ],
     },
     {
+      // Node operators
       type: 'category',
-      label: 'Governance',
-      link: { type: 'doc', id: 'governance/gov' },
+      label: 'Node operators',
+      link: {
+        type: 'generated-index',
+        title: 'Node operators',
+        description: 'Set up and run a Ronin node.',
+      },
       items: [
-        // {
-        //   type: 'doc',
-        //   label: 'Create a proposal',
-        //   id: 'governance/create',
-        // },
-        // {
-        //   type: 'doc',
-        //   label: 'Vote on a proposal',
-        //   id: 'governance/vote',
-        // },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Developer Guides',
-      // link: { type: 'doc', id: 'developer/dev' },
-      items: [
+        // CLI guide
+        'node-operators/cli',
+        // Minimum requirements
+        'node-operators/minimum-requirements',
         {
           type: 'category',
-          label: 'Ronin Wallet Integration',
+          label: 'Mainnet guides',
+          link: {
+            type: 'generated-index',
+            title: 'Mainnet guides',
+          },
           items: [
-            {
-              type: 'doc',
-              label: 'Wallet provider',
-              id: 'developer-guide/integrate-ronin-wallet',
-            },
-            {
-              type: 'doc',
-              label: 'Network switching',
-              id: 'developer-guide/switch-wallet-to-testnet',
-            },
-          ]
+            // Run a validator node (mainnet)
+            'node-operators/validator-setup-m',
+            // Run a bridge operator node (mainnet)
+            'node-operators/bridge-setup-m',
+            // Run a non-validator-node (mainnet)
+            'node-operators/non-validator-setup-m',
+            // Run a full archive node (mainnet)
+            'node-operators/archive-setup-m',
+          ],
         },
         {
           type: 'category',
-          label: 'Smart contract deploying',
+          label: 'Testnet guides',
+          link: {
+            type: 'generated-index',
+            title: 'Testnet guides',
+          },
           items: [
+            // Run a validator node (testnet)
+            'node-operators/validator-setup-t',
+            // Run a bridge node (testnet)
+            'node-operators/bridge-setup-t',
+            // Run a non-validator-node (testnet)
+            'node-operators/non-validator-setup-t',
+            // Run a full archive node (testnet)
+            'node-operators/archive-setup-t',
+          ],
+        },
+        // Node setup tutorials
+        {
+          type: 'category',
+          label: 'Tutorials',
+          link: {
+            type: 'generated-index',
+            title: 'Tutorials',
+          },
+          items: [
+            // Run a validator node on AWS
+            'node-operators/tutorials/run-node-on-aws',
+            // Run a validator node on GCP
+            'node-operators/tutorials/run-node-on-gcp',
+          ],
+        },
+        // FAQ
+        {
+          type: 'doc',
+          label: 'FAQ',
+          id: 'node-operators/faq',
+        },
+      ],
+    },
+    // Developers
+    {
+      type: 'category',
+      label: 'Developers',
+      link: {
+        type: 'generated-index',
+        title: 'Developers', 
+        description: 'Build your decentralized application on Ronin Network.',
+      },
+      items: [
+        // API
+        {
+          type: 'link',
+          label: 'API',
+          href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
+        },
+        {
+          type: 'category',
+          label: 'Smart contracts',
+          link: {
+            type: 'generated-index',
+            title: 'Deploy smart contracts', 
+            description: 'Guides for smart contract deployment.',
+          },
+          items: [
+            'developers/smart-contract/using-hardhat',
+            'developers/smart-contract/using-truffle',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Ronin Wallet',
+          link: {
+            type: 'generated-index',
+            title: 'Integrate Ronin Wallet', 
+            description: 'Guides for Ronin Wallet integration.',
+          },
+          items: [
+            'developers/ronin-wallet/integrate',
+            'developers/ronin-wallet/switch-network',
+          ],
+        },
+        // FAQ
+        {
+          type: 'doc',
+          label: 'FAQ',
+          id: 'developers/faq',
+        },
+      ],
+    },
+    // Community
+    {
+      type: 'category',
+      label: 'Community',
+      link: {
+        type: 'generated-index',
+        title: 'Community', 
+        description: 'Community information and a contribution guide.',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Contribution',
+          link: {
+            type: 'generated-index',
+            title: 'Contribution',
+            description: 'Contribute to this documentation.'
+          },
+          items: [
+            'community/contribution/contribution-guide',
+            'community/contribution/style-guide',
             {
-              type: 'doc',
-              label: 'Using Truffle',
-              id: 'developer-guide/smart-contract-deploying/using-truffle',
+              type: 'category',
+              label: 'Templates',
+              link: {
+              type: 'generated-index',
+              title: 'Templates', 
+              description: 'Templates used to create this documentation.',
             },
-            {
-              type: 'doc',
-              label: 'Using Hardhat',
-              id: 'developer-guide/smart-contract-deploying/using-hardhat',
+            items: [
+              'community/contribution/templates/concept',
+              'community/contribution/templates/task',
+              'community/contribution/templates/reference',
+              'community/contribution/templates/troubleshooting',
+              ],
             },
           ],
         },
+        'community/bug-bounty',
+        'community/council',
+        'community/governance',
+        'community/grants',
+        {
+          type: 'link',
+          label: 'Discord',
+          href: 'https://discord.gg/P5GgF7SK',
+        },
+        {
+          type: 'link',
+          label: 'Twitter',
+          href: 'https://twitter.com/ronin_network',
+        },
+        {
+          type: 'link',
+          label: 'Newsletter',
+          href: 'https://roninblockchain.substack.com/',
+        },
+      ],
+    },
+    // Resources
+    {
+      type: 'category',
+      label: 'Resources',
+      link: {
+        type: 'generated-index',
+        title: 'Resources', 
+      },
+      items: [
+        {
+          type: 'link',
+          label: 'GitHub',
+          href: 'https://github.com/axieinfinity/',
+        },
+        'resources/other',
       ],
     },
   ],

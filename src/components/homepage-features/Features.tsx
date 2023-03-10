@@ -10,59 +10,68 @@ import React from 'react'
 import { Card } from './Card'
 
 const featureList = [
+  // {
+  //   title: 'Introduction',
+  //   Icon: ListViewIcon,
+  //   link: {
+  //     href: '/docs/get-started',
+  //     title: 'Get started',
+  //   },
+  //   description: <>Learn the basics of blockchain and Ronin Network.</>,
+  // },
   {
-    title: 'Overview',
+    title: 'Basics',
     Icon: ListViewIcon,
     link: {
-      href: '/docs/intro/introduction',
-      title: 'Overview',
+      href: '/docs/category/basics',
+      title: 'Basics',
     },
-    description: <>Learn the basics of blockchain and Ronin Network.</>,
+    description: <>Learn the basics of Ronin Network.</>,
   },
   {
-    title: 'Staking',
+    title: 'Delegators',
     Icon: CoinIcon,
     link: {
-      href: '/docs/category/staking',
-      title: 'Staking',
+      href: '/docs/category/delegators',
+      title: 'Delegators',
     },
     description: <>Secure the network by staking tokens and delegating your stake to validators.</>,
   },
   {
-    title: 'Validator',
+    title: 'Validators',
     Icon: BoxTickIcon,
-    description: <>Secure the network and earn rewards by staking tokens and running a node to validate on Ronin.</>,
+    description: <>Secure the network and earn rewards by staking tokens and running a node to validate.</>,
     link: {
-      href: '/docs/validator/responsibilities',
-      title: 'Validator',
+      href: '/docs/category/validators',
+      title: 'Validators',
     },
   },
   {
-    title: 'Bridge',
+    title: 'Node operators',
     Icon: SignDirectionIcon,
-    description: <>Validate cross-chain transactions.</>,
+    description: <>Set up validator and bridge operator nodes and ensure their stable operation.</>,
     link: {
-      href: '/docs/bridge/ronin-bridge-v2',
-      title: 'Bridge',
+      href: '/docs/category/node-operators',
+      title: 'Node operators',
     },
   },
   {
-    title: 'Governor',
-    Icon: UserShieldIcon,
-    description: <>Create, view, and vote on proposals.</>,
-    link: {
-      href: '/docs/governance/gov',
-      title: 'Governor',
-    },
-  },
-  {
-    title: 'Developer',
+    title: 'Developers',
     Icon: LaptopCodeIcon,
     link: {
-      href: '/docs/developer-guide/switch-wallet-to-testnet',
-      title: 'Start building dApp',
+      href: '/docs/category/developers',
+      title: 'Developers',
     },
-    description: <>Build your Ronin Network decentralized application.</>,
+    description: <>Build your decentralized application on Ronin Network.</>,
+  },
+  {
+    title: 'Community',
+    Icon: UserShieldIcon,
+    description: <>Join our community, participate in programs, and contribute to this documentation.</>,
+    link: {
+      href: '/docs/category/community',
+      title: 'Community',
+    },
   },
 ]
 

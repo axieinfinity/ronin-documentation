@@ -3,6 +3,9 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
+const math = require('remark-math');
+const katex = require('rehype-katex');
+
 const currentYear = new Date().getFullYear()
 
 /** @type {import('@docusaurus/types').Config} */
@@ -30,6 +33,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         blog: {
           showReadingTime: true,
@@ -43,10 +48,28 @@ const config = {
       }),
     ],
   ],
-
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
       navbar: {
         title: 'Ronin Network',
         logo: {
@@ -54,12 +77,42 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          // Basics
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Documentation',
+            label: 'Basics',
+            to: 'docs/category/basics',
           },
+          // Delegators
+          {
+            label: 'Delegators',
+            to: 'docs/category/delegators',
+          },
+          // Validators
+          {
+            label: 'Validators',
+            to: 'docs/category/validators',
+          },
+          // Node operators
+          {
+            label: 'Node operators',
+            to: 'docs/category/node-operators',
+          },
+          // Developers
+          {
+            label: 'Developers',
+            to: 'docs/category/developers',
+          },
+          // Community
+          {
+            label: 'Community',
+            to: 'docs/category/community',
+          },
+          // Resources
+          {
+            label: 'Resources',
+            to: 'docs/category/resources',
+          },
+          // Search
           {
             type: 'search',
             position: 'right',
@@ -81,21 +134,46 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Documentation',
-                to: '/docs/intro',
+                label: 'Basics',
+                to: 'docs/category/basics',
+              },
+              {
+                label: 'Delegators',
+                to: 'docs/category/delegators',
+              },
+              {
+                label: 'Validators',
+                to: 'docs/category/validators',
+              },
+              {
+                label: 'Node operators',
+                to: 'docs/category/node-operators',
+              },
+              {
+                label: 'Developers',
+                to: 'docs/category/developers',
               },
             ],
           },
           {
             title: 'Community',
             items: [
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discord.gg/P5GgF7SK',
-              // },
+              {
+                label: 'Contribution',
+                to: 'docs/category/contribution',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/P5GgF7SK',
+              },
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/ronin_network',
+              },
+              {
+                type: 'link',
+                label: 'Newsletter',
+                href: 'https://roninblockchain.substack.com/',
               },
             ],
           },
