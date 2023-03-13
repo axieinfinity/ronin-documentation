@@ -94,22 +94,6 @@ There is a `docker-compose.yaml` file in `docker` directory. Modify `.env` file 
 ```
 docker-compose -f docker/docker-compose.yaml --env-file .env up -d
 ```
-### Manually
-
-Install PostgreSQL database, create `bridge` database
-
-build and install bridge
-
-```
-make bridge
-```
-
-then run Bridge with
-
-```
-bridge --config <path-to-config>
-```
-
 ## Configuration
 The config file can be found in the `config` directory. There are 2 main components in the configuration: listeners and database
 

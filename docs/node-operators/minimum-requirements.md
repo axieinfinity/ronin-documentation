@@ -5,14 +5,27 @@ description: Requirements for running a Ronin node
 
 Running a node requires a lot of disk space and drives with fast read/write speed (IOPS)
 
-## Running a full Ronin node
+## Mainnet
+### Running a full Ronin node
 
 * 6 CPU cores
 * 25 GB RAM
 * 700 GB high-speed SSD
 
-## Running an archive Ronin node
+### Running an archive Ronin node
 
 * 8 CPU cores
 * 32 GB RAM
-* 5 TB high-speed SSD
+* 7 TB high-speed SSD
+
+## Testnet
+### Running a full Ronin node
+* 4 CPU cores
+* 8 GB RAM
+* 100 GB high-speed SSD
+
+### Running an archive Ronin node
+
+* 6 CPU cores
+* 8 GB RAM
+* 200 GB high-speed SSD

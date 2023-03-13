@@ -5,11 +5,6 @@ description: Set up and run an archive node
 
 This page describes how to set up and run an archive Ronin node.
 
-## Prerequisites
-CPU: 8 cores
-Memory: 32 GB
-Disk: 7 TB SSD
-
 ## Steps
 
 * Download the latest version of Ronin manager and uncompress:
