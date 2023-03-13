@@ -14,9 +14,9 @@ This page describes how to set up and run an archive Ronin node.
 
 * You must be a root user.
 * Your machine must meet the minimum hardware requirements:
-  * 4 CPU cores
-  * 8 GB RAM
-  * 250 GB SSD
+  * 8 CPU cores
+  * 32 GB RAM
+  * 7 TB high-speed SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
 ## Steps

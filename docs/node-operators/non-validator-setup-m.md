@@ -3,7 +3,7 @@ description: Set up and run an non validator node
 ---
 # Run a full node (mainnet)
 
-This page describes how to set up and run an archive Ronin node.
+This page describes how to set up and run a non validator Ronin node.
 
 ## Latest release
 ### RPC Node
@@ -100,3 +100,4 @@ cd  /axie/ronin-manager && docker-compose up -d
 ```
 
 After a few minutes, go to the [stats page](https://stats.roninchain.com/) to verify that your node is connected and up to date with the network.
+Optionally you can [start node from a snapshot](./non-validator-setup-m.md#start-node-from-a-snapshot).
