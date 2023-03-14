@@ -1,6 +1,8 @@
-# Mainnet
+# Configuration
 
-### Specification
+This page describes the mainnet configuration.
+
+## Specification
 
 * Chain id (network id): `2020`
 * RPC endpoint: [https://api.roninchain.com/rpc](https://api.roninchain.com/rpc)
@@ -15,7 +17,7 @@
 * Block Time: 3 seconds
 * Gas Price: 20 GWEI
 
-### Genesis contracts
+## Genesis contracts
 
 * Whitelist
 
@@ -35,12 +37,12 @@
 0x0000000000000000000000000000000000000011
 ```
 
-### Boot nodes
+## Boot nodes
 
 ```
 enode://a166ab6437cf370bc604097529a0fb6a8a4836bb85833fbf588b130cb73fe0517940d10c5d89c0e3e1c2800a774ac1ae2108d62cb4608556e41bc1fc4482241a@35.193.159.26:30303
 ```
 
-### Validators
+## Validators
 
 [https://explorer.roninchain.com/validators](https://explorer.roninchain.com/validators)
