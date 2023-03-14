@@ -33,5 +33,12 @@ There are three validator roles:
 5. Provide the initial stake of RON.
 <img src={valOnboardingStepFour} width={1280} />
 
-Done! Now that you're a Validator Candidate, you're eligible for becoming a Standard Validator on the next day.
+Done!
+
 <img src={valOnboardingStepFive} width={1280} />
+
+Now that you're a Validator Candidate, we recommend that you deposit some RON
+to the following addresses to avoid [bridge operator slashing](slashing#unavailability-bridge-operator)
+should you be selected as a Standard Validator:
+* Bridge operator address: RON is required to automatically sign transactions on the bridge every epoch.
+* Bridge voter address (if you’re a Governing Validator): RON is required to automatically sign transactions when syncing the set of bridge operators.

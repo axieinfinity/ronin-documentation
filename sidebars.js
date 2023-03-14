@@ -95,11 +95,11 @@ const sidebars = {
           label: 'Claim rewards',
           id: 'staking/claim-rewards',
         },
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'staking/faq',
-        },
+        // {
+        //   type: 'doc',
+        //   label: 'FAQ',
+        //   id: 'staking/faq',
+        // },
       ],
     },
     {
