@@ -9,166 +9,159 @@ description: Ronin Network white paper
 
 Decentralization is a key aspect of blockchain technology and one of the most prominent forces of its innovation. Our goal is to gradually increase the decentralization of Sky Mavis's products.
 
-At launch, Ronin used [Proof-of-Authority (PoA)](https://en.wikipedia.org/wiki/Proof_of_authority) as its consensus protocol. In PoA systems, transactions and blocks are validated by approved accounts known as validators. The PoA protocol, however, is often criticized for being less decentralized than Proof of stake (PoS) and Proof of Work (PoW).
+At launch, Ronin used [Proof of Authority (PoA)](https://en.wikipedia.org/wiki/Proof_of_authority) as its consensus protocol. In PoA systems, transactions and blocks are validated by approved accounts known as validators. The PoA protocol, however, is often criticized for being less decentralized than Proof of Stake (PoS) and Proof of Work (PoW).
 
 As the next step toward decentralization, we integrated the [Delegated Proof of Stake (DPoS)](https://en.wikipedia.org/wiki/Proof_of_stake#Delegated_proof_of_stake_(DPoS)) features such as delegation and validator selection, while retaining an element of PoA.
 
 ## Consensus
 
-### Overview
+### DPoS
 Ronin's DPoS variation is a combination of PoA and DPoS. Here's how it works:
 * The set of block producers—*validators*—consists of $22$ slots, of which $12$ are reserved for Governing Validators who are selected in the PoA manner. The remaining $10$ slots are open for anyone who wishes to become a validator and meets the minimum staking requirements. These are referred to as Standard Validators.
 * Users who registered to become a validator have the role of a Validator Candidate until they're selected to become a Standard Validator.
 * Token holders—known as *delegators*—delegate their own stake to any validator of their choosing, increasing the validator's chance to be selected as a Standard Validator and earn block production access.
 * Selected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with their delegators.
 
-### Delegation
-Delegation is the contribution of some amount of RON tokens to another user for participation in the DPoS staking mechanism. Through delegation, token holders who do not have a large enough RON supply to meet the minimum staking requirements on their own, can earn staking rewards and participate in the network as delegators.
+### Security and finality
+
+The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time $=3\space seconds$, the users should wait for 45 seconds to confirm transactions in a block.
+
+To perform the Clone attack, the Byzantine validators must create two blocks on the same block height, also known as double-sign. This behavior can be detected by other validators in the system. Thus, we use a [slashing mechanism](./../validators/slashing/slashing.mdx) to penalize Byzantine validators. This mechanism exposes malicious validators in a short time and makes the Clone attack non-beneficial.
+
+To perform a non-detectable attack—when the Byzantine validators can only seal at most one block on each block height—the attacker must control at least $N/2+1$ validators.
 
 ### Validator selection
 Any token holder can register as a Validator Candidate. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of $22$ validators, which includes $12$ Governing Validators, and $10$ Standard Validators chosen among the Validator Candidates with the highest staked amount.
 
-While increasing the decentralization of the network, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
-
-The group of $X$ Governing Validators chosen by the community and Sky Mavis is meant to help prevent such attacks. Because the Governing Validators take $X/N$ slots in the validator set, the attackers cannot control the majority of the validators and take over the blockchain.
-
 During the day, some validators might be temporarily removed from the validator set. For example, due to "jailing", which is a form of slashing, or because of scheduled maintenance. These changes are updated every epoch, where one epoch consists of $200$ blocks or $\approx10$ minutes.
 
-### Security and finality
+### Staking and delegation 
+Token holders who do not have a large enough RON supply to meet the minimum staking requirements on their own, can earn staking rewards and participate in the network as delegators. To do that, a token holder can contribute their RON stake to any validator (Validator Candidate, Standard Validator, or Governing Validator).
 
-The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least 2N/3+1 sealed blocks. With $N=21$ validators and block time $=3\space seconds$, the users should wait for 45 seconds to confirm transactions in a block.
+Here's the core logic of staking:
 
-To perform the Clone attack, the Byzantine validators must create two blocks on the same block height (double sign). This behavior is detectable by other validators in the system. Thus, we use a [slashing logic](../validators/slashing/slashing.mdx) logic to penalize Byzantine validators. This slashing logic exposes malicious validators in a very short time and makes the Clone attack non-beneficial.
+* The staking token is RON.
+* Token holders (including Governing Validators) must stake at least $250,000$ RON to become Validator Candidates.
+* Staking takes effect at the beginning of the next day.
+* Standard Validators are selected daily from the top $10$ Validator Candidates with the highest staked amount.
+* Validators can renounce their role and withdraw their tokens (unstake) after a waiting period of $7$ days.
+* Delegators can unstake instantly as long as it's been at least $3$ days since their last staking operation.
 
-To perform a non-detectable attack, that is, when the Byzantine validators can only seal at most one block on each block height, the attacker must control at least $N/2+1$ validators.
+### Governing Validators
+While increasing the decentralization of the network, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
 
--CONTINUE EDITING FROM HERE-
-#### Staking
+The group of $12$ Governing Validators chosen by the community and Sky Mavis is meant to help prevent such attacks. Because the Governing Validators take $12/22$ slots in the validator set, the attackers cannot control the majority of the validators and take over the blockchain.
 
-Token holders can put their tokens “bonded” into the stake. Token holders can register to become validator candidates or delegate their tokens to any validator or validator candidate. The core logic for staking is summarized below.
+### Bridge operators
 
-- The staking token is RON.
-- Token holders (including trusted organizations) must stake at least 500,000 RON to become validator candidates.
-- The staking will take effect at the beginning of the next day.
-- The validator set includes the top 10 validator candidates with the highest staked amount.
-- The validators can renounce, unstake, and withdraw the tokens after waiting for a period of 7 days.
-- The delegators can instantly unstake and withdraw the tokens. However, they need to stake for at least 3 days, i.e., they can unstake after 3 days since the last staking operation.
+The role of the bridge operator is to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. Bridge operators have their own rewarding and slashing logic.
 
-#### Trusted organizations
+Each validator has the responsibility to run a bridge operator node. The validator who doesn't not run the bridge operator can't claim their block rewards.
 
-While increasing the decentralization of the system, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
+## Rewards
 
-To prevent such attacks, we rely on a group of 11 trusted organizations, that are chosen by the community and Sky Mavis. As the trusted organizations take 11/21 slots in the validators set, the attackers cannot control the majority of the validators and take over the blockchains. 
+Out of the total supply of 1 billion RON tokens, $25\%$ are allocated to fund staking rewards. According to the [unlocking schedule](https://litepaper.roninchain.com/ronin-token-usdron/issuance), the rewards are set to be allocated over $294$ months.
 
-## Bridge operator
+### Rewards for validators and delegators
 
-The bridge operators take the responsibility of acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. The bridge operators have their own reward and slash system (see the “Rewarding” and “Slashing” sections).
+Validators have two sources of rewards: transaction fees and $90\%$ of staking rewards. When the validator generates a block, they receive the transaction fees in that block and some fixed amount of staking rewards.
 
-Each validator has the responsibility to maintain a bridge operator. The validator who does not run the bridge operator cannot claim its block rewards.
+* The reward is not sent to the validator right away, but is distributed and accumulated on a smart contract.
+* At the end of each day, the smart contract allocates the reward to the validator and their delegators.
+* At the end of each day, if the validator doesn't get slashed, then the validator and their delegators can claim their allocated reward.
 
-## Rewarding
+Each validator can set a commission rate that indicates the percentage of the self-allocated reward. The remaining reward is allocated based on the staked amount.
 
-We allocate 25% of its total supply of 1 billion tokens to fund the staking rewards. The staking rewards are allocated for 294 months (see [unlocking schedule](https://litepaper.roninchain.com/ronin-token-usdron/issuance)).
+For example, consider validator $A$ with the commission rate of $10\%$. This validator self-delegates $1000$ RON. There are three delegators—$B$, $C$, and $D$, who delegate their tokens to validator $A$ with the amounts of $500$ RON, $250$ RON, and $250$ RON, respectively. The total amount of staked tokens to validator $A$ is therefore $1000+500+250+250=2000$ RON. If a reward of $10$ tokens is given to validator $A$ and their delegators, here's how this reward is allocated:
 
-### Rewarding for validators
+* Validator $A$ receives $10\times10\%+10\times90\%\times1000\div2000=5.5$ tokens.
+* Delegator $B$ receives $10\times90\%\times500\div2000=2.25$ tokens.
+* Delegator $C$ receives $10\times90\%\times250\div2000=1.125$ tokens.
+* Delegator $D$ receives $10\times90\%\times250\div2000=1.125$ tokens.
 
-The validators have two sources of rewards: transaction fees and 90% of staking rewards. When the validator generates a block, (s)he will receive the transaction fees in that block and some fixed amount of staking rewards.
+### Rewards for bridge operators
 
-- The rewards will not be sent to validators right away, instead, they will be distributed and accumulated on a smart contract.
-- At the end of each day, the smart contract allocates the reward to the validators and their delegators.
-- At the end of each day, if a validator does not get slashed, (s)he and her/his delegators can claim their allocated rewards.
-
-Each validator can set a commission rate that indicates the percentage of self-allocated rewards. The remaining rewards will be allocated based on the staked amount. For example, consider a validator A with a commission rate of 10%. The validator A self-delegates 1000 Ronin tokens. There are 3 delegators, named B,C,D, who delegate their tokens to validator A with the amounts of 500, 250,250, respectively. Here, the total amount of staked tokens to validator A is 1000+500+250+250=2000.  If 10 tokens are rewarded to validator A and her/his delegators, we allocate the rewards as follows:
-
-- Validator A receives 10x10%+10x90%x1000/2000=5.5 tokens
-- Delegator B receives 10x90%x500/2000=2.25 tokens
-- Delegator C receives 10x90%x250/2000=1.125 tokens
-- Delegator D receives 10x90%x250/2000=1.125 tokens
-
-### Rewarding for bridge operators
-
-The bridge operators will get 10% of staking rewards. The rewards will be distributed to the bridge operators (the delegators will not be received these rewards) at the end of each day based on the number of votes from the bridge operators on that day. 
+Bridge operators receive $10\%$ of staking rewards, which is distributed at the end of each day based on the number of votes from the bridge operators on that day.
 
 ## Slashing
 
-We use slashing logic to ensure that malicious or negative behaviors are punished. We have two slashable cases for validators and one slashable case for bridge operators. 
+We use a slashing mechanism to penalize validators and bridge operators for malicious behavior.
 
-### Double sign validators
+### Double-sign validator
 
-It is quite a serious error when a validator signs more than one block with the same height. As we mentioned in the “Security and Finality” section, the validators, who do double sign, are launching a Clone attack to break the security of the blockchain. Our protocol implementation already has logic to prevent this. Thus, only the malicious code can trigger this behavior.
+It's a serious error when a validator signs more than one block with the same height. As mentioned in [Security and finality](#security-and-finality), validators who engage in double-signing effectively launch a Clone attack to break the security of the blockchain. Because our implementation already has a logic to prevent double-signing, only malicious code can trigger this behavior.
 
-Anyone can submit a slash request with the double sign evidence, which should contain the 2 block headers with the same height, sealed by the same validator. Upon verifying the evidence, the offending validator will be slashed as follows.
+Anyone can submit a slash request with the double-sign evidence, which should contain the two block headers with the same height, sealed by the same validator. Upon verifying the evidence, the offending validator is slashed as follows:
 
-- (S)he cannot claim the reward on that day.
-- (S)he will be slashed 500,000 self-delegated RON
-- (S)he will be put in jail for 2<sup>63</sup>-1 blocks, i.e., (s)he is not allowed to be a validator in the future.
+* The validator can't claim the reward on that day.
+* The validator gets slashed the minimum staking amount of self-delegated RON.
+* The validator is put in jail for $2^{63}-1$ blocks and is banned from becoming a validator in the future.
 
-### Unavailability validators
+### Unavailability validator
 
-The performance of Ronin relies on everyone in the validator set can produce blocks timely when it is their turn. If the validators miss their turn to create blocks, it will hurt the performance of the system. Thus, we introduce a slashing logic for unavailability to penalize the validators that missed too many blocks.
+The performance of Ronin relies on the ability of everyone in the validator set to produce blocks on time when it's their turn. If a validator misses their turn, it affects the performance of the entire system. Thus, we implemented a mechanism that penalizes validators who miss too many blocks.
 
-We use a smart contract to record the number of missed blocks of each validator. If the number of missed blocks is above some predefined threshold, the validator will be slashed accordingly.
+We use a smart contract to record the number of missed blocks for each validator. If the number of missed blocks exceeds a predefined threshold, the validator gets slashed.
 
 #### Tier 1 validator slashing
 
-If a validator missed more than 50 blocks in a day, (s)he cannot claim the reward on that day.
+If a validator misses more than $50$ blocks a day, they can't claim commission and staking rewards on that day.
 
 #### Tier 2 validator slashing
 
-If a validator missed more than 150 blocks in a day, the offending validator will be slashed as follows.
+If a validator misses more than $150$ blocks a day, they get slashed as follows:
 
-- (S)he cannot claim the reward on that day.
-- (S)he will be slashed 10,000 amount of self-delegated RON
-- (S)he will be put in jail for 2 days (57,600 blocks). During jail time, he is not allowed to participate in the set of validators.
+* The validator can't claim commission and staking rewards on that day.
+* The validator is slashed $10,000$ of self-delegated RON.
+* The validator is jailed for $\approx2$ days ($57,600$ blocks) and is banned from the validator set while in jail.
 
-#### Credit score and bail out for tier 2 validator slashing
+##### Credit score system and bailout
+While we encourage validators to be online and produce blocks in turn, technical issues can still happen. A validator might be well-performing, but if their machine suddenly crashes, they get slashed and jailed.
 
-While we encourage the validators to be online and produce blocks in turn, technical issues can happen sometimes. As we describe in the “Tier 2 validator slashing” paragraph, if a validator is unavailable (e.g., the validator's machine crashed), the validator may get slashed and be put in jail. If the validators are trusted organizations, we may not able to guarantee that 51% of the validators are honest (trusted).   
+Ronin's credit score system awards validators with credits that can be used to bail out of jail in the event of tier 2 validator slashing.
 
-We introduce a credit score system to allow the well-performance validators to bail out of jail. We award the well-performance validators (i.e., the validators who always produce blocks on turn) with some credits. When a validator gets slashed and put in jail, she/he can use the credit score to bail out of jail.
+Here's how this system works:
 
-- Every day, each validator (who is not in jail) will be given 50 credits. The validator loses 1 credit for every missed block. The maximum number of credits for a validator is 600.
-- A jailed validator can use 5 credits for each epoch to bail out of jail.
-- After getting bailed out, she/he can claim half of the reward for the remaining of the day.
+* Every day, each validator (who is not in jail) is given 50 credits. The maximum number of credits per validator is 600.
+* A validator loses 1 credit for every missed block.
+* A jailed validator can use 5 credits for each epoch to bail out of jail.
+* After getting bailed out, the validator can claim half of the reward for the remaining time of the day.
 
 #### Tier 3 validator slashing
 
-After being put in jail and getting bailed out, if the validator missed 50 more blocks within that day, (s)he will be slashed as follows.
+After being put in jail and getting bailed out, if the validator misses 50 more blocks within the day, they get slashed as follows:
 
-- The reward after bailing out will be removed.
-- (S)he will be slashed 10,000 amount of self-delegated RON
-- (S)he will be put in jail for 2 days (57,600 blocks). This time, the validator cannot use the credit score to bail out of jail.
+* The reward after bailing out is removed.
+* The validator is slashed $10,000$ of self-delegated RON.
+* The validator is jailed for $\approx2$ days ($57,600$ blocks). This time, the validator can't bail out.
 
-#### Temporary maintenance mode for validators
+#### Temporary maintenance mode
 
-Similar to the design of BSC, validators will be slashed in their absence (even when it is due to scheduled maintenance). Inspired by [BNB Evolution Proposal (BEP) 127](https://github.com/bnb-chain/BEPs/blob/master/BEP127.md), we allow the validators scheduling to enter a maintenance mode.
+Validators can schedule temporary maintenance, during which they don't get slashed for unavailability.
 
-### Unavailability bridge operators
+### Unavailability bridge operator
 
-We will slash the bridge operators who do not provide enough signatures. We use a smart contract to record the number of votes of the bridge operators.
+The system bridge operators for not providing enough signatures. There's a smart contract that records the number of the bridge operators' votes.
 
-#### Tier 1 operators slashing
+#### Tier 1 operator slashing
 
-If the bridge operators missed more than 10% votes, (s)he cannot claim the bridge reward on that day.
+If a bridge operator node misses more than 10% votes, the corresponding validator can't claim the bridge reward on that day.
 
-#### Tier 2 operators slashing
+#### Tier 2 operator slashing
 
-If the bridge operators missed more than 20% votes, the offending governor will be slashed as follows.
+If a bridge operator misses more than 20% votes, the corresponding validator gets slashed as follows:
 
-- (S)he cannot claim the bridge reward on that day.
-- The corresponding validator cannot claim the reward on that day.
-- The corresponding validator will be put in jail for at most 2 days (57,600 blocks).
-
-Note that, after the corresponding validator is put in jail, (s)he cannot use the credit score to bail out. 
+* The validator can't claim any rewards on that day.
+* The validator is jailed for $\approx2$ days ($57,600$ blocks) with no option to bail out.
 
 ## Governance
 
-Trusted organizations also take the role of governance. The governance is responsible for the following tasks:
+In addition to producing blocks, Governing Validators are in charge of the following tasks:
 
-- Update the system parameters, e.g., slash thresholds. Add/remove trusted organizations.
-- Sync the set of bridge operators to the Ethereum chain every day.
+* Updating the system parameters, such as slash thresholds. 
+* Adding or removing other Governing Validators.
+* Syncing the set of bridge operators to the Ethereum chain every day.
 
-We require 9/11 trusted organizations’ votes to perform the above tasks. The trusted organization that does not sync the set of bridge operators to the Ethereum chain for 3 consecutive days will get slashed 10,000 RON.
+We require $10/12$ Governing Validators' votes to perform the above tasks. A Governing Validator who doesn't sync the set of bridge operators to the Ethereum chain for three consecutive days gets slashed $10,000$ RON.
 
-
-**Disclaimer:**  This whitepaper is a work in progress and can be updated in the future.
+**Disclaimer:**  This white paper is a work in progress and can be updated in the future.
