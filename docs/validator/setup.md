@@ -24,8 +24,7 @@ Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
   * 100 GB SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
-## Steps
-To set up a node, follow these steps:
+## Set up and run a node
 
 1. Create subdirectories.
 ```
@@ -34,7 +33,7 @@ mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-2. Create a `docker-compose` configuration with the following contents.
+1. Create a `docker-compose` configuration with the following contents.
 
 ```
 cd /axie/ronin-manager  && vim docker-compose.yml

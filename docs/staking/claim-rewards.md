@@ -8,6 +8,8 @@ import stepFour from './claimed-rewards.png'
 
 # Claim your rewards
 
+This page explains how to claim staking rewards to your Ronin Wallet.
+
 1. Go to the [staking dashboard](https://saigon-staking.roninchain.com/) and select **My Staking**.
 2. Under **CLAIMABLE REWARDS**, click **Claim all**.
 
