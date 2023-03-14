@@ -192,11 +192,11 @@ const sidebars = {
                 label: 'View profile',
                 id: 'validator/view-profile',
               },
-              {
-                type: 'doc',
-                label: 'View analytics',
-                id: 'validator/view-analytics',
-              },
+              // {
+              //   type: 'doc',
+              //   label: 'View analytics',
+              //   id: 'validator/view-analytics',
+              // },
             ],
             },
             {
