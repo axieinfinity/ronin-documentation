@@ -7,7 +7,7 @@ import valOnboardingStepFive from './onboarding-step-5.png'
 
 # Become a validator
 
-This page explains how to become a validator on the Ronin network.
+This page explains how to register as a validator on Ronin.
 
 ## Validator roles
 
@@ -16,7 +16,7 @@ There are three validator roles:
 * **Standard Validator.** Every day, at least 10 Validator Candidates with the highest amount staked are selected as Standard Validators. The system records your total staking amount at 00:00 UTC every day for the selection process. 
 * **Governing Validator.** The validators chosen by the community and Sky Mavis to ensure network security. Governing Validators are validators by default, and they account for more than half of the total validator pool.
 
-## Steps
+## Register as a Validator Candidate
 
 1. Go to the [staking dashboard](https://saigon-staking.roninchain.com/) and click **Become a validator**. 
 <img src={becomeValidator} width={1280} />
@@ -37,8 +37,12 @@ Done!
 
 <img src={valOnboardingStepFive} width={1280} />
 
-Now that you're a Validator Candidate, we recommend that you deposit some RON
-to the following addresses to avoid [bridge operator slashing](slashing#unavailability-bridge-operator)
-should you be selected as a Standard Validator:
+:::caution
+
+Now that you're a Validator Candidate, we advise that you deposit some RON
+into the following addresses to avoid [bridge operator slashing](slashing#unavailability-bridge-operator)
+should you be selected as a validator:
 * Bridge operator address: RON is required to automatically sign transactions on the bridge every epoch.
 * Bridge voter address (if you’re a Governing Validator): RON is required to automatically sign transactions when syncing the set of bridge operators.
+
+:::
