@@ -387,13 +387,14 @@ const sidebars = {
         description: 'Community information and a contribution guide.',
       },
       items: [
+        'community/join',
         {
           type: 'category',
-          label: 'Contribution',
+          label: 'Contribute',
           link: {
             type: 'generated-index',
-            title: 'Contribution',
-            description: 'Contribute to this documentation.'
+            title: 'Contribute to documentation',
+            description: 'Contribute to documentation.'
           },
           items: [
             'community/contribution/contribution-guide',
@@ -419,21 +420,6 @@ const sidebars = {
         'community/council',
         'community/governance',
         'community/grants',
-        {
-          type: 'link',
-          label: 'Discord',
-          href: 'https://discord.gg/P5GgF7SK',
-        },
-        {
-          type: 'link',
-          label: 'Twitter',
-          href: 'https://twitter.com/ronin_network',
-        },
-        {
-          type: 'link',
-          label: 'Newsletter',
-          href: 'https://roninblockchain.substack.com/',
-        },
       ],
     },
     // Resources

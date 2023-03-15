@@ -1,5 +1,5 @@
 ---
-description: Ronin bug bounty program
+description: Ronin bug bounty
 ---
 
 # Bug bounty
