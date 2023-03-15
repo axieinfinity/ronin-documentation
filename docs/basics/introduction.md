@@ -4,12 +4,6 @@ description: Introduction to Ronin Network
 ---
 # Introduction
 
-:::caution
-
-Note to self: Salvage this page: https://litepaper.roninchain.com
-
-:::
-
 Ronin is an Ethereum sidechain built by Sky Mavis, the developers of Axie Infinity. It supports EVM-compatible smart contracts and protocols so that developers are able to build high-performance, feature-rich blockchain projects. Ronin was specifically customized to be a long term scaling solution for Axie Infinity, meaning it’s optimized to enable virality and to provide global access to the blockchain gaming revolution. These aspects make Ronin a natural fit for collectibles, art, and, of course, gaming. 
 
 In its current state, Ronin is a Byzantine Fault Tolerant proof of authority (POA) network operated by validators. At the bootstrap of the network, carefully selected, trusted validators were predefined to secure the network. Now, validators can be added or removed if the decision is approved by the majority of currently active validators.
@@ -20,7 +14,7 @@ Ronin means “a samurai without a master,” and this idea mirrors the motivati
 
 ## Tokenomics
 
-The token is RON. For more information, see [Tokenomics](./platform/tokenomics.md).
+The token is RON. For more information, see [Tokenomics](./tokenomics.md).
 
 ## Network configurations
 
@@ -28,8 +22,8 @@ Mainnet and testnet
 
 ## Roadmap
 
-See [Roadmap](./platform/roadmap.md).
+See [Roadmap](./roadmap.md).
 
 ## White paper
 
-See [White paper](./white-paper.md)
+See [White paper](./roadmap.md)

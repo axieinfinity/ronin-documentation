@@ -3,7 +3,7 @@ description: Deploy smart contracts using Truffle
 ---
 # Deploy using Truffle
 
-For deploying on testnet, use the [Saigon RPC](../../basics/platform/configs/testnet.md) in the config files.
+For deploying on testnet, use the [Saigon RPC](./../../node-operators/configs/testnet.md) in the config files.
 
 For mainnet, refer to the [Builders Program](https://axie.substack.com/p/axie-infinity-builders-program) for more information.
 
