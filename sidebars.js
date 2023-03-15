@@ -29,6 +29,12 @@ const sidebars = {
         description: 'Learn the basic concepts of Ronin Network.',
       },
       items: [
+        // Introduction to wiki
+        {
+          type: 'doc',
+          label: 'Get started',
+          id: 'basics/get-started',
+        },
         // Introduction to Ronin
         {
           type: 'doc',
@@ -41,21 +47,23 @@ const sidebars = {
           label: 'History of Ronin',
           id: 'basics/history',
         },
+        // White paper
+        'basics/white-paper',
         // Terminology
         {
           type: 'doc',
-          label: 'Terminology',
-          id: 'basics/terminology',
+          label: 'Key concepts',
+          id: 'basics/key-concepts',
         },
         // Decentralization
         'basics/decentralization',
-        // Components
+        // Applications
         {
           type: 'category',
-          label: 'Components',
+          label: 'Applications',
           link: {
             type: 'generated-index',
-            title: 'Components',
+            title: 'Applications',
           },
           items: [
             // Ronin Bridge
@@ -64,51 +72,27 @@ const sidebars = {
               label: 'Ronin Bridge',
               link: {
                 type: 'doc',
-                id: 'basics/components/ronin-bridge/ronin-bridge',
+                id: 'basics/applications/ronin-bridge/ronin-bridge',
               },
               items: [
                 // Governance
-                'basics/components/ronin-bridge/governance',
+                'basics/applications/ronin-bridge/governance',
                 // Fee structure
-                'basics/components/ronin-bridge/fee-structure',
+                'basics/applications/ronin-bridge/fee-structure',
                 // Withdrawal limits
-                'basics/components/ronin-bridge/withdrawal-limits',
+                'basics/applications/ronin-bridge/withdrawal-limits',
               ],
             },
             // Ronin Explorer
-            'basics/components/ronin-explorer',
-            // dApps
-            'basics/components/dapps',
+            'basics/applications/ronin-explorer',
+            // Katana Swap
+            'basics/applications/katana',
           ],
         },
-        // Platform
-        {
-          type: 'category',
-          label: 'Platform',
-          link: {
-            type: 'generated-index',
-            title: 'Platform',
-          },
-          items: [
-            // Roadmap
-            'basics/platform/roadmap',
-            // Tokenomics
-            'basics/platform/tokenomics',
-            // Configurations
-            {
-              type: 'category',
-              label: 'Configurations',
-              items: [
-                // Mainnet
-                'basics/platform/configs/mainnet',
-                // Testnet
-                'basics/platform/configs/testnet',
-              ],
-            },
-            // Transaction life cycle
-            'basics/platform/transaction',
-          ],
-        },
+        // Roadmap
+        'basics/roadmap',
+        // Tokenomics
+        'basics/tokenomics',
         // Roles
         {
           type: 'category',
@@ -126,16 +110,8 @@ const sidebars = {
             'basics/roles/developer',
           ],
         },
-        // White paper
-        'basics/white-paper',
         // Security audits
         'basics/audits',
-        // Introduction to wiki
-        {
-          type: 'doc',
-          label: 'Wiki overview',
-          id: 'basics/wiki',
-        },
       ],
     },
     // Delegators
@@ -168,21 +144,11 @@ const sidebars = {
             'delegators/stake/withdraw',
           ],
         },
-        // Rewards
+        // Claim rewards
         {
-          type: 'category',
-          label: 'Rewards',
-          link: {
-            type: 'generated-index',
-            title: 'Rewards',
-            description: 'Learn about reward types and how to claim rewards.',
-          },
-          items: [
-            // Reward types
-            'delegators/rewards/types',
-            // Claim rewards
-            'delegators/rewards/claim',
-          ],
+          type: 'doc',
+          label: 'Claim rewards',
+          id: 'delegators/rewards/claim',
         },
         // FAQ
         {
@@ -243,7 +209,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Manage profile', 
-            description: 'Manage your profile, view analytics and activities.',
+            description: 'Manage your profile, view analytics and activity, change commission rate.',
           },
           items: [
             // Change commission rate
@@ -252,7 +218,7 @@ const sidebars = {
             'validators/manage-profile/maintenance',
             // Renounce role
             'validators/manage-profile/renounce',
-            // View activity log
+            // View activity
             'validators/manage-profile/activities',
             // View profile
             'validators/manage-profile/profile',
@@ -300,37 +266,41 @@ const sidebars = {
         'node-operators/minimum-requirements',
         {
           type: 'category',
-          label: 'Mainnet guides',
+          label: 'Mainnet',
           link: {
             type: 'generated-index',
-            title: 'Mainnet guides',
+            title: 'Mainnet',
           },
           items: [
-            // Run a validator node (mainnet)
+            // Configuration
+            'node-operators/configs/mainnet',
+            // Run a validator node
             'node-operators/validator-setup-m',
-            // Run a bridge operator node (mainnet)
+            // Run a bridge operator node
             'node-operators/bridge-setup-m',
-            // Run a non-validator-node (mainnet)
+            // Run a non-validator-node
             'node-operators/non-validator-setup-m',
-            // Run a full archive node (mainnet)
+            // Run a full archive node
             'node-operators/archive-setup-m',
           ],
         },
         {
           type: 'category',
-          label: 'Testnet guides',
+          label: 'Testnet',
           link: {
             type: 'generated-index',
-            title: 'Testnet guides',
+            title: 'Testnet',
           },
           items: [
-            // Run a validator node (testnet)
+            // Configuration
+            'node-operators/configs/testnet',
+            // Run a validator node
             'node-operators/validator-setup-t',
-            // Run a bridge node (testnet)
+            // Run a bridge node
             'node-operators/bridge-setup-t',
-            // Run a non-validator-node (testnet)
+            // Run a non-validator-node
             'node-operators/non-validator-setup-t',
-            // Run a full archive node (testnet)
+            // Run a full archive node
             'node-operators/archive-setup-t',
           ],
         },
