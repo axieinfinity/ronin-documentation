@@ -117,7 +117,7 @@ const sidebars = {
     // Delegators
     {
       type: 'category',
-      label: 'Delegators',
+      label: 'Delegator',
       link: {
         type: 'generated-index',
         title: 'Delegators',
@@ -186,13 +186,13 @@ const sidebars = {
             'validators/stake/withdraw',
           ],
         },
-        // Rewards
+        // Claim rewards
         {
           type: 'category',
-          label: 'Rewards',
+          label: 'Claim rewards',
           link: {
             type: 'generated-index',
-            title: 'Rewards',
+            title: 'Claim rewards',
             description: 'Learn about reward types and how to claim rewards.'
           },
           items: [
@@ -226,8 +226,8 @@ const sidebars = {
             'validators/manage-profile/analytics',
           ],
         },
+        // Slashing and bailout
         {
-          // Slashing and bailout
           type: 'category',
           label: 'Slashing and bailout',
           link: {
@@ -240,6 +240,24 @@ const sidebars = {
             'validators/slashing/slashing',
             // Bailout
             'validators/slashing/bailout',
+          ],
+        },
+        // Governance
+        {
+          type: 'category',
+          label: 'Governance',
+          link: {
+            type: 'generated-index',
+            title: 'Governance', 
+            description: 'On-chain governance through proposals raised and voted for by Governing Validators.',
+          },
+          items: [
+            // Overview
+            'validators/governance/overview',
+            // Create a proposal
+            'validators/governance/create',
+            // Vote for a proposal
+            'validators/governance/vote',
           ],
         },
         // FAQ
@@ -390,11 +408,11 @@ const sidebars = {
         'community/join',
         {
           type: 'category',
-          label: 'Contribute',
+          label: 'Contribution',
           link: {
             type: 'generated-index',
-            title: 'Contribute to documentation',
-            description: 'Contribute to documentation.'
+            title: 'Contribute to this documentation',
+            description: 'Contribution guide, style guide, and templates—all you need to contribute to the Ronin documentation.'
           },
           items: [
             'community/contribution/contribution-guide',

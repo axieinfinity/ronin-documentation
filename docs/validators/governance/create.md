@@ -1,5 +1,5 @@
 ---
-description: Create a proposal
+description: How to create a proposal on Ronin
 ---
 
 # Create a proposal
