@@ -19,14 +19,14 @@ The quantity of RON reserved for various network functions, as a percentage of t
 * Sky Mavis: 30%
 * Ecosystem fund: 15%
 
-<img src={distribution} width={800} />
+<img src={distribution} width={600} />
 
 After 5 years, gas and protocol fees will totally replace staking rewards.
 
 ## Token release schedule
 The maximum supply of RON will be released after 294 months since the start of issuance. Some delays in issuance related to staking and community rewards should be expected.
 
-<img src={totalSupply} width={800} />
+<img src={totalSupply}/>
 
 For more information, see the [detailed issuance sheet](https://docs.google.com/spreadsheets/d/1gPEbIhTLHNAupXDj71IJsF5T0oe1kB4QBY54vd74Kvo/edit#gid=0).
 
