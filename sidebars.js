@@ -117,7 +117,7 @@ const sidebars = {
     // Delegators
     {
       type: 'category',
-      label: 'Delegator',
+      label: 'Delegators',
       link: {
         type: 'generated-index',
         title: 'Delegators',
