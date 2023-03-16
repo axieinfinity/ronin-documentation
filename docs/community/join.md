@@ -1,16 +1,14 @@
 ---
-description: Join Ronin community
+description: Welcome to the Ronin community
 ---
 
 # Join our community
 
 ## Welcome to the Ronin community
 
-Join our community of blockchain enthusiasts, developers, and crypto learners. Let's build a responsible data economy and empower users worldwide to take back their online privacy.
+Join our community of blockchain enthusiasts, developers, and crypto learners. We look forward to working together on our mission to bring blockchain to mass adoption through fun and practical applications.
 
-Mission is to bring blockchain to mass adoption through fun and practical applications aka gaming.
-
-## Social media
+## Social media channels
 
 Stay informed on the latest Ronin news, events, and programs by joining our social media channels:
 

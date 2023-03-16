@@ -1,5 +1,5 @@
 ---
-description: Overview of RON economy
+description: RON token quick facts, distribution breakdown, and release schedule
 ---
 
 import distribution from './assets/distribution.png';

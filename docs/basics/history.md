@@ -1,5 +1,5 @@
 ---
-description: History of Ronin
+description: Read about the Ronin's journey from the beginning to the present day
 ---
 
 # History

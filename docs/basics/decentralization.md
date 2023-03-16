@@ -1,5 +1,5 @@
 ---
-description: Decentralization
+description: Ronin's approach to decentralization
 ---
 
 # Decentralization
