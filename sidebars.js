@@ -190,10 +190,10 @@ const sidebars = {
         // Claim rewards
         {
           type: 'category',
-          label: 'Claim rewards',
+          label: 'Rewards',
           link: {
             type: 'generated-index',
-            title: 'Claim rewards',
+            title: 'Rewards',
             description: 'Learn about reward types and how to claim rewards.'
           },
           items: [
@@ -257,7 +257,7 @@ const sidebars = {
             'validators/governance/overview',
             // Create a proposal
             'validators/governance/create',
-            // Vote for a proposal
+            // Vote on a proposal
             'validators/governance/vote',
           ],
         },
@@ -409,28 +409,29 @@ const sidebars = {
         'community/join',
         {
           type: 'category',
-          label: 'Contribution',
+          label: 'Become a contributor',
           link: {
             type: 'generated-index',
-            title: 'Contribute to this documentation',
+            title: 'Become a contributor',
             description: 'Contribution guide, style guide, and templates—all you need to contribute to the Ronin documentation.'
           },
           items: [
-            'community/contribution/contribution-guide',
-            'community/contribution/style-guide',
+            'community/contribute/guide',
+            'community/contribute/style',
             {
               type: 'category',
               label: 'Templates',
               link: {
               type: 'generated-index',
-              title: 'Templates', 
+              title: 'Documentation templates', 
               description: 'Templates used to create this documentation.',
             },
             items: [
-              'community/contribution/templates/concept',
-              'community/contribution/templates/task',
-              'community/contribution/templates/reference',
-              'community/contribution/templates/troubleshooting',
+              'community/contribute/templates/concept',
+              'community/contribute/templates/task',
+              'community/contribute/templates/reference',
+              'community/contribute/templates/troubleshooting',
+              'community/contribute/templates/tutorial',
               ],
             },
           ],
