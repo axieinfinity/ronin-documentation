@@ -1,5 +1,5 @@
 ---
-description: Grants programs
+description: Grants programs and how to apply
 ---
 
-# Grants programs
+# Apply for grants

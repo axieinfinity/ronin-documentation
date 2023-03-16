@@ -1,5 +1,5 @@
 ---
-description: Vote on a proposal
+description: How to vote on a proposal
 ---
 
 # Vote on a proposal

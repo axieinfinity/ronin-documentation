@@ -1,5 +1,5 @@
 ---
-description: Governance
+description: Off-chain governance
 ---
 
 # Governance
