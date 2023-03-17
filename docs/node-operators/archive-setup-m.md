@@ -3,10 +3,10 @@ description: Set up and run an archive node
 ---
 # Run a full archive node (mainnet)
 
-This page describes how to set up and run an archive Ronin node.
+This page describes how to set up and run an archive Ronin node on mainnet.
 
 ## Latest release
-### RPC Node
+### RPC node
 * [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
 * [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 

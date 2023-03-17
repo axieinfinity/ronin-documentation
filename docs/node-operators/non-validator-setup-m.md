@@ -1,12 +1,12 @@
 ---
-description: Set up and run an non validator node
+description: Set up and run a non-validator node on mainnet
 ---
 # Run a full node (mainnet)
 
 This page describes how to set up and run a non validator Ronin node.
 
 ## Latest release
-### RPC Node
+### RPC node
 * [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
 * [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 
