@@ -10,7 +10,7 @@ const currentYear = new Date().getFullYear()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ronin Network',
+  title: 'Ronin',
   tagline: 'Lets build together',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -71,12 +71,17 @@ const config = {
         maxHeadingLevel: 5,
       },
       navbar: {
-        title: 'Ronin Network',
+        title: 'Ronin',
         logo: {
-          alt: 'Ronin Network Logo',
+          alt: 'Ronin logo',
           src: 'img/logo.svg',
         },
         items: [
+          // Get started
+          {
+            label: 'Get started',
+            to: 'docs/basics/get-started',
+          },
           // Basics
           {
             label: 'Basics',
@@ -159,10 +164,6 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Contribution',
-                to: 'docs/category/contribution',
-              },
-              {
                 label: 'Discord',
                 href: 'https://discord.gg/P5GgF7SK',
               },
@@ -174,6 +175,10 @@ const config = {
                 type: 'link',
                 label: 'Newsletter',
                 href: 'https://roninblockchain.substack.com/',
+              },
+              {
+                label: 'Join as a contributor',
+                to: 'docs/category/contribution',
               },
             ],
           },

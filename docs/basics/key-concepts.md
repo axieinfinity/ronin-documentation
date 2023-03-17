@@ -1,5 +1,5 @@
 ---
-description: Key concepts essential to understanding Ronin 
+description: Basic concepts related to blockchain in general and to Ronin specifically 
 ---
 
 # Key concepts

@@ -1,6 +1,6 @@
 ---
 label: Introduction
-description: Introduction to Ronin Network
+description: Learn what the Ronin network is
 ---
 # Introduction
 

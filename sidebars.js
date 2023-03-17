@@ -25,16 +25,16 @@ const sidebars = {
       label: 'Basics',
       link: {
         type: 'generated-index',
-        title: 'Basics',
-        description: 'Learn the basic concepts of Ronin Network.',
+        title: 'Ronin basics',
+        description: 'Everything you need to know about Ronin.',
       },
       items: [
-        // Introduction to wiki
-        {
-          type: 'doc',
-          label: 'Get started',
-          id: 'basics/get-started',
-        },
+        // Get started
+        // {
+        //   type: 'doc',
+        //   label: 'Get started',
+        //   id: 'basics/get-started',
+        // },
         // Introduction to Ronin
         {
           type: 'doc',
@@ -47,14 +47,14 @@ const sidebars = {
           label: 'History of Ronin',
           id: 'basics/history',
         },
-        // White paper
-        'basics/white-paper',
-        // Terminology
+        // Key concepts
         {
           type: 'doc',
           label: 'Key concepts',
           id: 'basics/key-concepts',
         },
+        // White paper
+        'basics/white-paper',
         // Decentralization
         'basics/decentralization',
         // Applications
@@ -100,6 +100,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Roles',
+            description: 'Information about the main actors on Ronin—who they are and what they do.',
           },
           items: [
             // Validator
@@ -165,7 +166,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'Validators', 
-        description: 'Stake tokens, claim rewards, and manage your validator profile.',
+        description: 'Register as a validator, stake tokens, claim rewards, and manage your validator profile.',
       },
       items: [
         // Become a validator
