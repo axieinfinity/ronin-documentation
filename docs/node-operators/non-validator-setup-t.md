@@ -1,45 +1,50 @@
 ---
-description: Set up and run a non-validator node
+description: Set up and run a non-validator node on testnet.
 ---
-# Run a non-validator-node (testnet)
+# Run a non-validator node
 
-* Download the latest version of Ronin manager and uncompress:
+This page describes how to set up a non-validator node on testnet. This node is also known as an RPC (remote procedure call) node which serving RPC requests.
 
+## Latest release
+### RPC node
+* [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
+* [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
+
+Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar`
+Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
+
+## Prerequisites
+
+* You must be a root user.
+* Your machine must meet the minimum hardware requirements:
+  * 4 CPU cores
+  * 8 GB RAM
+  * 100 GB SSD
+* You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
+
+## Steps
+
+1. In your working directory, create subdirectories by running the following commands for storing our config, and chaindata.
 ```
-$ curl -O -L -k https://stats.roninchain.com/downloads/ronin-manager-linux-latest.tar.gz
-
-$ tar xf ronin-manager-linux-latest.tar.gz
-```
-
-* Initialize the environment by filling your params and instance name (you can check it on stats.roninchain.com later) and replacing the node image with the current version in the `.env` file:
-
-```
-$ cd pkg-ronin-manager-0.9.x
-
-$ cp config/main.env .env
-
-$ vi .env
-
-
-# INSTANCE_NAME the name of your instance that you want to display on the website
-INSTANCE_NAME=
-
-# Additional Params
-RONIN_PARAMS=--http.api eth,web3,personal
-
-# Replace latest NODE_IMAGE
-NODE_IMAGE=axieinfinity/ronin-mainnet:v2.4.0-6034a62cf
-```
-
-* Remove the `docker-compose.yml` file and create a new one. The default configuration is for Ronin validators, running non-validating should use the new one:
-
-```
-$ rm -rf docker-compose.yml
-
-$ vi docker-compose.yml
+mkdir -p  /axie/ronin-manager
+mkdir -p  ~/bridgedata-v2
+mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-Your new docker-compose file must contain only node service, it should be like this:
+2. Navigate to the ronin-manager directory.
+```
+cd /axie/ronin-manager
+```
+
+3. Create a docker-compose file by running the following command.
+
+```
+vim docker-compose.yml
+```
+
+Followed by this step:
+
+4. Paste the following contents into the file:
 
 ```
 version: "3"
@@ -47,7 +52,6 @@ services:
   node:
     image: ${NODE_IMAGE}
     stop_grace_period: 5m
-    restart: always
     hostname: node
     container_name: node
     ports:
@@ -59,72 +63,65 @@ services:
     volumes:
       - ~/.skymavis/chaindata:/ronin
     environment:
-      - SYNC_MODE=snap
+      - SYNC_MODE=full
       - PASSWORD=${PASSWORD}
       - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
       - BOOTNODES=${BOOTNODES}
       - NETWORK_ID=${NETWORK_ID}
-      - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
       - RONIN_PARAMS=${RONIN_PARAMS}
-
+      - VERBOSITY=${VERBOSITY}
+      - MINE=false
+      - GASPRICE=${GASPRICE}
+      - GENESIS_PATH=${GENESIS_PATH}
+      - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-* Pull the latest image and run node:
+5. Create an .env file by running the following command:
 
 ```
-$ ./ronin-manager install
-
-$ ./ronin-manager pull
-
-$ ./ronin-manager start
+vim .env
 ```
 
-* After some minutes, verify your node is connecting and up to date with the network at [stats.roninchain.com](https://stats.roninchain.com)
-
-## Start node from a snapshot
-
-This is optional.
-
-A snapshot is a complete view of the Ronin Network state at a given block. 
-You can use a snapshot to setup your Ronin node and get it up-to-dated faster. 
-
-1. Stop your node
+6. Paste the following contents into the file, replacing the insert-... placeholder values with your own:
 
 ```
-$ ./ronin-manager stop
+# BOOTNODES address of the bootnode to connect to the network, will be auto-filled
+BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
+# NETWORK_ID network id
+NETWORK_ID=40925
+# Setting for oracle services, where staging = rinkey + testnet, and production = ethereum + mainnet.
+DEPLOYMENT=test
+# Setting nodekey
+GASPRICE=20000000000
+
+# INSTANCE_NAME is the name of your instance that you want to display on the stats page.
+INSTANCE_NAME=insert-your-instance-name
+
+# Password to protect your private key.
+PASSWORD=123456
+
+CONFIG_PATH=config.testnet.json
+NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9
+VERBOSITY=3
+
+CHAIN_STATS_WS_SECRET=xQj2MZPaN6
+CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
+GENESIS_PATH=testnet.json
+
+RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --miner.gasprice 20000000000 --txpool.nolocals
 ```
 
-2. Download chaindata and checksum
-
-You can get the lastest snapshot version from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repository.
+7. Download the snapshot in case you want to save the time
 
 ```
-$ curl -O -L -k https://storage.googleapis.com/chaindata/chaindata-0xe14eea.tar
-$ curl -O -L -k https://storage.googleapis.com/chaindata/checksum-0xe14eea.md5
-$ md5sum -c checksum-0xe14eea.md5
+cd ~/.skymavis/chaindata/data/ronin/
+curl https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar -o chaindata.tar && tar -xvf chaindata.tar
+mv chaindata-4-1-2023 chaindata
 ```
 
-3. Uncompress downloaded files
-
+8. Start the node by running the following command:
 ```
-$ tar -xvf chaindata-0xe14eea.tar
-```
-
-4. Remove the current chaindata folder
-
-Consider backing up this folder before removing
-
-```
-$ rm -rf ~/.skymavis/chaindata/data/ronin/chaindata
+cd  /axie/ronin-manager && docker-compose up -d 
 ```
 
-5. Move snapshot data to your chaindata folder
-
-```
-$ mv chaindata ~/.skymavis/chaindata/data/ronin/
-```
-
-6. Start your Ronin node
-```
-$ ./ronin-manager start
-```
+After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to verify that your node is connected and up to date with the network.
