@@ -11,8 +11,8 @@ import stepFour from './assets/fill-in-details.png';
 As a Governing Validator, you can vote on proposals created by other Governing Validators.
 
 ## Voting ratio
-* Proposals that are approved by more than or equal to 80% of Governing Validators will be executed.
-* Proposals that are rejected by more than or equal to 20% of Governing Validators will be rejected and closed.
+* A proposal is approved if at least 75% of the Governing Validators approved it.
+* A proposal is rejected (and closed) if at least 25% of the Governing Validators rejected it.
 * Proposals that are neither approved nor rejected within 14 days will expire and be closed automatically.
 
 ## Cast your vote
