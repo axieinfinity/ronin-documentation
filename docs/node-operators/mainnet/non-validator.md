@@ -1,9 +1,8 @@
 ---
 description: Set up and run a non-validator node on mainnet
-title: Run a non-validator (RPC) node
 ---
 
-# Run a non-validator node
+# Run a non-validator (RPC) node
 This page describes how to set up and run a non-validator node on mainnet. This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
 
 ## Latest release
