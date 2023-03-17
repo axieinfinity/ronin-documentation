@@ -3,12 +3,10 @@ description: Basic concepts related to blockchain in general and to Ronin specif
 ---
 
 # Key concepts
-
 Terms and examples to help you speak the industry lingo.
 
 ## A
 ### Address
-
 A blockchain address is used to send and receive funds of digital assets on a blockchain network. Every blockchain has wallet addresses in some form, and most look like a long string of letters and numbers. 
 
 For example, a Ronin address looks something like this: ronin:50460c4cd74094cd591455cad457e99c4ab8be0.
@@ -43,16 +41,21 @@ On Ronin, a client is the software needed to allow Ronin nodes to read blocks on
 A common application of a client is a cryptocurrency software wallet, such as [Ronin Wallet](#ronin-wallet).
 
 ### Commission
-
 Node operators collect *commissions* when their node earns a staking reward for delegators. A validator node earns a staking reward for participating in the consensus protocol each epoch. The *commission rate* is a fraction of the staking reward.
-### Consensus
 
+### Consensus
 An algorithm used to mandate agreement on the blockchain between all nodes. The blockchain, although being built in a decentralized way, eventually converges so that all nodes eventually agree on whether a given block is part of the chain or not.
 
 Ronin uses a combination of Delegated Proof of Stake (DPoS) and Proof of Authority (PoA) algorithms.
 
 ## D
-### dApp
+### Decentralized application (dApp)
+A decentralized application (dApp) makes use of blockchain technology to address use cases ranging from investment to lending to gaming and governance. While the front-end of a dApp may seem similar to a web application, its back-end processes don't use a centralized server and instead run on a decentralized network. For communication, dApps use wallet software (like Ronin Wallet) to interact with automated smart contracts on the blockchain.
+
+One example of a Ronin dApp is the [Katana](https://katana.roninchain.com) decentralized exchange.
+
+### Decentralized exchange (DEX)
+A decentralized exchange (DEX) is a financial services platform for buying, trading, and selling digital assets. On a DEX, users transact directly on the blockchain in a peer-to-peer (P2P) fashion without the need for a centralized intermediary.
 
 ### Delegated Proof of Stake (DPoS)
 Delegated Proof of Stake (DPoS) is a consensus mechanism with a distinct voting and delegation structure. A DPoS system allows users to delegate their own stake to a validator node of their choosing—and vote for the node to be selected as a validator in the next day. Selected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with users who delegated them as validators.
@@ -75,6 +78,10 @@ Ethereum launched in 2015 as a decentralized, blockchain-based global supercompu
 ### Gas
 Gas refers to the fees associated with transacting and executing smart contracts or decentralized applications (dApps) on the Ethereum blockchain. Ethereum blockchain processes happen through transactions that require gas. These gas costs are figured by measuring the computational power required for each action and how long each action takes. Gas costs are denoted in gwei, a denomination of ether (ETH), equal to 0.000000001 ETH. Gas was built into the system to reward validators who maintain network consensus. By adding a cost to each transaction, gas also acts as a spam mitigation tool that deters nefarious network activity.
 
+## H
+### Hard fork
+A hard fork is a software update that is not backwards compatible. In blockchain tech, a hard fork happens when new rules are introduced into the blockchain code that are not compatible with the rules of the blockchain's previous code.
+
 ## K
 ### Katana
 Every blockchain has its own flagship decentralized exchange (DEX), a place where users are able to swap tokens freely within the ecosystem. Ethereum has [Uniswap](https://uniswap.org/), Matic has [Quickswap](https://quickswap.exchange/) and Ronin has [Katana](https://katana.roninchain.com/#/swap). Better known as “Ronin DEX”, Katana allows users to swap between tokens within the Axie Infinity ecosystem without leaving the Ronin blockchain.
@@ -92,6 +99,7 @@ A node is a computer that performs a certain function on a blockchain network an
 
 On Ronin, the node types are as follows:
 * Validator node
+* Bridge operator node
 * Non-validator node (RPC)
 * Archive node
 
@@ -99,22 +107,23 @@ The validator node and non-validator node are *full* nodes—they store full blo
 
 The archive node, on the other hand, retains all historical data right back to genesis. It stores all of the information that a full node does and builds an archive of historical blockchain states.
 
-### Node operator
-A node operator is an individual who's in charge of setting up and running nodes for a validator. 
-
 #### Validator node
 A validator node is responsible for verifying and approving transactions
 submitted by users and blockchain clients. Upon the close of a transaction block, validator nodes are randomly chosen to validate block data, thus generating the subsequent block, and earning RON tokens as a reward.
 
-Each validator on Ronin has the responsibility to run a bridge operator alongside the validator node. The bridge operator is used to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. A validator who doesn't not run the bridge operator can't claim the block reward.
+#### Bridge operator node
+Each validator on Ronin has the responsibility to run a bridge operator node alongside the validator node. This node is used to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. A validator who doesn't not run the bridge operator node can't claim the block reward.
 
-#### Non-validator node
-While the validator nodes run the Ronin consensus protocol and earn rewards on block validation, a non-validator node—also known as an RPC (remote procedure call) node—only serves as a gateway for dApps to obtain relevant data on the Ronin blockchain.
+#### Non-validator node (RPC)
+While validator nodes run the Ronin consensus protocol and earn rewards on block validation, a non-validator node—also known as an RPC (remote procedure call) node—only serves as a gateway for decentralized applications to obtain relevant data on the Ronin blockchain.
 
 Specifically, an RPC node provides a mechanism for applications to query the blockchain for information, send transactions, and execute smart contracts.
 
 #### Archive node
 An archive node retains all historical data right back to genesis and is suited for making fast queries about historical states. This data represents units of terabytes, which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics. 
+
+### Node operator
+A node operator is an individual who's in charge of setting up and running nodes for a validator. 
 
 ## R
 ### Ronin
@@ -152,8 +161,10 @@ In blockchain tech, RPC is a method for dApps to communicate with a blockchain n
 A sidechain is an external secondary blockchain protocol that is connected to a primary blockchain network (mainchain). Sidechains are typically designed to allow for the transfer of data and value between themselves and the mainchain. For example, the Ronin sidechain allows for the transfer of assets from Ethereum to Ronin.
 
 ### Slashing
-
 Slashing is a process employed automatically by blockchain protocols that make use of a Proof-of-Stake (PoS) or related consensus mechanism. If a user stakes their crypto assets inside a validator node and the node behaves in a dishonest or malicious manner, the user can be penalized, resulting in a loss of a portion of the initial investment.
+
+### Smart contract
+A smart contract is a self-executing code or protocol that carries out a set of instructions that is verified on the blockchain. These contracts are trustless, autonomous, decentralized, and transparent; they are irreversible and unmodifiable once deployed.
 
 ### Solidity
 Solidity is the software development programming language designed specifically for Ethereum. Solidity is an object-oriented programming language designed for building smart contracts that work in unison with the Ethereum Virtual Machine (EVM) and the Ethereum network.
