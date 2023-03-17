@@ -250,7 +250,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Governance', 
-            description: 'On-chain governance through proposals raised and voted for by Governing Validators.',
+            description: 'On-chain governance through proposals raised and voted on by Governing Validators.',
           },
           items: [
             // Overview
