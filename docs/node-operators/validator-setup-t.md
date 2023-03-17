@@ -171,7 +171,7 @@ curl https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar -o 
 mv chaindata-4-1-2023 chaindata
 ```
 
-5. Start the node.
+5. Start the node by running the following command:
 ```
 cd  /axie/ronin-manager && docker-compose up -d 
 ```

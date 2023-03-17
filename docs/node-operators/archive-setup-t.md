@@ -100,7 +100,7 @@ GENESIS_PATH=testnet.json
 RONIN_PARAMS=--gcmode archive --http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --miner.gasprice 20000000000 --txpool.nolocals
 ```
 
-4. Start the node.
+4. Start the node by running the following command:
 ```
 cd  /axie/ronin-manager && docker-compose up -d 
 ```
