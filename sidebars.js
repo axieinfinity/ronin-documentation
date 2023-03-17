@@ -122,7 +122,8 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'Delegators',
-        description: 'Stake tokens, delegate your stake to validators, and claim rewards.'
+        description: 'Stake tokens, delegate your stake to validators, and claim rewards.',
+        slug: '/delegators',
       },
       items: [
         // Purchase RON
@@ -137,6 +138,7 @@ const sidebars = {
             type: 'generated-index',
             title: 'Stake',
             description: 'Move or withdraw your stake.',
+            slug: '/delegators/stake',
           },
           items: [
             // Move stake
@@ -167,6 +169,7 @@ const sidebars = {
         type: 'generated-index',
         title: 'Validators', 
         description: 'Register as a validator, stake tokens, claim rewards, and manage your validator profile.',
+        slug: '/validators',
       },
       items: [
         // Become a validator
@@ -178,7 +181,8 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Stake',
-            description: 'Increase or withdraw your RON stake.'
+            description: 'Increase or withdraw your RON stake.',
+            slug: '/validators/stake',
           },
           items: [
             // Increase stake
@@ -194,7 +198,8 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Rewards',
-            description: 'Learn about reward types and how to claim rewards.'
+            description: 'Learn about reward types and how to claim rewards.',
+            slug: '/validators/rewards',
           },
           items: [
             // Reward types
@@ -211,30 +216,32 @@ const sidebars = {
             type: 'generated-index',
             title: 'Manage profile', 
             description: 'Manage your profile, view analytics and activity, change commission rate.',
+            slug: '/validators/manage',
           },
           items: [
             // Change commission rate
-            'validators/manage-profile/commission',
+            'validators/manage/commission',
             // Schedule maintenance
-            'validators/manage-profile/maintenance',
+            'validators/manage/maintenance',
             // Renounce role
-            'validators/manage-profile/renounce',
+            'validators/manage/renounce',
             // View activity
-            'validators/manage-profile/activities',
+            'validators/manage/activity',
             // View profile
-            'validators/manage-profile/profile',
+            'validators/manage/profile',
             // View analytics
-            'validators/manage-profile/analytics',
+            'validators/manage/analytics',
           ],
         },
         // Slashing and bailout
         {
           type: 'category',
-          label: 'Slashing and bailout',
+          label: 'Slashing',
           link: {
             type: 'generated-index',
             title: 'Slashing and bailout', 
             description: 'Learn about the slashing penalties and rules for bailout.',
+            slug: '/validators/slashing',
           },
           items: [
             // Slashing
@@ -251,6 +258,7 @@ const sidebars = {
             type: 'generated-index',
             title: 'Governance', 
             description: 'On-chain governance through proposals raised and voted on by Governing Validators.',
+            slug: '/validators/governance',
           },
           items: [
             // Overview
@@ -354,6 +362,7 @@ const sidebars = {
         type: 'generated-index',
         title: 'Developers', 
         description: 'Build your decentralized application on Ronin Network.',
+        slug: '/developers',
       },
       items: [
         // API
@@ -369,10 +378,11 @@ const sidebars = {
             type: 'generated-index',
             title: 'Deploy smart contracts', 
             description: 'Guides for smart contract deployment.',
+            slug: '/developers/smart-contracts',
           },
           items: [
-            'developers/smart-contract/using-hardhat',
-            'developers/smart-contract/using-truffle',
+            'developers/smart-contracts/hardhat',
+            'developers/smart-contracts/truffle',
           ],
         },
         {
@@ -382,6 +392,7 @@ const sidebars = {
             type: 'generated-index',
             title: 'Integrate Ronin Wallet', 
             description: 'Guides for Ronin Wallet integration.',
+            slug: '/developers/ronin-wallet',
           },
           items: [
             'developers/ronin-wallet/integrate',
@@ -404,6 +415,7 @@ const sidebars = {
         type: 'generated-index',
         title: 'Community', 
         description: 'Community information and a contribution guide.',
+        slug: '/community',
       },
       items: [
         'community/join',
@@ -414,6 +426,7 @@ const sidebars = {
             type: 'generated-index',
             title: 'Contribute',
             description: 'Learn how to contribute to the Ronin documentation.',
+            slug: '/community/contribute',
           },
           items: [
             'community/contribute/guide',
@@ -425,6 +438,7 @@ const sidebars = {
               type: 'generated-index',
               title: 'Documentation templates', 
               description: 'Templates used to create this documentation.',
+              slug: '/community/contribute/templates',
             },
             items: [
               'community/contribute/templates/concept',
@@ -448,14 +462,10 @@ const sidebars = {
       label: 'Resources',
       link: {
         type: 'generated-index',
-        title: 'Resources', 
+        title: 'Resources',
+        slug: '/resources',
       },
       items: [
-        {
-          type: 'link',
-          label: 'GitHub',
-          href: 'https://github.com/axieinfinity/',
-        },
         'resources/other',
       ],
     },

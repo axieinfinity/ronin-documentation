@@ -90,12 +90,12 @@ const config = {
           // Delegators
           {
             label: 'Delegators',
-            to: 'docs/category/delegators',
+            to: 'docs/delegators',
           },
           // Validators
           {
             label: 'Validators',
-            to: 'docs/category/validators',
+            to: 'docs/validators',
           },
           // Node operators
           {
@@ -105,12 +105,12 @@ const config = {
           // Developers
           {
             label: 'Developers',
-            to: 'docs/category/developers',
+            to: 'docs/developers',
           },
           // Community
           {
             label: 'Community',
-            to: 'docs/category/community',
+            to: 'docs/community',
           },
           // Search
           {
@@ -134,8 +134,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Join',
+                label: 'Join Ronin community',
                 to: 'docs/community/join',
+              },
+              {
+                label: 'Contribute to documentation',
+                to: 'docs/community/contribute',
               },
             ],
           },
