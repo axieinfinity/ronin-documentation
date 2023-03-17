@@ -112,11 +112,6 @@ const config = {
             label: 'Community',
             to: 'docs/category/community',
           },
-          // Resources
-          {
-            label: 'Resources',
-            to: 'docs/category/resources',
-          },
           // Search
           {
             type: 'search',
@@ -136,49 +131,11 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Basics',
-                to: 'docs/category/basics',
-              },
-              {
-                label: 'Delegators',
-                to: 'docs/category/delegators',
-              },
-              {
-                label: 'Validators',
-                to: 'docs/category/validators',
-              },
-              {
-                label: 'Node operators',
-                to: 'docs/category/node-operators',
-              },
-              {
-                label: 'Developers',
-                to: 'docs/category/developers',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
-                label: 'Discord',
-                href: 'https://discord.gg/P5GgF7SK',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/ronin_network',
-              },
-              {
-                type: 'link',
-                label: 'Newsletter',
-                href: 'https://roninblockchain.substack.com/',
-              },
-              {
-                label: 'Join as a contributor',
-                to: 'docs/category/contribution',
+                label: 'Join',
+                to: 'docs/community/join',
               },
             ],
           },
@@ -188,6 +145,11 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/axieinfinity/',
+              },
+              {
+                type: 'link',
+                label: 'Newsletter',
+                href: 'https://roninblockchain.substack.com/',
               },
             ],
           },

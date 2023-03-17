@@ -409,11 +409,11 @@ const sidebars = {
         'community/join',
         {
           type: 'category',
-          label: 'Become a contributor',
+          label: 'Contribute',
           link: {
             type: 'generated-index',
-            title: 'Become a contributor',
-            description: 'Contribution guide, style guide, and templates—all you need to contribute to the Ronin documentation.'
+            title: 'Contribute',
+            description: 'Learn how to contribute to the Ronin documentation.',
           },
           items: [
             'community/contribute/guide',
