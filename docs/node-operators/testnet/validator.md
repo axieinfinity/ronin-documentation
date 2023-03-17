@@ -1,9 +1,9 @@
 ---
 description: Set up and run a validator node
 ---
-# Run a validator node (testnet)
+# Run a validator node
 
-This page describes how to set up a validator node and bridge operator node on the Ronin network.
+This page describes how to set up a validator node on testnet.
 
 ## Latest release
 ### Validator
@@ -14,7 +14,6 @@ Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.t
 Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 
 ### Bridge operator
-
 * [https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1)
 * [ghcr.io/axieinfinity/bridge:0.2.1-c15a725](https://github.com/axieinfinity/bridge-v2/pkgs/container/bridge/67046431?tag=0.2.1-c15a725)
 
@@ -27,20 +26,29 @@ Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
   * 100 GB SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
-## Steps
+## Set up and run
 
-1. In your working directory, create subdirectories by running the following commands for storing our config, and chaindata.
+1\. In your working directory, create subdirectories for the config and chain data by running the following commands:
+
 ```
 mkdir -p  /axie/ronin-manager
 mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-2. Create a `docker-compose` configuration with the following contents.
+2\. Navigate to the `ronin-manager` directory:
 
 ```
-cd /axie/ronin-manager  && vim docker-compose.yml
+cd /axie/ronin-manager
 ```
+
+3\. Create a `docker-compose` file:
+
+```
+vim docker-compose.yml
+```
+
+4\. Paste the following contents into the file:
 
 ```
 version: "3"
@@ -107,11 +115,13 @@ services:
       - node
 ```
 
-3. Create an `.env` file with the following contents, replacing the `insert-your-` placeholders with your credentials.
+5\. Create an `.env` file:
 
 ```
 vim .env
 ```
+
+6\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
 
 ```
 # BOOTNODES address of the bootnode to connect to the network, will be auto-filled
@@ -163,7 +173,7 @@ BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-operator-private-key
 BRIDGE_VOTER_PRIVATE_KEY=insert-your-voter-private-key
 ```
 
-4. Download the snapshot.
+7\. (Optional) Download the snapshot to save the time:
 
 ```
 cd ~/.skymavis/chaindata/data/ronin/
@@ -171,9 +181,9 @@ curl https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar -o 
 mv chaindata-4-1-2023 chaindata
 ```
 
-5. Start the node by running the following command:
+8\. Start the node:
 ```
 cd  /axie/ronin-manager && docker-compose up -d 
 ```
 
-After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to verify that your node is connected and up to date with the network.
+After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.

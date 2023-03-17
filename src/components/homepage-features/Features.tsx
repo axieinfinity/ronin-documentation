@@ -42,7 +42,7 @@ const featureList = [
     Icon: SignDirectionIcon,
     description: <>Set up and configure nodes to ensure their stable operation.</>,
     link: {
-      href: '/docs/category/node-operators',
+      href: '/docs/node-operators',
       title: 'Node operators',
     },
   },

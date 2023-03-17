@@ -1,20 +1,29 @@
 ---
-description: Set up and run a bridge operator node
+description: Set up and run a bridge operator node on mainnet
 ---
-# Run a bridge operator node (testnet)
-## Requirements
 
-- Ronin RPC URL is used to listen/trigger events from Ronin chain
-- Ethereum RPC URL (Alchemy, Infura, etc.) is used to listen/trigger events from Ethereum
-- Postgres DB to store events and tasks
+# Run a bridge operator node
+This page describes how to set up and run a bridge operator node on mainnet. 
+
+## Prerequisites
+* Ronin RPC (remote procedure call) URL to listen for events from Ronin chain and send events to Ronin chain.
+* Ethereum RPC URL (Alchemy, Infura, and others) to listen for events from Ethereum chain and send events to Ethereum.
+* Postgres database to store events and tasks.
 
 ## Set up and run
+1\. Navigate to the `ronin-manager` directory:
+   
+```
+cd /axie/ronin-manager
+```
 
-1. Create a `docker-compose` configuration with the following contents.
+2\. Create a `docker-compose` file:
 
 ```
-cd /axie/ronin-manager  && vim docker-compose.yml
+vim docker-compose.yml
 ```
+
+3\. Paste the following contents into the file:
 
 ```
 version: "3"
@@ -54,11 +63,14 @@ services:
     depends_on:
       - db
 ```
-3. Create an `.env` file with the following contents, replacing the `insert-your-` placeholders with your credentials.
+
+4\. Create an `.env` file:
 
 ```
 vim .env
 ```
+
+5\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
 
 ```
 # User for postgres account.
@@ -72,8 +84,8 @@ POSTGRES_DB=bridge
 PASSWORD=123456
 
 RPC_ENDPOINT=your-rpc-endpoint
-ETHEREUM_ENDPOINT=https://eth-goerli.g.alchemy.com/v2/your-ethereum-endpoint
-CONFIG_PATH=config.testnet.json
+ETHEREUM_ENDPOINT=https://eth-mainnet.g.alchemy.com/v2/your-ethereum-endpoint
+CONFIG_PATH=config.mainnet.json
 BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:v0.2.2-da196d9
 VERBOSITY=3
 
@@ -89,78 +101,70 @@ BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-operator-private-key
 BRIDGE_VOTER_PRIVATE_KEY=insert-your-voter-private-key
 ```
 
-There is a `docker-compose.yaml` file in `docker` directory. Modify `.env` file and run `bridge` with the following command
+6\. Start the node:
+
 ```
-docker-compose -f docker/docker-compose.yaml --env-file .env up -d
+docker-compose up -d
 ```
+
+After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
+
 ## Configuration
-The config file can be found in the `config` directory. There are 2 main components in the configuration: listeners and database
+The configuration file is located in the `config` directory. There are two main objects in the configuration: `listeners` and `database`.
 
-### listeners (object)
-List all chains that Bridge is listening to. Each name reflects a specific function defined [here](https://github.com/axieinfinity/bridge-v2/blob/master/internal/init_listeners.go).
+### listeners
+Lists all chains that the bridge is listening to. Each `name` reflects a specific function defined in https://github.com/axieinfinity/bridge-v2/blob/master/internal/main.go. For example, `Ronin` reflects the function `InitRonin`, while `Ethereum` points to `InitEthereum`. Therefore, don't change the names, otherwise the program can't run correctly.
 
-For example `Ronin` reflects with function `InitRonin`
+#### chainId
+* Type: `hex string`
+* Description: Chain's identity (ronin: 0x7e4, ethereum: 0x1).
 
-Therefore, do not change the name, otherwise, the program cannot run properly.
+#### rpcUrl
+* Type: `string`
+* Description: RPC URL of the chain that is used to query new events or submit transactions to.
 
-#### 1. chainId:
-- type: `hex string`
+#### blockTime
+* Type: `number`
+* Unit: `seconds`
+* Description: The time a new block is generated, used periodically to listen to new events from the new block.
 
-Chain's identity (ronin: 0x7e4, ethereum: 0x1)
+#### safeBlockRange
+Safe block range that guarantees that a reorg can't happen. 
+* Type: `number`
+* Unit: `blocks`
 
-#### 2. rpcUrl:
-- type: `string`
+#### maxTasksQuery
+Type: `number`
 
-RPC URL of chain which is used to query new events or submit transactions to.
+Maximum number of pending and processing tasks queried from the database.
 
-#### 3. blockTime:
-- type: `number`
-- unit: `seconds`
+#### transactionCheckPeriod
+* Type: `number`
+* Unit: `seconds`
 
-The time of a new block is generated which is used periodically to listen to new events from the new block,
+Period of checking whether a transaction is mined or not by querying its receipt. If a receipt is found, the system tries three more times to ensure the transaction isn't replaced because of a reorg.
 
-#### 4. safeBlockRange: 
-- type: `number`
-- unit: `blocks`
+#### secret
+* Type: `object`
+* Description: Stores private keys of the validator and the bridge operator. These fields can be empty and passed via environment variables
+through 2 variables: `RONIN_VALIDATOR_KEY`, `RONIN_RELAYER_KEY` and Ethereum are: `ETHEREUM_VALIDATOR_KEY`, `ETHEREUM_RELAYER_KEY`
+  * Syntax: `<key>`
+  * Example: `xxxx4563e6591c1eba4b932a3513006cb5bcd1a6f69c32295dxxxx`
 
-Safe block range which guarantees that reorg cannot happen.
+#### fromHeight
+* Type: `number`
+* Unit: `blocks`
+* Description: Initially, the bridge uses this property to load data from this block. After that, the bridge stores the latest processed block in the `processed_block` table and uses the value from this table to continue.
 
-#### 5. maxTasksQuery:
-- type: `number`
+#### processWithinBlocks
+* Type: `number`
+* Unit: `blocks`
+* Description: This property guarantees that the bridge doesn't process too far. Specifically, when `latestBlock - processWithinBlocks > fromHeight`, bridge `latestBlock - processWithinBlocks` instead of `fromHeight` to process.
 
-Maximum number of pending/processing tasks queried from the database
+#### contracts
+* Type: `record<string, address>`
+* Description: Stores a map (pair) of names and contact addresses, which can be used during processing tasks or jobs of a listener. For example, in `Ronin` listener, two contracts—Ronin Gateway (at `Gateway`) and Ethereum Gateway (at `EthGateway`)—are used:
 
-#### 6. transactionCheckPeriod:
-- type: `number`
-- unit: `seconds`
-
-Period of checking whether a transaction is mined or not by querying its transaction's receipt. If a receipt is found,
-it will try 3 more times to ensure the transaction is not replaced because of reorg.
-
-#### 7. secret:
-- type: `object`
-
-Stores private key of validator and relayer. These fields can be empty and passed via environment variables
-through 2 variables: `BRIDGE_OPERATOR_PRIVATE_KEY`, `BRIDGE_VOTER_PRIVATE_KEY` and Ethereum are: `ETHEREUM_ENDPOINT`
-##### syntax: `<key>`
-##### example: `xxxx4563e6591c1eba4b932a3513006cb5bcd1a6f69c32295dxxxx`
-
-#### 8. fromHeight:
-- type: `number`
-- unit: `blocks`
-
-Initially, Bridge uses this property to load data from this block. After that, Bridge will store the latest processed block in `processed_block` table and use the value from this table to continue.
-
-#### 9. processWithinBlocks:
-- type: `number`
-- unit: `blocks`
-
-This property guarantees that Bridge does not process too far. Specifically, when `latestBlock - processWithinBlocks > fromHeight`, bridge `latestBlock - processWithinBlocks` instead of `fromHeight` to process.
-
-#### 10. contracts
-- type: `record<string, address>`
-
-Stores a map (pair) of names and contact addresses, which can be used during processing tasks or jobs of a listener. For example, in `Ronin` listener, 2 contracts which are Ronin Gateway contract (at `Gateway`) and Ethereum Gateway contract (at `EthGateway`) are used:
 ```json
 {
   "Gateway": "0x03d1F13c7391F6B5A651143a31034cf728A93694",
@@ -169,9 +173,8 @@ Stores a map (pair) of names and contact addresses, which can be used during pro
 ```
 
 #### 11. subscriptions
-- type: `object`
-
-Includes all subscriptions bridge is observing in a listener. Each subscription contains the subscription name and subscription config.
+* Type: `object`
+* Description: Includes all subscriptions that the bridge is observing in a listener. Each subscription contains the subscription name and subscription config.
 - `to`: Indicates receiver/contract address that bridge uses as one of conditions to trigger a subscription
 - `type`: There are 2 types, `0` is `transaction event` and `1` is `log's event`
 - `handler`: Define contract and event that we want to listen

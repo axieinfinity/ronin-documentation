@@ -1,7 +1,10 @@
 ---
-description: Set up and run a validator node
+description: Set up and run a validator node on mainnet
+title: Run a validator node
 ---
-# Run a validator node (mainnet)
+
+# Run a validator node
+This page describes how to set up and run a validator node on mainnet.
 
 * Download the latest version of Ronin manager and uncompress:
 
@@ -47,5 +50,3 @@ $ ./ronin-manager start
 ```
 
 * After some minutes, verify your node is connecting and up to date with the network at [stats.roninchain.com](https://stats.roninchain.com)
-
-Optionally you can [start node from a snapshot](./non-validator-setup-m.md#start-node-from-a-snapshot).

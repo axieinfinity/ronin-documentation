@@ -285,6 +285,7 @@ const sidebars = {
         type: 'generated-index',
         title: 'Node operators',
         description: 'Set up and run a Ronin node.',
+        slug: '/node-operators',
       },
       items: [
         // CLI guide
@@ -295,18 +296,19 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Mainnet',
+            slug: '/node-operators/mainnet',
           },
           items: [
             // Configuration
-            'node-operators/configs/mainnet',
+            'node-operators/mainnet/config',
             // Run a validator node
-            'node-operators/validator-setup-m',
+            'node-operators/mainnet/validator',
             // Run a bridge operator node
-            'node-operators/bridge-setup-m',
+            'node-operators/mainnet/bridge',
             // Run a non-validator-node
-            'node-operators/non-validator-setup-m',
+            'node-operators/mainnet/non-validator',
             // Run a full archive node
-            'node-operators/archive-setup-m',
+            'node-operators/mainnet/archive',
           ],
         },
         {
@@ -315,18 +317,19 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Testnet',
+            slug: '/node-operators/testnet',
           },
           items: [
             // Configuration
-            'node-operators/configs/testnet',
+            'node-operators/testnet/config',
             // Run a validator node
-            'node-operators/validator-setup-t',
+            'node-operators/testnet/validator',
             // Run a bridge node
-            'node-operators/bridge-setup-t',
+            'node-operators/testnet/bridge',
             // Run a non-validator-node
-            'node-operators/non-validator-setup-t',
+            'node-operators/testnet/non-validator',
             // Run a full archive node
-            'node-operators/archive-setup-t',
+            'node-operators/testnet/archive',
           ],
         },
         // Node setup tutorials
@@ -336,12 +339,13 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Tutorials',
+            slug: '/node-operators/tutorials',
           },
           items: [
             // Run a validator node on AWS
-            'node-operators/tutorials/run-node-on-aws',
+            'node-operators/tutorials/aws-setup',
             // Run a validator node on GCP
-            'node-operators/tutorials/run-node-on-gcp',
+            'node-operators/tutorials/gcp-setup',
           ],
         },
         // FAQ

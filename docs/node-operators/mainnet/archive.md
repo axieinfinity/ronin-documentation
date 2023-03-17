@@ -1,9 +1,9 @@
 ---
-description: Set up and run an archive node
+description: Set up and run an archive node on mainnet
 ---
-# Run a full archive node
 
-This page describes how to set up and run an archive Ronin node on mainnet.
+# Run an archive node
+This page describes how to set up and run an archive node on mainnet.
 
 ## Latest release
 ### RPC node
@@ -11,7 +11,6 @@ This page describes how to set up and run an archive Ronin node on mainnet.
 * [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 
 ## Prerequisites
-
 * You must be a root user.
 * Your machine must meet the minimum hardware requirements:
   * 8 CPU cores
@@ -19,19 +18,27 @@ This page describes how to set up and run an archive Ronin node on mainnet.
   * 7 TB high-speed SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
-## Steps
+## Set up and run
+1\. In your working directory, create subdirectories for the config and chain data by running the following commands:
 
-1. In your working directory, create subdirectories by running the following commands for storing our config, and chaindata.
 ```
 mkdir -p  /axie/ronin-manager
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-2. Create a `docker-compose` configuration with the following contents.
+2\. Navigate to the `ronin-manager` directory:
 
 ```
-cd /axie/ronin-manager  && vim docker-compose.yml
+cd /axie/ronin-manager
 ```
+
+3\. Create a `docker-compose` file:
+
+```
+vim docker-compose.yml
+```
+
+4\. Paste the following contents into the file:
 
 ```
 version: "3"
@@ -62,11 +69,13 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-3. Create an `.env` file with the following contents.
+5\. Create an `.env` file:
 
 ```
 vim .env
 ```
+
+6\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
 
 ```
 # BOOTNODES address of the bootnode to connect to the network, will be auto-filled
@@ -94,9 +103,10 @@ CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 RONIN_PARAMS=--gcmode archive --http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --miner.gasprice 20000000000 --txpool.nolocals
 ```
 
-4. Start the node by running the following command:
+7\. Start the node:
+
 ```
 cd  /axie/ronin-manager && docker-compose up -d
 ```
 
-After a few minutes, go to the [stats page](https://stats.roninchain.com/) to verify that your node is connected and up to date with the network.
+After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.

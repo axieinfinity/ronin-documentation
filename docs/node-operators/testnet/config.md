@@ -1,6 +1,8 @@
-# Configuration
+---
+description: Testnet specification
+---
 
-This page describes the testnet configuration.
+# Configuration
 
 ## Specification
 

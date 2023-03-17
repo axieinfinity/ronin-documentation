@@ -1,6 +1,8 @@
-# Configuration
+---
+description: Mainnet specification
+---
 
-This page describes the mainnet configuration.
+# Configuration
 
 ## Specification
 

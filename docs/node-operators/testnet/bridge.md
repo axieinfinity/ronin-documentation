@@ -1,18 +1,31 @@
 ---
-description: Set up and run a bridge operator node
+description: Set up and run a bridge operator node on testnet
 ---
-# Run a bridge operator node (mainnet)
-## Requirements
 
-- Ronin RPC URL is used to listen/trigger events from Ronin chain
-- Ethereum RPC URL (Alchemy, Infura, etc.) is used to listen/trigger events from Ethereum
-- Postgres DB to store events and tasks
+# Run a bridge operator node
+This page describes how to set up and run a bridge operator node on testnet.
+
+## Prerequisites
+
+* Ronin RPC (remote procedure call) URL to listen for events from Ronin chain and send events to Ronin chain.
+* Ethereum RPC URL (Alchemy, Infura, and others) to listen for events from Ethereum chain and send events to Ethereum.
+* Postgres database to store events and tasks.
 
 ## Set up and run
 
+1\. Navigate to the `ronin-manager` directory:
+   
 ```
-cd /axie/ronin-manager  && vim docker-compose.yml
+cd /axie/ronin-manager
 ```
+
+2\. Create a `docker-compose` file:
+
+```
+vim docker-compose.yml
+```
+
+3\. Paste the following contents into the file:
 
 ```
 version: "3"
@@ -52,12 +65,13 @@ services:
     depends_on:
       - db
 ```
-
-3. Create an `.env` file with the following contents, replacing the `insert-your-` placeholders with your credentials.
+4\. Create an `.env` file:
 
 ```
 vim .env
 ```
+
+5\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
 
 ```
 # User for postgres account.
@@ -71,8 +85,8 @@ POSTGRES_DB=bridge
 PASSWORD=123456
 
 RPC_ENDPOINT=your-rpc-endpoint
-ETHEREUM_ENDPOINT=https://eth-mainnet.g.alchemy.com/v2/your-ethereum-endpoint
-CONFIG_PATH=config.mainnet.json
+ETHEREUM_ENDPOINT=https://eth-goerli.g.alchemy.com/v2/your-ethereum-endpoint
+CONFIG_PATH=config.testnet.json
 BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:v0.2.2-da196d9
 VERBOSITY=3
 
@@ -88,20 +102,19 @@ BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-operator-private-key
 BRIDGE_VOTER_PRIVATE_KEY=insert-your-voter-private-key
 ```
 
-There is a `docker-compose.yaml` file in `docker` directory. Modify `.env` file and run `bridge` with the following command
+6\. Start the node:
+
 ```
-docker-compose -f docker/docker-compose.yaml --env-file .env up -d
+docker-compose up -d
 ```
+
+After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
 ## Configuration
-The config file can be found in the `config` directory. There are 2 main components in the configuration: listeners and database
+The configuration file is located in the `config` directory. There are two main objects in the configuration: `listeners` and `database`.
 
-### listeners (object)
-List all chains that Bridge is listening to. Each name reflects a specific function defined [here](https://github.com/axieinfinity/bridge-v2/blob/master/internal/init_listeners.go).
-
-For example `Ronin` reflects with function `InitRonin`
-
-Therefore, do not change the name, otherwise, the program cannot run properly.
+### listeners
+Lists all chains that the bridge is listening to. Each `name` reflects a specific function defined in https://github.com/axieinfinity/bridge-v2/blob/master/internal/main.go. For example, `Ronin` reflects the function `InitRonin`, while `Ethereum` points to `InitEthereum`. Therefore, don't change the names, otherwise the program can't run correctly.
 
 #### 1. chainId:
 - type: `hex string`
@@ -141,7 +154,7 @@ it will try 3 more times to ensure the transaction is not replaced because of re
 - type: `object`
 
 Stores private key of validator and relayer. These fields can be empty and passed via environment variables
-through 2 variables: `RONIN_VALIDATOR_KEY`, `RONIN_RELAYER_KEY` and Ethereum are: `ETHEREUM_VALIDATOR_KEY`, `ETHEREUM_RELAYER_KEY`
+through 2 variables: `BRIDGE_OPERATOR_PRIVATE_KEY`, `BRIDGE_VOTER_PRIVATE_KEY` and Ethereum are: `ETHEREUM_ENDPOINT`
 ##### syntax: `<key>`
 ##### example: `xxxx4563e6591c1eba4b932a3513006cb5bcd1a6f69c32295dxxxx`
 
@@ -376,7 +389,7 @@ graph TD
 ```
 
 ### Database
-Database configuration is defined within the key `database`. Basic properties include host, port, user, password and dbName.
+Database configuration is defined within the key `database`. Basic properties include `host`, `port`, `user`, `password`, and `dbName`.
 
 ```json5
 {
