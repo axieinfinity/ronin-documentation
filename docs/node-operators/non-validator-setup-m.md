@@ -21,7 +21,7 @@ This page describes how to set up and run a non validator Ronin node.
 
 ## Steps
 
-1. Create subdirectories.
+1. In your working directory, create subdirectories by running the following commands for storing our config, and chaindata.
 ```
 mkdir -p  /axie/ronin-manager
 mkdir -p ~/.skymavis/chaindata/data/ronin/

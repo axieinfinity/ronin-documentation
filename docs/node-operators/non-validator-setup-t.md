@@ -24,7 +24,7 @@ Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 
 ## Steps
 
-1. Create subdirectories.
+1. In your working directory, create subdirectories by running the following commands for storing our config, and chaindata.
 ```
 mkdir -p  /axie/ronin-manager
 mkdir -p  ~/bridgedata-v2

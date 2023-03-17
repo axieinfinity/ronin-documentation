@@ -8,8 +8,7 @@ description: Set up and run a bridge operator node
 - Ethereum RPC URL (Alchemy, Infura, etc.) is used to listen/trigger events from Ethereum
 - Postgres DB to store events and tasks
 
-## Install and run
-### Using docker
+## Set up and run
 
 1. Create a `docker-compose` configuration with the following contents.
 
