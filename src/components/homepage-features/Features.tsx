@@ -23,7 +23,7 @@ const featureList = [
     title: 'Delegators',
     Icon: CoinIcon,
     link: {
-      href: '/docs/category/delegators',
+      href: '/docs/delegators',
       title: 'Delegators',
     },
     description: <>Stake tokens and delegate your stake to validators to earn rewards and secure the network.</>,
@@ -33,7 +33,7 @@ const featureList = [
     Icon: BoxTickIcon,
     description: <>Run a validator node to earn rewards and maintain network security.</>,
     link: {
-      href: '/docs/category/validators',
+      href: '/docs/validators',
       title: 'Validators',
     },
   },
@@ -50,7 +50,7 @@ const featureList = [
     title: 'Developers',
     Icon: LaptopCodeIcon,
     link: {
-      href: '/docs/category/developers',
+      href: '/docs/developers',
       title: 'Developers',
     },
     description: <>Build your decentralized application on Ronin.</>,
@@ -60,7 +60,7 @@ const featureList = [
     Icon: UserShieldIcon,
     description: <>Join our community, participate in programs, and contribute to this documentation.</>,
     link: {
-      href: '/docs/category/community',
+      href: '/docs/community',
       title: 'Community',
     },
   },
