@@ -1,9 +1,9 @@
 ---
 description: Set up and run a non-validator node on testnet.
 ---
-# Run a rpc node (testnet)
+# Run a non-validator node
 
-This page describes how to set up a rpc node on the Ronin network.
+This page describes how to set up a non-validator node on testnet. This node is also known as an RPC (remote procedure call) node which serving RPC requests.
 
 ## Latest release
 ### RPC node
@@ -31,11 +31,20 @@ mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-2. Create a `docker-compose` configuration with the following contents.
+2. Navigate to the ronin-manager directory.
+```
+cd /axie/ronin-manager
+```
+
+3. Create a docker-compose file by running the following command.
 
 ```
-cd /axie/ronin-manager  && vim docker-compose.yml
+vim docker-compose.yml
 ```
+
+Followed by this step:
+
+4. Paste the following contents into the file:
 
 ```
 version: "3"
@@ -67,11 +76,13 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-3. Create an `.env` file with the following contents, replacing the `insert-your-` placeholders with your credentials.
+5. Create an .env file by running the following command:
 
 ```
 vim .env
 ```
+
+6. Paste the following contents into the file, replacing the insert-... placeholder values with your own:
 
 ```
 # BOOTNODES address of the bootnode to connect to the network, will be auto-filled
@@ -100,7 +111,7 @@ GENESIS_PATH=testnet.json
 RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --miner.gasprice 20000000000 --txpool.nolocals
 ```
 
-4. Download the snapshot in case you want to save the time
+7. Download the snapshot in case you want to save the time
 
 ```
 cd ~/.skymavis/chaindata/data/ronin/
@@ -108,7 +119,7 @@ curl https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar -o 
 mv chaindata-4-1-2023 chaindata
 ```
 
-5. Start the node.
+8. Start the node by running the following command:
 ```
 cd  /axie/ronin-manager && docker-compose up -d 
 ```

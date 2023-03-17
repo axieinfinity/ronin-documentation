@@ -296,8 +296,6 @@ const sidebars = {
       items: [
         // CLI guide
         'node-operators/cli',
-        // Minimum requirements
-        'node-operators/minimum-requirements',
         {
           type: 'category',
           label: 'Mainnet guides',
