@@ -15,13 +15,15 @@ Applicable fees differ between exchanges.
 
 List of exchange that support RON:
 
-[OKX](https://www.okx.com/vi)
+[OKX](https://www.okx.com/)
 
 [Gate.io](https://gate.io/)
 
 [CoinEx](https://www.coinex.com/)
 
 [MEXC Global](https://www.mexc.com/)
+
+[Bitget](https://www.bitget.com/)
 
 If you are a centralized exchange looking to list RON, please [contact us](mailto:hello@roninchain.com).
 
