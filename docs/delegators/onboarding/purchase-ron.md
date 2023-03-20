@@ -37,7 +37,7 @@ Buy RON using a credit card, bank transfer, or popular online payment methods vi
 
 The Purchase site applies a [Ramp Network fee](https://support.ramp.network/en/articles/10415-what-fees-does-ramp-charge-for-buying-and-selling-crypto#h_229ce448ff) to your transaction. The fee varies based on the payment method you choose.
 
-The Purchase site can be accessed directly through the Ronin Wallet mobile app. To do so, visit the dApps tab on your Ronin Wallet home page and select **Purchase**. Alternatively, you can access the purchase site at [purchase.roninchain.com](https://purchase.roninchain.com/).
+The Purchase site can be accessed directly through the Ronin Wallet mobile app. To do so, visit **dApps** tab on your Ronin Wallet home page and select **Purchase**. Alternatively, you can access the purchase site at [purchase.roninchain.com](https://purchase.roninchain.com/).
 
 <img src={purchaseSite} width={1280} />
 
