@@ -186,20 +186,15 @@ to ensure the transaction isn't replaced because of a reorg.
 #### secret
 **Description**
 
-Stores private keys of the validator and the bridge operator. These fields can be empty and passed via environment variables
-through 2 variables: `RONIN_VALIDATOR_KEY`, `RONIN_RELAYER_KEY` and Ethereum are: `ETHEREUM_VALIDATOR_KEY`, `ETHEREUM_RELAYER_KEY`
-
-**Syntax**
-
-`<key>`
-
-**Example**
-
-`xxxx4563e6591c1eba4b932a3513006cb5bcd1a6f69c32295dxxxx`
+Stores private keys of the validator and the relayer. These fields can be empty and passed via the environment variables: `RONIN_VALIDATOR_KEY` and `RONIN_RELAYER_KEY` for Ronin, and `ETHEREUM_VALIDATOR_KEY` and `ETHEREUM_RELAYER_KEY` for Ethereum.
 
 **Type**
 
 `object`
+
+**Example**
+
+`xxxx4563e6591c1eba4b932a3513006cb5bcd1a6f69c32295dxxxx`
 
 #### fromHeight
 **Description**
@@ -248,16 +243,16 @@ Stores a map (pair) of names and contact addresses, which can be used during pro
 
 Includes all subscriptions that the bridge is observing in a listener. Each subscription contains the subscription name and subscription config.
 * `to`: Indicates receiver/contract address that the bridge uses as one of the conditions to trigger a subscription.
-* `type`: There are two types: `0` is `transaction event` and `1` is `log's event`
-* `handler`: Define contract and event that we want to listen
-  * `contract`: Contract name. This must be defined on repo [Bridge Contracts](https://github.com/axieinfinity/bridge-contracts/blob/master/main.go#L13-L20).
+* `type`: There are two types: `0` is `transaction event` and `1` is `log's event`.
+* `handler`: Defines the contract and the event that you want to listen to.
+  * `contract`: The contract name. It must be defined in the [bridge contracts](https://github.com/axieinfinity/bridge-contracts/blob/master/main.go#L13-L20) repository.
   * `name`: The event name.
-* `callbacks`: List all callback functions when data is decoded. This is a map (pair) where the key is the listener's name and the value is the function that is called in that listener. For example:
+* `callbacks`: Lists all callback functions when data is decoded. This is a map (pair) where the key is the listener's name and the value is the function that is called in that listener. For example:
 
 ```json5
 {
   "to": "0xA8D61A5427a778be28Bd9bb5990956b33385c738",
-  "type": 1, // Listen log's event
+  "type": 1, // Listen to the log's event
   "handler": {
     "contract": "RoninGateway",
     "name": "MainchainWithdrew"
@@ -275,9 +270,9 @@ The bridge triggers the function `StoreMainchainWithdrawCallback` in `RoninListe
 `object`
 
 #### Example
-The Bridge listens to the `Welcome` event, which is defined in the
-`Hello` contract, and submits the data to `HelloEth` contract via
-method `SubmitFromRonin`.
+Suppose that the bridge listens to the `Welcome` event, which is defined in the
+`Hello` contract, and submits the data to the `HelloEth` contract via
+the method `SubmitFromRonin`.
 
 ```json5
 {
@@ -285,7 +280,7 @@ method `SubmitFromRonin`.
     "to": "0xA8D61A5427a778be28Bd9bb5990956b33385c738",
     "type": 1,
     "handler": {
-      "contract": "RoninGateway", // The contract name. It must be defined in the [bridge contracts](https://github.com/axieinfinity/bridge-contracts/blob/master/main.go#L13-L20) first.
+      "contract": "RoninGateway", // The contract name. First, it must be defined in the [bridge contracts](https://github.com/axieinfinity/bridge-contracts/blob/master/main.go#L13-L20) repository.
       "name": "Welcome" // The event being listened to.
     },
     "callbacks": {
@@ -295,7 +290,7 @@ method `SubmitFromRonin`.
 }
 ```
 
-On `litenser/ronin.go`, add the following method:
+In `listener/ronin.go`, add the following method:
 
 ```go
 package listener
@@ -305,7 +300,7 @@ func (l *RoninListener) WelcomeCallback(fromChainId *big.Int, tx bridgeCore.Tran
 	roninEvent := new(hello.WelcomeEvent)
 	roninGatewayAbi, err := hello.GatewayMetaData.GetAbi()
 
-	// Because the data argument was the log's marshalled in bytes, it must be un-marshalled
+	// Because the data argument was the log marshalled in bytes, it must be un-marshalled
 	// before being used.
 	if err = l.utilsWrapper.UnpackLog(*roninGatewayAbi, roninEvent, "Welcome", data); err != nil {
 		return err
@@ -331,7 +326,7 @@ func (l *RoninListener) WelcomeCallback(fromChainId *big.Int, tx bridgeCore.Tran
 }
 ```
 
-Then in `task/task.go`, create a method `welcomeTask`.
+Then in `task/task.go`, create a `welcomeTask` method.
 
 ```go
 package task
@@ -376,6 +371,7 @@ graph TD
   A --> |No| Bridge
   A --> |Yes| B[Store Receipt To Database]
 ```
+
 #### WithdrawalRequestedSubscription
 Request validators to sign a withdrawal transaction.
 
@@ -435,9 +431,13 @@ graph TD
 ```
 
 #### BridgeOperatorSetUpdatedSubscription
-At the end of each epoch, validators call `wrapUpEpoch` of `ValidatorSet` contract to update the validator set.
-It emits an event `BridgeOperatorSetUpdated(uint256 period, []address operators)`. All Governing Validator nodes must listen to this
-event, vote by signing typed data, and submit it to the `RoninGovernanceAdmin` contract.
+At the end of each epoch, validators call the `wrapUpEpoch` method of
+the `ValidatorSet` contract to update the validator set.
+It emits an event
+`BridgeOperatorSetUpdated(uint256 period, []address operators)`.
+All Governing Validator nodes must listen to this event,
+vote by signing typed data,
+and submit it to the `RoninGovernanceAdmin` contract.
 
 ```mermaid
 graph TD
