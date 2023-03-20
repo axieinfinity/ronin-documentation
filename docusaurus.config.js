@@ -105,7 +105,7 @@ const config = {
           // Developers
           {
             label: 'Developers',
-            to: 'docs/developers',
+            to: 'docs/developers/portal',
           },
           // Community
           {

@@ -50,7 +50,7 @@ const featureList = [
     title: 'Developers',
     Icon: LaptopCodeIcon,
     link: {
-      href: '/docs/developers',
+      href: '/docs/developers/portal',
       title: 'Developers',
     },
     description: <>Build your decentralized application on Ronin.</>,

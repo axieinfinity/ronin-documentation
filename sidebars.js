@@ -358,57 +358,62 @@ const sidebars = {
     },
     // Developers
     {
-      type: 'category',
+      type: 'doc',
       label: 'Developers',
-      link: {
-        type: 'generated-index',
-        title: 'Developers', 
-        description: 'Build your decentralized application on Ronin Network.',
-        slug: '/developers',
-      },
-      items: [
-        // API
-        {
-          type: 'link',
-          label: 'API',
-          href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
-        },
-        {
-          type: 'category',
-          label: 'Smart contracts',
-          link: {
-            type: 'generated-index',
-            title: 'Deploy smart contracts', 
-            description: 'Guides for smart contract deployment.',
-            slug: '/developers/smart-contracts',
-          },
-          items: [
-            'developers/smart-contracts/hardhat',
-            'developers/smart-contracts/truffle',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Ronin Wallet',
-          link: {
-            type: 'generated-index',
-            title: 'Integrate Ronin Wallet', 
-            description: 'Guides for Ronin Wallet integration.',
-            slug: '/developers/ronin-wallet',
-          },
-          items: [
-            'developers/ronin-wallet/integrate',
-            'developers/ronin-wallet/switch-network',
-          ],
-        },
-        // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'developers/faq',
-        },
-      ],
+      id: 'developers/portal',
     },
+    //{
+    //  type: 'category',
+    //  label: 'Developers',
+    //  link: {
+    //    type: 'generated-index',
+    //    title: 'Developers', 
+    //    description: 'Build your decentralized application on Ronin Network.',
+    //    slug: '/developers',
+    //  },
+    //  items: [
+    //    // API
+    //    {
+    //      type: 'link',
+    //      label: 'API',
+    //      href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
+    //    },
+    //    {
+    //      type: 'category',
+    //      label: 'Smart contracts',
+    //      link: {
+    //        type: 'generated-index',
+    //        title: 'Deploy smart contracts', 
+    //        description: 'Guides for smart contract deployment.',
+    //        slug: '/developers/smart-contracts',
+    //      },
+    //      items: [
+    //        'developers/smart-contracts/hardhat',
+    //        'developers/smart-contracts/truffle',
+    //      ],
+    //    },
+    //    {
+    //      type: 'category',
+    //      label: 'Ronin Wallet',
+    //      link: {
+    //        type: 'generated-index',
+    //        title: 'Integrate Ronin Wallet', 
+    //        description: 'Guides for Ronin Wallet integration.',
+    //        slug: '/developers/ronin-wallet',
+    //      },
+    //      items: [
+    //        'developers/ronin-wallet/integrate',
+    //        'developers/ronin-wallet/switch-network',
+    //      ],
+    //    },
+    //    // FAQ
+    //    {
+    //      type: 'doc',
+    //      label: 'FAQ',
+    //      id: 'developers/faq',
+    //    },
+    //  ],
+    // },
     // Community
     {
       type: 'category',
