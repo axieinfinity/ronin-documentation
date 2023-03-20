@@ -21,6 +21,8 @@ List of exchange that support RON:
 
 [CoinEx](https://www.coinex.com/)
 
+[MEXC Global](https://www.mexc.com/)
+
 If you are a centralized exchange looking to list RON, please [contact us](mailto:hello@roninchain.com).
 
 ## Buy on Purchase site
