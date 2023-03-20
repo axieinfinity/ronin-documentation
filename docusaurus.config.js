@@ -100,7 +100,7 @@ const config = {
           // Node operators
           {
             label: 'Node operators',
-            to: 'docs/category/node-operators',
+            to: 'docs/node-operators',
           },
           // Developers
           {
