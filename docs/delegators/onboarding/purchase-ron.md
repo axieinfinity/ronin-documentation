@@ -25,7 +25,7 @@ If you are a centralized exchange looking to list RON, please [contact us](mailt
 
 ## Buy on Purchase site
 
-Buy RON using a credit card, bank transfer, or popular online payment methods via the Purchase site. The Purchase site is powered by Ramp Network, which is a registered crypto assets business.
+Buy RON using a credit card, bank transfer, or popular online payment methods via the Purchase site. The Purchase site is powered by Ramp Network, which is a registered crypto assets business. Ramp Network is supported in [150+ countries](https://support.ramp.network/en/articles/433-supported-countries-territories-and-us-states-for-buying-and-selling-crypto).
 
 The Purchase site applies a [Ramp Network fee](https://support.ramp.network/en/articles/10415-what-fees-does-ramp-charge-for-buying-and-selling-crypto#h_229ce448ff) to your transaction. The fee varies based on the payment method you choose.
 
