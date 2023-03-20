@@ -2,8 +2,11 @@
 description: Set up and run a validator node
 ---
 # Run a validator node
+This page describes how to run a validator node *and* a bridge operator node in one Docker container.
 
-This page describes how to set up a validator node on testnet.
+For increased reliability, you can choose to run the nodes separately. If you do so, then proceed as follows:
+* Set up the validator node alone by moving the `bridge` and `db` services outside the `docker-compose` configuration in this guide.
+* Set up the bridge operator node alone by following the [Run a bridge operator node](./bridge.md) guide.
 
 ## Latest release
 ### Validator
@@ -27,7 +30,6 @@ Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
 ## Set up and run
-
 1\. In your working directory, create subdirectories for the config and chain data by running the following commands:
 
 ```
