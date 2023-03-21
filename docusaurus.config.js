@@ -12,7 +12,7 @@ const currentYear = new Date().getFullYear()
 const config = {
   title: 'Ronin',
   tagline: 'Lets build together',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.roninchain.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
