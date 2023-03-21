@@ -1,5 +1,5 @@
 ---
-description: Welcome to the Ronin community
+description: Ways to get in touch with the Ronin community
 title: Join
 ---
 

@@ -11,19 +11,26 @@ This page describes how to set up and run a bridge operator node on mainnet.
 * Postgres database to store events and tasks.
 
 ## Set up and run
-1\. Navigate to the `ronin-manager` directory:
+1\. In your working directory, create subdirectories by running the following commands:
+
+```
+mkdir -p  /axie/ronin-manager
+mkdir -p  ~/bridgedata-v2
+```
+
+2\. Navigate to the `ronin-manager` directory:
    
 ```
 cd /axie/ronin-manager
 ```
 
-2\. Create a `docker-compose` file:
+3\. Create a `docker-compose` file:
 
 ```
 vim docker-compose.yml
 ```
 
-3\. Paste the following contents into the file:
+4\. Paste the following contents into the file:
 
 ```
 version: "3"
@@ -64,13 +71,13 @@ services:
       - db
 ```
 
-4\. Create an `.env` file:
+5\. Create an `.env` file:
 
 ```
 vim .env
 ```
 
-5\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
+6\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
 
 ```
 # User for postgres account.
@@ -101,7 +108,7 @@ BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-operator-private-key
 BRIDGE_VOTER_PRIVATE_KEY=insert-your-voter-private-key
 ```
 
-6\. Start the node:
+7\. Start the node:
 
 ```
 docker-compose up -d
