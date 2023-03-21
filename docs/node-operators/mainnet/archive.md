@@ -46,6 +46,7 @@ services:
   node:
     image: ${NODE_IMAGE}
     stop_grace_period: 5m
+    stop_signal: SIGINT
     hostname: node
     container_name: node
     ports:
