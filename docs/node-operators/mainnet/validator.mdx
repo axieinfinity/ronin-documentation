@@ -6,7 +6,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Run a validator node
-This page describes how to set up and run a validator node on testnet.
+This page describes how to set up and run a validator node on mainnet.
 
 You can do that in one of the two ways:
 * Run a validator node *and* a bridge operator node in one Docker container.
@@ -192,7 +192,7 @@ vim .env
     # NETWORK_ID network id
     NETWORK_ID=2020
     # Setting for oracle services, where staging = rinkey + testnet, and production = ethereum + mainnet.
-    DEPLOYMENT=mainnet
+    DEPLOYMENT=production
     # Setting nodekey
     GASPRICE=20000000000
 
@@ -211,10 +211,9 @@ vim .env
 
     # Private key of validator address, without 0x. 
     VALIDATOR_PRIVATE_KEY=insert-your-validator-private-key
-    ETHEREUM_ENDPOINT=https://eth-goerli.g.alchemy.com/v2/your-ethereum-endpoint
+    ETHEREUM_ENDPOINT=https://eth-mainnet.g.alchemy.com/v2/your-ethereum-endpoint
     MINE=true
 
-    CONFIG_PATH=config.testnet.json
     NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9
     BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:0.2.1-c15a725
     VERBOSITY=3
@@ -242,7 +241,7 @@ vim .env
     # NETWORK_ID network id
     NETWORK_ID=2020
     # Setting for oracle services, where staging = rinkey + testnet, and production = ethereum + mainnet.
-    DEPLOYMENT=mainnet
+    DEPLOYMENT=production
     # Setting nodekey
     GASPRICE=20000000000
 
