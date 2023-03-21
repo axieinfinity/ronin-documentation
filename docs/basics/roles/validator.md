@@ -13,7 +13,7 @@ The Ronin nodes must have a validator list so they can specify which validator g
 
 ## Validator responsibilities
 
-Validators are in charge of:
+Validators are in charge of the following:
 
 * Generating blocks during their turn.
 * Helping other validators generate blocks when they miss their turn.
