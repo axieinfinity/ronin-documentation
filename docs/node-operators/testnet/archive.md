@@ -24,7 +24,6 @@ This page describes how to set up and run an archive node on testnet.
 
 ```
 mkdir -p  /axie/ronin-manager
-mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 

@@ -27,7 +27,6 @@ Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
 
 ```
 mkdir -p  /axie/ronin-manager
-mkdir -p  ~/bridgedata-v2
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
