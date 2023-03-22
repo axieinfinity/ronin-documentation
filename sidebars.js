@@ -137,7 +137,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Stake',
-            description: 'Move or withdraw your stake.',
+            description: 'Manage your RON stake.',
             slug: '/delegators/stake',
           },
           items: [
@@ -152,6 +152,12 @@ const sidebars = {
           type: 'doc',
           label: 'Claim rewards',
           id: 'delegators/rewards/claim',
+        },
+        // View activity
+        {
+          type: 'doc',
+          label: 'View activity',
+          id: 'delegators/manage/activity',
         },
         // FAQ
         {
@@ -181,7 +187,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Stake',
-            description: 'Increase or withdraw your RON stake.',
+            description: 'Manage your RON stake.',
             slug: '/validators/stake',
           },
           items: [
