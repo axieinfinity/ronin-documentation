@@ -20,37 +20,32 @@ There are three validator roles:
 
 ## Prerequisites
 * You need to have an amount of RON sufficient for the initial stake.
-* You also need to have 150-200 RON as a starting balance to maintain the bridge. 
+* You also need to have 100 RON as a starting balance to maintain the bridge. 
 
 ## Register as a Validator Candidate
 
-1\. Go to the [validator portal](https://saigon-staking.roninchain.com/) and click **Become a validator**. 
+1. Go to [Validator Dashboard](https://validator.roninchain.com/) > **Become a Validator**. 
 <img src={becomeValidator} width={1280} />
 
-2\. Familiarize yourself with the requirements and slashing penalties
-applied to validators. It's also highly recommended that you read the
+2. Familiarize yourself with the requirements and slashing penalties. 
+It's also highly recommended that you read the
 [white paper](./../../basics/white-paper.md).
 <img src={stepOne} width={1280} />
 
-3\. Set up your [validator](./../../node-operators/testnet/validator.mdx)
-and [bridge operator](./../../node-operators/testnet/bridge.md) nodes.
+3. Set up your validator and bridge operator nodes.
 <img src={stepTwo} width={1280} />
 
-4\. Fill in your addresses and specify your commission rate.
+4. Fill in your addresses and specify the commission rate.
 <img src={stepThree} width={1280} />
 
-5\. Provide the initial stake of RON.
+5. Deposit 100 RON into the bridge operator address. This address
+is used to automatically sign transactions on the bridge every epoch,
+and having a starting balance there will help you avoid
+[bridge operator slashing](./../slashing/slashing.mdx) if you're
+selected as a validator. 
 <img src={stepFour} width={1280} />
 
-You're now a Validator Candidate.
-
+6. Provide the initial stake of RON.
 <img src={stepFive} width={1280} />
 
-6\. Deposit 50-100 RON into each of the following addresses:
-* Bridge Operator address. Here, RON is required to automatically
-sign transactions on the bridge every epoch.
-* Bridge Voter address (if you’re a Governing Validator). Here, RON is
-required to automatically sign transactions when syncing the set of
-bridge operators.
-
-Having a RON balance in these addresses helps you avoid [bridge operator slashing](./../slashing/slashing.mdx) if you're selected as a validator.
+Done! You're now a Validator Candidate.
