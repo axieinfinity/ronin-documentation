@@ -9,8 +9,8 @@ This page describes how to set up and run a non-validator node on testnet. This 
 * [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
 * [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
 
-Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar`
-Snapshot checksum using Md5sum: `f7b467cdc879e3ab2ade41a7d4a40653`.
+Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-22-3-2023.tar`
+Snapshot checksum using Md5sum: `741d0c68de1107547b849395c17f0f41`.
 
 ## Prerequisites
 
@@ -114,8 +114,8 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 
 
 ```
 cd ~/.skymavis/chaindata/data/ronin/
-curl https://storage.googleapis.com/testnet-chaindata/chaindata-4-1-2023.tar -o chaindata.tar && tar -xvf chaindata.tar
-mv chaindata-4-1-2023 chaindata
+curl https://storage.googleapis.com/testnet-chaindata/chaindata-22-3-2023.tar -o chaindata.tar && tar -xvf chaindata.tar
+mv chaindata-22-3-2023 chaindata
 ```
 
 8\. Start the node:
