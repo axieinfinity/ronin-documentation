@@ -141,6 +141,8 @@ const sidebars = {
             slug: '/delegators/stake',
           },
           items: [
+            // Stake more
+            'delegators/stake/increase',
             // Move stake
             'delegators/stake/move',
             // Withdraw stake

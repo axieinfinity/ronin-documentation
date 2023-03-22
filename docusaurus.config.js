@@ -22,6 +22,11 @@ const config = {
 
   staticDirectories: ['static'],
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   plugins: [
     'docusaurus-plugin-sass',
     require.resolve('docusaurus-lunr-search'),

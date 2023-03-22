@@ -11,7 +11,7 @@ description: Mainnet specification
 * Consensus: DPoS (Consortium)
 * Stats: [https://stats.roninchain.com/](https://stats.roninchain.com)
 * Explorer: [https://explorer.roninchain.com/](https://explorer.roninchain.com/)
-* Genesis file: [mainnet.json](/assets/genesis-mainnet.json)
+* Genesis file: [mainnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json)
 * Full node size:
    * The pruned cache is 160GB (updated on 23/2/2020)
    * 0.5GB daily increment for pruned cache data
