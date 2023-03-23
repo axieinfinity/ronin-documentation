@@ -12,19 +12,19 @@ A blockchain address is used to send and receive funds of digital assets on a bl
 For example, a Ronin address looks something like this: ronin:50460c4cd74094cd591455cad457e99c4ab8be0.
 
 ## B
+### Bitcoin
+Bitcoin is a blockchain network that uses a native cryptocurrency called bitcoin (BTC). As the first blockchain and cryptocurrency, it has a dominant presence within the broader crypto ecosystem. Bitcoin was established in 2009 and pioneered Proof of Work (PoW), a technology used to reach consensus on a decentralized network.
+
 ### Block
 A block is the data record of all transaction information made during a specific time frame on a blockchain network. Blocks are added sequentially to a network's chain of data, which in turn make up the public ledger known as a blockchain.
 
 For example, a Ronin block contains information about the date, time, and number of transactions, as well as signature information regarding the origin and destination of the transfer. Blocks must be confirmed by the network via a process of consensus before a chain can continue transacting and creating new blocks.
 
 ### Block explorer
-A block explorer is a software interface that enables users to access real-time blockchain information like transactions, blocks, addresses, nodes, and balances on a particular network. On Ronin, the explorer software is called [Ronin Block Explorer](https://explorer.roninchain.com/).
-
-### Block height
-Block height is an identifier for a given block based on the number of blocks completed prior to that block.
+A block explorer is a software interface that enables users to access real-time blockchain information like transactions, blocks, addresses, nodes, and balances on a particular network. On Ronin, the explorer software is called [Ronin Block Explorer](https://app.roninchain.com/dashboard).
 
 ### Block reward
-A block reward is the payment awarded to a validator for successfully validating a new block. On Ronin, the block reward is paid in RON as part of commission, which is calculated as the block reward times the commission rate set by the validator.
+A block reward is the payment awarded to a validator for successfully validating a new block. On Ronin, the block reward is shared between validators and delegators.
 
 ### Blockchain
 A blockchain is a public ledger of transactions that is maintained and verified by a decentralized, peer-to-peer (P2P) network of computers that adhere to a consensus mechanism to confirm data. Each computer in a blockchain network maintains its own copy of the shared record, making it nearly impossible for a single computer to alter past transactions or for malicious actors to overwhelm the network.
@@ -32,25 +32,28 @@ A blockchain is a public ledger of transactions that is maintained and verified 
 ### Bridge
 A blockchain bridge—also known as a cross-chain bridge—allows independent blockchains to communicate with each other. This allows users to transfer crypto assets from one blockchain to another, including tokens, wrapped cryptocurrencies, and non-fungible tokens (NFTs). For example, [Ronin Bridge](https://bridge.roninchain.com/) is used for asset transfer between the Ronin chain and the Ethereum mainnet.
 
+### Bridge operator
+A bridge operator is an individual or institution that is responsible for acknowledging deposit and withdrawal events on a blockchain bridge to facilitate asset transfers between this chain and others.
+
+To facilitate transactions on Ronin Bridge, each validator runs a dedicated [bridge operator node](#bridge-operator-node) alongside the [validator node](#validator-node).
+
 ## C
 ### Client
-In the computing world, a *client* refers to any type of software that is downloaded onto your computer and helps you interact with another type of software or service provided by a server.
+A client is any type of software that is downloaded onto a computer and helps the user interact with another type of software or service provided by a server.
 
-On Ronin, a client is the software needed to allow Ronin nodes to read blocks on the Ronin blockchain and Ronin-based smart contracts. A node is the running piece of the client software. In order to run a node, you have to first download a Ronin client application.
+On Ronin, a client is the software needed to allow Ronin [nodes](#node) to read blocks on the Ronin blockchain and Ronin-based smart contracts. A node is the running piece of the client software. In order to run a node, you have to first download a Ronin client application.
 
-A common application of a client is a cryptocurrency software wallet, such as [Ronin Wallet](#ronin-wallet).
+A common use case of a client is a cryptocurrency software wallet, such as [Ronin Wallet](#ronin-wallet).
 
 ### Commission
-Node operators collect *commissions* when their node earns a staking reward for delegators. A validator node earns a staking reward for participating in the consensus protocol each epoch. The *commission rate* is a fraction of the staking reward.
+Validators collect commissions when their node earns a staking reward for delegators. A validator node earns a staking reward for participating in the consensus protocol each epoch. The commission rate is a fraction of the staking reward.
 
-### Consensus
-An algorithm used to mandate agreement on the blockchain between all nodes. The blockchain, although being built in a decentralized way, eventually converges so that all nodes eventually agree on whether a given block is part of the chain or not.
-
-Ronin uses a combination of Delegated Proof of Stake (DPoS) and Proof of Authority (PoA) algorithms.
+### Consensus mechanism
+A consensus mechanism is an algorithm used to guarantee agreement on the blockchain between all nodes. The blockchain, although being built in a decentralized way, eventually aligns so that all nodes agree on whether a given block is part of the chain. Ronin's consensus mechanism is a combination of the [Delegated Proof of Stake (DPoS)](#delegated-proof-of-stake-dpos) and [Proof of Authority (PoA)](#proof-of-authority-poa) algorithms.
 
 ## D
 ### Decentralized application (dApp)
-A decentralized application (dApp) makes use of blockchain technology to address use cases ranging from investment to lending to gaming and governance. While the front-end of a dApp may seem similar to a web application, its back-end processes don't use a centralized server and instead run on a decentralized network. For communication, dApps use wallet software (like Ronin Wallet) to interact with automated smart contracts on the blockchain.
+A decentralized application (dApp) uses blockchain technology to address use cases ranging from investment to lending to gaming and governance. While the front-end of a dApp may seem similar to a web application, its back-end processes don't require a centralized server and instead run on a decentralized network. For communication, dApps use wallet software (like Ronin Wallet) to interact with automated smart contracts on the blockchain.
 
 One example of a Ronin dApp is the [Katana](https://katana.roninchain.com) decentralized exchange.
 
@@ -59,13 +62,9 @@ A decentralized exchange (DEX) is a financial services platform for buying, trad
 
 ### Delegated Proof of Stake (DPoS)
 Delegated Proof of Stake (DPoS) is a consensus mechanism with a distinct voting and delegation structure. A DPoS system allows users to delegate their own stake to a validator node of their choosing—and vote for the node to be selected as a validator in the next day. Selected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with users who delegated them as validators.
-### Delegation
-Delegation is the contribution of some amount of a cryptocurrency or token to another user for participation in a network staking mechanism on a Delegated-Proof-of-Stake (DPoS) blockchain protocol. It is useful for users who want to earn staking rewards and participate in a network, but do not have a large enough crypto supply to meet the minimum staking requirements on their own.
-
-For example, when you delegate RON, you submit a transaction that deposits a specific number of tokens into a validator's account, as opposed to staking tokens, which usually implies depositing tokens into your own account.
 
 ### Delegator
-A delegator is a RON token holder—an individual or institution—who contributes some amount of their tokens to a preferred validator in exchange for a portion of staking rewards and the ability to vote for a validator to be elected in the validator set.
+A delegator is a RON token holder—an individual or institution—who contributes some amount of their tokens to a validator in exchange for a portion of staking rewards and the ability to vote for the validator to be elected in the validator set.
 
 ## E
 ### Epoch
@@ -103,7 +102,7 @@ On Ronin, the node types are as follows:
 * Non-validator node (RPC)
 * Archive node
 
-The validator node and non-validator node are *full* nodes—they store full blockchain data, which is periodically pruned so the node does not store all state data back to genesis.
+The validator node and non-validator node are full nodes—they store full blockchain data, which is periodically pruned so the node does not store all state data back to genesis.
 
 The archive node, on the other hand, retains all historical data right back to genesis. It stores all of the information that a full node does and builds an archive of historical blockchain states.
 
@@ -112,7 +111,7 @@ A validator node is responsible for verifying and approving transactions
 submitted by users and blockchain clients. Upon the close of a transaction block, validator nodes are randomly chosen to validate block data, thus generating the subsequent block, and earning RON tokens as a reward.
 
 #### Bridge operator node
-Each validator on Ronin has the responsibility to run a bridge operator node alongside the validator node. This node is used to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. A validator who doesn't not run the bridge operator node can't claim the block reward.
+Each validator on Ronin has the responsibility to run a bridge operator node alongside the validator node. The bridge operator node is used to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. A validator who doesn't not run the bridge operator node can't claim the block reward.
 
 #### Non-validator node (RPC)
 While validator nodes run the Ronin consensus protocol and earn rewards on block validation, a non-validator node—also known as an RPC (remote procedure call) node—only serves as a gateway for decentralized applications to obtain relevant data on the Ronin blockchain.
@@ -123,12 +122,21 @@ Specifically, an RPC node provides a mechanism for applications to query the blo
 An archive node retains all historical data right back to genesis and is suited for making fast queries about historical states. This data represents units of terabytes, which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics. 
 
 ### Node operator
-A node operator is an individual who's in charge of setting up and running nodes for a validator. 
+A node operator is an individual who's in charge of setting up and running nodes for a validator.
+
+## P
+### Proof of Authority (PoA)
+Proof of Authority (PoA) is a consensus mechanism that relies on the value of identity and reputation instead of cryptographic assets or computational power. PoA relies on a limited number of nodes to verify transactions, making it too centralized, but this trade-off is offset by high scalability and transaction speeds.
+
+### Proof of Stake (PoS)
+Proof of Stake (PoS) is a consensus mechanism that encourages participants to stake native coins in a network of validator nodes. When a transaction block is closed, validator nodes are randomly chosen to validate block data, generate the subsequent block, and earn native coins as a reward. PoS systems also allow validator nodes to participate in decentralized platform governance by voting on key decisions.
+
+### Proof of Work (PoW)
+Proof of Work (PoW) is a consensus mechanism first popularized by [Bitcoin](#bitcoin). PoW systems rely on a mining process to maintain the network. Miners use electricity and computer hardware and compete to solve the complex cryptographic puzzles required to confirm transacted network data, and are rewarded with the network's coin for doing so. While being more decentralized and secure than most networks, PoW systems are criticized for high energy consumption.
 
 ## R
 ### Ronin
-
-Developed by Sky Mavis, Ronin is an Ethereum-linked sidechain on which Axie Infinity operates. Ronin is a scaling solution intended to address issues that occur during times of high network congestion, such as slow transaction confirmations and high transaction fees. Sky Mavis also operates the Ronin Bridge, which allows users to move their assets from Ethereum to Ronin.
+Developed by Sky Mavis, Ronin is an Ethereum-linked chain on which Axie Infinity operates. Ronin is a scaling solution intended to address issues that occur during times of high network congestion, such as slow transaction confirmations and high transaction fees. Sky Mavis also operates [Ronin Bridge](https://bridge.roninchain.com), which allows users to move their assets from Ethereum to Ronin.
 
 ### Ronin Block Explorer
 [Ronin Block Explorer](https://explorer.roninchain.com/) is a website where users can explore and search the Ronin blockchain for transactions, addresses, tokens, prices, and other activities taking place on Ronin.
@@ -157,8 +165,7 @@ In blockchain tech, RPC is a method for dApps to communicate with a blockchain n
 
 ## S
 ### Sidechain
-
-A sidechain is an external secondary blockchain protocol that is connected to a primary blockchain network (mainchain). Sidechains are typically designed to allow for the transfer of data and value between themselves and the mainchain. For example, the Ronin sidechain allows for the transfer of assets from Ethereum to Ronin.
+A sidechain is an external secondary blockchain protocol that is connected to a primary blockchain network (mainchain). Sidechains are typically designed to allow for the transfer of data and value between themselves and the mainchain.
 
 ### Slashing
 Slashing is a process employed automatically by blockchain protocols that make use of a Proof-of-Stake (PoS) or related consensus mechanism. If a user stakes their crypto assets inside a validator node and the node behaves in a dishonest or malicious manner, the user can be penalized, resulting in a loss of a portion of the initial investment.
@@ -189,4 +196,4 @@ A validator is an individual or entity that is responsible for validating transa
 
 On Ronin, a distinction is made between a validator and a node operator, where the former is responsible for managing the validator's profile, claiming rewards, and performing other GUI-related tasks, while the latter is in charge of setting up and running the client software on the node.
 
-There are two types of validators on Ronin: Standard Validators and Governing Validators. Standard Validators participate in block production and ensure that the bridge is always operational. Governing Validators act as Standard Validators with the additional responsibility of making governing decisions that shape the future of the network. 
+There are two types of validators on Ronin: Standard Validators and Governing Validators. Standard Validators participate in block production and ensure that the bridge is always operational. Governing Validators act as Standard Validators with the additional responsibility of making governing decisions that shape the future of the network.
