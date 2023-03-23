@@ -362,6 +362,8 @@ const sidebars = {
           label: 'FAQ',
           id: 'node-operators/faq',
         },
+        // Security best practices
+        'node-operators/security',
       ],
     },
     // Developers
