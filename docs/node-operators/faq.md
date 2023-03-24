@@ -52,7 +52,7 @@ We recommend to use different governor and admin addresses to reduce the impact 
 ### 8. What ports (if any) have to be open to the outside world?
 Keep public ports only for peering and discovery, otherwise keep it internal. Our `docker-compose` configuration already binds RPC port `8545` to `localhost`.
 
-For more information, see [Security best practices](security.md).
+For more information, see [Security hardening](security.md).
 
 ### 9. If there is a node/bridge update, how do I get this information? How much time I will have to update my nodes? What happens if I don't update in time?
 
