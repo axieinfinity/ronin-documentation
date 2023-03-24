@@ -27,25 +27,14 @@ const sidebars = {
         type: 'generated-index',
         title: 'Ronin basics',
         description: 'Everything you need to know about Ronin.',
+        slug: '/basics',
       },
       items: [
-        // Get started
-        // {
-        //   type: 'doc',
-        //   label: 'Get started',
-        //   id: 'basics/get-started',
-        // },
         // Introduction to Ronin
         {
           type: 'doc',
           label: 'Introduction to Ronin',
           id: 'basics/introduction',
-        },
-        // History of Ronin
-        {
-          type: 'doc',
-          label: 'History of Ronin',
-          id: 'basics/history',
         },
         // Key concepts
         {
@@ -55,15 +44,38 @@ const sidebars = {
         },
         // White paper
         'basics/white-paper',
-        // Decentralization
-        'basics/decentralization',
-        // Applications
+        // Roadmap
+        'basics/roadmap',
+        // Tokenomics
+        'basics/tokenomics',
+        // Security audits
+        'basics/audits',
+        // Roles
         {
           type: 'category',
-          label: 'Applications',
+          label: 'Roles',
           link: {
             type: 'generated-index',
-            title: 'Applications',
+            title: 'Roles',
+            description: 'The main actors on Ronin.',
+            slug: '/basics/roles',
+          },
+          items: [
+            // Validator
+            'basics/roles/validator',
+            // Delegator
+            'basics/roles/delegator',
+          ],
+        },
+        // dApps
+        {
+          type: 'category',
+          label: 'dApps',
+          link: {
+            type: 'generated-index',
+            title: 'dApps',
+            description: 'Decentralized applications (dApps) on Ronin.',
+            slug: '/basics/dapps',
           },
           items: [
             // Ronin Bridge
@@ -72,47 +84,21 @@ const sidebars = {
               label: 'Ronin Bridge',
               link: {
                 type: 'doc',
-                id: 'basics/applications/ronin-bridge/ronin-bridge',
+                id: 'basics/dapps/ronin-bridge/overview',
               },
               items: [
                 // Governance
-                'basics/applications/ronin-bridge/governance',
-                // Fee structure
-                'basics/applications/ronin-bridge/fee-structure',
+                'basics/dapps/ronin-bridge/governance',
                 // Withdrawal limits
-                'basics/applications/ronin-bridge/withdrawal-limits',
+                'basics/dapps/ronin-bridge/limits',
               ],
             },
             // Ronin Explorer
-            'basics/applications/ronin-explorer',
+            'basics/dapps/ronin-explorer',
             // Katana Swap
-            'basics/applications/katana',
+            'basics/dapps/katana',
           ],
         },
-        // Roadmap
-        'basics/roadmap',
-        // Tokenomics
-        'basics/tokenomics',
-        // Roles
-        {
-          type: 'category',
-          label: 'Roles',
-          link: {
-            type: 'generated-index',
-            title: 'Roles',
-            description: 'Information about the main actors on Ronin—who they are and what they do.',
-          },
-          items: [
-            // Validator
-            'basics/roles/validator',
-            // Delegator
-            'basics/roles/delegator',
-            // Developer
-            'basics/roles/developer',
-          ],
-        },
-        // Security audits
-        'basics/audits',
       ],
     },
     // Delegators
@@ -300,10 +286,10 @@ const sidebars = {
         'node-operators/cli',
         {
           type: 'category',
-          label: 'Mainnet',
+          label: 'Mainnet guides',
           link: {
             type: 'generated-index',
-            title: 'Mainnet',
+            title: 'Mainnet guides',
             slug: '/node-operators/mainnet',
           },
           items: [
@@ -321,10 +307,10 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Testnet',
+          label: 'Testnet guides',
           link: {
             type: 'generated-index',
-            title: 'Testnet',
+            title: 'Testnet guides',
             slug: '/node-operators/testnet',
           },
           items: [
@@ -362,7 +348,7 @@ const sidebars = {
           label: 'FAQ',
           id: 'node-operators/faq',
         },
-        // Security best practices
+        // Security hardening
         'node-operators/security',
       ],
     },

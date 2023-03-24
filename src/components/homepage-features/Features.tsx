@@ -14,7 +14,7 @@ const featureList = [
     title: 'Basics',
     Icon: ListViewIcon,
     link: {
-      href: '/docs/category/basics',
+      href: '/docs/basics',
       title: 'Basics',
     },
     description: <>Learn the basics of Ronin.</>,

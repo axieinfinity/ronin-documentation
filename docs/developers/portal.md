@@ -24,7 +24,3 @@ This page provides links to the documentation for quick access.
 
 * Integrate Ronin Wallet
 * Switch network in Ronin Wallet
-
-## FAQ
-
-Developer FAQ
