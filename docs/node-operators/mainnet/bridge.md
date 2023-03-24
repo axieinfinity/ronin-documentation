@@ -1,5 +1,5 @@
 ---
-description: Set up and run a bridge operator node on mainnet
+description: Set up a bridge operator node on mainnet
 ---
 
 # Run a bridge operator node
@@ -11,27 +11,27 @@ This page describes how to set up and run a bridge operator node on mainnet.
 * Postgres database to store events and tasks.
 
 ## Set up and run
-1\. In your working directory, create subdirectories by running the following commands:
-
+1. In your working directory, create subdirectories by running the following commands:
+   
 ```
-mkdir -p  /axie/ronin-manager
-mkdir -p  ~/bridgedata-v2
+mkdir -p /axie/ronin-manager
+mkdir -p ~/bridgedata-v2
 ```
 
-2\. Navigate to the `ronin-manager` directory:
+2. Navigate to the `ronin-manager` directory:
    
 ```
 cd /axie/ronin-manager
 ```
 
-3\. Create a `docker-compose` file:
-
+3. Create a `docker-compose` file:
+   
 ```
 vim docker-compose.yml
 ```
 
-4\. Paste the following contents into the file:
-
+4. Paste the following contents into the file:
+   
 ```
 version: "3"
 services:
@@ -71,14 +71,14 @@ services:
       - db
 ```
 
-5\. Create an `.env` file:
-
+5. Create an `.env` file:
+   
 ```
 vim .env
 ```
 
-6\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
-
+6. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
+   
 ```
 # User for postgres account.
 DB_USERNAME=postgres
@@ -108,8 +108,8 @@ BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-operator-private-key
 BRIDGE_VOTER_PRIVATE_KEY=insert-your-voter-private-key
 ```
 
-7\. Start the node:
-
+7. Start the node:
+   
 ```
 docker-compose up -d
 ```
@@ -123,116 +123,72 @@ The configuration file is located in the `config` directory. There are two main 
 Lists all chains that the bridge is listening to. Each `name` reflects a specific function defined in https://github.com/axieinfinity/bridge-v2/blob/master/internal/main.go. For example, `Ronin` reflects the function `InitRonin`, while `Ethereum` points to `InitEthereum`. Therefore, don't change the names, otherwise the program can't run correctly.
 
 #### chainId
-**Description**
-
 Chain's identity (ronin: 0x7e4, ethereum: 0x1).
 
-**Type**
-
-`hex string`
+Type: `hex string`
 
 #### rpcUrl
-**Description**
-
 RPC URL of the chain that is used to query new events or submit transactions to.
 
-**Type**
-
-`string`
+Type: `string`
 
 #### blockTime
-**Description**
-
 The time a new block is generated, used periodically to listen to new events from the new block.
 
-**Type**
+Type: `number`
 
-`number`
-
-**Unit**
-
-`seconds`
+Unit: `seconds`
 
 #### safeBlockRange
-**Description**
-
 Safe block range that guarantees that a reorg can't happen. 
 
-**Type**
+Type: `number`
 
-`number`
-
-**Unit**
-
-`blocks`
+Unit: `blocks`
 
 #### maxTasksQuery
-**Description**
-
 Maximum number of pending and processing tasks queried from the database.
 
-**Type**
-
-`number`
+Type: `number`
 
 #### transactionCheckPeriod
-**Description**
-
 Period of checking whether a transaction is mined or not by querying
 its receipt. If a receipt is found, the system tries three more times
 to ensure the transaction isn't replaced because of a reorg.
 
-**Type**
+Type: `number`
 
-`number`
-
-**Unit**
-
-`seconds`
+Unit: `seconds`
 
 #### secret
-**Description**
-
 Stores private keys of the validator and the relayer. These fields can be empty and passed via the environment variables: `RONIN_VALIDATOR_KEY` and `RONIN_RELAYER_KEY` for Ronin, and `ETHEREUM_VALIDATOR_KEY` and `ETHEREUM_RELAYER_KEY` for Ethereum.
 
-**Type**
+Type: `object`
 
-`object`
-
-**Example**
-
-`xxxx4563e6591c1eba4b932a3513006cb5bcd1a6f69c32295dxxxx`
+Example: `xxxx4563e6591c1eba4b932a3513006cb5bcd1a6f69c32295dxxxx`
 
 #### fromHeight
-**Description**
-
 Initially, the bridge uses this property to load data from this block. After that, the bridge stores the latest processed block in the `processed_block` table and uses the value from this table to continue.
 
-**Type**
+Type: `number`
 
-`number`
-
-**Unit**
-
-`blocks`
+Unit: `blocks`
 
 #### processWithinBlocks
-**Description**
- 
 This property guarantees that the bridge doesn't process too far. Specifically, when `latestBlock - processWithinBlocks > fromHeight`, bridge `latestBlock - processWithinBlocks` instead of `fromHeight` to process.
 
-**Type**
+Type: `number`
 
-`number`
-
-**Unit**
-
-`blocks`
+Unit: `blocks`
 
 #### contracts
-**Description**
+Stores a map (pair) of names and contact addresses, which can be used during processing tasks or jobs of a listener. 
 
-Stores a map (pair) of names and contact addresses, which can be used during processing tasks or jobs of a listener. For example, in `Ronin` listener, two contracts—Ronin Gateway (at `Gateway`) and Ethereum Gateway (at `EthGateway`)—are used:
+Type: `record<string, address>`
+
+Example:
+
+In `Ronin` listener, two contracts—Ronin Gateway (at `Gateway`) and Ethereum Gateway (at `EthGateway`)—are used:
 
 ```json
 {
@@ -241,20 +197,18 @@ Stores a map (pair) of names and contact addresses, which can be used during pro
 }
 ```
 
-**Type**
-
-`record<string, address>`
-
 #### subscriptions
-**Description**
-
 Includes all subscriptions that the bridge is observing in a listener. Each subscription contains the subscription name and subscription config.
 * `to`: Indicates receiver/contract address that the bridge uses as one of the conditions to trigger a subscription.
 * `type`: There are two types: `0` is `transaction event` and `1` is `log's event`.
 * `handler`: Defines the contract and the event that you want to listen to.
   * `contract`: The contract name. It must be defined in the [bridge contracts](https://github.com/axieinfinity/bridge-contracts/blob/master/main.go#L13-L20) repository.
   * `name`: The event name.
-* `callbacks`: Lists all callback functions when data is decoded. This is a map (pair) where the key is the listener's name and the value is the function that is called in that listener. For example:
+* `callbacks`: Lists all callback functions when data is decoded. This is a map (pair) where the key is the listener's name and the value is the function that is called in that listener.
+
+Type: `object`
+
+Example:
 
 ```json5
 {
@@ -271,10 +225,6 @@ Includes all subscriptions that the bridge is observing in a listener. Each subs
 ```
 
 The bridge triggers the function `StoreMainchainWithdrawCallback` in `RoninListener`.
-
-**Type**
-
-`object`
 
 #### Example
 Suppose that the bridge listens to the `Welcome` event, which is defined in the

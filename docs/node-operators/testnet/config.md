@@ -6,7 +6,7 @@ description: Testnet specification
 
 ## Specification
 
-* Chain id (network id): `2021`
+* Chain ID (network ID): `2021`
 * RPC endpoint: [https://saigon-testnet.roninchain.com/rpc](https://saigon-testnet.roninchain.com/rpc)
 * Consensus: DPoS (Consortium)
 * Stats: [https://saigon-stats.roninchain.com/](https://saigon-stats.roninchain.com/)

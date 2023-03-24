@@ -1,7 +1,8 @@
 ---
-description: Set up and run a non-validator node
+description: Set up a non-validator node on testnet
 ---
-# Run a non-validator node
+
+# Run a non-validator (RPC) node
 This page describes how to set up and run a non-validator node on testnet. This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
 
 ## Latest release
@@ -23,26 +24,26 @@ Snapshot checksum using Md5sum: `741d0c68de1107547b849395c17f0f41`.
 
 ## Set up and run
 
-1\. In your working directory, create subdirectories for the config and chain data by running the following commands:
+1. In your working directory, create subdirectories for the config and chain data by running the following commands:
 
 ```
-mkdir -p  /axie/ronin-manager
+mkdir -p /axie/ronin-manager
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-2\. Navigate to the `ronin-manager` directory:
+2. Navigate to the `ronin-manager` directory:
 
 ```
 cd /axie/ronin-manager
 ```
 
-3\. Create a `docker-compose` file:
+3. Create a `docker-compose` file:
 
 ```
 vim docker-compose.yml
 ```
 
-4\. Paste the following contents into the file:
+4. Paste the following contents into the file:
 
 ```
 version: "3"
@@ -75,13 +76,13 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-5\. Create an `.env` file:
+5. Create an `.env` file:
 
 ```
 vim .env
 ```
 
-6\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
+6. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
 
 ```
 # BOOTNODES address of the bootnode to connect to the network, will be auto-filled
@@ -110,7 +111,7 @@ GENESIS_PATH=testnet.json
 RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
 ```
 
-7\. (Optional) Download the snapshot to save the time:
+7. (Optional) Download the snapshot to save the time:
 
 ```
 cd ~/.skymavis/chaindata/data/ronin/
@@ -118,10 +119,10 @@ curl https://storage.googleapis.com/testnet-chaindata/chaindata-22-3-2023.tar -o
 mv chaindata-22-3-2023 chaindata
 ```
 
-8\. Start the node:
+8. Start the node:
 
 ```
-cd  /axie/ronin-manager && docker-compose up -d 
+docker-compose up -d 
 ```
 
 After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
