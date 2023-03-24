@@ -33,9 +33,9 @@ A blockchain is a public ledger of transactions that is maintained and verified 
 A blockchain bridge—also known as a cross-chain bridge—allows independent blockchains to communicate with each other. This allows users to transfer crypto assets from one blockchain to another, including tokens, wrapped cryptocurrencies, and non-fungible tokens (NFTs). For example, [Ronin Bridge](https://bridge.roninchain.com/) is used for asset transfer between the Ronin chain and the Ethereum mainnet.
 
 ### Bridge operator
-A bridge operator is an individual or institution that is responsible for acknowledging deposit and withdrawal events on a blockchain bridge to facilitate asset transfers between this chain and others.
+A bridge operator is a type of node used for acknowledging deposit and withdrawal events on a blockchain bridge to facilitate asset transfers between this chain and others.
 
-To facilitate transactions on Ronin Bridge, each validator runs a dedicated [bridge operator node](#bridge-operator-node) alongside the [validator node](#validator-node).
+On Ronin Bridge, each validator runs a [bridge operator node](#bridge-operator-node) alongside the [validator node](#validator-node).
 
 ## C
 ### Client
@@ -111,7 +111,7 @@ A validator node is responsible for verifying and approving transactions
 submitted by users and blockchain clients. Upon the close of a transaction block, validator nodes are randomly chosen to validate block data, thus generating the subsequent block, and earning RON tokens as a reward.
 
 #### Bridge operator node
-Each validator on Ronin has the responsibility to run a bridge operator node alongside the validator node. The bridge operator node is used to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. A validator who doesn't not run the bridge operator node can't claim the block reward.
+A bridge operator node is used to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. Each validator has the responsibility to run a bridge operator node as well as the validator node. A validator who doesn't do so is unable to claim block rewards.
 
 #### Non-validator node (RPC)
 While validator nodes run the Ronin consensus protocol and earn rewards on block validation, a non-validator node—also known as an RPC (remote procedure call) node—only serves as a gateway for decentralized applications to obtain relevant data on the Ronin blockchain.
