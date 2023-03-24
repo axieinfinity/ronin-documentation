@@ -90,7 +90,7 @@ const config = {
           // Basics
           {
             label: 'Basics',
-            to: 'docs/category/basics',
+            to: 'docs/basics',
           },
           // Delegators
           {

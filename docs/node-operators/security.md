@@ -1,9 +1,9 @@
 ---
 description: Tips and recommendations for hardening your validator node
-title: Security best practices
+title: Security hardening
 ---
 
-# Security best practices for your validator node
+# Security hardening for your validator node
 Deploying a validator node in a blockchain network can be a complex and
 technically challenging process. Security should be a top priority when
 deploying a validator node as it involves managing important
