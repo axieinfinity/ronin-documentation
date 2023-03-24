@@ -25,45 +25,54 @@ const sidebars = {
       label: 'Basics',
       link: {
         type: 'generated-index',
-        title: 'Basics',
-        description: 'Learn the basic concepts of Ronin Network.',
+        title: 'Ronin basics',
+        description: 'Everything you need to know about Ronin.',
       },
       items: [
-        // Introduction to wiki
-        {
-          type: 'doc',
-          label: 'Get started',
-          id: 'basics/get-started',
-        },
         // Introduction to Ronin
         {
           type: 'doc',
           label: 'Introduction to Ronin',
           id: 'basics/introduction',
         },
-        // History of Ronin
-        {
-          type: 'doc',
-          label: 'History of Ronin',
-          id: 'basics/history',
-        },
-        // White paper
-        'basics/white-paper',
-        // Terminology
+        // Key concepts
         {
           type: 'doc',
           label: 'Key concepts',
           id: 'basics/key-concepts',
         },
-        // Decentralization
-        'basics/decentralization',
-        // Applications
+        // White paper
+        'basics/white-paper',
+        // Roadmap
+        'basics/roadmap',
+        // Tokenomics
+        'basics/tokenomics',
+        // Security audits
+        'basics/audits',
+        // Roles
         {
           type: 'category',
-          label: 'Applications',
+          label: 'Roles',
           link: {
             type: 'generated-index',
-            title: 'Applications',
+            title: 'Roles',
+            description: 'The main actors on Ronin.',
+          },
+          items: [
+            // Validator
+            'basics/roles/validator',
+            // Delegator
+            'basics/roles/delegator',
+          ],
+        },
+        // dAPps
+        {
+          type: 'category',
+          label: 'dApps',
+          link: {
+            type: 'generated-index',
+            title: 'dApps',
+            description: 'Decentralized applications (dApps) on Ronin.',
           },
           items: [
             // Ronin Bridge
@@ -77,8 +86,6 @@ const sidebars = {
               items: [
                 // Governance
                 'basics/applications/ronin-bridge/governance',
-                // Fee structure
-                'basics/applications/ronin-bridge/fee-structure',
                 // Withdrawal limits
                 'basics/applications/ronin-bridge/withdrawal-limits',
               ],
@@ -89,29 +96,6 @@ const sidebars = {
             'basics/applications/katana',
           ],
         },
-        // Roadmap
-        'basics/roadmap',
-        // Tokenomics
-        'basics/tokenomics',
-        // Roles
-        {
-          type: 'category',
-          label: 'Roles',
-          link: {
-            type: 'generated-index',
-            title: 'Roles',
-          },
-          items: [
-            // Validator
-            'basics/roles/validator',
-            // Delegator
-            'basics/roles/delegator',
-            // Developer
-            'basics/roles/developer',
-          ],
-        },
-        // Security audits
-        'basics/audits',
       ],
     },
     // Delegators
@@ -121,11 +105,12 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'Delegators',
-        description: 'Stake tokens, delegate your stake to validators, and claim rewards.'
+        description: 'Stake tokens, delegate your stake to validators, and claim rewards.',
+        slug: '/delegators',
       },
       items: [
         // Purchase RON
-        'delegators/onboarding/purchase',
+        'delegators/onboarding/purchase-ron',
         // Become a delegator
         'delegators/onboarding/become-delegator',
         // Stake
@@ -135,9 +120,12 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Stake',
-            description: 'Move or withdraw your stake.',
+            description: 'Manage your RON stake.',
+            slug: '/delegators/stake',
           },
           items: [
+            // Stake more
+            'delegators/stake/increase',
             // Move stake
             'delegators/stake/move',
             // Withdraw stake
@@ -149,6 +137,12 @@ const sidebars = {
           type: 'doc',
           label: 'Claim rewards',
           id: 'delegators/rewards/claim',
+        },
+        // View activity
+        {
+          type: 'doc',
+          label: 'View activity',
+          id: 'delegators/manage/activity',
         },
         // FAQ
         {
@@ -165,7 +159,8 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'Validators', 
-        description: 'Stake tokens, claim rewards, and manage your validator profile.',
+        description: 'Register as a validator, stake tokens, claim rewards, and manage your validator profile.',
+        slug: '/validators',
       },
       items: [
         // Become a validator
@@ -177,7 +172,8 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Stake',
-            description: 'Increase or withdraw your RON stake.'
+            description: 'Manage your RON stake.',
+            slug: '/validators/stake',
           },
           items: [
             // Increase stake
@@ -186,14 +182,15 @@ const sidebars = {
             'validators/stake/withdraw',
           ],
         },
-        // Rewards
+        // Claim rewards
         {
           type: 'category',
           label: 'Rewards',
           link: {
             type: 'generated-index',
             title: 'Rewards',
-            description: 'Learn about reward types and how to claim rewards.'
+            description: 'Learn about reward types and how to claim rewards.',
+            slug: '/validators/rewards',
           },
           items: [
             // Reward types
@@ -210,36 +207,57 @@ const sidebars = {
             type: 'generated-index',
             title: 'Manage profile', 
             description: 'Manage your profile, view analytics and activity, change commission rate.',
+            slug: '/validators/manage',
           },
           items: [
             // Change commission rate
-            'validators/manage-profile/commission',
+            'validators/manage/commission',
             // Schedule maintenance
-            'validators/manage-profile/maintenance',
+            'validators/manage/maintenance',
             // Renounce role
-            'validators/manage-profile/renounce',
+            'validators/manage/renounce',
             // View activity
-            'validators/manage-profile/activities',
+            'validators/manage/activity',
             // View profile
-            'validators/manage-profile/profile',
+            'validators/manage/profile',
             // View analytics
-            'validators/manage-profile/analytics',
+            'validators/manage/analytics',
           ],
         },
+        // Slashing and bailout
         {
-          // Slashing and bailout
           type: 'category',
-          label: 'Slashing and bailout',
+          label: 'Slashing',
           link: {
             type: 'generated-index',
             title: 'Slashing and bailout', 
             description: 'Learn about the slashing penalties and rules for bailout.',
+            slug: '/validators/slashing',
           },
           items: [
             // Slashing
             'validators/slashing/slashing',
             // Bailout
             'validators/slashing/bailout',
+          ],
+        },
+        // Governance
+        {
+          type: 'category',
+          label: 'Governance',
+          link: {
+            type: 'generated-index',
+            title: 'Governance', 
+            description: 'On-chain governance through proposals raised and voted on by Governing Validators.',
+            slug: '/validators/governance',
+          },
+          items: [
+            // Overview
+            'validators/governance/overview',
+            // Create a proposal
+            'validators/governance/create',
+            // Vote on a proposal
+            'validators/governance/vote',
           ],
         },
         // FAQ
@@ -258,30 +276,30 @@ const sidebars = {
         type: 'generated-index',
         title: 'Node operators',
         description: 'Set up and run a Ronin node.',
+        slug: '/node-operators',
       },
       items: [
         // CLI guide
         'node-operators/cli',
-        // Minimum requirements
-        'node-operators/minimum-requirements',
         {
           type: 'category',
           label: 'Mainnet',
           link: {
             type: 'generated-index',
             title: 'Mainnet',
+            slug: '/node-operators/mainnet',
           },
           items: [
             // Configuration
-            'node-operators/configs/mainnet',
+            'node-operators/mainnet/config',
             // Run a validator node
-            'node-operators/validator-setup-m',
+            'node-operators/mainnet/validator',
             // Run a bridge operator node
-            'node-operators/bridge-setup-m',
+            'node-operators/mainnet/bridge',
             // Run a non-validator-node
-            'node-operators/non-validator-setup-m',
+            'node-operators/mainnet/non-validator',
             // Run a full archive node
-            'node-operators/archive-setup-m',
+            'node-operators/mainnet/archive',
           ],
         },
         {
@@ -290,18 +308,19 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Testnet',
+            slug: '/node-operators/testnet',
           },
           items: [
             // Configuration
-            'node-operators/configs/testnet',
+            'node-operators/testnet/config',
             // Run a validator node
-            'node-operators/validator-setup-t',
+            'node-operators/testnet/validator',
             // Run a bridge node
-            'node-operators/bridge-setup-t',
+            'node-operators/testnet/bridge',
             // Run a non-validator-node
-            'node-operators/non-validator-setup-t',
+            'node-operators/testnet/non-validator',
             // Run a full archive node
-            'node-operators/archive-setup-t',
+            'node-operators/testnet/archive',
           ],
         },
         // Node setup tutorials
@@ -311,12 +330,13 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Tutorials',
+            slug: '/node-operators/tutorials',
           },
           items: [
             // Run a validator node on AWS
-            'node-operators/tutorials/run-node-on-aws',
+            'node-operators/tutorials/aws-setup',
             // Run a validator node on GCP
-            'node-operators/tutorials/run-node-on-gcp',
+            'node-operators/tutorials/gcp-setup',
           ],
         },
         // FAQ
@@ -325,58 +345,68 @@ const sidebars = {
           label: 'FAQ',
           id: 'node-operators/faq',
         },
+        // Security hardening
+        'node-operators/security',
       ],
     },
     // Developers
     {
-      type: 'category',
+      type: 'doc',
       label: 'Developers',
-      link: {
-        type: 'generated-index',
-        title: 'Developers', 
-        description: 'Build your decentralized application on Ronin Network.',
-      },
-      items: [
-        // API
-        {
-          type: 'link',
-          label: 'API',
-          href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
-        },
-        {
-          type: 'category',
-          label: 'Smart contracts',
-          link: {
-            type: 'generated-index',
-            title: 'Deploy smart contracts', 
-            description: 'Guides for smart contract deployment.',
-          },
-          items: [
-            'developers/smart-contract/using-hardhat',
-            'developers/smart-contract/using-truffle',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Ronin Wallet',
-          link: {
-            type: 'generated-index',
-            title: 'Integrate Ronin Wallet', 
-            description: 'Guides for Ronin Wallet integration.',
-          },
-          items: [
-            'developers/ronin-wallet/integrate',
-            'developers/ronin-wallet/switch-network',
-          ],
-        },
-        // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'developers/faq',
-        },
-      ],
+      id: 'developers/portal',
     },
+    //{
+    //  type: 'category',
+    //  label: 'Developers',
+    //  link: {
+    //    type: 'generated-index',
+    //    title: 'Developers', 
+    //    description: 'Build your decentralized application on Ronin Network.',
+    //    slug: '/developers',
+    //  },
+    //  items: [
+    //    // API
+    //    {
+    //      type: 'link',
+    //      label: 'API',
+    //      href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
+    //    },
+    //    {
+    //      type: 'category',
+    //      label: 'Smart contracts',
+    //      link: {
+    //        type: 'generated-index',
+    //        title: 'Deploy smart contracts', 
+    //        description: 'Guides for smart contract deployment.',
+    //        slug: '/developers/smart-contracts',
+    //      },
+    //      items: [
+    //        'developers/smart-contracts/hardhat',
+    //        'developers/smart-contracts/truffle',
+    //      ],
+    //    },
+    //    {
+    //      type: 'category',
+    //      label: 'Ronin Wallet',
+    //      link: {
+    //        type: 'generated-index',
+    //        title: 'Integrate Ronin Wallet', 
+    //        description: 'Guides for Ronin Wallet integration.',
+    //        slug: '/developers/ronin-wallet',
+    //      },
+    //      items: [
+    //        'developers/ronin-wallet/integrate',
+    //        'developers/ronin-wallet/switch-network',
+    //      ],
+    //    },
+    //    // FAQ
+    //    {
+    //      type: 'doc',
+    //      label: 'FAQ',
+    //      id: 'developers/faq',
+    //    },
+    //  ],
+    // },
     // Community
     {
       type: 'category',
@@ -385,32 +415,37 @@ const sidebars = {
         type: 'generated-index',
         title: 'Community', 
         description: 'Community information and a contribution guide.',
+        slug: '/community',
       },
       items: [
+        'community/join',
         {
           type: 'category',
-          label: 'Contribution',
+          label: 'Contribute',
           link: {
             type: 'generated-index',
-            title: 'Contribution',
-            description: 'Contribute to this documentation.'
+            title: 'Contribute',
+            description: 'Learn how to contribute to the Ronin documentation.',
+            slug: '/community/contribute',
           },
           items: [
-            'community/contribution/contribution-guide',
-            'community/contribution/style-guide',
+            'community/contribute/guide',
+            'community/contribute/style',
             {
               type: 'category',
               label: 'Templates',
               link: {
               type: 'generated-index',
-              title: 'Templates', 
+              title: 'Documentation templates', 
               description: 'Templates used to create this documentation.',
+              slug: '/community/contribute/templates',
             },
             items: [
-              'community/contribution/templates/concept',
-              'community/contribution/templates/task',
-              'community/contribution/templates/reference',
-              'community/contribution/templates/troubleshooting',
+              'community/contribute/templates/concept',
+              'community/contribute/templates/task',
+              'community/contribute/templates/reference',
+              'community/contribute/templates/troubleshooting',
+              'community/contribute/templates/tutorial',
               ],
             },
           ],
@@ -419,21 +454,6 @@ const sidebars = {
         'community/council',
         'community/governance',
         'community/grants',
-        {
-          type: 'link',
-          label: 'Discord',
-          href: 'https://discord.gg/P5GgF7SK',
-        },
-        {
-          type: 'link',
-          label: 'Twitter',
-          href: 'https://twitter.com/ronin_network',
-        },
-        {
-          type: 'link',
-          label: 'Newsletter',
-          href: 'https://roninblockchain.substack.com/',
-        },
       ],
     },
     // Resources
@@ -442,14 +462,10 @@ const sidebars = {
       label: 'Resources',
       link: {
         type: 'generated-index',
-        title: 'Resources', 
+        title: 'Resources',
+        slug: '/resources',
       },
       items: [
-        {
-          type: 'link',
-          label: 'GitHub',
-          href: 'https://github.com/axieinfinity/',
-        },
         'resources/other',
       ],
     },

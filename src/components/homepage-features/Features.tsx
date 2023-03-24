@@ -10,15 +10,6 @@ import React from 'react'
 import { Card } from './Card'
 
 const featureList = [
-  // {
-  //   title: 'Introduction',
-  //   Icon: ListViewIcon,
-  //   link: {
-  //     href: '/docs/get-started',
-  //     title: 'Get started',
-  //   },
-  //   description: <>Learn the basics of blockchain and Ronin Network.</>,
-  // },
   {
     title: 'Basics',
     Icon: ListViewIcon,
@@ -26,32 +17,32 @@ const featureList = [
       href: '/docs/category/basics',
       title: 'Basics',
     },
-    description: <>Learn the basics of Ronin Network.</>,
+    description: <>Learn the basics of Ronin.</>,
   },
   {
     title: 'Delegators',
     Icon: CoinIcon,
     link: {
-      href: '/docs/category/delegators',
+      href: '/docs/delegators',
       title: 'Delegators',
     },
-    description: <>Secure the network by staking tokens and delegating your stake to validators.</>,
+    description: <>Stake tokens and delegate your stake to validators to earn rewards and secure the network.</>,
   },
   {
     title: 'Validators',
     Icon: BoxTickIcon,
-    description: <>Secure the network and earn rewards by staking tokens and running a node to validate.</>,
+    description: <>Run a validator node to earn rewards and maintain network security.</>,
     link: {
-      href: '/docs/category/validators',
+      href: '/docs/validators',
       title: 'Validators',
     },
   },
   {
     title: 'Node operators',
     Icon: SignDirectionIcon,
-    description: <>Set up validator and bridge operator nodes and ensure their stable operation.</>,
+    description: <>Set up and configure nodes to ensure their stable operation.</>,
     link: {
-      href: '/docs/category/node-operators',
+      href: '/docs/node-operators',
       title: 'Node operators',
     },
   },
@@ -59,17 +50,17 @@ const featureList = [
     title: 'Developers',
     Icon: LaptopCodeIcon,
     link: {
-      href: '/docs/category/developers',
+      href: '/docs/developers/portal',
       title: 'Developers',
     },
-    description: <>Build your decentralized application on Ronin Network.</>,
+    description: <>Build your decentralized application on Ronin.</>,
   },
   {
     title: 'Community',
     Icon: UserShieldIcon,
     description: <>Join our community, participate in programs, and contribute to this documentation.</>,
     link: {
-      href: '/docs/category/community',
+      href: '/docs/community',
       title: 'Community',
     },
   },

@@ -1,5 +1,0 @@
----
-description: Governance overview
----
-
-# Governance

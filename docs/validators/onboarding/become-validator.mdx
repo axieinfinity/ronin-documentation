@@ -1,5 +1,5 @@
 ---
-description: Get started as a validator on Ronin
+description: Register as a Validator Candidate to be selected as a validator
 ---
 
 import becomeValidator from './assets/become-validator.png';
@@ -10,43 +10,42 @@ import stepFour from './assets/onboarding-step-4.png'
 import stepFive from './assets/onboarding-step-5.png'
 
 # Become a validator
-
 This page explains how to register as a validator on Ronin.
 
 ## Validator roles
-
 There are three validator roles:
 * **Validator Candidate.** After following the steps in this guide, you'll become a Validator Candidate and have a chance to be selected as a Standard Validator on the next day.
 * **Standard Validator.** Every day, at least 10 Validator Candidates with the highest amount staked are selected as Standard Validators. The system records your total staking amount at 00:00 UTC every day for the selection process. 
 * **Governing Validator.** The validators chosen by the community and Sky Mavis to ensure network security. Governing Validators are validators by default, and they account for more than half of the total validator pool.
 
+## Prerequisites
+* You need to have an amount of RON sufficient for the initial stake.
+* You also need to have 100 RON as a starting balance to maintain the bridge. 
+
 ## Register as a Validator Candidate
 
-1. Go to the [staking dashboard](https://saigon-staking.roninchain.com/) and click **Become a validator**. 
+1. Go to [Validator Dashboard](https://validator.roninchain.com/) > **Become a Validator**. 
 <img src={becomeValidator} width={1280} />
 
-2. Familiarize yourself with the requirements and slashing penalties applied to validators. It's also highly recommended that you read the [white paper](./../../basics/white-paper.md).
+2. Familiarize yourself with the requirements and slashing penalties. 
+It's also highly recommended that you read the
+[white paper](./../../basics/white-paper.md).
 <img src={stepOne} width={1280} />
 
-3. Set up your validator and bridge operator nodes following [Run a validator node](./../../node-operators/validator-setup-t.md) and [Run a bridge operator node](./../../node-operators/bridge-setup-t.md), respectively.
+3. Set up your validator and bridge operator nodes.
 <img src={stepTwo} width={1280} />
 
-4. Fill in your [addresses](./../manage-profile/profile.mdx) and specify your commission rate.
+4. Fill in your addresses and specify the commission rate.
 <img src={stepThree} width={1280} />
 
-5. Provide the initial stake of RON.
+5. Deposit 100 RON into the bridge operator address. This address
+is used to automatically sign transactions on the bridge every epoch,
+and having a starting balance there will help you avoid
+[bridge operator slashing](./../slashing/slashing.mdx) if you're
+selected as a validator. 
 <img src={stepFour} width={1280} />
 
-Done!
-
+6. Provide the initial stake of RON.
 <img src={stepFive} width={1280} />
 
-:::caution
-
-Now that you're a Validator Candidate, we advise that you deposit some RON
-into the following addresses to avoid [bridge operator slashing](./../slashing/slashing.mdx)
-should you be selected as a validator:
-* Bridge operator address: RON is required to automatically sign transactions on the bridge every epoch.
-* Bridge voter address (if you’re a Governing Validator): RON is required to automatically sign transactions when syncing the set of bridge operators.
-
-:::
+Done! You're now a Validator Candidate.

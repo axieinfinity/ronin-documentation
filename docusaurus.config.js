@@ -10,9 +10,9 @@ const currentYear = new Date().getFullYear()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ronin Network',
+  title: 'Ronin',
   tagline: 'Lets build together',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.roninchain.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -21,6 +21,11 @@ const config = {
   projectName: 'ronin-document', // Usually your repo name.
 
   staticDirectories: ['static'],
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [
     'docusaurus-plugin-sass',
@@ -71,12 +76,17 @@ const config = {
         maxHeadingLevel: 5,
       },
       navbar: {
-        title: 'Ronin Network',
+        title: 'Ronin',
         logo: {
-          alt: 'Ronin Network Logo',
+          alt: 'Ronin logo',
           src: 'img/logo.svg',
         },
         items: [
+          // Get started
+          {
+            label: 'Get started',
+            to: 'docs/basics/get-started',
+          },
           // Basics
           {
             label: 'Basics',
@@ -85,32 +95,27 @@ const config = {
           // Delegators
           {
             label: 'Delegators',
-            to: 'docs/category/delegators',
+            to: 'docs/delegators',
           },
           // Validators
           {
             label: 'Validators',
-            to: 'docs/category/validators',
+            to: 'docs/validators',
           },
           // Node operators
           {
             label: 'Node operators',
-            to: 'docs/category/node-operators',
+            to: 'docs/node-operators',
           },
           // Developers
           {
             label: 'Developers',
-            to: 'docs/category/developers',
+            to: 'docs/developers/portal',
           },
           // Community
           {
             label: 'Community',
-            to: 'docs/category/community',
-          },
-          // Resources
-          {
-            label: 'Resources',
-            to: 'docs/category/resources',
+            to: 'docs/community',
           },
           // Search
           {
@@ -131,49 +136,15 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Basics',
-                to: 'docs/category/basics',
-              },
-              {
-                label: 'Delegators',
-                to: 'docs/category/delegators',
-              },
-              {
-                label: 'Validators',
-                to: 'docs/category/validators',
-              },
-              {
-                label: 'Node operators',
-                to: 'docs/category/node-operators',
-              },
-              {
-                label: 'Developers',
-                to: 'docs/category/developers',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
-                label: 'Contribution',
-                to: 'docs/category/contribution',
+                label: 'Join Ronin community',
+                to: 'docs/community/join',
               },
               {
-                label: 'Discord',
-                href: 'https://discord.gg/P5GgF7SK',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/ronin_network',
-              },
-              {
-                type: 'link',
-                label: 'Newsletter',
-                href: 'https://roninblockchain.substack.com/',
+                label: 'Contribute to documentation',
+                to: 'docs/community/contribute',
               },
             ],
           },
@@ -183,6 +154,11 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/axieinfinity/',
+              },
+              {
+                type: 'link',
+                label: 'Newsletter',
+                href: 'https://roninblockchain.substack.com/',
               },
             ],
           },

@@ -42,7 +42,7 @@ vale directory-name
 
 to review all files in a directory.
 
-Examples: `vale view-profile.md` or `vale docs/validator`. 
+Examples: `vale profile.md` or `vale docs/validators`. 
 
 The output is a list of errors and warnings that you need to review and fix
 where applicable. By default, Vale reviews every line in a file,

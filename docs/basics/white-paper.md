@@ -1,5 +1,5 @@
 ---
-description: Ronin Network white paper
+description: A living white paper document for Ronin
 ---
 
 # White paper

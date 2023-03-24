@@ -7,31 +7,26 @@ import confirmTransaction from './assets/confirm-transaction.png';
 
 # Withdraw stake
 You can withdraw part of your stake to your wallet as long as it’s been
-three days since you last staked in and provided that the minimum staking
+three days since you last staked in, and provided that the minimum staking
 amount is maintained after withdrawal.
 
 :::caution
 Withdrawing the stake might lower your chance of being selected
-as a validator in the upcoming days, depending on how much others
+as a validator in the days after, depending on how much others
 have staked.
 :::
 
-1. Go to the [staking dashboard](https://saigon-staking.roninchain.com/)
-and select **My Staking**.
-2. Expand the options and click **Withdraw**.
+1. Go to [Validator Dashboard](https://validator.roninchain.com/) >
+**My Staking** > expand the options > **Withdraw**.
+<img src={stepOne} width={1280} />
 
-<img src={stepOne} width={480} />
+2. Enter the amount manually or choose **Max** to withdraw the
+entire stake, and then select **Withdraw**.
+<img src={stepTwo} width={400} />
 
-3. Enter the amount manually or click **Max** to automatically 
-fill in the maximum withdrawable amount.
-4. Click **Withdraw**.
-
-<img src={stepTwo} width={416} />
-
-5. Confirm the transaction.
-
-<img src={confirmTransaction} width={375} />
+3. Confirm the transaction.
+<img src={confirmTransaction} width={400} />
 
 After the transaction is confirmed, you can review its details on the
 **Activities** tab or check the status in
-[Ronin Block Explorer](https://saigon-explorer.roninchain.com/).
+[Ronin Block Explorer](https://app.roninchain.com/dashboard).

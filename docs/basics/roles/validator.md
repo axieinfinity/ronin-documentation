@@ -7,7 +7,6 @@ description: Validator role and responsibility
 A validator is an individual who is responsible for validating transactions and generating blocks within a blockchain. 
 
 ## Validator roles
-
 There are three validator roles:
 * **Validator Candidate.** After registering as a validator on Ronin, you'll become a Validator Candidate and have a chance to be selected as a Standard Validator on the next day.
 * **Standard Validator.** Every day, 10 Validator Candidates with the highest amount staked are selected as Standard Validators. The system records your total staking amount at 00:00 UTC every day for the selection process. 
