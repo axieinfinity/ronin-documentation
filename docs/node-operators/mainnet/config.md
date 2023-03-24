@@ -6,18 +6,14 @@ description: Mainnet specification
 
 ## Specification
 
-* Chain id (network id): `2020`
+* Chain ID (network ID): `2020`
 * RPC endpoint: [https://api.roninchain.com/rpc](https://api.roninchain.com/rpc)
 * Consensus: DPoS (Consortium)
 * Stats: [https://stats.roninchain.com/](https://stats.roninchain.com)
 * Explorer: [https://explorer.roninchain.com/](https://explorer.roninchain.com/)
 * Genesis file: [mainnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json)
-* Full node size:
-   * The pruned cache is 160GB (updated on 23/2/2020)
-   * 0.5GB daily increment for pruned cache data
-   * Suggestion: Prune cache after 2 or 3 weeks
-* Block Time: 3 seconds
-* Gas Price: 20 GWEI
+* Block time: 3 seconds
+* Gas Price: 20 gwei
 
 ## Genesis contracts
 

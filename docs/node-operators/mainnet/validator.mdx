@@ -1,5 +1,5 @@
 ---
-description: Set up and run a validator node
+description: Set up a validator node on mainnet
 ---
 
 import Tabs from '@theme/Tabs';
@@ -44,37 +44,37 @@ You can do that in one of the two ways:
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
 ## Set up and run
-1\. In your working directory, create subdirectories for the config and chain data by running the following commands:
+1. In your working directory, create subdirectories for the config and chain data by running the following commands:
 
 <Tabs groupId="node-setup">
   <TabItem value="together" label="Validator and bridge">
 
-    mkdir -p  /axie/ronin-manager
-    mkdir -p  ~/bridgedata-v2
+    mkdir -p /axie/ronin-manager
+    mkdir -p ~/bridgedata-v2
     mkdir -p ~/.skymavis/chaindata/data/ronin/
 
   </TabItem>
   <TabItem value="separately" label="Validator only">
 
-    mkdir -p  /axie/ronin-manager
+    mkdir -p /axie/ronin-manager
     mkdir -p ~/.skymavis/chaindata/data/ronin/
 
   </TabItem>
 </Tabs>
 
-2\. Navigate to the `ronin-manager` directory:
+2. Navigate to the `ronin-manager` directory:
 
 ```
 cd /axie/ronin-manager
 ```
 
-3\. Create a `docker-compose` file:
+3. Create a `docker-compose` file:
 
 ```
 vim docker-compose.yml
 ```
 
-4\. Paste the following contents into the file:
+4. Paste the following contents into the file:
 
 <Tabs groupId="node-setup">
   <TabItem value="together" label="Validator and bridge">
@@ -178,13 +178,13 @@ vim docker-compose.yml
   </TabItem>
 </Tabs>
 
-5\. Create an `.env` file:
+5. Create an `.env` file:
 
 ```
 vim .env
 ```
 
-6\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
+6. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
 
 <Tabs groupId="node-setup">
   <TabItem value="together" label="Validator and bridge">
@@ -266,7 +266,7 @@ vim .env
   </TabItem>
 </Tabs>
 
-8\. Start the node:
+7. Start the node:
 
 ```
 docker-compose up -d 

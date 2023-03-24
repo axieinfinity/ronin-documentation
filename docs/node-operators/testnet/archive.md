@@ -1,6 +1,5 @@
 ---
-description: Set up and run an archive node on testnet
-title: Run an archive node
+description: Set up an archive node on testnet
 ---
 
 # Run an archive node
@@ -20,26 +19,26 @@ This page describes how to set up and run an archive node on testnet.
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
 ## Set up and run
-1\. In your working directory, create subdirectories for the config and chain data by running the following commands:
+1. In your working directory, create subdirectories for the config and chain data by running the following commands:
 
 ```
-mkdir -p  /axie/ronin-manager
+mkdir -p /axie/ronin-manager
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-2\. Navigate to the `ronin-manager` directory:
+2. Navigate to the `ronin-manager` directory:
 
 ```
 cd /axie/ronin-manager
 ```
 
-3\. Create a `docker-compose` file:
+3. Create a `docker-compose` file:
 
 ```
 vim docker-compose.yml
 ```
 
-4\. Paste the following contents into the file:
+4. Paste the following contents into the file:
 
 ```
 version: "3"
@@ -72,13 +71,13 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-5\. Create an `.env` file:
+5. Create an `.env` file:
 
 ```
 vim .env
 ```
 
-6\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
+6. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
 
 ```
 # BOOTNODES address of the bootnode to connect to the network, will be auto-filled
@@ -110,10 +109,10 @@ GENESIS_PATH=testnet.json
 RONIN_PARAMS=--gcmode archive --http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
 ```
 
-7\. Start the node:
+7. Start the node:
 
 ```
-cd  /axie/ronin-manager && docker-compose up -d 
+docker-compose up -d 
 ```
 
 After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.

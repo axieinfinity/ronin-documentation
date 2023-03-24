@@ -1,5 +1,5 @@
 ---
-description: Set up and run a validator node
+description: Set up a validator node on testnet
 ---
 
 import Tabs from '@theme/Tabs';
@@ -47,37 +47,37 @@ Snapshot checksum using Md5sum: `741d0c68de1107547b849395c17f0f41`.
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
 ## Set up and run
-1\. In your working directory, create subdirectories for the config and chain data by running the following commands:
+1. In your working directory, create subdirectories for the config and chain data by running the following commands:
 
 <Tabs groupId="node-setup">
   <TabItem value="together" label="Validator and bridge">
 
-    mkdir -p  /axie/ronin-manager
-    mkdir -p  ~/bridgedata-v2
+    mkdir -p /axie/ronin-manager
+    mkdir -p ~/bridgedata-v2
     mkdir -p ~/.skymavis/chaindata/data/ronin/
 
   </TabItem>
   <TabItem value="separately" label="Validator only">
 
-    mkdir -p  /axie/ronin-manager
+    mkdir -p /axie/ronin-manager
     mkdir -p ~/.skymavis/chaindata/data/ronin/
 
   </TabItem>
 </Tabs>
 
-2\. Navigate to the `ronin-manager` directory:
+2. Navigate to the `ronin-manager` directory:
 
 ```
 cd /axie/ronin-manager
 ```
 
-3\. Create a `docker-compose` file:
+3. Create a `docker-compose` file:
 
 ```
 vim docker-compose.yml
 ```
 
-4\. Paste the following contents into the file:
+4. Paste the following contents into the file:
 
 <Tabs groupId="node-setup">
   <TabItem value="together" label="Validator and bridge">
@@ -181,13 +181,13 @@ vim docker-compose.yml
   </TabItem>
 </Tabs>
 
-5\. Create an `.env` file:
+5. Create an `.env` file:
 
 ```
 vim .env
 ```
 
-6\. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
+6. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
 
 <Tabs groupId="node-setup">
   <TabItem value="together" label="Validator and bridge">
@@ -273,7 +273,7 @@ vim .env
   </TabItem>
 </Tabs>
 
-7\. (Optional) Download the snapshot to save the time:
+7. (Optional) Download the snapshot to save the time:
 
 ```
 cd ~/.skymavis/chaindata/data/ronin/
@@ -281,7 +281,7 @@ curl https://storage.googleapis.com/testnet-chaindata/chaindata-22-3-2023.tar -o
 mv chaindata-22-3-2023 chaindata
 ```
 
-8\. Start the node:
+8. Start the node:
 
 ```
 docker-compose up -d 

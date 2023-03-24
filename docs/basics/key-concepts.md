@@ -120,7 +120,7 @@ Specifically, an RPC node provides a mechanism for applications to query the blo
 An archive node retains all historical data right back to genesis and is suited for making fast queries about historical states. This data represents units of terabytes, which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics. 
 
 ### Node operator
-A node operator is an individual who's in charge of setting up and running nodes for a validator.
+A node operator is an individual or institution that sets up and configure nodes for the validator. The node operator and validator might actually be the same person or entity. but, this documentation makes a distinction between these roles for clarity. For example, see sections [Node operators](/docs/node-operators) and [Validators](/docs/validators). 
 
 ## P
 ### Proof of Authority (PoA)
@@ -190,8 +190,17 @@ In a blockchain context, a transaction (TX) generally refers to the sending and 
 
 ## V
 ### Validator
-A validator is an individual or entity that is responsible for validating transactions and generating blocks within a blockchain. Each blockchain protocol has its own parameters for what constitutes an acceptable validator and how these validators operate. 
+A validator is an individual or institution that validates transactions and generates blocks within a blockchain by running a validator node. Blockchain protocols have their own parameters for what constitutes an acceptable validator and how it operates.
 
-On Ronin, a distinction is made between a validator and a node operator, where the former is responsible for managing the validator's profile, claiming rewards, and performing other GUI-related tasks, while the latter is in charge of setting up and running the client software on the node.
+There are three types of validators on Ronin: Validator Candidates, Standard Validators, and Governing Validators. Standard Validators participate in block production and operate Ronin Bridge. Governing Validators act as Standard Validators but also govern the network through proposals.
 
-There are two types of validators on Ronin: Standard Validators and Governing Validators. Standard Validators participate in block production and ensure that the bridge is always operational. Governing Validators act as Standard Validators with the additional responsibility of making governing decisions that shape the future of the network.
+In this documentation, a distinction is made between a validator and a node operator. The former is responsible for managing the validator's profile, claiming rewards, and performing other GUI-related tasks, while the latter is in charge of setting up and running the client software on the node.
+
+It's also common to use the term "validator" to refer to the validator node itself. 
+
+## W
+### Web3 games
+Web3 games are video games that leverage blockchain technology to provide new features and experiences for players. These games often use non-fungible tokens (NFTs) to represent in-game assets and provide players with true ownership of those assets. They also incorporate decentralized finance (DeFi) elements, allowing players to earn cryptocurrency and participate in yield farming or liquidity provision within the game.
+
+For example, Axie Infinity is a blockchain-based play-to-earn game built on the Ronin network. Players can buy, train, breed, and battle pets called Axies, available as NFTs to earn the in-game currency Smooth Love Potion (SLP). Axie Infinity players can also sell their Axies in the marketplace to earn real money.
+
