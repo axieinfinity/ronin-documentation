@@ -33,9 +33,7 @@ A blockchain is a public ledger of transactions that is maintained and verified 
 A blockchain bridge—also known as a cross-chain bridge—allows independent blockchains to communicate with each other. This allows users to transfer crypto assets from one blockchain to another, including tokens, wrapped cryptocurrencies, and non-fungible tokens (NFTs). For example, [Ronin Bridge](https://bridge.roninchain.com/) is used for asset transfer between the Ronin chain and the Ethereum mainnet.
 
 ### Bridge operator
-A bridge operator is a type of node used for acknowledging deposit and withdrawal events on a blockchain bridge to facilitate asset transfers between this chain and others.
-
-On Ronin Bridge, each validator runs a [bridge operator node](#bridge-operator-node) alongside the [validator node](#validator-node).
+A bridge operator is a type of node used for acknowledging deposit and withdrawal events on a blockchain bridge to facilitate asset transfers between this chain and others. On Ronin Bridge, each validator runs a [bridge operator node](#bridge-operator-node) alongside the [validator node](#validator-node).
 
 ## C
 ### Client
