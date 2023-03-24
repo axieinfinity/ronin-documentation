@@ -4,22 +4,26 @@ description: Overview of RON economy
 
 # Tokenomics
 
-## Ronin token - RON
-RON is the ecosystem token of the Ronin blockchain. Its main purpose is to secure and decentralize the network. Ronin will thrive if RON is in the hands of the builders and users of the network.
-Ronin validators will need to hold and stake RON to participate in validating blocks. They are rewarded with newly issued RON. This RON is divided up among a validator and its delegates pro-rata based on the RON they have staked with the validator. The validator may also elect to take a fee from its delegates. Please note that this structure is not finalized and may be altered as new research and trends come to light.
+### Ronin token - RON
+RON is the ecosystem token of the Ronin blockchain. The RON token enables users to pay for transactions on Ronin, includes decentralized finance (DeFi) features like community governance, and utility via staking through validators to earn rewards.
+Ronin validators will need to hold and stake RON to participate in validating blocks. They are rewarded with newly issued RON. This rewards are divided up among a validator and its delegators based on the RON they have staked with the validator. 
 
-Holders of RON will be able to stake their RON tokens with a validator to earn RON rewards and participate in governance of the network. Fee structure and use of the RON treasury are potential governance topics.
 
-## Key metrics
+### RON release schedule
 
-* Token Name: RON.
-* Ticker: RON.
-* Blockchain: Ronin blockchain.
-* Token type: Utility
-* Total Supply: 1,000,000,000 RON.
-* Max Supply: 1,000,000,000 RON
+The max total supply is 1,000,000,000 and can potentially be unlocked after 108 months if every token that is unlocked is issued. RON tokens were first unlocked on 27th Jan 2023. While the unlock schedule provides a view of RON tokens unlocked at quarterly time periods, tokens are unlocked on a continuous basis rather than having large unlocks at a specific date every quarter for the actual implementation.
 
-## RON allocation
+![](<./assets/total-supply.png>)
+
+There is a difference between Unlocked Supply (found in the public unlock schedule) vs Circulating Supply (tokens that are issued out into circulation). Unlocked tokens may not be immediately circulated into the market and it usually depends on a program budget that is planned in advance. 
+* Circulating Supply increases in the event that tokens are distributed from the original allocations or staking contracts as rewards to users and other parties.
+* It may also decrease in the case where RON is bought back from the market and placed into the Treasury.
+* Circulating Supply will never be higher than the Unlocked Supply.
+* Circulating Supply of RON can be found at this [link](https://supply-api.roninchain.com/info/ron?q=circulatingSupply).
+
+
+### RON allocation
+The quantity of RON reserved for various network functions, as a percentage of the total existing token supply, follows this distribution:
 
 * Staking rewards: 25%
 * Incentives: 30%
@@ -28,14 +32,16 @@ Holders of RON will be able to stake their RON tokens with a validator to earn R
 
 ![](<./assets/allocations.png>)
 
-After 5 years, gas and protocol fees will totally replace staking rewards.
+### Staking rewards
+Ronin allocates 25% of its total supply to fund the staking rewards. This is to ensure that the network is seeded well enough until transaction fees gain traction. These rewards are primarily meant to jump-start the network, while the protocol in the long run is intended to sustain itself on the basis of transaction fees.
 
-## RON release schedule
-
-The maximum supply of RON will be released after 294 months since the start of issuance. Some delays in issuance related to staking and community rewards should be expected.
-
-![](<./assets/total-supply.png>)
-
-[Detailed issuance sheet](https://docs.google.com/spreadsheets/d/1gPEbIhTLHNAupXDj71IJsF5T0oe1kB4QBY54vd74Kvo/edit#gid=0)
-
-## RON treasury addresses
+| Year                    | Staking reward       | Bridge reward     |
+|-------------------------|----------------------|-------------------|
+| 1 (Starting April 2023) | 30,000,000           | 1,000,000         |
+| 2                       | 30,000,000           |                   | 
+| 3                       | 30,000,000           |                   | 
+| 4                       | 28,000,000           |                   | 
+| 5                       | 24,000,000           |                   | 
+| 6                       | 18,000,000           |                   | 
+| 7                       | 14,000,000           |                   | 
+| 8                       | 6,000,000            |                   | 

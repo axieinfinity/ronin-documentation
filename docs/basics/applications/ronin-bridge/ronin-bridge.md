@@ -4,28 +4,7 @@ description: Ronin Bridge overview
 ---
 
 # Ronin Bridge
-A service tracking gateway events from Ethereum and Ronin chains.
 
-URL: https://bridge.roninchain.com
+A bridge refers to a mechanism that allows different blockchain networks to communicate and transfer data or value between them. Ronin Bridge allows clients to transfer tokens between Ethereum and Ronin chains. 
 
-## Transfer Gateway and Ronin Bridge
-
-### Transfer Gateway
-
-Transfer Gateway is the gate for token transfer onto the sidechain and the subsequent transfer back to Ethereum. At the moment we support our users depositing on ETH, ERC20, and ERC721.
-
-Transfer Gateway contracts include:
-
-* `MainchainGateway` contract deployed on the Ethereum chain.
-* `SidechainGateway` contract deployed on the Ronin chain.
-
-Whenever users deposit or withdraw their assets these contracts will emit corresponding events.
-
-### Ronin Bridge
-
-Ronin Bridge tracks events from the MainchainGateway and SidechainGateway contracts. Each validator has to run a bridge operator node so that this service can be acknowledged for the validator.
-
-## Security audits
-
-* [Verichains Bridge Audit v1.1](https://cdn.axieinfinity.com/ronin-doc/verichains-audit-bridge-v1.1.pdf)
-* [Certik Audit](https://cdn.axieinfinity.com/ronin-doc/REP-final-20220621T172752Z.pdf)
+[Ronin bridge](https://bridge.roninchain.com) is a multi-signature (multisig) bridge. It requires multiple approvals from a group of bridge operators before a transaction can be executed. Multisig bridges are designed to improve the security and trustworthiness of cross-chain transactions, as they require a consensus among several parties before a transaction can be confirmed. This makes it more difficult for any single party to act maliciously or make unauthorized changes to the transaction.

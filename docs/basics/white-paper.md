@@ -15,23 +15,20 @@ As the next step toward decentralization, we integrated the [Delegated Proof of 
 
 ## Consensus
 
-### DPoS
-Ronin's DPoS variation is a combination of PoA and DPoS. Here's how it works:
-* The set of block producers—*validators*—consists of $22$ slots, of which $12$ are reserved for Governing Validators who are selected in the PoA manner. The remaining $10$ slots are open for anyone who wishes to become a validator and meets the minimum staking requirements. These are referred to as Standard Validators.
+### Delegated Proof of Stake
+Delegated Proof of Stake (DPoS) is a consensus mechanism where token holders delegate their stake to select validators. These validators verify transactions, produce new blocks, and receive rewards for their work.
+
+Token holders can vote for themselves or delegate stake to a representative. The more tokens a validator receives, the higher their chance of selection. Rewards for producing blocks are shared between validators and delegators (who delegate stake to validators).
+
+In Ronin, a set of validators is selected using DPoS. Then, validators take turns producing blocks in a Proof of Authority manner. A summary for Ronin's consensus is given as follows. 
+* The set of *validators* consists of $22$ slots, of which $12$ are reserved for Governing Validators who are selected in the PoA manner. The remaining $10$ slots are open for anyone who wishes to become a validator and meets the minimum staking requirements. These are referred to as Standard Validators.
 * Users who registered to become a validator have the role of a Validator Candidate until they're selected to become a Standard Validator.
-* Token holders—known as *delegators*—delegate their own stake to any validator of their choosing, increasing the validator's chance to be selected as a Standard Validator and earn block production access.
+* The *delegators* delegate their own stake to any validator of their choosing, increasing the validator's chance to be selected as a Standard Validator and earn block production access.
 * Selected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with their delegators.
 
-### Security and finality
-
-The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time $=3\space seconds$, the users should wait for 45 seconds to confirm transactions in a block.
-
-To perform the Clone attack, the Byzantine validators must create two blocks on the same block height, also known as double-sign. This behavior can be detected by other validators in the system. Thus, we use a [slashing mechanism](./../validators/slashing/slashing.mdx) to penalize Byzantine validators. This mechanism exposes malicious validators in a short time and makes the Clone attack non-beneficial.
-
-To perform a non-detectable attack—when the Byzantine validators can only seal at most one block on each block height—the attacker must control at least $N/2+1$ validators.
 
 ### Validator selection
-Any token holder can register as a Validator Candidate. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of $22$ validators, which includes $12$ Governing Validators, and $10$ Standard Validators chosen among the Validator Candidates with the highest staked amount.
+Any token holder can register as a Validator Candidate. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of $22$ validators, which includes $12$ Governing Validators, and $10$ Standard Validators chosen among the Validator Candidates with the highest votes (staked amount).
 
 During the day, some validators might be temporarily removed from the validator set. For example, due to "jailing", which is a form of slashing, or because of scheduled maintenance. These changes are updated every epoch, where one epoch consists of $200$ blocks or $\approx10$ minutes.
 
@@ -57,6 +54,15 @@ The group of $12$ Governing Validators chosen by the community and Sky Mavis is 
 The role of the bridge operator is to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. Bridge operators have their own rewarding and slashing logic.
 
 Each validator has the responsibility to run a bridge operator node. The validator who doesn't not run the bridge operator can't claim their block rewards.
+
+### Security and finality
+
+The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time $=3\space seconds$, the users should wait for 45 seconds to confirm transactions in a block.
+
+To perform the Clone attack, the Byzantine validators must create two blocks on the same block height, also known as double-sign. This behavior can be detected by other validators in the system. Thus, we use a [slashing mechanism](./../validators/slashing/slashing.mdx) to penalize Byzantine validators. This mechanism exposes malicious validators in a short time and makes the Clone attack non-beneficial.
+
+To perform a non-detectable attack—when the Byzantine validators can only seal at most one block on each block height—the attacker must control the majority of validators. Fortunately, the selection of Governing Validators guarantee the majority of validators are honest, thus ensuring the security of Ronin.
+
 
 ## Rewards
 
@@ -162,6 +168,6 @@ In addition to producing blocks, Governing Validators are in charge of the follo
 * Adding or removing other Governing Validators.
 * Syncing the set of bridge operators to the Ethereum chain every day.
 
-We require $10/12$ Governing Validators' votes to perform the above tasks. A Governing Validator who doesn't sync the set of bridge operators to the Ethereum chain for three consecutive days gets slashed $10,000$ RON.
+We require $9/12$ Governing Validators' votes to perform the above tasks. A Governing Validator who doesn't sync the set of bridge operators to the Ethereum chain for three consecutive days gets slashed $10,000$ RON.
 
 **Disclaimer:**  This white paper is a work in progress and can be updated in the future.
