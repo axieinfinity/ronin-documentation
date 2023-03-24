@@ -27,6 +27,7 @@ const sidebars = {
         type: 'generated-index',
         title: 'Ronin basics',
         description: 'Everything you need to know about Ronin.',
+        slug: '/basics',
       },
       items: [
         // Introduction to Ronin
@@ -57,6 +58,7 @@ const sidebars = {
             type: 'generated-index',
             title: 'Roles',
             description: 'The main actors on Ronin.',
+            slug: '/basics/roles',
           },
           items: [
             // Validator
@@ -65,7 +67,7 @@ const sidebars = {
             'basics/roles/delegator',
           ],
         },
-        // dAPps
+        // dApps
         {
           type: 'category',
           label: 'dApps',
@@ -73,6 +75,7 @@ const sidebars = {
             type: 'generated-index',
             title: 'dApps',
             description: 'Decentralized applications (dApps) on Ronin.',
+            slug: '/basics/dapps',
           },
           items: [
             // Ronin Bridge
@@ -81,19 +84,19 @@ const sidebars = {
               label: 'Ronin Bridge',
               link: {
                 type: 'doc',
-                id: 'basics/applications/ronin-bridge/ronin-bridge',
+                id: 'basics/dapps/ronin-bridge/overview',
               },
               items: [
                 // Governance
-                'basics/applications/ronin-bridge/governance',
+                'basics/dapps/ronin-bridge/governance',
                 // Withdrawal limits
-                'basics/applications/ronin-bridge/withdrawal-limits',
+                'basics/dapps/ronin-bridge/limits',
               ],
             },
             // Ronin Explorer
-            'basics/applications/ronin-explorer',
+            'basics/dapps/ronin-explorer',
             // Katana Swap
-            'basics/applications/katana',
+            'basics/dapps/katana',
           ],
         },
       ],
@@ -283,10 +286,10 @@ const sidebars = {
         'node-operators/cli',
         {
           type: 'category',
-          label: 'Mainnet',
+          label: 'Mainnet guides',
           link: {
             type: 'generated-index',
-            title: 'Mainnet',
+            title: 'Mainnet guides',
             slug: '/node-operators/mainnet',
           },
           items: [
@@ -304,10 +307,10 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Testnet',
+          label: 'Testnet guides',
           link: {
             type: 'generated-index',
-            title: 'Testnet',
+            title: 'Testnet guides',
             slug: '/node-operators/testnet',
           },
           items: [
