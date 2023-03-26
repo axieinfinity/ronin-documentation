@@ -2,6 +2,8 @@
 description: List of most common questions
 ---
 
+import multisig from './assets/multisig.png';
+
 # Node operator FAQ
 Here's a list of most common questions.
 
@@ -42,9 +44,11 @@ Also check the node's availability on https://stats.roninchain.com/.
 We recommend to use different governor and admin addresses to reduce the impact of leaks or losses of either account.
 
 ### 5. How to use multisig wallet as a validator?
-Multi sigature wallet can add an additional layer of security to manage your node. 
+Using a multi-signature wallet can add an additional layer of security when running your validator node. 
 
-Ronin Validator Portal can be found under Apps tab in [Multisig](https://multisig.roninchain.com). After creating a safe, you can use your safe's address as an admin or governor address. Each action with this safe's address will require multiple confirmation depending on your safe settings.
+Ronin Validator Portal is supported in [Ronin Multsig](https://multisig.roninchain.com), locate it under Multisig's Apps tab. After creating a safe, use your safe's address as an admin or governor address. Each action with this safe's address will require multiple confirmations depending on your safe settings.
+
+<img src={multisig} width={1280} />
 
 ### 6. Any node health monitoring recommendation?
 * Integrate with https://stats.roninchain.com/ for the overall status of the chain's node. If you followed the node setup guides, your node is already there. 
@@ -61,6 +65,6 @@ Latest version of Ronin and its changelog is always avaible at [Ronin release](h
 ### 9. How much time I will have to upgrade my nodes? What happens if I don't update in time?
 A typical upgrade is usually backward-compatible, it can contain performance improvements, bugs fix or new features. It's recommended that every node is upgraded as soon as they can. 
 
-However, an upgrade can also be a hardfork which is usually not backward compatible. If your node fails to upgrade before hardfork block occurs, it can cause your node data differ from the network. Therefore, it's important to upgrade node before a hardfork occurs. All Ronin planned hardforks will be announced 7 days in advance on our Discord and [Ronin substack](https://roninblockchain.substack.com/). 
+However, an upgrade can also be a hardfork which is usually not backward compatible. If your node fails to upgrade before hardfork block occurs, it can cause your node's data to differ from the network. Therefore, it's important to upgrade node before a hardfork occurs. All Ronin planned hardforks will be announced **7 days** in advance on our Discord and [Ronin substack](https://roninblockchain.substack.com/). 
 
 ### 11. How do I change the private key in .env?
