@@ -41,19 +41,26 @@ Also check the node's availability on https://stats.roninchain.com/.
 ### 4. Should the chain governor address be different from the admin address?
 We recommend to use different governor and admin addresses to reduce the impact of leaks or losses of either account.
 
-### 5. How to use multisig for admin address tasks (change commission, renounce, claim rewards)?
+### 5. How to use multisig wallet as a validator?
+Multi sigature wallet can add an additional layer of security to manage your node. 
 
-### 6. How to use multisig for chain governor address tasks (create a proposal, vote for a proposal)?
+Ronin Validator Portal can be found under Apps tab in [Multisig](https://multisig.roninchain.com). After creating a safe, you can use your safe's address as an admin or governor address. Each action with this safe's address will require multiple confirmation depending on your safe settings.
 
-### 7. Any node health monitoring recommendation?
+### 6. Any node health monitoring recommendation?
 * Integrate with https://stats.roninchain.com/ for the overall status of the chain's node. If you followed the node setup guides, your node is already there. 
 * For each node, the system publishes metrics on port `6060` for Prometheus collection. Integrate a Prometheus-Grafana stack for more granular monitoring of your node's health.
 
-### 8. What ports (if any) have to be open to the outside world?
+### 7. What ports (if any) have to be open to the outside world?
 Keep public ports only for peering and discovery, otherwise keep it internal. Our `docker-compose` configuration already binds RPC port `8545` to `localhost`.
 
 For more information, see [Security hardening](security.md).
 
-### 9. If there is a node/bridge update, how do I get this information? How much time I will have to update my nodes? What happens if I don't update in time?
+### 8. If there is a node/bridge upgrade, how do I get this information? 
+Latest version of Ronin and its changelog is always avaible at [Ronin release](https://github.com/axieinfinity/ronin/releases). Stay up-to-date with Ronin upgrades by joining our Discord community. 
 
-### 10. How do I change the private key in .env?
+### 9. How much time I will have to upgrade my nodes? What happens if I don't update in time?
+A typical upgrade is usually backward-compatible, it can contain performance improvements, bugs fix or new features. It's recommended that every node is upgraded as soon as they can. 
+
+However, an upgrade can also be a hardfork which is usually not backward compatible. If your node fails to upgrade before hardfork block occurs, it can cause your node data differ from the network. Therefore, it's important to upgrade node before a hardfork occurs. All Ronin planned hardforks will be announced 7 days in advance on our Discord and [Ronin substack](https://roninblockchain.substack.com/). 
+
+### 11. How do I change the private key in .env?
