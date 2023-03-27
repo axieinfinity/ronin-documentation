@@ -3,10 +3,34 @@ description: Ronin governance overview
 ---
 
 # Overview
-Governing Validators can make changes to the network through an on-chain governance process.
+Governing Validators can make changes to the network through an on-chain governance process. 
+To effect a change, a validator first submits a proposal. Then the other Governing Validators vote on it. 
+If the proposal gets [enough](./vote.mdx#voting-ratio) votes, the change is implemented.
 
-To effect a change, a Governing Validator first submits a proposal. Then the other Governing Validators vote on it. If the proposal gets enough votes, the change is implemented.
+## Creating proposals
+There are two ways to create proposals on Ronin:
+via Validator Dashboard or by running a script.
 
-All proposals are available for public view at at https://app.roninchain.com/governance.
+Following are the types of proposals that can be created using
+the dashboard:
+* Add a new Governing Validator
+* Remove a Governing Validator
+* Update the chain governor address
+* Update the bridge voter address
 
-The interface for the Governing Validators to create and vote on proposals is https://validator.roninchain.com/proposal.
+See [Create a proposal](./create.mdx) for a step-by-step guide.
+
+## Voting on proposals
+Voting takes place on Validator Dashboard.
+
+Whether a proposal is approved or rejected is determined by the following ratio:
+* A proposal is approved if at least 75% of the Governing Validators approve it.
+* A proposal is rejected (and closed) if at least 25% of the Governing Validators reject it.
+
+A proposal that is neither approved nor rejected within 14 days is automatically closed.
+
+For instructions, see [Vote on a proposal](./vote.mdx).
+
+## Viewing proposals
+All proposals are available for public view at
+https://app.roninchain.com/governance.
