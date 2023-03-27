@@ -3,6 +3,9 @@ description: Slashing penalties for validators and bridge operators
 slug: overview
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 import doubleSign from './assets/double-sign.png';
 import valSlashTierOne from './assets/val-slash-tier-1.png';
 import valSlashTierTwo from './assets/val-slash-tier-2.png';
@@ -108,7 +111,14 @@ The penalties are as follows:
 
 #### Tier 2 operator slashing
 
-A bridge operator misses more than 20% of votes in a day.
+<Tabs groupId="bridge-slashing">
+  <TabItem value="mainnet" label="Mainnet">
+  A bridge operator misses more than 30% of votes in a day.
+  </TabItem>
+  <TabItem value="testnet" label="Testnet">
+  A bridge operator misses more than 20% of votes in a day.
+  </TabItem>
+</Tabs>
 
 The penalties are as follows:
 * The corresponding validator can't claim any rewards (commission, staking rewards, bridge rewards) on that day.

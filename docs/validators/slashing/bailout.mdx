@@ -12,12 +12,13 @@ import stepTwo from './assets/confirm-bailout.png';
 
 If you're in [tier 2 validator slashing](slashing.mdx), you can bail out
 of jail at any time using your credit score.
-
+  
 The credit score is calculated as follows:
 * All validators start with a 0 credit score.
-* Every day, each validator (who is not in jail) is given 50 credits
+* Every day, each validator (who is not in jail) is given 50 credits 
 if they miss no block. The validator loses 1 credit for every missed block.
 * The maximum number of credits for a validator is 1,800.
+* It takes 2 credits to bail out for each epoch.
 
 ## Check your credit score
 
