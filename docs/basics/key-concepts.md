@@ -62,7 +62,7 @@ A decentralized exchange (DEX) is a financial services platform for buying, trad
 Delegated Proof of Stake (DPoS) is a consensus mechanism with a distinct voting and delegation structure. A DPoS system allows users to delegate their own stake to a validator node of their choosing—and vote for the node to be selected as a validator in the next day. Selected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with users who delegated them as validators.
 
 ### Delegator
-A delegator is a RON token holder—an individual or institution—who contributes some amount of their tokens to a validator in exchange for a portion of staking rewards and the ability to vote for the validator to be elected in the validator set.
+A delegator is a RON token holder—an individual or institution—who contributes some amount of their tokens to a validator in exchange for a portion of a staking reward and the ability to vote for the validator to be elected in the validator set.
 
 ## E
 ### Epoch

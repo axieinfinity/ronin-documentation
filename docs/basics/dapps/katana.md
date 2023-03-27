@@ -23,6 +23,6 @@ As a special roll-out feature, 10% (100,000,000) of the RON supply will be distr
 It's important that Ronin has shared ownership by the community that builds and uses it. If a RON/ETH pool was launched immediately, it would be vulnerable to price volatility due to lack of sell pressure. This would cause lots of volatility that could harm our community. Typically token launches have pre-sales to private investors. These sales provide some initial sell pressure and act to make sure that the price is harder to manipulate. We did not want to do a private sale for the RON token so this mechanism for price stability was not on the table.
 By delaying the launch of the RON/ETH pool, we can make sure that when the pool launches, there's a diverse group of stakeholders that own the token and can act to stabilize the price in case of large swings.
 
-## Looking to get your dApp on Ronin?
+## Documentation
 
-See [How to get your dApp on Ronin](../../developers/deploy-on-ronin.md)
+For detailed Katana documentation, see [Katana Docs](https://axie-infinity.gitbook.io/katana-docs/).

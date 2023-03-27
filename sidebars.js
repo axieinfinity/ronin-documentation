@@ -30,6 +30,8 @@ const sidebars = {
         slug: '/basics',
       },
       items: [
+        // Get started
+        'basics/get-started',
         // Introduction to Ronin
         {
           type: 'doc',
@@ -48,6 +50,8 @@ const sidebars = {
         'basics/roadmap',
         // Tokenomics
         'basics/tokenomics',
+        // Rewards
+        'basics/rewards',
         // Security audits
         'basics/audits',
         // Roles

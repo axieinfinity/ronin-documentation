@@ -82,11 +82,6 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          // Get started
-          {
-            label: 'Get started',
-            to: 'docs/basics/get-started',
-          },
           // Basics
           {
             label: 'Basics',

@@ -2,12 +2,14 @@
 description: Governance of Ronin Bridge
 ---
 
+import governanceFlow from './assets/governance.png';
+
 # Validator governance
 The governance process is conducted via a decentralized voting mechanism. In Ronin, each Governing Validator has a corresponding governor account. The governors are empowered to vote for proposals such as: adding/removing governing validators, upgrading contracts, changing thresholds, etc.
 
 A governor can create a new proposal for other governors to vote on. After 70% of the governors approve the proposal, the change can be applied.
 
-![Governance flow](<./assets/governance.png>)
+<img src={governanceFlow} width={600} />
 
 The governance voting method is serial by design: only one governance vote can be held at a time, and that vote must be completed before moving to a new vote. One way to conceptualize the governor is as a cold wallet while the validator can be thought of as a hot wallet.
 
