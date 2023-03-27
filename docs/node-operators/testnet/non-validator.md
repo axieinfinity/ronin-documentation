@@ -7,8 +7,8 @@ This page describes how to set up and run a non-validator node on testnet. This 
 
 ## Latest release
 ### RPC node
-* [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
-* [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
+* [https://github.com/axieinfinity/ronin/releases/tag/v2.5.2](https://github.com/axieinfinity/ronin/releases/tag/v2.5.2)
+* [ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895](https://github.com/axieinfinity/ronin/pkgs/container/ronin/80511518?tag=v2.5.2-9bf4895)
 
 Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-22-3-2023.tar`
 Snapshot checksum using Md5sum: `741d0c68de1107547b849395c17f0f41`.
