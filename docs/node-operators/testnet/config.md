@@ -13,6 +13,14 @@ description: Testnet specification
 * Explorer: [https://saigon-app.roninchain.com](https://saigon-app.roninchain.com)
 * Genesis file: [testnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/testnet.json)
 
+## Validator set
+
+* Total validators: 21
+* Governing Validators: 11
+* Standard Validators: 10
+
+For today's validator set, see [https://saigon-app.roninchain.com/staking](https://saigon-app.roninchain.com/staking?tab=validator).
+
 ## Contracts
 
 ```
@@ -26,13 +34,3 @@ RoninValidatorSetProxy: 0x54B3AC74a90E64E8dDE60671b6fE8F8DDf18eC9d
 BridgeTrackingProxy: 0x61626ba084aDdc5dBFCdFfA257e66F8618d3feAB
 GatewayV2 Proxy: 0xCee681C9108c42C710c6A8A949307D5F13C9F3ca
 ```
-
-## Validator info
-Minimum staking amount: 500,000 RON
-
-Validator set:
-* Total validators: 21
-* Governing Validators: 11
-* Standard Validators: 10
-
-For today's validator set, see [https://saigon-app.roninchain.com/staking](https://saigon-app.roninchain.com/staking?tab=validator).

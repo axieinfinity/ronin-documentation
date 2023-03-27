@@ -40,8 +40,8 @@ Here's the core logic of staking:
 * Token holders (including Governing Validators) must stake at least 250,000 RON to become Validator Candidates.
 * Staking takes effect at the beginning of the next day.
 * Standard Validators are selected daily from the top 10 Validator Candidates with the highest staked amount.
-* Validators can renounce their role and withdraw their tokens (unstake) after a waiting period of 7 days.
-* Delegators can unstake instantly as long as it's been at least 3 days since their last staking operation.
+* Validators can renounce their role and withdraw their tokens (unstake) after a waiting period of seven days.
+* Delegators can unstake at any time as long as three days have passed since they last staked in to this validator.
 
 ### Governing Validators
 While increasing the decentralization of the network, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
@@ -138,7 +138,7 @@ The system slashes bridge operators for not providing enough signatures. There's
 If a bridge operator misses more than 10% votes, the corresponding validator can't claim the bridge reward on that day.
 
 #### Tier 2 operator slashing
-If a bridge operator misses more than 20% votes, the corresponding validator gets slashed as follows:
+If a bridge operator misses more than 30% votes, the corresponding validator gets slashed as follows:
 
 * The validator can't claim any rewards on that day.
 * The validator is jailed for $\approx2$ days (57,600 blocks) with no option to bail out.

@@ -13,7 +13,7 @@ This page describes how to set up and run an archive node on testnet.
 ## Prerequisites
 * You must be a root user.
 * Your machine must meet the minimum hardware requirements:
-  * 4 CPU cores
+  * 4-core CPU
   * 8 GB RAM
   * 250 GB SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.

@@ -33,30 +33,29 @@ In addition, the validator may be temporarily or permanently banned
 from the network, or _jailed_.
 
 ## Slashable cases
-
 There are four groups of slashable cases on Ronin, where
 the penalties described apply in combination.
 
 ### Double-sign validator
-
-The case in which a validator signs more than one block with the same height.
+The case where a validator node signs more than one block with the
+same height.
 
 The penalties are as follows:
-
-* The validator is jailed for $2^{63}-1$ blocks and can't be a validator in the future. Their status is set to **In jail**.
-* The validator gets slashed the minimum staking amount from their self-stake.
-* The validator can't claim commission or staking rewards during jail time.
+* The validator is jailed for $2^{63}-1$ blocks and can't be a
+validator in the future. Their status is set to **In jail**.
+* The validator gets slashed the minimum staking amount from their
+self-stake.
+* The validator can't claim commission or staking rewards during jail
+time.
 
 <img src={doubleSign} width={1224} />
 
 ### Unavailability validator
-
-The case in which a validator misses a certain number of blocks in a day. 
+The case where a validator node misses a certain number of blocks in a day. 
 There are three tiers in this slash.
 
 #### Tier 1 validator slashing
-
-A validator misses their turn to produce blocks more than 50 times in a day.
+The validator misses the turn to produce blocks more than 50 times in a day.
 
 The penalties are as follows:
 * The validator can't claim commission or staking rewards on that day.
@@ -65,11 +64,10 @@ The penalties are as follows:
 <img src={valSlashTierOne} width={1224} />
 
 #### Tier 2 validator slashing
-
-A validator misses their turn to produce blocks more than 150 times in a day.
+The validator misses the turn to produce blocks more than 150 times in a day.
 
 The penalties are as follows:
-* The validator is jailed for $\approx2$ days with the status set to **In jail**.
+* The validator is jailed for $\approx$ 2 days with the status set to **In jail**.
 * The validator gets slashed 10,000 RON.
 * The validator can't claim commission or staking rewards during jail time. 
 
@@ -78,12 +76,11 @@ The validator can [bail out](bailout.mdx) of jail if they have sufficient credit
 <img src={valSlashTierTwo} width={1224} />
 
 #### Tier 3 validator slashing
-
-A validator bails out of Tier 2 but misses their turn to 
+The validator bails out of Tier 2 but misses the turn to 
 produce blocks more than 50 times on the same day.
 
 The penalties are as follows:
-* The validator is jailed for $\approx2$ days with the status set to **In jail**.
+* The validator is jailed for $\approx$ 2 days with the status set to **In jail**.
 * The validator gets slashed 10,000 RON.
 * The validator can't claim commission or staking rewards during jail time.
 
@@ -92,13 +89,11 @@ At this tier, the validator can’t bail out.
 <img src={valSlashTierThree} width={1224} />
 
 ### Unavailability bridge operator
-
-The case in which a validator's bridge operator node misses a certain
+The case where a validator's bridge operator node misses a certain
 number of votes. There are two tiers in this slash.
 
 #### Tier 1 operator slashing
-
-A bridge operator misses more than 10% of votes in a day.
+The bridge operator misses more than 10% of votes in a day.
 
 The penalties are as follows:
 * The corresponding validator can't claim bridge rewards on that day.
@@ -107,31 +102,28 @@ The penalties are as follows:
 <img src={bridSlashTierOne} width={1224} />
 
 #### Tier 2 operator slashing
-
-A bridge operator misses more than 20% of votes in a day.
+The bridge operator misses more than 30% of votes in a day.
 
 The penalties are as follows:
 * The corresponding validator can't claim any rewards (commission, staking rewards, bridge rewards) on that day.
-* The corresponding  validator is jailed for $\approx2$ days with the status set to **In Jail**.
+* The corresponding  validator is jailed for $\approx$ 2 days with the status set to **In Jail**.
 
 At this tier, the validator can’t bail out.
 
 <img src={bridSlashTierTwo} width={1224} />
 
 ### Relaying slash
-
-The case when a Governing Validator doesn’t sync the set of bridge operators
+The case where a Governing Validator doesn’t sync the set of bridge operators
 to the Ethereum chain for three consecutive days. 
 
 The penalties are as follows:
 * The validator is slashed 10,000 RON.
-* The validator can't claim commission during this time.
+* The validator can't claim commission during the day.
 * The validator's status is set to **Punished**.
 
 <img src={relayingSlash} width={1224} />
 
 ### Multiple slashes
-
 Validators might experience multiple concurrent slashes if they have issues
 with both their validator node and bridge operator node, and the relaying
 responsibilities of the Governing Validator.

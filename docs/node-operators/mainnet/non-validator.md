@@ -13,7 +13,7 @@ This page describes how to set up and run a non-validator node on mainnet. This 
 ## Prerequisites
 * You must be a root user.
 * Your machine must meet the minimum hardware requirements:
-  * 6 CPU cores
+  * 6-core CPU
   * 25 GB RAM
   * 700 GB high-speed SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.

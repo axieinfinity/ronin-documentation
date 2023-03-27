@@ -8,22 +8,32 @@ import stepTwo from './assets/onboarding-step-2.png'
 import stepThree from './assets/onboarding-step-3.png'
 import stepFour from './assets/onboarding-step-4.png'
 import stepFive from './assets/onboarding-step-5.png'
+import stepSix from './assets/onboarding-step-6.png'
 
 # Become a validator
 This page explains how to register as a validator on Ronin.
+After following the steps in this guide, you'll become a
+Validator Candidate and have a chance to be selected as a
+Standard Validator on the next day.
 
 ## Validator roles
 There are three validator roles:
-* **Validator Candidate.** After following the steps in this guide, you'll become a Validator Candidate and have a chance to be selected as a Standard Validator on the next day.
-* **Standard Validator.** Every day, at least 10 Validator Candidates with the highest amount staked are selected as Standard Validators. The system records your total staking amount at 00:00 UTC every day for the selection process. 
-* **Governing Validator.** The validators chosen by the community and Sky Mavis to ensure network security. Governing Validators are validators by default, and they account for more than half of the total validator pool.
+* **Validator Candidate.** The role you get after following the steps
+in this guide.
+* **Standard Validator.** Every day, at least 10 Validator Candidates
+with the highest stakes are selected as Standard Validators.
+The system records your total staking amount at 00:00 UTC every day
+for the selection process. 
+* **Governing Validator.** The validators chosen by the community and
+Sky Mavis to ensure network security. Governing Validators are
+validators by default, and they account for more than half of the
+total validator set.
 
 ## Prerequisites
-* You need to have an amount of RON sufficient for the initial stake.
-* You also need to have 100 RON as a starting balance to maintain the bridge. 
+* Prepare at least 250,000 RON for the initial stake.
+* Prepare 100 RON as a starting balance to maintain the bridge. 
 
-## Register as a Validator Candidate
-
+## Register
 1. Go to [Validator Dashboard](https://validator.roninchain.com/) > **Become a Validator**. 
 <img src={becomeValidator} width={1280} />
 
@@ -41,7 +51,7 @@ It's also highly recommended that you read the
 5. Deposit 100 RON into the bridge operator address. This address
 is used to automatically sign transactions on the bridge every epoch,
 and having a starting balance there will help you avoid
-[bridge operator slashing](./../slashing/slashing.mdx) if you're
+[bridge operator slashing](./../slashing/slashing.mdx#unavailability-bridge-operator) if you're
 selected as a validator. 
 <img src={stepFour} width={1280} />
 
@@ -49,3 +59,4 @@ selected as a validator.
 <img src={stepFive} width={1280} />
 
 Done! You're now a Validator Candidate.
+<img src={stepSix} width={1280} />

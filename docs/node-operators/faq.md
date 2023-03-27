@@ -3,7 +3,7 @@ description: List of most common questions
 ---
 
 # Node operator FAQ
-Here's a list of most common questions.
+Here's a list of frequently asked questions.
 
 ### 1. How do I know if my Validator Candidate node is working correctly?
 After starting the validator node, run the following command:
