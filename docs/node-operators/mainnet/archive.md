@@ -13,7 +13,7 @@ This page describes how to set up and run an archive node on mainnet.
 ## Prerequisites
 * You must be a root user.
 * Your machine must meet the minimum hardware requirements:
-  * 8 CPU cores
+  * 8-core CPU
   * 32 GB RAM
   * 7 TB high-speed SSD
 * You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
