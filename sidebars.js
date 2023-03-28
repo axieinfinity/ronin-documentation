@@ -113,7 +113,7 @@ const sidebars = {
       },
       items: [
         // Purchase RON
-        'delegators/onboarding/purchase-ron',
+        'delegators/onboarding/buy-ron',
         // Become a delegator
         'delegators/onboarding/become-delegator',
         // Stake
