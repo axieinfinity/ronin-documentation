@@ -1,5 +1,5 @@
 ---
-description: Set up a bridge operator node on testnet
+description: Set up a bridge operator node on testnet.
 ---
 
 # Run a bridge operator node

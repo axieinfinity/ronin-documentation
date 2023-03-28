@@ -1,5 +1,5 @@
 ---
-description: Related documentation and other resources
+description: Related documentation and other resources.
 ---
 
 # Related documentation

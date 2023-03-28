@@ -1,5 +1,5 @@
 ---
-description: Testnet specification
+description: Testnet specification.
 ---
 
 # Configuration

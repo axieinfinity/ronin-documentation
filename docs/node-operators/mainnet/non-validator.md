@@ -1,5 +1,5 @@
 ---
-description: Set up a non-validator node on mainnet
+description: Set up a non-validator node on mainnet.
 ---
 
 # Run a non-validator (RPC) node

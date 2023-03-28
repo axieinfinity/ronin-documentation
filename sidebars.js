@@ -48,6 +48,8 @@ const sidebars = {
         'basics/roadmap',
         // Tokenomics
         'basics/tokenomics',
+        // Rewards
+        'basics/rewards',
         // Security audits
         'basics/audits',
         // Roles
@@ -87,8 +89,6 @@ const sidebars = {
                 id: 'basics/dapps/ronin-bridge/overview',
               },
               items: [
-                // Governance
-                'basics/dapps/ronin-bridge/governance',
                 // Withdrawal limits
                 'basics/dapps/ronin-bridge/limits',
               ],
@@ -327,21 +327,21 @@ const sidebars = {
           ],
         },
         // Node setup tutorials
-        {
-          type: 'category',
-          label: 'Tutorials',
-          link: {
-            type: 'generated-index',
-            title: 'Tutorials',
-            slug: '/node-operators/tutorials',
-          },
-          items: [
-            // Run a validator node on AWS
-            'node-operators/tutorials/aws-setup',
-            // Run a validator node on GCP
-            'node-operators/tutorials/gcp-setup',
-          ],
-        },
+        // {
+        //   type: 'category',
+        //   label: 'Tutorials',
+        //   link: {
+        //     type: 'generated-index',
+        //     title: 'Tutorials',
+        //     slug: '/node-operators/tutorials',
+        //   },
+        //   items: [
+        //     // Run a validator node on AWS
+        //     'node-operators/tutorials/aws-setup',
+        //     // Run a validator node on GCP
+        //     'node-operators/tutorials/gcp-setup',
+        //   ],
+        // },
         // FAQ
         {
           type: 'doc',
@@ -358,59 +358,6 @@ const sidebars = {
       label: 'Developers',
       id: 'developers/portal',
     },
-    //{
-    //  type: 'category',
-    //  label: 'Developers',
-    //  link: {
-    //    type: 'generated-index',
-    //    title: 'Developers', 
-    //    description: 'Build your decentralized application on Ronin Network.',
-    //    slug: '/developers',
-    //  },
-    //  items: [
-    //    // API
-    //    {
-    //      type: 'link',
-    //      label: 'API',
-    //      href: 'https://documenter.getpostman.com/view/1372857/UVeKqQMn',
-    //    },
-    //    {
-    //      type: 'category',
-    //      label: 'Smart contracts',
-    //      link: {
-    //        type: 'generated-index',
-    //        title: 'Deploy smart contracts', 
-    //        description: 'Guides for smart contract deployment.',
-    //        slug: '/developers/smart-contracts',
-    //      },
-    //      items: [
-    //        'developers/smart-contracts/hardhat',
-    //        'developers/smart-contracts/truffle',
-    //      ],
-    //    },
-    //    {
-    //      type: 'category',
-    //      label: 'Ronin Wallet',
-    //      link: {
-    //        type: 'generated-index',
-    //        title: 'Integrate Ronin Wallet', 
-    //        description: 'Guides for Ronin Wallet integration.',
-    //        slug: '/developers/ronin-wallet',
-    //      },
-    //      items: [
-    //        'developers/ronin-wallet/integrate',
-    //        'developers/ronin-wallet/switch-network',
-    //      ],
-    //    },
-    //    // FAQ
-    //    {
-    //      type: 'doc',
-    //      label: 'FAQ',
-    //      id: 'developers/faq',
-    //    },
-    //  ],
-    // },
-    // Community
     {
       type: 'category',
       label: 'Community',

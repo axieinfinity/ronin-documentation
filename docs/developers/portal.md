@@ -1,5 +1,5 @@
 ---
-description: Links to documentation for developers building on Ronin
+description: Learn how to build on Ronin.
 ---
 
 # Developer documentation

@@ -1,5 +1,5 @@
 ---
-description: List of most common questions
+description: List of frequently asked questions.
 ---
 
 # Validator FAQ
@@ -22,4 +22,3 @@ This is done by [submitting](governance/create.mdx) a proposal. Any existing Gov
 
 ### 6. How can I get support?
 Join our validator channel on Discord after registering as a Validator Candidate.
-

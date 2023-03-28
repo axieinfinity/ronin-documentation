@@ -1,36 +1,28 @@
 ---
-description: Ronin governance overview
+description: On-chain governance overview.
 ---
 
 # Overview
-Governing Validators can make changes to the network through an on-chain governance process. 
-To effect a change, a validator first submits a proposal. Then the other Governing Validators vote on it. 
-If the proposal gets [enough](./vote.mdx#voting-ratio) votes, the change is implemented.
+Ronin's governance process is conducted via a decentralized voting
+mechanism. Each Governing Validator has a corresponding chain governor
+account. Governors are empowered to vote for proposals such as
+adding or removing Governing Validators, upgrading contracts,
+changing thresholds, and more.
 
-## Creating proposals
-There are two ways to create proposals on Ronin:
-via Validator Dashboard or by running a script.
+The way it works is a a governor [creates](./create.mdx) a new proposal
+for other governors to [vote](./vote.mdx) on. If 75% or more of the
+governors approve the proposal, the change is applied.
 
-Following are the types of proposals that can be created using
-the dashboard:
-* Add a new Governing Validator
-* Remove a Governing Validator
-* Update the chain governor address
-* Update the bridge voter address
+The governance voting method is serial by design: only one governance
+vote can be held at a time, and that vote must be completed before moving
+to a new vote. 
 
-See [Create a proposal](./create.mdx) for a step-by-step guide.
+Conceptually, you can think of the governor as a cold wallet while the
+validator is a hot wallet.
 
-## Voting on proposals
-Voting takes place on Validator Dashboard.
-
-Whether a proposal is approved or rejected is determined by the following ratio:
-* A proposal is approved if at least 75% of the Governing Validators approve it.
-* A proposal is rejected (and closed) if at least 25% of the Governing Validators reject it.
-
-A proposal that is neither approved nor rejected within 14 days is automatically closed.
-
-For instructions, see [Vote on a proposal](./vote.mdx).
-
-## Viewing proposals
-All proposals are available for public view at
-https://app.roninchain.com/governance.
+:::tip
+Store your governor credentials in a hardware wallet and use them only
+when a vote is required. As a result, attackers will have a much harder
+time accessing your validator nodes, and the overall risk of network
+exploitation will be significantly reduced.
+:::

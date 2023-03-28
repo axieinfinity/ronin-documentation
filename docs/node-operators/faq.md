@@ -1,5 +1,5 @@
 ---
-description: List of most common questions
+description: List of frequently asked questions.
 ---
 
 import multisig from './assets/multisig.png';
@@ -62,7 +62,7 @@ For more information, see [Security hardening](security.md).
 ### 8. If there is a node or bridge upgrade, how do I get this information? 
 Latest version of Ronin and its changelog are always available at [Ronin release](https://github.com/axieinfinity/ronin/releases). Stay up-to-date with Ronin upgrades by joining our Discord community. 
 
-### 9. How much time do I have to upgrade my nodes? What happens if I don't do it in time?
+### 9. How much time do I have to upgrade my nodes? What if I don't do it in time?
 Upgrades are usually backwards-compatible. It can contain performance improvements, bug fixes or new features. It's recommended that every node is upgraded as soon as possible.
 
 An upgrade, however, can also be a hardfork, which is usually not backwards-compatible. If your node fails to upgrade before a hardfork block occurs, the data on your node can differ from that on the network. Therefore, it's critical to upgrade your node before a hardfork occurs. All Ronin-planned hardforks are announced seven days in advance on our Discord and [Ronin Substack](https://roninblockchain.substack.com/).

@@ -1,5 +1,5 @@
 ---
-description: Mainnet specification
+description: Mainnet specification.
 ---
 
 # Configuration

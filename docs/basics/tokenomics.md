@@ -1,5 +1,5 @@
 ---
-description: RON token quick facts, distribution breakdown, and release schedule
+description: RON token quick facts, distribution, and release information.
 ---
 
 import distribution from './assets/distribution.png';

@@ -1,5 +1,5 @@
 ---
-description: A living white paper document for Ronin
+description: Ronin's living white paper.
 ---
 
 # White paper

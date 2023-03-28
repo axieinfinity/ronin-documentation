@@ -1,5 +1,5 @@
 ---
-description: How to vote on a proposal as a Governing Validator
+description: Vote on proposals submitted by governors.
 ---
 
 import stepOne from './assets/governing-label.png';
@@ -8,12 +8,21 @@ import stepThree from './assets/confirm-approval.png';
 import stepFour from './assets/fill-in-details.png';
 
 # Vote on a proposal
-As a Governing Validator, you can vote on proposals created by the other Governing Validators.
+As a governor, you can vote on proposals created by other
+Governing Validators.
+
+A proposal's approval or rejection is determined by the following ratio:
+* A proposal is approved if it receives the approval of at least 75%
+of the Governing Validators.
+* A proposal is rejected if at least 25% of the
+Governing Validators reject it.
+
+If a proposal is neither approved nor rejected within 14 days,
+it is automatically closed.
 
 1. Log in to [Validator Dashboard](https://validator.roninchain.com)
-using your *chain governor* address—the identifier of a Governing Validator.
-The name of your role at the top right corner is a sign that
-you used the correct address.
+using your chain governor address. The name of your role at the top
+right corner is a sign that you used the correct address.
 <img src={stepOne} width={1280} />
 
 2. Select **Proposals**, and then choose **Approve** or **Reject**.
@@ -21,6 +30,3 @@ you used the correct address.
 
 3. Confirm your decision and sign the transaction.
 <img src={stepThree} width={400} />
-
-The proposal is approved if at least 75% Governing Validators approve it, or rejected if at least 25% Governing Validators reject it.
-If the proposal is neither approved nor rejected after 14 days, the system closes it automatically.

@@ -1,5 +1,5 @@
 ---
-description: Use Ronin CLI
+description: Get started with, and use Ronin CLI.
 ---
 
 # Use Ronin CLI

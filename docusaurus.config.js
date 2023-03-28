@@ -85,7 +85,7 @@ const config = {
           // Get started
           {
             label: 'Get started',
-            to: 'docs/basics/get-started',
+            to: '/docs/get-started',
           },
           // Basics
           {

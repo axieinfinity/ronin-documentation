@@ -1,5 +1,5 @@
 ---
-description: Run a validator node on GCP
+description: Run a validator node on GCP.
 ---
 
 # Run a validator node on GCP

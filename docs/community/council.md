@@ -1,5 +1,5 @@
 ---
-description: Technical council
+description: Technical council.
 ---
 
 # Technical council
