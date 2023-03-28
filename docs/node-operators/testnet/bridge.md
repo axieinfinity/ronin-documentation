@@ -93,7 +93,7 @@ PASSWORD=123456
 RPC_ENDPOINT=your-rpc-endpoint
 ETHEREUM_ENDPOINT=https://eth-goerli.g.alchemy.com/v2/your-ethereum-endpoint
 CONFIG_PATH=config.testnet.json
-BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:v0.2.2-da196d9
+BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:v0.2.3-56f7328
 VERBOSITY=3
 
 RONIN_TASK_INTERVAL=3

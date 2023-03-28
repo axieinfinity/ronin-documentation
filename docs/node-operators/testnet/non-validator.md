@@ -101,7 +101,7 @@ INSTANCE_NAME=insert-your-instance-name
 PASSWORD=123456
 
 CONFIG_PATH=config.testnet.json
-NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9
+NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895
 VERBOSITY=3
 
 CHAIN_STATS_WS_SECRET=xQj2MZPaN6
@@ -122,7 +122,7 @@ mv chaindata-22-3-2023 chaindata
 8. Start the node:
 
 ```
-docker-compose up -d 
+cd /axie/ronin-manager && docker-compose up -d
 ```
 
 After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.

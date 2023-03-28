@@ -34,8 +34,8 @@ Snapshot: `https://storage.googleapis.com/testnet-chaindata/chaindata-22-3-2023.
 Snapshot checksum using Md5sum: `741d0c68de1107547b849395c17f0f41`.
 
 ### Bridge operator
-* [https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1](https://github.com/axieinfinity/bridge-v2/releases/tag/0.2.1)
-* [ghcr.io/axieinfinity/bridge:0.2.1-c15a725](https://github.com/axieinfinity/bridge-v2/pkgs/container/bridge/67046431?tag=0.2.1-c15a725)
+* [https://github.com/axieinfinity/bridge-v2/releases/tag/v0.2.3](https://github.com/axieinfinity/bridge-v2/releases/tag/v0.2.3)
+* [ghcr.io/axieinfinity/bridge:v0.2.3-56f7328](https://github.com/axieinfinity/bridge-v2/pkgs/container/bridge/80601341?tag=v0.2.3-56f7328)
 
 ## Prerequisites
 
@@ -220,8 +220,8 @@ vim .env
     MINE=true
 
     CONFIG_PATH=config.testnet.json
-    NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9
-    BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:0.2.1-c15a725
+    NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895
+    BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:v0.2.3-56f7328
     VERBOSITY=3
 
     RONIN_TASK_INTERVAL=3
@@ -232,7 +232,7 @@ vim .env
     CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
     GENESIS_PATH=testnet.json
 
-    RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 2000000
+    RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
 
     # Private key of the bridge operator, used for acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains, without 0x.
     BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-operator-private-key
@@ -261,14 +261,14 @@ vim .env
     MINE=true
 
     CONFIG_PATH=config.testnet.json
-    NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9
+    NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895
     VERBOSITY=3
 
     CHAIN_STATS_WS_SECRET=xQj2MZPaN6
     CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
     GENESIS_PATH=testnet.json
 
-    RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 2000000
+    RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
 
   </TabItem>
 </Tabs>
@@ -284,7 +284,7 @@ mv chaindata-22-3-2023 chaindata
 8. Start the node:
 
 ```
-docker-compose up -d 
+cd /axie/ronin-manager && docker-compose up -d
 ```
 
 After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
