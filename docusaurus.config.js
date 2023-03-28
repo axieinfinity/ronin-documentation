@@ -115,8 +115,13 @@ const config = {
           // Community
           {
             label: 'Community',
-            to: 'docs/community',
+            to: 'docs/community/join',
           },
+          // Community HIDDEN until documentation goes open-source
+          // {
+          //   label: 'Community',
+          //   to: 'docs/community',
+          // },
           // Search
           {
             type: 'search',
@@ -138,14 +143,14 @@ const config = {
           {
             title: 'Community',
             items: [
-              {
-                label: 'Join Ronin community',
-                to: 'docs/community/join',
-              },
-              {
-                label: 'Contribute to documentation',
-                to: 'docs/community/contribute',
-              },
+              // {
+              //   label: 'Join',
+              //   to: 'docs/community/join',
+              // },
+              // {
+              //   label: 'Contribute to documentation',
+              //   to: 'docs/community/contribute',
+              // },
             ],
           },
           {
