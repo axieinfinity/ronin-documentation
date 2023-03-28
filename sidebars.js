@@ -44,8 +44,6 @@ const sidebars = {
         },
         // White paper
         'basics/white-paper',
-        // Roadmap
-        'basics/roadmap',
         // Tokenomics
         'basics/tokenomics',
         // Rewards
@@ -81,21 +79,10 @@ const sidebars = {
           },
           items: [
             // Ronin Bridge
-            {
-              type: 'category',
-              label: 'Ronin Bridge',
-              link: {
-                type: 'doc',
-                id: 'basics/dapps/ronin-bridge/overview',
-              },
-              items: [
-                // Withdrawal limits
-                'basics/dapps/ronin-bridge/limits',
-              ],
-            },
-            // Ronin Explorer
+            'basics/dapps/ronin-bridge',
             'basics/dapps/ronin-explorer',
-            // Katana Swap
+            'basics/dapps/ron-staking',
+            'basics/dapps/multisig',
             'basics/dapps/katana',
           ],
         },
