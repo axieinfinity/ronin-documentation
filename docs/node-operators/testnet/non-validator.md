@@ -101,7 +101,7 @@ INSTANCE_NAME=insert-your-instance-name
 PASSWORD=123456
 
 CONFIG_PATH=config.testnet.json
-NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9
+NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895
 VERBOSITY=3
 
 CHAIN_STATS_WS_SECRET=xQj2MZPaN6

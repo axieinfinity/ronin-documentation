@@ -7,8 +7,8 @@ This page describes how to set up and run a non-validator node on mainnet. This 
 
 ## Latest release
 ### RPC node
-* [https://github.com/axieinfinity/ronin/releases/tag/v2.5.1](https://github.com/axieinfinity/ronin/releases/tag/v2.5.1)
-* [ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9](https://github.com/axieinfinity/ronin/pkgs/container/ronin/69326810?tag=v2.5.1-d1a6cc9)
+* [https://github.com/axieinfinity/ronin/releases/tag/v2.5.2](https://github.com/axieinfinity/ronin/releases/tag/v2.5.2)
+* [ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895](https://github.com/axieinfinity/ronin/pkgs/container/ronin/80511518?tag=v2.5.2-9bf4895)
 
 ## Prerequisites
 * You must be a root user.
@@ -93,7 +93,7 @@ INSTANCE_NAME=insert-your-instance-name
 # Password to protect your private key.
 PASSWORD=123456
 
-NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.1-d1a6cc9
+NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895
 VERBOSITY=3
 
 # CHAIN_STATS_WS_SERVER the endpoint to connect to stats website server
