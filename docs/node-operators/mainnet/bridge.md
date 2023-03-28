@@ -1,5 +1,5 @@
 ---
-description: Set up a bridge operator node on mainnet
+description: Set up a bridge operator node on mainnet.
 ---
 
 # Run a bridge operator node

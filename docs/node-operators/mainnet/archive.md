@@ -1,5 +1,5 @@
 ---
-description: Set up an archive node on mainnet
+description: Set up an archive node on mainnet.
 ---
 
 # Run an archive node

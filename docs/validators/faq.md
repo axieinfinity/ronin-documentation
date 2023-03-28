@@ -1,5 +1,5 @@
 ---
-description: List of most common questions
+description: List of frequently asked questions.
 ---
 
 # Validator FAQ

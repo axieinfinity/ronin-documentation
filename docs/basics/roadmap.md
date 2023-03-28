@@ -1,5 +1,5 @@
 ---
-description: Major milestones in the network development
+description: Major milestones in Ronin's development.
 ---
 
 # Roadmap

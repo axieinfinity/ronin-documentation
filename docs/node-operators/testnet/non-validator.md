@@ -1,5 +1,5 @@
 ---
-description: Set up a non-validator node on testnet
+description: Set up a non-validator node on testnet.
 ---
 
 # Run a non-validator (RPC) node

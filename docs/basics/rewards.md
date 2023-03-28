@@ -1,5 +1,5 @@
 ---
-description: Rewards earned by validators and delegators
+description: Rewards earned by validators and delegators.
 ---
 
 # Rewards

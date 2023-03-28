@@ -1,5 +1,5 @@
 ---
-description: Basic concepts to help you speak Ronin 
+description: Basic concepts to help you speak blockchain and Ronin. 
 ---
 
 # Key concepts

@@ -1,5 +1,5 @@
 ---
-description: Tips and recommendations for hardening your validator node
+description: Recommendations for hardening your validator node.
 title: Security hardening
 ---
 

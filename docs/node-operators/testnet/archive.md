@@ -1,5 +1,5 @@
 ---
-description: Set up an archive node on testnet
+description: Set up an archive node on testnet.
 ---
 
 # Run an archive node
