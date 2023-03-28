@@ -34,17 +34,3 @@ The quantity of RON reserved for various network functions, as a percentage of t
 * Ecosystem fund: 15%
 
 <img src={distribution} width={800} />
-
-### Staking rewards
-Ronin allocates 25% of its total supply to fund the staking rewards. This is to ensure that the network is seeded well enough until transaction fees gain traction. These rewards are primarily meant to jump-start the network, while the protocol in the long run is intended to sustain itself on the basis of transaction fees.
-
-| Year                    | Staking reward       | Bridge reward     |
-|-------------------------|----------------------|-------------------|
-| 1 (Starting April 2023) | 30,000,000           | 1,000,000         |
-| 2                       | 30,000,000           |                   | 
-| 3                       | 30,000,000           |                   | 
-| 4                       | 28,000,000           |                   | 
-| 5                       | 24,000,000           |                   | 
-| 6                       | 18,000,000           |                   | 
-| 7                       | 14,000,000           |                   | 
-| 8                       | 6,000,000            |                   | 

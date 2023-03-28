@@ -2,25 +2,9 @@
 description: Learn how to build on Ronin.
 ---
 
+import portal from './assets/portal.png';
+
 # Developer documentation
+Looking to build and deploy your awesome project on Ronin? All the documentation you need is available on the Sky Mavis Developer Portal: [https://docs.skymavis.com](https://docs.skymavis.com/docs/getting-started).
 
-Ronin developer documentation is published on the [Sky Mavis Developer Portal](http://developers.skymavis.com/). 
-
-This page provides links to the documentation for quick access.
-
-## Deploy your app on Ronin
-
-
-## API
-
-[Ronin JSON-RPC API reference](https://docs.skymavis.com/reference/ronin-json-rpc)
-
-## Smart contracts
-
-* Deploy smart contracts using Hardhat
-* Deploy smart contracts using Truffle
-
-## Ronin Wallet
-
-* Integrate Ronin Wallet
-* Switch network in Ronin Wallet
+<img src={portal} width={1400} />
