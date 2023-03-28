@@ -3,8 +3,7 @@ label: Introduction
 description: What is Ronin?
 ---
 # Introduction
-Ronin is a blockchain tailored for blockchain games, built by Sky Mavis, the developer of Axie Infinity—the leading blockchain game so far. Ronin supports EVM-compatible smart contracts and protocols, enabling developers to build high-performance, feature-rich blockchain projects optimized for accessibility and growth. Ronin facilitates mainstream adoption and provides global access to blockchain gaming. These attributes make Ronin ideal for collectibles, art, and gaming.
-Developers can leverage Ronin’s EVM compatibility and performance to build engaging Web3 experiences. Ronin enables the blockchain gaming revolution by optimizing for accessibility and growth.
+Ronin is an EVM blockchain specifically forged for gaming. Launched by Sky Mavis, the creator of Web3’s breakout title Axie Infinity which has generated over $1.3B in revenue, Ronin is the only blockchain proven to scale a single game to accommodate millions of daily active users and has processed over $4B in NFT volumes. Ronin optimizes for near-instant transactions and negligible fees that enable millions of in-game transactions to occur seamlessly, making it the leading choice for Web3 games.
 
 ## Consensus
 ### Proof of Authority
@@ -35,5 +34,3 @@ Today, Ronin can support thousands of transactions per second. We're researching
 Security is a crucial aspect of blockchain technology as it deals with the storage and transfer of sensitive information and valuable assets. Blockchain technology offers several security features that make it a more secure system compared to traditional centralized systems.
 
 In Ronin, a carefully selected group of Governing Validators is chosen to ensure that the vast majority of validators on the network are honest and have the network's best interests in mind. The existence of this honest majority of validators is crucial for guaranteeing the security and integrity of the Ronin blockchain.
-
-See the list of Ronin's [security audit reports](./audits.md).
