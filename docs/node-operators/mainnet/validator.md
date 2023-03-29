@@ -53,11 +53,12 @@ export HOST_IP = $(hostname -i)
 
 3. Create docker-compose.yml
 
-Create `docker-compose.yml` and copy this content to the file
+Create `docker-compose.yml` 
 
 ```
 vim docker-compose.yml
 ```
+copy this content to the file
 
 ```
 version: "3"
@@ -90,20 +91,21 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-5. Create an `.env` file
+4. Create an `.env` file
 
+Create `.env`
 ```
 vim .env
 ```
 
-`.env` file is configuration that you can set to your node.
-Create a `.env` file with this content 
+copy this content to the file
+
 
 ```
-INSTANCE_NAME=/your instance name/
-NODE_IMAGE=/your node image/
-VALIDATOR_PRIVATE_KEY=/your private key/
-PASSWORD=/your password/
+INSTANCE_NAME=your-instance-name
+NODE_IMAGE=your-node-image
+VALIDATOR_PRIVATE_KEY=your-private-key
+PASSWORD=your-password
 
 MINE=true
 
@@ -119,7 +121,7 @@ CHAIN_STATS_WS_SERVER=stats.roninchain.com
 RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
 ```
 
-Replace this keys in your `.env` with your node information:
+Replace those keys in your `.env` with your node information:
 
 - `INSTANCE_NAME`: Your node name, will be visible on stats.roninchain.com
 
@@ -129,22 +131,24 @@ Replace this keys in your `.env` with your node information:
 
 - `PASSWORD`: Your strong password, this is used to encrypt your private key
 
-7. Start the node:
+5. Start the node
 
 ```
 docker-compose up -d
 ```
 
-8. Review the log 
-
-Your node will be up and listen at `localhost:8545`
+6. Review the log 
 
 ```
 docker logs node -f --tail 100
 ```
 
-9. Confirm your node is working on Ronin stats
+7. Confirm your node is working on Ronin stats
 
 After a few minutes, go to the [stats page](https://stats.roninchain.com/) to
 check the status of your node. If it's green, the node is connected and up to
 date with the network.
+
+8. As a validator, you are also required to run a bride operator node
+
+[Run a bridge operator node](/docs/node-operators/mainnet/bridge)
