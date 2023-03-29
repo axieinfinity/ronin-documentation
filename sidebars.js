@@ -309,6 +309,7 @@ const sidebars = {
         'node-operators/cli',
         // Security hardening
         'node-operators/security',
+        'node-operators/generate-key',
         // FAQ
         'node-operators/faq',
         // Node setup tutorials
