@@ -8,15 +8,14 @@ This page describe how to run a bridge operator on mainnet
 
 [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-Ethereum RPC URL:
-[Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any Ethereum RPC endpoint, this is used to to listen for
-events from Ethereum chain and send events to Ethereum.
+Ethereum RPC endpoint: An Ethereum RPC endpoint, can be set up with
+[Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura
 
-Ronin RPC, see [validator](/docs/node-operators/mainnet/validator)
+Ronin RPC endpoint: A Ronin RPC endpoint
 
 ## Generating keys
 
-Before installing Ronin, you will need to generate 2 private keys. 
+Before installing bridge, you will need to generate 2 private keys. 
 
 - Bridge voter 
 - Bridge operator 
@@ -41,11 +40,15 @@ Create bridge data directory
 mkdir -p data
 ```
 
-3. Create a `docker-compose` file:
+2. Create `docker-compose.yml` file
    
+Create `docker-compose.yml`
+
 ```
 vim docker-compose.yml
 ```
+
+copy this content to the file
    
 ```
 version: "3"
@@ -86,14 +89,15 @@ services:
       - db
 ```
 
-4. Create an `.env` file
+3. Create an `.env` file
 
-`.env` file is configuration that you can set to your bridge.
-Create a `.env` file with this content 
+Create `.env`
 
 ```
 vim .env
 ```
+
+copy this content to the file
 
 ```
 ETHEREUM_ENDPOINT=your-ethereum-endpoint
@@ -120,8 +124,8 @@ Replace those keys in your `.env` with your information:
 
 - `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, can be Alchemy or Infura
 
-- `RPC_ENDPOINT`: Your secured Ronin RPC endpoint.
-If you set up your validator node on the same machine, the value should be `${HOST_IP}:8545`. HOST_IP should be expoerted in [Install Ronin](/docs/node-operators/mainnet/validator#install-ronin))
+- `RPC_ENDPOINT`: Your Ronin RPC endpoint.
+If you set up your validator node on the same machine, the value should be `${HOST_IP}:8545`. 
 
 - `BRIDGE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/mainnet/latest-release#latest-image).
 
@@ -129,10 +133,15 @@ If you set up your validator node on the same machine, the value should be `${HO
 
 - `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the 0x prefix
 
-- `DB_PASSWORD`: Your postgre database password
+- `DB_PASSWORD`: Your postgres database password
 
+4. Start the node:
 
-8. Review the log 
+```
+docker-compose up -d
+```
+
+5. Review the log 
 
 ```
 docker logs bridge -f --tail 100
