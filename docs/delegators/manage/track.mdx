@@ -1,0 +1,27 @@
+---
+description: Keep track of updates among your validators.
+---
+
+import commissionChange from './assets/commission.png'
+import validatorDetails from './assets/details.png'
+import slashedValidator from './assets/slashing.png'
+import renouncedValidator from './assets/renunciation.png'
+
+# Track validator updates
+There are a few ways you can keep track of changes among your
+validators on [RON Staking](https://app.roninchain.com/staking):
+
+* Before staking to a validator, visit their profile to see the rewards,
+blocks, and the list of delegators.
+<img src={validatorDetails} width={1440} />
+
+* If a validator has scheduled to change their commission rate,
+the clock icon appears on their profile. Hover over the icon for details.
+<img src={commissionChange} width={1440} />
+
+* If a validator is punished or jailed, you can see which rewards
+they will not receive according to the slashing tier they’re in.
+<img src={slashedValidator} width={1440} />
+
+* If a validator requested renunciation, you can see when it takes effect.
+<img src={renouncedValidator} width={1440} />

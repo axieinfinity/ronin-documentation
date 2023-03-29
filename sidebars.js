@@ -128,6 +128,12 @@ const sidebars = {
           label: 'Claim rewards',
           id: 'delegators/rewards/claim',
         },
+        // Track validator updates
+        {
+          type: 'doc',
+          label: 'Track validator updates',
+          id: 'delegators/manage/track',
+        },
         // View activity
         {
           type: 'doc',
@@ -174,20 +180,9 @@ const sidebars = {
         },
         // Claim rewards
         {
-          type: 'category',
-          label: 'Rewards',
-          link: {
-            type: 'generated-index',
-            title: 'Rewards',
-            description: 'Learn about reward types and how to claim rewards.',
-            slug: '/validators/rewards',
-          },
-          items: [
-            // Reward types
-            'validators/rewards/types',
-            // Claim rewards
-            'validators/rewards/claim',
-          ],
+          type: 'doc',
+          label: 'Claim rewards',
+          id: 'validators/rewards/claim',
         },
         // Manage profile
         {
