@@ -8,11 +8,11 @@ This page describe how to run a bridge operator on mainnet
 
 [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-* Ethereum RPC URL:
+Ethereum RPC URL:
 [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any Ethereum RPC endpoint, this is used to to listen for
 events from Ethereum chain and send events to Ethereum.
 
-* Ronin RPC, see [validator](/docs/node-operators/mainnet/validator)
+Ronin RPC, see [validator](/docs/node-operators/mainnet/validator)
 
 ## Set up and run
 1. Setup ronin-bridge directories
