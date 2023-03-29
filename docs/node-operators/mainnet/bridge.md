@@ -1,14 +1,14 @@
----
-description: Set up a bridge operator node on mainnet.
----
-
 # Run a bridge operator node
-This page describes how to set up and run a bridge operator node on mainnet. 
+Set up a bridge operator node on the Ronin mainnet.
 
 ## Prerequisites
-* Ronin RPC (remote procedure call) URL to listen for events from Ronin chain and send events to Ronin chain.
-* Ethereum RPC URL (Alchemy, Infura, and others) to listen for events from Ethereum chain and send events to Ethereum.
-* Postgres database to store events and tasks.
+* Your machine must meet the minimum hardware requirements:
+  * 4-core CPU
+  * 6 GB RAM
+* You need to have the following:
+  * Ronin RPC (remote procedure call) URL. This is required to listen for events from Ronin chain and send events to Ronin chain.
+  * Ethereum RPC URL (Alchemy, Infura, and others) to listen for events from Ethereum chain and send events to Ethereum.
+  * Postgres database to store events and tasks.
 
 ## Set up and run
 1. In your working directory, create subdirectories by running the following commands:

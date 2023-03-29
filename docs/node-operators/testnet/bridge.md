@@ -1,9 +1,5 @@
----
-description: Set up a bridge operator node on testnet.
----
-
 # Run a bridge operator node
-This page describes how to set up and run a bridge operator node on testnet.
+Set up and run a bridge operator node on the Saigon testnet.
 
 ## Prerequisites
 * Ronin RPC (remote procedure call) URL to listen for events from Ronin chain and send events to Ronin chain.

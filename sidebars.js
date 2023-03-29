@@ -259,50 +259,45 @@ const sidebars = {
       ],
     },
     {
-      // Node operators
       type: 'category',
       label: 'Node operators',
       link: {
-        type: 'generated-index',
-        title: 'Node operators',
-        description: 'Set up and run a Ronin node.',
-        slug: '/node-operators',
+        type: 'doc',
+        id: 'node-operators/index',        
       },
       items: [
-        // CLI guide
-        'node-operators/cli',
         {
           type: 'category',
-          label: 'Mainnet guides',
+          label: 'Ronin mainnet',
           link: {
             type: 'generated-index',
-            title: 'Mainnet guides',
+            title: 'Ronin mainnet',
+            description: 'Step-by-step guides to set up your nodes on the Ronin mainnet.',
             slug: '/node-operators/mainnet',
           },
           items: [
-            // Configuration
-            'node-operators/mainnet/config',
             // Run a validator node
             'node-operators/mainnet/validator',
-            // Run a bridge operator node
+            // Run a bridge node
             'node-operators/mainnet/bridge',
             // Run a non-validator-node
             'node-operators/mainnet/non-validator',
             // Run a full archive node
             'node-operators/mainnet/archive',
+            // Specification
+            'node-operators/mainnet/specification',
           ],
         },
         {
           type: 'category',
-          label: 'Testnet guides',
+          label: 'Saigon testnet',
           link: {
             type: 'generated-index',
-            title: 'Testnet guides',
+            title: 'Saigon testnet',
+            description: 'Step-by-step guides to set up your nodes on the Saigon testnet.',
             slug: '/node-operators/testnet',
           },
           items: [
-            // Configuration
-            'node-operators/testnet/config',
             // Run a validator node
             'node-operators/testnet/validator',
             // Run a bridge node
@@ -311,8 +306,16 @@ const sidebars = {
             'node-operators/testnet/non-validator',
             // Run a full archive node
             'node-operators/testnet/archive',
+            // Specification
+            'node-operators/testnet/specification',
           ],
         },
+        // CLI guide
+        'node-operators/cli',
+        // Security hardening
+        'node-operators/security',
+        // FAQ
+        'node-operators/faq',
         // Node setup tutorials
         // {
         //   type: 'category',
@@ -329,14 +332,6 @@ const sidebars = {
         //     'node-operators/tutorials/gcp-setup',
         //   ],
         // },
-        // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'node-operators/faq',
-        },
-        // Security hardening
-        'node-operators/security',
       ],
     },
     // Developers
@@ -345,13 +340,13 @@ const sidebars = {
       label: 'Developers',
       id: 'developers/portal',
     },
-    // Community HIDE after documenatation goes open-source
+    // Community
     {
       type: 'doc',
       label: 'Community',
       id: 'community/join',
     },
-    // Community HIDDEN until documenatation goes open-source
+    // Community HIDDEN until documentation goes open-source
     // {
     //   type: 'category',
     //   label: 'Community',

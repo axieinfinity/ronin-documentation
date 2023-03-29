@@ -1,9 +1,6 @@
----
-description: Set up a non-validator node on testnet.
----
-
 # Run a non-validator (RPC) node
-This page describes how to set up and run a non-validator node on testnet. This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
+Set up a non-validator node on the Saigon testnet mainnet.
+This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
 
 ## Latest release
 ### RPC node

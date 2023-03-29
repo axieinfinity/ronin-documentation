@@ -1,9 +1,5 @@
----
-description: Set up an archive node on mainnet.
----
-
 # Run an archive node
-This page describes how to set up and run an archive node on mainnet.
+Set up an archive node on the Ronin mainnet.
 
 ## Latest release
 ### RPC node

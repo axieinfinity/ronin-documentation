@@ -1,5 +1,6 @@
 ---
 description: List of frequently asked questions.
+title: FAQ
 ---
 
 import multisig from './assets/multisig.png';
