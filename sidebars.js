@@ -263,11 +263,11 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Ronin mainnet',
+          label: 'Run a node',
           link: {
             type: 'generated-index',
-            title: 'Ronin mainnet',
-            description: 'Step-by-step guides to set up your nodes on the Ronin mainnet.',
+            title: 'Run a node',
+            description: 'Step-by-step guides to set up nodes on the Ronin mainnet.',
             slug: '/node-operators/mainnet',
           },
           items: [
@@ -283,28 +283,8 @@ const sidebars = {
             'node-operators/mainnet/specification',
           ],
         },
-        {
-          type: 'category',
-          label: 'Saigon testnet',
-          link: {
-            type: 'generated-index',
-            title: 'Saigon testnet',
-            description: 'Step-by-step guides to set up your nodes on the Saigon testnet.',
-            slug: '/node-operators/testnet',
-          },
-          items: [
-            // Run a validator node
-            'node-operators/testnet/validator',
-            // Run a bridge node
-            'node-operators/testnet/bridge',
-            // Run a non-validator-node
-            'node-operators/testnet/non-validator',
-            // Run a full archive node
-            'node-operators/testnet/archive',
-            // Specification
-            'node-operators/testnet/specification',
-          ],
-        },
+        // Upgrade to the latest release
+        'node-operators/latest-release',
         // CLI guide
         'node-operators/cli',
         // Security hardening
@@ -312,6 +292,28 @@ const sidebars = {
         'node-operators/generate-key',
         // FAQ
         'node-operators/faq',
+        // {
+        //   type: 'category',
+        //   label: 'Saigon testnet',
+        //   link: {
+        //     type: 'generated-index',
+        //     title: 'Saigon testnet',
+        //     description: 'Step-by-step guides to set up your nodes on the Saigon testnet.',
+        //     slug: '/node-operators/testnet',
+        //   },
+        //   items: [
+        //     // Run a validator node
+        //     'node-operators/testnet/validator',
+        //     // Run a bridge node
+        //     'node-operators/testnet/bridge',
+        //     // Run a non-validator-node
+        //     'node-operators/testnet/non-validator',
+        //     // Run a full archive node
+        //     'node-operators/testnet/archive',
+        //     // Specification
+        //     'node-operators/testnet/specification',
+        //   ],
+        // },
         // Node setup tutorials
         // {
         //   type: 'category',

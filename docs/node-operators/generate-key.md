@@ -1,20 +1,15 @@
 ---
-description: Generate key
+description: Securely generate a private key.
 ---
 
-# Generate key
-
-This guide show you how to securly generate private key from ronin.
+# Generate keys
+This guide explains how to generate a private key on Ronin.
 
 ## Prerequisites
-[Git](https://git-scm.com/)
+You need to have [Golang](https://go.dev/doc/install) installed.
 
-[Go](https://go.dev/doc/install)
-
-## Generate private key locally
-
-1. Compiling ethkey tool from ronin source code
-
+## Generate a private key locally
+1. Compile the `ethkey` tool from the Ronin source code by running the following commands:
 ```
 git clone https://github.com/axieinfinity/ronin
 cd ronin
@@ -24,17 +19,13 @@ ls -l ethkey
 -rwxr-xr-x 1 user staff 16306850 Mar 23 18:13 ethkey
 ```
 
-2. Generate key
-
+2. Generate the key and set a password:
 ```
 ./ethkey generate your-key-name
 ```
-Following command will prompt you to set a password
 
-3. Reveal your key
+3. Reveal the key and enter the password:
 
 ```
 $ ./ethkey inspect --private your-key-name
 ```
-
-Type your password to reveal your key
