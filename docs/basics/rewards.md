@@ -37,11 +37,10 @@ Following is a sensitivity analysis of the expected annual commission for the fi
 | Year 7          	| 31,818 	| 63,636  	| 95,455  	| 127,273 	|
 | Year 8          	| 13,636 	| 27,273  	| 40,909  	| 54,545  	|
 
-
 ### Delegation's reward
 Delegators share the reward based on the staked amount and the commission rate.
 
-Following is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering commission rate ranging from 5% to 20%, and the staked supply of 5%.
+Following is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering commission rate ranging from 5% to 20%, and the staked supply of 50%.
 
 | Commission rate 	|   5%   	|   10%   	|   15%   	|   20%   	|
 |-----------------	|:------:	|:-------:	|:-------:	|:-------:	|
@@ -55,7 +54,6 @@ Following is a sensitivity analysis of the annual percentage rate (APR) for the 
 | Year 8          	| 1.16%     | 1.10%     | 1.04%     | 0.98%     |
 
 Following is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering the staked supply ranging from 40% to 60%, and  the commission rate of 5%.
-
 
 | % of circulating supply staked 	|   40%  	|   50%  	|   60%  	|
 |:------------------------------:	|:------:	|:------:	|:------:	|

@@ -61,7 +61,7 @@ To perform the Clone attack, the Byzantine validators must create two blocks on 
 To perform a non-detectable attack—when the Byzantine validators can only seal at most one block on each block height—the attacker must control the majority of validators. Fortunately, the selection of Governing Validators guarantee the majority of validators are honest, thus ensuring the security of Ronin.
 
 ## Rewards
-Out of the total supply of 1,000,000,000 RON tokens, 25% are allocated to fund staking rewards. According to the [release schedule](./tokenomics.md), the rewards are set to be allocated over 294 months.
+Out of the total supply of 1,000,000,000 RON tokens, 25% are allocated to fund staking rewards. According to the [release schedule](./tokenomics.md), the rewards are set to be allocated over 108 months.
 
 ### Rewards for validators and delegators
 Validators have two sources of rewards: transaction fees and 90\% of staking rewards. When the validator generates a block, they receive the transaction fees in that block and some fixed amount of staking rewards.
