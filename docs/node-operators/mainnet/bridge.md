@@ -14,7 +14,16 @@ events from Ethereum chain and send events to Ethereum.
 
 Ronin RPC, see [validator](/docs/node-operators/mainnet/validator)
 
-## Set up and run
+## Generating keys
+
+Before installing Ronin, you will need to generate 2 private keys. 
+
+- Bridge voter 
+- Bridge operator 
+
+This private keys will be used in the later steps.
+
+## Install bridge
 1. Setup ronin-bridge directories
    
 Create ronin-bridge directory
@@ -87,7 +96,7 @@ Create a `.env` file with this content
 ```
 ETHEREUM_ENDPOINT=your-ethereum-endpoint
 RPC_ENDPOINT=your-rpc-endpoint
-BRIDGE_IMAGE=late-bridge-image
+BRIDGE_IMAGE=latest-bridge-image
 BRIDGE_OPERATOR_PRIVATE_KEY=your-bridge-operator-private-key
 BRIDGE_VOTER_PRIVATE_KEY=your-bridge-voter-private-key
 DB_USERNAME=postgres
