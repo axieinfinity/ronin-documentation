@@ -22,8 +22,8 @@ it's not future proof as the data size of Ronin grow larger overtime:
 
 ## Generating key
 
-Before installing Ronin, you will need to generate private keys for your validator.
-This private key will be used in the later steps.
+Before installing Ronin, you will need to generate a private key for your validator.
+This private keys will be used in the later steps. Follow tutorial in [Generate key](/docs/node-operators/generate-key).
 
 ## Install ronin 
 
@@ -45,9 +45,19 @@ Create chaindata directory
 mkdir -p chaindata/data/ronin
 ```
 
+2. Export HOST_IP 
+
+```
+export HOST_IP = $(hostname -i)
+```
+
 3. Create docker-compose.yml
 
 Create `docker-compose.yml` and copy this content to the file
+
+```
+vim docker-compose.yml
+```
 
 ```
 version: "3"
@@ -59,7 +69,7 @@ services:
     hostname: node
     container_name: node
     ports:
-      - 127.0.0.1:8545:8545
+      - ${HOST_IP}:8545:8545
       - 127.0.0.1:8546:8546
       - 30303:30303
       - 30303:30303/udp
@@ -81,6 +91,10 @@ services:
 ```
 
 5. Create an `.env` file
+
+```
+vim .env
+```
 
 `.env` file is configuration that you can set to your node.
 Create a `.env` file with this content 

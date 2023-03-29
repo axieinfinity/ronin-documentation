@@ -21,7 +21,7 @@ Before installing Ronin, you will need to generate 2 private keys.
 - Bridge voter 
 - Bridge operator 
 
-This private keys will be used in the later steps.
+This private keys will be used in the later steps. Follow tutorial in [Generate key](/docs/node-operators/generate-key).
 
 ## Install bridge
 1. Setup ronin-bridge directories
@@ -46,8 +46,6 @@ mkdir -p data
 ```
 vim docker-compose.yml
 ```
-
-4. Paste the following contents into the file:
    
 ```
 version: "3"
@@ -88,10 +86,14 @@ services:
       - db
 ```
 
-5. Create an `.env` file
+4. Create an `.env` file
 
 `.env` file is configuration that you can set to your bridge.
 Create a `.env` file with this content 
+
+```
+vim .env
+```
 
 ```
 ETHEREUM_ENDPOINT=your-ethereum-endpoint
@@ -118,7 +120,8 @@ Replace those keys in your `.env` with your information:
 
 - `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, can be Alchemy or Infura
 
-- `RPC_ENDPOINT`: Your secured Ronin RPC endpoint, for eg: `http://localhost:8545`
+- `RPC_ENDPOINT`: Your secured Ronin RPC endpoint.
+If you set up your validator node on the same machine, the value should be `${HOST_IP}:8545`. HOST_IP should be expoerted in [Install Ronin](/docs/node-operators/mainnet/validator#install-ronin))
 
 - `BRIDGE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/mainnet/latest-release#latest-image).
 
