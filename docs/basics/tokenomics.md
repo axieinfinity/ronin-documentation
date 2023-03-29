@@ -12,6 +12,13 @@ RON is the ecosystem token of the Ronin blockchain. The RON token enables users 
 
 Ronin validators need to hold and stake RON to participate in validating blocks. They are rewarded with newly issued RON. This rewards are divided up among a validator and its delegators based on the RON they have staked with the validator. 
 
+## Token distribution
+The quantity of RON reserved for various network functions, as a percentage of the total existing token supply, follows this distribution:
+* Staking rewards: 25%
+* Community incentives: 30%
+* Sky Mavis: 30%
+* Ecosystem fund: 15%
+
 ### RON unlock schedule
 The max total supply is 1,000,000,000 and it can potentially be unlocked after 108 months if every token that is unlocked is issued. RON tokens were first unlocked on January 27, 2023. While the unlock schedule provides a view of RON tokens unlocked at quarterly time periods, tokens are unlocked on a continuous basis rather than having large unlocks at a specific date every quarter for the actual implementation.
 
@@ -23,14 +30,5 @@ There is a difference between *unlocked supply* (found in the public unlock sche
 * Circulating supply will never be higher than the unlocked supply.
 * Circulating supply of RON can be queried at the [supply API endpoint](https://supply-api.roninchain.com/info/ron?q=circulatingSupply).
 
-### RON allocation
-The quantity of RON reserved for various network functions, as a percentage of the total existing token supply, follows this distribution:
 
-## Token distribution
-The quantity of RON reserved for various network functions, as a percentage of the total existing token supply, follows this distribution:
-* Staking rewards: 25%
-* Community incentives: 30%
-* Sky Mavis: 30%
-* Ecosystem fund: 15%
 
-<img src={distribution} width={800} />
