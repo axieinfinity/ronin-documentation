@@ -11,8 +11,8 @@ After [becoming](onboarding/become-validator.mdx) a Validator Candidate, thereâ€
 ### 2. How to increase my chances of getting selected as a Standard Validator? 
 The higher your total stake, the stronger your chance of becoming a Standard Validator because Ronin uses a Delegated Proof of Stake (DPoS) consensus mechanism. You can attract more delegators by promoting your validator and maintaining good performance.
 
-### 3. What happens if my staking balance falls below the minimum requirement of 250,000 RON?
-You will have 7 days to deposit more RON to meet the minimum requirements, otherwise you will be renounced automatically.
+### 3. What happens if my staking balance falls below the minimum requirement?
+You will have 7 days to deposit more RON to meet the minimum requirement (250,000 RON), otherwise you will be renounced automatically.
 
 ### 4. What are the most important performance metrics for a validator?
 Your uptime, total staking amount, and APR (annual percentage rate).
