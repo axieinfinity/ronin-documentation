@@ -1,9 +1,5 @@
----
-description: Set up an archive node on testnet.
----
-
 # Run an archive node
-This page describes how to set up and run an archive node on testnet.
+Set up and run an archive node on the Saigon testnet.
 
 ## Latest release
 ### RPC node

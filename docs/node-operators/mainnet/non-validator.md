@@ -1,9 +1,6 @@
----
-description: Set up a non-validator node on mainnet.
----
-
 # Run a non-validator (RPC) node
-This page describes how to set up and run a non-validator node on mainnet. This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
+Set up a non-validator node on the Ronin mainnet.
+This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
 
 ## Latest release
 ### RPC node

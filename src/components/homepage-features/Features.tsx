@@ -26,12 +26,12 @@ const featureList = [
       href: '/docs/delegators',
       title: 'Delegators',
     },
-    description: <>Stake tokens and delegate your stake to validators to earn rewards and secure the network.</>,
+    description: <>Stake RON and delegate your stake to validators to earn rewards.</>,
   },
   {
     title: 'Validators',
     Icon: BoxTickIcon,
-    description: <>Run a validator node to earn rewards and maintain network security.</>,
+    description: <>Become a validator to earn rewards and secure the network.</>,
     link: {
       href: '/docs/validators',
       title: 'Validators',
@@ -40,7 +40,7 @@ const featureList = [
   {
     title: 'Node operators',
     Icon: SignDirectionIcon,
-    description: <>Set up and configure nodes to ensure their stable operation.</>,
+    description: <>Set up and operate your Ronin nodes.</>,
     link: {
       href: '/docs/node-operators',
       title: 'Node operators',
@@ -58,9 +58,9 @@ const featureList = [
   {
     title: 'Community',
     Icon: UserShieldIcon,
-    description: <>Join our community, participate in programs, and contribute to this documentation.</>,
+    description: <>Join the Ronin community and stay up to date with latest news.</>,
     link: {
-      href: '/docs/community',
+      href: '/docs/community/join',
       title: 'Community',
     },
   },
