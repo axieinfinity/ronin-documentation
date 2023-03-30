@@ -17,7 +17,7 @@ Recommended system requirements for running a Ronin mainnet node:
 * 700 GB high-speed SSD
 * AMD64 architecture
 
-These requirements, however, are not future-proof because Ronin data size grows over time.
+However, are not future-proof because Ronin data size grows over time.
 ### Generate a key
 Generate a private key for your validator node by following the steps in [Generate keys](/docs/node-operators/generate-keys). You will need this key later in the process.
 
@@ -42,20 +42,15 @@ Create a chain data directory:
 mkdir -p chaindata/data/ronin
 ```
 
-2. Export `HOST_IP`: 
+2. Create docker-compose.yml
 
-```
-export HOST_IP = $(hostname -i)
-```
-
-3. Create a `docker-compose.yml` file:
+Create `docker-compose.yml` 
 
 ```
 vim docker-compose.yml
 ```
-copy this content to the file
 
-4. Copy this code block to the file:
+3. Copy this code block to the `docker-compose.yml`:
 
 ```
 version: "3"
@@ -67,7 +62,7 @@ services:
     hostname: node
     container_name: node
     ports:
-      - ${HOST_IP}:8545:8545
+      - 127.0.0.1:8545:8545
       - 127.0.0.1:8546:8546
       - 30303:30303
       - 30303:30303/udp
@@ -88,20 +83,20 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-5. Create an `.env` file. This file contains the configuration parameters for your node.
+4. Create an `.env` file
 
 Create `.env`
 ```
 vim .env
 ```
 
-6. Copy this code block to the file: 
+5. Copy this code block to the `.env`: 
 
 ```
-INSTANCE_NAME=your-instance-name
-NODE_IMAGE=your-node-image
-VALIDATOR_PRIVATE_KEY=your-private-key
-PASSWORD=your-password
+INSTANCE_NAME=insert-your-instance-name
+NODE_IMAGE=insert-your-node-image
+VALIDATOR_PRIVATE_KEY=insert-your-private-key
+PASSWORD=insert-your-password
 
 MINE=true
 
@@ -123,6 +118,14 @@ Replace the following keys in the `.env` file with your node's information:
 * `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image).
 * `PASSWORD`: The password used to encrypt your private key.
 
+6. (Optional) Download the snapshot to save the time:
+
+```
+cd ~/ronin/chaindata/data/ronin/
+curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
+mv <uncompressed data> chaindata
+```
+
 7. Start the node
 
 ```
@@ -135,6 +138,10 @@ docker-compose up -d
 docker logs node -f --tail 100
 ```
 
-Your node is up and listening at `localhost:8545`.
+9. Confirm your node is working on Ronin stats
 
-9. Confirm that your node is working: After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of the node. If it's green, the node is connected and up to date with the network.
+After a few minutes, go to the [stats page](https://stats.roninchain.com/) to
+check the status of your node. If it's green, the node is connected and up to
+date with the network.
+
+10. As a validator, you are also required to run a bride operator node
