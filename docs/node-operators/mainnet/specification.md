@@ -1,3 +1,7 @@
+---
+description: Ronin mainnet specification.
+---
+
 # Specification
 This page describes the details of the Ronin mainnet specification.
 

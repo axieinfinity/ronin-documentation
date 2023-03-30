@@ -1,3 +1,7 @@
+---
+description: Run a Ronin mainnet validator node from a Docker image.
+---
+
 # Run a validator node
 This guide demonstrates how to run a Ronin mainnet validator node from a Docker image.
 
@@ -49,6 +53,7 @@ export HOST_IP = $(hostname -i)
 ```
 vim docker-compose.yml
 ```
+copy this content to the file
 
 4. Copy this code block to the file:
 
@@ -85,6 +90,7 @@ services:
 
 5. Create an `.env` file. This file contains the configuration parameters for your node.
 
+Create `.env`
 ```
 vim .env
 ```
@@ -92,10 +98,10 @@ vim .env
 6. Copy this code block to the file: 
 
 ```
-INSTANCE_NAME=/your instance name/
-NODE_IMAGE=/your node image/
-VALIDATOR_PRIVATE_KEY=/your private key/
-PASSWORD=/your password/
+INSTANCE_NAME=your-instance-name
+NODE_IMAGE=your-node-image
+VALIDATOR_PRIVATE_KEY=your-private-key
+PASSWORD=your-password
 
 MINE=true
 
@@ -114,10 +120,10 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --min
 Replace the following keys in the `.env` file with your node's information:
 * `INSTANCE_NAME`: Your node's name, which can be seen on the [stats page](https://stats.roninchain.com/).
 * `VALIDATOR_PRIVATE_KEY`: Your validator private key, without the `0x` prefix.
-* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/latest-release#latest-image).
+* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image).
 * `PASSWORD`: The password used to encrypt your private key.
 
-7. Start the node:
+7. Start the node
 
 ```
 docker-compose up -d

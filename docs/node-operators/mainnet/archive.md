@@ -1,3 +1,7 @@
+---
+description: Run an archive node on the Ronin mainnet.
+---
+
 # Run an archive node
 This guide demonstrates how to run an archive node on the Ronin mainnet.
 

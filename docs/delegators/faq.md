@@ -21,7 +21,7 @@ Each day's validator is finalized at 00:00 UTC. If you delegate today, your stak
 The stake delegated for the new validator will start emitting rewards from 00:00 UTC the next day, while the stake for the current validator is removed, so there would be no rewards today.
 
 ### 6. How do I know if my validator is renouncing?
-You will receive a notification seven days before the validator's renunciation date. For more ways to keep track of your validators, see [Track validator updates](./manage/track.mdx).
+You will receive a notification seven days before the validator's renunciation date. For more ways to keep track of your validators, see [Track validators](./manage/track.mdx).
 
 ### 7. How can I know if a validator is well-performing?
 Look at the validator's uptime, APR, and total stake. An active node has high uptime, while an appealing interest rate means greater rewards. A large total stake also helps increase the chance this validator will be selected in the next days.

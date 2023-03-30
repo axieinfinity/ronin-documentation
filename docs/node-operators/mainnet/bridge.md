@@ -1,3 +1,7 @@
+---
+description: Run a bridge operator on the Ronin mainnet.
+---
+
 # Run a bridge operator node
 This guide demonstrates how to run a bridge operator on the Ronin mainnet.
 
@@ -119,8 +123,13 @@ Replace the following keys in the `.env` file with your node's information:
 * `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix.
 * `DB_PASSWORD`: Your Postgres database password.
 
+6. Start the node:
 
-6. Review the log:
+```
+docker-compose up -d
+```
+
+7. Review the log 
 
 ```
 docker logs bridge -f --tail 100

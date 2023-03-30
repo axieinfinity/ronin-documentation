@@ -1,9 +1,9 @@
 ---
-description: Securely generate a private key.
+description: Securely generate private keys.
 ---
 
 # Generate keys
-This guide explains how to generate a private key on Ronin.
+This guide demonstrate how to generate a private key on Ronin.
 
 ## Prerequisites
 You need to have [Golang](https://go.dev/doc/install) installed.

@@ -1,3 +1,7 @@
+---
+description: Run a non-validator node on the Ronin mainnet
+---
+
 # Run a non-validator (RPC) node
 This guide demonstrates how to run a non-validator node on the Ronin mainnet. 
 

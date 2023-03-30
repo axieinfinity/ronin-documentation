@@ -128,24 +128,12 @@ const sidebars = {
           label: 'Claim rewards',
           id: 'delegators/rewards/claim',
         },
-        // Track validator updates
-        {
-          type: 'doc',
-          label: 'Track validator updates',
-          id: 'delegators/manage/track',
-        },
+        // Track validators
+        'delegators/manage/track',
         // View activity
-        {
-          type: 'doc',
-          label: 'View activity',
-          id: 'delegators/manage/activity',
-        },
+        'delegators/manage/activity',
         // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'delegators/faq',
-        },
+        'delegators/faq',
       ],
     },
     // Validators
@@ -179,11 +167,7 @@ const sidebars = {
           ],
         },
         // Claim rewards
-        {
-          type: 'doc',
-          label: 'Claim rewards',
-          id: 'validators/rewards/claim',
-        },
+        'validators/rewards/claim',
         // Manage profile
         {
           type: 'category',
@@ -246,11 +230,7 @@ const sidebars = {
           ],
         },
         // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'validators/faq',
-        },
+        'validators/faq',
       ],
     },
     {
@@ -283,13 +263,14 @@ const sidebars = {
             'node-operators/mainnet/specification',
           ],
         },
-        // Upgrade to the latest release
-        'node-operators/latest-release',
-        // CLI guide
+        // Generate keys
+        'node-operators/generate-keys',
+        // Upgrade node
+        'node-operators/upgrade',
+        // Secure node
+        'node-operators/secure',
+        // Use Ronin CLI
         'node-operators/cli',
-        // Security hardening
-        'node-operators/security',
-        'node-operators/keys',
         // FAQ
         'node-operators/faq',
         // {
