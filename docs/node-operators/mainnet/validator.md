@@ -17,7 +17,7 @@ Recommended system requirements for running a Ronin mainnet node:
 * 700 GB high-speed SSD
 * AMD64 architecture
 
-These requirements, however, are not future-proof because Ronin data size grows over time.
+However, are not future-proof because Ronin data size grows over time.
 ### Generate a key
 Generate a private key for your validator node by following the steps in [Generate keys](/docs/node-operators/generate-keys). You will need this key later in the process.
 
@@ -49,9 +49,8 @@ Create `docker-compose.yml`
 ```
 vim docker-compose.yml
 ```
-copy this content to the file
 
-4. Copy this code block to the file:
+3. Copy this code block to the `docker-compose.yml`:
 
 ```
 version: "3"
@@ -84,14 +83,14 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-3. Create an `.env` file
+4. Create an `.env` file
 
 Create `.env`
 ```
 vim .env
 ```
 
-6. Copy this code block to the file: 
+5. Copy this code block to the `.env`: 
 
 ```
 INSTANCE_NAME=insert-your-instance-name
@@ -123,7 +122,7 @@ Replace the following keys in the `.env` file with your node's information:
 
 - `PASSWORD`: Your strong password, this is used to encrypt your private key
 
-4. (Optional) Download the snapshot to save the time:
+6. (Optional) Download the snapshot to save the time:
 
 ```
 cd ~/ronin/chaindata/data/ronin/
@@ -131,7 +130,7 @@ curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot
 mv <uncompressed data> chaindata
 ```
 
-5. Start the node
+7. Start the node
 
 ```
 docker-compose up -d
@@ -143,12 +142,10 @@ docker-compose up -d
 docker logs node -f --tail 100
 ```
 
-6. Confirm your node is working on Ronin stats
+9. Confirm your node is working on Ronin stats
 
 After a few minutes, go to the [stats page](https://stats.roninchain.com/) to
 check the status of your node. If it's green, the node is connected and up to
 date with the network.
 
-7. As a validator, you are also required to run a bride operator node
-
-9. Confirm that your node is working: After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of the node. If it's green, the node is connected and up to date with the network.
+10. As a validator, you are also required to run a bride operator node

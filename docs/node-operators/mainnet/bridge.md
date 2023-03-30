@@ -10,8 +10,7 @@ This page describe how to run a bridge operator on mainnet combining non-validat
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-### Prepare endpoints
-* Ronin RPC endpoint. If you set up your validator node on the same machine, the value is `${HOST_IP}:8545`. The `HOST_IP` needs to be exported in [Install Ronin](/docs/node-operators/mainnet/validator#install-ronin).
+## Prepare endpoints
 * Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
 
 ### Generate keys
@@ -21,9 +20,9 @@ Generate two private keys by following the steps in [Generate keys](/docs/node-o
 
 You will need these keys later in the process.
 
-## System requirement
+### Review system requirements
 
-Below are the suggested system requirement to run a Ronin mainnet node. However,
+Below are the suggested system requirement to run a Ronin mainnet fullnode. However,
 it's not future proof as the data size of Ronin grow larger overtime:
 
 * 8-core CPU
@@ -31,7 +30,6 @@ it's not future proof as the data size of Ronin grow larger overtime:
 * 700 GB high-speed SSD
 * AMD64 architecture
 
-## Generating keys
 
 ## Install the bridge
 1. Set up directories:
@@ -64,7 +62,7 @@ Create `docker-compose.yml`
 vim docker-compose.yml
 ```
 
-3. Copy this code block to the file:
+3. Copy this code block to the `docker-compose.yml`:
 
 ```
 version: "3"
@@ -136,7 +134,7 @@ services:
 vim .env
 ```
 
-5. Copy this code block to the file:
+5. Copy this code block to the `.env`:
 
 ```
 ETHEREUM_ENDPOINT=insert-your-ethereum-endpoint
@@ -199,22 +197,22 @@ Replace those keys in your `.env` with your information:
 
 - `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
 
-4. (Optional) Download the snapshot to save the time:
+6. (Optional) Download the snapshot to save the time:
 
 ```
 cd ~/ronin-bridge/chaindata/data/ronin/
 curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
 mv <uncompressed data> chaindata
 ```
-5. Start the node:
+7. Start the node:
 
 ```
 cd ~/ronin-bridge && docker-compose up -d
 ```
 
-6. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
+8. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
-7. Review the log for bridge and node  ( the node should sync to latest block for making bridge work )
+9. Review the log for bridge and node  ( the node should sync to latest block for making bridge work )
 
 ```
 docker logs node -f --tail 100
