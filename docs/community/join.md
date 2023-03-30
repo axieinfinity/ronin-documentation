@@ -9,7 +9,7 @@ import {findSidebarItem} from '@site/src/sidebarUtils';
 # Social media
 Stay informed on the latest Ronin news, events, and programs:
 
-* [Discord](https://discord.gg/P5GgF7SK)
+* [Discord](https://discord.gg/roninnetwork)
 * [Twitter](https://twitter.com/ronin_network)
 
 # Newsletter
