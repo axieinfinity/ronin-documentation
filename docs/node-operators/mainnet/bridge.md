@@ -195,7 +195,6 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 
 
 Replace the following keys in the `.env` file with your node's information:
 * `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint—Alchemy or Infura.
-* `RPC_ENDPOINT`: Your secured Ronin RPC endpoint. If you set up your validator node on the same machine, the value is in `${HOST_IP}:8545`. You need to export `HOST_IP` in [Install Ronin](/docs/node-operators/mainnet/validator#install-ronin).
 * `BRIDGE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image-1).
 * `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
 * `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix.
