@@ -56,7 +56,6 @@ services:
     environment:
       - SYNC_MODE=full
       - PASSWORD=${PASSWORD}
-      - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
       - BOOTNODES=${BOOTNODES}
       - NETWORK_ID=${NETWORK_ID}
       - RONIN_PARAMS=${RONIN_PARAMS}
@@ -100,10 +99,18 @@ CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
 ```
 
-7. Start the node:
+7. (Optional) Download the snapshot to save the time:
+
+```
+cd ~/.skymavis/chaindata/data/ronin/
+curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
+mv <uncompressed data> chaindata
+```
+
+8. Start the node:
    
 ```
-docker-compose up -d
+cd /axie/ronin-manager && docker-compose up -d
 ```
 
 8. Confirm that your node is working: After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of the node. If it's green, the node is connected and up to date with the network.

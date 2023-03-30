@@ -42,13 +42,9 @@ Create a chain data directory:
 mkdir -p chaindata/data/ronin
 ```
 
-2. Export `HOST_IP`: 
+2. Create docker-compose.yml
 
-```
-export HOST_IP = $(hostname -i)
-```
-
-3. Create a `docker-compose.yml` file:
+Create `docker-compose.yml` 
 
 ```
 vim docker-compose.yml
@@ -67,7 +63,7 @@ services:
     hostname: node
     container_name: node
     ports:
-      - ${HOST_IP}:8545:8545
+      - 127.0.0.1:8545:8545
       - 127.0.0.1:8546:8546
       - 30303:30303
       - 30303:30303/udp
@@ -88,7 +84,7 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-5. Create an `.env` file. This file contains the configuration parameters for your node.
+3. Create an `.env` file
 
 Create `.env`
 ```
@@ -123,7 +119,19 @@ Replace the following keys in the `.env` file with your node's information:
 * `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image).
 * `PASSWORD`: The password used to encrypt your private key.
 
-7. Start the node
+- `NODE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/mainnet/latest-release#latest-image).
+
+- `PASSWORD`: Your strong password, this is used to encrypt your private key
+
+4. (Optional) Download the snapshot to save the time:
+
+```
+cd ~/ronin/chaindata/data/ronin/
+curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
+mv <uncompressed data> chaindata
+```
+
+5. Start the node
 
 ```
 docker-compose up -d
@@ -135,6 +143,12 @@ docker-compose up -d
 docker logs node -f --tail 100
 ```
 
-Your node is up and listening at `localhost:8545`.
+6. Confirm your node is working on Ronin stats
+
+After a few minutes, go to the [stats page](https://stats.roninchain.com/) to
+check the status of your node. If it's green, the node is connected and up to
+date with the network.
+
+7. As a validator, you are also required to run a bride operator node
 
 9. Confirm that your node is working: After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of the node. If it's green, the node is connected and up to date with the network.
