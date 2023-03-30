@@ -25,7 +25,6 @@ const sidebars = {
       label: 'Basics',
       link: {
         type: 'generated-index',
-        title: 'Ronin basics',
         description: 'Everything you need to know about Ronin.',
         slug: '/basics',
       },
@@ -94,12 +93,11 @@ const sidebars = {
       label: 'Delegators',
       link: {
         type: 'generated-index',
-        title: 'Delegators',
         description: 'Stake tokens, delegate your stake to validators, and claim rewards.',
         slug: '/delegators',
       },
       items: [
-        // Purchase RON
+        // Buy RON
         'delegators/onboarding/buy-ron',
         // Become a delegator
         'delegators/onboarding/become-delegator',
@@ -128,18 +126,12 @@ const sidebars = {
           label: 'Claim rewards',
           id: 'delegators/rewards/claim',
         },
+        // Track validators
+        'delegators/manage/track',
         // View activity
-        {
-          type: 'doc',
-          label: 'View activity',
-          id: 'delegators/manage/activity',
-        },
+        'delegators/manage/activity',
         // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'delegators/faq',
-        },
+        'delegators/faq',
       ],
     },
     // Validators
@@ -148,7 +140,6 @@ const sidebars = {
       label: 'Validators',
       link: {
         type: 'generated-index',
-        title: 'Validators', 
         description: 'Register as a validator, stake tokens, claim rewards, and manage your validator profile.',
         slug: '/validators',
       },
@@ -173,22 +164,7 @@ const sidebars = {
           ],
         },
         // Claim rewards
-        {
-          type: 'category',
-          label: 'Rewards',
-          link: {
-            type: 'generated-index',
-            title: 'Rewards',
-            description: 'Learn about reward types and how to claim rewards.',
-            slug: '/validators/rewards',
-          },
-          items: [
-            // Reward types
-            'validators/rewards/types',
-            // Claim rewards
-            'validators/rewards/claim',
-          ],
-        },
+        'validators/rewards/claim',
         // Manage profile
         {
           type: 'category',
@@ -220,8 +196,8 @@ const sidebars = {
           label: 'Slashing',
           link: {
             type: 'generated-index',
-            title: 'Slashing and bailout', 
-            description: 'Learn about the slashing penalties and rules for bailout.',
+            title: 'Slashing',
+            description: 'Learn about the slashing rules and options for a bailout.',
             slug: '/validators/slashing',
           },
           items: [
@@ -251,68 +227,71 @@ const sidebars = {
           ],
         },
         // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'validators/faq',
-        },
+        'validators/faq',
       ],
     },
     {
-      // Node operators
       type: 'category',
       label: 'Node operators',
       link: {
-        type: 'generated-index',
-        title: 'Node operators',
-        description: 'Set up and run a Ronin node.',
-        slug: '/node-operators',
+        type: 'doc',
+        id: 'node-operators/index',        
       },
       items: [
-        // CLI guide
-        'node-operators/cli',
         {
           type: 'category',
-          label: 'Mainnet guides',
+          label: 'Run a node',
           link: {
             type: 'generated-index',
-            title: 'Mainnet guides',
+            title: 'Run a node',
+            description: 'Step-by-step guides to set up nodes on the Ronin mainnet.',
             slug: '/node-operators/mainnet',
           },
           items: [
-            // Configuration
-            'node-operators/mainnet/config',
             // Run a validator node
             'node-operators/mainnet/validator',
-            // Run a bridge operator node
+            // Run a bridge node
             'node-operators/mainnet/bridge',
             // Run a non-validator-node
             'node-operators/mainnet/non-validator',
             // Run a full archive node
             'node-operators/mainnet/archive',
+            // Specification
+            'node-operators/mainnet/specification',
           ],
         },
-        {
-          type: 'category',
-          label: 'Testnet guides',
-          link: {
-            type: 'generated-index',
-            title: 'Testnet guides',
-            slug: '/node-operators/testnet',
-          },
-          items: [
-            // Configuration
-            'node-operators/testnet/config',
-            // Run a validator node
-            'node-operators/testnet/validator',
-            // Run a bridge node
-            'node-operators/testnet/bridge',
-            // Run a non-validator-node
-            'node-operators/testnet/non-validator',
-            // Run a full archive node
-            'node-operators/testnet/archive',
-          ],
-        },
+        // Generate keys
+        'node-operators/generate-keys',
+        // Upgrade node
+        'node-operators/upgrade',
+        // Secure node
+        'node-operators/secure',
+        // Use Ronin CLI
+        'node-operators/cli',
+        // FAQ
+        'node-operators/faq',
+        // {
+        //   type: 'category',
+        //   label: 'Saigon testnet',
+        //   link: {
+        //     type: 'generated-index',
+        //     title: 'Saigon testnet',
+        //     description: 'Step-by-step guides to set up your nodes on the Saigon testnet.',
+        //     slug: '/node-operators/testnet',
+        //   },
+        //   items: [
+        //     // Run a validator node
+        //     'node-operators/testnet/validator',
+        //     // Run a bridge node
+        //     'node-operators/testnet/bridge',
+        //     // Run a non-validator-node
+        //     'node-operators/testnet/non-validator',
+        //     // Run a full archive node
+        //     'node-operators/testnet/archive',
+        //     // Specification
+        //     'node-operators/testnet/specification',
+        //   ],
+        // },
         // Node setup tutorials
         // {
         //   type: 'category',
@@ -329,14 +308,6 @@ const sidebars = {
         //     'node-operators/tutorials/gcp-setup',
         //   ],
         // },
-        // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'node-operators/faq',
-        },
-        // Security hardening
-        'node-operators/security',
       ],
     },
     // Developers
@@ -345,13 +316,13 @@ const sidebars = {
       label: 'Developers',
       id: 'developers/portal',
     },
-    // Community HIDE after documenatation goes open-source
+    // Community
     {
       type: 'doc',
       label: 'Community',
       id: 'community/join',
     },
-    // Community HIDDEN until documenatation goes open-source
+    // Community HIDDEN until documentation goes open-source
     // {
     //   type: 'category',
     //   label: 'Community',

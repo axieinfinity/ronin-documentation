@@ -1,40 +1,97 @@
 ---
-description: Set up a bridge operator node on mainnet.
+description: Run a bridge operator on the Ronin mainnet.
 ---
 
 # Run a bridge operator node
-This page describes how to set up and run a bridge operator node on mainnet. 
+This guide demonstrates how to run a Ronin bridge operator node from a Docker image.
 
 ## Prerequisites
-* Ronin RPC (remote procedure call) URL to listen for events from Ronin chain and send events to Ronin chain.
-* Ethereum RPC URL (Alchemy, Infura, and others) to listen for events from Ethereum chain and send events to Ethereum.
-* Postgres database to store events and tasks.
+### Install Docker
+* [Docker Engine](https://docs.docker.com/engine/install/)
+* [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-## Set up and run
-1. In your working directory, create subdirectories by running the following commands:
-   
+## Prepare endpoints
+* Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
+
+### Generate keys
+Generate two private keys by following the steps in [Generate keys](/docs/node-operators/generate-keys):
+* One key for bridge voter 
+* One key for bridge operator
+
+You will need these keys later in the process.
+
+### Review system requirements
+
+Below are the suggested system requirement to run a Ronin mainnet fullnode. However,
+it's not future proof as the data size of Ronin grow larger overtime:
+
+* 8-core CPU
+* 32 GB RAM
+* 700 GB high-speed SSD
+* AMD64 architecture
+
+
+## Install the bridge
+1. Set up directories:
+
+Create a bridge directory:
 ```
-mkdir -p /axie/ronin-manager
-mkdir -p ~/bridgedata-v2
+mkdir ~/ronin-bridge
 ```
 
-2. Navigate to the `ronin-manager` directory:
-   
+Go to the newly created directory:
 ```
-cd /axie/ronin-manager
+cd ~/ronin-bridge
 ```
 
-3. Create a `docker-compose` file:
+Create a directory for bridge data:
+```
+mkdir -p data
+```
+
+Create chaindata directory
+```
+mkdir -p chaindata/data/ronin
+```
+
+2. Create `docker-compose.yml` file
    
+Create `docker-compose.yml`
+
 ```
 vim docker-compose.yml
 ```
 
-4. Paste the following contents into the file:
-   
+3. Copy this code block to the `docker-compose.yml`:
+
 ```
 version: "3"
 services:
+  node:
+    image: ${NODE_IMAGE}
+    stop_grace_period: 5m
+    stop_signal: SIGINT
+    hostname: node
+    container_name: node
+    ports:
+      - 127.0.0.1:8545:8545
+      - 127.0.0.1:8546:8546
+      - 30303:30303
+      - 30303:30303/udp
+      - 6060:6060
+    volumes:
+      - ~/ronin-bridge/chaindata:/ronin
+    environment:
+      - SYNC_MODE=snap
+      - PASSWORD=${PASSWORD}
+      - BOOTNODES=${BOOTNODES}
+      - NETWORK_ID=${NETWORK_ID}
+      - RONIN_PARAMS=${RONIN_PARAMS}
+      - VERBOSITY=${VERBOSITY}
+      - MINE=false
+      - GASPRICE=${GASPRICE}
+      - GENESIS_PATH=${GENESIS_PATH}
+      - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
   db:
     image: postgres:14.3
     restart: always
@@ -44,9 +101,9 @@ services:
     ports:
       - 127.0.0.1:5432:5432
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
-      - ~/bridgedata-v2:/var/lib/postgresql/data
+      - ~/ronin-bridge/data:/var/lib/postgresql/data
   bridge:
     image: ${BRIDGE_IMAGE}
     restart: always
@@ -71,372 +128,94 @@ services:
       - db
 ```
 
-5. Create an `.env` file:
-   
+4. Create an `.env` file. This file contains configuration parameters for your node.
+
 ```
 vim .env
 ```
 
-6. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
-   
-```
-# User for postgres account.
-DB_USERNAME=postgres
-# Password for postgres account.
-DB_PASSWORD=example
-DB_NAME=bridge
-# Database to store oracle.
-POSTGRES_DB=bridge
-# Password to protect your private key.
-PASSWORD=123456
+5. Copy this code block to the `.env`:
 
-RPC_ENDPOINT=your-rpc-endpoint
-ETHEREUM_ENDPOINT=https://eth-mainnet.g.alchemy.com/v2/your-ethereum-endpoint
+```
+ETHEREUM_ENDPOINT=insert-your-ethereum-endpoint
+BRIDGE_IMAGE=insert-latest-bridge-image
+BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-bridge-operator-private-key
+BRIDGE_VOTER_PRIVATE_KEY=insert-your-bridge-voter-private-key
+DB_PASSWORD=insert-your-db-password
+NODE_IMAGE=insert-your-latest-node-image
+INSTANCE_NAME=insert-your-instance-name
+
+DB_USERNAME=postgres
+DB_NAME=bridge
+POSTGRES_DB=bridge
+
 CONFIG_PATH=config.mainnet.json
-BRIDGE_IMAGE=ghcr.io/axieinfinity/bridge:v0.2.3-56f7328
 VERBOSITY=3
+
+RPC_ENDPOINT=http://node:8545
 
 RONIN_TASK_INTERVAL=3
 RONIN_TRANSACTION_CHECK_PERIOD=50
 RONIN_MAX_PROCESSING_TASKS=200
 ETHEREUM_GET_LOGS_BATCH_SIZE=100
 
-# Private key of the bridge operator, used for acknowledging deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains, without 0x.
-BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-operator-private-key
+# Node config
 
-# Private key of the bridge voter (also known as "governor") without 0x. Only governor roles need to set this, otherwise you can leave it blank. 
-BRIDGE_VOTER_PRIVATE_KEY=insert-your-voter-private-key
+# BOOTNODES address of the bootnode to connect to the network, will be auto-filled
+BOOTNODES=enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303
+# NETWORK_ID network id
+NETWORK_ID=2020
+# Setting for oracle services, where staging = rinkey + testnet, and production = ethereum + mainnet.
+# Setting nodekey
+GASPRICE=20000000000
+
+# Password to protect your private key.
+PASSWORD=123456
+
+VERBOSITY=3
+
+CHAIN_STATS_WS_SERVER=stats.roninchain.com
+CHAIN_STATS_WS_SECRET=xQj2MZPaN6
+
+RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
+
 ```
 
+Replace those keys in your `.env` with your information:
+
+- `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, can be Alchemy or Infura
+
+- `BRIDGE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/upgrade#latest-image-1).
+
+- `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the 0x prefix
+
+- `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the 0x prefix
+
+- `DB_PASSWORD`: Your postgres database password
+
+- `NODE_IMAGE`:  Your node image version, find it under [latest image](/docs/node-operators/upgrade#latest-image).
+
+- `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
+
+6. (Optional) Download the snapshot to save the time:
+
+```
+cd ~/ronin-bridge/chaindata/data/ronin/
+curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
+mv <uncompressed data> chaindata
+```
 7. Start the node:
-   
+
 ```
-docker-compose up -d
-```
-
-After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
-
-## Configuration
-The configuration file is located in the `config` directory. There are two main objects in the configuration: `listeners` and `database`.
-
-### listeners
-Lists all chains that the bridge is listening to. Each `name` reflects a specific function defined in https://github.com/axieinfinity/bridge-v2/blob/master/internal/main.go. For example, `Ronin` reflects the function `InitRonin`, while `Ethereum` points to `InitEthereum`. Therefore, don't change the names, otherwise the program can't run correctly.
-
-#### chainId
-Chain's identity (ronin: 0x7e4, ethereum: 0x1).
-
-Type: `hex string`
-
-#### rpcUrl
-RPC URL of the chain that is used to query new events or submit transactions to.
-
-Type: `string`
-
-#### blockTime
-The time a new block is generated, used periodically to listen to new events from the new block.
-
-Type: `number`
-
-Unit: `seconds`
-
-#### safeBlockRange
-Safe block range that guarantees that a reorg can't happen. 
-
-Type: `number`
-
-Unit: `blocks`
-
-#### maxTasksQuery
-Maximum number of pending and processing tasks queried from the database.
-
-Type: `number`
-
-#### transactionCheckPeriod
-Period of checking whether a transaction is mined or not by querying
-its receipt. If a receipt is found, the system tries three more times
-to ensure the transaction isn't replaced because of a reorg.
-
-Type: `number`
-
-Unit: `seconds`
-
-#### secret
-Stores private keys of the validator and the relayer. These fields can be empty and passed via the environment variables: `RONIN_VALIDATOR_KEY` and `RONIN_RELAYER_KEY` for Ronin, and `ETHEREUM_VALIDATOR_KEY` and `ETHEREUM_RELAYER_KEY` for Ethereum.
-
-Type: `object`
-
-Example: `xxxx4563e6591c1eba4b932a3513006cb5bcd1a6f69c32295dxxxx`
-
-#### fromHeight
-Initially, the bridge uses this property to load data from this block. After that, the bridge stores the latest processed block in the `processed_block` table and uses the value from this table to continue.
-
-Type: `number`
-
-Unit: `blocks`
-
-#### processWithinBlocks
-This property guarantees that the bridge doesn't process too far. Specifically, when `latestBlock - processWithinBlocks > fromHeight`, bridge `latestBlock - processWithinBlocks` instead of `fromHeight` to process.
-
-Type: `number`
-
-Unit: `blocks`
-
-#### contracts
-Stores a map (pair) of names and contact addresses, which can be used during processing tasks or jobs of a listener. 
-
-Type: `record<string, address>`
-
-Example:
-
-In `Ronin` listener, two contracts—Ronin Gateway (at `Gateway`) and Ethereum Gateway (at `EthGateway`)—are used:
-
-```json
-{
-  "Gateway": "0x03d1F13c7391F6B5A651143a31034cf728A93694",
-  "EthGateway": "0x3b6371EB912bFd5C0E249A16000ffbC6B881555A"
-}
+cd ~/ronin-bridge && docker-compose up -d
 ```
 
-#### subscriptions
-Includes all subscriptions that the bridge is observing in a listener. Each subscription contains the subscription name and subscription config.
-* `to`: Indicates receiver/contract address that the bridge uses as one of the conditions to trigger a subscription.
-* `type`: There are two types: `0` is `transaction event` and `1` is `log's event`.
-* `handler`: Defines the contract and the event that you want to listen to.
-  * `contract`: The contract name. It must be defined in the [bridge contracts](https://github.com/axieinfinity/bridge-contracts/blob/master/main.go#L13-L20) repository.
-  * `name`: The event name.
-* `callbacks`: Lists all callback functions when data is decoded. This is a map (pair) where the key is the listener's name and the value is the function that is called in that listener.
+8. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
-Type: `object`
+9. Review the log for bridge and node  ( the node should sync to latest block for making bridge work )
 
-Example:
-
-```json5
-{
-  "to": "0xA8D61A5427a778be28Bd9bb5990956b33385c738",
-  "type": 1, // Listen to the log's event
-  "handler": {
-    "contract": "RoninGateway",
-    "name": "MainchainWithdrew"
-  },
-  "callbacks": {
-    "Ronin": "StoreMainchainWithdrawCallback"
-  }
-}
+```
+docker logs node -f --tail 100
+docker logs bridge -f --tail 100
 ```
 
-The bridge triggers the function `StoreMainchainWithdrawCallback` in `RoninListener`.
-
-#### Example
-Suppose that the bridge listens to the `Welcome` event, which is defined in the
-`Hello` contract, and submits the data to the `HelloEth` contract via
-the method `SubmitFromRonin`.
-
-```json5
-{
-  "MainchainWithdrewSubscription": {
-    "to": "0xA8D61A5427a778be28Bd9bb5990956b33385c738",
-    "type": 1,
-    "handler": {
-      "contract": "RoninGateway", // The contract name. First, it must be defined in the [bridge contracts](https://github.com/axieinfinity/bridge-contracts/blob/master/main.go#L13-L20) repository.
-      "name": "Welcome" // The event being listened to.
-    },
-    "callbacks": {
-      "Ronin": "WelcomeCallback" // Execute the callback on the Ronin chain.
-    }
-  },
-}
-```
-
-In `listener/ronin.go`, add the following method:
-
-```go
-package listener
-
-func (l *RoninListener) WelcomeCallback(fromChainId *big.Int, tx bridgeCore.Transaction, data []byte) error {
-	// Unpack event data
-	roninEvent := new(hello.WelcomeEvent)
-	roninGatewayAbi, err := hello.GatewayMetaData.GetAbi()
-
-	// Because the data argument was the log marshalled in bytes, it must be un-marshalled
-	// before being used.
-	if err = l.utilsWrapper.UnpackLog(*roninGatewayAbi, roninEvent, "Welcome", data); err != nil {
-		return err
-	}
-
-    chainId, err := l.GetChainID()
-  
-	// Create a new task.
-    t := &models.Task{
-        ChainId:         hexutil.EncodeBig(chainId),
-        FromChainId:     hexutil.EncodeBig(fromChainId),
-        FromTransaction: tx.GetHash().Hex(),
-        Type:            task.WELCOME_TASK, // Defined in task/main.go
-        Data:            common.Bytes2Hex(data),
-        Retries:         0,
-        Status:          task.STATUS_PENDING,
-        LastError:       "",
-        CreatedAt:       time.Now().Unix(),
-    }
-	
-	// Get the store API to save the task to database.
-	return l.bridgeStore.GetTaskStore().Save(withdrawalTask)
-}
-```
-
-Then in `task/task.go`, create a `welcomeTask` method.
-
-```go
-package task
-
-func (r *task) welcomeTask(task *models.Task) (doneTasks, processingTasks, failedTasks []*models.Task, tx *ethtypes.Transaction) {
-	// create caller
-	transactor, err := helloEth.NewHelloEth(common.HexToAddress(r.contracts[HELLO_ETH_CONTRACT]), r.ethClient)
-	
-    tx, err = r.util.SendContractTransaction(r.listener.GetValidatorSign(), r.chainId, func(opts *bind.TransactOpts) (*ethtypes.Transaction, error) {
-      return transactor.SubmitFromRonin(opts)
-    })
-	doneTasks = append(doneTasks, task)
-	return
-}
-```
-
-Finally, add it to the `send` method:
-
-```go
-package task
-
-func (r *task) send() {
-	log.Info("[task] Sending transaction", "type", r.taskType)
-	switch r.taskType {
-	case VOTE_BRIDGE_OPERATORS_TASK:
-		r.sendTransaction(r.voteBridgeOperatorsBySignature)
-	case RELAY_BRIDGE_OPERATORS_TASK:
-		r.sendTransaction(r.relayBridgeOperators)
-	}
-}
-```
-
-### Subscriptions
-
-#### MainchainWithdrewSubscription
-
-```mermaid
-graph TD
-  tryBulkAcknowledgeMainchainWithdrew --> |Emit| MainchainWithdrew
-  Bridge --> |Listen| MainchainWithdrew
-  Bridge --> A{Got event?}
-  A --> |No| Bridge
-  A --> |Yes| B[Store Receipt To Database]
-```
-
-#### WithdrawalRequestedSubscription
-Request validators to sign a withdrawal transaction.
-
-```mermaid
-graph TD
-  bulkRequestWithdrawalFor --> |Emit| WithdrawalRequested
-  Bridge --> |Listen| WithdrawalRequested
-  Bridge --> A{Got Event?}
-  A --> |No| Bridge
-  A --> |Yes| signWithdrawalSignatures
-  signWithdrawalSignatures --> BulkSubmitWithdrawalSignatures
-```
-
-#### WithdrawalSignaturesRequestedSubscription
-Request validators to sign a withdrawal transaction again.
-
-```mermaid
-graph TD
-  requestWithdrawalSignatures --> |Emit| WithdrawalSignaturesRequested
-  Bridge --> |Listen| WithdrawalRequested
-  Bridge --> A{Got Event?}
-  A --> |No| Bridge
-  A --> |Yes| signWithdrawalSignatures
-  signWithdrawalSignatures --> BulkSubmitWithdrawalSignatures
-```
-
-#### DepositRequestedSubscription
-When a user deposits ETH to a contract on Ethereum, the bridge listens to this event and sends it to Ronin.
-
-```mermaid
-graph TD
-  requestDepositFor --> |Emit| DepositRequested
-  Bridge --> |Listen| DepositRequested
-  Bridge --> A{Got event?}
-  A --> |No| Bridge
-  A --> |Yes| sendDepositTransaction
-  sendDepositTransaction --> B{Is Voted?}
-  B --> |Yes| Done
-  B --> |No| StoreProcessedReceipt
-  StoreProcessedReceipt --> TryBulkDepositFor
-```
-
-#### WithdrewSubscription
-When a user withdraws ETH from a contract, the bridge listens to this event and sends it to Ronin.
-
-```mermaid
-graph TD
-  unlockWithdrawal --> |Emit| Withdrew
-  submitWithdrawal --> |Emit| Withdrew
-  Bridge --> |Listen| Withdrew
-  Bridge --> A{Got event?}
-  A --> |No| Bridge
-  A --> |Yes| MainchainWithdrewVoted
-  MainchainWithdrewVoted --> B{Is Voted?}
-  B --> |Yes| Done
-  B --> |No| TryBulkAcknowledgeMainchainWithdrew
-```
-
-#### BridgeOperatorSetUpdatedSubscription
-At the end of each epoch, validators call the `wrapUpEpoch` method of
-the `ValidatorSet` contract to update the validator set.
-It emits an event
-`BridgeOperatorSetUpdated(uint256 period, []address operators)`.
-All Governing Validator nodes must listen to this event,
-vote by signing typed data,
-and submit it to the `RoninGovernanceAdmin` contract.
-
-```mermaid
-graph TD
-  Validator -->|Call| WrapUpEpoch
-  WrapUpEpoch -->|Emit| BridgeOperatorSetUpdated
-  Bridge --> |Listen| BridgeOperatorSetUpdated
-  Bridge --> E{Got an event}
-  E --> |Yes| BridgeOperatorsVoted
-  E --> |No| Bridge
-  BridgeOperatorsVoted --> A{Submitted}
-  A --> |No| VoteBridgeOperatorsBySignatures
-  A --> |Yes| Done
-```
-
-#### BridgeOperatorsApprovedSubscription
-After a Governing Validator node submits a vote's signature to `RoninGovernanceAdmin`, the bridge operator needs to 
-call `GetAllTrustedOrganizations` to get all Governing Validator nodes and sort them in the ascending order. Then call `GetBridgeOperatorVotingSignatures`
-to get a list of signatures that are submitted on Ronin. Finally, the bridge operator submits these signatures to
-`MainchainGovernanceAdmin` through the `RelayBridgeOperators` method.
-
-```mermaid
-graph TD
-  VoteBridgeOperatorsBySignatures --> |Emit| BridgeOperatorsApproved
-  Bridge --> |Listen| BridgeOperatorsApproved
-  Bridge --> A{Got event}
-  A --> |Yes| GetAllTrustedOrganizations
-  A --> |No| Bridge
-  GetAllTrustedOrganizations --> GetBridgeOperatorVotingSignatures
-  GetBridgeOperatorVotingSignatures --> RelayBridgeOperators
-```
-
-### Database
-Database configuration is defined within the `database` key. Basic properties include `host`, `port`, `user`, `password`, and `dbName`.
-
-```json5
-{
-  "database": {
-    "host": "localhost", // Database host name
-    "user": "postgres", // Database username
-    "password": "example", // Database password
-    "dbName": "bridge", // Database name
-    "port": 5432 // Database port
-  }
-}
-```

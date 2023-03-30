@@ -143,6 +143,19 @@ const config = {
           {
             title: 'Community',
             items: [
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/roninnetwork',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/ronin_network',
+              },
+              {
+                type: 'link',
+                label: 'Newsletter',
+                href: 'https://roninblockchain.substack.com/',
+              },
               // {
               //   label: 'Join',
               //   to: 'docs/community/join',
@@ -161,9 +174,8 @@ const config = {
                 href: 'https://github.com/axieinfinity/',
               },
               {
-                type: 'link',
-                label: 'Newsletter',
-                href: 'https://roninblockchain.substack.com/',
+                label: 'Sky Mavis Developer Portal',
+                href: 'http://docs.skymavis.com/docs/getting-started',
               },
             ],
           },

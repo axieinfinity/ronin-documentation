@@ -1,11 +1,7 @@
----
-description: Testnet specification.
----
+# Specification
+Details of the Saigon testnet specification.
 
-# Configuration
-
-## Specification
-
+## Configuration
 * Chain ID (network ID): `2021`
 * RPC endpoint: [https://saigon-testnet.roninchain.com/rpc](https://saigon-testnet.roninchain.com/rpc)
 * Consensus: DPoS (Consortium)
@@ -14,7 +10,6 @@ description: Testnet specification.
 * Genesis file: [testnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/testnet.json)
 
 ## Validator set
-
 * Total validators: 21
 * Governing Validators: 11
 * Standard Validators: 10
@@ -22,7 +17,6 @@ description: Testnet specification.
 For today's validator set, see [https://saigon-app.roninchain.com/staking](https://saigon-app.roninchain.com/staking?tab=validator).
 
 ## Contracts
-
 ```
 RoninGovernanceAdmin: 0x8a320aFb578BEed1A5BB08823CF9A5f60Ea694f4
 RoninTrustedOrganizationProxy: 0x7f46c5DD5f13FF0dd973317411d70800db248e7d

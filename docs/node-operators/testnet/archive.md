@@ -1,9 +1,5 @@
----
-description: Set up an archive node on testnet.
----
-
 # Run an archive node
-This page describes how to set up and run an archive node on testnet.
+Set up and run an archive node on the Saigon testnet.
 
 ## Latest release
 ### RPC node
@@ -60,7 +56,6 @@ services:
     environment:
       - SYNC_MODE=full
       - PASSWORD=${PASSWORD}
-      - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
       - BOOTNODES=${BOOTNODES}
       - NETWORK_ID=${NETWORK_ID}
       - RONIN_PARAMS=${RONIN_PARAMS}
@@ -95,9 +90,6 @@ INSTANCE_NAME=insert-your-instance-name
 # Password to protect your private key.
 PASSWORD=123456
 
-# Private key of validator address, without 0x. 
-VALIDATOR_PRIVATE_KEY=insert-your-validator-private-key
-
 CONFIG_PATH=config.testnet.json
 NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895
 VERBOSITY=3
@@ -106,7 +98,7 @@ CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
 GENESIS_PATH=testnet.json
 
-RONIN_PARAMS=--gcmode archive --http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
+RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
 ```
 
 7. Start the node:

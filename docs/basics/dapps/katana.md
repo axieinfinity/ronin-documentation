@@ -14,6 +14,6 @@ The key features of Katana are as follows:
 * Farm. Stake liquidity pool (LP) tokens to farm RON.
 * Analytics. Check your earned fees.
 
-Visit [https://katana.roninchain.com](https://katana.roninchain.com)
+Link: [https://katana.roninchain.com](https://katana.roninchain.com)
 
 <img src={katana} width={1440} />

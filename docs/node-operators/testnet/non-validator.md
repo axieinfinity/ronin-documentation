@@ -1,9 +1,6 @@
----
-description: Set up a non-validator node on testnet.
----
-
 # Run a non-validator (RPC) node
-This page describes how to set up and run a non-validator node on testnet. This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
+Set up a non-validator node on the Saigon testnet mainnet.
+This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
 
 ## Latest release
 ### RPC node
@@ -65,7 +62,6 @@ services:
     environment:
       - SYNC_MODE=full
       - PASSWORD=${PASSWORD}
-      - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
       - BOOTNODES=${BOOTNODES}
       - NETWORK_ID=${NETWORK_ID}
       - RONIN_PARAMS=${RONIN_PARAMS}
@@ -108,7 +104,7 @@ CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
 GENESIS_PATH=testnet.json
 
-RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
+RONIN_PARAMS=--http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
 ```
 
 7. (Optional) Download the snapshot to save the time:
