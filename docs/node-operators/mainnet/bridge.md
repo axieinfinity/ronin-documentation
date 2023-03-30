@@ -1,55 +1,52 @@
-# Run a bridge operator node
+---
+description: Run a bridge operator on the Ronin mainnet.
+---
 
-This page describe how to run a bridge operator on mainnet
+# Run a bridge operator node
+This guide demonstrates how to run a bridge operator on the Ronin mainnet.
 
 ## Prerequisites
+### Install Docker
+* [Docker Engine](https://docs.docker.com/engine/install/)
+* [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-[Docker Engine](https://docs.docker.com/engine/install/)
+### Prepare endpoints
+* Ronin RPC endpoint. If you set up your validator node on the same machine, the value is `${HOST_IP}:8545`. The `HOST_IP` needs to be exported in [Install Ronin](/docs/node-operators/mainnet/validator#install-ronin).
+* Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
 
-[Docker Compose plugin](https://docs.docker.com/compose/install/)
+### Generate keys
+Generate two private keys by following the steps in [Generate keys](/docs/node-operators/generate-keys):
+* One key for bridge voter 
+* One key for bridge operator
 
-Ethereum RPC endpoint: An Ethereum RPC endpoint, can be set up with
-[Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura
+You will need these keys later in the process.
 
-Ronin RPC endpoint: A Ronin RPC endpoint
+## Install the bridge
+1. Set up directories:
 
-## Generating keys
-
-Before installing bridge, you will need to generate 2 private keys. 
-
-- Bridge voter 
-- Bridge operator 
-
-This private keys will be used in the later steps. Follow tutorial in [Generate key](/docs/node-operators/generate-key).
-
-## Install bridge
-1. Setup ronin-bridge directories
-   
-Create ronin-bridge directory
+Create a bridge directory:
 ```
 mkdir ~/ronin-bridge
 ```
 
-Go to bridge folder
+Go to the newly created directory:
 ```
 cd ~/ronin-bridge
 ```
 
-Create bridge data directory
+Create a directory for bridge data:
 ```
 mkdir -p data
 ```
 
-2. Create `docker-compose.yml` file
-   
-Create `docker-compose.yml`
+2. Create a `docker-compose.yml` file:
 
 ```
 vim docker-compose.yml
 ```
 
-copy this content to the file
-   
+3. Copy this code block to the file:
+
 ```
 version: "3"
 services:
@@ -89,15 +86,13 @@ services:
       - db
 ```
 
-3. Create an `.env` file
-
-Create `.env`
+4. Create an `.env` file. This file contains configuration parameters for your node.
 
 ```
 vim .env
 ```
 
-copy this content to the file
+5. Copy this code block to the file:
 
 ```
 ETHEREUM_ENDPOINT=your-ethereum-endpoint
@@ -120,28 +115,21 @@ RONIN_MAX_PROCESSING_TASKS=200
 ETHEREUM_GET_LOGS_BATCH_SIZE=100
 ```
 
-Replace those keys in your `.env` with your information:
+Replace the following keys in the `.env` file with your node's information:
+* `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint—Alchemy or Infura.
+* `RPC_ENDPOINT`: Your secured Ronin RPC endpoint. If you set up your validator node on the same machine, the value is in `${HOST_IP}:8545`. You need to export `HOST_IP` in [Install Ronin](/docs/node-operators/mainnet/validator#install-ronin).
+* `BRIDGE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image-1).
+* `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
+* `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix.
+* `DB_PASSWORD`: Your Postgres database password.
 
-- `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, can be Alchemy or Infura
-
-- `RPC_ENDPOINT`: Your Ronin RPC endpoint.
-If you set up your validator node on the same machine, the value should be `${HOST_IP}:8545`. 
-
-- `BRIDGE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/mainnet/latest-release#latest-image).
-
-- `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the 0x prefix
-
-- `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the 0x prefix
-
-- `DB_PASSWORD`: Your postgres database password
-
-4. Start the node:
+6. Start the node:
 
 ```
 docker-compose up -d
 ```
 
-5. Review the log 
+7. Review the log 
 
 ```
 docker logs bridge -f --tail 100

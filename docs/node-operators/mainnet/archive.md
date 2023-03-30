@@ -1,5 +1,9 @@
+---
+description: Run an archive node on the Ronin mainnet.
+---
+
 # Run an archive node
-Set up an archive node on the Ronin mainnet.
+This guide demonstrates how to run an archive node on the Ronin mainnet.
 
 ## Latest release
 ### RPC node
@@ -7,34 +11,33 @@ Set up an archive node on the Ronin mainnet.
 * [ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895](https://github.com/axieinfinity/ronin/pkgs/container/ronin/80511518?tag=v2.5.2-9bf4895)
 
 ## Prerequisites
-* You must be a root user.
-* Your machine must meet the minimum hardware requirements:
+* [Docker Compose plugin](https://docs.docker.com/compose/install/)
+* A machine that meets the minimum hardware requirements:
   * 8-core CPU
   * 32 GB RAM
   * 7 TB high-speed SSD
-* You need to have [docker-compose](https://docs.docker.com/compose/install/) installed.
 
-## Set up and run
-1. In your working directory, create subdirectories for the config and chain data by running the following commands:
+## Install the node
+1. Set up directories:
 
 ```
 mkdir -p /axie/ronin-manager
 mkdir -p ~/.skymavis/chaindata/data/ronin/
 ```
 
-2. Navigate to the `ronin-manager` directory:
+2. Go to `ronin-manager`:
    
 ```
 cd /axie/ronin-manager
 ```
 
-3. Create a `docker-compose` file:
+3. Create a `docker-compose.yml` file:
    
 ```
 vim docker-compose.yml
 ```
 
-4. Paste the following contents into the file:
+4. Copy this code block to the file:
    
 ```
 version: "3"
@@ -66,13 +69,13 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-5. Create an `.env` file:
+5. Create an `.env` file. This file contains configuration parameters for your node.
    
 ```
 vim .env
 ```
 
-6. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
+6. Copy this code block to the file, replacing the `insert-...` values with your information:
    
 ```
 # BOOTNODES address of the bootnode to connect to the network, will be auto-filled
@@ -106,4 +109,4 @@ RONIN_PARAMS=--gcmode archive --http.api eth,net,web3,consortium --txpool.pricel
 docker-compose up -d
 ```
 
-After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
+8. Confirm that your node is working: After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of the node. If it's green, the node is connected and up to date with the network.

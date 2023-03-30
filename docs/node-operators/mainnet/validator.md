@@ -1,64 +1,61 @@
 ---
-description: Set up a validator node on mainnet.
+description: Run a Ronin mainnet validator node from a Docker image.
 ---
 
 # Run a validator node
-This guide describes how to set up a Ronin mainnet validator node from a Docker image.
+This guide demonstrates how to run a Ronin mainnet validator node from a Docker image.
 
-## System requirement
+## Prerequisites
+### Install Docker
+* [Docker Engine](https://docs.docker.com/engine/install/)
+* [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-Below are the suggested system requirement to run a Ronin mainnet node. However,
-it's not future proof as the data size of Ronin grow larger overtime:
-
+### Review system requirements
+Recommended system requirements for running a Ronin mainnet node:
 * 8-core CPU
 * 32 GB RAM
 * 700 GB high-speed SSD
-* AMD64 architecture 
+* AMD64 architecture
 
-## Prerequisites
-[Docker Engine](https://docs.docker.com/engine/install/)
+These requirements, however, are not future-proof because Ronin data size grows over time.
+### Generate a key
+Generate a private key for your validator node by following the steps in [Generate keys](/docs/node-operators/generate-keys). You will need this key later in the process.
 
-[Docker Compose plugin](https://docs.docker.com/compose/install/)
+## Install Ronin node 
+1. Set up directories:
 
-## Generating key
+Create a node directory:
 
-Before installing Ronin, you will need to generate a private key for your validator.
-This private keys will be used in the later steps. Follow tutorial in [Generate key](/docs/node-operators/generate-key).
-
-## Install ronin 
-
-1. Setup ronin directories
-
-
-Create `ronin` folder
 ```
 mkdir ~/ronin
 ```
 
-Go to ronin folder
+Go to the newly created directory:
+
 ```
 cd ~/ronin
 ```
 
-Create chaindata directory
+Create a chain data directory:
+
 ```
 mkdir -p chaindata/data/ronin
 ```
 
-2. Export HOST_IP 
+2. Export `HOST_IP`: 
 
 ```
 export HOST_IP = $(hostname -i)
 ```
 
-3. Create docker-compose.yml
-
-Create `docker-compose.yml` 
+3. Create a `docker-compose.yml` file:
 
 ```
 vim docker-compose.yml
 ```
 copy this content to the file
+
+4. Copy this code block to the file:
 
 ```
 version: "3"
@@ -91,15 +88,14 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-4. Create an `.env` file
+5. Create an `.env` file. This file contains the configuration parameters for your node.
 
 Create `.env`
 ```
 vim .env
 ```
 
-copy this content to the file
-
+6. Copy this code block to the file: 
 
 ```
 INSTANCE_NAME=your-instance-name
@@ -121,34 +117,24 @@ CHAIN_STATS_WS_SERVER=stats.roninchain.com
 RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
 ```
 
-Replace those keys in your `.env` with your node information:
+Replace the following keys in the `.env` file with your node's information:
+* `INSTANCE_NAME`: Your node's name, which can be seen on the [stats page](https://stats.roninchain.com/).
+* `VALIDATOR_PRIVATE_KEY`: Your validator private key, without the `0x` prefix.
+* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image).
+* `PASSWORD`: The password used to encrypt your private key.
 
-- `INSTANCE_NAME`: Your node name, will be visible on stats.roninchain.com
-
-- `VALIDATOR_PRIVATE_KEY`: Your validator private key, without the 0x prefix
-
-- `NODE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/mainnet/latest-release#latest-image).
-
-- `PASSWORD`: Your strong password, this is used to encrypt your private key
-
-5. Start the node
+7. Start the node
 
 ```
 docker-compose up -d
 ```
 
-6. Review the log 
+8. Review the log:
 
 ```
 docker logs node -f --tail 100
 ```
 
-7. Confirm your node is working on Ronin stats
+Your node is up and listening at `localhost:8545`.
 
-After a few minutes, go to the [stats page](https://stats.roninchain.com/) to
-check the status of your node. If it's green, the node is connected and up to
-date with the network.
-
-8. As a validator, you are also required to run a bride operator node
-
-[Run a bridge operator node](/docs/node-operators/mainnet/bridge)
+9. Confirm that your node is working: After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of the node. If it's green, the node is connected and up to date with the network.

@@ -128,24 +128,12 @@ const sidebars = {
           label: 'Claim rewards',
           id: 'delegators/rewards/claim',
         },
-        // Track validator updates
-        {
-          type: 'doc',
-          label: 'Track validator updates',
-          id: 'delegators/manage/track',
-        },
+        // Track validators
+        'delegators/manage/track',
         // View activity
-        {
-          type: 'doc',
-          label: 'View activity',
-          id: 'delegators/manage/activity',
-        },
+        'delegators/manage/activity',
         // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'delegators/faq',
-        },
+        'delegators/faq',
       ],
     },
     // Validators
@@ -179,11 +167,7 @@ const sidebars = {
           ],
         },
         // Claim rewards
-        {
-          type: 'doc',
-          label: 'Claim rewards',
-          id: 'validators/rewards/claim',
-        },
+        'validators/rewards/claim',
         // Manage profile
         {
           type: 'category',
@@ -246,11 +230,7 @@ const sidebars = {
           ],
         },
         // FAQ
-        {
-          type: 'doc',
-          label: 'FAQ',
-          id: 'validators/faq',
-        },
+        'validators/faq',
       ],
     },
     {
@@ -263,11 +243,11 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Ronin mainnet',
+          label: 'Run a node',
           link: {
             type: 'generated-index',
-            title: 'Ronin mainnet',
-            description: 'Step-by-step guides to set up your nodes on the Ronin mainnet.',
+            title: 'Run a node',
+            description: 'Step-by-step guides to set up nodes on the Ronin mainnet.',
             slug: '/node-operators/mainnet',
           },
           items: [
@@ -283,35 +263,38 @@ const sidebars = {
             'node-operators/mainnet/specification',
           ],
         },
-        {
-          type: 'category',
-          label: 'Saigon testnet',
-          link: {
-            type: 'generated-index',
-            title: 'Saigon testnet',
-            description: 'Step-by-step guides to set up your nodes on the Saigon testnet.',
-            slug: '/node-operators/testnet',
-          },
-          items: [
-            // Run a validator node
-            'node-operators/testnet/validator',
-            // Run a bridge node
-            'node-operators/testnet/bridge',
-            // Run a non-validator-node
-            'node-operators/testnet/non-validator',
-            // Run a full archive node
-            'node-operators/testnet/archive',
-            // Specification
-            'node-operators/testnet/specification',
-          ],
-        },
-        // CLI guide
+        // Generate keys
+        'node-operators/generate-keys',
+        // Upgrade node
+        'node-operators/upgrade',
+        // Secure node
+        'node-operators/secure',
+        // Use Ronin CLI
         'node-operators/cli',
-        // Security hardening
-        'node-operators/security',
-        'node-operators/generate-key',
         // FAQ
         'node-operators/faq',
+        // {
+        //   type: 'category',
+        //   label: 'Saigon testnet',
+        //   link: {
+        //     type: 'generated-index',
+        //     title: 'Saigon testnet',
+        //     description: 'Step-by-step guides to set up your nodes on the Saigon testnet.',
+        //     slug: '/node-operators/testnet',
+        //   },
+        //   items: [
+        //     // Run a validator node
+        //     'node-operators/testnet/validator',
+        //     // Run a bridge node
+        //     'node-operators/testnet/bridge',
+        //     // Run a non-validator-node
+        //     'node-operators/testnet/non-validator',
+        //     // Run a full archive node
+        //     'node-operators/testnet/archive',
+        //     // Specification
+        //     'node-operators/testnet/specification',
+        //   ],
+        // },
         // Node setup tutorials
         // {
         //   type: 'category',
