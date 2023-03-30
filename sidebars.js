@@ -289,7 +289,7 @@ const sidebars = {
         'node-operators/cli',
         // Security hardening
         'node-operators/security',
-        'node-operators/generate-key',
+        'node-operators/keys',
         // FAQ
         'node-operators/faq',
         // {
