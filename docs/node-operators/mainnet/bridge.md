@@ -3,7 +3,7 @@ description: Run a bridge operator on the Ronin mainnet.
 ---
 
 # Run a bridge operator node
-This page describe how to run a bridge operator on mainnet combining non-validator node for communicating.
+This guide demonstrates how to run a Ronin bridge operator node from a Docker image.
 
 ## Prerequisites
 ### Install Docker
