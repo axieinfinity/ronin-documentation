@@ -10,8 +10,8 @@ This guide demonstrates how to run a Ronin bridge operator node from a Docker im
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-## Prepare endpoints
-* Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
+### Prepare an Ethereum endpoint
+You need an Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
 
 ### Generate keys
 Generate two private keys by following the steps in [Generate keys](/docs/node-operators/generate-keys):
@@ -21,15 +21,13 @@ Generate two private keys by following the steps in [Generate keys](/docs/node-o
 You will need these keys later in the process.
 
 ### Review system requirements
-
-Below are the suggested system requirement to run a Ronin mainnet fullnode. However,
-it's not future proof as the data size of Ronin grow larger overtime:
-
+Recommended system requirements for running a bridge node:
 * 8-core CPU
 * 32 GB RAM
 * 700 GB high-speed SSD
 * AMD64 architecture
 
+These requirements, however, are not future-proof because Ronin data size grows over time.
 
 ## Install the bridge
 1. Set up directories:
@@ -49,20 +47,18 @@ Create a directory for bridge data:
 mkdir -p data
 ```
 
-Create chaindata directory
+Create a directory for chain data:
 ```
 mkdir -p chaindata/data/ronin
 ```
 
-2. Create `docker-compose.yml` file
-   
-Create `docker-compose.yml`
+2. Create a `docker-compose.yml` file:
 
 ```
 vim docker-compose.yml
 ```
 
-3. Copy this code block to the `docker-compose.yml`:
+3. Copy this code block to the `docker-compose.yml` file:
 
 ```
 version: "3"
@@ -134,7 +130,7 @@ services:
 vim .env
 ```
 
-5. Copy this code block to the `.env`:
+5. Copy this code block to the `.env` file:
 
 ```
 ETHEREUM_ENDPOINT=insert-your-ethereum-endpoint
@@ -181,21 +177,14 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 
 
 ```
 
-Replace those keys in your `.env` with your information:
-
-- `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, can be Alchemy or Infura
-
-- `BRIDGE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/upgrade#latest-image-1).
-
-- `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the 0x prefix
-
-- `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the 0x prefix
-
-- `DB_PASSWORD`: Your postgres database password
-
-- `NODE_IMAGE`:  Your node image version, find it under [latest image](/docs/node-operators/upgrade#latest-image).
-
-- `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
+Replace the following keys in the `.env` file with your node's information:
+* `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, which can be Alchemy or Infura.
+* `BRIDGE_IMAGE`: The version of your bridge node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image)
+* `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
+* `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix.
+* `DB_PASSWORD`: Your Postgres database password.
+* `NODE_IMAGE`: The version of your validator node's image, which can be found under [latest image](/docs/node-operators/upgrade#latest-image).
+* `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
 
 6. (Optional) Download the snapshot to save the time:
 
@@ -204,6 +193,7 @@ cd ~/ronin-bridge/chaindata/data/ronin/
 curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
 mv <uncompressed data> chaindata
 ```
+
 7. Start the node:
 
 ```
@@ -218,4 +208,3 @@ cd ~/ronin-bridge && docker-compose up -d
 docker logs node -f --tail 100
 docker logs bridge -f --tail 100
 ```
-

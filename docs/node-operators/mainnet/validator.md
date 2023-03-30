@@ -17,7 +17,7 @@ Recommended system requirements for running a Ronin mainnet node:
 * 700 GB high-speed SSD
 * AMD64 architecture
 
-However, are not future-proof because Ronin data size grows over time.
+These requirements, however, are not future-proof because Ronin data size grows over time.
 ### Generate a key
 Generate a private key for your validator node by following the steps in [Generate keys](/docs/node-operators/generate-keys). You will need this key later in the process.
 
@@ -138,10 +138,8 @@ docker-compose up -d
 docker logs node -f --tail 100
 ```
 
-9. Confirm your node is working on Ronin stats
+9. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
-After a few minutes, go to the [stats page](https://stats.roninchain.com/) to
-check the status of your node. If it's green, the node is connected and up to
-date with the network.
-
-10. As a validator, you are also required to run a bride operator node
+:::caution
+As a validator, you're required to run a bridge operator node. Proceed to [Run a bridge operator node](./bridge.md) to set it up.
+:::

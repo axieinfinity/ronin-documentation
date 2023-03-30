@@ -11,17 +11,20 @@ After [becoming](onboarding/become-validator.mdx) a Validator Candidate, thereâ€
 ### 2. How to increase the chance of getting selected as a Standard Validator? {#2}
 The higher your total stake, the stronger your chance of becoming a Standard Validator because Ronin uses a Delegated Proof of Stake (DPoS) consensus mechanism. You can attract more delegators by promoting your validator and maintaining good performance.
 
-### 3. What if my stake amount falls below the minimum requirement? {#3}
-You have *seven* days to deposit more RON to meet the minimum requirement (250,000 RON), otherwise you will be renounced automatically.
+### 3. If my self-stake exceeds the minimum required amount, can I withdraw the extra amount? {#3}
+Yes, you can withdraw as long as three days have passed since you last staked in. Make sure that the remaining amount after withdrawal is at least 250,000 RON.
 
-### 4. What are the most important performance metrics for a validator? {#4}
+### 4. What if my stake balance falls below the minimum required amount? {#4}
+You have *seven* days to deposit more RON to meet the minimum required amount (250,000 RON), otherwise you will be renounced automatically.
+
+### 5. What are the most important performance metrics for a validator? {#5}
 Your uptime, total staking amount, and APR (annual percentage rate).
 
-### 5. What are the rewards for a validator? {#5}
+### 6. What are the rewards for a validator? {#6}
 Validators receive fixed block rewards and transaction fees for producing blocks on Ronin. During the first year, validators also earn bridge rewards.
 
-### 6. How can I become a Governing Validator? {#6}
+### 7. How can I become a Governing Validator? {#7}
 This is done by [submitting](governance/create.mdx) a proposal. Any existing Governing Validator can propose to add another Governing Validator. If the proposal receives enough votes, the proposed validator becomes a Governing Validator.
 
-### 7. How can I get support? {#7}
+### 8. How can I get support? {#8}
 Join our [Discord](https://discord.gg/roninnetwork) after registering as a Validator Candidate, and look for "validator-" and "node-operators-" channels.
