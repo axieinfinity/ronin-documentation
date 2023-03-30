@@ -11,7 +11,7 @@ This guide demonstrates how to run a bridge operator on the Ronin mainnet.
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
 ### Prepare endpoints
-* Ronin RPC endpoint. If you set up your validator node on the same machine, the value is `${HOST_IP}:8545`. The `HOST_IP` needs to be exported in [Install Ronin](/docs/node-operators/mainnet/validator#install-ronin).
+* Ronin RPC endpoint.
 * Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
 
 ### Generate keys

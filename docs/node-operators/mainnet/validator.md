@@ -117,15 +117,7 @@ Replace the following keys in the `.env` file with your node's information:
 * `INSTANCE_NAME`: Your node's name, which can be seen on the [stats page](https://stats.roninchain.com/).
 * `VALIDATOR_PRIVATE_KEY`: Your validator private key, without the `0x` prefix.
 * `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image).
-* `PASSWORD`: The password used to encrypt your private key.
-
-- `INSTANCE_NAME`: Your node name, will be visible on stats.roninchain.com
-
-- `VALIDATOR_PRIVATE_KEY`: Your validator private key, without the 0x prefix
-
-- `NODE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/mainnet/latest-release#latest-image).
-
-- `PASSWORD`: Your strong password, this is used to encrypt your private key
+* `PASSWORD`: Your strong password, this is used to encrypt your private key
 
 6. (Optional) Download the snapshot to save the time:
 
