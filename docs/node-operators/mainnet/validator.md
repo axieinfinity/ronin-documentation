@@ -19,7 +19,7 @@ Recommended system requirements for running a Ronin mainnet node:
 
 These requirements, however, are not future-proof because Ronin data size grows over time.
 ### Generate a key
-Generate a private key for your validator node by following the steps in [Generate keys](/docs/node-operators/keys). You will need this key later in the process.
+Generate a private key for your validator node by following the steps in [Generate keys](/docs/node-operators/generate-keys). You will need this key later in the process.
 
 ## Install Ronin node 
 1. Set up directories:

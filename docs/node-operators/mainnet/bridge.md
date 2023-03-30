@@ -15,7 +15,7 @@ This guide demonstrates how to run a bridge operator on the Ronin mainnet.
 * Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
 
 ### Generate keys
-Generate two private keys by following the steps in [Generate keys](/docs/node-operators/generate-key):
+Generate two private keys by following the steps in [Generate keys](/docs/node-operators/generate-keys):
 * One key for bridge voter 
 * One key for bridge operator
 
@@ -118,7 +118,7 @@ ETHEREUM_GET_LOGS_BATCH_SIZE=100
 Replace the following keys in the `.env` file with your node's information:
 * `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint—Alchemy or Infura.
 * `RPC_ENDPOINT`: Your secured Ronin RPC endpoint. If you set up your validator node on the same machine, the value is in `${HOST_IP}:8545`. You need to export `HOST_IP` in [Install Ronin](/docs/node-operators/mainnet/validator#install-ronin).
-* `BRIDGE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/latest-release#latest-image-1).
+* `BRIDGE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image-1).
 * `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
 * `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix.
 * `DB_PASSWORD`: Your Postgres database password.
