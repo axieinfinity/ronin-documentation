@@ -56,7 +56,6 @@ services:
     environment:
       - SYNC_MODE=full
       - PASSWORD=${PASSWORD}
-      - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
       - BOOTNODES=${BOOTNODES}
       - NETWORK_ID=${NETWORK_ID}
       - RONIN_PARAMS=${RONIN_PARAMS}
@@ -90,9 +89,6 @@ INSTANCE_NAME=insert-your-instance-name
 
 # Password to protect your private key.
 PASSWORD=123456
-
-# Private key of validator address, without 0x. 
-VALIDATOR_PRIVATE_KEY=insert-your-validator-private-key
 
 CONFIG_PATH=config.testnet.json
 NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895

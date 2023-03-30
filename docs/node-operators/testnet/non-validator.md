@@ -62,7 +62,6 @@ services:
     environment:
       - SYNC_MODE=full
       - PASSWORD=${PASSWORD}
-      - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
       - BOOTNODES=${BOOTNODES}
       - NETWORK_ID=${NETWORK_ID}
       - RONIN_PARAMS=${RONIN_PARAMS}
