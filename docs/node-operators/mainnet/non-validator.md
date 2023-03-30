@@ -96,7 +96,7 @@ CHAIN_STATS_WS_SERVER=stats.roninchain.com
 # CHAIN_STATS_WS_SECRET the secret to connect to the above server
 CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 
-RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
+RONIN_PARAMS=--http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
 ```
 
 7. (Optional) Download the snapshot to save the time:
