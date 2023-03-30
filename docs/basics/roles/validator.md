@@ -38,5 +38,5 @@ A bridge operator validates cross-chain transactions between the Ethereum and Ro
 ### Operating a governor
 A governor is empowered to vote for proposals such as adding or removing Governing Validators, upgrading smart contracts, changing thresholds, and more. Governors also sync the set of bridge operators from the Ronin chain to the Ethereum chain.
 
-### Slashing penalties
+### Slashing rules
 If validators fail to fulfill the responsibilities, their RON stake is at risk of being [slashed](../../validators/slashing/slashing.mdx).

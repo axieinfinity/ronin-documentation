@@ -25,7 +25,6 @@ const sidebars = {
       label: 'Basics',
       link: {
         type: 'generated-index',
-        title: 'Ronin basics',
         description: 'Everything you need to know about Ronin.',
         slug: '/basics',
       },
@@ -94,12 +93,11 @@ const sidebars = {
       label: 'Delegators',
       link: {
         type: 'generated-index',
-        title: 'Delegators',
         description: 'Stake tokens, delegate your stake to validators, and claim rewards.',
         slug: '/delegators',
       },
       items: [
-        // Purchase RON
+        // Buy RON
         'delegators/onboarding/buy-ron',
         // Become a delegator
         'delegators/onboarding/become-delegator',
@@ -142,7 +140,6 @@ const sidebars = {
       label: 'Validators',
       link: {
         type: 'generated-index',
-        title: 'Validators', 
         description: 'Register as a validator, stake tokens, claim rewards, and manage your validator profile.',
         slug: '/validators',
       },
@@ -199,8 +196,8 @@ const sidebars = {
           label: 'Slashing',
           link: {
             type: 'generated-index',
-            title: 'Slashing and bailout', 
-            description: 'Learn about the slashing penalties and rules for bailout.',
+            title: 'Slashing',
+            description: 'Learn about the slashing rules and options for a bailout.',
             slug: '/validators/slashing',
           },
           items: [
