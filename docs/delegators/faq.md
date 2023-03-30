@@ -6,7 +6,7 @@ description: List of frequently asked questions.
 Here's a list of frequently asked questions.
 
 ### 1. What if my delegated validator is jailed or punished? {#1}
-You do not receive the rewards while your validators is [slashed](./../validators/slashing/slashing.mdx), but your stake is not impacted in any way.
+You do not receive the rewards while your validator is [slashed](./../validators/slashing/slashing.mdx), but your stake is not impacted in any way.
 
 ### 2. Do RON rewards automatically re-stake to my validator? {#2}
 No, you would need to [claim](./rewards/claim.mdx) RON rewards with your Ronin Wallet.
