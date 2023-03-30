@@ -193,7 +193,7 @@ Replace those keys in your `.env` with your information:
 
 - `DB_PASSWORD`: Your postgres database password
 
-- `NODE_IMAGE`:  Your node image version, find it under [latest image](/docs/node-operators/mainnet/upgrade#latest-image).
+- `NODE_IMAGE`:  Your node image version, find it under [latest image](/docs/node-operators/upgrade#latest-image).
 
 - `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
 
