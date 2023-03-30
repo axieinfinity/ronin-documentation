@@ -149,22 +149,22 @@ vim .env
 5. Copy this code block to the file:
 
 ```
-ETHEREUM_ENDPOINT=your-ethereum-endpoint
-BRIDGE_IMAGE=latest-bridge-image
-BRIDGE_OPERATOR_PRIVATE_KEY=your-bridge-operator-private-key
-BRIDGE_VOTER_PRIVATE_KEY=your-bridge-voter-private-key
-DB_USERNAME=postgres
-DB_PASSWORD=your-db-password
-NODE_IMAGE=latest-node-image
+ETHEREUM_ENDPOINT=insert-your-ethereum-endpoint
+BRIDGE_IMAGE=insert-latest-bridge-image
+BRIDGE_OPERATOR_PRIVATE_KEY=insert-your-bridge-operator-private-key
+BRIDGE_VOTER_PRIVATE_KEY=insert-your-bridge-voter-private-key
+DB_PASSWORD=insert-your-db-password
+NODE_IMAGE=insert-your-latest-node-image
 INSTANCE_NAME=insert-your-instance-name
 
+DB_USERNAME=postgres
 DB_NAME=bridge
 POSTGRES_DB=bridge
 
 CONFIG_PATH=config.mainnet.json
 VERBOSITY=3
 
-RPC_ENDPOINT=http://node:8545 # Your Ronin RPC endpoint.
+RPC_ENDPOINT=http://node:8545
 
 RONIN_TASK_INTERVAL=3
 RONIN_TRANSACTION_CHECK_PERIOD=50

@@ -94,10 +94,10 @@ vim .env
 5. Copy this code block to the file: 
 
 ```
-INSTANCE_NAME=your-instance-name
-NODE_IMAGE=your-node-image
-VALIDATOR_PRIVATE_KEY=your-private-key
-PASSWORD=your-password
+INSTANCE_NAME=insert-your-instance-name
+NODE_IMAGE=insert-your-node-image
+VALIDATOR_PRIVATE_KEY=insert-your-private-key
+PASSWORD=insert-your-password
 
 MINE=true
 
