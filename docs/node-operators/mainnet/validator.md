@@ -138,7 +138,7 @@ mv <uncompressed data> chaindata
 7. Start the node
 
 ```
-docker-compose up -d
+cd ~/ronin && docker-compose up -d
 ```
 
 8. Review the log:
