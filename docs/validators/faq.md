@@ -11,11 +11,11 @@ After [becoming](onboarding/become-validator.mdx) a Validator Candidate, thereâ€
 ### 2. How to increase the chance of getting selected as a Standard Validator? {#2}
 The higher your total stake, the stronger your chance of becoming a Standard Validator because Ronin uses a Delegated Proof of Stake (DPoS) consensus mechanism. You can attract more delegators by promoting your validator and maintaining good performance.
 
-### 3. If my self-stake exceeds the minimum required amount, can I withdraw the extra amount? {#3}
+### 3. If my self-stake exceeds the minimum staking amount, can I withdraw the extra amount? {#3}
 Yes, you can withdraw as long as three days have passed since you last staked in. Make sure that the remaining amount after withdrawal is at least 250,000 RON.
 
-### 4. What if my stake balance falls below the minimum required amount? {#4}
-You have *seven* days to deposit more RON to meet the minimum required amount (250,000 RON), otherwise you will be renounced automatically.
+### 4. What if my stake balance falls below the minimum staking amount? {#4}
+You have *seven* days to deposit more RON to meet the minimum staking amount (250,000 RON), otherwise you will be renounced automatically.
 
 ### 5. What are the most important performance metrics for a validator? {#5}
 Your uptime, total staking amount, and APR (annual percentage rate).
