@@ -185,7 +185,7 @@ Replace those keys in your `.env` with your information:
 
 - `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, can be Alchemy or Infura
 
-- `BRIDGE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/mainnet/latest-release#latest-image).
+- `BRIDGE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/upgrade#latest-image-1).
 
 - `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the 0x prefix
 
@@ -193,7 +193,7 @@ Replace those keys in your `.env` with your information:
 
 - `DB_PASSWORD`: Your postgres database password
 
-- `NODE_IMAGE`:  Your node image version, find it under [latest image](/docs/node-operators/mainnet/latest-release#latest-image).
+- `NODE_IMAGE`:  Your node image version, find it under [latest image](/docs/node-operators/mainnet/upgrade#latest-image).
 
 - `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
 

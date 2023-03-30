@@ -118,10 +118,6 @@ Replace the following keys in the `.env` file with your node's information:
 * `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image).
 * `PASSWORD`: The password used to encrypt your private key.
 
-- `NODE_IMAGE`: Your node image version, find it under [latest image](/docs/node-operators/mainnet/latest-release#latest-image).
-
-- `PASSWORD`: Your strong password, this is used to encrypt your private key
-
 6. (Optional) Download the snapshot to save the time:
 
 ```
