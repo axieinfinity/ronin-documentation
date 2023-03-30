@@ -94,7 +94,7 @@ services:
     volumes:
       - ~/ronin-bridge/chaindata:/ronin
     environment:
-      - SYNC_MODE=snap
+      - SYNC_MODE=full
       - PASSWORD=${PASSWORD}
       - BOOTNODES=${BOOTNODES}
       - NETWORK_ID=${NETWORK_ID}
