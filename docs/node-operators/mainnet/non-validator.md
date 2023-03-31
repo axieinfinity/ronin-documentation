@@ -1,9 +1,9 @@
 ---
-description: Run a non-validator node on the Ronin mainnet
+description: Run a non-validator node on the mainnet.
 ---
 
 # Run a non-validator (RPC) node
-This guide demonstrates how to run a non-validator node on the Ronin mainnet. 
+This guide demonstrates how to run a non-validator node from a Docker image. 
 
 This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
 
@@ -13,6 +13,10 @@ This node is also known as an RPC (remote procedure call) node, because it's use
   * 6-core CPU
   * 25 GB RAM
   * 700 GB high-speed SSD
+
+These hardware requirements are rough guidelines, and each node operator
+should monitor their node to ensure good performance for the intended task.
+The size of your node will also grow over time.
 
 ## Install the node
 1. Set up directories:

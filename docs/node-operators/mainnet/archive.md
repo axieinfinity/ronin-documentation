@@ -1,9 +1,9 @@
 ---
-description: Run an archive node on the Ronin mainnet.
+description: Run an archive node on the mainnet.
 ---
 
 # Run an archive node
-This guide demonstrates how to run an archive node on the Ronin mainnet.
+This guide demonstrates how to run an archive node from a Docker image.
 
 ## Latest release
 ### RPC node
@@ -16,6 +16,10 @@ This guide demonstrates how to run an archive node on the Ronin mainnet.
   * 8-core CPU
   * 32 GB RAM
   * 7 TB high-speed SSD
+
+These hardware requirements are rough guidelines, and each node operator
+should monitor their node to ensure good performance for the intended task.
+The size of your Ronin node will also grow over time.
 
 ## Install the node
 1. Set up directories:

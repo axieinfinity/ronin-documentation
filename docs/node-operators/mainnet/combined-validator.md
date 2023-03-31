@@ -1,9 +1,9 @@
 ---
-description: Run a bridge operator on the mainnet.
+description: Run a validator node on the mainnet.
 ---
 
-# Run a bridge operator node
-This guide demonstrates how to run a bridge operator node from a Docker image.
+# Run a validator node
+This guide demonstrates how to run a validator node from a Docker image.
 
 ## Prerequisites
 ### Install Docker
@@ -14,12 +14,10 @@ This guide demonstrates how to run a bridge operator node from a Docker image.
 You need an Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
 
 ### Generate keys
-Generate two private keys as described in [Generate keys](/docs/node-operators/generate-keys):
-* One key for bridge voter 
-* One key for bridge operator
+Generate a private key for your validator node as described in [Generate keys](/docs/node-operators/generate-keys).
 
 ### Review system requirements
-Recommended system requirements for running a bridge node:
+Recommended system requirements for running a validator node:
 * 8-core CPU
 * 32 GB RAM
 * 700 GB high-speed SSD
@@ -27,7 +25,7 @@ Recommended system requirements for running a bridge node:
 
 These requirements are rough guidelines, and each node operator
 should monitor their node to ensure good performance for the intended task.
-The size of your Ronin node will also grow over time.
+The size of your node will also grow over time.
 
 ## Install the node
 1. Set up directories:

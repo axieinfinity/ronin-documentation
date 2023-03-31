@@ -1,9 +1,9 @@
 ---
-description: Run a Ronin mainnet validator node from a Docker image.
+description: Run a validator node on the mainnet.
 ---
 
 # Run a validator node
-This guide demonstrates how to run a Ronin mainnet validator node from a Docker image.
+This guide demonstrates how to run a validator node from a Docker image.
 
 ## Prerequisites
 ### Install Docker
@@ -17,11 +17,14 @@ Recommended system requirements for running a Ronin mainnet node:
 * 700 GB high-speed SSD
 * AMD64 architecture
 
-These requirements, however, are not future-proof because Ronin data size grows over time.
-### Generate a key
-Generate a private key for your validator node by following the steps in [Generate keys](/docs/node-operators/generate-keys). You will need this key later in the process.
+These requirements are rough guidelines, and each node operator
+should monitor their node to ensure good performance for the intended task.
+The size of your node will also grow over time.
 
-## Install Ronin node 
+### Generate a key
+Generate a private key for your validator node as described in [Generate keys](/docs/node-operators/generate-keys).
+
+## Install the node 
 1. Set up directories:
 
 Create a node directory:
