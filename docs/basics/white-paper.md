@@ -62,8 +62,9 @@ Out of the total supply of 1,000,000,000 RON tokens, 25% are allocated to fund s
 Validators have two sources of rewards: transaction fees and 90\% of staking rewards. When the validator generates a block, they earn the transaction fees in that block and some fixed amount of staking rewards.
 
 * The reward is not sent to the validator right away, but is distributed and accumulated on a smart contract.
-* At the end of each day, the smart contract allocates the reward to the validator and their delegators.
-* At the end of each day, if the validator doesn't get slashed, then the validator and their delegators can claim their allocated reward.
+* At the end of each day, the smart contract allocates the reward to the validator and their delegators. The allocation happens only to
+validators who are elibigle to receive rewards (not being [slashed](./../validators/slashing/slashing.mdx)).
+* The validator and their delegators can claim the allocated rewards at the end of the day.
 
 Each validator can set a commission rate that indicates the percentage of the self-allocated reward. The remaining reward is allocated based on the staked amount.
 
