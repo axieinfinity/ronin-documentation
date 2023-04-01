@@ -12,7 +12,7 @@ As the next step toward decentralization, we integrated the [Delegated Proof of 
 
 ## Consensus
 ### Delegated Proof of Stake
-Delegated Proof of Stake (DPoS) is a consensus mechanism where token holders delegate their stake to select validators. These validators verify transactions, produce new blocks, and receive rewards for their work.
+Delegated Proof of Stake (DPoS) is a consensus mechanism where token holders delegate their stake to select validators. These validators verify transactions, produce new blocks, and earn rewards for their work.
 
 Token holders can vote for themselves or delegate stake to a representative. The more tokens a validator receives, the higher their chance of selection. Rewards for producing blocks are shared between validators and delegators (who delegate stake to validators).
 
@@ -20,7 +20,7 @@ In Ronin, a set of validators is selected using DPoS. Then, validators take turn
 * The set of *validators* consists of 22 slots, of which 12 are reserved for Governing Validators who are selected in the PoA manner. The remaining 10 slots are open for anyone who wishes to become a validator and meets the minimum staking requirements. These are referred to as Standard Validators.
 * Users who registered to become a validator have the role of a Validator Candidate until they're selected to become a Standard Validator.
 * The *delegators* delegate their own stake to any validator of their choosing, increasing the validator's chance to be selected as a Standard Validator and earn block production access.
-* Selected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with their delegators.
+* Selected validators earn block rewards after verifying the transactions in a block, and those rewards are then shared with their delegators.
 
 ### Validator selection
 Any token holder can register as a Validator Candidate. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of 22 validators, which includes 12 Governing Validators, and 10 Standard Validators chosen among the Validator Candidates with the highest votes (staked amount).
@@ -46,7 +46,7 @@ The group of 12 Governing Validators chosen by the community and Sky Mavis is me
 ### Bridge operators
 The role of the bridge operator is to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. Bridge operators have their own rewarding and slashing logic.
 
-Each validator has the responsibility to run a bridge operator node. The validator who doesn't not run the bridge operator can't claim their block rewards.
+Each validator has the responsibility to run a bridge operator node. The validator who doesn't not run the bridge operator won't earn block rewards.
 
 ### Security and finality
 The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time being 3 seconds, the users should wait for 45 seconds to confirm transactions in a block.
@@ -59,7 +59,7 @@ To perform a non-detectable attack—when the Byzantine validators can only seal
 Out of the total supply of 1,000,000,000 RON tokens, 25% are allocated to fund staking rewards. According to the [release schedule](./tokenomics.md), the rewards are set to be allocated over 108 months.
 
 ### Rewards for validators and delegators
-Validators have two sources of rewards: transaction fees and 90\% of staking rewards. When the validator generates a block, they receive the transaction fees in that block and some fixed amount of staking rewards.
+Validators have two sources of rewards: transaction fees and 90\% of staking rewards. When the validator generates a block, they earn the transaction fees in that block and some fixed amount of staking rewards.
 
 * The reward is not sent to the validator right away, but is distributed and accumulated on a smart contract.
 * At the end of each day, the smart contract allocates the reward to the validator and their delegators.
@@ -80,26 +80,45 @@ Bridge operators receive 10\% of staking rewards, which is distributed at the en
 We use a slashing mechanism to penalize validators and bridge operators for malicious behavior.
 
 ### Double-sign validator
-It's a serious error when a validator signs more than one block with the same height. As mentioned in [Security and finality](#security-and-finality), validators who engage in double-signing effectively launch a Clone attack to break the security of the blockchain. Because our implementation already has a logic to prevent double-signing, only malicious code can trigger this behavior.
+It's a serious error when a validator signs more than one block with
+the same height. As mentioned in [Security and finality](#security-and-finality),
+validators who engage in double-signing effectively launch a Clone
+attack to break the security of the blockchain. Because our
+implementation already has a logic to prevent double-signing, only
+malicious code can trigger this behavior.
 
-Anyone can submit a slash request with the double-sign evidence, which should contain the two block headers with the same height, sealed by the same validator. Upon verifying the evidence, the offending validator is slashed as follows:
-* The validator can't claim the reward on that day.
-* The validator gets slashed the minimum staking amount of self-delegated RON.
-* The validator is put in jail for $2^{63}-1$ blocks and is banned from becoming a validator in the future.
+Anyone can submit a slash request with the double-sign evidence, which
+should contain the two block headers with the same height, sealed by
+the same validator. Upon verifying the evidence, the offending
+validator is slashed as follows:
+* The validator is jailed for $2^{63}-1$ blocks and can't be a
+validator in the future. Their status is set to **In jail**.
+* The validator gets slashed the minimum staking amount of
+self-delegated RON.
+* The validator doesn't earn commission and staking rewards while in jail.
 
 ### Unavailability validator
-The performance of Ronin relies on the ability of everyone in the validator set to produce blocks on time when it's their turn. If a validator misses their turn, it affects the performance of the entire system. Thus, we implemented a mechanism that penalizes validators who miss too many blocks.
+The performance of Ronin relies on the ability of everyone in the
+validator set to produce blocks on time when it's their turn.
+If a validator misses their turn, it affects the performance of
+the entire system. Thus, we implemented a mechanism that penalizes
+validators who miss too many blocks.
 
-We use a smart contract to record the number of missed blocks for each validator. If the number of missed blocks exceeds a predefined threshold, the validator gets slashed.
+We use a smart contract to record the number of missed blocks for each
+validator. If the number of missed blocks exceeds a predefined threshold,
+the validator gets slashed.
 
 #### Tier 1 validator slashing
-If a validator misses more than 50 blocks a day, they can't claim commission and staking rewards on that day.
+If a validator misses more than 50 blocks a day, they don't earn
+commission and staking rewards on that day.
 
 #### Tier 2 validator slashing
-If a validator misses more than 150 blocks a day, they get slashed as follows:
-* The validator can't claim commission and staking rewards on that day.
+If a validator misses more than 150 blocks a day, they get slashed
+as follows:
+* The validator doesn't earn commission and staking rewards on that day.
 * The validator is slashed 10,000 of self-delegated RON.
-* The validator is jailed for $\approx2$ days (57,600 blocks) and is banned from the validator set while in jail.
+* The validator is jailed for $\approx2$ days (57,600 blocks) and is
+banned from the validator set while in jail.
 
 ##### Credit score system and bailout
 While we encourage validators to be online and produce blocks in turn, technical issues can still happen. A validator might be well-performing, but if their machine suddenly crashes, they get slashed and jailed.
@@ -113,10 +132,13 @@ Here's how this system works:
 * After getting bailed out, the validator can claim half of the reward for the remaining time of the day.
 
 #### Tier 3 validator slashing
-After being put in jail and getting bailed out, if the validator misses 50 more blocks within the day, they get slashed as follows:
+After being put in jail and getting bailed out, if the validator
+misses 50 more blocks within the day, they get slashed as follows:
 * The reward after bailing out is removed.
 * The validator is slashed 10,000 of self-delegated RON.
-* The validator is jailed for $\approx2$ days (57,600 blocks). This time, the validator can't bail out.
+* The validator is jailed for $\approx2$ days (57,600 blocks).
+
+This time, the validator can't bail out.
 
 #### Temporary maintenance mode
 Validators can schedule temporary maintenance, during which they don't get slashed for unavailability.
@@ -125,11 +147,12 @@ Validators can schedule temporary maintenance, during which they don't get slash
 The system slashes bridge operators for not providing enough signatures. There's a smart contract that records the number of the bridge operators' votes.
 
 #### Tier 1 operator slashing
-If a bridge operator misses more than 10% votes, the corresponding validator can't claim the bridge reward on that day.
+If a bridge operator misses more than 10% votes, the corresponding validator doesn't earn bridge rewards on that day.
 
 #### Tier 2 operator slashing
 If a bridge operator misses more than 30% votes, the corresponding validator gets slashed as follows:
-* The validator can't claim any rewards on that day.
+* The validator doesn't earn any rewards (commission,
+staking rewards, bridge rewards) on that day.
 * The validator is jailed for $\approx2$ days (57,600 blocks) with no option to bail out.
 
 ## Governance
