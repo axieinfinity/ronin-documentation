@@ -12,7 +12,7 @@ As the next step toward decentralization, we integrated the [Delegated Proof of 
 
 ## Consensus
 ### Delegated Proof of Stake
-Delegated Proof of Stake (DPoS) is a consensus mechanism where token holders delegate their stake to select validators. These validators verify transactions, produce new blocks, and receive rewards for their work.
+Delegated Proof of Stake (DPoS) is a consensus mechanism where token holders delegate their stake to select validators. These validators verify transactions, produce new blocks, and earn rewards for their work.
 
 Token holders can vote for themselves or delegate stake to a representative. The more tokens a validator receives, the higher their chance of selection. Rewards for producing blocks are shared between validators and delegators (who delegate stake to validators).
 
@@ -20,7 +20,7 @@ In Ronin, a set of validators is selected using DPoS. Then, validators take turn
 * The set of *validators* consists of 22 slots, of which 12 are reserved for Governing Validators who are selected in the PoA manner. The remaining 10 slots are open for anyone who wishes to become a validator and meets the minimum staking requirements. These are referred to as Standard Validators.
 * Users who registered to become a validator have the role of a Validator Candidate until they're selected to become a Standard Validator.
 * The *delegators* delegate their own stake to any validator of their choosing, increasing the validator's chance to be selected as a Standard Validator and earn block production access.
-* Selected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with their delegators.
+* Selected validators earn block rewards after verifying the transactions in a block, and those rewards are then shared with their delegators.
 
 ### Validator selection
 Any token holder can register as a Validator Candidate. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of 22 validators, which includes 12 Governing Validators, and 10 Standard Validators chosen among the Validator Candidates with the highest votes (staked amount).
@@ -46,7 +46,7 @@ The group of 12 Governing Validators chosen by the community and Sky Mavis is me
 ### Bridge operators
 The role of the bridge operator is to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. Bridge operators have their own rewarding and slashing logic.
 
-Each validator has the responsibility to run a bridge operator node. The validator who doesn't not run the bridge operator won't receive block rewards.
+Each validator has the responsibility to run a bridge operator node. The validator who doesn't not run the bridge operator won't earn block rewards.
 
 ### Security and finality
 The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time being 3 seconds, the users should wait for 45 seconds to confirm transactions in a block.
@@ -59,7 +59,7 @@ To perform a non-detectable attack—when the Byzantine validators can only seal
 Out of the total supply of 1,000,000,000 RON tokens, 25% are allocated to fund staking rewards. According to the [release schedule](./tokenomics.md), the rewards are set to be allocated over 108 months.
 
 ### Rewards for validators and delegators
-Validators have two sources of rewards: transaction fees and 90\% of staking rewards. When the validator generates a block, they receive the transaction fees in that block and some fixed amount of staking rewards.
+Validators have two sources of rewards: transaction fees and 90\% of staking rewards. When the validator generates a block, they earn the transaction fees in that block and some fixed amount of staking rewards.
 
 * The reward is not sent to the validator right away, but is distributed and accumulated on a smart contract.
 * At the end of each day, the smart contract allocates the reward to the validator and their delegators.
