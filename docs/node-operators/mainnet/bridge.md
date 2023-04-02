@@ -1,8 +1,8 @@
 ---
-description: Run a bridge operator on the mainnet.
+description: Run a bridge operator node the mainnet.
 ---
 
-# Run a bridge operator node
+# Run a bridge node
 This guide demonstrates how to run a bridge operator node from a Docker image.
 
 ## Prerequisites

@@ -2,10 +2,10 @@
 description: Run a non-validator node on the mainnet.
 ---
 
-# Run a non-validator (RPC) node
-This guide demonstrates how to run a non-validator node from a Docker image. 
-
-This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
+# Run a non-validator node
+This guide demonstrates how to run a non-validator node from a Docker image.
+This node is known as an RPC (remote procedure call) node,
+because it's used for serving RPC requests.
 
 ## Prerequisites
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)

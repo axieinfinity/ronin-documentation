@@ -2,8 +2,8 @@
 description: Run a validator node on the mainnet.
 ---
 
-# Run a validator node
-This guide demonstrates how to run a validator node from a Docker image.
+# Run a validator node 
+This guide demonstrates how to run a validator node from a Docker image. Validators on Ronin are required to run a bridge operator node as well as the validator node. After you install and run the validator, proceed to set up your [bridge operator node](./bridge.md).
 
 ## Prerequisites
 ### Install Docker
@@ -142,6 +142,5 @@ docker logs node -f --tail 100
 
 9. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
-:::caution
-As a validator, you're required to run a bridge operator node. Proceed to [Run a bridge operator node](./bridge.md) to set it up.
-:::
+## What's next
+Follow [Run a bridge operator node](./bridge.md) to set up your bridge.

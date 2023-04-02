@@ -3,14 +3,17 @@ import {findSidebarItem} from '@site/src/sidebarUtils';
 
 # Node operators
 ### Run your own node
-Set up and run your own node on the Ronin mainnet.
+Set up a validator node and a bridge operator node on different machines.
 
 <DocCardList items={[
-    findSidebarItem('/docs/node-operators/mainnet/specification'),
     findSidebarItem('/docs/node-operators/mainnet/validator'),
     findSidebarItem('/docs/node-operators/mainnet/bridge'),
-    findSidebarItem('/docs/node-operators/mainnet/non-validator'),
-    findSidebarItem('/docs/node-operators/mainnet/archive'),
+    ]} />
+
+Or run both the validator and bridge on one machine combined. 
+
+<DocCardList items={[
+    findSidebarItem('/docs/node-operators/mainnet/combined-validator'),
     ]} />
 
 Learn how to generate private keys.
@@ -23,6 +26,13 @@ Keep your node's software up to date.
 
 <DocCardList items={[
     findSidebarItem('/docs/node-operators/upgrade'),
+    ]} />
+
+Follow these guides to set up a non-validator node and an archive node.
+
+<DocCardList items={[
+    findSidebarItem('/docs/node-operators/mainnet/non-validator'),
+    findSidebarItem('/docs/node-operators/mainnet/archive'),
     ]} />
 
 ### Secure your node

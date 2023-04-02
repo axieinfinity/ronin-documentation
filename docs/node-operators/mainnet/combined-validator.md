@@ -1,8 +1,9 @@
 ---
 description: Run combined validator node and bridge component on the mainnet.
+title: Run on one machine
 ---
 
-# Run a validator node
+# Run a validator and a bridge combined
 This guide demonstrates how to run a validator in combination with a bridge operator node from Docker images.
 
 ## Prerequisites

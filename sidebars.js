@@ -248,11 +248,20 @@ const sidebars = {
             slug: '/node-operators/mainnet',
           },
           items: [
-            // Run a validator node
-            'node-operators/mainnet/validator',
-            // Run a bridge node
-            'node-operators/mainnet/bridge',
-            // Run a non-validator-node
+            // Run on different machines
+            {
+              type: 'category',
+              label: 'Run on different machines',
+              items: [
+                // Run a validator node
+                'node-operators/mainnet/validator',
+                // Run a bridge operator
+                'node-operators/mainnet/bridge',
+              ],
+            },
+            // Run a validator and bridge operator
+            'node-operators/mainnet/combined-validator',
+            // Run a non-validator
             'node-operators/mainnet/non-validator',
             // Run a full archive node
             'node-operators/mainnet/archive',
