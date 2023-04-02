@@ -1,5 +1,5 @@
 ---
-description: Run a validator node on the mainnet.
+description: Run combined validator node and bridge component on the mainnet.
 ---
 
 # Run a validator node
@@ -13,9 +13,6 @@ This guide demonstrates how to run a validator node from a Docker image.
 ### Prepare an Ethereum endpoint
 You need an Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
 
-### Generate keys
-Generate a private key for your validator node as described in [Generate keys](/docs/node-operators/generate-keys).
-
 ### Review system requirements
 Recommended system requirements for running a validator node:
 * 8-core CPU
@@ -27,17 +24,20 @@ These requirements are rough guidelines, and each node operator
 should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
+### Generate keys
+Generate a private key for your validator node as described in [Generate keys](/docs/node-operators/generate-keys).
+
 ## Install the node
 1. Set up directories:
 
-Create a bridge directory:
+Create a ronin directory:
 ```
-mkdir ~/ronin-bridge
+mkdir ~/ronin
 ```
 
 Go to the newly created directory:
 ```
-cd ~/ronin-bridge
+cd ~/ronin
 ```
 
 Create a directory for bridge data:
@@ -74,15 +74,16 @@ services:
       - 30303:30303/udp
       - 6060:6060
     volumes:
-      - ~/ronin-bridge/chaindata:/ronin
+      - ~/ronin/chaindata:/ronin
     environment:
       - SYNC_MODE=full
       - PASSWORD=${PASSWORD}
+      - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
       - BOOTNODES=${BOOTNODES}
       - NETWORK_ID=${NETWORK_ID}
       - RONIN_PARAMS=${RONIN_PARAMS}
       - VERBOSITY=${VERBOSITY}
-      - MINE=false
+      - MINE=${MINE}
       - GASPRICE=${GASPRICE}
       - GENESIS_PATH=${GENESIS_PATH}
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
@@ -97,7 +98,7 @@ services:
     environment:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
-      - ~/ronin-bridge/data:/var/lib/postgresql/data
+      - ~/ronin/data:/var/lib/postgresql/data
   bridge:
     image: ${BRIDGE_IMAGE}
     restart: always
@@ -138,13 +139,15 @@ BRIDGE_VOTER_PRIVATE_KEY=insert-your-bridge-voter-private-key
 DB_PASSWORD=insert-your-db-password
 NODE_IMAGE=insert-your-latest-node-image
 INSTANCE_NAME=insert-your-instance-name
+VALIDATOR_PRIVATE_KEY=insert-your-private-key
+PASSWORD=insert-your-password
+
 
 DB_USERNAME=postgres
 DB_NAME=bridge
 POSTGRES_DB=bridge
 
 CONFIG_PATH=config.mainnet.json
-VERBOSITY=3
 
 RPC_ENDPOINT=http://node:8545
 
@@ -159,19 +162,16 @@ ETHEREUM_GET_LOGS_BATCH_SIZE=100
 BOOTNODES=enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303
 # NETWORK_ID network id
 NETWORK_ID=2020
-# Setting for oracle services, where staging = rinkey + testnet, and production = ethereum + mainnet.
-# Setting nodekey
+
 GASPRICE=20000000000
 
-# Password to protect your private key.
-PASSWORD=123456
-
+MINE=true
 VERBOSITY=3
 
 CHAIN_STATS_WS_SERVER=stats.roninchain.com
 CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 
-RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
+RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
 
 ```
 
@@ -180,6 +180,7 @@ Replace the following keys in the `.env` file with your node's information:
 * `BRIDGE_IMAGE`: The version of your bridge node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image)
 * `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
 * `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix.
+* `VALIDATOR_PRIVATE_KEY`: Your validator private key, without the `0x` prefix.
 * `DB_PASSWORD`: Your Postgres database password.
 * `NODE_IMAGE`: The version of your validator node's image, which can be found under [latest image](/docs/node-operators/upgrade#latest-image).
 * `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
@@ -187,7 +188,7 @@ Replace the following keys in the `.env` file with your node's information:
 6. (Optional) Download the snapshot to save the time:
 
 ```
-cd ~/ronin-bridge/chaindata/data/ronin/
+cd ~/ronin/chaindata/data/ronin/
 curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
 mv <uncompressed data> chaindata
 ```
@@ -195,7 +196,7 @@ mv <uncompressed data> chaindata
 7. Start the node:
 
 ```
-cd ~/ronin-bridge && docker-compose up -d
+cd ~/ronin && docker-compose up -d
 ```
 
 8. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
