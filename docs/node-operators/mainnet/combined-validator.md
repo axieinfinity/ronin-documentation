@@ -1,6 +1,6 @@
 ---
 description: Run combined validator node and bridge component on the mainnet.
-title: Run on one machine
+title: Run validator and bridge combined
 ---
 
 # Run a validator and a bridge combined
