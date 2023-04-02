@@ -19,7 +19,7 @@ useEffect(() => {
 
   return (
     <div className={styles.searchWrapper}>
-      <SearchBar {...props} placeholder="meep" />
+      <SearchBar {...props}/>
     </div>
   )
 }
