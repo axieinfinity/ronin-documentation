@@ -3,7 +3,7 @@ description: Run combined validator node and bridge component on the mainnet.
 ---
 
 # Run a validator node
-This guide demonstrates how to run a validator node from a Docker image.
+This guide demonstrates how to run a validator in combination with a bridge operator node from Docker images.
 
 ## Prerequisites
 ### Install Docker
@@ -25,7 +25,7 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ### Generate keys
-Generate a private key for your validator node as described in [Generate keys](/docs/node-operators/generate-keys).
+Generate private keys for your validator node and bridge operator as described in [Generate keys](/docs/node-operators/generate-keys).
 
 ## Install the node
 1. Set up directories:
@@ -201,7 +201,7 @@ cd ~/ronin && docker-compose up -d
 
 8. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
-9. Review the log for bridge and node  ( the node should sync to latest block for making bridge work )
+9. Review the log for the bridge and the validator node (the validator should sync to the latest block for making the bridge work).
 
 ```
 docker logs node -f --tail 100
