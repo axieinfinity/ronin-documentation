@@ -132,7 +132,3 @@ docker logs node -f --tail 100
 ```
 
 9. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
-
-:::caution
-As a validator, you're required to run a bridge operator node. Proceed to [Run a bridge operator node](./bridge.md) to set it up.
-:::
