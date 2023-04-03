@@ -1,4 +1,4 @@
-# Specification
+# Saigon testnet
 This page describes the specification of the Saigon testnet.
 
 ## Configuration

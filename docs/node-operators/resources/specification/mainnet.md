@@ -1,4 +1,4 @@
-# Specification
+# Ronin mainnet
 This page describes the specification of the Ronin mainnet.
 
 ## Configuration
