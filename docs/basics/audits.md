@@ -16,4 +16,4 @@ List of Ronin's security audit reports.
 * [Verichains Public Audit Report - Ronin Wallet Extension - v1.1.pdf](./assets/audits/Verichains-Audit-Report-Ronin-Wallet-Extension-v1.1.pdf)
 
 ## Ronin DPoS
-[Certik Audit for Ronin DPoS Contracts.pdf](./assets/audits/CertiK-Audit-for-Ronin-DPoS-Contracts.pdf)
+* [Certik Audit for Ronin DPoS Contracts.pdf](./assets/audits/CertiK-Audit-for-Ronin-DPoS-Contracts.pdf)
