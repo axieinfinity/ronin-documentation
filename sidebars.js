@@ -244,22 +244,22 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Setup',
-            slug: '/node-operators/setup',
-            description: 'Step-by-step guides to install and configure Ronin nodes.'
+            slug: '/node-operators/mainnet',
+            description: 'Step-by-step guides to install and configure Ronin nodes on the mainnet.'
           },
           items: [
             // Run a validator and bridge together
-            'node-operators/setup/combined-validator',
+            'node-operators/mainnet/combined-validator',
             // Run a standalone validator
-            'node-operators/setup/validator',
+            'node-operators/mainnet/validator',
             // Run a standalone bridge
-            'node-operators/setup/bridge',
+            'node-operators/mainnet/bridge',
             // Run a non-validator
-            'node-operators/setup/non-validator',
+            'node-operators/mainnet/non-validator',
             // Run an archive node
-            'node-operators/setup/archive',
+            'node-operators/mainnet/archive',
             // Run a node using Ronin CLI
-            'node-operators/setup/cli',
+            'node-operators/cli',
           ],
         },
         {
