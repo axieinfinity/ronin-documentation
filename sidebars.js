@@ -248,50 +248,18 @@ const sidebars = {
             description: 'Step-by-step guides to install and configure Ronin nodes.'
           },
           items: [
-            {
-          type: 'category',
-          label: 'Docker method',
-          link: {
-            type: 'generated-index',
-            title: 'Docker method',
-            description: 'Guides to install and configure Ronin nodes from Docker images.',
-          },
-          items: [
-            {
-              type: 'category',
-              label: 'Standalone setup',
-              items: [
-                // Run a standalone validator
-                'node-operators/setup/validator',
-                // Run a standalone bridge
-                'node-operators/setup/bridge',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Combined setup',
-              items: [
-                // Run a validator and bridge together
-                'node-operators/setup/combined-validator',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Other nodes',
-              items: [
-                // Run a non-validator
-                'node-operators/setup/non-validator',
-                // Run an archive node
-                'node-operators/setup/archive',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'doc',
-          label: 'Ronin CLI method',
-          id: 'node-operators/cli',
-        },
+            // Run a standalone validator
+            'node-operators/setup/validator',
+            // Run a standalone bridge
+            'node-operators/setup/bridge',
+            // Run a validator and bridge together
+            'node-operators/setup/combined-validator',
+            // Run a non-validator
+            'node-operators/setup/non-validator',
+            // Run an archive node
+            'node-operators/setup/archive',
+            // Run a node using Ronin CLI
+            'node-operators/setup/cli',
           ],
         },
         {
