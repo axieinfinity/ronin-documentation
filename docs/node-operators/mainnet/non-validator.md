@@ -1,5 +1,5 @@
 ---
-description: Run a non-validator node on the mainnet.
+description: Install a non-validator node using Docker.
 ---
 
 # Run a non-validator node

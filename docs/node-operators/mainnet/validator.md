@@ -1,9 +1,10 @@
 ---
-description: Run a validator node on the mainnet.
+description: Instll a standalone validator node using Docker.
 ---
 
-# Run a validator node 
-This guide demonstrates how to run a validator node from a Docker image. Validators on Ronin are required to run a bridge operator node as well as the validator node. After you install and run the validator, proceed to set up your [bridge operator node](./bridge.md).
+# Run a standalone validator 
+This guide demonstrates how to run a validator node from a Docker image.
+As a validator, you're required to run a bridge operator node as well as the validator node. Therefore, after you install the validator following the steps in this guide, proceed to set up your [bridge operator node](./bridge.md).
 
 ## Prerequisites
 ### Install Docker

@@ -1,5 +1,5 @@
 # Specification
-Details of the Saigon testnet specification.
+This page describes the specification of the Saigon testnet.
 
 ## Configuration
 * Chain ID (network ID): `2021`

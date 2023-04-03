@@ -49,19 +49,52 @@ claim rewards, manage stake, and maintain the validator's profile.
     findSidebarItem('/docs/validators/faq'),
     ]} />
 
-While these gudies assist individuals or institutions responsible
-for setting up and confgiring nodes on the Ronin network.
+### Install and configure a validator node 
+These gudies assist individuals or institutions responsible
+for setting up and confguring a validator node on the Ronin network.
+The two methods of installation are via Docker or using the Ronin CLI. 
+
+On Ronin, validators are required to run a validator node and a bridge operator node.
+
+We recommended running both nodes on one machine:
 
 <DocCardList items={[
-    findSidebarItem('/docs/node-operators/mainnet/specification'),
+    findSidebarItem('/docs/node-operators/mainnet/combined-validator'),
+    ]} />
+
+Or you can run the validator and bridge on two separate machines:
+
+<DocCardList items={[
     findSidebarItem('/docs/node-operators/mainnet/validator'),
     findSidebarItem('/docs/node-operators/mainnet/bridge'),
+    ]} />
+
+Here's how to run and manage your validator node via Ronin CLI:
+
+<DocCardList items={[
+    findSidebarItem('/docs/node-operators/cli'),
+    ]} />
+
+Guides to run other types of nodes:
+
+<DocCardList items={[
     findSidebarItem('/docs/node-operators/mainnet/non-validator'),
     findSidebarItem('/docs/node-operators/mainnet/archive'),
-    findSidebarItem('/docs/node-operators/upgrade'),
-    findSidebarItem('/docs/node-operators/generate-keys'),
-    findSidebarItem('/docs/node-operators/secure'),
-    findSidebarItem('/docs/node-operators/faq'),
+    ]} />
+
+Maintain your node:
+
+<DocCardList items={[
+    findSidebarItem('/docs/node-operators/maintenance/upgrade'),
+    findSidebarItem('/docs/node-operators/maintenance/generate-keys'),
+    findSidebarItem('/docs/node-operators/maintenance/secure'),
+    ]} />
+
+Resources for node operators:
+
+<DocCardList items={[
+    findSidebarItem('/docs/node-operators/resources/faq'),
+    findSidebarItem('/docs/node-operators/resources/specification'),
     ]} />
 
 ### Build on Ronin

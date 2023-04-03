@@ -1,8 +1,8 @@
 ---
-description: Run a bridge operator node the mainnet.
+description: Install a standalone bridge operator after setting up the validator node.
 ---
 
-# Run a bridge node
+# Run a standalone bridge
 This guide demonstrates how to run a bridge operator node from a Docker image.
 
 ## Prerequisites
@@ -14,7 +14,7 @@ This guide demonstrates how to run a bridge operator node from a Docker image.
 You need an Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
 
 ### Generate keys
-Generate two private keys as described in [Generate keys](/docs/node-operators/generate-keys):
+Generate two private keys as described in [Generate keys](./../maintenance/generate-keys.md):
 * One key for bridge voter 
 * One key for bridge operator
 
@@ -177,11 +177,11 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 
 
 Replace the following keys in the `.env` file with your node's information:
 * `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, which can be Alchemy or Infura.
-* `BRIDGE_IMAGE`: The version of your bridge node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image)
+* `BRIDGE_IMAGE`: The version of your bridge node's image, which can be found under [Latest image](../maintenance/upgrade#latest-image).
 * `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
 * `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix.
 * `DB_PASSWORD`: Your Postgres database password.
-* `NODE_IMAGE`: The version of your validator node's image, which can be found under [latest image](/docs/node-operators/upgrade#latest-image).
+* `NODE_IMAGE`: The version of your validator node's image, which can be found under [latest image](../maintenance/upgrade#latest-image).
 * `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
 
 6. (Optional) Download the snapshot to save the time:
