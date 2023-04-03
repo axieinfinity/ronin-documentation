@@ -25,7 +25,7 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ### Generate keys
-Generate private keys for your validator node and bridge operator as described in [Generate keys](/docs/node-operators/generate-keys).
+Generate private keys for your validator node and bridge operator as described in [Generate keys](./../maintenance/generate-keys.md).
 
 ## Install the node
 1. Set up directories:
@@ -177,15 +177,15 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --min
 
 Replace the following keys in the `.env` file with your node's information:
 * `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, which can be Alchemy or Infura.
-* `BRIDGE_IMAGE`: The version of your bridge node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image)
+* `BRIDGE_IMAGE`: The version of your bridge node's image, which can be found under [Latest image](./../maintenance/upgrade.mdx)
 * `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
 * `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix.
 * `VALIDATOR_PRIVATE_KEY`: Your validator private key, without the `0x` prefix.
 * `DB_PASSWORD`: Your Postgres database password.
-* `NODE_IMAGE`: The version of your validator node's image, which can be found under [latest image](/docs/node-operators/upgrade#latest-image).
+* `NODE_IMAGE`: The version of your validator node's image, which can be found under [latest image](./../maintenance/upgrade.mdx).
 * `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
 
-6. (Optional) Download the snapshot to save the time:
+1. (Optional) Download the snapshot to save the time:
 
 ```
 cd ~/ronin/chaindata/data/ronin/
