@@ -1,5 +1,5 @@
 ---
-description: Install a standalone bridge operator after setting up the validator node.
+description: Install a standalone mainnet bridge operator after setting up the validator node.
 ---
 
 # Run a standalone bridge
@@ -58,7 +58,7 @@ mkdir -p chaindata/data/ronin
 vim docker-compose.yml
 ```
 
-3. Copy this code block to the `docker-compose.yml` file:
+3. Copy this code block to the file:
 
 ```
 version: "3"
@@ -130,7 +130,7 @@ services:
 vim .env
 ```
 
-5. Copy this code block to the `.env` file:
+5. Copy this code block to the file:
 
 ```
 ETHEREUM_ENDPOINT=insert-your-ethereum-endpoint
@@ -172,7 +172,6 @@ CHAIN_STATS_WS_SERVER=stats.roninchain.com
 CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 
 RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
-
 ```
 
 Replace the following keys in the `.env` file with your node's information:
@@ -200,7 +199,7 @@ cd ~/ronin-bridge && docker-compose up -d
 
 8. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
-9. Review the log for bridge and node  ( the node should sync to latest block for making bridge work )
+9. Review the log for the bridge and the validator node (the node should sync to the latest block for making the bridge work).
 
 ```
 docker logs node -f --tail 100

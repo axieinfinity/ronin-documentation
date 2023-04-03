@@ -1,5 +1,5 @@
 ---
-description: Instll a standalone validator node using Docker.
+description: Instll a standalone mainnet validator node using Docker.
 ---
 
 # Run a standalone validator 
@@ -46,15 +46,13 @@ Create a chain data directory:
 mkdir -p chaindata/data/ronin
 ```
 
-2. Create docker-compose.yml
-
-Create `docker-compose.yml` 
+2. Create a `docker-compose.yml` file:
 
 ```
 vim docker-compose.yml
 ```
 
-3. Copy this code block to the `docker-compose.yml`:
+3. Copy this code block to the file:
 
 ```
 version: "3"
@@ -87,14 +85,13 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-4. Create an `.env` file
+4. Create an `.env` file. This file contains configuration parameters for your node.
 
-Create `.env`
 ```
 vim .env
 ```
 
-5. Copy this code block to the `.env`: 
+5. Copy this code block to the file: 
 
 ```
 INSTANCE_NAME=insert-your-instance-name
@@ -129,7 +126,7 @@ curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot
 mv <uncompressed data> chaindata
 ```
 
-7. Start the node
+7. Start the node:
 
 ```
 cd ~/ronin && docker-compose up -d
