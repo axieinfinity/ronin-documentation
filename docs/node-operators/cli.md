@@ -1,8 +1,8 @@
 ---
-description: Get started with, and use Ronin CLI.
+description: Run and manage a node using the Ronin CLI.
 ---
 
-# Use Ronin CLI
+# Run a validator using Ronin CLI
 The Ronin CLI (command line interface) is a unified tool to manage your Ronin nodes.
 
 ## Prerequisites

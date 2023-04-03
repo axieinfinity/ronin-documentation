@@ -1,5 +1,5 @@
 ---
-description: Run an archive node on the mainnet.
+description: Install a mainnet archive node using Docker.
 ---
 
 # Run an archive node

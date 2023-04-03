@@ -1,11 +1,11 @@
 ---
-description: Run a non-validator node on the mainnet.
+description: Install a mainnet non-validator node using Docker.
 ---
 
-# Run a non-validator (RPC) node
-This guide demonstrates how to run a non-validator node from a Docker image. 
-
-This node is also known as an RPC (remote procedure call) node, because it's used for serving RPC requests.
+# Run a non-validator node
+This guide demonstrates how to run a non-validator node from a Docker image.
+This node is known as an RPC (remote procedure call) node,
+because it's used for serving RPC requests.
 
 ## Prerequisites
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
@@ -39,15 +39,13 @@ Create a chain data directory:
 mkdir -p chaindata/data/ronin
 ```
 
-2. Create docker-compose.yml
-
-Create `docker-compose.yml` 
+2. Create a `docker-compose.yml` file:
 
 ```
 vim docker-compose.yml
 ```
 
-3. Copy this code block to the `docker-compose.yml`:
+3. Copy this code block to the file:
 
 ```
 version: "3"
@@ -79,14 +77,13 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-4. Create an `.env` file
+4. Create an `.env` file. This file contains configuration parameters for your node.
 
-Create `.env`
 ```
 vim .env
 ```
 
-5. Copy this code block to the `.env`: 
+5. Copy this code block to the file: 
 
 ```
 INSTANCE_NAME=insert-your-instance-name
@@ -108,7 +105,7 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 
 
 Replace the following keys in the `.env` file with your node's information:
 * `INSTANCE_NAME`: Your node's name, which can be seen on the [stats page](https://stats.roninchain.com/).
-* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image).
+* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](./../maintenance/upgrade.mdx).
 * `PASSWORD`: The password used to encrypt your private key.
 
 6. (Optional) Download the snapshot to save the time:
@@ -119,7 +116,7 @@ curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot
 mv <uncompressed data> chaindata
 ```
 
-7. Start the node
+7. Start the node:
 
 ```
 cd ~/ronin && docker-compose up -d

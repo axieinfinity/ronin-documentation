@@ -1,8 +1,8 @@
 ---
-description: Run a bridge operator on the mainnet.
+description: Install a standalone mainnet bridge operator after setting up the validator node.
 ---
 
-# Run a bridge operator node
+# Run a standalone bridge
 This guide demonstrates how to run a bridge operator node from a Docker image.
 
 ## Prerequisites
@@ -14,7 +14,7 @@ This guide demonstrates how to run a bridge operator node from a Docker image.
 You need an Ethereum RPC endpoint. This is an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint, used to listen for events from Ethereum chain and send events to Ethereum.
 
 ### Generate keys
-Generate two private keys as described in [Generate keys](/docs/node-operators/generate-keys):
+Generate two private keys as described in [Generate keys](./../maintenance/generate-keys.md):
 * One key for bridge voter 
 * One key for bridge operator
 
@@ -58,7 +58,7 @@ mkdir -p chaindata/data/ronin
 vim docker-compose.yml
 ```
 
-3. Copy this code block to the `docker-compose.yml` file:
+3. Copy this code block to the file:
 
 ```
 version: "3"
@@ -130,7 +130,7 @@ services:
 vim .env
 ```
 
-5. Copy this code block to the `.env` file:
+5. Copy this code block to the file:
 
 ```
 ETHEREUM_ENDPOINT=insert-your-ethereum-endpoint
@@ -172,16 +172,15 @@ CHAIN_STATS_WS_SERVER=stats.roninchain.com
 CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 
 RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
-
 ```
 
 Replace the following keys in the `.env` file with your node's information:
 * `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint, which can be Alchemy or Infura.
-* `BRIDGE_IMAGE`: The version of your bridge node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image)
+* `BRIDGE_IMAGE`: The version of your bridge node's image, which can be found under [Latest image](../maintenance/upgrade#latest-image).
 * `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
 * `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix.
 * `DB_PASSWORD`: Your Postgres database password.
-* `NODE_IMAGE`: The version of your validator node's image, which can be found under [latest image](/docs/node-operators/upgrade#latest-image).
+* `NODE_IMAGE`: The version of your validator node's image, which can be found under [latest image](../maintenance/upgrade#latest-image).
 * `INSTANCE_NAME`: The name of your instance that you want to display on the stats page.
 
 6. (Optional) Download the snapshot to save the time:
@@ -200,7 +199,7 @@ cd ~/ronin-bridge && docker-compose up -d
 
 8. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
-9. Review the log for bridge and node  ( the node should sync to latest block for making bridge work )
+9. Review the log for the bridge and the validator node (the node should sync to the latest block for making the bridge work).
 
 ```
 docker logs node -f --tail 100

@@ -1,9 +1,5 @@
----
-description: Ronin mainnet specification.
----
-
-# Specification
-This page describes the details of the Ronin mainnet specification.
+# Ronin mainnet
+This page describes the specification of the Ronin mainnet.
 
 ## Configuration
 * Chain ID (network ID): `2020`

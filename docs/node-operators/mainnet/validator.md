@@ -1,9 +1,10 @@
 ---
-description: Run a validator node on the mainnet.
+description: Instll a standalone mainnet validator node using Docker.
 ---
 
-# Run a validator node
+# Run a standalone validator 
 This guide demonstrates how to run a validator node from a Docker image.
+As a validator, you're required to run a bridge operator node as well as the validator node. Therefore, after you install the validator following the steps in this guide, proceed to set up your [bridge operator node](./bridge.md).
 
 ## Prerequisites
 ### Install Docker
@@ -22,7 +23,7 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ### Generate a key
-Generate a private key for your validator node as described in [Generate keys](/docs/node-operators/generate-keys).
+Generate a private key for your validator node as described in [Generate keys](./../maintenance/generate-keys.md).
 
 ## Install the node 
 1. Set up directories:
@@ -45,15 +46,13 @@ Create a chain data directory:
 mkdir -p chaindata/data/ronin
 ```
 
-2. Create docker-compose.yml
-
-Create `docker-compose.yml` 
+2. Create a `docker-compose.yml` file:
 
 ```
 vim docker-compose.yml
 ```
 
-3. Copy this code block to the `docker-compose.yml`:
+3. Copy this code block to the file:
 
 ```
 version: "3"
@@ -86,14 +85,13 @@ services:
       - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
 ```
 
-4. Create an `.env` file
+4. Create an `.env` file. This file contains configuration parameters for your node.
 
-Create `.env`
 ```
 vim .env
 ```
 
-5. Copy this code block to the `.env`: 
+5. Copy this code block to the file: 
 
 ```
 INSTANCE_NAME=insert-your-instance-name
@@ -117,7 +115,7 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --min
 Replace the following keys in the `.env` file with your node's information:
 * `INSTANCE_NAME`: Your node's name, which can be seen on the [stats page](https://stats.roninchain.com/).
 * `VALIDATOR_PRIVATE_KEY`: Your validator private key, without the `0x` prefix.
-* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](/docs/node-operators/upgrade#latest-image).
+* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](./../maintenance/upgrade.mdx).
 * `PASSWORD`: The password used to encrypt your private key.
 
 6. (Optional) Download the snapshot to save the time:
@@ -128,7 +126,7 @@ curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot
 mv <uncompressed data> chaindata
 ```
 
-7. Start the node
+7. Start the node:
 
 ```
 cd ~/ronin && docker-compose up -d
@@ -142,6 +140,5 @@ docker logs node -f --tail 100
 
 9. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
-:::caution
-As a validator, you're required to run a bridge operator node. Proceed to [Run a bridge operator node](./bridge.md) to set it up.
-:::
+## What's next
+Follow [Run a bridge operator node](./bridge.md) to set up your bridge.

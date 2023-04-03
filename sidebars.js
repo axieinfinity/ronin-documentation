@@ -240,58 +240,96 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Run a node',
+          label: 'Setup',
           link: {
             type: 'generated-index',
-            title: 'Run a node',
-            description: 'Step-by-step guides to set up nodes on the Ronin mainnet.',
+            title: 'Setup',
             slug: '/node-operators/mainnet',
+            description: 'Step-by-step guides to install and configure Ronin nodes on the mainnet.'
+          },
+          items: [
+            // Run a validator and bridge together
+            'node-operators/mainnet/combined-validator',
+            // Run a standalone validator
+            'node-operators/mainnet/validator',
+            // Run a standalone bridge
+            'node-operators/mainnet/bridge',
+            // Run a non-validator
+            'node-operators/mainnet/non-validator',
+            // Run an archive node
+            'node-operators/mainnet/archive',
+            // Run a node using Ronin CLI
+            'node-operators/cli',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Maintenance',
+          link: {
+            type: 'generated-index',
+            title: 'Maintenance',
+            description: 'Guides to generate private keys and upgrade your node, and recommendations for security hardening.',
+            slug: '/node-operators/maintenance',
+          },
+          items: [
+            // Generate keys
+            'node-operators/maintenance/generate-keys',
+            // Upgrade node
+            'node-operators/maintenance/upgrade',
+            // Secure node
+            'node-operators/maintenance/secure',
+          ],
+        },
+        // Resources
+        {
+          type: 'category',
+          label: 'Resources',
+          link: {
+            type: 'generated-index',
+            title: 'Resources',
+            slug: '/node-operators/resources',
+          },
+          items: [
+            // Specification
+            {
+              type: 'category',
+              label: 'Specification',
+              link: {
+                type: 'generated-index',
+                title: 'Resources',
+                slug: '/node-operators/resources/specification',
+              },
+              items: [
+                // Ronin mainnet
+                'node-operators/resources/specification/mainnet',
+                // Saigon testnet
+                'node-operators/resources/specification/testnet',
+              ],
+            },
+            // FAQ
+            'node-operators/resources/faq',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Saigon testnet',
+          link: {
+            type: 'generated-index',
+            title: 'Saigon testnet',
+            description: 'Step-by-step guides to set up your nodes on the Saigon testnet.',
+            slug: '/node-operators/testnet',
           },
           items: [
             // Run a validator node
-            'node-operators/mainnet/validator',
+            'node-operators/testnet/validator',
             // Run a bridge node
-            'node-operators/mainnet/bridge',
+            'node-operators/testnet/bridge',
             // Run a non-validator-node
-            'node-operators/mainnet/non-validator',
+            'node-operators/testnet/non-validator',
             // Run a full archive node
-            'node-operators/mainnet/archive',
-            // Specification
-            'node-operators/mainnet/specification',
+            'node-operators/testnet/archive',
           ],
         },
-        // Generate keys
-        'node-operators/generate-keys',
-        // Upgrade node
-        'node-operators/upgrade',
-        // Secure node
-        'node-operators/secure',
-        // Use Ronin CLI
-        'node-operators/cli',
-        // FAQ
-        'node-operators/faq',
-        // {
-        //   type: 'category',
-        //   label: 'Saigon testnet',
-        //   link: {
-        //     type: 'generated-index',
-        //     title: 'Saigon testnet',
-        //     description: 'Step-by-step guides to set up your nodes on the Saigon testnet.',
-        //     slug: '/node-operators/testnet',
-        //   },
-        //   items: [
-        //     // Run a validator node
-        //     'node-operators/testnet/validator',
-        //     // Run a bridge node
-        //     'node-operators/testnet/bridge',
-        //     // Run a non-validator-node
-        //     'node-operators/testnet/non-validator',
-        //     // Run a full archive node
-        //     'node-operators/testnet/archive',
-        //     // Specification
-        //     'node-operators/testnet/specification',
-        //   ],
-        // },
         // Node setup tutorials
         // {
         //   type: 'category',

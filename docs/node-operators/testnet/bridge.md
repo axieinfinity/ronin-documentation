@@ -1,3 +1,7 @@
+---
+description: Install a testnet bridge operator node using Docker.
+---
+
 # Run a bridge operator node
 Set up and run a bridge operator node on the Saigon testnet.
 
@@ -14,19 +18,19 @@ mkdir -p /axie/ronin-manager
 mkdir -p ~/bridgedata-v2
 ```
 
-2. Navigate to the `ronin-manager` directory:
+2. Go to the `ronin-manager` directory:
    
 ```
 cd /axie/ronin-manager
 ```
 
-3. Create a `docker-compose` file:
+3. Create a `docker-compose.yml` file:
 
 ```
 vim docker-compose.yml
 ```
 
-4. Paste the following contents into the file:
+4. Copy this code block to the file:
 
 ```
 version: "3"
@@ -67,13 +71,13 @@ services:
       - db
 ```
 
-5. Create an `.env` file:
+5. Create an `.env` file. This file contains configuration parameters for your node.
 
 ```
 vim .env
 ```
 
-6. Paste the following contents into the file, replacing the `insert-...` placeholder values with your own:
+6. Copy this code block to the file, replacing the `insert-...` values with your information:
 
 ```
 # User for postgres account.
@@ -110,7 +114,7 @@ BRIDGE_VOTER_PRIVATE_KEY=insert-your-voter-private-key
 docker-compose up -d
 ```
 
-After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
+8. After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
 ## Configuration
 The configuration file is located in the `config` directory. There are two main objects in the configuration: `listeners` and `database`.
