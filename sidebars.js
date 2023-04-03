@@ -240,11 +240,21 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'Setup',
+          link: {
+            type: 'generated-index',
+            title: 'Setup',
+            slug: '/node-operators/setup',
+            description: 'Step-by-step guides to install and configure Ronin nodes.'
+          },
+          items: [
+            {
+          type: 'category',
           label: 'Docker method',
           link: {
             type: 'generated-index',
             title: 'Docker method',
-            description: 'Step-by-step guides to install and configure validator and bridge operator nodes from Docker images.',
+            description: 'Guides to install and configure Ronin nodes from Docker images.',
           },
           items: [
             {
@@ -252,9 +262,9 @@ const sidebars = {
               label: 'Standalone setup',
               items: [
                 // Run a standalone validator
-                'node-operators/mainnet/validator',
+                'node-operators/setup/validator',
                 // Run a standalone bridge
-                'node-operators/mainnet/bridge',
+                'node-operators/setup/bridge',
               ],
             },
             {
@@ -262,7 +272,7 @@ const sidebars = {
               label: 'Combined setup',
               items: [
                 // Run a validator and bridge together
-                'node-operators/mainnet/combined-validator',
+                'node-operators/setup/combined-validator',
               ],
             },
             {
@@ -270,9 +280,9 @@ const sidebars = {
               label: 'Other nodes',
               items: [
                 // Run a non-validator
-                'node-operators/mainnet/non-validator',
+                'node-operators/setup/non-validator',
                 // Run an archive node
-                'node-operators/mainnet/archive',
+                'node-operators/setup/archive',
               ],
             },
           ],
@@ -281,6 +291,8 @@ const sidebars = {
           type: 'doc',
           label: 'Ronin CLI method',
           id: 'node-operators/cli',
+        },
+          ],
         },
         {
           type: 'category',
