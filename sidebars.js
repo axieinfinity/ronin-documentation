@@ -248,12 +248,12 @@ const sidebars = {
             description: 'Step-by-step guides to install and configure Ronin nodes.'
           },
           items: [
+            // Run a validator and bridge together
+            'node-operators/setup/combined-validator',
             // Run a standalone validator
             'node-operators/setup/validator',
             // Run a standalone bridge
             'node-operators/setup/bridge',
-            // Run a validator and bridge together
-            'node-operators/setup/combined-validator',
             // Run a non-validator
             'node-operators/setup/non-validator',
             // Run an archive node
