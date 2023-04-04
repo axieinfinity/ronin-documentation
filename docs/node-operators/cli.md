@@ -1,9 +1,9 @@
 ---
-description: Run and manage a node using the Ronin CLI.
+description: Compile a node binary from source using Ronin CLI.
 ---
 
-# Run a validator using Ronin CLI
-The Ronin CLI (command line interface) is a unified tool to manage your Ronin nodes.
+# Build your node using CLI
+This guide demonstrates how to compile a full node binary using the Ronin CLI (command line interface) client—a unified tool for running and managing Ronin nodes.
 
 ## Prerequisites
 Install the dependencies using your favorite package manager:
@@ -11,26 +11,31 @@ Install the dependencies using your favorite package manager:
 * C compiler
 
 ## Install Ronin
-
-1\. In your working directory, clone the Ronin repository:
+1. Clone the Ronin repository:
 
 ```
 git clone git@github.com:axieinfinity/ronin.git
 ```
 
-2\. Navigate to the `ronin` directory.
+2. Go to the `ronin` directory:
 
 ```
 cd ronin
 ```
 
-3\. Build the source.
+3. Build the source:
 
 ```
 make ronin
 ```
 
-4\. Add the path to the `ronin` binary executable to your PATH environment variable.
+The executable file is located in `./build/bin/ronin`.
+
+4. Add the path to the `ronin` binary executable to your PATH environment variable:
+
+```
+cp ./build/bin/ronin /usr/local/bin
+```
 
 ## Initialize the genesis block
 Before starting a new node, you must initialize the genesis block. The genesis files are located in the repository's `genesis` directory.

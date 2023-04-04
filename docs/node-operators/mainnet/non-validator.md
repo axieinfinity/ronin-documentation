@@ -104,8 +104,8 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 
 ```
 
 Replace the following keys in the `.env` file with your node's information:
-* `INSTANCE_NAME`: Your node's name, which can be seen on the [stats page](https://stats.roninchain.com/).
-* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](./../maintenance/upgrade.mdx).
+* `INSTANCE_NAME`: Your node's name, which can be seen on the [stats page](./../latest.md).
+* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](./../latest.md).
 * `PASSWORD`: The password used to encrypt your private key.
 
 6. (Optional) Download the snapshot to save the time:

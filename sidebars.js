@@ -250,6 +250,8 @@ const sidebars = {
           items: [
             // Setup introduction
             'node-operators/mainnet/introduction',
+            // Latest version
+            'node-operators/latest',
             // Run a validator and bridge together
             'node-operators/mainnet/combined-validator',
             // Run a standalone validator
@@ -260,26 +262,10 @@ const sidebars = {
             'node-operators/mainnet/non-validator',
             // Run an archive node
             'node-operators/mainnet/archive',
-            // Run a node using Ronin CLI
-            'node-operators/cli',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Maintenance',
-          link: {
-            type: 'generated-index',
-            title: 'Maintenance',
-            description: 'Guides to generate private keys and upgrade your node, and recommendations for security hardening.',
-            slug: '/node-operators/maintenance',
-          },
-          items: [
             // Generate keys
-            'node-operators/maintenance/generate-keys',
-            // Upgrade node
-            'node-operators/maintenance/upgrade',
-            // Secure node
-            'node-operators/maintenance/secure',
+            'node-operators/generate-keys',
+            // Build your node using Ronin CLI
+            'node-operators/cli',
           ],
         },
         // Resources
@@ -292,7 +278,7 @@ const sidebars = {
             slug: '/node-operators/resources',
           },
           items: [
-            // Specification
+            // Network configurations
             {
               type: 'category',
               label: 'Network configurations',
@@ -308,6 +294,8 @@ const sidebars = {
                 'node-operators/resources/configurations/testnet',
               ],
             },
+            // Security hardening
+            'node-operators/resources/security',
             // FAQ
             'node-operators/resources/faq',
           ],

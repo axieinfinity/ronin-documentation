@@ -25,9 +25,9 @@ To run a reliable, performant node, we suggest that the node’s hardware profil
 These hardware requirements are rough guidelines, and each node operator should monitor their node to ensure good performance for the intended task. The size of your Ronin node will also grow over time.
 
 ## Get started with node installation
-We offer two different methods of installing the nodes:
-* The Docker method describes the installation of the validator and the bridge operator as Docker instances, for those comfortable with Docker. Two different approaches to organizing your nodes using Docker are described in the following sections.
-* The CLI method uses a CLI tool to install the validator and the bridge on a Ubuntu host. For more information, see [Run a validator using Ronin CLI](./../cli.md).
+We offer one two different methods of installing Ronin nodes:
+* The Docker method describes the installation of Ronin nodes as Docker instances, for those comfortable with Docker. Two different approaches to setting up your nodes using Docker are described in the following sections.
+* The CLI (command line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build your node using Ronin CLI](./../cli.md).
 
 ### Choose an approach
 Within the Docker method, there are two ways to approach the installation of a validator and a bridge operator:

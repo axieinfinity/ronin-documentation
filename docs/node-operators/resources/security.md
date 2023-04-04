@@ -1,6 +1,6 @@
 ---
 description: Recommendations for hardening your validator node.
-title: Secure a node
+title: Security hardening
 ---
 
 # Security hardening for your validator node

@@ -1,13 +1,12 @@
 ---
-description: Upgrade node software to latest release. 
+description: Latest versions of the node's software.
 ---
 
-# Upgrade a node
-This page describes how to upgrade the software on your node to the
-latest version.
+# Latest version
+This page describes how to get the latest version of the node's software.
 
 ## Ronin node
-Every Ronin upgrade is published on GitHub:
+Every Ronin node upgrade is published on GitHub:
 [https://github.com/axieinfinity/ronin/releases](https://github.com/axieinfinity/ronin/releases)
 
 To find the Docker image for each release, visit the links in the sections that follow.
@@ -17,11 +16,13 @@ To find the Docker image for each release, visit the links in the sections that 
 * GitHub Container Registry: [https://github.com/axieinfinity/ronin/pkgs/container/ronin](https://github.com/axieinfinity/ronin/pkgs/container/ronin)
 
 ### Latest image
-To download the latest image, update `NODE_IMAGE` in your `env` file
+To download the latest image, update `NODE_IMAGE` in your `.env` file
 to *either* of the following:
+
 ```
 ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895
 ```
+
 ```
 axieinfinity/ronin-mainnet:v2.5.2-9bf4895
 ```
@@ -34,8 +35,9 @@ To find the Docker image for each release, visit Docker Hub:
 [https://hub.docker.com/r/axieinfinity/bridge/tags](https://hub.docker.com/r/axieinfinity/bridge/tags)
 
 ### Latest image
-To download the latest image, update `BRIDGE_IMAGE` in your `env` file
+To download the latest image, update `BRIDGE_IMAGE` in your `.env` file
 to the following:
+
 ```
 axieinfinity/bridge:v0.2.3-56f7328
 ```
