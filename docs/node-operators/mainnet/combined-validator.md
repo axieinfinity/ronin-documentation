@@ -3,7 +3,7 @@ description: Install a mainnet validator and bridge operator on one machine usin
 ---
 
 # Run a validator and bridge together
-This guide demonstrates how to run a validator node and a bridge operator node together on one machine using Docker.
+This guide demonstrates how to run a validator node and a bridge operator on one machine using Docker.
 
 ## Prerequisites
 ### Install Docker

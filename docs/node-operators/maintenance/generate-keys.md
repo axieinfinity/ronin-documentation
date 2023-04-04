@@ -3,13 +3,14 @@ description: Securely generate private keys.
 ---
 
 # Generate keys
-This guide demonstrate how to generate a private key on Ronin.
+This guide demonstrates how to generate a private key for your nodes.
 
 ## Prerequisites
 You need to have [Golang](https://go.dev/doc/install) installed.
 
-## Generate a private key locally
-1. Compile the `ethkey` tool from the Ronin source code by running the following commands:
+## Generate your private key locally
+1. Compile the `ethkey` tool from the Ronin source code by running the 
+following commands:
 ```
 git clone https://github.com/axieinfinity/ronin
 cd ronin

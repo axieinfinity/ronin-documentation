@@ -2,55 +2,43 @@ import DocCardList from '@theme/DocCardList';
 import {findSidebarItem} from '@site/src/sidebarUtils';
 
 # Node operators
-### Run your own Ronin node
-These gudies assist individuals or institutions responsible
-for setting up and confguring a validator node on the Ronin mainnet. 
-On Ronin, validators are required to run a validator node *and* a bridge operator node.
-The two methods of installation are via Docker or using the Ronin CLI. 
+### Introduction
 
-We recommended running both nodes on one machine:
+<DocCardList items={[
+    findSidebarItem('/docs/node-operators/mainnet/introduction'),
+    ]} />
+
+### Setup
+#### Docker method
 
 <DocCardList items={[
     findSidebarItem('/docs/node-operators/mainnet/combined-validator'),
-    ]} />
-
-Or you can run the validator and bridge on two separate machines:
-
-<DocCardList items={[
     findSidebarItem('/docs/node-operators/mainnet/validator'),
     findSidebarItem('/docs/node-operators/mainnet/bridge'),
     ]} />
 
-Here's how to run and manage your validator node via Ronin CLI:
+#### CLI method
 
 <DocCardList items={[
     findSidebarItem('/docs/node-operators/cli'),
     ]} />
 
-Guides to run other types of nodes:
-
+### Maintenance
 <DocCardList items={[
-    findSidebarItem('/docs/node-operators/mainnet/non-validator'),
-    findSidebarItem('/docs/node-operators/mainnet/archive'),
-    ]} />
-
-### Maintain your node
-
-<DocCardList items={[
-    findSidebarItem('/docs/node-operators/maintenance/upgrade'),
     findSidebarItem('/docs/node-operators/maintenance/generate-keys'),
+    findSidebarItem('/docs/node-operators/maintenance/upgrade'),
     findSidebarItem('/docs/node-operators/maintenance/secure'),
     ]} />
 
-### Network specification and FAQ
+### Resources
 
 <DocCardList items={[
     findSidebarItem('/docs/node-operators/resources/faq'),
-    findSidebarItem('/docs/node-operators/resources/specification'),
+    findSidebarItem('/docs/node-operators/resources/configurations/mainnet'),
+    findSidebarItem('/docs/node-operators/resources/configurations/testnet'),
     ]} />
 
 ### Saigon testnet guides
-These guides are for installing and configuring nodes on the Saigon testnet:
 
 <DocCardList items={[
     findSidebarItem('/docs/node-operators/testnet/validator'),

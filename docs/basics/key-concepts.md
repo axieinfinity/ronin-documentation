@@ -109,7 +109,7 @@ A validator node is responsible for verifying and approving transactions
 submitted by users and blockchain clients. Upon the close of a transaction block, validator nodes are randomly chosen to validate block data, thus generating the subsequent block, and earning RON tokens as a reward.
 
 #### Bridge operator node
-A bridge operator node is used to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. Each validator has the responsibility to run a bridge operator node as well as the validator node. A validator who doesn't do so is unable to claim block rewards.
+A bridge operator node is used to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. Each validator has the responsibility to run a bridge operator node as well as the validator node. A validator who doesn't run a bridge operator is not eligible for block rewards.
 
 #### Non-validator node (RPC)
 While validator nodes run the Ronin consensus protocol and earn rewards on block validation, a non-validator node—also known as an RPC (remote procedure call) node—only serves as a gateway for decentralized applications to obtain relevant data on the Ronin blockchain.

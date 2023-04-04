@@ -248,6 +248,8 @@ const sidebars = {
             description: 'Step-by-step guides to install and configure Ronin nodes on the mainnet.'
           },
           items: [
+            // Setup introduction
+            'node-operators/mainnet/introduction',
             // Run a validator and bridge together
             'node-operators/mainnet/combined-validator',
             // Run a standalone validator
@@ -293,17 +295,17 @@ const sidebars = {
             // Specification
             {
               type: 'category',
-              label: 'Specification',
+              label: 'Network configurations',
               link: {
                 type: 'generated-index',
-                title: 'Resources',
-                slug: '/node-operators/resources/specification',
+                title: 'Network configurations',
+                slug: '/node-operators/resources/configurations',
               },
               items: [
                 // Ronin mainnet
-                'node-operators/resources/specification/mainnet',
+                'node-operators/resources/configurations/mainnet',
                 // Saigon testnet
-                'node-operators/resources/specification/testnet',
+                'node-operators/resources/configurations/testnet',
               ],
             },
             // FAQ
