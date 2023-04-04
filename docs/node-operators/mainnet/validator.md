@@ -23,7 +23,7 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ### Generate a key
-Generate a private key for your validator node as described in [Generate keys](./../maintenance/generate-keys.md).
+Generate a private key for your validator node as described in [Generate keys](./../generate-keys.md).
 
 ## Install the node 
 1. Set up directories:
@@ -115,7 +115,7 @@ RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --min
 Replace the following keys in the `.env` file with your node's information:
 * `INSTANCE_NAME`: Your node's name, which can be seen on the [stats page](https://stats.roninchain.com/).
 * `VALIDATOR_PRIVATE_KEY`: Your validator private key, without the `0x` prefix.
-* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](./../maintenance/upgrade.mdx).
+* `NODE_IMAGE`: The version of your node's image, which can be found under [Latest image](./../latest.md).
 * `PASSWORD`: The password used to encrypt your private key.
 
 6. (Optional) Download the snapshot to save the time:

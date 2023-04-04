@@ -25,7 +25,7 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ### Generate keys
-Generate private keys for your validator node and bridge operator as described in [Generate keys](./../maintenance/generate-keys.md).
+Generate private keys for your validator node and bridge operator as described in [Generate keys](./../generate-keys.md).
 
 ## Install the node
 1. Set up directories:

@@ -64,7 +64,7 @@ To harden your node, see [Security hardening](./../resources/security.md).
 ### 8. If there is a node or bridge upgrade, how do I get this information? {#8}
 Latest version of Ronin and its changelog are always available at [Ronin release](https://github.com/axieinfinity/ronin/releases). A good way to keep track of upgrades is to join our [Discord](https://discord.gg/roninnetwork).
 
-To upgrade your node, see [Upgrade node](./../latest.md).
+To upgrade your node, see [Latest version](./../latest.md).
 
 ### 9. How much time do I have to upgrade my nodes? {#9}
 Upgrades are usually backwards-compatible. It can contain performance improvements, bug fixes or new features. It's recommended that every node is upgraded as soon as possible.
