@@ -18,7 +18,7 @@ Recommended system requirements for running a validator node:
 * 8-core CPU
 * 32 GB RAM
 * 700 GB high-speed SSD
-* AMD64 architecture
+* x86-64 architecture
 
 These requirements are rough guidelines, and each node operator
 should monitor their node to ensure good performance for the intended task.
