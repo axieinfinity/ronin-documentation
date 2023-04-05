@@ -30,13 +30,24 @@ cd ronin
 make ronin
 ```
 
-4\. Add the path to the `ronin` binary executable to your PATH environment variable.
+The result should contain the following path
+```shell
+Done building.
+Run "./build/bin/ronin" to launch ronin.
+```
+
+4\. Add the path to the `ronin` binary executable to your PATH environment variable or copy `ronin` to your system path
+
+For example, with Unix base
+```shell
+cp ./build/bin/ronin /usr/bin
+```
 
 ## Initialize the genesis block
-Before starting a new node, you must initialize the genesis block. The genesis files are located in the repository's `genesis` directory.
+Before starting a new node, you must initialize the genesis block. The genesis files are located in the repository's `genesis` directory and include the path where you store node's data. For example, `/ronin/data`
 
 ```
-ronin init genesis/mainnet.json --datadir <path-to-your-node-directory>
+ronin init genesis/mainnet.json --datadir /ronin/data
 ```
 
 ## Start a node
