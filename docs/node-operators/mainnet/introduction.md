@@ -15,12 +15,12 @@ On Ronin, each validator is required to run a validator node and a bridge operat
 ## Prerequisites
 To run a reliable, performant node, we suggest that the node’s hardware profile should match or exceed the following specifications:
 
-|   Validator node         |   Non-validator node     |   Archive node         |   Bridge operator        |
-|--------------------------|--------------------------|------------------------|--------------------------|
-|   8-core CPU             |   6-core CPU             |   8-core CPU           |   8-core CPU             |
-|   32 GB RAM              |   25 GB RAM              |   32 GB RAM            |   32 GB RAM              |
-|   700 GB high-speed SSD  |   700 GB high-speed SSD  |   7 TB high-speed SSD  |   700 GB high-speed SSD  |
-|   AMD64 architecture     |   AMD64 architecture     |    AMD64 architecture  |   AMD64 architecture     |
+|   Validator node          |   Non-validator node      |   Archive node         |   Bridge operator         |
+|---------------------------|---------------------------|------------------------|---------------------------|
+|   8-core CPU              |   6-core CPU              |   8-core CPU           |   8-core CPU              |
+|   32 GB RAM               |   25 GB RAM               |   32 GB RAM            |   32 GB RAM               |
+|   700 GB high-speed SSD   |   700 GB high-speed SSD   |   7 TB high-speed SSD  |   700 GB high-speed SSD   |
+|   x86-64 architecture     |   x86-64 architecture     |   x86-64 architecture  |   x86-64 architecture     |
 
 These hardware requirements are rough guidelines, and each node operator should monitor their node to ensure good performance for the intended task. The size of your Ronin node will also grow over time.
 

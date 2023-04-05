@@ -264,7 +264,7 @@ const sidebars = {
             'node-operators/mainnet/archive',
             // Generate keys
             'node-operators/generate-keys',
-            // Build your node using Ronin CLI
+            // Install Ronin CLI
             'node-operators/cli',
           ],
         },

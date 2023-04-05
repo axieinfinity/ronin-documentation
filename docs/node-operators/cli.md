@@ -1,16 +1,16 @@
 ---
-description: Compile a node binary from source using Ronin CLI.
+description: Build the CLI and compile a node binary from source.
 ---
 
-# Build your node using CLI
-This guide demonstrates how to compile a full node binary using the Ronin CLI (command line interface) client—a unified tool for running and managing Ronin nodes.
+# Build the Ronin CLI
+This guide demonstrates how to build the Ronin CLI (command-line tool) and compile the node binary on your own instead of using a packed binary from Docker. With the CLI tool, you can install the Ronin node and configure it as a full node (default), validator node, or archive node.
 
-## Prerequisites
-Install the dependencies using your favorite package manager:
-* Go 1.17 or later
+### Prerequisites
+To build the Ronin CLI, you need to install the following dependencies:
+* Golang 1.17 or later (follow the instructions at [https://go.dev/doc/install](https://go.dev/doc/install))
 * C compiler
 
-## Install Ronin
+### 1. Build locally
 1. Clone the Ronin repository:
 
 ```
@@ -23,29 +23,29 @@ git clone git@github.com:axieinfinity/ronin.git
 cd ronin
 ```
 
-3. Build the source:
+3. Build the binary:
 
 ```
 make ronin
 ```
 
-The executable file is located in `./build/bin/ronin`.
+This command creates a `ronin` binary inside the `.build/bin` directory.
 
-4. Add the path to the `ronin` binary executable to your PATH environment variable:
+4. To run the binary without specifying the binary location in each command, make sure to set up the `./build/bin/ronin` path in the `$PATH` environment variable:
 
 ```
 cp ./build/bin/ronin /usr/local/bin
 ```
 
-## Initialize the genesis block
-Before starting a new node, you must initialize the genesis block. The genesis files are located in the repository's `genesis` directory.
+### 2. Initialize the genesis block
+Before running a node, you need to initialize the genesis block to set up the origin state of the chain. The genesis file is located in the repository's `genesis` directory.
 
 ```
 ronin init genesis/mainnet.json --datadir <path-to-your-node-directory>
 ```
 
-## Start a node
-To start a node, run the following command:
+### 3. Start the node
+Run the following command to start a full (non-validating) Ronin node on the mainnet:
 
 ```
 ronin --networkid 2020 \
@@ -56,9 +56,9 @@ ronin --networkid 2020 \
 --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*'
 ```
 
-## Command reference
+### Command reference
 
-### Synopsis
+#### Synopsis
 
 ```
 ronin [options] [command] [command options] [arguments...]
@@ -66,7 +66,7 @@ ronin [options] [command] [command options] [arguments...]
 
 Use `ronin [command] help` for information on a specific command.
 
-### Available commands
+#### Available commands
 
 ```   
 account                            Manage accounts
@@ -94,13 +94,13 @@ wallet                             Manage Ethereum presale wallets
 help, h                            Shows a list of commands or help for one command
 ```
 
-### Ethereum options
+#### Ethereum options
 ```
   --config value                      TOML configuration file
-  --datadir value                     Data directory for the databases and keystore (default: "/Users/mac/Library/Ethereum")
+  --datadir value                     Data directory for the databases and store (default: "/Users/mac/Library/Ethereum")
   --datadir.ancient value             Data directory for ancient chain segments (default = inside chaindata)
   --datadir.minfreedisk value         Minimum free disk space in MB, once reached triggers auto shut down (default = --cache.gc converted to MB, 0 = disabled)
-  --keystore value                    Directory for the keystore (default = inside the datadir)
+  --store value                    Directory for the store (default = inside the datadir)
   --usb                               Enable monitoring and management of USB hardware wallets
   --pcscdpath value                   Path to the smartcard daemon (pcscd) socket file
   --networkid value                   Explicitly set network id (integer)(For testnets: use --ropsten, --rinkeby, --goerli instead) (default: 1)
@@ -115,11 +115,11 @@ help, h                            Shows a list of commands or help for one comm
   --txlookuplimit value               Number of recent blocks to maintain transactions index for (default = about one year, 0 = entire chain) (default: 2350000)
   --ethstats value                    Reporting URL of a ethstats service (nodename:secret@host:port)
   --identity value                    Custom node name
-  --lightkdf                          Reduce key-derivation RAM & CPU usage at some expense of KDF strength
+  --lightkdf                          Reduce -derivation RAM & CPU usage at some expense of KDF strength
   --whitelist value                   Comma separated block number-to-hash mappings to enforce (<number>=<hash>)
 ```
   
-### Light client options
+#### Light client options
 
 ```
 --light.serve value                 Maximum percentage of time allowed for serving LES requests (multi-threaded processing allows values over 100) (default: 0)
@@ -133,7 +133,7 @@ help, h                            Shows a list of commands or help for one comm
 --light.nosyncserve                 Enables serving light clients before syncing
 ```
 
-### Developer chain options
+#### Developer chain options
 
 ```
 --dev                               Ephemeral proof-of-authority network with a pre-funded developer account, mining enabled
@@ -141,7 +141,7 @@ help, h                            Shows a list of commands or help for one comm
 --dev.gaslimit value                Initial block gas limit (default: 11500000)
 ```
 
-### Ethash options
+#### Ethash options
 
 ```
 --ethash.cachedir value             Directory to store the ethash verification caches (default = inside the datadir)
@@ -154,7 +154,7 @@ help, h                            Shows a list of commands or help for one comm
 --ethash.dagslockmmap               Lock memory maps for recent ethash mining DAGs
 ```
 
-### Transaction pool options
+#### Transaction pool options
 
 ```
 --txpool.locals value               Comma separated accounts to treat as locals (no flush, priority inclusion)
@@ -170,7 +170,7 @@ help, h                            Shows a list of commands or help for one comm
 --txpool.lifetime value             Maximum amount of time non-executable transaction are queued (default: 3h0m0s)
 ```
 
-### Performance tuning options
+#### Performance tuning options
 
 ```
 --cache value                       Megabytes of memory allocated to internal caching (default = 4096 mainnet full node, 128 light mode) (default: 1024)
@@ -181,10 +181,10 @@ help, h                            Shows a list of commands or help for one comm
 --cache.gc value                    Percentage of cache memory allowance to use for trie pruning (default = 25% full mode, 0% archive mode) (default: 25)
 --cache.snapshot value              Percentage of cache memory allowance to use for snapshot caching (default = 10% full mode, 20% archive mode) (default: 10)
 --cache.noprefetch                  Disable heuristic state prefetch during block import (less CPU and disk IO, more time waiting for data)
---cache.preimages                   Enable recording the SHA3/keccak preimages of trie keys
+--cache.preimages                   Enable recording the SHA3/keccak preimages of trie s
 ```
   
-### Account options
+#### Account options
 
 ```
 --unlock value                      Comma separated list of accounts to unlock
@@ -193,7 +193,7 @@ help, h                            Shows a list of commands or help for one comm
 --allow-insecure-unlock             Allow insecure account unlocking when account-related RPCs are exposed by http
 ```
  
-### API and console options
+#### API and console options
 
 ```
 --ipcdisable                        Disable the IPC-RPC server
@@ -223,7 +223,7 @@ help, h                            Shows a list of commands or help for one comm
 --preload value                     Comma separated list of JavaScript files to preload into the console
 ```
 
-### Networking options
+#### Networking options
 
 ```
 --bootnodes value                   Comma separated enode URLs for P2P discovery bootstrap
@@ -235,11 +235,11 @@ help, h                            Shows a list of commands or help for one comm
 --nodiscover                        Disables the peer discovery mechanism (manual peer addition)
 --v5disc                            Enables the experimental RLPx V5 (Topic Discovery) mechanism
 --netrestrict value                 Restricts network communication to the given IP networks (CIDR masks)
---nodekey value                     P2P node key file
---nodekeyhex value                  P2P node key as hex (for testing)
+--node value                     P2P node  file
+--nodehex value                  P2P node  as hex (for testing)
 ```
 
-### Miner options
+#### Miner options
 
 ```
 --mine                              Enable mining
@@ -254,7 +254,7 @@ help, h                            Shows a list of commands or help for one comm
 --miner.noverify                    Disable remote sealing verification
 ```
 
-### Gas price oracle options
+#### Gas price oracle options
 
 ```
 --gpo.blocks value                  Number of recent blocks to check for gas prices (default: 20)
@@ -263,13 +263,13 @@ help, h                            Shows a list of commands or help for one comm
 --gpo.ignoreprice value             Gas price below which gpo will ignore transactions (default: 2)
 ```
   
-### Virtual machine options
+#### Virtual machine options
 
 ```
 --vmdebug                           Record information useful for VM and contract debugging
 ```
 
-### Logging and debugging options
+#### Logging and debugging options
 
 ```
 --fakepow                           Disables proof-of-work verification
@@ -288,7 +288,7 @@ help, h                            Shows a list of commands or help for one comm
 --trace value                       Write execution trace to the given file
 ```
 
-### Metrics and stats options
+#### Metrics and stats options
 
 ```
 --metrics                              Enable metrics collection and reporting
@@ -300,20 +300,20 @@ help, h                            Shows a list of commands or help for one comm
 --metrics.influxdb.database value      InfluxDB database name to push reported metrics to (default: "geth")
 --metrics.influxdb.username value      Username to authorize access to the database (default: "test")
 --metrics.influxdb.password value      Password to authorize access to the database (default: "test")
---metrics.influxdb.tags value          Comma-separated InfluxDB tags (key/values) attached to all measurements (default: "host=localhost")
+--metrics.influxdb.tags value          Comma-separated InfluxDB tags (/values) attached to all measurements (default: "host=localhost")
 --metrics.influxdbv2                   Enable metrics export/push to an external InfluxDB v2 database
 --metrics.influxdb.token value         Token to authorize access to the database (v2 only) (default: "test")
 --metrics.influxdb.bucket value        InfluxDB bucket name to push reported metrics to (v2 only) (default: "geth")
 --metrics.influxdb.organization value  InfluxDB organization name (v2 only) (default: "geth")
 ```
   
-### Aliased (deprecated) options
+#### Aliased (deprecated) options
 
 ```
 --nousb                             Disables monitoring for and managing USB hardware wallets (deprecated)
 ```
 
-### Miscellaneous options
+#### Miscellaneous options
 
 ```
 --snapshot                          Enables snapshot-database mode (default = enable)

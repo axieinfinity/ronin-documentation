@@ -3,112 +3,123 @@ description: Install a testnet archive node using Docker.
 ---
 
 # Run an archive node
-Set up and run an archive node on the Saigon testnet.
-
-## Latest release
-### RPC node
-* [https://github.com/axieinfinity/ronin/releases/tag/v2.5.2](https://github.com/axieinfinity/ronin/releases/tag/v2.5.2)
-* [ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895](https://github.com/axieinfinity/ronin/pkgs/container/ronin/80511518?tag=v2.5.2-9bf4895)
+This guide demonstrates how to run an archive node on the Saigon testnet using Docker.
 
 ## Prerequisites
-Recommended system requirements for running an archive node on the Saigon testnet:
+### Install Docker
+* [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
-* A machine that meets the minimum hardware requirements:
-  * 4-core CPU
-  * 8 GB RAM
-  * 250 GB SSD
 
-## Set up and run
-1. In your working directory, create subdirectories for the config and chain data by running the following commands:
+### Review system requirements
+Recommended system requirements for running an archive node on the Saigon testnet:
+* 4-core CPU
+* 8 GB RAM
+* 250 GB SSD
+* x86-64 architecture
 
-```
-mkdir -p /axie/ronin-manager
-mkdir -p ~/.skymavis/chaindata/data/ronin/
-```
+These hardware requirements are rough guidelines, and each node operator
+should monitor their node to ensure good performance for the intended task.
+The size of your Ronin node will also grow over time.
 
-2. Go to the `ronin-manager` directory:
+## Install the node
+1. Set up directories:
 
-```
-cd /axie/ronin-manager
-```
+  Create a ronin directory:
+  ```
+  mkdir ~/ronin
+  ```
 
-3. Create a `docker-compose` file:
+  Go to the newly created directory:
+  ```
+  cd ~/ronin
+  ```
 
-```
-vim docker-compose.yml
-```
+  Create a directory for chain data:
+  ```
+  mkdir -p chaindata/data/ronin
+  ```
 
-4. Copy this code block to the file:
+2. Create a file called `docker-compose` file:
 
-```
-version: "3"
-services:
-  node:
-    image: ${NODE_IMAGE}
-    stop_grace_period: 5m
-    stop_signal: SIGINT
-    hostname: node
-    container_name: node
-    ports:
-      - 127.0.0.1:8545:8545
-      - 127.0.0.1:8546:8546
-      - 30303:30303
-      - 30303:30303/udp
-      - 6060:6060
-    volumes:
-      - ~/.skymavis/chaindata:/ronin
-    environment:
-      - SYNC_MODE=full
-      - PASSWORD=${PASSWORD}
-      - BOOTNODES=${BOOTNODES}
-      - NETWORK_ID=${NETWORK_ID}
-      - RONIN_PARAMS=${RONIN_PARAMS}
-      - VERBOSITY=${VERBOSITY}
-      - MINE=false
-      - GASPRICE=${GASPRICE}
-      - GENESIS_PATH=${GENESIS_PATH}
-      - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
-```
+  ```
+  vim docker-compose.yml
+  ```
 
-5. Create an `.env` file. This file contains configuration parameters for your node.
+3. Paste the following into `docker-compose.yml`:
 
-```
-vim .env
-```
+  ```
+  version: "3"
+  services:
+    node:
+      image: ${NODE_IMAGE}
+      stop_grace_period: 5m
+      stop_signal: SIGINT
+      hostname: node
+      container_name: node
+      ports:
+        - 127.0.0.1:8545:8545
+        - 127.0.0.1:8546:8546
+        - 30303:30303
+        - 30303:30303/udp
+        - 6060:6060
+      volumes:
+        - ~/.ronin/chaindata:/ronin
+      environment:
+        - SYNC_MODE=full
+        - PASSWORD=${PASSWORD}
+        - BOOTNODES=${BOOTNODES}
+        - NETWORK_ID=${NETWORK_ID}
+        - RONIN_PARAMS=${RONIN_PARAMS}
+        - VERBOSITY=${VERBOSITY}
+        - MINE=false
+        - GASPRICE=${GASPRICE}
+        - GENESIS_PATH=${GENESIS_PATH}
+        - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
+  ```
 
-6. Copy this code block to the file, replacing the `insert-...` values with your information:
+  This compose file defines the `node` service, which pulls a Ronin node image from the GitHub Container Registry.
 
-```
-# BOOTNODES address of the bootnode to connect to the network, will be auto-filled
-BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
-# NETWORK_ID network id
-NETWORK_ID=40925
-# Setting for oracle services, where staging = rinkey + testnet, and production = ethereum + mainnet.
-DEPLOYMENT=test
-# Setting nodekey
-GASPRICE=20000000000
+4. Create an `.env` file to store configuration parameters for the service:
 
-# INSTANCE_NAME is the name of your instance that you want to display on the stats page.
-INSTANCE_NAME=insert-your-instance-name
+  ```
+  vim .env
+  ```
 
-# Password to protect your private key.
-PASSWORD=123456
+5. Paste the following into `.env`:
 
-CONFIG_PATH=config.testnet.json
-NODE_IMAGE=ghcr.io/axieinfinity/ronin:v2.5.2-9bf4895
-VERBOSITY=3
+  ```
+  BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
 
-CHAIN_STATS_WS_SECRET=xQj2MZPaN6
-CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
-GENESIS_PATH=testnet.json
+  NETWORK_ID=40925
+  GASPRICE=20000000000
 
-RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
-```
+  DEPLOYMENT=test
 
-7. Start the node:
+  INSTANCE_NAME=insert-instance-name
 
-```
-docker-compose up -d 
-```
+  PASSWORD=insert-password
 
-8. After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
+  NODE_IMAGE=insert-latest-node-image
+  VERBOSITY=3
+
+  CHAIN_STATS_WS_SECRET=xQj2MZPaN6
+  CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
+  GENESIS_PATH=testnet.json
+
+  RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
+  ```
+
+  Replace the following values in the `.env` file with your information:
+  * `INSTANCE_NAME`: The name of your node that you want to be displayed on the [stats page](https://saigon-stats.roninchain.com/).
+  * `PASSWORD`: The password to encrypt the node's keyfile.
+  * `NODE_IMAGE`: The latest version of the node's image, which can be found under [Ronin node](./../latest.md#ronin-node).
+
+6. Start the node:
+
+  ```
+  cd ~/ronin && docker-compose up -d
+  ```
+  
+  This command pulls a Ronin node image and starts the service you defined.
+
+7. After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
