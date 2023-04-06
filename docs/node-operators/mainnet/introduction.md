@@ -6,7 +6,7 @@ title: Introduction
 import DocCardList from '@theme/DocCardList'; 
 import {findSidebarItem} from '@site/src/sidebarUtils';
 
-# Introduction to node setup
+# Introduction to node installation
 If you’re interested in setting up a node on the Ronin mainnet, here are some hardware recommendations and guides on different methods of installation. If you're looking for testnet installation guides, see [Saigon testnet](node-operators/testnet).
 
 ## Prerequisites
