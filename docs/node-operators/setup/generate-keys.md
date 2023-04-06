@@ -42,6 +42,6 @@ You can generate private keys using the Ronin Wallet—both the browser extensio
 
 <img src={extension} width={1440} />
 
-### Mobile app (iOS)
+### Mobile app
 
 <img src={mobile} width={1440} />
