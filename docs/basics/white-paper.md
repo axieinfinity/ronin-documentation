@@ -59,7 +59,7 @@ To perform a non-detectable attack—when the Byzantine validators can only seal
 Out of the total supply of 1,000,000,000 RON tokens, 25% are allocated to fund the staking reward. According to the [release schedule](./tokenomics.md), the rewards are set to be allocated over 108 months.
 
 ### Rewards for validators and delegators
-Validators have two sources of rewards: transaction fees and 90\% of the staking reward. When the validator generates a block, they earn the transaction fees in that block and some fixed amount of the staking reward.
+Validators have two sources of rewards: transaction fees and 90% of the staking reward. When the validator generates a block, they earn the transaction fees in that block and some fixed amount of the staking reward.
 
 * The reward is not sent to the validator right away, but is distributed and accumulated on a smart contract.
 * At the end of each day, the smart contract allocates the reward to the validator and their delegators. The allocation happens only to
