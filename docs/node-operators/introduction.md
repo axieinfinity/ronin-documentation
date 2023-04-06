@@ -25,7 +25,7 @@ subsequent block, and earning RON tokens as a reward. These are the nodes that a
 
 Validator and non-validator are considered *full* nodes—they store full blockchain data, which is periodically pruned so the node does not store all state data back to genesis. The archive node, on the other hand, stores all of the information that a full node does but also builds an archive of historical states all the way back to genesis.
 
-A validator node starts life as a full node, but has also “registered” itself to the network as a validator by submitting a special transaction from its account. Registration means that it may now accept RON token stake and potentially be included in the validator set that conduct network consensus.
+A validator node starts life as a full node, but has also “registered” itself to the network as a validator, which means that it may now accept RON token stake and potentially be included in the validator set that conduct network consensus.
 
 ## What is a bridge operator node?
 The *bridge operator node* ([GitHub](https://github.com/axieinfinity/bridge-v2)), also referred to as the bridge operator, is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge—the blockchain bridge that facilitates asset transfers between Ronin and other EVM-based chains.
