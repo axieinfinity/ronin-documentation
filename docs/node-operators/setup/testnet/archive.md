@@ -1,5 +1,6 @@
 ---
 description: Install a testnet archive node using Docker.
+slug: /node-operators/testnet/archive
 ---
 
 # Run an archive node

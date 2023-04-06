@@ -1,9 +1,9 @@
 ---
-description: Build the CLI and compile a node binary from source.
+description: Build a CLI tool and compile a node binary from source.
 ---
 
-# Build the Ronin CLI
-This guide demonstrates how to build the Ronin CLI (command-line tool) and compile the node binary on your own instead of using a packed binary from Docker. With the CLI tool, you can install the Ronin node and configure it as a full node (default), validator node, or archive node.
+# Build a Ronin CLI
+This guide demonstrates how to build a Ronin CLI (command-line tool) and compile the node binary on your own instead of using a packed binary from Docker. With the CLI tool, you can install the Ronin node and configure it as a full node (default), validator node, or archive node.
 
 ### Prerequisites
 To build the Ronin CLI, you need to install the following dependencies:

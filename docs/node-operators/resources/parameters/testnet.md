@@ -1,10 +1,10 @@
 ---
-description: Saigon testnet configuration.
+description: Parameters of the Saigon testnet.
 ---
 
 # Saigon testnet
 
-## Configuration
+## Parameters
 * Chain ID (network ID): `2021`
 * RPC endpoint: [https://saigon-testnet.roninchain.com/rpc](https://saigon-testnet.roninchain.com/rpc)
 * Consensus: DPoS (Consortium)

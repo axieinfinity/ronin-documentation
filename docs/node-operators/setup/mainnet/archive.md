@@ -1,5 +1,6 @@
 ---
 description: Install a mainnet archive node using Docker.
+slug: /node-operators/mainnet/archive
 ---
 
 # Run an archive node

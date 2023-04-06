@@ -39,7 +39,7 @@ bridge     | INFO [03-22|07:59:10.368] [RoninListener] Voter account            
 Also check the node's availability on https://stats.roninchain.com/.
 
 ### 3. How do I generate the required private keys? {#3}
-See [Generate keys](./../generate-keys.md).
+See [Generate keys](./../setup/generate-keys.md).
 
 ### 4. Should chain governor address be different from admin address? {#4}
 We recommend using different governor and admin addresses to reduce the impact of leaks or losses to either account.
@@ -64,7 +64,7 @@ To harden your node, see [Security hardening](./../resources/security.md).
 ### 8. If there is a node or bridge upgrade, how do I get this information? {#8}
 Latest version of Ronin and its changelog are always available at [Ronin release](https://github.com/axieinfinity/ronin/releases). A good way to keep track of upgrades is to join our [Discord](https://discord.gg/roninnetwork).
 
-To upgrade your node, see [Latest version](./../latest.md).
+To upgrade your node, see [Latest version](./../setup/latest.md).
 
 ### 9. How much time do I have to upgrade my nodes? {#9}
 Upgrades are usually backwards-compatible. It can contain performance improvements, bug fixes or new features. It's recommended that every node is upgraded as soon as possible.

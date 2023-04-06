@@ -1,10 +1,10 @@
 ---
-description: Ronin mainnet configuration.
+description: Parameters of the Ronin mainnet.
 ---
 
 # Ronin mainnet
 
-## Configuration
+## Parameters
 * Chain ID (network ID): `2020`
 * RPC endpoint: [https://api.roninchain.com/rpc](https://api.roninchain.com/rpc)
 * Consensus: DPoS (Consortium)

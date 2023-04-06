@@ -1,31 +1,30 @@
 ---
-description: Instll a standalone mainnet validator node using Docker.
+description: Install a mainnet non-validator node using Docker.
+slug: /node-operators/mainnet/non-validator
 ---
 
-# Run a standalone validator 
-This guide demonstrates how to run a validator node on the mainnet using Docker.
-As a validator, you're required to run a bridge operator node as well as the validator node. Therefore, after you install the validator following the steps in this guide, proceed to set up your [bridge operator node](./bridge.md).
+# Run a non-validator node
+This guide demonstrates how to run a non-validator node on the mainnet using Docker.
+This node is known as an RPC (remote procedure call) node,
+because it's used for serving RPC requests.
 
 ## Prerequisites
 ### Docker
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-### Private key
-Generate a private key for your validator node as described in [Generate keys](./../generate-keys.md).
-
 ### System requirements
-Recommended system requirements for running a validator node on the mainnet:
-* 8-core CPU
-* 32 GB RAM
+Recommended system requirements for running a non-validator node on the mainnet:
+* 6-core CPU
+* 25 GB RAM
 * 700 GB high-speed SSD
 * x86-64 architecture
 
-These requirements are rough guidelines, and each node operator
+These hardware requirements are rough guidelines, and each node operator
 should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
-## Install the node 
+## Install the node
 1. Set up directories:
 
   Create a node directory:
@@ -74,7 +73,6 @@ The size of your node will also grow over time.
       environment:
         - SYNC_MODE=full
         - PASSWORD=${PASSWORD}
-        - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
         - BOOTNODES=${BOOTNODES}
         - NETWORK_ID=${NETWORK_ID}
         - RONIN_PARAMS=${RONIN_PARAMS}
@@ -85,7 +83,7 @@ The size of your node will also grow over time.
         - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
   ```
 
-  This compose file defines the `node` service, which pulls the Ronin node image from the GitHub Container Registry.  
+  This compose file defines the `node` service, which pulls a Ronin node image from the GitHub Container Registry.
 
 4. Create an `.env` file to store configuration parameters for the service:
 
@@ -98,12 +96,12 @@ The size of your node will also grow over time.
   ```
   INSTANCE_NAME=insert-instance-name
   NODE_IMAGE=insert-latest-node-image
-  VALIDATOR_PRIVATE_KEY=insert-validator-private-key
   PASSWORD=insert-password
 
-  MINE=true
+  MINE=false
 
   BOOTNODES=enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303
+  
   NETWORK_ID=2020
   GASPRICE=20000000000
   VERBOSITY=3
@@ -111,14 +109,13 @@ The size of your node will also grow over time.
   CHAIN_STATS_WS_SECRET=xQj2MZPaN6
   CHAIN_STATS_WS_SERVER=stats.roninchain.com
 
-  RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
+  RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
 
-  Replace the following values in the `.env` file with your node's information:
-     * `INSTANCE_NAME`: The name of your node that you want to be displayed on the [stats page](https://stats.roninchain.com/).
-     * `VALIDATOR_PRIVATE_KEY`: Your validator private key without the `0x` prefix.
-     * `NODE_IMAGE`: The version of your node's image, which can be found under [Ronin node](./../latest.md#ronin-node).
-     * `PASSWORD`: The password to encrypt the node's keyfile.
+  Replace the following values in the `.env` file with your information:
+  * `INSTANCE_NAME`: The name of your node that you want to be displayed on the [stats page](https://stats.roninchain.com/).
+  * `NODE_IMAGE`: The version of your node's image, which can be found under [Ronin node](./../latest.md#ronin-node).
+  * `PASSWORD`: The password to encrypt the node's keyfile.
 
 6. (Optional) Download the snapshot:
 
@@ -143,6 +140,3 @@ The size of your node will also grow over time.
   ```
 
 9. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
-
-## What's next
-Install and run a bridge operator as described in [Run a bridge operator node](./bridge.md).
