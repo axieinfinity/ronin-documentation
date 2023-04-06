@@ -3,7 +3,7 @@ description: Build a CLI tool and compile a node binary from source.
 ---
 
 # Build a Ronin CLI
-This guide demonstrates how to build a Ronin CLI (command-line tool) and compile the node binary on your own instead of using a packed binary from Docker. With the CLI tool, you can install the Ronin node and configure it as a full node (default), validator node, or archive node.
+This guide demonstrates how to build a Ronin CLI (command-line tool) and compile the node binary on your own instead of using a packed binary from Docker. With the CLI tool, you can install the Ronin node and configure it as a non-validator node (default), validator node, or archive node.
 
 ### Prerequisites
 To build the Ronin CLI, you need to install the following dependencies:
@@ -38,14 +38,14 @@ To build the Ronin CLI, you need to install the following dependencies:
   ```
 
 ### 2. Initialize the genesis block
-Before running a node, you need to initialize the genesis block to set up the origin state of the chain. The genesis file is located in the repository's `genesis` directory.
+Before running a node, you need to initialize the genesis block to set up the origin state of the chain. The genesis files are located in the repository's `genesis` directory, and include the path where you store the node's data—for example, `/ronin/data`.
 
   ```
-  ronin init genesis/mainnet.json --datadir <path-to-your-node-directory>
+  ronin init genesis/mainnet.json --datadir /ronin/data
   ```
 
 ### 3. Start the node
-Run the following command to start a full (non-validating) Ronin node on the mainnet:
+Run the following command to start a full (non-validator) Ronin node on the mainnet:
 
   ```
   ronin --networkid 2020 \
