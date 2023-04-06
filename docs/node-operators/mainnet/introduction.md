@@ -1,19 +1,16 @@
 ---
 description: Hardware recommendations and methods of installation.
+title: Introduction
 ---
 
 import DocCardList from '@theme/DocCardList'; 
 import {findSidebarItem} from '@site/src/sidebarUtils';
 
-# Introduction
-If you’re interested in setting up a node, here are some hardware recommendations and guides on different methods of installation.
-
-:::info
-On Ronin, each validator is required to run a validator node and a bridge operator. The latter is required to facilitate asset transfers on Ronin Bridge. A validator who doesn't run a bridge operator is not eligible for block rewards.
-:::
+# Introduction to node setup
+If you’re interested in setting up a node on the Ronin mainnet, here are some hardware recommendations and guides on different methods of installation. If you're looking for testnet installation guides, see [Saigon testnet](node-operators/testnet).
 
 ## Prerequisites
-To run a reliable, performant node, we suggest that the node’s hardware profile should match or exceed the following specifications:
+To run a reliable, performant node on the Ronin mainnet, we suggest that the node’s hardware profile should match or exceed the following specifications:
 
 |   Validator node          |   Non-validator node      |   Archive node         |   Bridge operator         |
 |---------------------------|---------------------------|------------------------|---------------------------|
@@ -25,7 +22,7 @@ To run a reliable, performant node, we suggest that the node’s hardware profil
 These hardware requirements are rough guidelines, and each node operator should monitor their node to ensure good performance for the intended task. The size of your Ronin node will also grow over time.
 
 ## Get started with node installation
-We offer one two different methods of installing Ronin nodes:
+We offer two different methods of installing nodes:
 * The Docker method describes the installation of Ronin nodes as Docker instances, for those comfortable with Docker. Two different approaches to setting up your nodes using Docker are described in the following sections.
 * The CLI (command line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build your node using Ronin CLI](./../cli.md).
 
@@ -41,7 +38,7 @@ In a combined setup, the validator and the bridge are defined in the same `docke
 
 Follow this guide for a combined setup:
 <DocCardList items={[ 
-    findSidebarItem('/docs/node-operators/mainnet/combined-validator'),
+    findSidebarItem('/docs/node-operators/mainnet/combined'),
     ]} />
 
 #### Standalone setup

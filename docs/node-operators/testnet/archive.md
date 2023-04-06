@@ -6,11 +6,11 @@ description: Install a testnet archive node using Docker.
 This guide demonstrates how to run an archive node on the Saigon testnet using Docker.
 
 ## Prerequisites
-### Install Docker
+### Docker
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-### Review system requirements
+### System requirements
 Recommended system requirements for running an archive node on the Saigon testnet:
 * 4-core CPU
 * 8 GB RAM
@@ -39,7 +39,7 @@ The size of your Ronin node will also grow over time.
   mkdir -p chaindata/data/ronin
   ```
 
-2. Create a file called `docker-compose` file:
+2. Create a file called `docker-compose`:
 
   ```
   vim docker-compose.yml

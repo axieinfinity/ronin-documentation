@@ -238,6 +238,8 @@ const sidebars = {
         id: 'node-operators/index',        
       },
       items: [
+        // Introduction
+        'node-operators/introduction',
         {
           type: 'category',
           label: 'Setup',
@@ -253,12 +255,12 @@ const sidebars = {
             // Latest version
             'node-operators/latest',
             // Run a validator and bridge together
-            'node-operators/mainnet/combined-validator',
+            'node-operators/mainnet/combined',
             // Run a standalone validator
             'node-operators/mainnet/validator',
             // Run a standalone bridge
             'node-operators/mainnet/bridge',
-            // Run a non-validator
+            // Run a full node
             'node-operators/mainnet/non-validator',
             // Run an archive node
             'node-operators/mainnet/archive',
@@ -310,32 +312,14 @@ const sidebars = {
             slug: '/node-operators/testnet',
           },
           items: [
-            // Run a validator node
-            'node-operators/testnet/validator',
-            // Run a bridge node
-            'node-operators/testnet/bridge',
+            // Run a validator and bridge together
+            'node-operators/testnet/combined',
             // Run a non-validator-node
             'node-operators/testnet/non-validator',
             // Run a full archive node
             'node-operators/testnet/archive',
           ],
         },
-        // Node setup tutorials
-        // {
-        //   type: 'category',
-        //   label: 'Tutorials',
-        //   link: {
-        //     type: 'generated-index',
-        //     title: 'Tutorials',
-        //     slug: '/node-operators/tutorials',
-        //   },
-        //   items: [
-        //     // Run a validator node on AWS
-        //     'node-operators/tutorials/aws-setup',
-        //     // Run a validator node on GCP
-        //     'node-operators/tutorials/gcp-setup',
-        //   ],
-        // },
       ],
     },
     // Developers

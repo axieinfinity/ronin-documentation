@@ -21,7 +21,7 @@ You have *seven* days to deposit more RON to meet the minimum staking amount (25
 Your uptime, total staking amount, and APR (annual percentage rate).
 
 ### 6. What are the rewards for a validator? {#6}
-Validators receive fixed block rewards and transaction fees for producing blocks on Ronin. During the first year, validators also earn bridge rewards.
+Validators receive fixed block reward and transaction fees for producing blocks on Ronin. During the first year, validators also earn bridge rewards.
 
 ### 7. How can I become a Governing Validator? {#7}
 This is done by [submitting](governance/create.mdx) a proposal. Any existing Governing Validator can propose to add another Governing Validator. If the proposal receives enough votes, the proposed validator becomes a Governing Validator.

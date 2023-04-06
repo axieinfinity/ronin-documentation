@@ -6,11 +6,11 @@ description: Install a mainnet archive node using Docker.
 This guide demonstrates how to run an archive node on the mainnet using Docker.
 
 ## Prerequisites
-### Install Docker
+### Docker
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-### Review system requirements
+### System requirements
 Recommended system requirements for running an archive node on the mainnet:
 * 8-core CPU
 * 32 GB RAM
@@ -111,7 +111,7 @@ The size of your Ronin node will also grow over time.
   * `PASSWORD`: The password to encrypt the node's keyfile.
   * `NODE_IMAGE`: The latest version of the node's image, which can be found under [Ronin node](./../latest.md#ronin-node).
 
-6. Start your node:
+6. Start the node:
    
   ```
   cd ~/ronin && docker-compose up -d
@@ -119,4 +119,4 @@ The size of your Ronin node will also grow over time.
 
   This command pulls a Ronin node image and starts the service you defined.
 
-1. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of the node. If it's green, the node is connected and up to date with the network.
+7. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of the node. If it's green, the node is connected and up to date with the network.

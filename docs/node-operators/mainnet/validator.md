@@ -7,14 +7,14 @@ This guide demonstrates how to run a validator node on the mainnet using Docker.
 As a validator, you're required to run a bridge operator node as well as the validator node. Therefore, after you install the validator following the steps in this guide, proceed to set up your [bridge operator node](./bridge.md).
 
 ## Prerequisites
-### Install Docker
+### Docker
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-### Generate a key
+### Private key
 Generate a private key for your validator node as described in [Generate keys](./../generate-keys.md).
 
-### Review system requirements
+### System requirements
 Recommended system requirements for running a validator node on the mainnet:
 * 8-core CPU
 * 32 GB RAM
@@ -46,7 +46,7 @@ The size of your node will also grow over time.
   mkdir -p chaindata/data/ronin
   ```
 
-2. Create a `docker-compose.yml` file:
+2. Create a file called `docker-compose.yml`:
 
   ```
   vim docker-compose.yml
@@ -128,7 +128,7 @@ The size of your node will also grow over time.
   mv <uncompressed data> chaindata
   ```
 
-7. Start your node:
+7. Start the node:
 
   ```
   cd ~/ronin && docker-compose up -d
@@ -145,4 +145,4 @@ The size of your node will also grow over time.
 9. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
 ## What's next
-Set up your bridge operator as described in [Run a bridge operator node](./bridge.md).
+Install and run a bridge operator as described in [Run a bridge operator node](./bridge.md).

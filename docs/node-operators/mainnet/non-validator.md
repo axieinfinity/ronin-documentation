@@ -8,15 +8,16 @@ This node is known as an RPC (remote procedure call) node,
 because it's used for serving RPC requests.
 
 ## Prerequisites
-### Install Docker
+### Docker
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
-### Review system requirements
+### System requirements
 Recommended system requirements for running a non-validator node on the mainnet:
 * 6-core CPU
 * 25 GB RAM
 * 700 GB high-speed SSD
+* x86-64 architecture
 
 These hardware requirements are rough guidelines, and each node operator
 should monitor their node to ensure good performance for the intended task.
@@ -43,13 +44,13 @@ The size of your node will also grow over time.
   mkdir -p chaindata/data/ronin
   ```
 
-2. Create a `docker-compose.yml` file:
+2. Create a file called `docker-compose.yml`:
 
   ```
   vim docker-compose.yml
   ```
 
-3. Paste this following into `docker-compose.yml`:
+3. Paste the following into `docker-compose.yml`:
 
   ```
   version: "3"
@@ -81,7 +82,7 @@ The size of your node will also grow over time.
         - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
   ```
 
-  This compose file defines the `node` service, which pulls the Ronin node image from the GitHub Container Registry.
+  This compose file defines the `node` service, which pulls a Ronin node image from the GitHub Container Registry.
 
 4. Create an `.env` file to store configuration parameters for the service:
 
@@ -99,6 +100,7 @@ The size of your node will also grow over time.
   MINE=false
 
   BOOTNODES=enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303
+  
   NETWORK_ID=2020
   GASPRICE=20000000000
   VERBOSITY=3
@@ -122,7 +124,7 @@ The size of your node will also grow over time.
   mv <uncompressed data> chaindata
   ```
 
-7. Start your node:
+7. Start the node:
 
   ```
   cd ~/ronin && docker-compose up -d

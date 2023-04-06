@@ -13,48 +13,48 @@ To build the Ronin CLI, you need to install the following dependencies:
 ### 1. Build locally
 1. Clone the Ronin repository:
 
-```
-git clone git@github.com:axieinfinity/ronin.git
-```
+  ```
+  git clone git@github.com:axieinfinity/ronin.git
+  ```
 
 2. Go to the `ronin` directory:
 
-```
-cd ronin
-```
+  ```
+  cd ronin
+  ```
 
 3. Build the binary:
 
-```
-make ronin
-```
+  ```
+  make ronin
+  ```
 
-This command creates a `ronin` binary inside the `.build/bin` directory.
+  This command creates a `ronin` binary inside the `.build/bin` directory.
 
-4. To run the binary without specifying the binary location in each command, make sure to set up the `./build/bin/ronin` path in the `$PATH` environment variable:
+4. To run the binary without specifying the binary location in each command, make sure to set up the `./build/bin/ronin` path in the `$PATH` environment variable. 
 
-```
-cp ./build/bin/ronin /usr/local/bin
-```
+  ```
+  cp ./build/bin/ronin /usr/local/bin
+  ```
 
 ### 2. Initialize the genesis block
 Before running a node, you need to initialize the genesis block to set up the origin state of the chain. The genesis file is located in the repository's `genesis` directory.
 
-```
-ronin init genesis/mainnet.json --datadir <path-to-your-node-directory>
-```
+  ```
+  ronin init genesis/mainnet.json --datadir <path-to-your-node-directory>
+  ```
 
 ### 3. Start the node
 Run the following command to start a full (non-validating) Ronin node on the mainnet:
 
-```
-ronin --networkid 2020 \
---bootnodes enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303 \
---datadir /ronin/data \
---port 30303 \
---http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' \
---ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*'
-```
+  ```
+  ronin --networkid 2020 \
+  --bootnodes enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303 \
+  --datadir /ronin/data \
+  --port 30303 \
+  --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' \
+  --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*'
+  ```
 
 ### Command reference
 
@@ -100,7 +100,7 @@ help, h                            Shows a list of commands or help for one comm
   --datadir value                     Data directory for the databases and store (default: "/Users/mac/Library/Ethereum")
   --datadir.ancient value             Data directory for ancient chain segments (default = inside chaindata)
   --datadir.minfreedisk value         Minimum free disk space in MB, once reached triggers auto shut down (default = --cache.gc converted to MB, 0 = disabled)
-  --store value                    Directory for the store (default = inside the datadir)
+  --keystore value                    Directory for the keystore (default = inside the datadir)
   --usb                               Enable monitoring and management of USB hardware wallets
   --pcscdpath value                   Path to the smartcard daemon (pcscd) socket file
   --networkid value                   Explicitly set network id (integer)(For testnets: use --ropsten, --rinkeby, --goerli instead) (default: 1)
@@ -116,7 +116,7 @@ help, h                            Shows a list of commands or help for one comm
   --ethstats value                    Reporting URL of a ethstats service (nodename:secret@host:port)
   --identity value                    Custom node name
   --lightkdf                          Reduce -derivation RAM & CPU usage at some expense of KDF strength
-  --whitelist value                   Comma separated block number-to-hash mappings to enforce (<number>=<hash>)
+  --whitelist value                   Comma-separated block number-to-hash mappings to enforce (<number>=<hash>)
 ```
   
 #### Light client options
@@ -157,7 +157,7 @@ help, h                            Shows a list of commands or help for one comm
 #### Transaction pool options
 
 ```
---txpool.locals value               Comma separated accounts to treat as locals (no flush, priority inclusion)
+--txpool.locals value               Comma-separated accounts to treat as locals (no flush, priority inclusion)
 --txpool.nolocals                   Disables price exemptions for locally submitted transactions
 --txpool.journal value              Disk journal for local transaction to survive node restarts (default: "transactions.rlp")
 --txpool.rejournal value            Time interval to regenerate the local transaction journal (default: 1h0m0s)
@@ -187,7 +187,7 @@ help, h                            Shows a list of commands or help for one comm
 #### Account options
 
 ```
---unlock value                      Comma separated list of accounts to unlock
+--unlock value                      Comma-separated list of accounts to unlock
 --password value                    Password file to use for non-interactive password input
 --signer value                      External signer (url or path to ipc file)
 --allow-insecure-unlock             Allow insecure account unlocking when account-related RPCs are exposed by http
@@ -203,8 +203,8 @@ help, h                            Shows a list of commands or help for one comm
 --http.port value                   HTTP-RPC server listening port (default: 8545)
 --http.api value                    API's offered over the HTTP-RPC interface
 --http.rpcprefix value              HTTP path path prefix on which JSON-RPC is served. Use '/' to serve on all paths.
---http.corsdomain value             Comma separated list of domains from which to accept cross origin requests (browser enforced)
---http.vhosts value                 Comma separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
+--http.corsdomain value             Comma-separated list of domains from which to accept cross origin requests (browser enforced)
+--http.vhosts value                 Comma-separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
 --ws                                Enable the WS-RPC server
 --ws.addr value                     WS-RPC server listening interface (default: "localhost")
 --ws.port value                     WS-RPC server listening port (default: 8546)
@@ -212,21 +212,21 @@ help, h                            Shows a list of commands or help for one comm
 --ws.rpcprefix value                HTTP path prefix on which JSON-RPC is served. Use '/' to serve on all paths.
 --ws.origins value                  Origins from which to accept websockets requests
 --graphql                           Enable GraphQL on the HTTP-RPC server. Note that GraphQL can only be started if an HTTP server is started as well.
---graphql.corsdomain value          Comma separated list of domains from which to accept cross origin requests (browser enforced)
---graphql.vhosts value              Comma separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
+--graphql.corsdomain value          Comma-separated list of domains from which to accept cross origin requests (browser enforced)
+--graphql.vhosts value              Comma-separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
 --rpc.gascap value                  Sets a cap on gas that can be used in eth_call/estimateGas (0=infinite) (default: 50000000)
 --rpc.evmtimeout value              Sets a timeout used for eth_call (0=infinite) (default: 5s)
 --rpc.txfeecap value                Sets a cap on transaction fee (in ether) that can be sent via the RPC APIs (0 = no cap) (default: 1)
 --rpc.allow-unprotected-txs         Allow for unprotected (non EIP155 signed) transactions to be submitted via RPC
 --jspath loadScript                 JavaScript root path for loadScript (default: ".")
 --exec value                        Execute JavaScript statement
---preload value                     Comma separated list of JavaScript files to preload into the console
+--preload value                     Comma-separated list of JavaScript files to preload into the console
 ```
 
 #### Networking options
 
 ```
---bootnodes value                   Comma separated enode URLs for P2P discovery bootstrap
+--bootnodes value                   Comma-separated enode URLs for P2P discovery bootstrap
 --discovery.dns value               Sets DNS discovery entry points (use "" to disable DNS)
 --port value                        Network listening port (default: 30303)
 --maxpeers value                    Maximum number of network peers (network disabled if set to 0) (default: 50)
@@ -235,8 +235,9 @@ help, h                            Shows a list of commands or help for one comm
 --nodiscover                        Disables the peer discovery mechanism (manual peer addition)
 --v5disc                            Enables the experimental RLPx V5 (Topic Discovery) mechanism
 --netrestrict value                 Restricts network communication to the given IP networks (CIDR masks)
---node value                     P2P node  file
---nodehex value                  P2P node  as hex (for testing)
+--node value                        P2P node  file
+--nodekey value                     P2P node key file
+--nodehex value                     P2P node as hex (for testing)
 ```
 
 #### Miner options
@@ -244,7 +245,7 @@ help, h                            Shows a list of commands or help for one comm
 ```
 --mine                              Enable mining
 --miner.threads value               Number of CPU threads to use for mining (default: 0)
---miner.notify value                Comma separated HTTP URL list to notify of new work packages
+--miner.notify value                Comma-separated HTTP URL list to notify of new work packages
 --miner.notify.full                 Notify with pending block headers instead of work packages
 --miner.gasprice value              Minimum gas price for mining a transaction (default: 1000000000)
 --miner.gaslimit value              Target gas ceiling for mined blocks (default: 8000000)
