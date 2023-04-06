@@ -106,7 +106,7 @@ On Ronin, the node types are as follows:
 * Bridge operator node
 
 For more information about the Ronin nodes and the bridge operator, see
-[Introduction for node operators](./../node-operators/introduction.md).
+[Introduction to nodes](./../node-operators/introduction.md).
 
 ### Node operator
 A node operator is an individual or institution that sets up and configure nodes for the validator. The node operator and validator might actually be the same person or entity. but, this documentation makes a distinction between these roles for clarity. For example, see sections [Node operators](/docs/node-operators) and [Validators](/docs/validators). 
