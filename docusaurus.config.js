@@ -167,6 +167,19 @@ const config = {
             ],
           },
           {
+            title: 'Links',
+            items: [
+              {
+                label: 'RON Staking',
+                href: 'https://app.roninchain.com/staking/',
+              },
+              {
+                label: 'Validator Dashboard',
+                href: 'https://validator.roninchain.com/',
+              },
+            ],
+          },
+          {
             title: 'More',
             items: [
               {

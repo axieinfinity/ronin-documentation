@@ -8,10 +8,11 @@ import mobile from './assets/mobile.png';
 # Generate keys
 This guide demonstrates how to generate private keys for your nodes.
 
-## Prerequisites
-You need to have [Golang](https://go.dev/doc/install) installed.
-
 ## Generate private keys locally
+### Prerequisites
+[Go](https://go.dev/doc/install) (version 1.17 or later)
+
+### Steps
 1. Compile the `ethkey` tool from the Ronin source code by running the 
 following commands:
 
@@ -24,12 +25,12 @@ following commands:
     -rwxr-xr-x 1 user staff 16306850 Mar 23 18:13 ethkey
     ```
 
-2. Generate the key and set a password:
+1. Generate the key and set a password:
     ```
     ./ethkey generate your-key-name
     ```
 
-3. Reveal the key and enter the password:
+2. Reveal the key and enter the password:
 
     ```
     $ ./ethkey inspect --private your-key-name
