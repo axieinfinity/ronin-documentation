@@ -24,7 +24,7 @@ For example, a Ronin block contains information about the date, time, and number
 A block explorer is a software interface that enables users to access real-time blockchain information like transactions, blocks, addresses, nodes, and balances on a particular network. On Ronin, the explorer software is called [Ronin Block Explorer](https://app.roninchain.com/dashboard).
 
 ### Block reward
-A block reward is the payment awarded to a validator for successfully validating a new block. On Ronin, the block reward is shared between validators and delegators.
+A block reward is the payment awarded to a validator for successfully validating a new block.
 
 ### Blockchain
 A blockchain is a public ledger of transactions that is maintained and verified by a decentralized, peer-to-peer (P2P) network of computers that adhere to a consensus mechanism to confirm data. Each computer in a blockchain network maintains its own copy of the shared record, making it nearly impossible for a single computer to alter past transactions or for malicious actors to overwhelm the network.
@@ -59,14 +59,14 @@ One example of a Ronin dApp is the [Katana](https://katana.roninchain.com) decen
 A decentralized exchange (DEX) is a financial services platform for buying, trading, and selling digital assets. On a DEX, users transact directly on the blockchain in a peer-to-peer (P2P) fashion without the need for a centralized intermediary.
 
 ### Delegated Proof of Stake (DPoS)
-Delegated Proof of Stake (DPoS) is a consensus mechanism with a distinct voting and delegation structure. A DPoS system allows users to delegate their own stake to a validator node of their choosing—and vote for the node to be selected as a validator in the next day. Selected validators receive block rewards after verifying the transactions in a block, and those rewards are then shared with users who delegated them as validators.
+Delegated Proof of Stake (DPoS) is a consensus mechanism with a distinct voting and delegation structure. A DPoS system allows users to delegate their own stake to a validator node of their choosing—and vote for the node to be selected as a validator in the next day. Selected validators receive the block reward after verifying the transactions in a block, and that reward is then shared with users who delegated them as validators.
 
 ### Delegator
 A delegator is a RON token holder—an individual or institution—who contributes some amount of their tokens to a validator in exchange for a portion of a staking reward and the ability to vote for the validator to be elected in the validator set.
 
 ## E
 ### Epoch
-While this varies depending on the blockchain protocol, an epoch generally refers to a specific number of blocks—or a specific or approximate period of time. Generally found on blockchains that utilize Proof of Stake (PoS), different PoS protocols have different ways of defining an epoch (if they use them). Epochs are used to reach security checkpoints, distribute staking rewards, or assign a new group of blockchain validators. For example, an epoch on Ronin lasts 200 blocks, which is roughly equal to 10 minutes.
+While this varies depending on the blockchain protocol, an epoch generally refers to a specific number of blocks—or a specific or approximate period of time. Generally found on blockchains that utilize Proof of Stake (PoS), different PoS protocols have different ways of defining an epoch (if they use them). Epochs are used to reach security checkpoints, distribute the staking reward, or assign a new group of blockchain validators. For example, an epoch on Ronin lasts 200 blocks, which is roughly equal to 10 minutes.
 
 ### Ethereum
 Ethereum launched in 2015 as a decentralized, blockchain-based global supercomputer to serve as the foundation for an ecosystem of interoperable, decentralized applications (dApps) powered by token economies and smart contracts. Assets and applications designed on Ethereum are built with self-executing smart contracts that remove the need for an intermediary. The network is fueled by its native cryptocurrency ether (ETH), which is used to pay network transaction fees.
@@ -92,32 +92,21 @@ A mainnet is a fully developed and released version of a blockchain network. Thi
 
 ## N
 ### Node
-A node is a computer that performs a certain function on a blockchain network and runs client software in order to do so. Some nodes validate transactions, while others observe activity on the blockchain. Nodal network structure is also a key aspect of maintaining security on a blockchain network.
+A node is a computer that performs a certain function on a blockchain network
+and runs client software in order to do so. Some nodes validate transactions,
+while others observe activity on the blockchain. Nodal network structure is
+also a key aspect of maintaining security on a blockchain network.
 
 On Ronin, the node types are as follows:
-* Validator node
+* Ronin node
+  * Full node
+    * Validator node
+    * Non-validator node
+  * Archive node
 * Bridge operator node
-* Non-validator node (RPC)
-* Archive node
 
-The validator node and non-validator node are full nodes—they store full blockchain data, which is periodically pruned so the node does not store all state data back to genesis.
-
-The archive node, on the other hand, retains all historical data right back to genesis. It stores all of the information that a full node does and builds an archive of historical blockchain states.
-
-#### Validator node
-A validator node is responsible for verifying and approving transactions
-submitted by users and blockchain clients. Upon the close of a transaction block, validator nodes are randomly chosen to validate block data, thus generating the subsequent block, and earning RON tokens as a reward.
-
-#### Bridge operator node
-A bridge operator node is used to acknowledge deposit and withdrawal events to facilitate asset transfers between Ronin and other EVM-based chains. Each validator has the responsibility to run a bridge operator node as well as the validator node. A validator who doesn't do so is unable to claim block rewards.
-
-#### Non-validator node (RPC)
-While validator nodes run the Ronin consensus protocol and earn rewards on block validation, a non-validator node—also known as an RPC (remote procedure call) node—only serves as a gateway for decentralized applications to obtain relevant data on the Ronin blockchain.
-
-Specifically, an RPC node provides a mechanism for applications to query the blockchain for information, send transactions, and execute smart contracts.
-
-#### Archive node
-An archive node retains all historical data right back to genesis and is suited for making fast queries about historical states. This data represents units of terabytes, which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics. 
+For more information about the Ronin nodes and the bridge operator, see
+[Introduction to nodes](./../node-operators/introduction.md).
 
 ### Node operator
 A node operator is an individual or institution that sets up and configure nodes for the validator. The node operator and validator might actually be the same person or entity. but, this documentation makes a distinction between these roles for clarity. For example, see sections [Node operators](/docs/node-operators) and [Validators](/docs/validators). 
@@ -177,7 +166,7 @@ Solidity is the software development programming language designed specifically 
 ### Staking
 Staking is the process through which a Ronin user "stakes" or locks their cryptocurrency assets on the network as part of the consensus mechanism, thus ensuring the security and functionality of the chain.
 
-Ronin's DPoS allows users to commit their RON as votes, where voting power is proportional to the number of coins held. These votes are then used to elect a number of validators who manage the blockchain on behalf of their voters, ensuring security and consensus. The staking rewards are distributed to these elected validators, who then redistribute part of the rewards to the users who staked their tokens proportionally to their individual contributions.
+Ronin's DPoS allows users to commit their RON as votes, where voting power is proportional to the number of coins held. These votes are then used to elect a number of validators who manage the blockchain on behalf of their voters, ensuring security and consensus. The staking reward is distributed to these elected validators, who then redistribute part of the reward to the users who staked their tokens proportionally to their individual contributions.
 
 To stake on Ronin, [become a delegator](../delegators/onboarding/become-delegator.mdx). 
 
