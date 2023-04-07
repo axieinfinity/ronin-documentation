@@ -17,7 +17,7 @@ The rewards are divided into the *staking reward* and the *bridge reward*. Ronin
 |          6          	|   18,000,000   	|               	|
 |          7          	|   14,000,000   	|               	|
 |          8          	|    6,000,000   	|               	|
-| Total allocated RON 	| 180,000,000    	| 8,000,000     	|
+| Total allocated RON 	|   180,000,000    	|               	|
 
 ## Staking reward
 Validators receive a staking reward and a transaction fee for their block generation efforts. Validators share the staking reward and the transaction fee with their delegators—token holders who delegated their stakes to the validator. Each validator can set a commission rate that indicates the percentage of the self-allocated reward. The remaining reward is allocated to the delegators based on the amount that they have staked.
