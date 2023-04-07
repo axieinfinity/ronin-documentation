@@ -57,7 +57,6 @@ Run the following command to start a full (non-validator) Ronin node on the main
   ```
 
 ### Command reference
-
 #### Synopsis
 
 ```
