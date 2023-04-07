@@ -7,16 +7,17 @@ On Ronin, token holders stake their RON to participate in validator selection an
 
 The rewards are divided into the *staking reward* and the *bridge reward*. Ronin allocates 180,000,000 RON for the staking reward and 1,000,000 RON for the bridge reward. This is to ensure that the network is seeded well enough until transaction fees gain traction. These rewards are primarily meant to jump-start the network, while the protocol is intended to sustain itself on transaction fees.
 
-| Year 	| Staking reward 	| Bridge reward 	| 
-|:----:	|:--------------:	|:-------------:	|
-| 1    	| 30,000,000     	| 1,000,000     	| 
-| 2    	| 30,000,000     	|               	| 
-| 3    	| 30,000,000     	|               	| 
-| 4    	| 30,000,000     	|               	| 
-| 5    	| 28,000,000     	|               	| 
-| 6    	| 24,000,000     	|               	| 
-| 7    	| 14,000,000     	|               	| 
-| 8    	| 6,000,000      	|               	| 
+|         Year        	| Staking reward 	| Bridge reward 	|
+|:-------------------:	|:--------------:	|:-------------:	|
+|          1          	|   30,000,000   	|   1,000,000   	|
+|          2          	|   30,000,000   	|               	|
+|          3          	|   30,000,000   	|               	|
+|          4          	|   28,000,000   	|               	|
+|          5          	|   24,000,000   	|               	|
+|          6          	|   18,000,000   	|               	|
+|          7          	|   14,000,000   	|               	|
+|          8          	|    6,000,000   	|               	|
+| Total allocated RON 	| 180,000,000    	| 8,000,000     	|
 
 ## Staking reward
 Validators receive a staking reward and a transaction fee for their block generation efforts. Validators share the staking reward and the transaction fee with their delegators—token holders who delegated their stakes to the validator. Each validator can set a commission rate that indicates the percentage of the self-allocated reward. The remaining reward is allocated to the delegators based on the amount that they have staked.
@@ -67,4 +68,4 @@ Following is a sensitivity analysis of the annual percentage rate (APR) for the 
 | Year 8                           	| 1.45%  	| 1.16%  	| 0.97%  	| 
 
 ## Bridge reward
-Ronin allocates 1,000,000 RON to fund the reward for the first year. This reward is divided among bridge operator nodes. After the first year, we plan to separate the bridge from the consensus, that us, validators are not required to run bridge operator nodes.
+Ronin allocates 1,000,000 RON to fund the reward for the first year. This reward is divided among bridge operator nodes. After the first year, we plan to separate the bridge from the consensus, that is, validators are not required to run bridge operator nodes.
