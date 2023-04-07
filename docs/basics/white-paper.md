@@ -91,10 +91,10 @@ malicious code can trigger this behavior.
 Anyone can submit a slash request with the double-sign evidence, which
 should contain the two block headers with the same height, sealed by
 the same validator. Upon verifying the evidence, the offending
-validator is slashed as follows:
+validator is penalized as follows:
 * The validator is jailed for $2^{63}-1$ blocks and can't be a
 validator in the future. Their status is set to **In jail**.
-* The validator gets slashed the minimum staking amount of
+* The validator is slashed the minimum staking amount of
 self-delegated RON.
 * The validator doesn't earn commission and the staking reward while in jail.
 
@@ -114,15 +114,15 @@ If a validator misses more than 50 blocks a day, they don't earn
 commission and the staking reward on that day.
 
 #### Tier 2 validator slashing
-If a validator misses more than 150 blocks a day, they get slashed
-as follows:
+If a validator misses more than 150 blocks a day, the following penalties apply:
 * The validator doesn't earn commission and the staking reward on that day.
 * The validator is slashed 10,000 of self-delegated RON.
 * The validator is jailed for $\approx2$ days (57,600 blocks) and is
 banned from the validator set while in jail.
 
 ##### Credit score system and bailout
-While we encourage validators to be online and produce blocks in turn, technical issues can still happen. A validator might be well-performing, but if their machine suddenly crashes, they get slashed and jailed.
+While we encourage validators to be online and produce blocks in turn, technical issues can still happen.
+A validator might be well-performing, but if their machine suddenly crashes, they get slashed and jailed.
 
 Ronin's credit score system awards validators with credits that can be used to bail out of jail in the event of tier 2 validator slashing.
 
@@ -134,7 +134,7 @@ Here's how this system works:
 
 #### Tier 3 validator slashing
 After being put in jail and getting bailed out, if the validator
-misses 50 more blocks within the day, they get slashed as follows:
+misses 50 more blocks within the day, the following penalties apply:
 * The reward after bailing out is removed.
 * The validator is slashed 10,000 of self-delegated RON.
 * The validator is jailed for $\approx2$ days (57,600 blocks).
@@ -148,13 +148,13 @@ Validators can schedule temporary maintenance, during which they don't get slash
 The system slashes bridge operators for not providing enough signatures. There's a smart contract that records the number of the bridge operators' votes.
 
 #### Tier 1 operator slashing
-If a bridge operator misses more than 10% votes, the corresponding validator doesn't earn bridge rewards on that day.
+If a bridge operator misses more than 10% votes, the operator doesn't earn the bridge reward on that day.
 
 #### Tier 2 operator slashing
-If a bridge operator misses more than 30% votes, the corresponding validator gets slashed as follows:
-* The validator doesn't earn any rewards (commission,
+If a bridge operator misses more than 30% votes, the following penalties apply:
+* The operator doesn't earn any rewards (commission,
 staking reward, bridge reward) on that day.
-* The validator is jailed for $\approx2$ days (57,600 blocks) with no option to bail out.
+* The operator is jailed for $\approx2$ days (57,600 blocks) with no option to bail out.
 
 ## Governance
 In addition to producing blocks, Governing Validators are in charge of the following tasks:
