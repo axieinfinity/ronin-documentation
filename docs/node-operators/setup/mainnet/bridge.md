@@ -87,7 +87,6 @@ The size of your Ronin node will also grow over time.
         - VERBOSITY=${VERBOSITY}
         - MINE=false
         - GASPRICE=${GASPRICE}
-        - GENESIS_PATH=${GENESIS_PATH}
         - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
     db:
       image: postgres:14.3
