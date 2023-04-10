@@ -81,7 +81,7 @@ const config = {
           'Slashing rules have been changed, see <a target="_blank" rel="noopener noreferrer" href="#">Discord announcement</a>',
         backgroundColor: '#EEF9FD',
         textColor: '#091E42',
-        isCloseable: false,
+        isCloseable: true,
       },
       navbar: {
         title: 'Ronin',
