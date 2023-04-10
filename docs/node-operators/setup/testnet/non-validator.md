@@ -1,12 +1,14 @@
 ---
 description: Install a testnet non-validator node using Docker.
 slug: /node-operators/testnet/non-validator
+tags:
+  - docker-testnet
 ---
 
 # Run a non-validator node
-This guide demonstrates how to run a non-validator node on the Saigon testnet using Docker.
-This node is known as an RPC (remote procedure call) node,
-because it's used for serving RPC requests.
+This guide demonstrates how to run a non-validator node on the Saigon
+testnet using Docker. A non-validator node is also known as an RPC
+(remote procedure call) node.
 
 ## Prerequisites
 ### Docker
@@ -91,12 +93,17 @@ The size of your node will also grow over time.
   vim .env
   ```
 
-5. Paste the following into `.env`: 
+5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
   ```
-  INSTANCE_NAME=insert-instance-name
-  NODE_IMAGE=insert-latest-node-image
-  PASSWORD=insert-password
+  # The name of your node that you want displayed on https://saigon-stats.roninchain.com/
+  INSTANCE_NAME=INSTANCE_NAME
+  
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  NODE_IMAGE=NODE_IMAGE
+
+  # The password to encrypt the node's keyfile
+  PASSWORD=PASSWORD
 
   MINE=false
 
@@ -115,11 +122,6 @@ The size of your node will also grow over time.
   
   RONIN_PARAMS=--http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
-
-  Replace the following values in the `.env` file with your information:
-  * `INSTANCE_NAME`: The name of your node that you want to be displayed on the [stats page](https://saigon-stats.roninchain.com/).
-  * `NODE_IMAGE`: The version of your node's image, which can be found under [Ronin node](./../latest.md#ronin-node).
-  * `PASSWORD`: The password to encrypt the node's keyfile.
 
 6. (Optional) Download the snapshot:
 

@@ -1,5 +1,7 @@
 ---
 description: Parameters of the Saigon testnet.
+tags:
+  - params-testnet
 ---
 
 # Saigon testnet

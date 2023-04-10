@@ -1,6 +1,8 @@
 ---
 description: Install a testnet archive node using Docker.
 slug: /node-operators/testnet/archive
+tags:
+  - docker-testnet
 ---
 
 # Run an archive node
@@ -86,9 +88,18 @@ The size of your Ronin node will also grow over time.
   vim .env
   ```
 
-5. Paste the following into `.env`:
+5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
   ```
+  # The name of your node that you want displayed on https://saigon-stats.roninchain.com/
+  INSTANCE_NAME=INSTANCE_NAME
+
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  NODE_IMAGE=NODE_IMAGE
+
+  # The password to encrypt the node's keyfile
+  PASSWORD=PASSWORD
+
   BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
 
   NETWORK_ID=40925
@@ -96,11 +107,6 @@ The size of your Ronin node will also grow over time.
 
   DEPLOYMENT=test
 
-  INSTANCE_NAME=insert-instance-name
-
-  PASSWORD=insert-password
-
-  NODE_IMAGE=insert-latest-node-image
   VERBOSITY=3
 
   CHAIN_STATS_WS_SECRET=xQj2MZPaN6
@@ -109,11 +115,6 @@ The size of your Ronin node will also grow over time.
 
   RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
-
-  Replace the following values in the `.env` file with your information:
-  * `INSTANCE_NAME`: The name of your node that you want to be displayed on the [stats page](https://saigon-stats.roninchain.com/).
-  * `PASSWORD`: The password to encrypt the node's keyfile.
-  * `NODE_IMAGE`: The latest version of the node's image, which can be found under [Ronin node](./../latest.md#ronin-node).
 
 6. Start the node:
 

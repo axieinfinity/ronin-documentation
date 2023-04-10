@@ -1,6 +1,8 @@
 ---
 description: Install a standalone mainnet bridge operator after setting up the validator node.
 slug: /node-operators/mainnet/bridge
+tags:
+  - docker-mainnet
 ---
 
 # Run a standalone bridge
@@ -135,23 +137,35 @@ The size of your Ronin node will also grow over time.
   vim .env
   ```
 
-5. Paste the following into `.env`:
+5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
   ```
-  ETHEREUM_ENDPOINT=insert-ethereum-endpoint
-  
-  NODE_IMAGE=insert-latest-node-image
+  # Your Ethereum RPC endpoint
+  ETHEREUM_ENDPOINT=ETHEREUM_ENDPOINT
 
-  BRIDGE_IMAGE=insert-latest-bridge-image
-  BRIDGE_OPERATOR_PRIVATE_KEY=insert-bridge-operator-private-key
-  BRIDGE_VOTER_PRIVATE_KEY=insert-bridge-voter-private-key
+  # The name of your node that you want displayed on https://stats.roninchain.com/
+  INSTANCE_NAME=INSTANCE_NAME
   
-  DB_USERNAME=postgres
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  NODE_IMAGE=NODE_IMAGE
+
+  # The latest version of the bridge's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  BRIDGE_IMAGE=BRIDGE_IMAGE
+
+  # Your bridge operator private key without the 0x prefix
+  BRIDGE_OPERATOR_PRIVATE_KEY=BRIDGE_OPERATOR_PRIVATE_KEY
+  
+  # If you're a governor, uncomment this line and replace with your bridge voter key, without the 0x prefix
+  # BRIDGE_VOTER_PRIVATE_KEY=BRIDGE_VOTER_PRIVATE_KEY
+
+  # The password to encrypt the node's keyfile
+  PASSWORD=PASSWORD
+  
   DB_NAME=bridge
-  DB_PASSWORD=insert-db-password
-  POSTGRES_DB=bridge
+  DB_USERNAME=postgres
   
-  INSTANCE_NAME=insert-instance-name
+  # The Postgres database password
+  DB_PASSWORD=DB_PASSWORD
 
   CONFIG_PATH=config.mainnet.json
   VERBOSITY=3
@@ -169,23 +183,11 @@ The size of your Ronin node will also grow over time.
 
   GASPRICE=20000000000
 
-  PASSWORD=insert-password
-
   CHAIN_STATS_WS_SERVER=stats.roninchain.com
   CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 
   RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
-
-  Replace the following values in the `.env` file with your information:
-    * `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint.
-    * `BRIDGE_IMAGE`: The latest version of the bridge's image, which can be found in [Bridge operator](./../latest.md#bridge-operator).
-    * `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
-    * `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix. Only governor roles need to set this, otherwise you can leave it blank. 
-    * `DB_PASSWORD`: Your Postgres database password.
-    * `NODE_IMAGE`: The latest version of the Ronin node's image, which can be found in [Ronin node](./../latest.md#ronin-node).
-    * `INSTANCE_NAME`: The name of your node that you want to be displayed on the [stats page](https://stats.roninchain.com/).
-    * `PASSWORD`: The password to encrypt the node's keyfile.
 
 6. (Optional) Download the snapshot:
 

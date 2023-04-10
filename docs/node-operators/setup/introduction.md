@@ -7,7 +7,13 @@ import DocCardList from '@theme/DocCardList';
 import {findSidebarItem} from '@site/src/sidebarUtils';
 
 # Introduction to node installation
-If you’re interested in setting up a node, here are some hardware recommendations and guides on different methods of installation. If you're looking for testnet installation guides, see [Saigon testnet](./../testnet/).
+If you’re interested in setting up a node on the Ronin mainnet,
+here are some hardware recommendations and guides on different
+methods of installation.
+
+:::info
+For testnet installation guides, see [Saigon testnet](./../testnet/).
+:::
 
 ## Prerequisites
 To run a reliable, performant node on the Ronin mainnet, we suggest that the node’s hardware profile should match or exceed the following specifications:
@@ -23,8 +29,8 @@ These hardware requirements are rough guidelines, and each node operator should 
 
 ## Get started with node installation
 We offer two different methods of installing nodes:
-* The Docker method describes the installation of Ronin nodes as Docker instances, for those comfortable with Docker. Two different approaches to setting up your nodes using Docker are described in the following sections.
-* The CLI (command line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build your node using Ronin CLI](./../setup/cli.md).
+* The [Docker](/docs/tags/docker-mainnet) method describes the installation of Ronin nodes as Docker instances, for those comfortable with Docker. Two different approaches to setting up your nodes using Docker are described in the following sections.
+* The [CLI](/docs/tags/cli) (command line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build your node using Ronin CLI](./../setup/cli.md).
 
 ### Choose an approach
 Within the Docker method, there are two ways to approach the installation of a validator and a bridge operator:

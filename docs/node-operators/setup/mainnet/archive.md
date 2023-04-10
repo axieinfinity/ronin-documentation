@@ -1,6 +1,8 @@
 ---
 description: Install a mainnet archive node using Docker.
 slug: /node-operators/mainnet/archive
+tags:
+  - docker-mainnet
 ---
 
 # Run an archive node
@@ -85,19 +87,23 @@ The size of your Ronin node will also grow over time.
   vim .env
   ```
 
-5. Paste the following into `.env`:
+5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
    
   ```
+  # The name of your node that you want displayed on https://stats.roninchain.com/
+  INSTANCE_NAME=INSTANCE_NAME
+  
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  NODE_IMAGE=NODE_IMAGE
+
+  # The password to encrypt the node's keyfile
+  PASSWORD=PASSWORD
+
   BOOTNODES=enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303
 
   NETWORK_ID=2020
   GASPRICE=20000000000
-
-  INSTANCE_NAME=insert-instance-name
-
-  PASSWORD=insert-password
-
-  NODE_IMAGE=insert-latest-node-image
+  
   CONFIG_PATH=config.mainnet.json
   VERBOSITY=3
 
@@ -106,11 +112,6 @@ The size of your Ronin node will also grow over time.
 
   RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
-
-  Replace the following values in the `.env` file with your information:
-  * `INSTANCE_NAME`: The name of your node that you want to be displayed on the [stats page](https://stats.roninchain.com/).
-  * `PASSWORD`: The password to encrypt the node's keyfile.
-  * `NODE_IMAGE`: The latest version of the node's image, which can be found under [Ronin node](./../latest.md#ronin-node).
 
 6. Start the node:
    
