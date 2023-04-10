@@ -7,7 +7,8 @@ Ronin documentation follows [Google's developer documentation style guide](https
 
 ## Vocabulary
 ### Product names
-* Ronin, the Ronin network for https://roninchain.com/
+* Ronin, the Ronin network for https://roninchain.com/ and 
+* Ronin app for https://app.roninchain.com
 * Ronin Bridge, the bridge for https://bridge.roninchain.com/
 * Katana, the Katana DEX for https://katana.roninchain.com/
 * Ronin Wallet for https://wallet.roninchain.com/
@@ -15,15 +16,14 @@ Ronin documentation follows [Google's developer documentation style guide](https
 * Ronin Safe for https://multisig.roninchain.com/
 
 ### User role names
- Validator
-  * Validator Candidate
-  * Standard Validator
-  * Governing Validator
-* Delegator
-* Bridge operator
-* Node operator
+* "delegator"
+* "node operator"
+* "validator"
+  * "Validator Candidate"
+  * "Standard Validator"
+  * "Governing Validator"
 ### Node names
-* Validator node
-* Non-validator node
-* Archive node
-* Bridge operator node, the bridge operator
+* "archive node"
+* "bridge operator node", "bridge operator", "bridge"
+* "non-validator node"
+* "validator node"
