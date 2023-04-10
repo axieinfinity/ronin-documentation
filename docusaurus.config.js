@@ -10,7 +10,7 @@ const currentYear = new Date().getFullYear()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ronin',
+  title: 'Ronin Docs',
   tagline: 'Lets build together',
   url: 'https://docs.roninchain.com',
   baseUrl: '/',
