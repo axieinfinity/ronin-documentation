@@ -10,7 +10,7 @@ adding or removing Governing Validators, upgrading contracts,
 changing thresholds, and more.
 
 The way it works is a a governor [creates](./create.mdx) a new proposal
-for other governors to [vote](./vote.mdx) on. If 75% or more of the
+for other governors to [vote](./vote.mdx) on. If at least 70% of the
 governors approve the proposal, the change is applied.
 
 The governance voting method is serial by design: only one governance
@@ -22,7 +22,7 @@ validator is a hot wallet.
 
 :::tip
 Store your governor credentials in a hardware wallet and use them only
-when a vote is required. As a result, attackers will have a much harder
+when a vote is required. This way, attackers have a much harder
 time accessing your validator nodes, and the overall risk of network
-exploitation will be significantly reduced.
+exploitation is significantly reduced.
 :::

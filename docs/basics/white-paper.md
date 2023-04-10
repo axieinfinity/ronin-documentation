@@ -51,19 +51,19 @@ On Ronin, each validator is required to run a validator node and a bridge operat
 ### Security and finality
 The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time being 3 seconds, the users should wait for 45 seconds to confirm transactions in a block.
 
-To perform the Clone attack, the Byzantine validators must create two blocks on the same block height, also known as double-sign. This behavior can be detected by other validators in the system. Thus, we use a [slashing mechanism](./../validators/slashing/slashing.mdx) to penalize Byzantine validators. This mechanism exposes malicious validators in a short time and makes the Clone attack non-beneficial.
+To perform the Clone attack, the Byzantine validators must create two blocks on the same block height, also known as double-sign. This behavior can be detected by other validators in the system. Thus, we use a [slashing mechanism](#slashing) to penalize Byzantine validators. This mechanism exposes malicious validators in a short time and makes the Clone attack non-beneficial.
 
 To perform a non-detectable attack—when the Byzantine validators can only seal at most one block on each block height—the attacker must control the majority of validators. Fortunately, the selection of Governing Validators guarantee the majority of validators are honest, thus ensuring the security of Ronin.
 
 ## Rewards
-Out of the total supply of 1,000,000,000 RON tokens, 25% are allocated to fund the staking reward. According to the [release schedule](./tokenomics.md), the rewards are set to be allocated over 108 months.
+Out of the total supply of 1,000,000,000 RON tokens, 25% are allocated to fund the staking reward. According to the [RON unlock schedule](./tokenomics.md#ron-unlock-schedule), the rewards are set to be allocated over 108 months.
 
 ### Rewards for validators and delegators
 Validators have two sources of rewards: transaction fees and 90% of the staking reward. When the validator generates a block, they earn the transaction fees in that block and some fixed amount of the staking reward.
 
 * The reward is not sent to the validator right away, but is distributed and accumulated on a smart contract.
 * At the end of each day, the smart contract allocates the reward to the validator and their delegators. The allocation happens only to
-validators who are eligible to receive the reward (not being [slashed](./../validators/slashing/slashing.mdx)).
+validators who are eligible to receive the reward (not being slashed).
 * The validator and their delegators can claim the allocated reward at the end of the day.
 
 Each validator can set a commission rate that indicates the percentage of the self-allocated reward. The remaining reward is allocated based on the staked amount.
@@ -77,7 +77,7 @@ For example, consider validator A with the commission rate of 10%. This validato
 ### Rewards for bridge operators
 Bridge operators receive 10\% of the staking reward, which is distributed at the end of each day based on the number of votes from the bridge operators on that day.
 
-## Slashing
+## Slashing rules
 We use a slashing mechanism to penalize validators and bridge operators for malicious behavior.
 
 ### Double-sign validator
@@ -91,10 +91,10 @@ malicious code can trigger this behavior.
 Anyone can submit a slash request with the double-sign evidence, which
 should contain the two block headers with the same height, sealed by
 the same validator. Upon verifying the evidence, the offending
-validator is slashed as follows:
+validator is penalized as follows:
 * The validator is jailed for $2^{63}-1$ blocks and can't be a
-validator in the future. Their status is set to **In jail**.
-* The validator gets slashed the minimum staking amount of
+validator in the future.
+* The validator is slashed the minimum staking amount of
 self-delegated RON.
 * The validator doesn't earn commission and the staking reward while in jail.
 
@@ -110,58 +110,66 @@ validator. If the number of missed blocks exceeds a predefined threshold,
 the validator gets slashed.
 
 #### Tier 1 validator slashing
-If a validator misses more than 50 blocks a day, they don't earn
+If a validator misses more than 100 blocks a day, they don't earn
 commission and the staking reward on that day.
 
 #### Tier 2 validator slashing
-If a validator misses more than 150 blocks a day, they get slashed
-as follows:
+If a validator misses more than 500 blocks a day, the following penalties apply:
 * The validator doesn't earn commission and the staking reward on that day.
-* The validator is slashed 10,000 of self-delegated RON.
-* The validator is jailed for $\approx2$ days (57,600 blocks) and is
+* The validator is slashed 1,000 of self-delegated RON.
+* The validator is jailed for $\approx$ 2 days (57,600 blocks) and is
 banned from the validator set while in jail.
 
-##### Credit score system and bailout
-While we encourage validators to be online and produce blocks in turn, technical issues can still happen. A validator might be well-performing, but if their machine suddenly crashes, they get slashed and jailed.
-
-Ronin's credit score system awards validators with credits that can be used to bail out of jail in the event of tier 2 validator slashing.
+:::info Credit score and bailout system
+While we encourage validators to be online and produce blocks in turn, technical issues can still happen.
+A validator might be well-performing, but if their machine suddenly crashes, they get slashed and jailed.
+Ronin's *credit score system* awards validators with credits that can be used to [bail out](./../validators/slashing/bailout.mdx) of jail in the event of tier 2 validator slashing.
 
 Here's how this system works:
 * Every day, each validator (who is not in jail) is given 50 credits. The maximum number of credits per validator is 600.
 * A validator loses 1 credit for every missed block.
 * A jailed validator can use 2 credits for each epoch to bail out of jail.
 * After getting bailed out, the validator can claim half of the reward for the remaining time of the day.
+:::
 
 #### Tier 3 validator slashing
-After being put in jail and getting bailed out, if the validator
-misses 50 more blocks within the day, they get slashed as follows:
-* The reward after bailing out is removed.
-* The validator is slashed 10,000 of self-delegated RON.
-* The validator is jailed for $\approx2$ days (57,600 blocks).
+After getting bailed out, if the validator
+misses 100 more blocks on the same day, the following penalties apply:
+* The reward after bailout is removed.
+* The validator is slashed 1,000 of self-delegated RON.
+* The validator is jailed for $\approx$ 2 days (57,600 blocks).
 
 This time, the validator can't bail out.
 
-#### Temporary maintenance mode
-Validators can schedule temporary maintenance, during which they don't get slashed for unavailability.
+:::info Temporary maintenance mode
+Validators can [schedule](./../validators/manage/maintenance.mdx) temporary maintenance, during which they don't get slashed for unavailability.
+:::
 
 ### Unavailability bridge operator
-The system slashes bridge operators for not providing enough signatures. There's a smart contract that records the number of the bridge operators' votes.
+The system slashes bridge operators for not providing enough signatures.
+This is checked against a smart contract that records the
+number of the bridge operators' votes.
 
 #### Tier 1 operator slashing
-If a bridge operator misses more than 10% votes, the corresponding validator doesn't earn bridge rewards on that day.
+If a bridge operator misses more than 10% votes,
+the operator doesn't earn the bridge reward on that day.
 
 #### Tier 2 operator slashing
-If a bridge operator misses more than 30% votes, the corresponding validator gets slashed as follows:
-* The validator doesn't earn any rewards (commission,
-staking reward, bridge reward) on that day.
-* The validator is jailed for $\approx2$ days (57,600 blocks) with no option to bail out.
+If a bridge operator misses more than 30% votes, the operator doesn't
+earn any rewards (commission, staking reward, bridge reward) on that day.
 
-## Governance
+### Relaying slash
 In addition to producing blocks, Governing Validators are in charge of the following tasks:
 * Updating the system parameters, such as slash thresholds. 
 * Adding or removing other Governing Validators.
 * Syncing the set of bridge operators to the Ethereum chain every day.
 
-We require 9/12 Governing Validators' votes to perform the above tasks. A Governing Validator who doesn't sync the set of bridge operators to the Ethereum chain for three consecutive days gets slashed 10,000 RON.
+We require 9/12 Governing Validators' votes to perform the above tasks. 
 
-**Disclaimer:**  This white paper is a work in progress and can be updated in the future.
+If a Governing Validator doesn't sync the set of bridge operators to the Ethereum chain for three consecutive days, the following penalties apply:
+* The validator is slashed 10,000 of self-delegated RON.
+* The validator doesn't earn commission on the day of slashing.
+
+:::note Disclaimer
+This white paper is a work in progress and can be updated in the future.
+:::

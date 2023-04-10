@@ -1,5 +1,7 @@
 ---
 description: Parameters of the Ronin mainnet.
+tags:
+  - params-mainnet
 ---
 
 # Ronin mainnet

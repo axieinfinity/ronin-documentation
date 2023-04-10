@@ -1,6 +1,8 @@
 ---
 description: Install a standalone mainnet validator node using Docker.
 slug: /node-operators/mainnet/validator
+tags:
+  - docker-mainnet
 ---
 
 # Run a standalone validator 
@@ -93,13 +95,20 @@ The size of your node will also grow over time.
   vim .env
   ```
 
-5. Paste the following into `.env`: 
+5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
   ```
-  INSTANCE_NAME=insert-instance-name
-  NODE_IMAGE=insert-latest-node-image
-  VALIDATOR_PRIVATE_KEY=insert-validator-private-key
-  PASSWORD=insert-password
+  # The name of your node that you want displayed on https://stats.roninchain.com/
+  INSTANCE_NAME=INSTANCE_NAME
+  
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  NODE_IMAGE=NODE_IMAGE
+
+  # Your validator private key without the 0x prefix
+  VALIDATOR_PRIVATE_KEY=VALIDATOR_PRIVATE_KEY
+  
+  # The password to encrypt the node's keyfile
+  PASSWORD=PASSWORD
 
   MINE=true
 
@@ -113,12 +122,6 @@ The size of your node will also grow over time.
 
   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
   ```
-
-  Replace the following values in the `.env` file with your node's information:
-     * `INSTANCE_NAME`: The name of your node that you want to be displayed on the [stats page](https://stats.roninchain.com/).
-     * `VALIDATOR_PRIVATE_KEY`: Your validator private key without the `0x` prefix.
-     * `NODE_IMAGE`: The version of your node's image, which can be found under [Ronin node](./../latest.md#ronin-node).
-     * `PASSWORD`: The password to encrypt the node's keyfile.
 
 6. (Optional) Download the snapshot:
 

@@ -1,6 +1,8 @@
 ---
-description: Install a mainnet validator and bridge on one machine using Docker.
+description: (Recommended) Install a mainnet validator and bridge on one machine using Docker.
 slug: /node-operators/mainnet/combined
+tags:
+  - docker-mainnet
 ---
 
 # Run a validator and bridge together
@@ -138,27 +140,40 @@ The size of your node will also grow over time.
   vim .env
   ```
 
-5. Paste the following into `.env`:
+5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
   ```
-  ETHEREUM_ENDPOINT=insert-ethereum-endpoint
-  RPC_ENDPOINT=http://node:8545
-  
-  BRIDGE_IMAGE=insert-latest-bridge-image
-  NODE_IMAGE=insert-latest-node-image
+  # Your Ethereum RPC endpoint
+  ETHEREUM_ENDPOINT=ETHEREUM_ENDPOINT
 
-  BRIDGE_OPERATOR_PRIVATE_KEY=insert-operator-private-key
-  BRIDGE_VOTER_PRIVATE_KEY=insert-voter-private-key
-  VALIDATOR_PRIVATE_KEY=insert-validator-private-key
+  # The name of your node that you want displayed on https://stats.roninchain.com/
+  INSTANCE_NAME=INSTANCE_NAME
   
-  PASSWORD=insert-password
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  NODE_IMAGE=NODE_IMAGE
   
-  INSTANCE_NAME=insert-instance-name
+  # The latest version of the bridge's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  BRIDGE_IMAGE=BRIDGE_IMAGE
 
-  DB_USERNAME=postgres
-  DB_PASSWORD=insert-db-password
+  # Your bridge operator private key without the 0x prefix
+  BRIDGE_OPERATOR_PRIVATE_KEY=BRIDGE_OPERATOR_PRIVATE_KEY
+  
+  # If you're a governor, uncomment this line and replace with your bridge voter key, without the 0x prefix
+  # BRIDGE_VOTER_PRIVATE_KEY=BRIDGE_VOTER_PRIVATE_KEY
+  
+  # Your validator private key without the 0x prefix
+  VALIDATOR_PRIVATE_KEY=VALIDATOR_PRIVATE_KEY
+  
+  # The password to encrypt the node's keyfile
+  PASSWORD=PASSWORD
+
   DB_NAME=bridge
-  POSTGRES_DB=bridge
+  DB_USERNAME=postgres
+  
+  # The Postgres database password
+  DB_PASSWORD=DB_PASSWORD
+
+  RPC_ENDPOINT=http://node:8545
 
   CONFIG_PATH=config.mainnet.json
 
@@ -182,17 +197,6 @@ The size of your node will also grow over time.
 
   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
   ```
-
-  Replace the following values in the `.env` file with your information:
-     * `ETHEREUM_ENDPOINT`: Your Ethereum RPC endpoint.
-     * `BRIDGE_IMAGE`: The version of your bridge's image, which can be found under [Bridge operator](./../latest.md#bridge-operator)
-     * `BRIDGE_OPERATOR_PRIVATE_KEY`: Your bridge operator private key without the `0x` prefix.
-     * `BRIDGE_VOTER_PRIVATE_KEY`: Your bridge voter private key without the `0x` prefix. Only governor roles need to set this, otherwise you can leave it blank. 
-     * `VALIDATOR_PRIVATE_KEY`: Your validator private key without the `0x` prefix.
-     * `DB_PASSWORD`: Your Postgres database password.
-     * `NODE_IMAGE`: The version of your node's image, which can be found under [Ronin node](./../latest.md#ronin-node).
-     * `INSTANCE_NAME`: The name of your node that you want to be displayed on the [stats page](https://stats.roninchain.com/).
-     * `PASSWORD`: The password to encrypt the node's keyfile.
 
 6. (Optional) Download the snapshot:
 
