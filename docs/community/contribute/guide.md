@@ -1,5 +1,5 @@
 ---
-description: Guidelines for contributing to the Ronin documentation.
+description: Guide for contributing to the Ronin documentation.
 ---
 
-# Contributor guidelines
+# Contributor guide
