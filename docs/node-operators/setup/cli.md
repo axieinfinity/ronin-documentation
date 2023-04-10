@@ -1,5 +1,7 @@
 ---
 description: Build a CLI tool and compile a node binary from source.
+tags:
+  - cli
 ---
 
 # Build a Ronin CLI
