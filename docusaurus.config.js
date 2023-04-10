@@ -75,6 +75,14 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 5,
       },
+      announcementBar: {
+        id: 'slashing',
+        content:
+          'Slashing rules have been changed, see <a target="_blank" rel="noopener noreferrer" href="#">Discord announcement</a>',
+        backgroundColor: '#EEF9FD',
+        textColor: '#091E42',
+        isCloseable: false,
+      },
       navbar: {
         title: 'Ronin',
         logo: {
