@@ -78,10 +78,10 @@ const config = {
       announcementBar: {
         id: 'slashing',
         content:
-          'Slashing rules have been changed, see <a target="_blank" rel="noopener noreferrer" href="#">Discord announcement</a>',
+          'Slashing rules have been updated, see <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ronin_network/status/1645664361799901185?s=46&t=YkUXw7V1JhDN_wzIX5WIUg">Twitter announcement</a>',
         backgroundColor: '#EEF9FD',
         textColor: '#091E42',
-        isCloseable: true,
+        isCloseable: false,
       },
       navbar: {
         title: 'Ronin',

@@ -80,6 +80,11 @@ Bridge operators receive 10\% of the staking reward, which is distributed at the
 ## Slashing rules
 We use a slashing mechanism to penalize validators and bridge operators for malicious behavior.
 
+:::note 
+A "day" in the slashing rules refers to the period
+from midnight to midnight UTC.
+:::
+
 ### Double-sign validator
 It's a serious error when a validator signs more than one block with
 the same height. As mentioned in [Security and finality](#security-and-finality),
@@ -110,23 +115,27 @@ validator. If the number of missed blocks exceeds a predefined threshold,
 the validator gets slashed.
 
 #### Tier 1 validator slashing
-If a validator misses more than 100 blocks a day, they don't earn
-commission and the staking reward on that day.
+If a validator misses more than 100 blocks in a day,
+they don't earn commission and the staking reward on that day.
 
 #### Tier 2 validator slashing
-If a validator misses more than 500 blocks a day, the following penalties apply:
+If a validator misses more than 500 blocks in a day, the following penalties apply:
 * The validator doesn't earn commission and the staking reward on that day.
 * The validator is slashed 1,000 of self-delegated RON.
 * The validator is jailed for $\approx$ 2 days (57,600 blocks) and is
 banned from the validator set while in jail.
 
 :::info Credit score and bailout system
-While we encourage validators to be online and produce blocks in turn, technical issues can still happen.
-A validator might be well-performing, but if their machine suddenly crashes, they get slashed and jailed.
-Ronin's *credit score system* awards validators with credits that can be used to [bail out](./../validators/slashing/bailout.mdx) of jail in the event of tier 2 validator slashing.
+While we encourage validators to be online and produce blocks in turn,
+technical issues can still happen. A validator might be well-performing,
+but if their machine suddenly crashes, they get slashed and jailed.
+Ronin's credit score system awards validators with credits that can be
+used to [bail out](./../validators/slashing/bailout.mdx)
+of jail in the event of tier 2 validator slashing.
 
 Here's how this system works:
-* Every day, each validator (who is not in jail) is given 50 credits. The maximum number of credits per validator is 600.
+* Every day, each validator (who is not in jail) is given 50 credits. 
+The maximum number of credits per validator is 600.
 * A validator loses 1 credit for every missed block.
 * A jailed validator can use 2 credits for each epoch to bail out of jail.
 * After getting bailed out, the validator can claim half of the reward for the remaining time of the day.
@@ -151,12 +160,13 @@ This is checked against a smart contract that records the
 number of the bridge operators' votes.
 
 #### Tier 1 operator slashing
-If a bridge operator misses more than 10% votes,
-the operator doesn't earn the bridge reward on that day.
+If a bridge operator misses more than 10% votes in a day, the operator
+doesn't earn the bridge reward on that day.
 
 #### Tier 2 operator slashing
-If a bridge operator misses more than 30% votes, the operator doesn't
-earn any rewards (commission, staking reward, bridge reward) on that day.
+If a bridge operator misses more than 30% votes in a day,
+the operator doesn't earn any rewards
+(commission, staking reward, bridge reward) on that day.
 
 ### Relaying slash
 In addition to producing blocks, Governing Validators are in charge of the following tasks:
