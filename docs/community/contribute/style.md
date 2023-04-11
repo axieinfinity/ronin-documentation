@@ -6,6 +6,8 @@ description: Style guide used throughout this documentation
 Ronin documentation follows [Google's developer documentation style guide](https://developers.google.com/style). The sections that follow describe our *additions* to the Google style guide.
 
 ## Vocabulary
+When contributing to the documentation, follow the official capitalization for the names of Ronin software, products, services, features, and terms defined in this style guide.
+
 ### Product names
 | Product             | URL                                | Spelling                                       |
 |---------------------|------------------------------------|------------------------------------------------|
@@ -19,21 +21,44 @@ Ronin documentation follows [Google's developer documentation style guide](https
 | Validator Dashboard | https://validator.roninchain.com   | Validator Dashboard                            |
 
 ### User role names
-Spell the names of the user roles as follows:
-* Do not capitalize the general terms "delegator", "validator", and "node operator". 
-* Capitalize the names of the specific validator roles:
-  * "Validator Candidate"
-  * "Standard Validator"
-  * "Governing Validator"
+#### General terms
+When referring to user roles on Ronin in general, use these terms:
+* Delegator
+* Validator
+* Node operator
+
+The standard [capitalization rules](https://owl.purdue.edu/owl/general_writing/mechanics/help_with_capitals.html) for American English apply.
+
+#### Specific roles
+When writing about specific validator roles, use these terms:
+* Validator Candidate
+* Standard Validator
+* Governing Validator
+
+Capitalize both words. For example: "Complete these steps to register as a Validator Candidate".
 
 ### Node names
-Spell the the names of the nodes as follows: 
-* "archive node"
-* "bridge operator node", "bridge operator", "bridge"
-* "non-validator node"
-* "validator node"
+If you're writing a document that mentions nodes, then use the spelling defined in the following sections.
 
-You can use the term "Ronin node" to refer to an archive node, a
-non-validator node, and a validator node.
-You can also use the term "full node" to refer to a non-validator node
-and a validator node.
+#### Purpose
+When talking about the purpose of the nodes, use these terms:
+* Archive node
+* Bridge operator node, bridge operator, bridge
+* Non-validator node
+* Validator node
+
+Follow the standard capitalization rules for American English.
+
+#### Sync mode
+When writing about the sync mode used by the node, use the following terms:
+* Full node
+* Archive node
+
+Follow the standard capitalization rules for American English.
+
+#### Product name
+When writing about nodes in general, use the following terms: 
+* Ronin node
+* Bridge operator node
+
+For Ronin nodes, always capitalize the word "Ronin". For bridge operator nodes, follow the standard capitalization rules for American English.
