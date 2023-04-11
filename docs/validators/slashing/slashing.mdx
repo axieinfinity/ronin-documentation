@@ -17,7 +17,7 @@ import relayingSlash from './assets/relaying-slash.png';
 Slashing is a mechanism that governs the behavior of validators on
 the Ronin blockchain.
 
-Each validator is responsible for running two nodes: a validator node
+Each validator is responsible for [running](./../../node-operators/introduction) two nodes: a validator node
 and a bridge operator node. Validators are required to keep the nodes
 online and up to date with the network, and to produce the correct
 block when it comes to their turn.
@@ -27,10 +27,13 @@ behavior, it is subjected to penalties such as the the following:
 * Reward slashing. Withholding rewards that the node would've 
 otherwise earned.
 * RON slashing. Charging a fixed amount of RON tokens from 
-the self-stake.
-* Temporary or permanent ban from the network, or _jail_.
+the self-stake. Slashed RON then go to back to the reward pool.
+* Temporary or permanent ban from the network, or _jailing_.
 
-Slashed RON go to back to the reward pool.
+:::note 
+A "day" in the slashing rules refers to the period
+from midnight to midnight UTC.
+:::
 
 ## Double-sign validator
 It's a serious error when a validator signs more than one block with the same height.
@@ -60,14 +63,14 @@ validator. If the number of missed blocks exceeds a predefined threshold,
 the validator gets slashed.
 
 ### Tier 1 validator slashing
-If a validator misses more than 100 blocks a day, the validator doesn't earn
+If a validator misses more than 100 blocks in a day, the validator doesn't earn
 commission and the staking reward on that day.
 The validator's status is set to **Punished**.
 
 <img src={valSlashTierOne} width={1224} />
 
 ### Tier 2 validator slashing
-If a validator misses more than 500 blocks a day, the following penalties apply:
+If a validator misses more than 500 blocks in a day, the following penalties apply:
 * The validator doesn't earn commission and the staking reward on that day.
 * The validator is slashed 1,000 of self-delegated RON.
 * The validator is jailed for $\approx$ 2 days (57,600 blocks) and is
@@ -96,14 +99,14 @@ This is checked against a smart contract that records the
 number of the bridge operators' votes.
 
 ### Tier 1 operator slashing
-If a bridge operator misses more than 10% votes,
+If a bridge operator misses more than 10% votes in a day,
 the operator doesn't earn the bridge reward on that day.
 The operator's status is set to **Punished**.
 
 <img src={bridSlashTierOne} width={1224} />
 
 ### Tier 2 operator slashing
-If a bridge operator misses more than 30% votes, the operator doesn't
+If a bridge operator misses more than 30% votes in a day, the operator doesn't
 earn any rewards (commission, staking reward, bridge reward) on that day.
 The operator's status is set to **Punished**.
 
