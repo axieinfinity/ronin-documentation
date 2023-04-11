@@ -5,13 +5,15 @@ description: List of frequently asked questions.
 # Delegator FAQ
 Here's a list of frequently asked questions.
 
-### 1. What if my delegated validator is jailed or punished? {#1}
-You do not receive the rewards while your validator is [slashed](./../validators/slashing/slashing.mdx), but your stake is not impacted in any way.
+### 1. What if my delegated validator is slashed? {#1}
+You do not receive a staking reward while your validator is
+[slashed](./../validators/slashing/slashing.mdx), but your stake is not
+affected in any way.
 
 ### 2. Do RON rewards automatically re-stake to my validator? {#2}
 No, you would need to [claim](./rewards/claim.mdx) RON rewards with your Ronin Wallet.
 
-### 3. Can I unstake whenever I want without any penalties and risk? {#3}
+### 3. Can I unstake whenever I want without any penalties? {#3}
 Yes, you can [unstake](./stake/withdraw.mdx) from a validator at any time without penalties as long as three days have passed since you last staked in to this validator.
 
 ### 4. If I delegate to a validator today, would I receive the reward by the end of day? {#4}

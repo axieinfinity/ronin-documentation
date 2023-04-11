@@ -46,6 +46,6 @@ To download the latest image, follow these steps:
 1. Stop your bridge operator.
 2. Open the `.env` configuration file, and set `BRIDGE_IMAGE` to the following:
     ```
-    axieinfinity/bridge:v0.2.3-56f7328
+    ghcr.io/axieinfinity/bridge:v0.2.4-70568ab
     ```
 3. Save the changes and start the node.
