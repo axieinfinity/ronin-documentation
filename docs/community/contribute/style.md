@@ -1,5 +1,5 @@
 ---
-description: Style guide used throughout this documentation
+description: Style guide applied to this documentation.
 ---
 
 # Style guide
