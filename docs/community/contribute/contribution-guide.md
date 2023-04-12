@@ -81,7 +81,7 @@ Any of these content types can be shared as a page on its own, and some content 
 ##### Concept
 A concept topic explains background information and provides context-specific knowledge on a particular concept. The goal of a concept topic is to help readers understanding, not to teach concepts or provide steps in a task.
 
-To write a concept topic, use the [concept template](./).
+To write a concept topic, use the [concept template](./templates.md#concept).
 
 When writing, follow these tips:
 * Answer questions "What is this?" and "Why should I use it?"
@@ -91,6 +91,20 @@ When writing, follow these tips:
 * Help readers make connections between related concepts, and form a better understanding of the subject.
 
 To write a title for a concept topic, use a noun or a noun phrase. For example: "Rewards", "Slashing rules", "Introduction to nodes".
+
+Think about structuring concept articles like you would for a presentation to a group who doesn't know anything about the concept. Introduce ideas gradually, so your audience can grow their understanding of the concept.
+
+It can be easy to blend explanations with other types of content, like how-tos or references. But you should avoid doing so. Here are some tips to avoid mixing documentation types:
+* Avoid instructions, procedures, or any content that doesn't focus solely on building upon the conceptual understanding of the concept.
+* If you find yourself writing steps or describing how to do something in detail in your concept topic, you need to shift your focus away from describing the tasks, and go back to the concept. Remind yourself of the main goal of your topic.
+
+Here are some clues that your writing is not staying on topic:
+
+| Clue                                                                     | Solution                                                                                                                                                                                                                                                                                                      |
+|--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Writing steps to achieve something that you're describing in your topic. | Look for opportunities to link to other topics that complement your explanation content. Link to these topics in-line or at the end of the page in a "See also" section.                                                                                                                                      |
+| Embedding a tutorial video into the topic.                               | Link to the video in a "See also" section instead, so your audience doesn't get distracted by the video.                                                                                                                                                                                                      |
+| Including JSON structures of endpoints.                                  | You are mixing too much reference content into your concept article. Bring the focus back to understanding the structures, not documenting everything you can do with them. If your concept topic still needs to link back to the API, you can add the link with a brief explanation to a "See also" section. |
 
 Examples of concept pages:
 * [Slashing rules](./../../validators/slashing/slashing.mdx)
