@@ -81,20 +81,34 @@ Any of these content types can be shared as a page on its own, and some content 
 ##### Concept
 A concept topic explains background information and provides context-specific knowledge on a particular concept. The goal of a concept topic is to help readers understanding, not to teach concepts or provide steps in a task.
 
+A concept topic works well if:
+* It answers questions "What is this?", "Why should I use it?", "How does it work?"
+* It gives context to a subject or topic that your readers might not have.
+* It provides essential facts, background, and diagrams to help your readers build a foundational understanding of a product or topic.
+* It explains the background about a concept that might not be evident in reference or how-to articles.
+* It helps readers make connections between related concepts, and form a better understanding of the subject.
+
+*How to write a concept topic?*
+
 To write a concept topic, use the [concept template](./templates.md#concept).
 
-When writing, follow these tips:
-* Answer questions "What is this?" and "Why should I use it?"
-* Give context to a subject or topic that your readers might not have.
-* Provide essential facts, background, and diagrams to help your readers build a foundational understanding of a product or topic.
-* Explain the background about a concept that might not be evident in reference or how-to articles.
-* Help readers make connections between related concepts, and form a better understanding of the subject.
+*Guidelines for writing each part of a concept topic*
 
-To write a title for a concept topic, use a noun or a noun phrase. For example: "Rewards", "Slashing rules", "Introduction to nodes".
+1\. Title
 
-Think about structuring concept articles like you would for a presentation to a group who doesn't know anything about the concept. Introduce ideas gradually, so your audience can grow their understanding of the concept.
+To write a title for a concept topic, use a noun or a noun phrase to describe the subject. For example: "Rewards", "Introduction to nodes".
 
-It can be easy to blend explanations with other types of content, like how-tos or references. But you should avoid doing so. Here are some tips to avoid mixing documentation types:
+2\. An "overview/introduction" section
+
+Write one or two paragraphs describing the main idea of the topic.
+
+3\. A "concept body" section
+
+Think about structuring the body of a concept topic like you would a presentation to a group who doesn't know anything about the topic. Introduce ideas gradually, so your audience can grow their understanding of the topic.
+
+It can be easy to blend explanations with other types of content, like tasks or references. But you should avoid doing so.
+
+Here are some tips to avoid mixing documentation types:
 * Avoid instructions, procedures, or any content that doesn't focus solely on building upon the conceptual understanding of the concept.
 * If you find yourself writing steps or describing how to do something in detail in your concept topic, you need to shift your focus away from describing the tasks, and go back to the concept. Remind yourself of the main goal of your topic.
 
@@ -106,10 +120,19 @@ Here are some clues that your writing is not staying on topic:
 | Embedding a tutorial video into the topic.                               | Link to the video in a "See also" section instead, so your audience doesn't get distracted by the video.                                                                                                                                                                                                      |
 | Including JSON structures of endpoints.                                  | You are mixing too much reference content into your concept article. Bring the focus back to understanding the structures, not documenting everything you can do with them. If your concept topic still needs to link back to the API, you can add the link with a brief explanation to a "See also" section. |
 
-Examples of concept pages:
+4\. A "where to next/see also" section
+
+Use this optional section to include a bulleted list of related pages to extend the user's understanding of the concepts covered in this topic.
+
+*Examples of concept topics*
+
+Concept pages:
 * [Slashing rules](./../../validators/slashing/slashing.mdx)
 * [Rewards](./../../basics/rewards.md)
 * [Introduction to nodes](./../../node-operators/introduction.md)
+
+Concept topics within other pages:
+* Description of the credit score system in [Bailout](./../../validators/slashing/bailout.mdx)
 
 ##### Task
 Link
@@ -119,11 +142,46 @@ Guide
 Examples
 
 ##### Reference
-Link
+A reference topic presents information in an easily scannable format, like a table or list. The focus of reference topics is an information-oriented description of specific components or characteristics of a product or feature. This topic shouldn't contain any procedural content.
 
-Guide
+A reference topic works well when:
+* It is consistent in structure, terminology, and tone.
+* It contains concise, descriptive information that is relevant to its overview.
+* It avoids high-level usage-instructions or description for the product as a whole.
 
-Examples
+*How to write a reference topic?*
+
+To write a reference topic, use the [reference template](./templates.md#reference).
+
+*Guidelines for writing each part of a reference topic*
+
+1\. Title
+
+To write a title for a reference topic, use nouns that clearly describe the contents of the topic. Make sure that the title is accessible to users who are just getting started. For example, "Slashing rules", "Network parameters", "User roles".
+
+2\. An "overview/introduction" section
+
+Write one or two paragraphs summarizing the main idea of the topic. Explain what all the entries defined in the topic have in common.
+
+3\. A "reference body" section
+
+* The structure of reference topics varies based on what kind of information you are documenting. You might find it helpful to organize the contents using tables, lists, interactive object-schemas. For example, if you're writing a reference page for an API endpoint, you might define sections such as "General requirements", "Request parameters", and "Responses". The format  might be different for each section—"General requirements" might be a list, while "Request parameters" and "Responses" are tables.
+* Use the "don't repeat yourself" (DRY) method and re-use content if it's written for the same audience, and it fits within your reference topic without modification.
+* For consistency in longer reference pages, consider using H2 headers for each section, and H3 headers for subsections. 
+
+4\. A "where to next/see also" section
+
+Use this optional section to include a bulleted list of related pages to extend the user's understanding of the concepts covered in this topic.
+
+*Examples of reference topics*
+
+Reference pages:
+* [Ronin mainnet](./../../node-operators/resources/parameters/mainnet.md)
+* [Security audits](./../../basics/audits.md)
+
+Reference topics within other pages:
+* [Command reference](./../../node-operators/setup/cli.md#command-reference)
+* [RON unlock schedule](./../../basics/tokenomics.md#ron-unlock-schedule)
 
 ##### Troubleshooting
 Link
