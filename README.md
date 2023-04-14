@@ -16,7 +16,7 @@ Follow these steps to install and run the project locally:
    cd ronin-document
    ```
 
-4. Install the project:
+4. Install the project's dependencies:
    ```
    yarn install
    ```
@@ -27,6 +27,9 @@ Follow these steps to install and run the project locally:
    ```
 
 By default, a browser window opens at [http://localhost:3000](http://localhost:3000). To stop the server, press `Ctrl+C` in the terminal.
+
+## Contribute
+For information on contributing, read the [Contribution guide](https://docs.roninchain.com/community/contribute/contribution-guide).
 
 ## Deploy
 Ronin documentation deployments are automated using [Vercel](https://vercel.com/). Every commit to the `main` branch triggers a new deploy request, while a commit to a working branch is deployed to a preview environment, good for review and feedback. 

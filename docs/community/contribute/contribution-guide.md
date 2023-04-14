@@ -111,13 +111,16 @@ This site is powered by [Docusaurus](https://docusaurus.io), a static site gener
    ```
    git clone git@github.com:axieinfinity/ronin-document.git
    ```
-2. Install the required dependencies.
+2. Install dependencies for Docusaurus and Vale:
+   * Node.js version 16.14 or higher: https://nodejs.org/en/download
+   * Yarn: https://classic.yarnpkg.com/lang/en/docs/install/
+   * Vale: https://vale.sh/docs/vale-cli/installation/
 3. In the terminal, navigate to the `ronin-document` directory:
    ```
    cd ronin-document
    ```
 
-4. Install the project:
+4. Install the project's dependencies:
    ```
    yarn install
    ```
