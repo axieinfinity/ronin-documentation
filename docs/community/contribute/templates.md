@@ -15,6 +15,46 @@ You can copy any of these templates into a new Markdown file as the first step i
 * [Tutorial](#tutorial)
 ```
 
+## Headers
+In the templates, H1 header is always reserved for the title of the page:
+
+```
+# Title
+
+## A section header
+Text
+
+### A sub-section header
+Text
+```
+
+For sections headers, use H2 and lower levels, and don't skip levels (for example, don't use H2 then H4).
+
+If you're using a template not for creating a whole new page, but to add a new topic to an existing page, then remove the H1 title header from the template, and adjust the other header styles accordingly so that they match the existing headers on the page.
+
+## Title metadata
+All the templates contain the `title` metadata attribute. By default, Docusaurus generates a page title from the H1 header at the top of the page. 
+
+But sometimes the title can get so long it gets truncated in the sidebar. To prevent that, you can give the page a shorter, mode sidebar-friendly title by using the `title` metadata.
+
+Another reason is the page title might not be consistent with other pages in a section. You can again edit the title metadata to achieve consistency.
+
+Example when no `title` is used:
+
+```
+# Security hardening for your validator node
+```
+
+Example with a shorter title defined in the `title` metadata:
+
+```
+---
+title: Security hardening
+---
+
+# Security hardening for your validator node
+```
+
 ## Concept
 
 ```
@@ -23,12 +63,13 @@ title: Noun or noun phrase
 description: Brief description of the page's contents.
 ---
 
-# Title (Replicate the title from the metadata. Remove this header if you're not using this template as a separate page.)
+# Title 
+(Replicate the title from the metadata. Remove this header if you're not using this template as a separate page.)
 
 ## Introduction
 Write one or two paragraphs about the main idea of the topic. Call this section "Overview" or "Introduction".
 
-## Concept title
+## Concept body
 Write a paragraph that explains what this thing is. Add diagrams if necessary. Give this section a title more related to the idea of the topic. Keep adding body sections to describe all parts of the subject until you've completed the topic.
 
 ## See also
@@ -46,7 +87,8 @@ title: Start with a verb
 description: Brief description of the page's contents.
 ---
 
-# Title (Replicate the title from the metadata. Remove this header if you're not using this template as a separate page.)
+# Title
+(Replicate the title from the metadata. Remove this header if you're not using this template as a separate page.)
 
 ## Introduction
 Write one or two paragraphs that explain what the procedure does and its expected outcome. For example: "This guide explains how to <outcome> so that you can <do this after>".
@@ -54,8 +96,8 @@ Write one or two paragraphs that explain what the procedure does and its expecte
 ## Prerequisites
 Optionally, explain what knowledge the user needs to have, or what configuration they must complete, before starting.
 
-## Procedure title
-Write the steps of the procedure following the instructions in https://developers.google.com/style/procedures. Keep adding procedure sections until you've completed the page.
+## Procedure body
+Write the steps of the procedure following the instructions in https://developers.google.com/style/procedures. You can call this section "Steps" or use a name similar to the page title. For example: "Run a validator node" is the page title, and "Install the node" is the procedure body title.
 
 ## See also
 An optional section that can contain links to other content that the user can read to reinforce the understanding of the information covered in this topic.
@@ -74,12 +116,13 @@ title: Nouns describing the topic
 description: Brief description of the page's contents.
 ---
 
-# Title (Replicate the title from the metadata. Remove this header if you're not using this template as a separate page.)
+# Title
+(Replicate the title from the metadata. Remove this header if you're not using this template as a separate page.)
 
 ## Introduction
 Write one or two paragraphs about the main idea of the topic.
 
-## Reference title
+## Reference body
 Optionally, write a paragraph to describe the piece of reference information that follows—a bulleted list, a table, or a code block.
 Keep adding body sections to describe all parts of the subject until you've completed the topic.
 
@@ -109,7 +152,8 @@ title: Start with a verb related to resolving the error
 description: Brief description of the page's contents.
 ---
 
-# Title (Replicate the title from the metadata. Remove this header if you're not using this template as a separate page.)
+# Title
+(Replicate the title from the metadata. Remove this header if you're not using this template as a separate page.)
 
 ## Introduction
 Write one or two paragraphs to clarify the audience, what the error is and when it occurs. For example: "You might get an error that states <error message>. This error occurs when ..."
@@ -117,8 +161,8 @@ Write one or two paragraphs to clarify the audience, what the error is and when 
 ## Prerequisites
 Optionally, explain what knowledge the user needs to have, or what configuration they must complete, before resolving the error.
 
-## Steps
-Write the steps of the procedure following the instructions in https://developers.google.com/style/procedures. Keep adding procedure sections until you've completed the page.
+## Troubleshooting body
+Write the steps of the procedure following the instructions in https://developers.google.com/style/procedures. You can call this section "Steps" or use a name similar to the page title. For example: "Debug a validator node" is the page title, and "Debug the node" is the troubleshooting body title.
 
 ## See also
 An optional section that can contain links to other content that the user can read to reinforce the understanding of the information covered in this topic.
@@ -144,7 +188,8 @@ title: Get started with <feature>
 description: Introduce the page and highlight that it's quick and to the point.
 ---
 
-# Title ("Get started with <feature or product>")
+# Title
+("Get started with <feature or product>")
 
 ## Introduction
 Write one or two paragraphs that explain whom the get started guide is for, and what the user will accomplish after completing it.
@@ -152,8 +197,8 @@ Write one or two paragraphs that explain whom the get started guide is for, and 
 ## Prerequisites
 Optionally, explain what knowledge the user needs to have, or what configuration they must complete, before starting.
 
-## Steps
-Write the steps of the procedure following the instructions in https://developers.google.com/style/procedures. Keep adding procedure sections until you've completed the page.
+## Get started body
+Write the steps of the procedure following the instructions in https://developers.google.com/style/procedures. You can call this section "Steps" or use a name similar to the page title. For example: "Get started with Ronin CLI" is the page title, and "Set up the CLI" is the get started body title.
 
 ## Next steps
 Provide a recap and include actionable next steps that the user can take after completing this page.
@@ -167,7 +212,8 @@ title: Start with a verb
 description: Introduce the page and highlight that it's a tutorial.
 ---
 
-# Tutorial title
+# Title
+(Replicate the title from the metadata.)
 
 ## Introduction
 Write one or two paragraphs that explain the following:

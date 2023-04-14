@@ -1,17 +1,14 @@
 ---
 description: Guide for contributing to this documentation.
+toc_min_heading_level: 2
+toc_max_heading_level: 3
 ---
 
 # Contribution guide
-Welcome to the Ronin documentation contribution guide, and thank you for your interest. Any contribution you make is reflected on [docs.roninchain.com](https://docs.roninchain.com).
-
-You can contribute to Ronin documentation in a few ways:
-* Open an issue in the repository if you noticed something that needs updating.
-* Discuss the documentation and other things Ronin on our Discord server.
-* Make changes to existing content and write new content through pull requests.
+Welcome to the Ronin documentation contribution guide, and thank you for your interest. The documentation lives in the [ronin-document](https://github.com/axieinfinity/ronin-document) GitHub repository and is published on [docs.roninchain.com](https://docs.roninchain.com).
 
 ## Before contributing
-Before you contribute, take a few minutes to review this contribution guidelines. The guide is intended to make the contribution process easy and effective for everyone involved in addressing your issue, assessing changes, and finalizing your pull request.
+Before you contribute, take a few minutes to review this contribution guide. The document is intended to make the contribution process easy and effective for everyone involved in looking at your issue, assessing changes, and reviewing and merging your pull request.
 
 Consider the following before contributing:
 * If you want to report an issue, click **Issues** and describe the problem in detail.
@@ -24,10 +21,16 @@ If you want to contribute to this repository, here are most common fixes to make
 
 Any contribution to the Ronin documentation repository needs to be submitted as a *pull request*. If you are new to working with GitHub repositories and pull requests, review the [First Contributions](https://github.com/firstcontributions/first-contributions) guide.
 
-## How to contribute
-The contribution workflow differs based on the type of changes you want to make. Refer to the following sections for step-by-step guidance.
+## What to contribute
+You can contribute to Ronin documentation in a few ways:
+* Open an issue in the [repository](https://github.com/axieinfinity/ronin-document) if you noticed something that needs updating.
+* Discuss the documentation and other things Ronin on our Discord server.
+* Make changes to existing content and write new content through pull requests.
 
-### Minor changes
+## How to contribute
+The contribution flow differs based on the type of changes you want to make. Refer to the following sections for step-by-step guidance.
+
+### Make changes via UI
 For simple edits such as fixing a typo, a broken link, or editing a sentence, follow these steps:
 1. Click **Edit this page**. This takes you to the markdown file in GitHub.
 2. Edit the contents.
@@ -36,63 +39,49 @@ For simple edits such as fixing a typo, a broken link, or editing a sentence, fo
 5. Select **Create a new branch for this commit and start a pull request**.
 6. Click **Propose file change**.
 
-### Major changes
+### Make changes in your own branch
 If what you're contributing is more than a simple change, you need to create a working branch and submit a pull request. 
 1. [Run](#run-locally) Ronin documentation locally.
 2. Create a working branch for your changes. Replace `type` with the correct type according to our [branch naming convention](#branch-naming-convention).
    ```
    git checkout -b type/name
    ```
-3. Make changes and then do a [self-review](self-review).
-4. Add the file to your commit:
+3. Make changes and then do a [self-review](#self-review-checklist).
+4. Run [Vale](#run-vale) on your changes and fix errors if any.
+5. Add the file to your commit:
    ```
    git add path-to-file
    ```
-5. Commit your update. Don't forget to write a [commit message](#commit-message-convention):
+6. Commit your update. Don't forget to write a [commit message](#commit-message-convention):
    ```
    git commit -m "type: subject"
    ```
-6. Push the changes to the remote repository:
+7. Push the changes to the remote repository:
    ```
    git pus origin type/name
    ```
-7. Open the repository in your browser, and click **Create pull request** to start a new pull request.
+8. Open the repository in your browser, and click **Create pull request** to start a new pull request.
 
 Someone from the Ronin team will review your PR and approve or request the changes. If your PR looks good, the reviewer will merge it. If the reviewer suggests changes, update your PR and request another review.
 
 When you see your PR merged, find the changes on [docs.roninchain.com](https://docs.roninchain.com). It's done!
 
-### Branch naming convention
+### Naming convention
+When naming branches and writing commit messages, follow this convention.
 
-### Commit message convention
-When writing commit messages for Ronin documentation changes, make sure to follow this convention.
+| Type     | Description                                                                         | Branch                                          | Commit                      | Pull Request                           |
+|----------|-------------------------------------------------------------------------------------|-------------------------------------------------|-----------------------------|----------------------------------------|
+| `feat`     | Changes that introduce new features/functionalities.                                | feat/issue-id of feat/short-description         | `feat: short description`     | feat: [issue ID] short description     |
+| `fix`      | Changes that fix an unexpected behavior/result of existing features/functionalities | fix/issue-id or fix/short-description           | `fix: short description`      | fix: [issue ID] short description      |
+| `refactor` | Changes that don't change existing behaviours or add new ones                       | refactor/issue-id or refactor/short-description | `refactor: short description` | refactor: [issue ID] short description |
+| `chore`    | Bump version                                                                        | chore/short-description                         | `chore: short description`    | chore: short description               |
 
-#### Format
+If several commit types are applicable to your change, try breaking it down into several commits. For example, one `feat` commit, one `fix` commit, and a `chore` commit. If that's not feasible, use the type that reflects the most important part of your change.
 
-```
-type: subject (ticket)
-```
-
-#### Values
-`type`
-
-The `type` part reflects the type of changes in the commit. Available types include the following:
-* `feat` Changes that introduce new features/functionalities.
-* `fix` Changes that fix an unexpected behavior/result of existing features/functionalities.
-* `refactor` Changes that don't change existing behaviors or add new ones.
-* `chore` Bump version, changes that don't affect features or bug fixes.
-
-If several types are applicable to your change, try breaking it down into several commits. For example, one `feat` commit, one `fix` commit, and a `chore` commit. If that's not feasible, use the type that reflects the most important part of your change.
-
-`subject`
-The `subject` part describes the exact change you're making.
-
+When writing `short description` for commits, follow these guidelines:
 * Don't capitalize the first letter, reserve that for proper nouns (product names, for example).
 * Use the imperative, present tense: "change" not "changed" nor "changes".
 * No dot (.) at the end.
-
-`ticket`
-* Optionally, include a ticket ID in the commit message for future reference.
 
 #### Examples
 
@@ -115,19 +104,14 @@ chore: bump Vale version
 ## Development
 This section describes the process for running Ronin documentation on your local computer, and describes the main elements of the site's structure.
 
-### Run locally
+### Local development
 This site is powered by [Docusaurus](https://docusaurus.io), a static site generator. To preview changes as you edit the files, you can run a local development server that serves the Ronin documentation site and reflects the latest changes:
 
-1. Install dependencies for Docusaurus and Vale:
-   * Node.js version 16.14 or higher: https://nodejs.org/en/download
-   * Yarn dependency manager: https://classic.yarnpkg.com/lang/en/docs/install/
-   * Vale prose linter: https://vale.sh/docs/vale-cli/installation/
-1. Go to the Ronin documentation repository in your browser: https://github.com/axieinfinity/ronin-document
-2. Clone the repository to create its copy on your local computer:
+1. Clone the [Ronin documentation repository](https://github.com/axieinfinity/ronin-document) by running the following command: 
    ```
    git clone git@github.com:axieinfinity/ronin-document.git
    ```
-
+2. Install the required dependencies.
 3. In the terminal, navigate to the `ronin-document` directory:
    ```
    cd ronin-document
@@ -145,8 +129,8 @@ This site is powered by [Docusaurus](https://docusaurus.io), a static site gener
 
 By default, a browser window opens at [http://localhost:3000](http://localhost:3000). To stop the server, press `Ctrl+C` in the terminal.
 
-### Site structure
-#### Directories
+## Site structure
+### Directories
 Content is written in markdown files, which reside in the `/docs` directory. The files are further organized by category as described in the following table.
 
 | Directory             | Purpose                                                                                                                                                                                          |
@@ -161,7 +145,7 @@ Content is written in markdown files, which reside in the `/docs` directory. The
 * Inside each folder is an `assets` directory where screenshots and diagrams are stored.
 * Markdown files contain [front matter](https://docusaurus.io/docs/next/create-doc#doc-front-matter).
 
-#### Sidebar
+### Sidebar
 An essential means of navigating Ronin documentation, the sidebar is used for the following:
 * Grouping pages into categories.
 * Displaying a sidebar in each page. 
@@ -169,14 +153,14 @@ An essential means of navigating Ronin documentation, the sidebar is used for th
 
 The contents of the sidebar are defined in the `/sidebar.js` file. Every page you're writing must be added to the sidebar.
 
-#### Homepage
+### Homepage
 The homepage is what the user sees when accessing https://docs.roninchain.com.
 
 The contents of the homepage are defined in `/src/components/homepage-features/Features.tsx`.
 
 We do not recommend making changes to this file.
 
-#### Header and footer
+### Header and footer
 The header and footer are defined in the `/docusaurus.config.js` file.
 
 ## Deployments
@@ -229,6 +213,21 @@ Categories are usually organized around a feature or a discrete set of tasks wit
 #### Page
 A page is the basic unit of content for Ronin docs—while we use multiple content types, they're all published as pages. Each content type has its own purpose, format, and structure, yet we use standard elements in every page type, like intros, to ensure pages provide a consistent user experience.
 
+##### Front matter
+Each page contains YAML metadata called [front matter](https://docusaurus.io/docs/next/create-doc#doc-front-matter). It's located at the top of the page and is used to enrich the default metadata inferred from the content or other configuration.
+
+Example:
+
+```
+---
+description: Hardware recommendations and methods of installation.
+title: Before you start
+---
+```
+
+The `title` attribute replaces the title of the page derived from the H1 header.
+The `description` attribute is rendered underneath the page title on a [doc card](https://docusaurus.io/docs/sidebar/items#embedding-generated-index-in-doc-page). 
+
 #### Sidebar
 The Ronin docs sidebar is used to group multiple related pages into sub-categories and top-level categories, provide paginated navigation on each page, and generally to structure the documentation in a discoverable way.
 
@@ -263,24 +262,21 @@ To write a concept topic, use the [concept template](./templates.md#concept).
 
 *Guidelines*
 
-1\. Title
-
+##### Title
 To write a title for a concept topic, use a noun or a noun phrase to describe the subject. For example: "Rewards", "Introduction to nodes".
 
-2\. An overview section
-
+##### Introduction
 Write one or two paragraphs describing the main idea of the topic.
 
-3\. A concept body section
+##### Body
 
 * Structure the body of a concept topic like you would a presentation to a group who doesn't know anything about the topic. Introduce ideas gradually, so your audience can grow their understanding of the topic.
 * It can be easy to blend explanations with other types of content, like procedures or references. But you should avoid doing so. Here are some tips to avoid mixing documentation types:
   * Avoid instructions, procedures, or any content that doesn't focus solely on building upon the conceptual understanding of the concept.
   * If you find yourself writing steps or describing how to do something in detail in your concept topic, you need to shift your focus away from describing the tasks, and go back to the concept. Remind yourself of the main goal of your topic.
 
-4\. A see also section
-
-Use this optional section to include a bulleted list of related pages to extend the user's understanding of the concepts covered in this topic.
+##### See also
+Include a bulleted list of related pages to extend the user's understanding of the concepts covered in this topic.
 
 *Examples*
 
@@ -306,20 +302,16 @@ To write a procedure, use the [procedure template](./templates.md#procedure).
 
 *Guidelines*
 
-1\. Title
-
+##### Title
 To write a title for a procedure, start with a verb. For example: "Create an account", "Become a validator", "Run a node". The outcome of the procedure should be clear to the user from the title alone.
 
-2\. Introduction
+##### Introduction
+Briefly describe the outcome of the procedure and optionally, what the user should be able to do after completing the steps. For example: "This guide demonstrates how you can delegate RON to a validator for the first time".
 
-Use this section to briefly describe the outcome of the procedure and optionally, what the user should be able to do after completing the steps. For example: "This guide demonstrates how you can delegate RON to a validator for the first time".
-
-3\. Prerequisites
-
+##### Prerequisites
 Explain what knowledge the user needs to have, or what configuration they must complete, before starting the procedure. Use imperative sentences, for example, "Read the concept guide" or "Download and install the Ronin Wallet app".
 
-4\. Steps
-
+##### Body
 Write a step-by-step instruction to complete the procedure:
 
 * Follow the guidelines in https://developers.google.com/style/procedures
@@ -329,9 +321,8 @@ Write a step-by-step instruction to complete the procedure:
 * Avoid giving the users multiple paths to select when working through procedures. When you avoid giving the user choices, your documentation should lead all users to the same end result.
 * If the page is meant for beginner users, avoid adding procedures that you might consider better suited for advanced users. If your document is intended for advanced users, state that up front and give them a list of prerequisites before they go through the steps.
 
-5\. See also
-
-Link to any concept topics, reference topics, issues, and other related documentation that might reinforce the user's understanding of this procedure and the concepts that it involves.
+##### See also
+Include a bulleted list of related pages to extend the user's understanding of this procedure and the concepts that it involves.
 
 *Examples*
 
@@ -358,23 +349,20 @@ To write a reference topic, use the [reference template](./templates.md#referenc
 
 *Guidelines*
 
-1\. Title
-
+##### Title
 To write a title for a reference topic, use nouns that clearly describe the contents of the topic. Make sure that the title is accessible to users who are just getting started. For example, "Slashing rules", "Network parameters", "User roles".
 
-2\. Introduction
-
+##### Introduction
 Write one or two paragraphs summarizing the main idea of the topic. Explain what all the entries defined in the topic have in common.
 
-3\. Title of reference entry
+##### Body
 
 * The structure of reference topics varies based on what kind of information you are documenting. You might find it helpful to organize the contents using tables, lists, interactive object-schemas. For example, if you're writing a reference page for an API endpoint, you might define sections such as "General requirements", "Request parameters", and "Responses". The format  might be different for each section—"General requirements" might be a list, while "Request parameters" and "Responses" are tables.
 * Use the "don't repeat yourself" (DRY) method and re-use content if it's written for the same audience, and it fits within your reference topic without modification.
 * For consistency in longer reference pages, consider using H2 headers for each section, and H3 headers for subsections. 
 
-4\. See also
-
-Use this optional section to include a bulleted list of related pages to extend the user's understanding of the concepts covered in this topic.
+##### See also
+Include a bulleted list of related pages to extend the user's understanding of the concepts covered in this topic.
 
 *Examples*
 
@@ -392,13 +380,22 @@ A troubleshooting topic should be the final topic on a page. If a page has more 
 A troubleshooting topic can be one of three types:
 
 *An introductory topic*
-This topic introduces the troubleshooting section of a page. Use the [Introductory topic](./templates.md#introductory-topic) template.
+
+This topic introduces the troubleshooting section of a page.
+
+To create this topic, use the [Introductory topic](./templates.md#introductory-topic) template.
 
 *A troubleshooting procedure*
-The format is similar to the standard procedure, and the title follows the same verb and noun pattern, such as “Debug a Ronin node." Use the [Procedure](./templates.md#troubleshooting-procedure) template.
+
+The format is similar to the standard procedure, and the title follows the same verb and noun pattern, such as “Debug a Ronin node." 
+
+To create this topic, use the [Procedure](./templates.md#troubleshooting-procedure) template.
 
 *A troubleshooting reference*
-This topic contains the error message. If the error has a few causes or workarounds, consider organizing them as a table. Use the [Troubleshooting reference](./templates.md#troubleshooting-reference) template. To write a title for a troubleshooting reference, consider including at least a partial error message.
+
+This topic contains the error message. If the error has a few causes or workarounds, consider organizing them as a table. To write a title for a troubleshooting reference, consider including at least a partial error message. 
+
+To create this topic, use the [Troubleshooting reference](./templates.md#troubleshooting-reference) template. 
 
 #### Combined types
 It might be helpful to group information in context to help people accomplish a complex task, understand a set of related tasks, or describe an entire workflow. You can combine different content types on a long page to ensure all contextual content can be found in one place. Such a "combined page" also helps remove duplicate content and makes room for potential growth as more options are added to the product.
@@ -408,13 +405,15 @@ It might be helpful to group information in context to help people accomplish a 
 * Separate different content types with section headings, and abide by title guidelines for each content type.
 * If the combined page contains a procedure, use a task-based title. Otherwise, use a title that's broad enough to reflect all the content on the page.
 
-*Examples*
-* [Build a Ronin CLI](./../../node-operators/setup/cli.md)
+*Example*
+
+[Build a Ronin CLI](./../../node-operators/setup/cli.md)
 
 #### Tutorial
 A tutorial is page that describes an complete walkthrough of a complex scenario. In general, you might consider using a tutorial when the scenario requires a number of steps where each step consists of sub-steps, and when the steps cover a variety of features or products.
 
 *Template*
+
 To write a tutorial, use the [tutorial template](./templates.md#tutorial).
 
 *Guidelines*
@@ -426,42 +425,79 @@ To write a tutorial, use the [tutorial template](./templates.md#tutorial).
 A get started topic is a set of steps to help a user get set up quickly to use a single feature or product. It consists of more than one task.
 
 *Template*
+
 To write a get started topic, use the [get started template](./templates.md#get-started).
 
 *Guidelines*
-1\. Title
-
+##### Title
 Use the format of `Get started with <feature or product>`.
 
-2\. Introduction
+##### Introduction
 
 * Describe that the page enables the user to get started quickly.
 * State the outcome the user will achieve after following the steps.
 
-3\. Prerequisites
+##### Prerequisites
+Explain what knowledge the user needs to have, or what configuration they must complete, before starting. Use imperative sentences, for example, "Read the concept guide" or "Download and install the Ronin Wallet app".
 
-Explain what knowledge the user needs to have, or what configuration they must complete, before starting the procedure. Use imperative sentences, for example, "Read the concept guide" or "Download and install the Ronin Wallet app".
-
-4\. Steps
+##### Body
 
 * If you're writing for beginner audiences, describe steps in a less explicit and formal manner than those in the regular [procedure](#procedure).
 * Include code blocks and screenshots to help reassure that the reader is performing the right steps.
 
-5\. Next steps
+##### Next steps
 
 * Provide a recap of what has been accomplished in this get started page, and include some actionable next steps that the user can take after completing this page.
-* Consider linking to concept topics related to this feature or product.
-
+* Include a bulleted list of concept topics related to this feature or product.
 
 ## Content style guide
-All Ronin documentation adheres to the [content style guide](./style-guide.md) with no exception.
+Ronin documentation adheres to the [content style guide](./style-guide.md).
+
+## Documentation linter
+Ronin documentation relies on [Vale](https://vale.sh/) to enforce the style guide.
+
+### Install Vale
+Follow the [instruction](https://vale.sh/docs/vale-cli/installation/) on the Vale website to install.
+
+### Run Vale
+To run Vale on a single file, use this command:
+
+```
+vale path-to-file
+```
+
+Example:
+
+```
+vale docs/validators/manage/profile.mdx
+```
+
+To run Vale on all documentation files in a directory, use:
+
+```
+vale path-to-directory
+```
+
+Example:
+
+```
+vale docs/validators
+```
+
+### Fix errors
+Vale returns three types of alerts—`suggestion`, `warning`, and `error`. 
+You must fix all `error` alerts before creating a PR. The other two types are good to fix but not mandatory.
+
+### Vale styles
+Ronin uses the [Google](https://github.com/errata-ai/google) style for the [Google developer documentation style guide](https://developers.google.com/style). The style definitions are located in the `/static/styles` directory, and the Vale config lives in `/.vale.ini`
 
 ## Self-review checklist
-As a documentation contributor, you should always review your own PR first by doing the following checks:
+As a documentation contributor, you should always review your PR against this checklist:
 
 * [ ] If you created a new page, make sure that it uses one of the [templates](./templates.md).
-* [ ] Make sure that static files are stored in the `assets` directory in the correct category.
-* [ ] Compare your PR's changes on staging to confirm that the output matches the source and that everything is rendering as expected. Look out for typos, issues with lists and tables, or content that doesn't follow the style guide.
-* [ ] Ensure technical accuracy of the content. Test your procedures and run all commands.
-* [ ] Review grammar, spelling, and adherence to the [style guide](./style-guide.md).
+* [ ] Make sure that screenshots and diagrams are stored in the `assets` directory in the category where the Markdown file is.
+* [ ] Compare your PR's output in the preview environment to confirm that the output matches the source and that everything is rendering as expected. Look out for typos, issues with lists and tables, or content that doesn't follow the style guide.
+* [ ] Ensure technical accuracy of the content. Try to test your procedures and run all commands by yourself.
+* [ ] Run [Vale](#run-vale) in your Markdown files to check adherence to the [style guide](./style-guide.md).  
+* [ ] Spot and fix any grammar and spelling errors. Vale might not highlight those. 
 * [ ] If there are any failing checks in your PR, such as broken links, troubleshoot them until they're passing.
