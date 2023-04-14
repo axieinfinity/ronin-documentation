@@ -8,6 +8,7 @@ Ronin documentation adheres to the [Google's developer documentation style guide
 This page defines our additions and exceptions to the Google style guide:
 * Ronin documentation additionally adheres to its own [vocabulary](#vocabulary).
 * Ronin documentation uses [markdown](#markdown) instead of HTML.
+* Ronin documentation specifies additional [rules for diagrams and screenshots](#diagrams-figures-and-other-images) that complement the related guidelines from the Google style guide.
 
 ## Vocabulary
 When contributing to the documentation, follow the official capitalization for the names of Ronin software, products, services, features, and terms defined in this style guide.
@@ -70,9 +71,29 @@ For Ronin nodes, always capitalize the word "Ronin". For bridge operator nodes, 
 ## Markdown
 While the Google developer documentation style guide covers both Markdown and HTML, Ronin documentation is written in Markdown.
 
-Therefore, when reviewing your contributions against the style guide, look specifically for the Markdown-related guidelines.
+Therefore, when reviewing your contributions against the Google style guide, look specifically for the Markdown-related guidelines.
 
-:::note
-Because Ronin documentation is built using Docusaurus, it can use MDX as the parsing engine, which can do more than the standard Markdown syntax. See [Markdown Features](https://docusaurus.io/docs/markdown-features) for more information.
-:::
+Because Ronin documentation is built using Docusaurus, it can use MDX as the parsing engine, which can do more than the standard Markdown syntax. For more information on MDX and the features it offers, see [Markdown Features](https://docusaurus.io/docs/markdown-features).
 
+## Diagrams and screenshots
+This section describes guidelines on diagrams and screenshots in addition to those defined in the Google style guide.
+
+### Diagrams
+* To create a diagram, use [mermaid](https://mermaid.js.org/intro/) or [diagrams.net](https://www.diagrams.net/).
+* For diagrams (architectural drawings, flow diagrams, and so on, as distinct from screenshots), use SVG files if possible.
+
+### Screenshots
+* For each screenshot, add a 1-px #DEE6F1 border around the screenshot using your favorite image editor. Use the native screenshot tool or third-party apps such as [Snagit](https://www.techsmith.com/screen-capture.html) or [CleanShot](https://cleanshot.com/).
+* Use PNG files for screenshots if possible.
+* To add screenshots to a page, follow these steps:
+  1. Change the format of the Markdown file to `.mdx`. This is required for subsequent steps to work.
+  2. For each screenshot you want to use on the page, add this line at the top of the document, right after the metadata:
+    ```
+    import customName from './assets/some-image.png';
+    ```
+    Replace `customName` with a clear and readable name, such as `becomeValidatorStepOne`.
+  3. Reference the screenshot in the document using this syntax:
+    ```
+    <img src={becomeValidatorStepOne} width={number} />
+    ```
+    For screenshots taken from the same platform (desktop or mobile), keep the width consistent by setting `number` to the width in pixels. For example, `1440`.

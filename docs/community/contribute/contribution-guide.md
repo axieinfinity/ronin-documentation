@@ -32,7 +32,7 @@ The contribution flow differs based on the type of changes you want to make. Ref
 
 ### Make changes via UI
 For simple edits such as fixing a typo, a broken link, or editing a sentence, follow these steps:
-1. Click **Edit this page**. This takes you to the markdown file in GitHub.
+1. Click **Edit this page**. This takes you to the Markdown file in GitHub.
 2. Edit the contents.
 3. Click **Commit changes...**
 4. In the **Commit message** field, type a short, meaningful commit message that describes the change you made to the file. Follow our [commit message convention](#commit-message-convention).
@@ -66,40 +66,22 @@ Someone from the Ronin team will review your PR and approve or request the chang
 
 When you see your PR merged, find the changes on [docs.roninchain.com](https://docs.roninchain.com). It's done!
 
-### Naming convention
-When naming branches and writing commit messages, follow this convention.
+### Naming conventions
+When naming branches, creating PRs, and writing commit messages, follow this convention.
 
-| Type     | Description                                                                         | Branch                                          | Commit                      | Pull Request                           |
+| Type     | Description                                                                         | Branch                                          | Commit                      | Pull request                           |
 |----------|-------------------------------------------------------------------------------------|-------------------------------------------------|-----------------------------|----------------------------------------|
-| `feat`     | Changes that introduce new features/functionalities.                                | feat/issue-id of feat/short-description         | `feat: short description`     | feat: [issue ID] short description     |
+| `feat`     | Changes that introduce new features/functionalities.                                | `feat/short-description`         | `feat: short description`     | `feat:  short description`     |
 | `fix`      | Changes that fix an unexpected behavior/result of existing features/functionalities | fix/issue-id or fix/short-description           | `fix: short description`      | fix: [issue ID] short description      |
 | `refactor` | Changes that don't change existing behaviours or add new ones                       | refactor/issue-id or refactor/short-description | `refactor: short description` | refactor: [issue ID] short description |
 | `chore`    | Bump version                                                                        | chore/short-description                         | `chore: short description`    | chore: short description               |
 
 If several commit types are applicable to your change, try breaking it down into several commits. For example, one `feat` commit, one `fix` commit, and a `chore` commit. If that's not feasible, use the type that reflects the most important part of your change.
 
-When writing `short description` for commits, follow these guidelines:
+When writing the `short description` part, follow these guidelines:
 * Don't capitalize the first letter, reserve that for proper nouns (product names, for example).
 * Use the imperative, present tense: "change" not "changed" nor "changes".
-* No dot (.) at the end.
-
-#### Examples
-
-```
-feat: add a guide for validators (RDOC-1)
-```
-
-```
-fix: remove typos in FAQ (RDOC-2)
-```
-
-```
-refactor: restructure node operator tutorial
-```
-
-```
-chore: bump Vale version
-```
+* Don't add a period (.) at the end.
 
 ## Development
 This section describes the process for running Ronin documentation on your local computer, and describes the main elements of the site's structure.
@@ -131,7 +113,7 @@ By default, a browser window opens at [http://localhost:3000](http://localhost:3
 
 ## Site structure
 ### Directories
-Content is written in markdown files, which reside in the `/docs` directory. The files are further organized by category as described in the following table.
+Content is written in Markdown files, which reside in the `/docs` directory. The files are further organized by category as described in the following table.
 
 | Directory             | Purpose                                                                                                                                                                                          |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
