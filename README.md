@@ -3,25 +3,28 @@
 The documentation for Ronin is built with [Docusaurus](https://docusaurus.io/).
 
 ## Run locally
-This site is powered by [Docusaurus](https://docusaurus.io), a static site generator. To preview changes as you edit the files, you can run a local development server that serves the Ronin documentation site and reflects the latest changes. 
+This site is powered by [Docusaurus](https://docusaurus.io), a static site generator. To preview changes as you edit the files, you can run a local development server that serves the Ronin documentation site and reflects the latest changes.
 
-Follow these steps to install and run the project locally:
+### Prerequisites
+Install the dependencies:
+* Node.js version 16.14 or higher: https://nodejs.org/en/download
+* Yarn: https://classic.yarnpkg.com/lang/en/docs/install/
+* Vale: https://vale.sh/docs/vale-cli/installation/
+
+### Steps
+
 1. Clone this repository to create its copy on your local computer.
-2. Install dependencies for Docusaurus and Vale:
-   * Node.js version 16.14 or higher: https://nodejs.org/en/download
-   * Yarn: https://classic.yarnpkg.com/lang/en/docs/install/
-   * Vale: https://vale.sh/docs/vale-cli/installation/
-3. In the terminal, navigate to the `ronin-document` directory where the repository is cloned:
+2. Navigate to the `ronin-document` directory:
    ```
    cd ronin-document
    ```
 
-4. Install the project's dependencies:
+3. Install the project:
    ```
    yarn install
    ```
 
-5. Start the local server:
+4. Start the local server:
    ```
    yarn start
    ```
