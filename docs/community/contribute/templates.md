@@ -6,14 +6,12 @@ description: Templates for Ronin docs content.
 # Templates for Ronin docs
 You can copy any of these templates into a new Markdown file as the first step in creating a new article and opening a pull request:
 
-```
 * [Concept](#concept)
 * [Task](#task)
 * [Reference](#reference)
 * [Troubleshooting](#troubleshooting)
 * [Get started](#get-started)
 * [Tutorial](#tutorial)
-```
 
 ## Headers
 In the templates, H1 header is always reserved for the title of the page:
@@ -80,7 +78,7 @@ An optional section that can contain links to other content that the user can re
 
 For guidelines on writing concept topics, see [Content model](./contribution-guide.md#concept).
 
-## Procedure
+## Task
 ```
 ---
 title: Start with a verb
@@ -91,13 +89,13 @@ description: Brief description of the page's contents.
 (Replicate the title from the metadata. Remove this header if you're not using this template as a separate page.)
 
 ## Introduction
-Write one or two paragraphs that explain what the procedure does and its expected outcome. For example: "This guide explains how to <outcome> so that you can <do this after>".
+Write one or two paragraphs that explain what the task does and its expected outcome. For example: "This guide explains how to <outcome> so that you can <do this after>".
 
 ## Prerequisites
 Optionally, explain what knowledge the user needs to have, or what configuration they must complete, before starting.
 
-## Procedure body
-Write the steps of the procedure following the instructions in https://developers.google.com/style/procedures. You can call this section "Steps" or use a name similar to the page title. For example: "Run a validator node" is the page title, and "Install the node" is the procedure body title.
+## Task body
+Write the steps of the task following the instructions in https://developers.google.com/style/procedures. You can call this section "Steps" or use a name similar to the page title. For example: "Run a validator node" is the page title, and "Install the node" is the task body title.
 
 ## See also
 An optional section that can contain links to other content that the user can read to reinforce the understanding of the information covered in this topic.
@@ -106,7 +104,7 @@ An optional section that can contain links to other content that the user can re
 
 ```
 
-For guidelines on writing procedure topics, see [Content model](./contribution-guide.md#procedure).
+For guidelines on writing task topics, see [Content model](./contribution-guide.md#task).
 
 ## Reference
 
@@ -144,7 +142,7 @@ For guidelines on writing reference topics, see [Content model](./contribution-g
 When working with <feature>, you might encounter the following issues.
 ```
 
-### Troubleshooting procedure
+### Troubleshooting task
 
 ```
 ---
@@ -162,7 +160,7 @@ Write one or two paragraphs to clarify the audience, what the error is and when 
 Optionally, explain what knowledge the user needs to have, or what configuration they must complete, before resolving the error.
 
 ## Troubleshooting body
-Write the steps of the procedure following the instructions in https://developers.google.com/style/procedures. You can call this section "Steps" or use a name similar to the page title. For example: "Debug a validator node" is the page title, and "Debug the node" is the troubleshooting body title.
+Write the steps of the task following the instructions in https://developers.google.com/style/procedures. You can call this section "Steps" or use a name similar to the page title. For example: "Debug a validator node" is the page title, and "Debug the node" is the troubleshooting body title.
 
 ## See also
 An optional section that can contain links to other content that the user can read to reinforce the understanding of the information covered in this topic.
@@ -198,7 +196,7 @@ Write one or two paragraphs that explain whom the get started guide is for, and 
 Optionally, explain what knowledge the user needs to have, or what configuration they must complete, before starting.
 
 ## Get started body
-Write the steps of the procedure following the instructions in https://developers.google.com/style/procedures. You can call this section "Steps" or use a name similar to the page title. For example: "Get started with Ronin CLI" is the page title, and "Set up the CLI" is the get started body title.
+Write the steps of the task following the instructions in https://developers.google.com/style/procedures. You can call this section "Steps" or use a name similar to the page title. For example: "Get started with Ronin CLI" is the page title, and "Set up the CLI" is the get started body title.
 
 ## Next steps
 Provide a recap and include actionable next steps that the user can take after completing this page.

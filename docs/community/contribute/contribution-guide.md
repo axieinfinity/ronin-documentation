@@ -113,7 +113,10 @@ By default, a browser window opens at [http://localhost:3000](http://localhost:3
 
 ## Site structure
 ### Directories
-Content is written in Markdown files, which reside in the `/docs` directory. The files are further organized by category as described in the following table.
+* Content is written in Markdown files, which reside in the `/docs` directory.
+* Inside each directory is an `assets` directory where screenshots and diagrams are stored.
+* Markdown files contain [front matter](https://docusaurus.io/docs/next/create-doc#doc-front-matter).
+* The files in the `/docs` directory are further organized by category as described in the following table:
 
 | Directory             | Purpose                                                                                                                                                                                          |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -124,9 +127,6 @@ Content is written in Markdown files, which reside in the `/docs` directory. The
 | `docs/node-operators` | Documentation for node operators.                                                                                                                                                                |
 | `docs/validators`     | Documentation for validators.                                                                                                                                                                    |
 
-* Inside each folder is an `assets` directory where screenshots and diagrams are stored.
-* Markdown files contain [front matter](https://docusaurus.io/docs/next/create-doc#doc-front-matter).
-
 ### Sidebar
 An essential means of navigating Ronin documentation, the sidebar is used for the following:
 * Grouping pages into categories.
@@ -136,11 +136,9 @@ An essential means of navigating Ronin documentation, the sidebar is used for th
 The contents of the sidebar are defined in the `/sidebar.js` file. Every page you're writing must be added to the sidebar.
 
 ### Homepage
-The homepage is what the user sees when accessing https://docs.roninchain.com.
+The homepage is what the user sees when accessing https://docs.roninchain.com. The contents of the homepage are defined in `/src/components/homepage-features/Features.tsx`.
 
-The contents of the homepage are defined in `/src/components/homepage-features/Features.tsx`.
-
-We do not recommend making changes to this file.
+We do not recommend making changes to the homepage.
 
 ### Header and footer
 The header and footer are defined in the `/docusaurus.config.js` file.
@@ -220,10 +218,10 @@ The Ronin docs sidebar is used to group multiple related pages into sub-categori
 
 ### Content order
 We organize content predictably within top-level categories, regular categories, and pages, from broadest applicability to most specific, following this order:
-* Concepts (what a feature is)
-* Task (how to enable a feature, how to use a feature, how to manage a feature, how to disable a feature)
-* Reference (list of related parameters, commands)
-* Troubleshooting (how to resolve issues)
+* Concepts (what a feature is).
+* Task (how to enable a feature, how to use a feature, how to manage a feature, how to disable a feature).
+* Reference (list of related parameters, commands).
+* Troubleshooting (how to resolve issues).
 
 ### Content types
 Any of these content types can be shared as a page on its own, and some content types can also be used as topics within a larger page. We will therefore refer to the content types as "topics" in the following sections.
@@ -253,7 +251,7 @@ Write one or two paragraphs describing the main idea of the topic.
 ##### Body
 
 * Structure the body of a concept topic like you would a presentation to a group who doesn't know anything about the topic. Introduce ideas gradually, so your audience can grow their understanding of the topic.
-* It can be easy to blend explanations with other types of content, like procedures or references. But you should avoid doing so. Here are some tips to avoid mixing documentation types:
+* It can be easy to blend explanations with other types of content, like tasks or references. But you should avoid doing so. Here are some tips to avoid mixing documentation types:
   * Avoid instructions, procedures, or any content that doesn't focus solely on building upon the conceptual understanding of the concept.
   * If you find yourself writing steps or describing how to do something in detail in your concept topic, you need to shift your focus away from describing the tasks, and go back to the concept. Remind yourself of the main goal of your topic.
 
@@ -270,50 +268,49 @@ Concept pages:
 Concept topics within other pages:
 * Description of the credit score system in [Bailout](./../../validators/slashing/bailout.mdx)
 
-#### Procedure
-A procedure (how-to guide, task) is used to explain to a user how to use a specific feature, accomplish a task, and to guide the user through numbered steps. Procedures reinforce the concepts that were explained in a [concept](#concept) page by giving one or more examples that might be useful for the users.
+#### Task
+A (how-to guide, procedure) is used to explain to a user how to use a specific feature, accomplish a task, and to guide the user through numbered steps. Tasks reinforce the concepts that were explained in a [concept](#concept) page by giving one or more examples that might be useful for the users.
 
-A procedure works well when:
+A task works well when:
 * It focuses only on the task it's describing.
 * It doesn't contain conceptual or referential information—that lives elsewhere.
 * In potential points of error, it contains troubleshooting tips or links to troubleshooting topics where the user can seek help.
 
 *Template*
 
-To write a procedure, use the [procedure template](./templates.md#procedure).
+To write a task, use the [task template](./templates.md#task).
 
 *Guidelines*
 
 ##### Title
-To write a title for a procedure, start with a verb. For example: "Create an account", "Become a validator", "Run a node". The outcome of the procedure should be clear to the user from the title alone.
+To write a title for a task, start with a verb. For example: "Create an account", "Become a validator", "Run a node". The outcome of the task should be clear to the user from the title alone.
 
 ##### Introduction
-Briefly describe the outcome of the procedure and optionally, what the user should be able to do after completing the steps. For example: "This guide demonstrates how you can delegate RON to a validator for the first time".
+Briefly describe the outcome of the task and optionally, what the user should be able to do after completing the steps. For example: "This guide demonstrates how you can delegate RON to a validator for the first time".
 
 ##### Prerequisites
-Explain what knowledge the user needs to have, or what configuration they must complete, before starting the procedure. Use imperative sentences, for example, "Read the concept guide" or "Download and install the Ronin Wallet app".
+Explain what knowledge the user needs to have, or what configuration they must complete, before starting the task. Use imperative sentences, for example, "Read the concept guide" or "Download and install the Ronin Wallet app".
 
 ##### Body
-Write a step-by-step instruction to complete the procedure:
-
+Write a step-by-step instruction to complete the task:
 * Follow the guidelines in https://developers.google.com/style/procedures
 * Use a single numbered list.
 * Use screenshots or graphics to assist a user in navigating a UI.
 * Do not explain any concepts in this section. Instead, link to concept articles in case a user does not know about a certain concept. For example: 'Configure the server with the appropriate configuration. For more information about server configurations, see "Server configuration".'
-* Avoid giving the users multiple paths to select when working through procedures. When you avoid giving the user choices, your documentation should lead all users to the same end result.
-* If the page is meant for beginner users, avoid adding procedures that you might consider better suited for advanced users. If your document is intended for advanced users, state that up front and give them a list of prerequisites before they go through the steps.
+* Avoid giving the users multiple paths to select when working through tasks. When you avoid giving the user choices, your documentation should lead all users to the same end result.
+* If the page is meant for beginner users, avoid adding tasks that you might consider better suited for advanced users. If your document is intended for advanced users, state that up front and give them a list of prerequisites before they go through the steps.
 
 ##### See also
-Include a bulleted list of related pages to extend the user's understanding of this procedure and the concepts that it involves.
+Include a bulleted list of related pages to extend the user's understanding of this task and the concepts that it involves.
 
 *Examples*
 
-Procedure pages:
+Task pages:
 * [Become a delegator](./../../delegators/onboarding/become-delegator.mdx)
 * [Run a validator node](./../../node-operators/setup/mainnet/validator.md)
 * [Claim rewards](./../../validators/rewards/claim.mdx)
 
-Procedure topics within other pages:
+Task topics within other pages:
 * [Check your credit score](./../../validators/slashing/bailout.mdx#check-your-credit-score)
 * [Use secure communication](./../../node-operators/resources/security.md#use-secure-communication)
 
@@ -367,11 +364,11 @@ This topic introduces the troubleshooting section of a page.
 
 To create this topic, use the [Introductory topic](./templates.md#introductory-topic) template.
 
-*A troubleshooting procedure*
+*A troubleshooting task*
 
-The format is similar to the standard procedure, and the title follows the same verb and noun pattern, such as “Debug a Ronin node." 
+The format is similar to the standard task, and the title follows the same verb and noun pattern, such as “Debug a Ronin node." 
 
-To create this topic, use the [Procedure](./templates.md#troubleshooting-procedure) template.
+To create this topic, use the [Task](./templates.md#troubleshooting-task) template.
 
 *A troubleshooting reference*
 
@@ -383,9 +380,9 @@ To create this topic, use the [Troubleshooting reference](./templates.md#trouble
 It might be helpful to group information in context to help people accomplish a complex task, understand a set of related tasks, or describe an entire workflow. You can combine different content types on a long page to ensure all contextual content can be found in one place. Such a "combined page" also helps remove duplicate content and makes room for potential growth as more options are added to the product.
 
 *Guidelines*
-* Use concept, procedure, reference, and troubleshooting topics in a combined page. Do not combine with get started or tutorials—those are distinct types not suitable for combination.
+* Use concept, task, reference, and troubleshooting topics in a combined page. Do not combine with get started or tutorials—those are distinct types not suitable for combination.
 * Separate different content types with section headings, and abide by title guidelines for each content type.
-* If the combined page contains a procedure, use a task-based title. Otherwise, use a title that's broad enough to reflect all the content on the page.
+* If the combined page contains a task, use a task-based title. Otherwise, use a title that's broad enough to reflect all the content on the page.
 
 *Example*
 
@@ -399,9 +396,9 @@ A tutorial is page that describes an complete walkthrough of a complex scenario.
 To write a tutorial, use the [tutorial template](./templates.md#tutorial).
 
 *Guidelines*
-* Unlike a [procedure](#procedure), which gives instructions for one task, a tutorial combines multiple procedures to reach an outcome. 
+* Unlike a [task](#task), which gives instructions for one task, a tutorial combines multiple tasks to reach an outcome. 
 * A tutorial provides a working example, which means that ideally, the user can create the example that is described in the tutorial, or something similar to it.
-* A tutorial might benefit from a friendlier tone. For example, consider being more conversational in your writing, or encourage and congratulate the user after completing a procedure.
+* A tutorial might benefit from a friendlier tone. For example, consider being more conversational in your writing, or encourage and congratulate the user after completing a task.
 
 #### Get started
 A get started topic is a set of steps to help a user get set up quickly to use a single feature or product. It consists of more than one task.
@@ -424,7 +421,7 @@ Explain what knowledge the user needs to have, or what configuration they must c
 
 ##### Body
 
-* If you're writing for beginner audiences, describe steps in a less explicit and formal manner than those in the regular [procedure](#procedure).
+* If you're writing for beginner audiences, describe steps in a less explicit and formal manner than those in the regular [task](#task).
 * Include code blocks and screenshots to help reassure that the reader is performing the right steps.
 
 ##### Next steps
@@ -471,7 +468,7 @@ Vale returns three types of alerts—`suggestion`, `warning`, and `error`.
 You must fix all `error` alerts before creating a PR. The other two types are good to fix but not mandatory.
 
 ### Vale styles
-Ronin uses the [Google](https://github.com/errata-ai/google) style for the [Google developer documentation style guide](https://developers.google.com/style). The style definitions are located in the `/static/styles` directory, and the Vale config lives in `/.vale.ini`
+Ronin uses the [Google](https://github.com/errata-ai/google) style for the [Google developer documentation style guide](https://developers.google.com/style). The style definitions are located in the `/static/styles` directory, and the Vale config lives in `/.vale.ini`.
 
 ## Self-review checklist
 As a documentation contributor, you should always review your PR against this checklist:
@@ -479,7 +476,7 @@ As a documentation contributor, you should always review your PR against this ch
 * [ ] If you created a new page, make sure that it uses one of the [templates](./templates.md).
 * [ ] Make sure that screenshots and diagrams are stored in the `assets` directory in the category where the Markdown file is.
 * [ ] Compare your PR's output in the preview environment to confirm that the output matches the source and that everything is rendering as expected. Look out for typos, issues with lists and tables, or content that doesn't follow the style guide.
-* [ ] Ensure technical accuracy of the content. Try to test your procedures and run all commands by yourself.
+* [ ] Ensure technical accuracy of the content. Try to test your tasks and run all commands by yourself.
 * [ ] Run [Vale](#run-vale) in your Markdown files to check adherence to the [style guide](./style-guide.md).  
 * [ ] Spot and fix any grammar and spelling errors. Vale might not highlight those. 
 * [ ] If there are any failing checks in your PR, such as broken links, troubleshoot them until they're passing.
