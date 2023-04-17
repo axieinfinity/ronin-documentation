@@ -40,6 +40,10 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          editUrl: ({versionDocsDirPath, docPath}) =>
+          `https://github.com/axieinfinity/ronin-document/edit/main/${versionDocsDirPath}/${docPath}`,
+        editLocalizedFiles: false,
+        editCurrentVersion: false,
         },
         blog: {
           showReadingTime: true,
