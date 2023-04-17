@@ -109,7 +109,8 @@ This site is powered by [Docusaurus](https://docusaurus.io), a static site gener
    yarn start
    ```
 
-By default, a browser window opens at [http://localhost:3000](http://localhost:3000). To stop the server, press `Ctrl+C` in the terminal.
+By default, a browser window opens at [http://localhost:3000](http://localhost:3000).
+
 ## Deployments
 Ronin documentation is automatically deployed to preview and production environments using [Vercel](https://vercel.com/).
 
