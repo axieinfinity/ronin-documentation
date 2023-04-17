@@ -1,13 +1,12 @@
-import ListViewIcon from './list-view.svg';
-import CoinIcon from './coins.svg';
-import BoxTickIcon from './box-tick.svg';
-import SignDirectionIcon from './signs-direction.svg';
-import LaptopCodeIcon from './laptop-code.svg';
-import UserShieldIcon from './user-shield.svg';
-
 import React from 'react'
 
+import BoxTickIcon from './box-tick.svg'
 import { Card } from './Card'
+import CoinIcon from './coins.svg'
+import LaptopCodeIcon from './laptop-code.svg'
+import ListViewIcon from './list-view.svg'
+import SignDirectionIcon from './signs-direction.svg'
+import UserShieldIcon from './user-shield.svg'
 
 const featureList = [
   {
