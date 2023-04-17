@@ -22,7 +22,7 @@ The quantity of RON reserved for various network functions, as a percentage of t
 <img src={totalSupply} width={800} />
 
 ### RON unlock schedule
-The max total supply is 1,000,000,000 and it can potentially be unlocked after 108 months (9 years) if every token that is unlocked is issued. RON tokens were first unlocked on January 27, 2023. While the unlock schedule provides a view of RON tokens unlocked at quarterly time periods, tokens are unlocked on a continuous basis rather than having large unlocks at a specific date every quarter for the actual implementation.
+The max total supply is 1,000,000,000 and it can potentially be unlocked after 108 months (9 years) if every token that is unlocked is issued. RON tokens were first unlocked on January 27, 2022. While the unlock schedule provides a view of RON tokens unlocked at quarterly time periods, tokens are unlocked on a continuous basis rather than having large unlocks at a specific date every quarter for the actual implementation.
 
 
 | Month     | Rewards         | Community   | Sky Mavis  | Ecosystem Fund | Total unlocked supply | Unlocked supply % |
