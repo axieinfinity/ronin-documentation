@@ -13,7 +13,7 @@ Link: [https://bridge.roninchain.com](https://bridge.roninchain.com)
 
 ## Withdrawal limits
 
-The withdrawal process on Ronin Bridge is segregated into tiered methods corresponding to the overall value of the transaction. 
+The withdrawal process on Ronin Bridge is segregated into tiered methods corresponding to the overall value of the transaction.
 
 The following table provides the initial setting for tier limits.
 
@@ -28,7 +28,7 @@ Requirements:
 
 * Tier 1: Requires automated approval from 70% of validators.
 * Tier 2: Requires automated approval from 90% of validators.
-* Tier 3: Requires automated approval from 90% validators and also manual approval by the auditors.
+* Tier 3: Requires automated approval from 90% validators and also manual approval by the reviewers.
 
 For Tier 3 review, a fee ($\approx$ 0,001%) is charged for unlocking a transaction.
 
