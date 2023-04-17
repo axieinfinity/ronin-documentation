@@ -12,7 +12,7 @@ Before you contribute, take a few minutes to review this contribution guide. The
 
 Consider the following before contributing:
 * If you want to report an issue, click **Issues** and describe the problem in detail.
-* If you have a technical question or need help finding specific information, join Ronin Discord.
+* If you have a technical question or need help finding specific information, join [Ronin Discord](https://discord.gg/roninnetwork).
 
 If you want to contribute to this repository, here are most common fixes to make:
 * Typos and other spelling and grammar issues.
@@ -32,15 +32,15 @@ The contribution flow differs based on the type of changes you want to make. Ref
 
 ### Make changes via UI
 For simple edits such as fixing a typo, a broken link, or editing a sentence, follow these steps:
-1. Click **Edit this page**. This takes you to the Markdown file in GitHub.
+1. Click **Edit this page**. This takes you to the source file in the GitHub file editor.
 2. Edit the contents.
-3. Click **Commit changes...**
+3. Click **Commit changes...**.
 4. In the **Commit message** field, type a short, meaningful commit message that describes the change you made to the file. Follow our [commit message convention](#commit-message-convention).
 5. Select **Create a new branch for this commit and start a pull request**.
 6. Click **Propose file change**.
 
 ### Make changes in your own branch
-If what you're contributing is more than a simple change, you need to create a working branch and submit a pull request. 
+If you add a new page or edit an existing page in a significant way, then you need to create a working branch and submit a pull request.
 1. [Run](#run-locally) Ronin documentation locally.
 2. Create a working branch for your changes. Replace `type` with the correct type according to our [branch naming convention](#branch-naming-convention).
    ```
@@ -110,6 +110,18 @@ This site is powered by [Docusaurus](https://docusaurus.io), a static site gener
    ```
 
 By default, a browser window opens at [http://localhost:3000](http://localhost:3000). To stop the server, press `Ctrl+C` in the terminal.
+## Deployments
+Ronin documentation is automatically deployed to preview and production environments using [Vercel](https://vercel.com/).
+
+### Preview deployments
+Preview deployments allow you to preview changes in a live deployment without merging those changes to the production branch.
+
+Every time you open a new PR or make new commits to an open PR, it's automatically deployed to a unique preview URL, which is displayed on the PR's page in GitHub. People you share this URL with can give feedback on the changes via comments.
+
+### Production deployments
+When a PR is merged to the repository's `main` branch, it's automatically deployed to production and the status is displayed on the PR's page in GitHub. It can take a few minutes for your changes to be visible on the production site. 
+
+After a PR is closed, your working branch is deleted.
 
 ## Site structure
 ### Directories
@@ -118,14 +130,14 @@ By default, a browser window opens at [http://localhost:3000](http://localhost:3
 * Markdown files contain [front matter](https://docusaurus.io/docs/next/create-doc#doc-front-matter).
 * The files in the `/docs` directory are further organized by category as described in the following table:
 
-| Directory             | Purpose                                                                                                                                                                                          |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `docs/basics`         | General information about Ronin.                                                                                                                                                                 |
-| `docs/community`      | Section that explains how to join the Ronin social media and sign up to the newsletter, describes the community initiatives we have, and instructs users how to contribute to the documentation. |
-| `docs/delegators`     | Documentation for delegators.                                                                                                                                                                    |
-| `docs/developers`     | One page that points readers to the Ronin developer documentation published on the Sky Mavis Developer Portal.                                                                                   |
-| `docs/node-operators` | Documentation for node operators.                                                                                                                                                                |
-| `docs/validators`     | Documentation for validators.                                                                                                                                                                    |
+| Directory              | Purpose                                                                                                        |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `/docs/basics`         | General information about Ronin.                                                                               |
+| `/docs/community`      | Ronin socials, contribution guide, and community initiatives.                                                  |
+| `/docs/delegators`     | Documentation for delegators.                                                                                  |
+| `/docs/developers`     | One page that points readers to the Ronin developer documentation published on the Sky Mavis Developer Portal. |
+| `/docs/node-operators` | Documentation for node operators.                                                                              |
+| `/docs/validators`     | Documentation for validators.                                                                                  |
 
 ### Sidebar
 An essential means of navigating Ronin documentation, the sidebar is used for the following:
@@ -142,20 +154,6 @@ We do not recommend making changes to the homepage.
 
 ### Header and footer
 The header and footer are defined in the `/docusaurus.config.js` file.
-
-## Deployments
-Ronin documentation is deployed in three environments: preview, staging, and production. Deployments are done using [Vercel](https://vercel.com/).
-
-### Preview deployments
-Preview deployments allow you to preview changes in a live deployment without merging those changes to the production branch.
-
-Every time you open a new PR or make new commits to an open PR, it's automatically deployed to a unique preview URL, which is displayed on the PR's page in GitHub. People you share this URL with can give feedback on the changes via comments.
-
-### Staging deployments
-The staging environment is used internally by Ronin team and is out of scope of documentation contributions.
-
-### Production deployments
-When a PR is merged to the repository's main branch, it's automatically deployed to production and the status is deployed on the PR's page in GitHub. It can take a few minutes for your changes to be visible on the production site. After a PR is closed, the working branch is deleted.
 
 ## Content model
 This content model explains the goals of each type of content we create within Ronin documentation, and what to include when writing or updating a page. We use these types across all documentation sets to provide a consistent user experience, and only publish content that follows the model.
