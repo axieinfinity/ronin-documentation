@@ -44,6 +44,7 @@ const config = {
           `https://github.com/axieinfinity/ronin-document/edit/main/${versionDocsDirPath}/${docPath}`,
         editLocalizedFiles: false,
         editCurrentVersion: false,
+        showLastUpdateTime: true
         },
         blog: {
           showReadingTime: true,
