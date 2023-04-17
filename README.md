@@ -32,7 +32,10 @@ Install the dependencies:
 By default, a browser window opens at [http://localhost:3000](http://localhost:3000).
 
 ## Contribute
-For information on contributing, read the [Contribution guide](https://docs.roninchain.com/community/contribute/contribution-guide).
+For information on contributing, read the [Contribution guide](./).
 
 ## Deploy
 Ronin documentation deployments are automated using [Vercel](https://vercel.com/). Every commit to the `main` branch triggers a new deploy request, while a commit to a working branch is deployed to a preview environment that contributors can use to collect feedback from maintainers.
+
+## License
+This project is licensed under the terms of the [GNU General Public License v3.0](LICENSE.md) license.

@@ -357,7 +357,7 @@ const sidebars = {
             slug: '/community/contribute',
           },
           items: [
-            'community/contribute/contribution-guide',
+            'CONTRIBUTING',
             'community/contribute/style-guide',
             'community/contribute/templates',
           ],

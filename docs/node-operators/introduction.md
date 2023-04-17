@@ -28,7 +28,7 @@ Validator and non-validator are considered *full* nodes—they store full blockc
 A validator node starts life as a full node, but has also “registered” itself to the network as a validator, which means that it may now accept RON token stake and potentially be included in the validator set that conduct network consensus.
 
 ## What is a bridge operator node?
-The *bridge operator node* ([GitHub](https://github.com/axieinfinity/bridge-v2)), also referred to as the bridge operator, is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge—the blockchain bridge that facilitates asset transfers between Ronin and other EVM-based chains.
+A *bridge operator node* ([GitHub](https://github.com/axieinfinity/bridge-v2)), also referred to as the bridge operator, is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge—the blockchain bridge that facilitates asset transfers between Ronin and other EVM-based chains.
 
 :::caution
 On Ronin, each validator is required to run a validator node and a bridge operator node. The latter is required to facilitate asset transfers on Ronin Bridge. A validator who doesn't run a bridge operator is not eligible for the block reward.
