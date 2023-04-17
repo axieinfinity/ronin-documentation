@@ -28,7 +28,7 @@ Requirements:
 
 * Tier 1: Requires automated approval from 70% of validators.
 * Tier 2: Requires automated approval from 90% of validators.
-* Tier 3: Requires automated approval from 90% validators and also manual approval by the reviewers.
+* Tier 3: Requires automated approval from 90% validators and manual approval by the reviewers.
 
 For Tier 3 review, a fee ($\approx$ 0,001%) is charged for unlocking a transaction.
 
