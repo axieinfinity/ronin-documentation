@@ -1,11 +1,12 @@
 # Ronin documentation
 
-The documentation for Ronin is built with [Docusaurus](https://docusaurus.io/).
+This repository contains Ronin documentation deployed at
+[docs.roninchain.com](https://docs.roninchain.com). The documentation is built
+with [Docusaurus](https://docusaurus.io/), a static site generatator.
 
 ## Local development
 
-This site is powered by [Docusaurus](https://docusaurus.io), a static site
-generator. To preview changes as you edit the files, you can run a local
+To preview changes as you edit the files, you can run a local
 development server that serves the Ronin documentation site and reflects the
 latest changes.
 
@@ -45,8 +46,8 @@ By default, a browser window opens at [http://localhost:3000](http://localhost:3
 
 ## Contribute
 
-For information on contributing, see
-[Contribution guide](http://docs.roninchain.com/docs/community/contribute/guide).
+For instructions on how to get started with our project, see the
+[Contribution guide](https://github.com/axieinfinity/ronin-document/blob/main/docs/CONTRIBUTING.md).
 
 ## Deploy
 
