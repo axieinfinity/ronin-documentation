@@ -33,38 +33,18 @@
     "sass": "^1.49.9"
   },
   "devDependencies": {
-    "@axieinfinity/eslint-config": "^1.0.0",
     "@tsconfig/docusaurus": "^1.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "2.8.7",
     "typescript": "4.6.2"
-  },
-  "eslintConfig": {
-    "extends": "@axie",
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "printWidth": 100,
-          "tabWidth": 2,
-          "useTabs": false,
-          "semi": false,
-          "singleQuote": true,
-          "quoteProps": "as-needed",
-          "jsxSingleQuote": false,
-          "trailingComma": "es5",
-          "bracketSpacing": true,
-          "arrowParens": "always"
-        }
-      ],
-      "no-console": [
-        "error",
-        {
-          "allow": [
-            "debug",
-            "error"
-          ]
-        }
-      ]
-    }
   },
   "browserslist": {
     "production": [
