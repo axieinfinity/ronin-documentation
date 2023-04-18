@@ -13,6 +13,6 @@ contracts, and tokens. You can use the explorer to review transaction
 history, track transaction progress, and find accounts and contracts,
 for example.
 
-Link: [https://app.roninchain.com/dashboard](https://app.roninchain.com/dashboard)
+Link: [https://app.roninchain.com/dashboard](https://app.roninchain.com/dashboard).
 
 <img src={explorer} width={1440} />
