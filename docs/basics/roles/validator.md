@@ -13,7 +13,7 @@ There are three validator roles:
 * **Governing Validator.** The validators chosen by the community and Sky Mavis to ensure network security. Governing Validators are validators by default, and they account for more than half of the total validator pool.
 
 ## Become a validator
-Follow the steps in [Become a validator](./../../validators/onboarding/become-validator.mdx)
+For instructions on becoming a validator, see [Become a validator](./../../validators/onboarding/become-validator.mdx).
 
 ### RON requirements for validators
 Each Ronin validator is required to stake 250,000 RON.

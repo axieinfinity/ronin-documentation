@@ -125,15 +125,15 @@ const config = {
             to: 'docs/developers/portal',
           },
           // Community
-          {
-            label: 'Community',
-            to: 'docs/community/join',
-          },
-          // Community HIDDEN until documentation goes open-source
           // {
           //   label: 'Community',
-          //   to: 'docs/community',
+          //   to: 'docs/community/join',
           // },
+          // Community HIDDEN until documentation goes open-source
+          {
+            label: 'Community',
+            to: 'docs/community',
+          },
           // Search
           {
             type: 'search',
@@ -141,14 +141,6 @@ const config = {
           },
         ],
       },
-      // announcementBar: {
-      //   id: 'announcement',
-      //   content:
-      //     '🎉&nbsp;<strong>Saigon</strong> - an open testnet for Ronin, is live! <a target="_blank" rel="noopener noreferrer" href="https://saigon-docs.roninchain.com">Checkout Saigon Documentation!</a>',
-      //   backgroundColor: '#E0F6F4',
-      //   textColor: '#00000',
-      //   isCloseable: false,
-      // },
       footer: {
         style: 'light',
         links: [
@@ -168,14 +160,6 @@ const config = {
                 label: 'Newsletter',
                 href: 'https://roninblockchain.substack.com/',
               },
-              // {
-              //   label: 'Join',
-              //   to: 'docs/community/join',
-              // },
-              // {
-              //   label: 'Contribute to documentation',
-              //   to: 'docs/community/contribute',
-              // },
             ],
           },
           {
@@ -188,15 +172,6 @@ const config = {
               {
                 label: 'Validator Dashboard',
                 href: 'https://validator.roninchain.com/',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/axieinfinity/',
               },
               {
                 label: 'Sky Mavis Developer Portal',

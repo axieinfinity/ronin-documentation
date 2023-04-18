@@ -79,9 +79,13 @@ const sidebars = {
           items: [
             // Ronin Bridge
             'basics/dapps/ronin-bridge',
+            // Ronin Explorer
             'basics/dapps/ronin-explorer',
+            // RON Staking
             'basics/dapps/ron-staking',
+            // Ronin Safe
             'basics/dapps/multisig',
+            // Katana DEX
             'basics/dapps/katana',
           ],
         },
@@ -331,59 +335,40 @@ const sidebars = {
     },
     // Community
     {
-      type: 'doc',
+      type: 'category',
       label: 'Community',
-      id: 'community/join',
+      link: {
+        type: 'generated-index',
+        title: 'Community', 
+        description: 'Community information and a contribution guide.',
+        slug: '/community',
+      },
+      items: [
+        'community/join',
+        {
+          type: 'category',
+          label: 'Contribute',
+          link: {
+            type: 'generated-index',
+            title: 'Contribute',
+            description: 'Learn how to contribute to the Ronin documentation.',
+            slug: '/community/contribute',
+          },
+          items: [
+            // Contribution guide
+            'CONTRIBUTING',
+            // Content style guide
+            'community/contribute/style-guide',
+            // Content templates
+            'community/contribute/templates',
+          ],
+        },
+        // 'community/bug-bounty',
+        // 'community/council',
+        // 'community/governance',
+        // 'community/grants',
+      ],
     },
-    // Community HIDDEN until documentation goes open-source
-    // {
-    //   type: 'category',
-    //   label: 'Community',
-    //   link: {
-    //     type: 'generated-index',
-    //     title: 'Community', 
-    //     description: 'Community information and a contribution guide.',
-    //     slug: '/community',
-    //   },
-    //   items: [
-    //     'community/join',
-    //     {
-    //       type: 'category',
-    //       label: 'Contribute',
-    //       link: {
-    //         type: 'generated-index',
-    //         title: 'Contribute',
-    //         description: 'Learn how to contribute to the Ronin documentation.',
-    //         slug: '/community/contribute',
-    //       },
-    //       items: [
-    //         'community/contribute/guide',
-    //         'community/contribute/style',
-    //         {
-    //           type: 'category',
-    //           label: 'Templates',
-    //           link: {
-    //           type: 'generated-index',
-    //           title: 'Documentation templates', 
-    //           description: 'Templates used to create this documentation.',
-    //           slug: '/community/contribute/templates',
-    //         },
-    //         items: [
-    //           'community/contribute/templates/concept',
-    //           'community/contribute/templates/task',
-    //           'community/contribute/templates/reference',
-    //           'community/contribute/templates/troubleshooting',
-    //           'community/contribute/templates/tutorial',
-    //           ],
-    //         },
-    //       ],
-    //     },
-    //     'community/bug-bounty',
-    //     'community/council',
-    //     'community/governance',
-    //     'community/grants',
-    //   ],
-    // },
   ],
 }
 
