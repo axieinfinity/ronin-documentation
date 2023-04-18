@@ -1,11 +1,12 @@
 # Ronin documentation
 
-The documentation for Ronin is built with [Docusaurus](https://docusaurus.io/).
+This repository contains Ronin documentation deployed at
+[docs.roninchain.com](https://docs.roninchain.com). The documentation is built
+with [Docusaurus](https://docusaurus.io/), a static site generatator.
 
 ## Local development
 
-This site is powered by [Docusaurus](https://docusaurus.io), a static site
-generator. To preview changes as you edit the files, you can run a local
+To preview changes as you edit the files, you can run a local
 development server that serves the Ronin documentation site and reflects the
 latest changes.
 
