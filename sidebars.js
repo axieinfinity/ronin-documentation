@@ -79,9 +79,13 @@ const sidebars = {
           items: [
             // Ronin Bridge
             'basics/dapps/ronin-bridge',
+            // Ronin Explorer
             'basics/dapps/ronin-explorer',
+            // RON Staking
             'basics/dapps/ron-staking',
+            // Ronin Safe
             'basics/dapps/multisig',
+            // Katana DEX
             'basics/dapps/katana',
           ],
         },
@@ -330,12 +334,6 @@ const sidebars = {
       id: 'developers/portal',
     },
     // Community
-    // {
-    //   type: 'doc',
-    //   label: 'Community',
-    //   id: 'community/join',
-    // },
-    // Community HIDDEN until documentation goes open-source
     {
       type: 'category',
       label: 'Community',
@@ -357,8 +355,11 @@ const sidebars = {
             slug: '/community/contribute',
           },
           items: [
+            // Contribution guide
             'CONTRIBUTING',
+            // Content style guide
             'community/contribute/style-guide',
+            // Content templates
             'community/contribute/templates',
           ],
         },
