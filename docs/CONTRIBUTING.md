@@ -75,8 +75,8 @@ follow these steps:
    file editor.
 2. Edit the contents.
 3. Click **Commit changes...**.
-4. In the **Commit message** field, type a short, meaningful commit message that
-   describes the change you made to the file. Follow our [commit message convention](#naming-conventions).
+4. In the **Commit message** field, type a short and meaningful message
+   describing the change you made to the file. Follow the [commit message convention](#naming-conventions).
 5. Select **Create a new branch for this commit and start a pull request**.
 6. Click **Propose file change**.
 
@@ -93,7 +93,7 @@ create a working branch and submit a pull request.
    ```
 3. Make changes.
 4. Do a [self-review](#self-review-checklist).
-5. Run [Vale](#run-vale) on your changes and fix errors if any.
+5. Run [Vale](#run-vale) on your changes and resolve all errors.
 6. Add the file to your commit:
    ```
    git add path-to-file
@@ -109,12 +109,21 @@ create a working branch and submit a pull request.
 9. Open the repository in your browser, and click **Create pull request** to
    start a new pull request.
 
-A maintainer from the Ronin team will review your PR and approve or request the
-changes. If your PR looks good, the maintainer will merge it. If the reviewer
-suggests changes, update your PR and request another review.
+### Work with a pull request
 
-When you see your PR merged, find the changes on
-[docs.roninchain.com](https://docs.roninchain.com).
+After you're done with the changes, create a PR:
+
+* Fill the **Ready for review** template so that Ronin maintainers can review your PR. Follow the [naming convention](#naming-conventions).
+* If you're solving an issue, link the PR to it by typing `fixes #issue` or `closes #issue`.
+* [Allow maintainer edits](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) so that your branch can be reviewed and updated for a merge.
+* Maintainers may ask you to make changes before a PR can be merged, either as suggested changes or PR comments.
+* As you address maintainers' feedback, mark each item as resolved.
+
+### Next step
+
+After you address feedback from maintainers, your PR will be merged and your contributions will be visible on [docs.roninchain.com](https://docs.roninchain.com).
+
+Congratulations!
 
 ### Naming conventions
 
@@ -176,7 +185,7 @@ By default, a browser window opens at
 
 ## Deployments
 
-Ronin documentation is automatically deployed to preview and production
+Ronin documentation is automatically deployed to the production and preview
 environments using [Vercel](https://vercel.com/).
 
 ### Preview deployments
