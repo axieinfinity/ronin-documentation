@@ -1,6 +1,6 @@
 ---
 description: Ways to join the Ronin community.
-title: Community
+title: Join
 ---
 
 import DocCardList from '@theme/DocCardList'; 

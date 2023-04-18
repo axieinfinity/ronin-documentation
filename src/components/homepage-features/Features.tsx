@@ -59,7 +59,7 @@ const featureList = [
     Icon: UserShieldIcon,
     description: <>Join the Ronin community and stay up to date with latest news.</>,
     link: {
-      href: '/docs/community/join',
+      href: '/docs/community',
       title: 'Community',
     },
   },

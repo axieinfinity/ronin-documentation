@@ -1,0 +1,43 @@
+name: Improve the docs.roninchain.com site
+description: Make a suggestion or report a problem about the technical implementation of docs.roninchain.com.
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        * Before submitting an issue, read the [Contribution guide](https://docs.roninchain.com/docs/community/contribute/guide).
+        * Check if someone hasn't already opened a similar [issue](https://github.com/axieinfinity/ronin-document/issues).
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: This project has a Code of Conduct that all contributors are expected to follow.
+      options:
+        - label: I've read and agree to the Ronin documentation project's [Code of Conduct](https://github.com/axieinfinity/ronin-document/blob/main/CODE_OF_CONDUCT.md)
+          required: true
+
+  - type: textarea
+    attributes:
+      label: What page on docs.roninchain.com is affected?
+      description: Link to pages where you're seeing a problem, add screenshots, and include your browser and device information.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What changes are you suggesting?
+      description: |
+        - Give as much detail as you can to help us understand the change you want to see. 
+        - Why should the docs be changed? What use cases does the change support? 
+        - What is the expected outcome?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional information
+      description: Add any other context information, configuration, and data that you think is necessary to reproduce the issue.
+    validations:
+      required: false

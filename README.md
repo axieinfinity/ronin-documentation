@@ -2,53 +2,58 @@
 
 The documentation for Ronin is built with [Docusaurus](https://docusaurus.io/).
 
-## Run locally
+## Local development
 
-1. Install [Node.js](https://nodejs.org/en/download/) version >= 16.14.
-2. Install [Yarn](https://classic.yarnpkg.com/en/docs/install) classic
-3. Install [Vale](https://vale.sh/docs/vale-cli/installation/) for style guide checks
-4. Install dependencies
+This site is powered by [Docusaurus](https://docusaurus.io), a static site
+generator. To preview changes as you edit the files, you can run a local
+development server that serves the Ronin documentation site and reflects the
+latest changes.
 
-```bash
-yarn install
-```
+### Prerequisites
 
-4. Start local server
+Install the dependencies:
 
-```bash
-yarn start
-```
+* Node.js version 16.14 or higher:
+  [https://nodejs.org/en/download](https://nodejs.org/en/download)
+* Yarn:
+  [https://classic.yarnpkg.com/lang/en/docs/install/](https://classic.yarnpkg.com/lang/en/docs/install/)
+* Vale:
+  [https://vale.sh/docs/vale-cli/installation/](https://vale.sh/docs/vale-cli/installation/)
 
+### Steps
 
-## Check content against the style guide
+1. Clone this repository to create its copy on your local computer.
+2. Navigate to the `ronin-document` directory:
 
-Ronin documentation is gradually edited to comply with
-the [Google developer documentation style guide](https://developers.google.com/style).
+   ```
+   cd ronin-document
+   ```
 
-Before publishing a new or edited page, you must review the content using
-[Vale](https://vale.sh/), a prose linter.
+3. Install the project:
 
-Run the following command: 
+   ```
+   yarn install
+   ```
 
-```
-vale file-name
-``` 
+4. Start the local server:
 
-to review an individual file or
+   ```
+   yarn start
+   ```
 
-```
-vale directory-name
-```
+By default, a browser window opens at [http://localhost:3000](http://localhost:3000).
 
-to review all files in a directory.
+## Contribute
 
-Examples: `vale profile.md` or `vale docs/validators`. 
+For information on contributing, see
+[Contribution guide](http://docs.roninchain.com/docs/community/contribute/guide).
 
-The output is a list of errors and warnings that you need to review and fix
-where applicable. By default, Vale reviews every line in a file,
-including commands and variables, so use your best judgement when reviewing.
- 
 ## Deploy
 
-Ronin document is deployed with [Vercel](https://vercel.com/). Every commit to
-the `main` branch triggers a new deploy request.
+Ronin documentation deployments are automated. When a PR is merged to the `main` branch, it's
+automatically deployed to production and the status is displayed on the PR's
+page in GitHub.
+
+## License
+
+This project is licensed under the terms of the [GNU General Public License v3.0](LICENSE.md) license.
