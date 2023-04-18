@@ -46,8 +46,8 @@ By default, a browser window opens at [http://localhost:3000](http://localhost:3
 
 ## Contribute
 
-For information on contributing, see
-[Contribution guide](http://docs.roninchain.com/docs/community/contribute/guide).
+For instructions on how to get started with our project, see the
+[Contribution guide](https://github.com/axieinfinity/ronin-document/blob/main/docs/CONTRIBUTING.md).
 
 ## Deploy
 
