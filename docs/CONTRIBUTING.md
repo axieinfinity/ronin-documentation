@@ -303,7 +303,7 @@ that existing top-level category.
 * Most top-level categories have an auto-generated layout with a brief
   introduction at the top and the list of doc cards that represent the
   categories and pages inside that top-level category. There are exceptions,
-  however. For example, the [Node operators](./node-operators/) category is a
+  however. For example, the [Node operators](./node-operators/index.mdx) category is a
   manually written page, where doc cards are displayed using a custom helper,
   and organized into sections using headings.
 
