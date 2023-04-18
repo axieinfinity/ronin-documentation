@@ -85,7 +85,7 @@ If your contribution is more than a few words or simple fixes, then you need to
 create a working branch and submit a pull request.
 
 1. Fork the repository.
-2. Install the dependencies as specified in [Local development](#local-development).
+2. Install the dependencies as specified in [Run locally](#run-locally).
 3. Create a working branch. Fill in `type` and `short-description` according to the [branch naming convention](#naming-conventions).
 
    ```
@@ -155,7 +155,7 @@ When writing the `short description` part, follow these guidelines:
 * Use the imperative, present tense: "change" not "changed" nor "changes".
 * Don't add a period (.) at the end.
 
-## Local development
+## Run locally
 
 This site is powered by [Docusaurus](https://docusaurus.io), a static site
 generator. To preview changes as you edit the files, you can run a local
