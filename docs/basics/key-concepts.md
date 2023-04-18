@@ -168,7 +168,7 @@ Staking is the process through which a Ronin user "stakes" or locks their crypto
 
 Ronin's DPoS allows users to commit their RON as votes, where voting power is proportional to the number of coins held. These votes are then used to elect a number of validators who manage the blockchain on behalf of their voters, ensuring security and consensus. The staking reward is distributed to these elected validators, who then redistribute part of the reward to the users who staked their tokens proportionally to their individual contributions.
 
-To stake on Ronin, [become a delegator](../delegators/onboarding/become-delegator.mdx). 
+For instructions on staking on Ronin, see [Become a delegator](../delegators/onboarding/become-delegator.mdx).
 
 ## T
 ### Testnet
@@ -192,4 +192,3 @@ It's also common to use the term "validator" to refer to the validator node itse
 Web3 games are video games that leverage blockchain technology to provide new features and experiences for players. These games often use non-fungible tokens (NFTs) to represent in-game assets and provide players with true ownership of those assets. They also incorporate decentralized finance (DeFi) elements, allowing players to earn cryptocurrency and participate in yield farming or liquidity provision within the game.
 
 For example, Axie Infinity is a blockchain-based play-to-earn game built on the Ronin network. Players can buy, train, breed, and battle pets called Axies, available as NFTs to earn the in-game currency Smooth Love Potion (SLP). Axie Infinity players can also sell their Axies in the marketplace to earn real money.
-
