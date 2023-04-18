@@ -50,8 +50,7 @@ For information on contributing, see
 
 ## Deploy
 
-Ronin documentation deployments are automated using
-[Vercel](https://vercel.com/). When a PR is merged to the `main` branch, it's
+Ronin documentation deployments are automated. When a PR is merged to the `main` branch, it's
 automatically deployed to production and the status is displayed on the PR's
 page in GitHub.
 
