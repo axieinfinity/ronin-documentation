@@ -1,9 +1,9 @@
 ---
-description: Guide for contributing to this documentation.
+title: Contribution guide
+description: Guidelines for contributing to Ronin documentation.
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 slug: 'community/contribute/guide'
-title: Contribution guide
 ---
 
 # Welcome to Ronin documentation contribution guide
@@ -396,7 +396,7 @@ A concept topic works well when:
 * It provides essential facts, background, and diagrams to help your readers
   build a foundational understanding of a product or topic.
 * It explains the background about a concept that might not be evident in
-  reference or how-to articles.
+  reference or task topics.
 * It helps readers make connections between related concepts, and form a better
   understanding of the subject.
 
@@ -495,7 +495,7 @@ Write a step-by-step instruction to complete the task:
 * Follow the guidelines in [https://developers.google.com/style/procedures](https://developers.google.com/style/procedures).
 * Use a single numbered list.
 * Use screenshots or graphics to assist a user in navigating a UI.
-* Do not explain any concepts in this section. Instead, link to concept articles
+* Do not explain any concepts in this section. Instead, link to concept topics
   in case a user does not know about a certain concept. For example: 'Configure
   the server with the appropriate configuration. For more information about
   server configurations, see "Server configuration".'

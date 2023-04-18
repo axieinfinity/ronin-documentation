@@ -1,12 +1,14 @@
 ---
 title: Templates
-description: Markdown templates for Ronin documentation
+description: Markdown templates for Ronin documentation.
+toc_min_heading_level: 2
+toc_max_heading_level: 2
 ---
 
 # Templates for Ronin documentation
 
 You can copy any of these templates into a new Markdown file as the first step
-in creating a new article and opening a pull request:
+in creating a new page and opening a pull request:
 
 * [Concept](#concept)
 * [Task](#task)
