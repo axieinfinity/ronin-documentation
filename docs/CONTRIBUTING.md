@@ -1,7 +1,7 @@
 ---
 description: Guide for contributing to this documentation.
 toc_min_heading_level: 2
-toc_max_heading_level: 3
+toc_max_heading_level: 2
 slug: 'community/contribute/guide'
 title: Contribution guide
 ---
@@ -155,12 +155,7 @@ When writing the `short description` part, follow these guidelines:
 * Use the imperative, present tense: "change" not "changed" nor "changes".
 * Don't add a period (.) at the end.
 
-## Development
-
-This section describes the process for running Ronin documentation on your local
-computer, and describes the main elements of the site's structure.
-
-### Local development
+## Local development
 
 This site is powered by [Docusaurus](https://docusaurus.io), a static site
 generator. To preview changes as you edit the files, you can run a local
@@ -191,8 +186,8 @@ By default, a browser window opens at
 
 ## Deployments
 
-Ronin documentation is automatically deployed to the production and preview
-environments using [Vercel](https://vercel.com/).
+Ronin documentation is automatically deployed to production and preview
+environments.
 
 ### Preview deployments
 
@@ -208,7 +203,7 @@ via comments.
 
 When a PR is merged to the repository's `main` branch, it's automatically
 deployed to production and the status is displayed on the PR's page in GitHub.
-It can take a few minutes for your changes to be visible on the production site. 
+It can take a few minutes for your changes to be visible on the production site.
 
 After a PR is closed, your working branch is deleted.
 
