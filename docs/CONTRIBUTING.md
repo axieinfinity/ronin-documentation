@@ -3,15 +3,14 @@ description: Guide for contributing to this documentation.
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 slug: 'community/contribute/guide'
+title: Contribution guide
 ---
 
-# Contribution guide
+# Welcome to Ronin documentation contribution guide
 
-Welcome, and thank you for considering contributing to Ronin documentation. The
-documentation lives in the
-[ronin-document](https://github.com/axieinfinity/ronin-document) GitHub
-repository and is published on
-[docs.roninchain.com](https://docs.roninchain.com).
+Thank you for your interest in contributing to the Ronin documentation project. Any contribution you make will be visible on [docs.roninchain.com](https://docs.roninchain.com).
+
+This guide gives an overview of the contribution workflow, provides guidelines on using content templates, and describes the structure of the Ronin documentation site.  
 
 ## Before contributing
 
@@ -76,7 +75,7 @@ follow these steps:
 2. Edit the contents.
 3. Click **Commit changes...**.
 4. In the **Commit message** field, type a short and meaningful message
-   describing the change you made to the file. Follow the [commit message convention](#naming-conventions).
+   describing the change you made. Follow the [commit message convention](#naming-conventions).
 5. Select **Create a new branch for this commit and start a pull request**.
 6. Click **Propose file change**.
 
@@ -85,27 +84,35 @@ follow these steps:
 If your contribution is more than a few words or simple fixes, then you need to
 create a working branch and submit a pull request.
 
-1. [Run](#local-development) Ronin documentation locally.
-2. Create a working branch for your changes. Replace `type` with the correct
-   type according to our [branch naming convention](#naming-conventions).
+1. Fork the repository.
+2. Install the dependencies as specified in [Local development](#local-development).
+3. Create a working branch. Fill in `type` and `short-description` according to the [branch naming convention](#naming-conventions).
+
    ```
-   git checkout -b type/name
+   git checkout -b type/short-description
    ```
-3. Make changes.
-4. Do a [self-review](#self-review-checklist).
-5. Run [Vale](#run-vale) on your changes and resolve all errors.
-6. Add the file to your commit:
+
+4. Make your changes.
+5. Do a [self-review](#self-review-checklist).
+6. Add the file or files to your commit:
+
    ```
-   git add path-to-file
+   git add file-name
    ```
-7. Commit your update. Don't forget to write a [commit message](#naming-conventions):
+
+7. Commit your changes, and type a short and meaningful message
+   describing the change you made. Follow the [commit message convention](#naming-conventions).
+
    ```
    git commit -m "type: subject"
    ```
-8. Push the changes to the remote repository:
+
+8. Push the changes to the repository:
+
    ```
-   git pus origin type/name
+   git push origin type/short-description
    ```
+
 9. Open the repository in your browser, and click **Create pull request** to
    start a new pull request.
 
@@ -122,20 +129,19 @@ After you're done with the changes, create a PR:
 ### Next step
 
 After you address feedback from maintainers, your PR will be merged and your contributions will be visible on [docs.roninchain.com](https://docs.roninchain.com).
-
-Congratulations!
+Congratulations, you're a full-blown contributor!
 
 ### Naming conventions
 
 When naming branches, creating PRs, and writing commit messages, follow this
 convention.
 
-| Type     | Description                                                                         | Branch                                          | Commit                      | Pull request                           |
-|----------|-------------------------------------------------------------------------------------|-------------------------------------------------|-----------------------------|----------------------------------------|
-| `feat`     | Changes that introduce new features/functionalities.                                | `feat/short-description`         | `feat: short description`     | `feat:  short description`     |
-| `fix`      | Changes that fix an unexpected behavior/result of existing features/functionalities | fix/issue-id or fix/short-description           | `fix: short description`      | fix: [issue ID] short description      |
-| `refactor` | Changes that don't change existing behaviors or add new ones                        | refactor/issue-id or refactor/short-description | `refactor: short description` | refactor: [issue ID] short description |
-| `chore`    | Bump version                                                                        | chore/short-description                         | `chore: short description`    | chore: short description               |
+| Type       | Description                                                   | Branch                                              | Commit                        | Pull request                           |
+| ---------- | ------------------------------------------------------------- | --------------------------------------------------- | ----------------------------- | -------------------------------------- |
+| `feat`     | Changes that introduce new features.                          | `feat/short-description`                            | `feat: short description`     | feat:  short description               |
+| `fix`      | Changes that fix an unexpected behavior.                      | `fix/issue-id or fix/short-description`             | `fix: short description`      | fix: [issue ID] short description      |
+| `refactor` | Changes that don't change existing behaviors or add new ones. | `refactor/issue-id` or `refactor/short-description` | `refactor: short description` | refactor: [issue ID] short description |
+| `chore`    | Changes that update package versions.                         | `chore/short-description`                           | `chore: short description`    | chore: short description               |
 
 If several commit types are applicable to your change, try breaking it down into
 several commits. For example, one `feat` commit, one `fix` commit, and a `chore`
