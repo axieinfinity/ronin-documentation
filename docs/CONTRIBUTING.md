@@ -15,7 +15,7 @@ This guide gives an overview of the contribution workflow, provides guidelines o
 ## Before contributing
 
 Before you contribute, take a few minutes to review this contribution guide and
-our [Code of Conduct](./../CODE_OF_CONDUCT.md). This guide is intended to make the
+our [Code of Conduct](https://github.com/axieinfinity/ronin-document/blob/main/CODE_OF_CONDUCT.md). This guide is intended to make the
 contribution process easy and effective for everyone involved in looking at your
 issue, assessing changes, and reviewing and merging your pull request.
 
