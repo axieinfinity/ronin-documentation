@@ -3,8 +3,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
-const math = require('remark-math');
-const katex = require('rehype-katex');
+const math = require('remark-math')
+const katex = require('rehype-katex')
 
 const currentYear = new Date().getFullYear()
 
@@ -40,6 +40,10 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          editUrl: `https://github.com/axieinfinity/ronin-document/edit/main`,
+          editLocalizedFiles: false,
+          editCurrentVersion: false,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
