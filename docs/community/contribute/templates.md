@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 # Templates for Ronin documentation
 
 You can copy any of these templates into a new Markdown file as the first step
-in creating a new page and opening a pull request:
+in creating a new page and opening a pull request (PR):
 
 * [Concept](#concept)
 * [Task](#task)
