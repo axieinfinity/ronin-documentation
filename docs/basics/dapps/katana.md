@@ -5,7 +5,7 @@ description: Swap tokens within the Ronin ecosystem.
 
 import katana from './assets/katana.png'
 
-# Katana DEX
+## Katana DEX
 
 Katana is a decentralized exchange (DEX) that allows you to trade tokens within the Ronin ecosystem.
 
@@ -18,4 +18,6 @@ The key features of Katana are as follows:
 
 Link: [https://katana.roninchain.com](https://katana.roninchain.com).
 
+```html
 <img src={katana} width={1440} />
+```

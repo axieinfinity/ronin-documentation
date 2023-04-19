@@ -5,51 +5,57 @@ tags:
 ---
 
 # Build a Ronin CLI
+
 This guide demonstrates how to build a Ronin CLI (command-line tool) and compile the node binary on your own instead of using a packed binary from Docker. With the CLI tool, you can install the Ronin node and configure it as a non-validator node (default), validator node, or archive node.
 
-### Prerequisites
+## Prerequisites
+
 To build the Ronin CLI, you need to install the following dependencies:
+
 * Golang 1.17 or later (follow the instructions at [https://go.dev/doc/install](https://go.dev/doc/install))
 * C compiler
 
 ### 1. Build locally
+
 1. Clone the Ronin repository:
 
-  ```
+  ```bash
   git clone git@github.com:axieinfinity/ronin.git
   ```
 
-2. Go to the `ronin` directory:
+1. Go to the `ronin` directory:
 
-  ```
+  ```bash
   cd ronin
   ```
 
-3. Build the binary:
+1. Build the binary:
 
-  ```
+  ```bash
   make ronin
   ```
 
   This command creates a `ronin` binary inside the `.build/bin` directory.
 
-4. To run the binary without specifying the binary location in each command, make sure to set up the `./build/bin/ronin` path in the `$PATH` environment variable. 
+1. To run the binary without specifying the binary location in each command, make sure to set up the `./build/bin/ronin` path in the `$PATH` environment variable.
 
-  ```
+  ```bash
   cp ./build/bin/ronin /usr/local/bin
   ```
 
 ### 2. Initialize the genesis block
+
 Before running a node, you need to initialize the genesis block to set up the origin state of the chain. The genesis files are located in the repository's `genesis` directory, and include the path where you store the node's data—for example, `/ronin/data`.
 
-  ```
+  ```bash
   ronin init genesis/mainnet.json --datadir /ronin/data
   ```
 
 ### 3. Start the node
+
 Run the following command to start a full (non-validator) Ronin node on the mainnet:
 
-  ```
+  ```bash
   ronin --networkid 2020 \
   --bootnodes enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303 \
   --datadir /ronin/data \
@@ -59,9 +65,10 @@ Run the following command to start a full (non-validator) Ronin node on the main
   ```
 
 ### Command reference
+
 #### Synopsis
 
-```
+```bash
 ronin [options] [command] [command options] [arguments...]
 ```
 
@@ -69,7 +76,7 @@ Use `ronin [command] help` for information on a specific command.
 
 #### Available commands
 
-```   
+```bash
 account                            Manage accounts
 attach                             Start an interactive JavaScript environment (connect to node)
 console                            Start an interactive JavaScript environment
@@ -96,7 +103,8 @@ help, h                            Shows a list of commands or help for one comm
 ```
 
 #### Ethereum options
-```
+
+```bash
   --config value                      TOML configuration file
   --datadir value                     Data directory for the databases and store (default: "/Users/mac/Library/Ethereum")
   --datadir.ancient value             Data directory for ancient chain segments (default = inside chaindata)
@@ -122,7 +130,7 @@ help, h                            Shows a list of commands or help for one comm
   
 #### Light client options
 
-```
+```bash
 --light.serve value                 Maximum percentage of time allowed for serving LES requests (multi-threaded processing allows values over 100) (default: 0)
 --light.ingress value               Incoming bandwidth limit for serving light clients (kilobytes/sec, 0 = unlimited) (default: 0)
 --light.egress value                Outgoing bandwidth limit for serving light clients (kilobytes/sec, 0 = unlimited) (default: 0)
@@ -136,7 +144,7 @@ help, h                            Shows a list of commands or help for one comm
 
 #### Developer chain options
 
-```
+```bash
 --dev                               Ephemeral proof-of-authority network with a pre-funded developer account, mining enabled
 --dev.period value                  Block period to use in developer mode (0 = mine only if transaction pending) (default: 0)
 --dev.gaslimit value                Initial block gas limit (default: 11500000)
@@ -144,7 +152,7 @@ help, h                            Shows a list of commands or help for one comm
 
 #### Ethash options
 
-```
+```bash
 --ethash.cachedir value             Directory to store the ethash verification caches (default = inside the datadir)
 --ethash.cachesinmem value          Number of recent ethash caches to keep in memory (16MB each) (default: 2)
 --ethash.cachesondisk value         Number of recent ethash caches to keep on disk (16MB each) (default: 3)
@@ -157,7 +165,7 @@ help, h                            Shows a list of commands or help for one comm
 
 #### Transaction pool options
 
-```
+```bash
 --txpool.locals value               Comma-separated accounts to treat as locals (no flush, priority inclusion)
 --txpool.nolocals                   Disables price exemptions for locally submitted transactions
 --txpool.journal value              Disk journal for local transaction to survive node restarts (default: "transactions.rlp")
@@ -173,7 +181,7 @@ help, h                            Shows a list of commands or help for one comm
 
 #### Performance tuning options
 
-```
+```bash
 --cache value                       Megabytes of memory allocated to internal caching (default = 4096 mainnet full node, 128 light mode) (default: 1024)
 --cache.database value              Percentage of cache memory allowance to use for database io (default: 50)
 --cache.trie value                  Percentage of cache memory allowance to use for trie caching (default = 15% full mode, 30% archive mode) (default: 15)
@@ -187,16 +195,16 @@ help, h                            Shows a list of commands or help for one comm
   
 #### Account options
 
-```
+```bash
 --unlock value                      Comma-separated list of accounts to unlock
 --password value                    Password file to use for non-interactive password input
 --signer value                      External signer (url or path to ipc file)
 --allow-insecure-unlock             Allow insecure account unlocking when account-related RPCs are exposed by http
 ```
- 
+
 #### API and console options
 
-```
+```bash
 --ipcdisable                        Disable the IPC-RPC server
 --ipcpath value                     Filename for IPC socket/pipe within the datadir (explicit paths escape it)
 --http                              Enable the HTTP-RPC server
@@ -226,7 +234,7 @@ help, h                            Shows a list of commands or help for one comm
 
 #### Networking options
 
-```
+```bash
 --bootnodes value                   Comma-separated enode URLs for P2P discovery bootstrap
 --discovery.dns value               Sets DNS discovery entry points (use "" to disable DNS)
 --port value                        Network listening port (default: 30303)
@@ -243,7 +251,7 @@ help, h                            Shows a list of commands or help for one comm
 
 #### Miner options
 
-```
+```bash
 --mine                              Enable mining
 --miner.threads value               Number of CPU threads to use for mining (default: 0)
 --miner.notify value                Comma-separated HTTP URL list to notify of new work packages
@@ -258,7 +266,7 @@ help, h                            Shows a list of commands or help for one comm
 
 #### Gas price oracle options
 
-```
+```bash
 --gpo.blocks value                  Number of recent blocks to check for gas prices (default: 20)
 --gpo.percentile value              Suggested gas price is the given percentile of a set of recent transaction gas prices (default: 60)
 --gpo.maxprice value                Maximum transaction priority fee (or gasprice before London fork) to be recommended by gpo (default: 500000000000)
@@ -267,13 +275,13 @@ help, h                            Shows a list of commands or help for one comm
   
 #### Virtual machine options
 
-```
+```bash
 --vmdebug                           Record information useful for VM and contract debugging
 ```
 
 #### Logging and debugging options
 
-```
+```bash
 --fakepow                           Disables proof-of-work verification
 --nocompaction                      Disables db compaction after import
 --verbosity value                   Logging verbosity: 0=silent, 1=error, 2=warn, 3=info, 4=debug, 5=detail (default: 3)
@@ -292,7 +300,7 @@ help, h                            Shows a list of commands or help for one comm
 
 #### Metrics and stats options
 
-```
+```bash
 --metrics                              Enable metrics collection and reporting
 --metrics.expensive                    Enable expensive metrics collection and reporting
 --metrics.addr value                   Enable stand-alone metrics HTTP server listening interface (default: "127.0.0.1")
@@ -311,13 +319,13 @@ help, h                            Shows a list of commands or help for one comm
   
 #### Aliased (deprecated) options
 
-```
+```bash
 --nousb                             Disables monitoring for and managing USB hardware wallets (deprecated)
 ```
 
 #### Miscellaneous options
 
-```
+```bash
 --snapshot                          Enables snapshot-database mode (default = enable)
 --bloomfilter.size value            Megabytes of memory allocated to bloom-filter for pruning (default: 2048)
 --help, -h                          show help

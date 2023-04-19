@@ -5,7 +5,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 2
 ---
 
-# Templates for Ronin documentation
+## Templates for Ronin documentation
 
 You can copy any of these templates into a new Markdown file as the first step
 in creating a new page and opening a pull request (PR):
@@ -21,7 +21,7 @@ in creating a new page and opening a pull request (PR):
 
 In the templates, H1 header is always reserved for the title of the page:
 
-```
+```md
 # Title
 
 ## A section header
@@ -53,13 +53,13 @@ consistency.
 
 Example when no `title` is used:
 
-```
+```md
 # Security hardening for your validator node
 ```
 
 Example with a shorter title defined in the `title` metadata:
 
-```
+```md
 ---
 title: Security hardening
 ---
@@ -69,7 +69,7 @@ title: Security hardening
 
 ## Concept
 
-```
+```md
 ---
 title: Noun or noun phrase
 description: Brief description of the page's contents.
@@ -106,7 +106,7 @@ For guidelines on writing concept topics, see
 
 ## Task
 
-```
+```md
 ---
 title: Start with a verb
 description: Brief description of the page's contents.
@@ -151,7 +151,7 @@ For guidelines on writing task topics, see
 
 ## Reference
 
-```
+```md
 ---
 title: Nouns describing the topic
 description: Brief description of the page's contents.
@@ -189,7 +189,7 @@ For guidelines on writing reference topics, see
 
 ### Introductory topic
 
-```
+```md
 ## Troubleshooting
 
 When working with <feature>, you might encounter the following issues:
@@ -197,7 +197,7 @@ When working with <feature>, you might encounter the following issues:
 
 ### Troubleshooting task
 
-```
+```md
 ---
 title: Start with a verb related to resolving the error
 description: Brief description of the page's contents.
@@ -238,7 +238,7 @@ in this topic.
 
 ### Troubleshooting reference
 
-```
+```md
 ### Error message or its description
 
 You might get an error that states <error message>.
@@ -253,7 +253,7 @@ For guidelines on writing troubleshooting topics, see
 
 ## Get started
 
-```
+```md
 ---
 title: Get started with <feature>
 description: Introduce the page and highlight that it's quick
@@ -293,7 +293,7 @@ For guidelines on writing get started topics, see
 
 ## Tutorial
 
-```
+```md
 ---
 title: Start with a verb
 description: Introduce the page and highlight that it's a tutorial.

@@ -5,7 +5,7 @@ description: Real-time Ronin blockchain analytics.
 
 import explorer from './assets/explorer.png'
 
-# Ronin Block Explorer
+## Ronin Block Explorer
 
 Ronin Block Explorer is an app that allows users to access real-time
 blockchain information, such as transactions, blocks, addresses,
@@ -15,4 +15,6 @@ for example.
 
 Link: [https://app.roninchain.com/dashboard](https://app.roninchain.com/dashboard).
 
+```html
 <img src={explorer} width={1440} />
+```

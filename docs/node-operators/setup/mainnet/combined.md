@@ -6,24 +6,32 @@ tags:
 ---
 
 # Run a validator and bridge together
+
 This guide demonstrates how to run a mainnet validator node and a bridge operator on one machine using Docker.
 
 ## Prerequisites
+
 ### Docker
+
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
 ### Ethereum endpoint
+
 You need an Ethereum RPC endpoint to listen for events from Ethereum chain and send events to Ethereum. This can be an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint.
 
 ### Private keys
+
 Generate three private keys as described in [Generate keys](./../generate-keys.md):
+
 * One key for the validator
 * One key for the bridge voter
 * One key for the bridge operator
 
 ### System requirements
+
 Recommended system requirements for running a validator node on the mainnet:
+
 * 8-core CPU
 * 32 GB RAM
 * 700 GB high-speed SSD
@@ -34,37 +42,42 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ## Install the node
+
 1. Set up directories:
 
   Create a ronin directory:
-  ```
+
+  ```bash
   mkdir ~/ronin
   ```
 
   Go to the newly created directory:
-  ```
+
+  ```bash
   cd ~/ronin
   ```
 
   Create a directory for bridge data:
-  ```
+
+  ```bash
   mkdir -p data
   ```
 
   Create a directory for chain data:
-  ```
+
+  ```bash
   mkdir -p chaindata/data/ronin
   ```
 
-2. Create a file called `docker-compose.yml`:
+1. Create a file called `docker-compose.yml`:
 
-  ```
+  ```bash
   vim docker-compose.yml
   ```
 
-3. Paste the following into `docker-compose.yml`:
+1. Paste the following into `docker-compose.yml`:
 
-  ```
+  ```yml
   version: "3"
   services:
     node:
@@ -130,19 +143,20 @@ The size of your node will also grow over time.
   ```
 
   This compose file defines three services:
-     * `node`, which pulls a Ronin node image from the GitHub Container Registry.
-     * `bridge`, which pulls a bridge image.
-     * `db`, which builds a Postgres database for the bridge.
 
-4. Create an `.env` file to store configuration parameters for the services:
+* `node`, which pulls a Ronin node image from the GitHub Container Registry.
+* `bridge`, which pulls a bridge image.
+* `db`, which builds a Postgres database for the bridge.
 
-  ```
+1. Create an `.env` file to store configuration parameters for the services:
+
+  ```bash
   vim .env
   ```
 
-5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
+1. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
-  ```
+  ```.env
   # Your Ethereum RPC endpoint
   ETHEREUM_ENDPOINT=ETHEREUM_ENDPOINT
 
@@ -198,27 +212,27 @@ The size of your node will also grow over time.
   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
   ```
 
-6. (Optional) Download the snapshot:
+1. (Optional) Download the snapshot:
 
-  ```
+  ```bash
   cd ~/ronin/chaindata/data/ronin/
   curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
   mv <uncompressed data> chaindata
   ```
 
-7. Start the node:
+1. Start the node:
 
-  ```
+  ```bash
   cd ~/ronin && docker-compose up -d
   ```
   
   This command pulls a Ronin node image, a bridge image, a Postgres database, and starts the services you defined.
 
-8. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
+1. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
-9. Review the log for the validator and the bridge (the node should sync to the latest block for making the bridge work).
+1. Review the log for the validator and the bridge (the node should sync to the latest block for making the bridge work).
 
-  ```
+  ```bash
   docker logs node -f --tail 100
   docker logs bridge -f --tail 100
   ```

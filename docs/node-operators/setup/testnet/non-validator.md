@@ -6,17 +6,22 @@ tags:
 ---
 
 # Run a non-validator node
+
 This guide demonstrates how to run a non-validator node on the Saigon
 testnet using Docker. A non-validator node is also known as an RPC
 (remote procedure call) node.
 
 ## Prerequisites
+
 ### Docker
+
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
 ### System requirements
+
 Recommended system requirements for running a non-validator node on the Saigon testnet:
+
 * 4 CPU cores
 * 8 GB RAM
 * 100 GB SSD
@@ -27,35 +32,36 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ## Install the node
+
 1. Set up directories:
 
   Create a node directory:
 
-  ```
+  ```bash
   mkdir ~/ronin
   ```
 
   Go to the newly created directory:
 
-  ```
+  ```bash
   cd ~/ronin
   ```
 
   Create a chain data directory:
 
-  ```
+  ```bash
   mkdir -p chaindata/data/ronin
   ```
 
-2. Create a file called `docker-compose.yml`:
+1. Create a file called `docker-compose.yml`:
 
-  ```
+  ```bash
   vim docker-compose.yml
   ```
 
-3. Paste the following into `docker-compose.yml`:
+1. Paste the following into `docker-compose.yml`:
 
-  ```
+  ```yml
   version: "3"
   services:
     node:
@@ -87,15 +93,15 @@ The size of your node will also grow over time.
 
   This compose file defines the `node` service, which pulls a Ronin node image from the GitHub Container Registry.
 
-4. Create an `.env` file to store configuration parameters for the service:
+1. Create an `.env` file to store configuration parameters for the service:
 
-  ```
+  ```bash
   vim .env
   ```
 
-5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
+1. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
-  ```
+  ```.env
   # The name of your node that you want displayed on https://saigon-stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
   
@@ -123,26 +129,26 @@ The size of your node will also grow over time.
   RONIN_PARAMS=--http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
 
-6. (Optional) Download the snapshot:
+1. (Optional) Download the snapshot:
 
-  ```
+  ```bash
   cd ~/.skymavis/chaindata/data/ronin/
   curl https://storage.googleapis.com/testnet-chaindata/chaindata-22-3-2023.tar -o chaindata.tar && tar -xvf chaindata.tar
   mv chaindata-22-3-2023 chaindata
   ```
 
-7. Start the node:
+1. Start the node:
 
-  ```
+  ```bash
   cd ~/ronin && docker-compose up -d
   ```
 
   This command pulls a Ronin node image and starts the service you defined.
 
-8. Review the log:
+1. Review the log:
 
-  ```
+  ```bash
   docker logs node -f --tail 100
   ```
 
-9. After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
+1. After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.

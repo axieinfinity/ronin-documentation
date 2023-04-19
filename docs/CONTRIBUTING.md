@@ -6,7 +6,7 @@ toc_max_heading_level: 2
 slug: 'community/contribute/guide'
 ---
 
-# Welcome to Ronin documentation contribution guide
+## Welcome to Ronin documentation contribution guide
 
 Thank you for your interest in contributing to the Ronin documentation project. Any contribution you make will be visible on [docs.roninchain.com](https://docs.roninchain.com).
 
@@ -88,7 +88,7 @@ create a working branch and submit a pull request.
 2. Install the dependencies as specified in [Run locally](#run-locally).
 3. Create a working branch. Fill in `type` and `short-description` according to the [branch naming convention](#naming-conventions).
 
-   ```
+   ```bash
    git checkout -b type/short-description
    ```
 
@@ -96,20 +96,20 @@ create a working branch and submit a pull request.
 5. Do a [self-review](#self-review-checklist).
 6. Add the file or files to your commit:
 
-   ```
+   ```bash
    git add file-name
    ```
 
 7. Commit your changes, and type a short and meaningful message
    describing the change you made. Follow the [commit message convention](#naming-conventions).
 
-   ```
+   ```bash
    git commit -m "type: subject"
    ```
 
 8. Push the changes to the repository:
 
-   ```
+   ```bash
    git push origin type/short-description
    ```
 
@@ -164,21 +164,28 @@ development server that serves the Ronin documentation site and reflects the
 latest changes:
 
 1. Clone the [Ronin documentation repository](https://github.com/axieinfinity/ronin-document)
-   by running the following command: 
-   ```
+   by running the following command:
+
+   ```bash
    git clone git@github.com:axieinfinity/ronin-document.git
    ```
+
 2. Install the dependencies.
 3. Navigate to the `ronin-document` directory:
-   ```
+
+   ```bash
    cd ronin-document
    ```
+
 4. Install the project:
-   ```
+
+   ```bash
    yarn install
    ```
+
 5. Start the local server:
-   ```
+
+   ```bash
    yarn start
    ```
 
@@ -234,7 +241,7 @@ An essential means of navigating Ronin documentation, the sidebar is used for
 the following:
 
 * Grouping pages into categories.
-* Displaying a sidebar in each page. 
+* Displaying a sidebar in each page.
 * Providing paginated navigation with **Previous** and **Next**  navigation
   buttons.
 
@@ -338,12 +345,12 @@ metadata inferred from the content or other configuration.
 
 Example:
 
-```
 ---
+
 description: Hardware recommendations and methods of installation.
 title: Before you start
+
 ---
-```
 
 The `title` attribute replaces the title of the page derived from the H1 header.
 The `description` attribute is rendered underneath the page title on a
@@ -401,19 +408,19 @@ A concept topic works well when:
 * It helps readers make connections between related concepts, and form a better
   understanding of the subject.
 
-*Template*
+### Template
 
 To write a concept topic, use the
 [concept template](./community/contribute/templates.md#concept).
 
-*Guidelines*
+### Guidelines
 
-##### Title
+### Title
 
 To write a title for a concept topic, use a noun or a noun phrase to describe
 the subject. For example: "Rewards", "Introduction to nodes".
 
-##### Introduction
+#### Introduction
 
 Write one or two paragraphs describing the main idea of the topic.
 
@@ -437,7 +444,7 @@ Write one or two paragraphs describing the main idea of the topic.
 Include a bulleted list of related pages to extend the user's understanding of
 the concepts covered in this topic.
 
-*Examples*
+### Example
 
 Concept pages:
 
@@ -450,7 +457,7 @@ Concept topics within other pages:
 * Description of the credit score system in
   [Bailout](./validators/slashing/bailout.mdx)
 
-#### Task
+## Task
 
 A (how-to guide, procedure) is used to explain to a user how to use a specific
 feature, accomplish a task, and to guide the user through numbered steps. Tasks
@@ -464,14 +471,14 @@ A task works well when:
 * In potential points of error, it contains troubleshooting tips or links to
   troubleshooting topics where the user can seek help.
 
-*Template*
+### Template
 
 To write a task, use the [task
 template](./community/contribute/templates.md#task).
 
-*Guidelines*
+### Guidelines
 
-##### Title
+#### Title
 
 To write a title for a task, start with a verb. For example: "Create an
 account", "Become a validator", "Run a node". The outcome of the task should be
@@ -513,7 +520,7 @@ Write a step-by-step instruction to complete the task:
 Include a bulleted list of related pages to extend the user's understanding of
 this task and the concepts that it involves.
 
-*Examples*
+### Examples
 
 Task pages:
 
@@ -540,14 +547,14 @@ A reference topic works well when:
 * It avoids high-level usage-instructions or description for the product as a
   whole.
 
-*Template*
+### Template
 
 To write a reference topic, use the [reference
 template](./community/contribute/templates.md#reference).
 
-*Guidelines*
+### Guidelines
 
-##### Title
+#### Title
 
 To write a title for a reference topic, use nouns that clearly describe the
 contents of the topic. Make sure that the title is accessible to users who are
@@ -579,7 +586,7 @@ all the entries defined in the topic have in common.
 Include a bulleted list of related pages to extend the user's understanding of
 the concepts covered in this topic.
 
-*Examples*
+### Examples
 
 Reference pages:
 
@@ -600,7 +607,7 @@ and in the sidebar, you can use just the word `Troubleshoot`.
 
 A troubleshooting topic can be one of three types:
 
-*An introductory topic*
+### An introductory topic
 
 This topic introduces the troubleshooting section of a page.
 
@@ -608,7 +615,7 @@ To create this topic, use the
 [Introductory topic](./community/contribute/templates.md#introductory-topic)
 template.
 
-*A troubleshooting task*
+### A troubleshooting task
 
 The format is similar to the standard task, and the title follows the same verb
 and noun pattern, such as “Debug a Ronin node."
@@ -616,7 +623,7 @@ and noun pattern, such as “Debug a Ronin node."
 To create this topic, use the
 [Task](./community/contribute/templates.md#troubleshooting-task) template.
 
-*A troubleshooting reference*
+### A troubleshooting reference
 
 This topic contains the error message. If the error has a few causes or
 workarounds, consider organizing them as a table. To write a title for a
@@ -635,7 +642,7 @@ content can be found in one place. Such a "combined page" also helps remove
 duplicate content and makes room for potential growth as more options are added
 to the product.
 
-*Guidelines*
+### Guidelines
 
 * Use concept, task, reference, and troubleshooting topics in a combined page.
   Do not combine with get started or tutorials—those are distinct types not
@@ -645,7 +652,7 @@ to the product.
 * If the combined page contains a task, use a task-based title. Otherwise, use a
   title that's broad enough to reflect all the content on the page.
 
-*Example*
+### Example
 
 [Build a Ronin CLI](./node-operators/setup/cli.md)
 
@@ -656,12 +663,12 @@ In general, you might consider using a tutorial when the scenario requires a
 number of steps where each step consists of sub-steps, and when the steps cover
 a variety of features or products.
 
-*Template*
+### Template
 
 To write a tutorial, use the [tutorial
 template](./community/contribute/templates.md#tutorial).
 
-*Guidelines*
+### Guidelines
 
 * Unlike a [task](#task), which gives instructions for one task, a tutorial
   combines multiple tasks to reach an outcome.
@@ -677,14 +684,14 @@ template](./community/contribute/templates.md#tutorial).
 A get started topic is a set of steps to help a user get set up quickly to use a
 single feature or product. It consists of more than one task.
 
-*Template*
+### Template
 
 To write a get started topic, use the
 [get started template](./community/contribute/templates.md#get-started).
 
-*Guidelines*
+### Guidelines
 
-##### Title
+#### Title
 
 Use the format of `Get started with <feature or product>`.
 
@@ -750,7 +757,7 @@ The rule is case-sensitive.
 
 If you want to turn off Vale inline, wrap the text in these comments:
 
-```
+```html
 <!-- vale off -->
 
 This is your text

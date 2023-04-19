@@ -3,7 +3,7 @@ title: Bridge
 description: Transfer tokens between Ethereum and Ronin.
 ---
 
-# Ronin Bridge
+## Ronin Bridge
 
 Ronin Bridge is an app used to transfer tokens between the Ethereum and Ronin chains. This is is a multi-signature (multi-sig) bridge, which means that it requires approval from multiple bridge operators before a transaction can be executed. Multi-sig improves the security and trustworthiness of cross-chain transactions, and makes it harder for any single party to act maliciously or make unauthorized changes to the transaction.
 
@@ -32,7 +32,7 @@ For Tier 3 review, a fee ($\approx$ 0,001%) is charged for unlocking a transacti
 
 ### Daily withdrawal limit
 
-We also limit the total withdrawal volume of Tier 1 and Tier 2 withdrawals. The initial daily withdrawal limit is set as $50M. 
+We also limit the total withdrawal volume of Tier 1 and Tier 2 withdrawals. The initial daily withdrawal limit is set as $50M.
 
 :::note
 Because Tier 3 withdrawals go through a review by real humans, they're not counted toward the daily withdrawal limit.

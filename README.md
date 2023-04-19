@@ -26,19 +26,19 @@ Install the dependencies:
 1. Clone this repository to create its copy on your local computer.
 2. Navigate to the `ronin-documentation` directory:
 
-   ```
+   ```bash
    cd ronin-documentation
    ```
 
 3. Install the project:
 
-   ```
+   ```bash
    yarn install
    ```
 
 4. Start the local server:
 
-   ```
+   ```bash
    yarn start
    ```
 

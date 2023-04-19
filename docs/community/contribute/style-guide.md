@@ -5,7 +5,7 @@ description: Style guide applied to this documentation.
 # Content style guide
 
 Ronin documentation adheres to the [Google's developer documentation style
-guide](https://developers.google.com/style) as the preferred style guide. 
+guide](https://developers.google.com/style) as the preferred style guide.
 
 This page defines our additions and exceptions to the Google style guide:
 
@@ -95,15 +95,19 @@ When working with screenshots, follow these guidelines:
      subsequent steps to work.
   2. For each screenshot you want to use on the page, add this line at the top
      of the document, right after the metadata:
-    ```
+
+    ```js
     import customName from './assets/some-image.png';
     ```
+
     Replace `customName` with a clear and readable name, such as
     `becomeValidatorStepOne`.
   3. Reference the screenshot in the document using this syntax:
-    ```
+
+    ```html
     <img src={becomeValidatorStepOne} width={width} />
     ```
+
     For multiple screenshots captured on the same platform (desktop or mobile),
     keep the width of each image consistent with other screenshot of the same
     platform on the doc site. Do that by setting `width` to the number of
