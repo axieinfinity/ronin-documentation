@@ -120,7 +120,8 @@ create a working branch and submit a pull request.
 
 After you're done with the changes, create a PR:
 
-* Fill the **Ready for review** template so that Ronin maintainers can review your PR. Follow the [naming convention](#naming-conventions).
+* Write the title for the PR following the [naming convention](#naming-conventions).
+* Fill out the PR template so that Ronin maintainers can review your PR.
 * If you're solving an issue, link the PR to it by typing `fixes #issue` or `closes #issue`.
 * [Allow maintainer edits](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) so that your branch can be reviewed and updated for a merge.
 * Maintainers may ask you to make changes before a PR can be merged, either as suggested changes or PR comments.
