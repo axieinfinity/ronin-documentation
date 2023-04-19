@@ -18,7 +18,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'axieinfinity', // Usually your GitHub org/user name.
-  projectName: 'ronin-document', // Usually your repo name.
+  projectName: 'ronin-documentation', // Usually your repo name.
 
   staticDirectories: ['static'],
 
@@ -40,7 +40,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          editUrl: `https://github.com/axieinfinity/ronin-document/edit/main`,
+          editUrl: `https://github.com/axieinfinity/ronin-documentation/edit/main`,
           editLocalizedFiles: false,
           editCurrentVersion: false,
           showLastUpdateTime: true,
