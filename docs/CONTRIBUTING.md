@@ -15,7 +15,7 @@ This guide gives an overview of the contribution workflow, provides guidelines o
 ## Before contributing
 
 Before you contribute, take a few minutes to review this contribution guide and
-our [Code of Conduct](https://github.com/axieinfinity/ronin-document/blob/main/CODE_OF_CONDUCT.md). This guide is intended to make the
+our [Code of Conduct](https://github.com/axieinfinity/ronin-documentation/blob/main/CODE_OF_CONDUCT.md). This guide is intended to make the
 contribution process easy and effective for everyone involved in looking at your
 issue, assessing changes, and reviewing and merging your pull request.
 
@@ -56,13 +56,13 @@ Refer to the following sections for step-by-step guidance.
 ### File an issue
 
 If you notice a problem with the documentation, check our
-[existing issues](https://github.com/axieinfinity/ronin-document/issues).
+[existing issues](https://github.com/axieinfinity/ronin-documentation/issues).
 If a related issue doesn't exist, you can open a new issue
 by clicking **New issue**.
 
 ### Resolve an issue
 
-Look through the [existing issues](https://github.com/axieinfinity/ronin-document/issues)
+Look through the [existing issues](https://github.com/axieinfinity/ronin-documentation/issues)
 to find one you'd like to solve.
 
 ### Make changes via UI
@@ -741,9 +741,9 @@ recommended to resolve but they're not mandatory.
 
 You can add new approved or rejected spelling rules to the vocabulary used by
 Vale. To add a new approved rule, add the word to
-[utils/vale/styles/Vocab/Ronin/accept.txt](https://github.com/axieinfinity/ronin-document/blob/main/.github/utils/vale/styles/Vocab/Ronin/accept.txt).
+[utils/vale/styles/Vocab/Ronin/accept.txt](https://github.com/axieinfinity/ronin-documentation/blob/main/.github/utils/vale/styles/Vocab/Ronin/accept.txt).
 For a rejected rule, add the word to
-[utils/vale/styles/Vocab/Ronin/reject.txt](https://github.com/axieinfinity/ronin-document/blob/main/.github/utils/vale/styles/Vocab/Ronin/reject.txt).
+[utils/vale/styles/Vocab/Ronin/reject.txt](https://github.com/axieinfinity/ronin-documentation/blob/main/.github/utils/vale/styles/Vocab/Ronin/reject.txt).
 The rule is case-sensitive.
 
 ### Ignore Vale inline

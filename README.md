@@ -24,10 +24,10 @@ Install the dependencies:
 ### Steps
 
 1. Clone this repository to create its copy on your local computer.
-2. Navigate to the `ronin-document` directory:
+2. Navigate to the `ronin-documentation` directory:
 
    ```
-   cd ronin-document
+   cd ronin-documentation
    ```
 
 3. Install the project:
@@ -47,7 +47,7 @@ By default, a browser window opens at [http://localhost:3000](http://localhost:3
 ## Contribute
 
 For instructions on how to get started with our project, see the
-[Contribution guide](https://github.com/axieinfinity/ronin-document/blob/main/docs/CONTRIBUTING.md).
+[Contribution guide](https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md).
 
 ## Deploy
 
