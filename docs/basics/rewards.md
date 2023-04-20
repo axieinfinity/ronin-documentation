@@ -3,7 +3,7 @@ description: Rewards earned by validators and delegators.
 ---
 
 # Rewards
-On Ronin, token holders stake their RON to participate in validator selection and, in exchange for their service, earn rewards.
+On Ronin, token holders stake their RON to participate in validator selection and in exchange, token holders earn rewards for their service.
 
 The rewards are divided into the *staking reward* and the *bridge reward*. Ronin allocates 180,000,000 RON for the staking reward and 1,000,000 RON for the bridge reward. This is to ensure that the network is seeded well enough until transaction fees gain traction. These rewards are primarily meant to jump-start the network, while the protocol is intended to sustain itself on transaction fees.
 
