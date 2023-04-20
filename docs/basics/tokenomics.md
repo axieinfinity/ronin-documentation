@@ -10,7 +10,7 @@ import totalSupply from './assets/total-supply.png';
 ### Ronin token - RON
 RON is the ecosystem token of the Ronin blockchain. The RON token enables users to pay for transactions on Ronin, includes decentralized finance (DeFi) features like community governance, and utility via staking through validators to earn rewards.
 
-Ronin validators need to hold and stake RON to participate in validating blocks. They are rewarded with newly issued RON. This rewards are divided up among a validator and its delegators based on the RON they have staked with the validator. 
+Ronin validators need to hold and stake RON to participate in validating blocks. They are rewarded with newly issued RON. These rewards are divided up among a validator and its delegators based on the RON they have staked with the validator. 
 
 ## Token distribution
 The quantity of RON reserved for various network functions, as a percentage of the total existing token supply, follows this distribution:
