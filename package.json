@@ -15,6 +15,7 @@
     "lint": "eslint . --ext .js,.tsx,.ts"
   },
   "dependencies": {
+    "@algolia/client-search": "^4.17.0",
     "@docusaurus/core": "^2.4.0",
     "@docusaurus/module-type-aliases": "^2.4.0",
     "@docusaurus/preset-classic": "^2.4.0",
@@ -28,9 +29,11 @@
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-loadable": "^5.5.0",
     "rehype-katex": "5",
     "remark-math": "^3.0.1",
-    "sass": "^1.49.9"
+    "sass": "^1.49.9",
+    "webpack": "^5.80.0"
   },
   "devDependencies": {
     "@tsconfig/docusaurus": "^1.0.4",
