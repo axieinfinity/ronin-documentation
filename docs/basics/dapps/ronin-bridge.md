@@ -5,7 +5,7 @@ description: Transfer tokens between Ethereum and Ronin.
 
 # Ronin Bridge
 
-Ronin Bridge is an app used to transfer tokens between the Ethereum and Ronin chains. This is is a multi-signature (multi-sig) bridge, which means that it requires approval from multiple bridge operators before a transaction can be executed. Multi-sig improves the security and trustworthiness of cross-chain transactions, and makes it harder for any single party to act maliciously or make unauthorized changes to the transaction.
+Ronin Bridge is an app used to transfer tokens between the Ethereum and Ronin chains. This is a multi-signature (multi-sig) bridge, which means that it requires approval from multiple bridge operators before a transaction can be executed. Multi-sig improves the security and trustworthiness of cross-chain transactions, and makes it harder for any single party to act maliciously or make unauthorized changes to the transaction.
 
 Link: [https://bridge.roninchain.com](https://bridge.roninchain.com).
 
