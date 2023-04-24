@@ -6,23 +6,31 @@ tags:
 ---
 
 # Run a standalone bridge
+
 This guide demonstrates how to run a bridge operator node on the mainnet using Docker.
 
 ## Prerequisites
+
 ### Docker
+
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
 ### Ethereum endpoint
+
 You need an Ethereum RPC endpoint to listen for events from Ethereum chain and send events to Ethereum. This can be an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint.
 
 ### Private keys
+
 Generate two private keys as described in [Generate keys](./../generate-keys.md):
+
 * One key for the bridge voter (if you're a governor)
 * One key for the bridge operator
 
 ### System requirements
+
 Recommended system requirements for running a bridge operator on the mainnet:
+
 * 8-core CPU
 * 32 GB RAM
 * 700 GB high-speed SSD
@@ -33,24 +41,29 @@ should monitor their node to ensure good performance for the intended task.
 The size of your Ronin node will also grow over time.
 
 ## Install the node
+
 1. Set up directories:
 
   Create a bridge directory:
+
   ```
   mkdir ~/ronin-bridge
   ```
 
   Go to the newly created directory:
+
   ```
   cd ~/ronin-bridge
   ```
 
   Create a directory for bridge data:
+
   ```
   mkdir -p data
   ```
 
   Create a directory for chain data:
+
   ```
   mkdir -p chaindata/data/ronin
   ```
@@ -127,6 +140,7 @@ The size of your Ronin node will also grow over time.
   ```
 
   This compose file defines three services:
+  
      * `node`, which pulls a Ronin node image from the GitHub Container Registry.
      * `bridge`, which pulls a bridge image.
      * `db`, which builds a Postgres database for the bridge.

@@ -7,6 +7,7 @@ tags:
 # Ronin mainnet
 
 ## Parameters
+
 * Chain ID (network ID): `2020`
 * RPC endpoint: [https://api.roninchain.com/rpc](https://api.roninchain.com/rpc)
 * Consensus: DPoS (Consortium)
@@ -17,6 +18,7 @@ tags:
 * Gas price: 20 gwei
 
 ## Validator set
+
 * Total validators: 22
 * Governing Validators: 12
 * Standard Validators: 10
@@ -24,7 +26,9 @@ tags:
 For today's validator set, see [https://app.roninchain.com/staking](https://app.roninchain.com/staking?tab=validator).
 
 ## Genesis contracts
-Whitelist: 
+
+Whitelist:
+
 ```
 0x0000000000000000000000000000000000000033
 ```

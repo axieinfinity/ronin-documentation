@@ -6,24 +6,32 @@ tags:
 ---
 
 # Run a validator and bridge together
+
 This guide demonstrates how to run a testnet validator node and a bridge operator on one machine using Docker.
 
 ## Prerequisites
+
 ### Docker
+
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
 ### Ethereum endpoint
+
 You need an Ethereum RPC endpoint to listen for events from Ethereum chain and send events to Ethereum. This can be an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint.
 
 ### Private keys
+
 Generate three private keys as described in [Generate keys](./../generate-keys.md):
+
 * One key for the validator
 * One key for the bridge voter
 * One key for the bridge operator
 
 ### System requirements
+
 Recommended system requirements for running a validator node on the Saigon testnet:
+
 * 2 CPU cores
 * 8 GB RAM
 * 100 GB SSD
@@ -34,24 +42,29 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ## Install the node
+
 1. Set up directories:
 
   Create a ronin directory:
+
   ```
   mkdir ~/ronin
   ```
 
   Go to the newly created directory:
+
   ```
   cd ~/ronin
   ```
 
   Create a directory for bridge data:
+
   ```
   mkdir -p data
   ```
 
   Create a directory for chain data:
+  
   ```
   mkdir -p chaindata/data/ronin
   ```
@@ -131,6 +144,7 @@ The size of your node will also grow over time.
   ```
 
   This compose file defines three services:
+  
      * `node`, which pulls a full Ronin node image from the GitHub Container Registry.
      * `bridge`, which pulls a bridge image.
      * `db`, which builds a Postgres database for the bridge.

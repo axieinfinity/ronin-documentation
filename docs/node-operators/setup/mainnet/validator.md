@@ -5,20 +5,26 @@ tags:
   - docker-mainnet
 ---
 
-# Run a standalone validator 
+# Run a standalone validator
+
 This guide demonstrates how to run a validator node on the mainnet using Docker.
 As a validator, you're required to run a bridge operator node as well as the validator node. Therefore, after you install the validator following the steps in this guide, proceed to set up your [bridge operator node](./bridge.md).
 
 ## Prerequisites
+
 ### Docker
+
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
 ### Private key
+
 Generate a private key for your validator node as described in [Generate keys](./../generate-keys.md).
 
 ### System requirements
+
 Recommended system requirements for running a validator node on the mainnet:
+
 * 8-core CPU
 * 32 GB RAM
 * 700 GB high-speed SSD
@@ -29,6 +35,7 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ## Install the node 
+
 1. Set up directories:
 
   Create a node directory:
@@ -148,4 +155,5 @@ The size of your node will also grow over time.
 9. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
 
 ## What's next
+
 Install and run a bridge operator as described in [Run a bridge operator node](./bridge.md).

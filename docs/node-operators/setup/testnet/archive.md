@@ -6,15 +6,20 @@ tags:
 ---
 
 # Run an archive node
+
 This guide demonstrates how to run an archive node on the Saigon testnet using Docker.
 
 ## Prerequisites
+
 ### Docker
+
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
 ### System requirements
+
 Recommended system requirements for running an archive node on the Saigon testnet:
+
 * 4-core CPU
 * 8 GB RAM
 * 250 GB SSD
@@ -25,19 +30,23 @@ should monitor their node to ensure good performance for the intended task.
 The size of your Ronin node will also grow over time.
 
 ## Install the node
+
 1. Set up directories:
 
   Create a ronin directory:
+
   ```
   mkdir ~/ronin
   ```
 
   Go to the newly created directory:
+
   ```
   cd ~/ronin
   ```
 
   Create a directory for chain data:
+  
   ```
   mkdir -p chaindata/data/ronin
   ```
