@@ -174,7 +174,7 @@ const config = {
                 href: 'https://validator.roninchain.com/',
               },
               {
-                label: 'Ronin developer documentation',
+                label: 'Developer documentation',
                 href: 'http://docs.skymavis.com/docs/getting-started',
               },
             ],
