@@ -9,11 +9,13 @@ import mobile from './assets/mobile.png';
 
 This guide demonstrates how to generate private keys for your nodes.
 
-## Generate private keys locally
+## Generate locally
 
 ### Prerequisites
 
-[Go](https://go.dev/doc/install) (version 1.17 or later)
+Go (version 1.17 or later). Follow the
+[installation instructions](https://go.dev/doc/install)
+on the official website.
 
 ### Steps
 
@@ -41,9 +43,11 @@ following commands:
     ./ethkey inspect --private your-key-name
     ```
 
-## Generate private keys using Ronin Wallet
+## Generate using Ronin Wallet
 
-You can generate private keys using the Ronin Wallet—both the browser extension and the mobile app, which be downloaded on the [Ronin Wallet](https://wallet.roninchain.com/) page. Refer to the flow guides to learn how to generate your keys.
+You can generate private keys using Ronin Wallet—both the browser extension and the mobile app, which can be downloaded on the [Ronin Wallet](https://wallet.roninchain.com/) page. 
+
+Follow the steps in the flow guides to generate your keys using Ronin Wallet.
 
 ### Browser extension
 

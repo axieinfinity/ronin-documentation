@@ -11,8 +11,8 @@ tags:
 * Chain ID (network ID): `2021`
 * RPC endpoint: [https://saigon-testnet.roninchain.com/rpc](https://saigon-testnet.roninchain.com/rpc)
 * Consensus: DPoS (Consortium)
-* Stats: [https://saigon-stats.roninchain.com/](https://saigon-stats.roninchain.com/)
-* Explorer: [https://saigon-app.roninchain.com](https://saigon-app.roninchain.com)
+* Network status: [saigon-stats.roninchain.com](https://saigon-stats.roninchain.com/)
+* Explorer: [saigon-app.roninchain.com](https://saigon-app.roninchain.com)
 * Genesis file: [testnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/testnet.json)
 
 ## Validator set
@@ -21,7 +21,7 @@ tags:
 * Governing Validators: 11
 * Standard Validators: 10
 
-For today's validator set, see [https://saigon-app.roninchain.com/staking](https://saigon-app.roninchain.com/staking?tab=validator).
+For today's validator set, see [RON Staking](https://saigon-app.roninchain.com/staking?tab=validator).
 
 ## Contracts
 

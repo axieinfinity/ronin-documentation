@@ -231,7 +231,7 @@ The size of your node will also grow over time.
   
   This command pulls a Ronin node image, a bridge image, a Postgres database, and starts the services you defined.
 
-8. After a few minutes, go to the [stats page](https://saigon-stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
+8. After a few minutes, check the status of your node on the [Ronin Network Status](https://saigon-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
 
 9. Review the log for the validator and the bridge (the node should sync to the latest block for making the bridge work).
 
