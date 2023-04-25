@@ -219,14 +219,14 @@ After a PR is closed, your working branch is deleted.
 * The files in the `/docs` directory are further organized by category as
   described in the following table:
 
-| Directory              | Purpose                                                                                                             |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `/docs/basics`         | General information about Ronin.                                                                                    |
-| `/docs/community`      | Ronin socials, contribution guide, and community initiatives.                                                       |
-| `/docs/delegators`     | Documentation for delegators.                                                                                       |
-| `/docs/developers`     | One page that points readers to the Ronin developer documentation published on the Sky Mavis developer docs portal. |
-| `/docs/node-operators` | Documentation for node operators.                                                                                   |
-| `/docs/validators`     | Documentation for validators.                                                                                       |
+| Directory              | Purpose                                                                                                         |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `/docs/basics`         | General information about Ronin.                                                                                |
+| `/docs/community`      | Ronin socials, contribution guide, and community initiatives.                                                   |
+| `/docs/delegators`     | Documentation for delegators.                                                                                   |
+| `/docs/developers`     | A page that points to the Ronin developer documentation published on the Sky Mavis developer documentation hub. |
+| `/docs/node-operators` | Documentation for node operators.                                                                               |
+| `/docs/validators`     | Documentation for validators.                                                                                   |
 
 ### Sidebar
 
