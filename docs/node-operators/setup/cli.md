@@ -5,14 +5,18 @@ tags:
 ---
 
 # Build a Ronin CLI
+
 This guide demonstrates how to build a Ronin CLI (command-line tool) and compile the node binary on your own instead of using a packed binary from Docker. With the CLI tool, you can install the Ronin node and configure it as a non-validator node (default), validator node, or archive node.
 
 ### Prerequisites
+
 To build the Ronin CLI, you need to install the following dependencies:
+
 * Golang 1.17 or later (follow the instructions at [https://go.dev/doc/install](https://go.dev/doc/install))
 * C compiler
 
 ### 1. Build locally
+
 1. Clone the Ronin repository:
 
   ```
@@ -40,6 +44,7 @@ To build the Ronin CLI, you need to install the following dependencies:
   ```
 
 ### 2. Initialize the genesis block
+
 Before running a node, you need to initialize the genesis block to set up the origin state of the chain. The genesis files are located in the repository's `genesis` directory, and include the path where you store the node's data—for example, `/ronin/data`.
 
   ```
@@ -47,6 +52,7 @@ Before running a node, you need to initialize the genesis block to set up the or
   ```
 
 ### 3. Start the node
+
 Run the following command to start a full (non-validator) Ronin node on the mainnet:
 
   ```
@@ -59,6 +65,7 @@ Run the following command to start a full (non-validator) Ronin node on the main
   ```
 
 ### Command reference
+
 #### Synopsis
 
 ```
@@ -96,6 +103,7 @@ help, h                            Shows a list of commands or help for one comm
 ```
 
 #### Ethereum options
+
 ```
   --config value                      TOML configuration file
   --datadir value                     Data directory for the databases and store (default: "/Users/mac/Library/Ethereum")

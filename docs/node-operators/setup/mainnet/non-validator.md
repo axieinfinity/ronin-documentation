@@ -6,17 +6,22 @@ tags:
 ---
 
 # Run a non-validator node
+
 This guide demonstrates how to run a non-validator node on the mainnet
 using Docker. A non-validator node is also known as an RPC (remote
 procedure call) node.
 
 ## Prerequisites
+
 ### Docker
+
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
 ### System requirements
+
 Recommended system requirements for running a non-validator node on the mainnet:
+
 * 6-core CPU
 * 25 GB RAM
 * 700 GB high-speed SSD
@@ -27,6 +32,7 @@ should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
 ## Install the node
+
 1. Set up directories:
 
   Create a node directory:

@@ -6,15 +6,20 @@ tags:
 ---
 
 # Run an archive node
+
 This guide demonstrates how to run an archive node on the mainnet using Docker.
 
 ## Prerequisites
+
 ### Docker
+
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
 
 ### System requirements
+
 Recommended system requirements for running an archive node on the mainnet:
+
 * 8-core CPU
 * 32 GB RAM
 * 7 TB high-speed SSD
@@ -25,31 +30,35 @@ should monitor their node to ensure good performance for the intended task.
 The size of your Ronin node will also grow over time.
 
 ## Install the node
+
 1. Set up directories:
 
   Create a ronin directory:
+
   ```
   mkdir ~/ronin
   ```
 
   Go to the newly created directory:
+
   ```
   cd ~/ronin
   ```
 
   Create a directory for chain data:
+
   ```
   mkdir -p chaindata/data/ronin
   ```
 
 2. Create a file called `docker-compose.yml`:
-   
+
   ```
   vim docker-compose.yml
   ```
 
 3. Paste the following into `docker-compose.yml`:
-   
+
   ```
   version: "3"
   services:
@@ -82,13 +91,13 @@ The size of your Ronin node will also grow over time.
   This compose file defines the `node` service, which pulls a Ronin node image from the GitHub Container Registry.
 
 4. Create an `.env` file to store configuration parameters for the service:
-   
+
   ```
   vim .env
   ```
 
 5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
-   
+
   ```
   # The name of your node that you want displayed on https://stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
@@ -114,7 +123,7 @@ The size of your Ronin node will also grow over time.
   ```
 
 6. Start the node:
-   
+
   ```
   cd ~/ronin && docker-compose up -d
   ```
