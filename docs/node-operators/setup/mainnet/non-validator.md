@@ -146,4 +146,4 @@ The size of your node will also grow over time.
   docker logs node -f --tail 100
   ```
 
-9. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of your node. If it's green, the node is connected and up to date with the network.
+9. After a few minutes, check the status of your node on the [Ronin Network Status](https://stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.

@@ -130,4 +130,4 @@ The size of your Ronin node will also grow over time.
 
   This command pulls a Ronin node image and starts the service you defined.
 
-7. After a few minutes, go to the [stats page](https://stats.roninchain.com/) to check the status of the node. If it's green, the node is connected and up to date with the network.
+7. After a few minutes, check the status of your node on the [Ronin Network Status](https://stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.

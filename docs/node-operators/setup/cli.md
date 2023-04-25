@@ -8,14 +8,14 @@ tags:
 
 This guide demonstrates how to build a Ronin CLI (command-line tool) and compile the node binary on your own instead of using a packed binary from Docker. With the CLI tool, you can install the Ronin node and configure it as a non-validator node (default), validator node, or archive node.
 
-### Prerequisites
+## Prerequisites
 
 To build the Ronin CLI, you need to install the following dependencies:
 
 * Golang 1.17 or later (follow the instructions at [https://go.dev/doc/install](https://go.dev/doc/install))
 * C compiler
 
-### 1. Build locally
+## 1. Build locally
 
 1. Clone the Ronin repository:
 
@@ -43,7 +43,7 @@ To build the Ronin CLI, you need to install the following dependencies:
   cp ./build/bin/ronin /usr/local/bin
   ```
 
-### 2. Initialize the genesis block
+## 2. Initialize the genesis block
 
 Before running a node, you need to initialize the genesis block to set up the origin state of the chain. The genesis files are located in the repository's `genesis` directory, and include the path where you store the node's data—for example, `/ronin/data`.
 
@@ -51,7 +51,7 @@ Before running a node, you need to initialize the genesis block to set up the or
   ronin init genesis/mainnet.json --datadir /ronin/data
   ```
 
-### 3. Start the node
+## 3. Start the node
 
 Run the following command to start a full (non-validator) Ronin node on the mainnet:
 
@@ -64,9 +64,9 @@ Run the following command to start a full (non-validator) Ronin node on the main
   --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*'
   ```
 
-### Command reference
+## Command reference
 
-#### Synopsis
+### Synopsis
 
 ```
 ronin [options] [command] [command options] [arguments...]
@@ -74,7 +74,7 @@ ronin [options] [command] [command options] [arguments...]
 
 Use `ronin [command] help` for information on a specific command.
 
-#### Available commands
+### Available commands
 
 ```   
 account                            Manage accounts
@@ -102,7 +102,7 @@ wallet                             Manage Ethereum presale wallets
 help, h                            Shows a list of commands or help for one command
 ```
 
-#### Ethereum options
+### Ethereum options
 
 ```
   --config value                      TOML configuration file
@@ -128,7 +128,7 @@ help, h                            Shows a list of commands or help for one comm
   --whitelist value                   Comma-separated block number-to-hash mappings to enforce (<number>=<hash>)
 ```
   
-#### Light client options
+### Light client options
 
 ```
 --light.serve value                 Maximum percentage of time allowed for serving LES requests (multi-threaded processing allows values over 100) (default: 0)
@@ -142,7 +142,7 @@ help, h                            Shows a list of commands or help for one comm
 --light.nosyncserve                 Enables serving light clients before syncing
 ```
 
-#### Developer chain options
+### Developer chain options
 
 ```
 --dev                               Ephemeral proof-of-authority network with a pre-funded developer account, mining enabled
@@ -150,7 +150,7 @@ help, h                            Shows a list of commands or help for one comm
 --dev.gaslimit value                Initial block gas limit (default: 11500000)
 ```
 
-#### Ethash options
+### Ethash options
 
 ```
 --ethash.cachedir value             Directory to store the ethash verification caches (default = inside the datadir)
@@ -163,7 +163,7 @@ help, h                            Shows a list of commands or help for one comm
 --ethash.dagslockmmap               Lock memory maps for recent ethash mining DAGs
 ```
 
-#### Transaction pool options
+### Transaction pool options
 
 ```
 --txpool.locals value               Comma-separated accounts to treat as locals (no flush, priority inclusion)
@@ -179,7 +179,7 @@ help, h                            Shows a list of commands or help for one comm
 --txpool.lifetime value             Maximum amount of time non-executable transaction are queued (default: 3h0m0s)
 ```
 
-#### Performance tuning options
+### Performance tuning options
 
 ```
 --cache value                       Megabytes of memory allocated to internal caching (default = 4096 mainnet full node, 128 light mode) (default: 1024)
@@ -193,7 +193,7 @@ help, h                            Shows a list of commands or help for one comm
 --cache.preimages                   Enable recording the SHA3/keccak preimages of trie s
 ```
   
-#### Account options
+### Account options
 
 ```
 --unlock value                      Comma-separated list of accounts to unlock
@@ -202,7 +202,7 @@ help, h                            Shows a list of commands or help for one comm
 --allow-insecure-unlock             Allow insecure account unlocking when account-related RPCs are exposed by http
 ```
  
-#### API and console options
+### API and console options
 
 ```
 --ipcdisable                        Disable the IPC-RPC server
@@ -232,7 +232,7 @@ help, h                            Shows a list of commands or help for one comm
 --preload value                     Comma-separated list of JavaScript files to preload into the console
 ```
 
-#### Networking options
+### Networking options
 
 ```
 --bootnodes value                   Comma-separated enode URLs for P2P discovery bootstrap
@@ -249,7 +249,7 @@ help, h                            Shows a list of commands or help for one comm
 --nodehex value                     P2P node as hex (for testing)
 ```
 
-#### Miner options
+### Miner options
 
 ```
 --mine                              Enable mining
@@ -264,7 +264,7 @@ help, h                            Shows a list of commands or help for one comm
 --miner.noverify                    Disable remote sealing verification
 ```
 
-#### Gas price oracle options
+### Gas price oracle options
 
 ```
 --gpo.blocks value                  Number of recent blocks to check for gas prices (default: 20)
@@ -273,13 +273,13 @@ help, h                            Shows a list of commands or help for one comm
 --gpo.ignoreprice value             Gas price below which gpo will ignore transactions (default: 2)
 ```
   
-#### Virtual machine options
+### Virtual machine options
 
 ```
 --vmdebug                           Record information useful for VM and contract debugging
 ```
 
-#### Logging and debugging options
+### Logging and debugging options
 
 ```
 --fakepow                           Disables proof-of-work verification
@@ -298,7 +298,7 @@ help, h                            Shows a list of commands or help for one comm
 --trace value                       Write execution trace to the given file
 ```
 
-#### Metrics and stats options
+### Metrics and stats options
 
 ```
 --metrics                              Enable metrics collection and reporting
@@ -317,13 +317,13 @@ help, h                            Shows a list of commands or help for one comm
 --metrics.influxdb.organization value  InfluxDB organization name (v2 only) (default: "geth")
 ```
   
-#### Aliased (deprecated) options
+### Aliased (deprecated) options
 
 ```
 --nousb                             Disables monitoring for and managing USB hardware wallets (deprecated)
 ```
 
-#### Miscellaneous options
+### Miscellaneous options
 
 ```
 --snapshot                          Enables snapshot-database mode (default = enable)

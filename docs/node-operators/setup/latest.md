@@ -8,16 +8,17 @@ This page describes how to get the latest version of the node's software.
 
 ## Ronin node
 
-Every Ronin node release is published on GitHub:
-[https://github.com/axieinfinity/ronin/releases](https://github.com/axieinfinity/ronin/releases).
-To find the Docker image for each release, visit the links in the sections that follow.
+Every Ronin node release is published on
+[GitHub](https://github.com/axieinfinity/ronin/releases).
 
 ### Mainnet
 
-* Docker Hub: [https://hub.docker.com/r/axieinfinity/ronin-mainnet/tags](https://hub.docker.com/r/axieinfinity/ronin-mainnet/tags)
-* GitHub Container Registry: [https://github.com/axieinfinity/ronin/pkgs/container/ronin](https://github.com/axieinfinity/ronin/pkgs/container/ronin)
+To find the Docker image for each mainnet release, visit the following:
 
-To download the latest image, follow these steps:
+* [Docker Hub](https://hub.docker.com/r/axieinfinity/ronin-mainnet/tags)
+* [GitHub Container Registry](https://github.com/axieinfinity/ronin/pkgs/container/ronin)
+
+To download the latest image for your node, follow these steps:
 
 1. In the `.env` file, set `NODE_IMAGE` to the following:
 
@@ -30,9 +31,10 @@ To download the latest image, follow these steps:
 
 ### Saigon testnet
 
-To find the Docker image for each release, visit Docker Hub: [https://hub.docker.com/r/axieinfinity/ronin-testnet/tags](https://hub.docker.com/r/axieinfinity/ronin-testnet/tags).
+To find the Docker image for each testnet release, visit
+[Docker Hub](https://hub.docker.com/r/axieinfinity/ronin-testnet/tags).
 
-To download the latest image, follow these steps:
+To download the latest image for your node, follow these steps:
 
 1. In the `.env` file, set `NODE_IMAGE` to the following:
 
@@ -45,10 +47,10 @@ To download the latest image, follow these steps:
 
 ## Bridge operator
 
-Every bridge release is published on GitHub:
-[https://github.com/axieinfinity/bridge-v2/releases](https://github.com/axieinfinity/bridge-v2/releases).
-To find the Docker image for each release, visit Docker Hub:
-[https://hub.docker.com/r/axieinfinity/bridge/tags](https://hub.docker.com/r/axieinfinity/bridge/tags).
+Every bridge release is published on
+[GitHub](https://github.com/axieinfinity/bridge-v2/releases). To find the Docker
+image for each release, visit
+[Docker Hub](https://hub.docker.com/r/axieinfinity/bridge/tags).
 
 To download the latest image, follow these steps:
 

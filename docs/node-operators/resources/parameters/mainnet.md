@@ -11,8 +11,8 @@ tags:
 * Chain ID (network ID): `2020`
 * RPC endpoint: [https://api.roninchain.com/rpc](https://api.roninchain.com/rpc)
 * Consensus: DPoS (Consortium)
-* Stats: [https://stats.roninchain.com](https://stats.roninchain.com)
-* Explorer: [https://app.roninchain.com](https://app.roninchain.com)
+* Network status: [stats.roninchain.com](https://stats.roninchain.com)
+* Explorer: [app.roninchain.com](https://app.roninchain.com)
 * Genesis file: [mainnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json)
 * Block time: minimum 3 seconds
 * Gas price: 20 gwei
@@ -23,7 +23,7 @@ tags:
 * Governing Validators: 12
 * Standard Validators: 10
 
-For today's validator set, see [https://app.roninchain.com/staking](https://app.roninchain.com/staking?tab=validator).
+For today's validator set, visit [RON Staking](https://app.roninchain.com/staking?tab=validator).
 
 ## Genesis contracts
 
