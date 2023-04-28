@@ -3,6 +3,7 @@ description: Rewards earned by validators and delegators.
 ---
 
 # Rewards
+
 On Ronin, token holders stake their RON to participate in validator selection and in exchange, token holders earn rewards for their service.
 
 The rewards are divided into the *staking reward* and the *bridge reward*. Ronin allocates 180,000,000 RON for the staking reward and 1,000,000 RON for the bridge reward. This is to ensure that the network is seeded well enough until transaction fees gain traction. These rewards are primarily meant to jump-start the network, while the protocol is intended to sustain itself on transaction fees.
@@ -20,9 +21,11 @@ The rewards are divided into the *staking reward* and the *bridge reward*. Ronin
 | Total allocated RON 	|   180,000,000  	|               	|
 
 ## Staking reward
+
 Validators receive a staking reward and a transaction fee for their block generation efforts. Validators share the staking reward and the transaction fee with their delegators—token holders who delegated their stakes to the validator. Each validator can set a commission rate that indicates the percentage of the self-allocated reward. The remaining reward is allocated to the delegators based on the amount that they have staked.
 
 ### Validator's commission
+
 Validators receive some commission for running validator nodes to generate new blocks. The validators' commission is independent of the staked amount.
 
 Following is a sensitivity analysis of the expected annual commission for the first 8 years, given the commission rate ranging from 5% to 20%.
@@ -39,6 +42,7 @@ Following is a sensitivity analysis of the expected annual commission for the fi
 | Year 8          | 13,636 | 27,273  | 40,909  | 54,545  |
 
 ### Delegation's reward
+
 Delegators share the reward based on the staked amount and the commission rate.
 
 Following is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering commission rate ranging from 5% to 20%, and the staked supply of 50%.
@@ -68,4 +72,5 @@ Following is a sensitivity analysis of the annual percentage rate (APR) for the 
 | Year 8                         | 1.45%  | 1.16%  | 0.97%  | 0.98%  |
 
 ## Bridge reward
+
 Ronin allocates 1,000,000 RON to fund the reward for the first year. This reward is divided among bridge operator nodes. After the first year, we plan to separate the bridge from the consensus, that is, validators are not required to run bridge operator nodes.
