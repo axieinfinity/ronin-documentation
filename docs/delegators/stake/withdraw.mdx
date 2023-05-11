@@ -5,6 +5,7 @@ description: Unstake from your validators.
 import stepOne from './assets/withdraw-step-1.png'
 import stepTwo from './assets/withdraw-step-2.png'
 import stepThree from './assets/confirm-transaction.png'
+import countdown from './assets/withdraw-countdown.png.'
 
 # Withdraw stake
 You can withdraw your stake at any time and without penalties as
@@ -17,6 +18,11 @@ to this validator.
 2. Pick the validator from which you want to withdraw the stake,
 expand the options, and then select **Withdraw stake**.
 <img src={stepOne} width={1440} />
+
+    If you're still in the three-day waiting period,
+the system shows how long you need to wait until
+withdrawal is possible.
+<img src={countdown} width={304} />
 
 3. Enter the amount manually and select **Withdraw**.
 To withdraw your entire stake, select **Max**
