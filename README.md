@@ -2,7 +2,7 @@
 
 This repository contains Ronin documentation deployed at
 [docs.roninchain.com](https://docs.roninchain.com). The documentation is built
-with [Docusaurus](https://docusaurus.io/), a static site generatator.
+with [Docusaurus](https://docusaurus.io/), a static site generator.
 
 ## Local development
 
