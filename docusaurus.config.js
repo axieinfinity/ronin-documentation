@@ -180,7 +180,7 @@ const config = {
               },
               {
                 label: 'Developer documentation',
-                href: 'https://docs.skymavis.com/docs',
+                href: 'https://docs.skymavis.com/docs/ronin-get-started',
               },
             ],
           },
