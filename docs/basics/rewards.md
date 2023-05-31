@@ -58,7 +58,7 @@ Following is a sensitivity analysis of the annual percentage rate (APR) for the 
 | Year 7          | 2.76%  | 2.62%  | 2.47%  | 2.33%  |
 | Year 8          | 1.16%  | 1.10%  | 1.04%  | 0.98%  |
 
-Following is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering the staked supply ranging from 40% to 60%, and  the commission rate of 5%.
+Following is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering the staked supply ranging from 40% to 70%, and  the commission rate of 5%.
 
 | % of circulating supply staked | 40%   | 50%   | 60%   | 70%   |
 | ------------------------------ | ----- | ----- | ----- | ----- |
