@@ -29,7 +29,7 @@ const config = {
 
   plugins: [
     'docusaurus-plugin-sass',
-    require.resolve('docusaurus-lunr-search'),
+    // require.resolve('docusaurus-lunr-search'),
   ],
   presets: [
     [
@@ -69,6 +69,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: 'RXU5ZAVMCJ',
+        apiKey: '46141953dde60ffc0242ca8e0252dbe8',
+        indexName: 'roninchain',
+      },
       docs: {
         sidebar: {
           hideable: false,
