@@ -301,7 +301,7 @@ If the content can fit in any existing top-level category, it should belong in
 that existing top-level category.
 
 * Top-level categories are equally important to one another, except for
-  [Developers](./developers/portal.md), which contains only one page.
+  [Developers](./developers/portal.mdx), which contains only one page.
 * Most top-level categories have an auto-generated layout with a brief
   introduction at the top and the list of doc cards that represent the
   categories and pages inside that top-level category. There are exceptions,
