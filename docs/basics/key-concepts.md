@@ -60,6 +60,14 @@ A common use case of a client is a cryptocurrency software wallet, such as [Roni
 
 Validators collect commissions when their node earns a staking reward for delegators. A validator node earns a staking reward for participating in the consensus protocol each epoch. The commission rate is a fraction of the staking reward.
 
+### Confirmation time
+
+Confirmation time is the time elapsed between the moment a [transaction](#transaction) is submitted to the network and the time it is finally recorded into a confirmed block. It represents the total time a user has to wait until their transaction gets collected and confirmed by a validator node.
+
+After a transaction is included in a block by a validator, the block needs to be validated by the other nodes on the network. When the block is confirmed to be valid, the transaction is considered to have a single confirmation, meaning that each new block that is mined on top of that represents another confirmation.
+
+On Ronin, it takes 15 confirmations to consider a transacton final, which equals to a 45 seconds' waiting time.
+
 ### Consensus mechanism
 
 A consensus mechanism is an algorithm used to guarantee agreement on the blockchain between all nodes. The blockchain, although being built in a decentralized way, eventually aligns so that all nodes agree on whether a given block is part of the chain. Ronin's consensus mechanism is a combination of the [Delegated Proof of Stake (DPoS)](#delegated-proof-of-stake-dpos) and [Proof of Authority (PoA)](#proof-of-authority-poa) algorithms.
