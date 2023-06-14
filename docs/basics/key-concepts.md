@@ -66,7 +66,7 @@ Confirmation time is the time elapsed between the moment a [transaction](#transa
 
 After a transaction is included in a block by a validator, the block needs to be validated by the other nodes on the network. When the block is confirmed to be valid, the transaction is considered to have a single confirmation, meaning that each new block that is mined on top of that represents another confirmation.
 
-On Ronin, it takes 15 confirmations to consider a transacton final, which equals to a 45 seconds' waiting time.
+On Ronin, it takes 15 confirmations to consider a transacton final, which is approximately 45 seconds.
 
 ### Consensus mechanism
 
