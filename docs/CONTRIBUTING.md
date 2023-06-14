@@ -6,7 +6,7 @@ toc_max_heading_level: 2
 slug: 'community/contribute/guide'
 ---
 
-# Welcome to Ronin documentation contribution guide
+## Welcome to the contribution guide
 
 Thank you for your interest in contributing to the Ronin documentation project. Any contribution you make will be visible on [docs.roninchain.com](https://docs.roninchain.com).
 
@@ -88,7 +88,7 @@ create a working branch and submit a pull request.
 2. Install the dependencies as specified in [Run locally](#run-locally).
 3. Create a working branch. Fill in `type` and `short-description` according to the [branch naming convention](#naming-conventions).
 
-   ```
+   ```bash
    git checkout -b type/short-description
    ```
 
@@ -96,20 +96,20 @@ create a working branch and submit a pull request.
 5. Do a [self-review](#self-review-checklist).
 6. Add the file or files to your commit:
 
-   ```
+   ```bash
    git add file-name
    ```
 
 7. Commit your changes, and type a short and meaningful message
    describing the change you made. Follow the [commit message convention](#naming-conventions).
 
-   ```
+   ```bash
    git commit -m "type: subject"
    ```
 
 8. Push the changes to the repository:
 
-   ```
+   ```bash
    git push origin type/short-description
    ```
 
@@ -164,21 +164,28 @@ development server that serves the Ronin documentation site and reflects the
 latest changes:
 
 1. Clone the [Ronin documentation repository](https://github.com/axieinfinity/ronin-document)
-   by running the following command: 
-   ```
+   by running the following command:
+
+   ```bash
    git clone git@github.com:axieinfinity/ronin-document.git
    ```
+
 2. Install the dependencies.
 3. Navigate to the `ronin-document` directory:
-   ```
+
+   ```bash
    cd ronin-document
    ```
+
 4. Install the project:
-   ```
+
+   ```bash
    yarn install
    ```
+
 5. Start the local server:
-   ```
+
+   ```bash
    yarn start
    ```
 
@@ -234,7 +241,7 @@ An essential means of navigating Ronin documentation, the sidebar is used for
 the following:
 
 * Grouping pages into categories.
-* Displaying a sidebar in each page. 
+* Displaying a sidebar in each page.
 * Providing paginated navigation with **Previous** and **Next**  navigation
   buttons.
 
@@ -338,7 +345,7 @@ metadata inferred from the content or other configuration.
 
 Example:
 
-```
+```markdown
 ---
 description: Hardware recommendations and methods of installation.
 title: Before you start
@@ -408,17 +415,14 @@ To write a concept topic, use the
 
 *Guidelines*
 
-##### Title
+##### Title metadata
 
 To write a title for a concept topic, use a noun or a noun phrase to describe
 the subject. For example: "Rewards", "Introduction to nodes".
 
-##### Introduction
+##### Concept section
 
-Write one or two paragraphs describing the main idea of the topic.
-
-##### Body
-
+* Write one or two paragraphs describing the main idea of the topic.
 * Structure the body of a concept topic like you would a presentation to a group
   who doesn't know anything about the topic. Introduce ideas gradually, so your
   audience can grow their understanding of the topic.
@@ -432,7 +436,7 @@ Write one or two paragraphs describing the main idea of the topic.
     describing the tasks, and go back to the concept. Remind yourself of the
     main goal of your topic.
 
-##### See also
+##### See also section
 
 Include a bulleted list of related pages to extend the user's understanding of
 the concepts covered in this topic.
@@ -471,44 +475,36 @@ template](./community/contribute/templates.md#task).
 
 *Guidelines*
 
-##### Title
+##### Title metadata
 
 To write a title for a task, start with a verb. For example: "Create an
 account", "Become a validator", "Run a node". The outcome of the task should be
 clear to the user from the title alone.
 
-##### Introduction
+##### Task section
 
-Briefly describe the outcome of the task and optionally, what the user should be
-able to do after completing the steps. For example: "This guide demonstrates how
-you can delegate RON to a validator for the first time".
-
-##### Prerequisites
-
-Explain what knowledge the user needs to have, or what configuration they must
+* Briefly describe the outcome of the task and optionally, what the user should be
+able to do after completing the steps.
+* Explain what knowledge the user needs to have, or what configuration they must
 complete, before starting the task. Use imperative sentences, for example, "Read
 the concept guide" or "Download and install the Ronin Wallet app".
-
-##### Body
-
-Write a step-by-step instruction to complete the task:
-
-* Follow the guidelines in [https://developers.google.com/style/procedures](https://developers.google.com/style/procedures).
-* Use a single numbered list.
-* Use screenshots or graphics to assist a user in navigating a UI.
-* Do not explain any concepts in this section. Instead, link to concept topics
+* Write a step-by-step instruction to complete the task:
+  * Follow the guidelines in [https://developers.google.com/style/procedures](https://developers.google.com/style/procedures).
+  * Use a single numbered list.
+  * Use screenshots or graphics to assist a user in navigating a UI.
+  * Do not explain any concepts in this section. Instead, link to concept topics
   in case a user does not know about a certain concept. For example: 'Configure
   the server with the appropriate configuration. For more information about
   server configurations, see "Server configuration".'
-* Avoid giving the users multiple paths to select when working through tasks.
+  * Avoid giving the users multiple paths to select when working through tasks.
   When you avoid giving the user choices, your documentation should lead all
   users to the same end result.
-* If the page is meant for beginner users, avoid adding tasks that you might
+  * If the page is meant for beginner users, avoid adding tasks that you might
   consider better suited for advanced users. If your document is intended for
   advanced users, state that up front and give them a list of prerequisites
   before they go through the steps.
 
-##### See also
+##### See also section
 
 Include a bulleted list of related pages to extend the user's understanding of
 this task and the concepts that it involves.
@@ -547,19 +543,17 @@ template](./community/contribute/templates.md#reference).
 
 *Guidelines*
 
-##### Title
+##### Title metadata
 
 To write a title for a reference topic, use nouns that clearly describe the
 contents of the topic. Make sure that the title is accessible to users who are
 just getting started. For example, "Slashing rules", "Network parameters", "User
 roles".
 
-##### Introduction
+##### Reference section
 
 Write one or two paragraphs summarizing the main idea of the topic. Explain what
 all the entries defined in the topic have in common.
-
-##### Body
 
 * The structure of reference topics varies based on what kind of information you
   are documenting. You might find it helpful to organize the contents using
@@ -572,9 +566,9 @@ all the entries defined in the topic have in common.
   written for the same audience, and it fits within your reference topic without
   modification.
 * For consistency in longer reference pages, consider using H2 headers for each
-  section, and H3 headers for subsections. 
+  section, and H3 headers for subsections.
 
-##### See also
+##### See also section
 
 Include a bulleted list of related pages to extend the user's understanding of
 the concepts covered in this topic.
@@ -638,7 +632,7 @@ to the product.
 *Guidelines*
 
 * Use concept, task, reference, and troubleshooting topics in a combined page.
-  Do not combine with get started or tutorials—those are distinct types not
+  Do not combine with quickstart or tutorials—those are distinct types not
   suitable for combination.
 * Separate different content types with section headings, and abide by title
   guidelines for each content type.
@@ -651,71 +645,86 @@ to the product.
 
 #### Tutorial
 
-A tutorial is page that describes an complete walkthrough of a complex scenario.
-In general, you might consider using a tutorial when the scenario requires a
-number of steps where each step consists of sub-steps, and when the steps cover
-a variety of features or products.
+Tutorials help people learn about products and solve real world problems by guiding them through the entire workflow to complete a task. Tutorials are more conversational in tone than other content. A tutorial feels like a developer-to-developer conversation while remaining accessible to readers with varied technical knowledge. Products with tutorials must already have a quickstart. For bite-sized workflows, use the quickstart model instead.
+
+Tutorials are useful when someone has a basic understanding of the product and is interested in extending their understanding to solve a specific problem. Tutorials are for people who want expert advice and a detailed discussion of best practices related to their problem. Tutorials can also help people validate whether the solution is appropriate for their needs.
 
 *Template*
 
-To write a tutorial, use the [tutorial
-template](./community/contribute/templates.md#tutorial).
+To write a tutorial, use the [tutorial template](./community/contribute/templates.md#tutorial).
 
 *Guidelines*
 
-* Unlike a [task](#task), which gives instructions for one task, a tutorial
-  combines multiple tasks to reach an outcome.
-* A tutorial provides a working example, which means that ideally, the user can
-  create the example that is described in the tutorial, or something similar to
-  it.
-* A tutorial might benefit from a friendlier tone. For example, consider being
-  more conversational in your writing, or encourage and congratulate the user
-  after completing a task.
+##### Tutorial contents
 
-#### Get started
+Contents of tutorials:
 
-A get started topic is a set of steps to help a user get set up quickly to use a
-single feature or product. It consists of more than one task.
+* Introduction
+  * Clarify audience.
+  * Clearly state prerequisites and prior knowledge needed.
+  * State what the user accomplishes or builds.
+  * Include an example of a successful project.
+  * Do not include the expected amount of time that it may take users to complete the task-this depends on the experience level of the user and can be demoralizing for beginners.
+* Task sections
+  * Based on the tutorial's audience, the steps can be less explicit and formal than those used in task content.
+    * Recommended: "From your profile, click **Settings**, and then click **Developer settings**".
+    * Not recommended: "In the upper-right corner of any page, click your profile photo, then click **Settings**. In the left sidebar, click **Developer settings**."
+  * Link to other pages or resources rather than replicating them, to avoid interrupting the flow of information in the tutorial.
+  * Give visual cues. Use code blocks and screenshots heavily to help reassure users that they're performing the correct actions.
+  * Provide real examples. Don't tell a user to "enter a commit message." Instead, give them an appropriate example commit message that matches the previous steps.
+* Troubleshooting
+  * Acknowledge what may go wrong in the task and list a few common problems readers might run into with solutions.
+* Conclusion
+  * Review what the user has accomplished or built. Refer back to the project provided in the introduction as an example of a successful project.
+* Next steps
+  * Include two-three actionable next steps that the user can take after completing the tutorial.
+
+##### Title guidelines
+
+* Follow the title guidelines for procedural articles.
+* Don’t use "tutorial” or "guide” in the title.
+
+#### Quickstart
+
+Quickstarts enable a user to quickly complete a discrete, focused task by illustrating a workflow with only essential steps, in about five minutes or 600 words. Quickstarts can be used for quickly getting set up with a new tool, or for quickly completing another task. For more complex tasks, use a tutorial.
+
+Quickstarts are useful when someone already understands the feature or product and is ready to try it out. Users of quickstarts are not looking for an explanation and don't need to be convinced to use the product––they just want instructions quickly. Users who don't understand a step are willing to dig deeper in a separate doc.
 
 *Template*
 
-To write a get started topic, use the
-[get started template](./community/contribute/templates.md#get-started).
+To write a quickstart guide, use the [quickstart template](./community/contribute/templates.md#quickstart).
 
 *Guidelines*
 
-##### Title
+##### Contents guidelines
 
-Use the format of `Get started with <feature or product>`.
+Contents of quickstarts:
 
-##### Introduction
+* Introduction
+  * Highlight that this guide is quick and to-the-point by using phrasing such as the following:
+    * Quickly add `feature` to your project.
+    * The essentials for getting started with `product`.
+  * Clarify audience.
+  * Clearly state prerequisites and prior knowledge needed.
+  * State what the user accomplishes or builds.
+* Task sections
+  * Based on the quickstart's audience, the steps can be less explicit and formal than those used in task content.
+  * Link to other pages or resources rather than replicating them, to avoid interrupting the flow of information.
+  * Give visual cues. Use code blocks and screenshots heavily to help reassure users that they're performing the correct actions.
+* Troubleshooting (optional)
+  * If it exists, link to any relevant troubleshooting content rather than including it in the document.
+* Next steps
+  * Provide a quick recap of what has been accomplished in the quick start as a means of transitioning to next steps.
+  * Include two-three actionable next steps that the user take after completing the quickstart. Always link to concepts on the feature or product.
 
-* Describe that the page enables the user to get started quickly.
-* State the outcome the user will achieve after following the steps.
+##### Title guidelines
 
-##### Prerequisites
-
-Explain what knowledge the user needs to have, or what configuration they must
-complete, before starting. Use imperative sentences, for example, "Read the
-concept guide" or "Download and install the Ronin Wallet app".
-
-##### Body
-
-* If you're writing for beginner audiences, describe steps in a less explicit
-  and formal manner than those in the regular [task](#task).
-* Include code blocks and screenshots to help reassure that the reader is
-  performing the right steps.
-
-##### Next steps
-
-* Provide a recap of what has been accomplished in this get started page, and
-  include some actionable next steps that the user can take after completing
-  this page.
-* Include a bulleted list of concept topics related to this feature or product.
+* When the guide helps someone get started with a new tool, preface the title with "Quickstart". For example, "Quickstart for Sky Mavis Account."
+* For other use cases, follow the title guidelines for procedures and omit the word "Quickstart"
 
 ## Content style guide
 
-Ronin documentation adheres to the [content style guide](./community/contribute/style-guide.md).
+The Ronin documentation adheres to the [content style guide](./community/contribute/style-guide.md).
 
 ## Documentation style checker
 
@@ -750,7 +759,7 @@ The rule is case-sensitive.
 
 If you want to turn off Vale inline, wrap the text in these comments:
 
-```
+```markdown
 <!-- vale off -->
 
 This is your text

@@ -19,27 +19,24 @@ in creating a new page and opening a pull request (PR):
 
 ## Headers
 
-In the templates, H1 header is always reserved for the title of the page:
+In the templates, H2 header is a top-level header. Do not use  always reserved for the title of the page:
 
-```
-# Title
+```markdown
+---
+title: Document title is set in metadata
+---
 
-## A section header
+## Section header
 
-Some text
+Content
 
-### A sub-section header
+### Sub-section header
 
-Some other text
+Content
 ```
 
 For sections headers, use H2 and lower levels, and don't skip levels (for
 example, don't use H2 then H4).
-
-If you're using a template not for creating a whole new page, but to add a new
-topic to an existing page, then remove the H1 title header from the template,
-and adjust the other header styles accordingly so that they match the existing
-headers on the page.
 
 ## Title metadata
 
@@ -53,13 +50,13 @@ consistency.
 
 Example when no `title` is used:
 
-```
+```markdown
 # Security hardening for your validator node
 ```
 
 Example with a shorter title defined in the `title` metadata:
 
-```
+```markdown
 ---
 title: Security hardening
 ---
@@ -69,36 +66,28 @@ title: Security hardening
 
 ## Concept
 
-```
+```markdown
 ---
 title: Noun or noun phrase
-description: Brief description of the page's contents.
+description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-# Title 
+## Concept section header
 
-(Replicate the title from the metadata. Remove this header if you're
-not using this template as a separate page.)
+<!-- Write one or two paragraphs about the main idea of the topic, as a summary. Add diagrams if necessary. -->
 
-## Introduction
+## Another concept section header
 
-Write one or two paragraphs about the main idea of the topic.
-Call this section "Overview" or "Introduction".
-
-## Concept body
-
-Write a paragraph that explains what this thing is. Add diagrams if
-necessary. Give this section a title more related to the idea of the
-topic. Keep adding body sections to describe all parts of the subject
-until you've completed the topic.
+<!-- An optional section for you to write one or two paragraphs about another element of the topic.
+Keep adding more sections to describe all elements of the topic until you've completed the article. -->
 
 ## See also
 
-An optional section that can contain links to other content that the user
+<!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
-in this topic.
+in this topic. -->
 
-* [Page title](Page URL)
+- [Page title](Page URL)
 ```
 
 For guidelines on writing concept topics, see
@@ -106,43 +95,30 @@ For guidelines on writing concept topics, see
 
 ## Task
 
-```
+```markdown
 ---
 title: Start with a verb
-description: Brief description of the page's contents.
+description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-# Title
+## Task section header
 
-(Replicate the title from the metadata. Remove this header if you're
-not using this template as a separate page.)
+<!-- Include prerequisite information or specific permissions information here.
+Then write procedural steps following the instructions in
+https://developers.google.com/style/procedures. -->
 
-## Introduction
+## Another task section header
 
-Write one or two paragraphs that explain what the task does and its
-expected outcome. For example: "This guide explains how to <outcome>
-so that you can <do this after>".
-
-## Prerequisites
-
-Optionally, explain what knowledge the user needs to have, or what
-configuration they must complete, before starting.
-
-## Task body
-
-Write the steps of the task following the instructions in
-https://developers.google.com/style/procedures. You can call this section
-"Steps" or use a name similar to the page title. For example: "Run a
-validator node" is the page title, and "Install the node" is the
-task body title.
+<!-- An optional section for you to write one or two paragraphs about another element of the topic.
+Keep adding more sections to describe all elements of the topic until you've completed the article. -->
 
 ## See also
 
-An optional section that can contain links to other content that the user
+<!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
-in this topic.
+in this topic. -->
 
-* [Page title](Page URL)
+- [Page title](Page URL)
 
 ```
 
@@ -151,35 +127,31 @@ For guidelines on writing task topics, see
 
 ## Reference
 
-```
+```markdown
 ---
-title: Nouns describing the topic
-description: Brief description of the page's contents.
+title: Use nouns to describe the topic
+description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-# Title
+## Reference section header
 
-(Replicate the title from the metadata. Remove this header if you're
-not using this template as a separate page.)
+<!-- Write one or two paragraphs about the main idea of the topic, as a summary.
+Add bulleted lists and tables if necessary.
+For instructions, refer to
+https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference -->
 
-## Introduction
+## Another reference section header
 
-Write one or two paragraphs about the main idea of the topic.
-
-## Reference body
-
-Optionally, write a paragraph to describe the piece of reference
-information that follows—a bulleted list, a table, or a code block.
-Keep adding body sections to describe all parts of the subject until
-you've completed the topic.
+<!-- An optional section for you to write one or two paragraphs about another element of the topic.
+Keep adding more sections to describe all elements of the topic until you've completed the article. -->
 
 ## See also
 
-An optional section that can contain links to other content that the user
+<!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
-in this topic.
+in this topic. -->
 
-* [Page title](Page URL)
+- [Page title](Page URL)
 ```
 
 For guidelines on writing reference topics, see
@@ -189,7 +161,7 @@ For guidelines on writing reference topics, see
 
 ### Introductory topic
 
-```
+```markdown
 ## Troubleshooting
 
 When working with <feature>, you might encounter the following issues:
@@ -197,149 +169,153 @@ When working with <feature>, you might encounter the following issues:
 
 ### Troubleshooting task
 
-```
+```markdown
 ---
 title: Start with a verb related to resolving the error
-description: Brief description of the page's contents.
+description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-# Title
+## Task section header
 
-(Replicate the title from the metadata. Remove this header if you're
-not using this template as a separate page.)
-
-## Introduction
-
-Write one or two paragraphs to clarify the audience, what the error is
+<!-- Write one or two paragraphs to clarify the audience, what the error is
 and when it occurs. For example: "You might get an error that states
 <error message>. This error occurs when ..."
+Include prerequisite information or specific permissions information here.
+Then write procedural steps following the instructions in
+https://developers.google.com/style/procedures. -->
 
-## Prerequisites
+## Another task section header
 
-Optionally, explain what knowledge the user needs to have,
-or what configuration they must complete, before resolving the error.
-
-## Troubleshooting body
-
-Write the steps of the task following the instructions in
-https://developers.google.com/style/procedures. You can call this section
-"Steps" or use a name similar to the page title. For example: "Debug a
-validator node" is the page title, and "Debug the node" is the
-troubleshooting body title.
+<!-- An optional section for you to write one or two paragraphs about another element of the topic.
+Keep adding more sections to describe all elements of the topic until you've completed the article. -->
 
 ## See also
 
-An optional section that can contain links to other content that the user
+<!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
-in this topic.
+in this topic. -->
 
-* [Page title](Page URL)
+- [Page title](Page URL)
 ```
 
 ### Troubleshooting reference
 
-```
-### Error message or its description
+```markdown
+---
+title: Use nouns to describe the topic
+description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
+---
 
-You might get an error that states <error message>.
+## Reference section header
 
-This error occurs when ...
+<!-- Write one or two paragraphs about the main idea of the topic, as a summary.
+For instructions, refer to
+https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference -->
 
-To resolve, ...
+### Error message section header
+
+<!-- Write the section title as the error message or its description.
+Use the following structure to describe the error:
+
+"You might get an error that states <error message>.
+
+This error occurs when <situation>.
+
+To resolve, <action>" -->
+
+### Another error message section header
+
+<!-- Keep adding sections until you've mentioned all errors.
 ```
 
 For guidelines on writing troubleshooting topics, see
 [Content model](./../../CONTRIBUTING.md#troubleshooting).
 
-## Get started
+## Quickstart
 
-```
+```markdown
 ---
-title: Get started with <feature>
-description: Introduce the page and highlight that it's quick
-and to the point.
+title: Quickstart title
+description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
-
-# Title
-
-("Get started with <feature or product>")
 
 ## Introduction
 
-Write one or two paragraphs that explain whom the get started guide
-is for, and what the user will accomplish after completing it.
+<!-- Build on the description above by doing the following:
+- Clarifying the audience
+- Clearly stating prerequisites and prior knowledge needed
+- Stating what the user accomplishes or builds -->
 
-## Prerequisites
+## Step 1: Do this thing
 
-Optionally, explain what knowledge the user needs to have, or what
-configuration they must complete, before starting.
+<!-- In one sentence, describe what the user does in this step -->
+<!-- Steps should break down the tasks the user completes in sequential order -->
+<!-- Avoid replicating conceptual information that is covered elsewhere, provide inline links instead. Only include conceptual information unique to this use case. -->
 
-## Get started body
+### Task section
 
-Write the steps of the task following the instructions in
-https://developers.google.com/style/procedures. You can call this section
-"Steps" or use a name similar to the page title. For example: "Get started
-with Ronin CLI" is the page title, and "Set up the CLI" is the get started
-body title.
+<!-- A step may require the user to perform several tasks - break those tasks down into chunks, allowing the user to scan quickly to find their place if they navigated away from this screen to perform the task. Write the steps of the task following the instructions in
+https://developers.google.com/style/procedures. -->
+
+### Another task section
+
+<!-- remove all of these comments when you're done -->
+
+## Step 2: Do the next thing
+
+<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete -->
+<!-- Remember to show code snippets in context -->
 
 ## Next steps
 
-Provide a recap and include actionable next steps that the user can take
-after completing this page.
+<!-- Provide a quick recap of what has been accomplished in the quick start as a means of transitioning to the next step. Include two-three actionable next steps that the user take after completing the quickstart. Always link to a concept related to this product. -->
 ```
 
-For guidelines on writing get started topics, see
-[Content model](./../../CONTRIBUTING.md#get-started).
+For guidelines on writing quickstarts, see
+[Content model](./../../CONTRIBUTING.md#quickstart).
 
 ## Tutorial
 
-```
+```markdown
 ---
 title: Start with a verb
-description: Introduce the page and highlight that it's a tutorial.
+description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
-
-# Title
-
-(Replicate the title from the metadata.)
 
 ## Introduction
 
-Write one or two paragraphs that explain the following:
-* Whom the tutorial is for.
-* What the user will accomplish after completing the tutorial.
-* What technologies the user will use.
+<!-- The tutorial introduction should include the following in a short paragraph:
 
-## Prerequisites
+- Clarify audience.
+- State prerequisites and prior knowledge needed.
+- State what the user accomplishes or builds and the user's problem it solves.
+- Link to an example of the project the user completes. -->
 
-Optionally, explain what knowledge the user needs to have, or
-what configuration they must complete, before starting.
+## Step 1: Do this thing
 
-## Step 1. Do this thing
+<!-- In one sentence, describe what the user does in this step. -->
+<!-- Steps should break down the tasks the user will complete in sequential order. -->
+<!-- Avoid replicating conceptual information that is covered elsewhere, provide inline links instead. Only include conceptual information unique to this use case. -->
 
-Describe in one sentence what the user will need to do in this step. 
+### Task section
 
-Then, write the steps of the task following the instructions in
-https://developers.google.com/style/procedures. Try to include examples.
+<!-- A step may require the user to perform several tasks - break those tasks down into chunks, allowing the user to scan quickly to find their place if they navigated away from this screen to perform the task. Write the steps of the task following the instructions in
+https://developers.google.com/style/procedures. -->
 
-## Step 2. Do the next thing
+### Another task section
 
-Describe in one sentence what the user will need to do in this step. 
+<!-- remove all of these comments when you're done -->
 
-Then, write the steps of the task following the instructions in
-https://developers.google.com/style/procedures. Try to include examples.
+## Step 2: Do the next thing
 
-Add more steps until the tutorial is complete.
-
-## Conclusion
-
-Optionally, add a paragraph or two about what the user has
-accomplished by following this tutorial.
+<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete -->
+<!-- Remember to show code snippets in context -->
 
 ## See also
-An optional section that can contain links to other content that the user
+
+<!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered in
-this tutorial.
+this tutorial. -->
 
 * [Page title](Page URL)
 
