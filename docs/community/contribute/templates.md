@@ -5,8 +5,6 @@ toc_min_heading_level: 2
 toc_max_heading_level: 2
 ---
 
-# Templates for Ronin documentation
-
 You can copy any of these templates into a new Markdown file as the first step
 in creating a new page and opening a pull request (PR):
 
@@ -14,7 +12,7 @@ in creating a new page and opening a pull request (PR):
 * [Task](#task)
 * [Reference](#reference)
 * [Troubleshooting](#troubleshooting)
-* [Get started](#get-started)
+* [Quickstart](#quickstart)
 * [Tutorial](#tutorial)
 
 ## Headers
@@ -112,7 +110,7 @@ https://developers.google.com/style/procedures. -->
 <!-- An optional section for you to write one or two paragraphs about another element of the topic.
 Keep adding more sections to describe all elements of the topic until you've completed the article. -->
 
-## See also
+## Further reading
 
 <!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
@@ -145,7 +143,7 @@ https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.
 <!-- An optional section for you to write one or two paragraphs about another element of the topic.
 Keep adding more sections to describe all elements of the topic until you've completed the article. -->
 
-## See also
+## Further reading
 
 <!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
@@ -189,7 +187,7 @@ https://developers.google.com/style/procedures. -->
 <!-- An optional section for you to write one or two paragraphs about another element of the topic.
 Keep adding more sections to describe all elements of the topic until you've completed the article. -->
 
-## See also
+## Further reading
 
 <!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
@@ -311,7 +309,7 @@ https://developers.google.com/style/procedures. -->
 <!-- Rinse and repeat, adding steps and tasks until the tutorial is complete -->
 <!-- Remember to show code snippets in context -->
 
-## See also
+## Further reading
 
 <!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered in

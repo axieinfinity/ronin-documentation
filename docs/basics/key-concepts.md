@@ -1,10 +1,7 @@
 ---
-description: Basic concepts to help you speak blockchain and Ronin. 
+description: Key concepts and some examples to help you speak blockchain and Ronin. 
+title: Key concepts
 ---
-
-# Key concepts
-
-Terms and examples to help you speak the industry lingo.
 
 ## A
 
@@ -62,11 +59,11 @@ Validators collect commissions when their node earns a staking reward for delega
 
 ### Confirmation time
 
-Confirmation time is the time elapsed between the moment a [transaction](#transaction) is submitted to the network and the time it is finally recorded into a confirmed block. It represents the total time a user has to wait until their transaction gets collected and confirmed by a validator node.
+Confirmation time is the period between when a [transaction](#transaction) is submitted to the network and when it is recorded in a confirmed block. It represents the total time a user has to wait until their transaction gets collected and confirmed by a validator node.
 
-After a transaction is included in a block by a validator, the block needs to be validated by the other nodes on the network. When the block is confirmed to be valid, the transaction is considered to have a single confirmation, meaning that each new block that is mined on top of that represents another confirmation.
+In many blockchains (including Ronin), validators typically prioritize the chain with the highest total difficulty. A block is considered confirmed when it reaches a sufficient depth and becomes irreversible. Consequently, transactions contained within a confirmed block are immutable and cannot be altered or reversed.
 
-On Ronin, it takes 15 confirmations to consider a transacton final, which is approximately 45 seconds.
+Ronin requires 15 confirmations to consider a transaction final, which is approximately 45 seconds.
 
 ### Consensus mechanism
 

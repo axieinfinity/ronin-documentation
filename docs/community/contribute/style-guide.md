@@ -1,10 +1,11 @@
 ---
 description: Style guide applied to this documentation.
+title: Style guide
 ---
 
-# Content style guide
+## Introduction
 
-Ronin documentation adheres to the [Google's developer documentation style
+The Ronin documentation adheres to the [Google's developer documentation style
 guide](https://developers.google.com/style) as the preferred style guide. 
 
 This page defines our additions and exceptions to the Google style guide:
