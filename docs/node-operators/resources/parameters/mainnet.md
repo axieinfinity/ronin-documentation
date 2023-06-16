@@ -15,6 +15,7 @@ tags:
 * Explorer: [app.roninchain.com](https://app.roninchain.com)
 * Genesis file: [mainnet.json](https://github.com/axieinfinity/ronin/blob/master/genesis/mainnet.json)
 * Block time: minimum 3 seconds
+* Number of confirmations to approve a transaction: 15 confirmations (approximately 45 seconds)
 * Gas price: 20 gwei
 
 ## Validator set

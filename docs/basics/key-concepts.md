@@ -1,10 +1,7 @@
 ---
-description: Basic concepts to help you speak blockchain and Ronin. 
+description: Key concepts and some examples to help you speak blockchain and Ronin. 
+title: Key concepts
 ---
-
-# Key concepts
-
-Terms and examples to help you speak the industry lingo.
 
 ## A
 
@@ -59,6 +56,14 @@ A common use case of a client is a cryptocurrency software wallet, such as [Roni
 ### Commission
 
 Validators collect commissions when their node earns a staking reward for delegators. A validator node earns a staking reward for participating in the consensus protocol each epoch. The commission rate is a fraction of the staking reward.
+
+### Confirmation time
+
+Confirmation time is the period between when a [transaction](#transaction) is submitted to the network and when it is recorded in a confirmed block. It represents the total time a user has to wait until their transaction gets collected and confirmed by a validator node.
+
+In many blockchains (including Ronin), validators typically prioritize the chain with the highest total difficulty. A block is considered confirmed when it reaches a sufficient depth and becomes irreversible. Consequently, transactions contained within a confirmed block are immutable and cannot be altered or reversed.
+
+Ronin requires 15 confirmations to consider a transaction final, which is approximately 45 seconds.
 
 ### Consensus mechanism
 

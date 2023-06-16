@@ -62,7 +62,7 @@ On Ronin, each validator is required to run a validator node and a bridge operat
 
 The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time being 3 seconds, the users should wait for 45 seconds to confirm transactions in a block.
 
-To perform the Clone attack, the Byzantine validators must create two blocks on the same block height, also known as double-sign. This behavior can be detected by other validators in the system. Thus, we use a [slashing mechanism](#slashing) to penalize Byzantine validators. This mechanism exposes malicious validators in a short time and makes the Clone attack non-beneficial.
+To perform the Clone attack, the Byzantine validators must create two blocks on the same block height, also known as double-sign. This behavior can be detected by other validators in the system. Thus, we use a [slashing mechanism](#slashing-rules) to penalize Byzantine validators. This mechanism exposes malicious validators in a short time and makes the Clone attack non-beneficial.
 
 To perform a non-detectable attack—when the Byzantine validators can only seal at most one block on each block height—the attacker must control the majority of validators. Fortunately, the selection of Governing Validators guarantee the majority of validators are honest, thus ensuring the security of Ronin.
 
