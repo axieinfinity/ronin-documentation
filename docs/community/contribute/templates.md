@@ -8,12 +8,17 @@ toc_max_heading_level: 2
 You can copy any of these templates into a new Markdown file as the first step
 in creating a new page and opening a pull request (PR):
 
-* [Concept](#concept)
-* [Task](#task)
-* [Reference](#reference)
-* [Troubleshooting](#troubleshooting)
-* [Quickstart](#quickstart)
-* [Tutorial](#tutorial)
+- [Headers](#headers)
+- [Title metadata](#title-metadata)
+- [Concept](#concept)
+- [Task](#task)
+- [Reference](#reference)
+- [Troubleshooting](#troubleshooting)
+  - [Introductory topic](#introductory-topic)
+  - [Troubleshooting task](#troubleshooting-task)
+  - [Troubleshooting reference](#troubleshooting-reference)
+- [Quickstart](#quickstart)
+- [Tutorial](#tutorial)
 
 ## Headers
 
@@ -223,7 +228,7 @@ To resolve, <action>" -->
 
 ### Another error message section header
 
-<!-- Keep adding sections until you've mentioned all errors.
+<!-- Keep adding sections until you've mentioned all errors. -->
 ```
 
 For guidelines on writing troubleshooting topics, see
@@ -257,7 +262,7 @@ https://developers.google.com/style/procedures. -->
 
 ### Another task section
 
-<!-- remove all of these comments when you're done -->
+<!-- Remove all of these comments when you're done. -->
 
 ## Step 2: Do the next thing
 
@@ -302,12 +307,12 @@ https://developers.google.com/style/procedures. -->
 
 ### Another task section
 
-<!-- remove all of these comments when you're done -->
+<!-- Remove all of these comments when you're done. -->
 
 ## Step 2: Do the next thing
 
-<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete -->
-<!-- Remember to show code snippets in context -->
+<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete. -->
+<!-- Remember to show code snippets in context. -->
 
 ## Further reading
 
