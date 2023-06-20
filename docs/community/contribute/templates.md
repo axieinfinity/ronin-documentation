@@ -8,12 +8,17 @@ toc_max_heading_level: 2
 You can copy any of these templates into a new Markdown file as the first step
 in creating a new page and opening a pull request (PR):
 
-* [Concept](#concept)
-* [Task](#task)
-* [Reference](#reference)
-* [Troubleshooting](#troubleshooting)
-* [Quickstart](#quickstart)
-* [Tutorial](#tutorial)
+- [Headers](#headers)
+- [Title metadata](#title-metadata)
+- [Concept](#concept)
+- [Task](#task)
+- [Reference](#reference)
+- [Troubleshooting](#troubleshooting)
+  - [Introductory topic](#introductory-topic)
+  - [Troubleshooting task](#troubleshooting-task)
+  - [Troubleshooting reference](#troubleshooting-reference)
+- [Quickstart](#quickstart)
+- [Tutorial](#tutorial)
 
 ## Headers
 
@@ -136,7 +141,7 @@ description: Write a brief intro to give readers a quick understanding of what's
 <!-- Write one or two paragraphs about the main idea of the topic, as a summary.
 Add bulleted lists and tables if necessary.
 For instructions, refer to
-https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference -->
+https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference. -->
 
 ## Another reference section header
 
@@ -208,7 +213,7 @@ description: Write a brief intro to give readers a quick understanding of what's
 
 <!-- Write one or two paragraphs about the main idea of the topic, as a summary.
 For instructions, refer to
-https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference -->
+https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference. -->
 
 ### Error message section header
 
@@ -219,11 +224,11 @@ Use the following structure to describe the error:
 
 This error occurs when <situation>.
 
-To resolve, <action>" -->
+To resolve, <action>." -->
 
 ### Another error message section header
 
-<!-- Keep adding sections until you've mentioned all errors.
+<!-- Keep adding sections until you've mentioned all errors. -->
 ```
 
 For guidelines on writing troubleshooting topics, see
@@ -240,14 +245,14 @@ description: Write a brief intro to give readers a quick understanding of what's
 ## Introduction
 
 <!-- Build on the description above by doing the following:
-- Clarifying the audience
-- Clearly stating prerequisites and prior knowledge needed
-- Stating what the user accomplishes or builds -->
+- Clarifying the audience.
+- Clearly stating prerequisites and prior knowledge needed.
+- Stating what the user accomplishes or builds. -->
 
 ## Step 1: Do this thing
 
-<!-- In one sentence, describe what the user does in this step -->
-<!-- Steps should break down the tasks the user completes in sequential order -->
+<!-- In one sentence, describe what the user does in this step. -->
+<!-- Steps should break down the tasks the user completes in sequential order. -->
 <!-- Avoid replicating conceptual information that is covered elsewhere, provide inline links instead. Only include conceptual information unique to this use case. -->
 
 ### Task section
@@ -257,12 +262,12 @@ https://developers.google.com/style/procedures. -->
 
 ### Another task section
 
-<!-- remove all of these comments when you're done -->
+<!-- Remove all of these comments when you're done. -->
 
 ## Step 2: Do the next thing
 
-<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete -->
-<!-- Remember to show code snippets in context -->
+<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete. -->
+<!-- Remember to show code snippets in context. -->
 
 ## Next steps
 
@@ -302,12 +307,12 @@ https://developers.google.com/style/procedures. -->
 
 ### Another task section
 
-<!-- remove all of these comments when you're done -->
+<!-- Remove all of these comments when you're done. -->
 
 ## Step 2: Do the next thing
 
-<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete -->
-<!-- Remember to show code snippets in context -->
+<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete. -->
+<!-- Remember to show code snippets in context. -->
 
 ## Further reading
 
