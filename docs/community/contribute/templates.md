@@ -141,7 +141,7 @@ description: Write a brief intro to give readers a quick understanding of what's
 <!-- Write one or two paragraphs about the main idea of the topic, as a summary.
 Add bulleted lists and tables if necessary.
 For instructions, refer to
-https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference -->
+https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference. -->
 
 ## Another reference section header
 
@@ -213,7 +213,7 @@ description: Write a brief intro to give readers a quick understanding of what's
 
 <!-- Write one or two paragraphs about the main idea of the topic, as a summary.
 For instructions, refer to
-https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference -->
+https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference. -->
 
 ### Error message section header
 
@@ -224,7 +224,7 @@ Use the following structure to describe the error:
 
 This error occurs when <situation>.
 
-To resolve, <action>" -->
+To resolve, <action>." -->
 
 ### Another error message section header
 
@@ -245,14 +245,14 @@ description: Write a brief intro to give readers a quick understanding of what's
 ## Introduction
 
 <!-- Build on the description above by doing the following:
-- Clarifying the audience
-- Clearly stating prerequisites and prior knowledge needed
-- Stating what the user accomplishes or builds -->
+- Clarifying the audience.
+- Clearly stating prerequisites and prior knowledge needed.
+- Stating what the user accomplishes or builds. -->
 
 ## Step 1: Do this thing
 
-<!-- In one sentence, describe what the user does in this step -->
-<!-- Steps should break down the tasks the user completes in sequential order -->
+<!-- In one sentence, describe what the user does in this step. -->
+<!-- Steps should break down the tasks the user completes in sequential order. -->
 <!-- Avoid replicating conceptual information that is covered elsewhere, provide inline links instead. Only include conceptual information unique to this use case. -->
 
 ### Task section
@@ -266,8 +266,8 @@ https://developers.google.com/style/procedures. -->
 
 ## Step 2: Do the next thing
 
-<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete -->
-<!-- Remember to show code snippets in context -->
+<!-- Rinse and repeat, adding steps and tasks until the tutorial is complete. -->
+<!-- Remember to show code snippets in context. -->
 
 ## Next steps
 
