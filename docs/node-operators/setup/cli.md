@@ -45,11 +45,15 @@ To build the Ronin CLI, you need to install the following dependencies:
 
 ## 2. Initialize the genesis block
 
-Before running a node, you need to initialize the genesis block to set up the origin state of the chain. The genesis files are located in the repository's `genesis` directory, and include the path where you store the node's data—for example, `/ronin/data`.
+Initialize the genesis block to set up the origin state of the chain. The genesis files are located in the repository's `genesis` directory, and include the path where you store the node's data—for example, `/ronin/data`.
 
   ```
   ronin init genesis/mainnet.json --datadir /ronin/data
   ```
+
+:::caution
+Whenever you build or upgrade a node that includes a new hardfork, you must initialize the genesis block by running this command.
+:::
 
 ## 3. Start the node
 
