@@ -51,9 +51,16 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
         },
+        gtag: {
+          trackingID: 'G-7XP0LK51BJ', // Measurement ID
+          anonymizeIP: false,
+        },
+        googleTagManager: {
+          containerId: 'GTM-PSV4LRD', // Tag ID from Google Tag Manager
+        },
         googleAnalytics: {
           trackingID: 'UA-150383258-4',
-        },
+        },        
       }),
     ],
   ],
