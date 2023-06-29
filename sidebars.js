@@ -192,7 +192,7 @@ const sidebars = {
             'validators/manage/profile',
             // View analytics
             'validators/manage/analytics',
-            // Request an emergency exit
+            // Emergency exit
             'validators/manage/emergency-exit',
           ],
         },
