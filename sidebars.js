@@ -180,18 +180,18 @@ const sidebars = {
             slug: '/validators/manage',
           },
           items: [
+            // View profile
+            'validators/manage/profile',
             // Change commission rate
             'validators/manage/commission',
             // Schedule maintenance
             'validators/manage/maintenance',
-            // Renounce role
-            'validators/manage/renounce',
-            // View activity
-            'validators/manage/activity',
-            // View profile
-            'validators/manage/profile',
             // View analytics
             'validators/manage/analytics',
+            // View activity
+            'validators/manage/activity',
+            // Renounce role
+            'validators/manage/renounce',
             // Emergency exit
             'validators/manage/emergency-exit',
           ],
