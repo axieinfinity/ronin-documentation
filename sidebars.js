@@ -169,14 +169,14 @@ const sidebars = {
         },
         // Claim rewards
         'validators/rewards/claim',
-        // Manage profile
+        // Manage your account
         {
           type: 'category',
-          label: 'Manage profile',
+          label: 'Manage your account',
           link: {
             type: 'generated-index',
-            title: 'Manage profile', 
-            description: 'Manage your profile, view analytics and activity, change commission rate.',
+            title: 'Manage your account', 
+            description: "Features for managing your validator's account.",
             slug: '/validators/manage',
           },
           items: [
@@ -192,6 +192,8 @@ const sidebars = {
             'validators/manage/profile',
             // View analytics
             'validators/manage/analytics',
+            // Request an emergency exit
+            'validators/manage/emergency-exit',
           ],
         },
         // Slashing and bailout
