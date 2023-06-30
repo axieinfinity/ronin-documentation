@@ -1,0 +1,32 @@
+---
+title: Request an emergency exit
+sidebar_label: Emergency exit
+description: Learn how to request an emergency exit if your node is compromised.
+slug: '/validators/emergency-exit'
+---
+
+import exit from './assets/emergency-exit.png';
+import stepOne from './assets/request-exit.png';
+import stepTwo from './assets/submit-exit.png';
+
+If you find that your node is compromised, such as when your private keys are stolen, you may be under attack and at risk of [slashing](./../slashing/slashing.mdx). When you suspect that you're being targeted, you can request an emergency exit to protect your node and prevent damage.
+
+## Submit your request
+
+1. Go to [Validator Dashboard](https://validator.roninchain.com) > your account > **Emergency exit**.
+<img src={exit} width={280} />
+
+2. Read through the terms and then click **Submit request**.
+<img src={stepOne} width={500} />
+
+3. After your request is submitted, provide evidence of the attack to the Governing Validators in the [validator-chat](https://discord.com/channels/930892666705694800/1090764739858153553) channel on Ronin Discord.
+<img src={stepTwo} width={500} />
+
+## Result
+
+Based on the Governing Validators' vote on your Emergency Exit proposal, your stake may be refunded as follows:
+
+- If the proposal is approved, your entire self-stake is refunded: 50,000 RON is credited immediately, while the remaining amount is transferred to you the next day (00:00 UTC).
+- If the proposal is not approved or expires, you're refunded the amount equal to your self-stake minus 50,000 RON. The amount is transferred to you after seven working days from the proposal's creation date.
+
+After your emergency exit is complete, you can no longer validate transactions on Ronin and receive rewards. Your status is set to "Renounced".

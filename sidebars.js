@@ -169,29 +169,31 @@ const sidebars = {
         },
         // Claim rewards
         'validators/rewards/claim',
-        // Manage profile
+        // Manage your account
         {
           type: 'category',
-          label: 'Manage profile',
+          label: 'Manage your account',
           link: {
             type: 'generated-index',
-            title: 'Manage profile', 
-            description: 'Manage your profile, view analytics and activity, change commission rate.',
+            title: 'Manage your account', 
+            description: "Features for managing your validator's account.",
             slug: '/validators/manage',
           },
           items: [
+            // View profile
+            'validators/manage/profile',
             // Change commission rate
             'validators/manage/commission',
             // Schedule maintenance
             'validators/manage/maintenance',
-            // Renounce role
-            'validators/manage/renounce',
-            // View activity
-            'validators/manage/activity',
-            // View profile
-            'validators/manage/profile',
             // View analytics
             'validators/manage/analytics',
+            // View activity
+            'validators/manage/activity',
+            // Renounce role
+            'validators/manage/renounce',
+            // Emergency exit
+            'validators/manage/emergency-exit',
           ],
         },
         // Slashing and bailout
