@@ -82,3 +82,7 @@ There is a difference between *unlocked supply* (found in the public unlock sche
 * It may also decrease in the case where RON is bought back from the market and placed into the treasury.
 * Circulating supply will never be higher than the unlocked supply.
 * Circulating supply of RON can be queried at the [supply API endpoint](https://supply-api.roninchain.com/info/ron?q=circulatingSupply).
+
+## Ronin ecosystem fund
+
+The ecosystem fund will initially be managed by the Sky Mavis core team. The fund is designed to grow the Ronin network community. The core principle of the fund is to add clear value to the broader Ronin network ecosystem.
