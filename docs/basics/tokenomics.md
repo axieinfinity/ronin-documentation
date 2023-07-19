@@ -85,8 +85,6 @@ There is a difference between *unlocked supply* (found in the public unlock sche
 
 ## Ronin ecosystem fund
 
-The quantity of RON reserved for various network functions, as a percentage of the total existing token supply, follows this distribution:
-
 The ecosystem fund will initially be managed by the Sky Mavis core team, and its core purpose is to grow the Ronin Network community.
 The principles for the fund are as follows:
 
