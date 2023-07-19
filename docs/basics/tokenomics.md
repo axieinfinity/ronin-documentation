@@ -86,6 +86,3 @@ There is a difference between *unlocked supply* (found in the public unlock sche
 ## Ronin ecosystem fund
 
 The ecosystem fund will initially be managed by the Sky Mavis core team. The fund is designed to grow the Ronin network community. The core principle of the fund is to add clear value to the broader Ronin network ecosystem.
-The principles for the fund are as follows:
-
-* Clear value added to the broader Ronin Network ecosystem
