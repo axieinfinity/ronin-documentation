@@ -82,3 +82,12 @@ There is a difference between *unlocked supply* (found in the public unlock sche
 * It may also decrease in the case where RON is bought back from the market and placed into the treasury.
 * Circulating supply will never be higher than the unlocked supply.
 * Circulating supply of RON can be queried at the [supply API endpoint](https://supply-api.roninchain.com/info/ron?q=circulatingSupply).
+
+## Ronin ecosystem fund
+
+The quantity of RON reserved for various network functions, as a percentage of the total existing token supply, follows this distribution:
+
+The ecosystem fund will initially be managed by the Sky Mavis core team, and its core purpose is to grow the Ronin Network community.
+The principles for the fund are as follows:
+
+* Clear value added to the broader Ronin Network ecosystem
