@@ -299,7 +299,7 @@ homepage.
 
 #### Top-level category
 
-Top-level categories are organized a Ronin audience type—delegators, validators,
+Top-level categories are organized around Ronin audience types—delegators, validators,
 node operators, developers, and user intention—basics (to learn) and community
 (to get involved). All top-level categories appear on the homepage. You should
 only create a top-level category when there is a large amount of content to be
