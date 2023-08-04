@@ -281,9 +281,9 @@ Documentation is organized into multiple levels of hierarchy on the site:
 
 #### Homepage content
 
-The Ronin documentation homepage,
-[docs.roninchain.com](https://docs.roninchain.com) includes cards linked to all
-the top-level categories to help people find information about the Ronin feature
+The homepage [docs.roninchain.com](https://docs.roninchain.com)
+includes cards linked to all the top-level categories to help
+people find information about the Ronin feature
 that they want to use.
 
 The space on the homepage is limited, so we have to carefully consider what goes
@@ -726,7 +726,7 @@ Contents of quickstarts:
 
 The Ronin documentation adheres to the [content style guide](./community/contribute/style-guide.md).
 
-## Documentation style checker
+## Documentation linter
 
 Ronin documentation relies on the [Vale](https://vale.sh/) linter to enforce the
 style guide.
