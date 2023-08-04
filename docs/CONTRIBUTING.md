@@ -246,7 +246,7 @@ the following:
   buttons.
 
 The contents of the sidebar are defined in the `/sidebar.js` file. Every page
-you're writing must be added to the sidebar.
+must be added to the sidebar.
 
 ### Homepage
 
