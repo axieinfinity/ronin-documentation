@@ -353,7 +353,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Contribute',
-            description: 'Learn how to contribute to the Ronin documentation.',
+            description: 'Contribute to the Ronin documentation.',
             slug: '/community/contribute',
           },
           items: [
