@@ -420,7 +420,7 @@ A concept topic works well when:
 ##### Template
 
 To write a concept topic, use the
-[concept template](./community/contribute/templates.md#concept).
+[concept](./community/contribute/templates.md#concept) template.
 
 ##### Guidelines
 
@@ -473,8 +473,7 @@ A task works well when:
 
 ##### Template
 
-To write a task, use the [task
-template](./community/contribute/templates.md#task).
+To write a task, use the [task](./community/contribute/templates.md#task) template.
 
 ##### Guidelines
 
@@ -537,8 +536,7 @@ A reference topic works well when:
 
 ##### Template
 
-To write a reference topic, use the [reference
-template](./community/contribute/templates.md#reference).
+To write a reference topic, use the [reference](./community/contribute/templates.md#reference) template.
 
 ##### Guidelines
 
@@ -603,7 +601,7 @@ The format is similar to the standard task, and the title follows the same verb
 and noun pattern, such as “Debug a Ronin node."
 
 To create this topic, use the
-[Task](./community/contribute/templates.md#troubleshooting-task) template.
+[troubleshooting task](./community/contribute/templates.md#troubleshooting-task) template.
 
 *A troubleshooting reference*
 
@@ -612,7 +610,7 @@ workarounds, consider organizing them as a table. To write a title for a
 troubleshooting reference, consider including at least a partial error message. 
 
 To create this topic, use the
-[Troubleshooting reference](./community/contribute/templates.md#troubleshooting-reference)
+[troubleshooting reference](./community/contribute/templates.md#troubleshooting-reference)
 template.
 
 #### Combined types
@@ -646,7 +644,7 @@ Tutorials are useful when someone has a basic understanding of the product and i
 
 ##### Template
 
-To write a tutorial, use the [tutorial template](./community/contribute/templates.md#tutorial).
+To write a tutorial, use the [tutorial](./community/contribute/templates.md#tutorial) template.
 
 ##### Guidelines
 
@@ -692,7 +690,7 @@ Quickstarts are useful when someone already understands the feature or product a
 
 ##### Template
 
-To write a quickstart guide, use the [quickstart template](./community/contribute/templates.md#quickstart).
+To write a quickstart guide, use the [quickstart](./community/contribute/templates.md#quickstart) template.
 
 ##### Guidelines
 

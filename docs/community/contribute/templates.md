@@ -22,7 +22,7 @@ in creating a new page and opening a pull request (PR):
 
 ## Headers
 
-In the templates, H2 header is a top-level header. Do not use  always reserved for the title of the page:
+In the templates, H2 header is a top-level header. Do not use H1 headers.
 
 ```markdown
 ---
@@ -38,33 +38,27 @@ Content
 Content
 ```
 
-For sections headers, use H2 and lower levels, and don't skip levels (for
+Don't skip levels (for
 example, don't use H2 then H4).
 
 ## Title metadata
 
-All the templates contain the `title` metadata attribute. By default, Docusaurus
-generates a page title from the H1 header at the top of the page. But sometimes
+All the templates contain the `title` front matter attribute. But sometimes
 the title can get so long it gets truncated in the sidebar. To prevent that, you
-can give the page a shorter, mode sidebar-friendly title by using the `title`
-metadata. Another reason is the page title might not be consistent with other
-pages in a section. You can again edit the title metadata to achieve
-consistency.
-
-Example when no `title` is used:
+can give the page a shorter, mode sidebar-friendly title by using the `sidebar_label`
+front matter.
 
 ```markdown
-# Security hardening for your validator node
+title: Security hardening for your validator node
 ```
 
-Example with a shorter title defined in the `title` metadata:
+Example with a shorter title defined in the `sidebar_label` attribute:
 
 ```markdown
 ---
-title: Security hardening
+sidebar_label: Security hardening
+title: Security hardening for your validator node
 ---
-
-# Security hardening for your validator node
 ```
 
 ## Concept
