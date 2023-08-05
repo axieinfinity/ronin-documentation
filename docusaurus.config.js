@@ -137,14 +137,9 @@ const config = {
             to: 'docs/developers/portal',
           },
           // Community
-          // {
-          //   label: 'Community',
-          //   to: 'docs/community/join',
-          // },
-          // Community HIDDEN until documentation goes open-source
           {
             label: 'Community',
-            to: 'docs/community',
+            to: 'docs/community/join',
           },
           // Search
           {
