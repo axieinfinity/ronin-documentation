@@ -137,14 +137,9 @@ const config = {
             to: 'docs/developers/portal',
           },
           // Community
-          // {
-          //   label: 'Community',
-          //   to: 'docs/community/join',
-          // },
-          // Community HIDDEN until documentation goes open-source
           {
             label: 'Community',
-            to: 'docs/community',
+            to: 'docs/community/join',
           },
           // Search
           {
@@ -160,16 +155,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Discord',
+                label: 'Ronin Discord',
                 href: 'https://discord.gg/roninnetwork',
               },
               {
-                label: 'Twitter',
+                label: 'Ronin Twitter',
                 href: 'https://twitter.com/ronin_network',
               },
               {
                 type: 'link',
-                label: 'Newsletter',
+                label: "Ronin's Newsletter",
                 href: 'https://roninblockchain.substack.com/',
               },
             ],
@@ -187,7 +182,7 @@ const config = {
               },
               {
                 label: 'Developer documentation',
-                href: 'https://docs.skymavis.com/docs/ronin-get-started',
+                href: 'https://docs.skymavis.com/ronin/overview',
               },
             ],
           },
