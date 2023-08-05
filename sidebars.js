@@ -340,13 +340,10 @@ const sidebars = {
       type: 'category',
       label: 'Community',
       link: {
-        type: 'generated-index',
-        title: 'Community', 
-        description: 'Community information and a contribution guide.',
-        slug: '/community',
+        type: 'doc',
+        id: 'community/join', 
       },
       items: [
-        'community/join',
         {
           type: 'category',
           label: 'Contribute',

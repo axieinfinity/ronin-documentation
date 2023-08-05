@@ -160,16 +160,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Discord',
+                label: 'Ronin Discord',
                 href: 'https://discord.gg/roninnetwork',
               },
               {
-                label: 'Twitter',
+                label: 'Ronin Twitter',
                 href: 'https://twitter.com/ronin_network',
               },
               {
                 type: 'link',
-                label: 'Newsletter',
+                label: "Ronin's Newsletter",
                 href: 'https://roninblockchain.substack.com/',
               },
             ],
@@ -187,7 +187,7 @@ const config = {
               },
               {
                 label: 'Developer documentation',
-                href: 'https://docs.skymavis.com/docs/ronin-get-started',
+                href: 'https://docs.skymavis.com/ronin/overview',
               },
             ],
           },
