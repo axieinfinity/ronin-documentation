@@ -130,6 +130,14 @@ The size of your node will also grow over time.
   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
   ```
 
+  An alternative to set the boot node is to use  node discovery via DNS (see [REP-0005](https://github.com/axieinfinity/REPs/blob/main/REP-0005.md)). In the `.env` file
+  -  Delete the `BOOTNODES=...` line
+  -  Append the `--discovery.dns enrtree://...` at the end of `RONIN_PARAMS` line
+
+  We provide the DNS tree link for node operators. 
+  - Saigon Testnet: `enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com`
+  - Mainnet: `enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com`
+
 6. (Optional) Download the snapshot:
 
   ```
