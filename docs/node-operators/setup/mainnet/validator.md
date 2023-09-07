@@ -132,15 +132,15 @@ The size of your node will also grow over time.
 
   An alternative to setting the boot node is to use  node discovery via DNS (see [REP-0005](https://github.com/axieinfinity/REPs/blob/main/REP-0005.md)). In the `.env` file, make the following changes:
 
-  -  Delete the `BOOTNODES=...` line.
-  -  Append `--discovery.dns enrtree://...` at the end of the `RONIN_PARAMS` line.
+     1.  Delete the `BOOTNODES=...` line.
+     2. Append `--discovery.dns enrtree://...` at the end of the `RONIN_PARAMS` line.
 
   We provide a DNS node list for node operators:
 
-  - Saigon testnet: `enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com`
-  - Mainnet: `enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com`
+     - Saigon testnet: `enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com`
+     - Mainnet: `enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com`
 
-6. (Optional) Download the snapshot:
+1. (Optional) Download the snapshot:
 
   ```
   cd ~/ronin/chaindata/data/ronin/
