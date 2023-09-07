@@ -140,7 +140,7 @@ The size of your node will also grow over time.
      - Saigon testnet: `enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com`
      - Mainnet: `enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com`
 
-1. (Optional) Download the snapshot:
+6. (Optional) Download the snapshot:
 
   ```
   cd ~/ronin/chaindata/data/ronin/
