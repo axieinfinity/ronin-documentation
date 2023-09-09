@@ -106,6 +106,8 @@ The size of your node will also grow over time.
         - GASPRICE=${GASPRICE}
         - GENESIS_PATH=${GENESIS_PATH}
         - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
+        - ENABLE_FAST_FINALITY=false
+        - ENABLE_FAST_FINALITY_SIGN=false
     db:
       image: postgres:14.3
       restart: always
