@@ -38,7 +38,7 @@ To download the latest image for your node, follow these steps:
 1. In the `.env` file, set `NODE_IMAGE` to the following:
 
     ```
-    ghcr.io/axieinfinity/ronin:v2.5.3-8727651
+    ghcr.io/axieinfinity/ronin:v2.6.0-83c8375
     ```
 
 2. Save the changes.
