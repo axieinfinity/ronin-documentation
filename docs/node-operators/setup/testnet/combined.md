@@ -106,8 +106,12 @@ The size of your node will also grow over time.
         - GASPRICE=${GASPRICE}
         - GENESIS_PATH=${GENESIS_PATH}
         - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
-        - ENABLE_FAST_FINALITY=false
-        - ENABLE_FAST_FINALITY_SIGN=false
+        - BLS_PASSWORD=${BLS_PASSWORD}
+        - BLS_PRIVATE_KEY=${BLS_PRIVATE_KEY}
+        - BLS_AUTO_GENERATE=${BLS_AUTO_GENERATE}
+        - ENABLE_FAST_FINALITY=${ENABLE_FAST_FINALITY}
+        - ENABLE_FAST_FINALITY_SIGN=${ENABLE_FAST_FINALITY_SIGN}
+        - BLS_SHOW_PRIVATE_KEY=${BLS_SHOW_PRIVATE_KEY}
     db:
       image: postgres:14.3
       restart: always
@@ -183,6 +187,14 @@ The size of your node will also grow over time.
 
   # The password to encrypt the node's keyfile
   PASSWORD=PASSWORD
+
+  # BLS Wallet Features
+  BLS_PRIVATE_KEY=input_your_bls_private_key_without_0x
+  BLS_PASSWORD=input_your_password
+  ENABLE_FAST_FINALITY=true
+  ENABLE_FAST_FINALITY_SIGN=true
+  BLS_AUTO_GENERATE=false
+  BLS_SHOW_PRIVATE_KEY=false
 
   DB_NAME=bridge
   DB_USERNAME=postgres
