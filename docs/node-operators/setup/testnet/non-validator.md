@@ -89,6 +89,12 @@ The size of your node will also grow over time.
         - GASPRICE=${GASPRICE}
         - GENESIS_PATH=${GENESIS_PATH}
         - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
+        - BLS_PASSWORD=${BLS_PASSWORD}
+        - BLS_PRIVATE_KEY=${BLS_PRIVATE_KEY}
+        - BLS_AUTO_GENERATE=${BLS_AUTO_GENERATE}
+        - ENABLE_FAST_FINALITY=${ENABLE_FAST_FINALITY}
+        - ENABLE_FAST_FINALITY_SIGN=${ENABLE_FAST_FINALITY_SIGN}
+        - BLS_SHOW_PRIVATE_KEY=${BLS_SHOW_PRIVATE_KEY}
   ```
 
   This compose file defines the `node` service, which pulls a Ronin node image from the GitHub Container Registry.
@@ -110,6 +116,9 @@ The size of your node will also grow over time.
 
   # The password to encrypt the node's keyfile
   PASSWORD=PASSWORD
+
+  ENABLE_FAST_FINALITY=true
+  ENABLE_FAST_FINALITY_SIGN=false
 
   MINE=false
 
