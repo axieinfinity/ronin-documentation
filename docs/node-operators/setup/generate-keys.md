@@ -1,23 +1,28 @@
 ---
 description: Securely generate private keys.
+title: Generate keys
 ---
 
 import extension from './assets/extension.png';
 import mobile from './assets/mobile.png';
 
-# Generate keys
+
+## Generate BLS keys
+
+
+## Generate private keys for nodes
 
 This guide demonstrates how to generate private keys for your nodes.
 
-## Generate locally
+### Generate locally
 
-### Prerequisites
+#### Prerequisites
 
 Go (version 1.17 or later). Follow the
 [installation instructions](https://go.dev/doc/install)
 on the official website.
 
-### Steps
+#### Steps
 
 1. Compile the `ethkey` tool from the Ronin source code by running the
 following commands:
@@ -43,16 +48,16 @@ following commands:
     ./ethkey inspect --private your-key-name
     ```
 
-## Generate using Ronin Wallet
+### Generate using Ronin Wallet
 
 You can generate private keys using Ronin Wallet—both the browser extension and the mobile app, which can be downloaded on the [Ronin Wallet](https://wallet.roninchain.com/) page. 
 
 Follow the steps in the flow guides to generate your keys using Ronin Wallet.
 
-### Browser extension
+#### Browser extension
 
 <img src={extension} width={1440} />
 
-### Mobile app
+#### Mobile app
 
 <img src={mobile} width={1440} />

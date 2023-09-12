@@ -114,10 +114,13 @@ The size of your node will also grow over time.
   # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
   NODE_IMAGE=NODE_IMAGE
 
-  # The password to encrypt the node's keyfile
+  # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
 
+  # Whether to participate in the finality vote broadcast
   ENABLE_FAST_FINALITY=true
+
+  # Whether to produce the finality vote
   ENABLE_FAST_FINALITY_SIGN=false
 
   MINE=false

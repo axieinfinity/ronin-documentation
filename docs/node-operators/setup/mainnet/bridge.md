@@ -172,7 +172,7 @@ The size of your Ronin node will also grow over time.
   # If you're a governor, uncomment this line and replace with your bridge voter key, without the 0x prefix
   # BRIDGE_VOTER_PRIVATE_KEY=BRIDGE_VOTER_PRIVATE_KEY
 
-  # The password to encrypt the node's keyfile
+  # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
   
   DB_NAME=bridge

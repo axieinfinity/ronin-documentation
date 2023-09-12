@@ -114,7 +114,7 @@ The size of your node will also grow over time.
   # Your validator private key without the 0x prefix
   VALIDATOR_PRIVATE_KEY=VALIDATOR_PRIVATE_KEY
   
-  # The password to encrypt the node's keyfile
+  # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
 
   MINE=true
@@ -132,7 +132,7 @@ The size of your node will also grow over time.
 
   An alternative to setting the boot node is to use  node discovery via DNS (see [REP-0005](https://github.com/axieinfinity/REPs/blob/main/REP-0005.md)). In the `.env` file, make the following changes:
 
-     1.  Delete the `BOOTNODES=...` line.
+     1. Delete the `BOOTNODES=...` line.
      2. Append `--discovery.dns enrtree://...` at the end of the `RONIN_PARAMS` line.
 
   We provide a DNS node list for node operators:

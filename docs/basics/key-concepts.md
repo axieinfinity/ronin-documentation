@@ -35,6 +35,14 @@ A block reward is the payment awarded to a validator for successfully validating
 
 A blockchain is a public ledger of transactions that is maintained and verified by a decentralized, peer-to-peer (P2P) network of computers that adhere to a consensus mechanism to confirm data. Each computer in a blockchain network maintains its own copy of the shared record, making it nearly impossible for a single computer to alter past transactions or for malicious actors to overwhelm the network.
 
+### BLS key
+
+Boneh–Lynn–Shacham (BLS) is a digital signature method used for verifying the authenticity of digital messages or documents. 
+
+The BLS key is what the validator uses to sign blocks, and it can be used to authenticate the validator. Multiple keys can be used by a validator to sign blocks simultaneously.
+
+To attach BLS keys to a validator, either a new validator must be created or an existing validator must be updated with these keys.
+
 ### Bridge
 
 A blockchain bridge—also known as a cross-chain bridge—allows independent blockchains to communicate with each other. This allows users to transfer crypto assets from one blockchain to another, including tokens, wrapped cryptocurrencies, and non-fungible tokens (NFTs). For example, [Ronin Bridge](https://bridge.roninchain.com/) is used for asset transfer between the Ronin chain and the Ethereum mainnet.

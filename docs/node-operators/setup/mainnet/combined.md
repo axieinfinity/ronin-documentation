@@ -173,7 +173,7 @@ The size of your node will also grow over time.
   # Your validator private key without the 0x prefix
   VALIDATOR_PRIVATE_KEY=VALIDATOR_PRIVATE_KEY
   
-  # The password to encrypt the node's keyfile
+  # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
 
   DB_NAME=bridge
