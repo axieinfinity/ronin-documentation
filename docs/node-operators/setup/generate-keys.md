@@ -23,13 +23,13 @@ The required private keys include one ECDSA key and one BLS key. The keys are na
     > make ronin
     ```
 
-2. Add the binary path to the `$PATH` environment variable:
+2. Add the Ronin binary path to the `$PATH` environment variable:
 
     ```
     > cp ./build/bin/ronin /usr/local/bin
     ```
 
-3. Generate the BLS key pair:
+3. Generate a BLS key pair:
 
     ```
     > mkdir bls_keystore
@@ -38,44 +38,45 @@ The required private keys include one ECDSA key and one BLS key. The keys are na
 
     Successfully generated BLS key
     Public key: {your_public_key}
-    Secret key: {your_secret_key}
+    Secret key: {your_private_key}
     ```
 
     An `all-accounts.keystore.json` file containing the encrypted BLS key is created inside the `bls_keystore` directory.
 
-To reveal the public key, run this command:
+    To reveal the public key, run this command:
 
-```
-> ronin account listbls
+    ```
+    > ronin account listbls
 
-BLS public key #0: {your_public_key}
-```
+    BLS public key #0: {your_public_key}
+    ```
 
-To reveal both the public key and private key, run this command:
+    To reveal both the public key and private key, run this command:
 
-```
-> ronin account listbls --secret
+    ```
+    > ronin account listbls --secret
 
-BLS public key #0: {your_public_key}
-BLS secret key #0: {Secret key: {your_secret_key}
-}
-```
+    BLS public key #0: {your_public_key}
+    BLS secret key #0: {Secret key: {your_private_key}
+    }
+    ```
 
-### Use BLS key in docker images
+### Configure Docker image
 
-1. In the `.env` file, make the following changes:
-   - Leave `BLS_PRIVATE_KEY` empty but input the `BLS_PASSWORD`.
-   - Set `BLS_AUTO_GENERATE=true`, run `docker-compose up -d`.
-   - Run `docker-compose logs node`, you see `Using BLS account redacted-public-key`.
+In the `.env` file of your node's Docker image, configure the following:
 
-- If you want to view the BLS private key
-    + Set `BLS_SHOW_PRIVATE_KEY=true`, run `docker-compose up -d`
-    + Run `docker-compose logs node`, you see `BLS secret key #0: {redacted}`
-    + WARNING: this just shows the private key without running the node
-    + Set `BLS_SHOW_PRIVATE_KEY=false`, run `docker-compose up -d` to rerun the node
+1. Leave `BLS_PRIVATE_KEY` empty but enter the password in `BLS_PASSWORD`.
+2. Set `BLS_AUTO_GENERATE` to `true`, and then run `docker-compose up -d`.
+3. Run `docker-compose logs node`, which returns `Using BLS account your-public-key`.
 
-## Non-validator node
-- Add these variables to `.env` file
+If you want to view the BLS private key, do the following:
+
+1. Set `BLS_SHOW_PRIVATE_KEY=true`, run `docker-compose up -d`
+2. Run `docker-compose logs node`, which returns `BLS secret key #0: {your_private_key}`. **Note:** This command just shows the private key without running the node.
+3. Set `BLS_SHOW_PRIVATE_KEY` to `false`, and then run `docker-compose up -d` to start the node.
+
+For a non-validator node, add the following variables to the `.env` file:
+
 ```
 ENABLE_FAST_FINALITY=true
 ENABLE_FAST_FINALITY_SIGN=false
@@ -96,23 +97,23 @@ on the official website.
 1. Compile the `ethkey` tool from the Ronin source code by running the
 following commands:
 
-    git clone https://github.com/axieinfinity/ronin
-    cd ronin
-    go get ./...
-    go build ./cmd/ethkey/
-    ls -l ethkey 
+    > git clone https://github.com/axieinfinity/ronin
+    > cd ronin
+    > go get ./...
+    > go build ./cmd/ethkey/
+    > ls -l ethkey 
     -rwxr-xr-x 1 user staff 16306850 Mar 23 18:13 ethkey    
 
 2. Generate the key pair and set a password:
 
     ```
-    ./ethkey generate your-key-name
+    > ./ethkey generate your-key-name
     ```
 
 3. Reveal the key pair:
 
     ```
-    ./ethkey inspect --private your-key-name
+    > ./ethkey inspect --private your-key-name
     ```
 
 ### Generate using Ronin Wallet
