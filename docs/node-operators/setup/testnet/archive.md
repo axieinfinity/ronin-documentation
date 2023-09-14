@@ -112,10 +112,13 @@ The size of your Ronin node will also grow over time.
   # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
   NODE_IMAGE=NODE_IMAGE
 
-  # The password to encrypt the node's keyfile
+  # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
-
+  
+  # Whether to participate in the finality vote broadcast
   ENABLE_FAST_FINALITY=true
+
+  # Whether to produce the finality vote
   ENABLE_FAST_FINALITY_SIGN=false
 
   BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303

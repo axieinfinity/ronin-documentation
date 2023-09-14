@@ -185,15 +185,26 @@ The size of your node will also grow over time.
   # Your validator private key without the 0x prefix
   VALIDATOR_PRIVATE_KEY=VALIDATOR_PRIVATE_KEY
 
-  # The password to encrypt the node's keyfile
+  # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
 
-  # BLS Wallet Features
-  BLS_PRIVATE_KEY=input_your_bls_private_key_without_0x
-  BLS_PASSWORD=input_your_password
+  # BLS Wallet features
+  # Your BLS private key without the 0x prefix
+  BLS_PRIVATE_KEY=BLS_PRIVATE_KEY_WITHOUT_0x
+
+  # The password used to encrypt the BLS private key file
+  BLS_PASSWORD=BLS_PASSWORD
+
+  # Whether to participate in the finality vote broadcast
   ENABLE_FAST_FINALITY=true
+
+  # Whether to produce the finality vote
   ENABLE_FAST_FINALITY_SIGN=true
+ 
+  # Whether to automatically generate BLS private key
   BLS_AUTO_GENERATE=false
+
+  # Whether to show the raw BLS private key after decryption
   BLS_SHOW_PRIVATE_KEY=false
 
   DB_NAME=bridge
