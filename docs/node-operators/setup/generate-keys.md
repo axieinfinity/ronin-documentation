@@ -20,50 +20,68 @@ You can generate a BLS key pair using the Ronin CLI or your node's Docker image.
 ### Generate using the CLI
 
 1. Build Ronin from the source code:
+   ```
+   $ git clone https://github.com/axieinfinity/ronin
+   $ cd ronin
+   $ make ronin
+   ```
 
-    ```
-    > git clone https://github.com/axieinfinity/ronin
-    > cd ronin
-    > make ronin
-    ```
+2. Add `./build/bin/ronin` to the `$PATH` environment variable. You can do this by adding the following line to your `$HOME/.profile` or `/etc/profile` (for a system-wide installation):
 
-2. Add the Ronin binary path to the `$PATH` environment variable:
+   ```
+   export PATH=$PATH:/path/to/ronin
+   ```
 
-    ```
-    > cp ./build/bin/ronin /usr/local/bin
-    ```
+   If run from the `ronin` directory, then the command is as follows:
+    
+   ```
+   export PATH=$PATH:./build/bin/ronin
+   ```
+
+   **Note:** Make sure to close and reopen the terminal after adding the path.
 
 3. Generate a BLS key pair:
 
-    ```
-    > mkdir bls_keystore
-    > echo "input_your_password" > bls_password
-    > ronin account generatebls --secret
+   ```
+   $ mkdir bls_keystore
+   $ echo "input_your_password" > bls_password
+   $ ronin account generatebls --secret
+   ```
 
-    Successfully generated BLS key
-    Public key: {your_public_key}
-    Secret key: {your_private_key}
-    ```
+   The output is the following:
 
-    An `all-accounts.keystore.json` file containing the encrypted BLS key is created inside the `bls_keystore` directory.
+   ```
+   Successfully generated BLS key
+   Public key: {your_public_key}
+   Secret key: {your_private_key}
+   ```
 
-    To reveal the public key, run this command:
+   An `all-accounts.keystore.json` file containing the encrypted BLS key is created inside the `bls_keystore` directory.
 
-    ```
-    > ronin account listbls
+   To reveal the public key, run this command:
 
-    BLS public key #0: {your_public_key}
-    ```
+   ```
+   $ ronin account listbls
+   ```
 
-    To reveal both the public key and private key, run this command:
+   The output is the following:
 
-    ```
-    > ronin account listbls --secret
+   ```
+   BLS public key #0: {your_public_key}
+   ```
 
-    BLS public key #0: {your_public_key}
-    BLS secret key #0: {Secret key: {your_private_key}
-    }
-    ```
+   To reveal both the public key and private key, run this command:
+
+   ```
+   $ ronin account listbls --secret
+   ```
+    
+   The output is the following:
+
+   ```
+   BLS public key #0: {your_public_key}
+   BLS secret key #0: {your_private_key}
+   ```
 
 ### Generate using Docker image
 
@@ -93,27 +111,33 @@ on the official website.
 
 #### Steps
 
-1. Compile the `ethkey` tool from the Ronin source code by running the
-following commands:
+1. Compile the `ethkey` tool from the Ronin source code by running the following commands:
+   
+   ```
+   $ git clone https://github.com/axieinfinity/ronin
+   $ cd ronin
+   $ go get ./...
+   $ go build ./cmd/ethkey/
+   $ ls -l ethkey
+   ```
 
-    > git clone https://github.com/axieinfinity/ronin
-    > cd ronin
-    > go get ./...
-    > go build ./cmd/ethkey/
-    > ls -l ethkey 
-    -rwxr-xr-x 1 user staff 16306850 Mar 23 18:13 ethkey    
+   The output is similar to the following:
+
+   ```
+   -rwxr-xr-x 1 user staff 16306850 Mar 23 18:13 ethkey
+   ```
 
 2. Generate the key pair and set a password:
 
-    ```
-    > ./ethkey generate your_private_key_name
-    ```
+   ```
+   $ ./ethkey generate your_private_key_name
+   ```
 
 3. Reveal the key pair:
 
-    ```
-    > ./ethkey inspect --private your_private_key_name
-    ```
+   ```
+   $ ./ethkey inspect --private your_private_key_name
+   ```
 
 ### Generate using Ronin Wallet
 

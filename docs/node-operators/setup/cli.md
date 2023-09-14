@@ -37,19 +37,25 @@ To build the Ronin CLI, you need to install the following dependencies:
 
   This command creates a `ronin` binary inside the `.build/bin` directory.
 
-4. To run the binary without specifying the binary location in each command, make sure to set up the `./build/bin/ronin` path in the `$PATH` environment variable. 
+4. To run the binary without specifying the binary location in each command, make sure to add the Ronin binary path in the `$PATH` environment variable.
 
   ```
-  cp ./build/bin/ronin /usr/local/bin
+  export PATH=$PATH:/path/to/ronin
+  ```
+
+  If run from the `ronin` directory, then the command is as follows:
+    
+  ```
+  export PATH=$PATH:./build/bin/ronin
   ```
 
 ## 2. Initialize the genesis block
 
 Initialize the genesis block to set up the origin state of the chain. The genesis files are located in the repository's `genesis` directory, and include the path where you store the node's data—for example, `/ronin/data`.
 
-  ```
-  ronin init genesis/mainnet.json --datadir /ronin/data
-  ```
+```
+ronin init genesis/mainnet.json --datadir /ronin/data
+```
 
 :::caution
 Whenever you build or upgrade a node that includes a new hardfork, you must initialize the genesis block by running this command.
@@ -59,14 +65,14 @@ Whenever you build or upgrade a node that includes a new hardfork, you must init
 
 Run the following command to start a full (non-validator) Ronin node on the mainnet:
 
-  ```
-  ronin --networkid 2020 \
-  --bootnodes enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303 \
-  --datadir /ronin/data \
-  --port 30303 \
-  --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' \
-  --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*'
-  ```
+```
+ronin --networkid 2020 \
+--bootnodes enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303 \
+--datadir /ronin/data \
+--port 30303 \
+--http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' \
+--ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*'
+```
 
 ## Command reference
 
