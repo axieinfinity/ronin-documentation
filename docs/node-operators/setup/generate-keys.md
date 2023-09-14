@@ -15,7 +15,7 @@ The required private keys include one ECDSA key and one BLS key. The keys are na
 
 ## Generate BLS keys
 
-You can generate an ECDSA key pair using the Ronin CLI or your node's Docker image.
+You can generate a BLS key pair using the Ronin CLI or your node's Docker image.
 
 ### Generate using the CLI
 
@@ -79,16 +79,9 @@ If you want to view the BLS private key, do the following:
 2. Run `docker-compose logs node`, which returns `BLS secret key #0: {your_private_key}`. **Note:** This command just shows the private key without running the node.
 3. Set `BLS_SHOW_PRIVATE_KEY` to `false`, and then run `docker-compose up -d` to start the node.
 
-For a non-validator node, add the following variables to the `.env` file:
-
-```
-ENABLE_FAST_FINALITY=true
-ENABLE_FAST_FINALITY_SIGN=false
-```
-
 ## Generate ECDSA keys
 
-You can generate a BLS key pair using the Ronin CLI or the Ronin Wallet app or extension.
+You can generate an ECDSA key pair using the Ronin CLI or the Ronin Wallet app or extension.
 
 ### Generate using the CLI
 
@@ -124,7 +117,7 @@ following commands:
 
 ### Generate using Ronin Wallet
 
-You can generate the ECDSA keys using Ronin Wallet—both the browser extension and the mobile app, which can be downloaded on the [Ronin Wallet](https://wallet.roninchain.com/) page. 
+The Ronin Wallet—both the browser extension and the mobile app—can also be used for ECDSA key generation. You can download the app from , which can be downloaded on the [Ronin Wallet](https://wallet.roninchain.com/) page. 
 
 #### Browser extension
 
