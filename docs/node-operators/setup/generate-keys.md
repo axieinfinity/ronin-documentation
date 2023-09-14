@@ -8,12 +8,12 @@ import mobile from './assets/mobile.png';
 
 Each validator node requires private keys for signing blocks and consensus messages sent to the other validators in the network.
 
-The required private keys include one ECDSA key and one BLS key. The keys are named after digital signature schemes: Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh–Lynn–Shacham (BLS), respectively.
+The required private keys include a BLS key and an ECDSA key. The keys are named after digital signature schemes: Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh–Lynn–Shacham (BLS), respectively.
 
-- The ECDSA key is used for signing blocks.
 - The BLS key is used for producing finality votes. Validators who produce finality vote receive a reward. If a validator fails to produce a finality vote, no slashing penalty applies.
+- The ECDSA key is used for signing blocks.
 
-## Generate BLS keys
+## Generate a BLS key
 
 You can generate a BLS key pair using the Ronin CLI or your node's Docker image.
 
@@ -79,7 +79,7 @@ If you want to view the BLS private key, do the following:
 2. Run `docker-compose logs node`, which returns `BLS secret key #0: {your_private_key}`. **Note:** This command just shows the private key without running the node.
 3. Set `BLS_SHOW_PRIVATE_KEY` to `false`, and then run `docker-compose up -d` to start the node.
 
-## Generate ECDSA keys
+## Generate an ECDSA key
 
 You can generate an ECDSA key pair using the Ronin CLI or the Ronin Wallet app or extension.
 
@@ -117,7 +117,7 @@ following commands:
 
 ### Generate using Ronin Wallet
 
-The Ronin Wallet—both the browser extension and the mobile app—can also be used for ECDSA key generation. You can download the app from , which can be downloaded on the [Ronin Wallet](https://wallet.roninchain.com/) page. 
+ECDSA keys can also be generated using [Ronin Wallet](https://wallet.roninchain.com/), both the browser extension and the mobile app. Follow the steps in the flow diagrams provided in the following sections.
 
 #### Browser extension
 
