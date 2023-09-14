@@ -39,9 +39,9 @@ A blockchain is a public ledger of transactions that is maintained and verified 
 
 Boneh–Lynn–Shacham (BLS) is a digital signature method used for verifying the authenticity of digital messages or documents. 
 
-The BLS key is what the validator uses to sign blocks, and it can be used to authenticate the validator. Multiple keys can be used by a validator to sign blocks simultaneously.
+The BLS key is what the validator uses to produce finality votes. Validators who produce finality vote receive a reward. If a validator fails to produce a finality vote, no slashing penalty applies.
 
-To attach BLS keys to a validator, either a new validator must be created or an existing validator must be updated with these keys.
+To attach a BLS key to a validator, either a new validator must be created or an existing validator must be [updated](./../node-operators/setup/generate-keys.md) with this key.
 
 ### Bridge
 
