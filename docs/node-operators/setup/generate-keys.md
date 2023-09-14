@@ -8,12 +8,16 @@ import mobile from './assets/mobile.png';
 
 Each validator node requires private keys for signing blocks and consensus messages sent to the other validators in the network.
 
-The required private keys include one ECDSA key and one BLS key. The keys are named after digital signature schemes: Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh–Lynn–Shacham (BLS), respectively. 
+The required private keys include one ECDSA key and one BLS key. The keys are named after digital signature schemes: Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh–Lynn–Shacham (BLS), respectively.
 
 - The ECDSA key is used for signing blocks.
 - The BLS key is used for producing finality votes. Validators who produce finality vote receive a reward. If a validator fails to produce a finality vote, no slashing penalty applies.
 
 ## Generate BLS keys
+
+You can generate an ECDSA key pair using the Ronin CLI or your node's Docker image.
+
+### Generate using the CLI
 
 1. Build Ronin from the source code:
 
@@ -61,7 +65,7 @@ The required private keys include one ECDSA key and one BLS key. The keys are na
     }
     ```
 
-### Configure Docker image
+### Generate using Docker image
 
 In the `.env` file of your node's Docker image, configure the following:
 
@@ -84,7 +88,9 @@ ENABLE_FAST_FINALITY_SIGN=false
 
 ## Generate ECDSA keys
 
-### Generate locally
+You can generate a BLS key pair using the Ronin CLI or the Ronin Wallet app or extension.
+
+### Generate using the CLI
 
 #### Prerequisites
 
@@ -107,13 +113,13 @@ following commands:
 2. Generate the key pair and set a password:
 
     ```
-    > ./ethkey generate your-key-name
+    > ./ethkey generate your_private_key_name
     ```
 
 3. Reveal the key pair:
 
     ```
-    > ./ethkey inspect --private your-key-name
+    > ./ethkey inspect --private your_private_key_name
     ```
 
 ### Generate using Ronin Wallet
@@ -127,3 +133,7 @@ You can generate the ECDSA keys using Ronin Wallet—both the browser extension 
 #### Mobile app
 
 <img src={mobile} width={1440} />
+
+## See also
+
+- [Build a Ronin CLI](./cli.md)
