@@ -55,7 +55,6 @@ const sidebars = {
           label: 'Roles',
           link: {
             type: 'generated-index',
-            title: 'Roles',
             description: 'The main actors on Ronin.',
             slug: '/basics/roles',
           },
@@ -72,7 +71,6 @@ const sidebars = {
           label: 'dApps',
           link: {
             type: 'generated-index',
-            title: 'dApps',
             description: 'Decentralized applications (dApps) on Ronin.',
             slug: '/basics/dapps',
           },
@@ -111,7 +109,6 @@ const sidebars = {
           label: 'Stake',
           link: {
             type: 'generated-index',
-            title: 'Stake',
             description: 'Manage your RON stake.',
             slug: '/delegators/stake',
           },
@@ -156,7 +153,6 @@ const sidebars = {
           label: 'Stake',
           link: {
             type: 'generated-index',
-            title: 'Stake',
             description: 'Manage your RON stake.',
             slug: '/validators/stake',
           },
@@ -175,7 +171,6 @@ const sidebars = {
           label: 'Manage your account',
           link: {
             type: 'generated-index',
-            title: 'Manage your account', 
             description: "Features for managing your validator's account.",
             slug: '/validators/manage',
           },
@@ -202,7 +197,6 @@ const sidebars = {
           label: 'Slashing',
           link: {
             type: 'generated-index',
-            title: 'Slashing',
             description: 'Learn about the slashing rules and options for a bailout.',
             slug: '/validators/slashing',
           },
@@ -219,7 +213,6 @@ const sidebars = {
           label: 'Governance',
           link: {
             type: 'generated-index',
-            title: 'Governance', 
             description: 'On-chain governance through proposals raised and voted on by Governing Validators.',
             slug: '/validators/governance',
           },
@@ -251,7 +244,6 @@ const sidebars = {
           label: 'Setup',
           link: {
             type: 'generated-index',
-            title: 'Setup',
             slug: '/node-operators/mainnet',
             description: 'Node installation guides for the Ronin mainnet.'
           },
@@ -282,7 +274,6 @@ const sidebars = {
           label: 'Resources',
           link: {
             type: 'generated-index',
-            title: 'Resources',
             slug: '/node-operators/resources',
             description: 'Resources for node operators.'
           },
@@ -293,7 +284,6 @@ const sidebars = {
               label: 'Network parameters',
               link: {
                 type: 'generated-index',
-                title: 'Network parameters',
                 slug: '/node-operators/resources/parameters',
               },
               items: [
@@ -314,7 +304,6 @@ const sidebars = {
           label: 'Saigon testnet',
           link: {
             type: 'generated-index',
-            title: 'Saigon testnet',
             description: 'Node installation guides for the Saigon testnet.',
             slug: '/node-operators/testnet',
           },
@@ -329,11 +318,49 @@ const sidebars = {
         },
       ],
     },
-    // Developers
+    // RNS
     {
-      type: 'doc',
-      label: 'Developers',
-      id: 'developers/portal',
+      type: 'category',
+      label: 'RNS',
+      link: {
+        type: 'doc',
+        id: 'rns/overview', 
+      },
+      items: [
+        'rns/concepts/life-cycle',
+        'rns/concepts/names-pricing',
+        {
+          type: 'category',
+          label: 'Register an RNS domain',
+          link: {
+            type: 'generated-index',
+            description: 'Guides to register your RNS domain name.',
+            slug: '/rns/register',
+          },
+          items: [
+            'rns/register/regular',
+            'rns/register/auctioned',
+            'rns/register/protected',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Manage an RNS domain',
+          link: {
+            type: 'generated-index',
+            description: 'What to do after you registered an RNS domain.',
+            slug: '/rns/manage',
+          },
+          items: [
+            'rns/manage/set-primary',
+            'rns/manage/extend',
+            'rns/manage/transfer',
+            'rns/manage/trade',
+          ],
+        },
+        'rns/reference/faq',
+        'rns/reference/glossary',
+      ],
     },
     // Community
     {
@@ -349,7 +376,6 @@ const sidebars = {
           label: 'Contribute',
           link: {
             type: 'generated-index',
-            title: 'Contribute',
             description: 'Contribute to the Ronin documentation.',
             slug: '/community/contribute',
           },

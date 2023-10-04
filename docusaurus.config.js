@@ -131,10 +131,10 @@ const config = {
             label: 'Node operators',
             to: 'docs/node-operators',
           },
-          // Developers
+          // RNS
           {
-            label: 'Developers',
-            to: 'docs/developers/portal',
+            label: 'RNS',
+            to: 'docs/rns',
           },
           // Community
           {
@@ -155,17 +155,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Ronin Discord',
+                label: 'Discord',
                 href: 'https://discord.gg/roninnetwork',
               },
               {
-                label: 'Ronin Twitter',
+                label: 'X',
                 href: 'https://twitter.com/ronin_network',
               },
               {
-                type: 'link',
-                label: "Ronin's Newsletter",
-                href: 'https://roninblockchain.substack.com/',
+                label: 'Newsletter',
+                href: 'https://blog.roninchain.com',
               },
             ],
           },
@@ -173,16 +172,16 @@ const config = {
             title: 'Links',
             items: [
               {
-                label: 'RON Staking',
+                label: 'Developer docs',
+                href: 'https://docs.skymavis.com/ronin/overview',
+              },
+              {
+                label: 'RON staking',
                 href: 'https://app.roninchain.com/staking/',
               },
               {
-                label: 'Validator Dashboard',
+                label: 'Validator dashboard',
                 href: 'https://validator.roninchain.com/',
-              },
-              {
-                label: 'Developer documentation',
-                href: 'https://docs.skymavis.com/ronin/overview',
               },
             ],
           },
