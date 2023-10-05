@@ -1,19 +1,19 @@
 ---
 description: Register a regular RNS domain name.
 slug: regular
-title: Register a regular domain
+title: Register a regular name
 ---
 
 ## Overview
 
-This guide shows how to register a regular RNS domain. Regular RNS names are available on a first-come, first-serve basis with a yearly renewal fee. Such names have the status **Available** in the RNS app.
+This guide shows how to register a regular RNS domain. Regular RNS domains are available on a first-come, first-serve basis with a yearly renewal fee. Such names have the status **Available** in the RNS app.
 
 ## Before you start
 
 * Have your Ronin Wallet ready.
 * Learn about pricing for regular domains.
 
-## Register a free domain
+## Register a regular name
 
 1. Open the RNS app.
 2. Search for the domain you want to register.
@@ -24,6 +24,10 @@ This guide shows how to register a regular RNS domain. Regular RNS names are ava
 7. Click **Confirm** and pay the fee to register your domain.
 
 After the registration transaction is complete, your RNS domain name is ready to use.
+
+## View your domains
+
+Go to **My account > My domains** to view all your domain names.
 
 ## See also
 

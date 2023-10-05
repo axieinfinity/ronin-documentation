@@ -6,7 +6,7 @@ title: Domain names and pricing
 
 ## Overview
 
-<!-- Summarize what this explanation is about. -->
+This page describes RNS name categories and their pricing in detail.
 
 ## Explanation topic
 

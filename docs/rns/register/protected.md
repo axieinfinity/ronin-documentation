@@ -1,12 +1,14 @@
 ---
 description: Register a protected RNS domain name for your business.
 slug: protected
-title: Register a protected domain
+title: Register a protected name
 ---
 
 ## Overview
 
-This guide shows how to register a *protected* RNS domain name. Protected RNS names are reseved by Sky Mavis for its official partners and some key community members. If you're one of these categories, follow this document to get in touch with Sky Mavis to reserve your name, and then register it.
+This guide shows how to claim a *protected* RNS domain name. Protected names are reserved by Sky Mavis for its official partners and some key community members, and aren't available to anyone else.
+
+So if you're our official partner or a key community member, then it's likely that we already reserved a name you. What you need to do is contact us to verify that you're the entity behind the reserved name, and then register the name in the RNS app.
 
 Protected names have the status **Protected** in the RNS app.
 
@@ -15,29 +17,33 @@ Protected names have the status **Protected** in the RNS app.
 * Have your Ronin Wallet ready.
 * Learn about pricing for protected domains.
 
-## Reserve a protected domain
+## Verify your identity 
 
-This section explains how to request Sky Mavis to reserve a protected name for you.
+This section explains how to verify that you're the entity behind the reserved name.
 
 1. Open the RNS app.
 2. Search for the domain you want to register.
 3. Click the domain name to open its info page. The page displays the domain price and yearly renewal fee, as well as past activities with this domain name.
-4. Click **Contact us** to buy this domain name.
+4. Click **Contact us**.
+5. Send us an email containing proof of your identity as our official partner or a key community member.
 
-After the purchase is complete, the domain name is mapped to your Ronin Wallet address.
+After the verification is complete, this domain name is mapped to your Ronin Wallet address.
 
 ## Register your protected domain
 
-In this section, you register your protected name in the RNS service.
+This section explains how to register your protected name in the RNS app.
 
-1. Open the RNS app and connect the Ronin Wallet which you used to reserve the name.
+1. Open the RNS app and connect the Ronin Wallet to which your domain name is mapped.
 2. Search for your reserved domain name.
-3. Click **Register now** to begin registration. The registrar requires two transactions to register a domain name: request and registration.
-4. At the request transaction, select the number of years you want to register this domain for. The price changes based on how many years you selected. The minimum duration for the registration is 1 year.
-5. Click **Request**, which prompts the request transaction. It takes a few moments to confirm your request. As soon as it's confirmed, your domain is ready to be registered.
-6. Click **Confirm** and pay the fee to register your domain.
+3. Click **Register now** to begin registration.
+4. Select the number of years you want to register the domain for. The price changes based on how many years you selected. The minimum duration for the registration is 1 year.
+5. Click **Confirm** and pay the fee to register your domain.
 
-After the registration transaction is complete, your RNS domain name is ready to use.
+After the registration is complete, your protected RNS name is ready to use.
+
+## View your domains
+
+Go to **My account > My domains** to view all your domain names. 
 
 ## See also
 

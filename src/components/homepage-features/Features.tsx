@@ -46,13 +46,13 @@ const featureList = [
     },
   },
   {
-    title: 'Developers',
+    title: 'RNS',
     Icon: LaptopCodeIcon,
     link: {
-      href: '/docs/developers/portal',
-      title: 'Developers',
+      href: '/docs/rns',
+      title: 'RNS',
     },
-    description: <>Build your decentralized application on Ronin.</>,
+    description: <>Assign a human-readable name to your Ronin address.</>,
   },
   {
     title: 'Community',

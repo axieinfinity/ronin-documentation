@@ -24,7 +24,7 @@ That means your `.ron` name becomes your unique callsign throughout our entire e
 
 ## RNS name categories
 
-There are four categories of domain names in RNS:
+There are four categories of domain names in RNS.
 
 ### Blacklisted names
 
@@ -53,4 +53,3 @@ RNS names must be over three characters long and contain only alphanumeric chara
 * [Register a regular domain](rns/register/regular)
 * [Register an auctioned domain](rns/register/auctioned)
 * [Register a protected domain](rns/register/protected)
-
