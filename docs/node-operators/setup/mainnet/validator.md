@@ -92,6 +92,12 @@ The size of your node will also grow over time.
         - MINE=${MINE}
         - GASPRICE=${GASPRICE}
         - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
+        - BLS_PASSWORD=${BLS_PASSWORD}
+        - BLS_PRIVATE_KEY=${BLS_PRIVATE_KEY}
+        - BLS_AUTO_GENERATE=${BLS_AUTO_GENERATE}
+        - ENABLE_FAST_FINALITY=${ENABLE_FAST_FINALITY}
+        - ENABLE_FAST_FINALITY_SIGN=${ENABLE_FAST_FINALITY_SIGN}
+        - BLS_SHOW_PRIVATE_KEY=${BLS_SHOW_PRIVATE_KEY}
   ```
 
   This compose file defines the `node` service, which pulls the Ronin node image from the GitHub Container Registry.  
@@ -116,6 +122,25 @@ The size of your node will also grow over time.
   
   # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
+
+  # BLS Wallet features
+  # Your BLS private key without the 0x prefix
+  BLS_PRIVATE_KEY=BLS_PRIVATE_KEY_WITHOUT_0x
+
+  # The password used to encrypt the BLS private key file
+  BLS_PASSWORD=BLS_PASSWORD
+
+  # Whether to participate in the finality vote broadcast
+  ENABLE_FAST_FINALITY=true
+
+  # Whether to produce the finality vote
+  ENABLE_FAST_FINALITY_SIGN=true
+
+  # Whether to automatically generate BLS private key
+  BLS_AUTO_GENERATE=false
+
+  # Whether to show the raw BLS private key after decryption
+  BLS_SHOW_PRIVATE_KEY=false
 
   MINE=true
 

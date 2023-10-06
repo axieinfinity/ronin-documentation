@@ -105,7 +105,7 @@ You can generate an ECDSA key pair using the Ronin CLI or the Ronin Wallet app o
 
 #### Prerequisites
 
-Go (version 1.17 or later). Follow the
+Go (version 1.20 or later). Follow the
 [installation instructions](https://go.dev/doc/install)
 on the official website.
 

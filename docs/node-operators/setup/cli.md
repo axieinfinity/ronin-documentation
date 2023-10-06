@@ -12,7 +12,7 @@ This guide demonstrates how to build a Ronin CLI (command-line tool) and compile
 
 To build the Ronin CLI, you need to install the following dependencies:
 
-* Golang 1.17 or later (follow the instructions at [https://go.dev/doc/install](https://go.dev/doc/install))
+* Golang 1.20 or later (follow the instructions at [https://go.dev/doc/install](https://go.dev/doc/install))
 * C compiler
 
 ## 1. Build locally
