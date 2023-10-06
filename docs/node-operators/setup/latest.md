@@ -15,15 +15,15 @@ Every Ronin node release is published on
 
 To find the Docker image for each mainnet release, visit the following:
 
-- [GitHub Container Registry](https://github.com/axieinfinity/ronin/pkgs/container/ronin)
+* [GitHub Container Registry](https://github.com/axieinfinity/ronin/pkgs/container/ronin)
 
 To download the latest image for your node, follow these steps:
 
 1. In the `.env` file, set `NODE_IMAGE` to the following:
 
-   ```
-   ghcr.io/axieinfinity/ronin:v2.6.2-800ec03
-   ```
+    ```
+    ghcr.io/axieinfinity/ronin:v2.6.2-800ec03
+    ```
 
 2. Save the changes.
 3. Run `docker-compose up -d`.
@@ -37,9 +37,9 @@ To download the latest image for your node, follow these steps:
 
 1. In the `.env` file, set `NODE_IMAGE` to the following:
 
-   ```
-   ghcr.io/axieinfinity/ronin:v2.6.0-83c8375
-   ```
+    ```
+    ghcr.io/axieinfinity/ronin:v2.6.2-800ec03
+    ```
 
 2. Save the changes.
 3. Run `docker-compose up -d`.
@@ -55,9 +55,9 @@ To download the latest image, follow these steps:
 
 1. In the `.env` file, set `BRIDGE_IMAGE` to the following:
 
-   ```
-   ghcr.io/axieinfinity/bridge:v0.2.5-e5a7f57
-   ```
+    ```
+    ghcr.io/axieinfinity/bridge:v0.2.5-e5a7f57
+    ```
 
 2. Save the changes.
 3. Run `docker-compose up -d`.
