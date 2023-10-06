@@ -343,21 +343,8 @@ const sidebars = {
             'rns/register/protected',
           ],
         },
-        {
-          type: 'category',
-          label: 'Manage an RNS domain',
-          link: {
-            type: 'generated-index',
-            description: 'What to do after you registered an RNS domain.',
-            slug: '/rns/manage',
-          },
-          items: [
-            'rns/manage/set-primary',
-            'rns/manage/extend',
-            'rns/manage/transfer',
-            'rns/manage/trade',
-          ],
-        },
+        'rns/manage',
+        'rns/trade',
         'rns/reference/faq',
         'rns/reference/glossary',
       ],

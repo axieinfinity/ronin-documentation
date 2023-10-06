@@ -16,6 +16,9 @@ How much to bid is at your discretion, but there's a minimum markup of 10%, whic
 
 Auctioned names are marked as **Auctioning** in the RNS app.
 
++ Tax is 15% of the domain price.
++ Renewal fee 
+
 ## Before you start
 
 * Have your Ronin Wallet ready.
@@ -29,7 +32,7 @@ Auctioned names are marked as **Auctioning** in the RNS app.
 4. Click **Place a bid** to participate in the auction.
 5. Enter your bid amount and click **Place a bid** to make payment.
 
-Your bid is now placed and locked until the auction ends. If you win the auction, your bid is transferred to the RNS registrar and you become the owner of the domain name.
+Your bid is now placed and locked until the auction ends. If you win the auction, your bid is transferred to the RNS registrar and you become the owner of the domain name for 1 year. You can [extend the registration](./../manage.md#extend-registration) for another 2 years for the maximum of 3 years at a time.
 
 ## View your biddings
 

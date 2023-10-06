@@ -17,11 +17,12 @@ This guide shows how to register a regular RNS domain. Regular RNS domains are a
 
 1. Open the RNS app.
 2. Search for the domain you want to register.
-3. Click the domain name to open its info page. The page displays the domain price and yearly renewal fee, as well as past activities with this domain name.
+3. Click the domain name. You can see the domain price and yearly renewal fee, as well as past activities with this domain name.
 4. Click **Register now** to begin registration. The registrar requires two transactions to register a domain name: request and registration.
 5. At the request transaction, select the number of years you want to register this domain for. The price changes based on how many years you selected. The minimum duration for the registration is 1 year.
-6. Click **Request**, which prompts the request transaction. It takes a few moments to confirm your request. As soon as it's confirmed, your domain is ready to be registered.
-7. Click **Confirm** and pay the fee to register your domain.
+6. Enable **Set as primary name** to link this domain to your Ronin address. For more information, see [Set as primary name](./../manage.md#set-primary-rns-name).
+7. Click **Request**, which prompts the request transaction. It takes a few moments to confirm your request. As soon as it's confirmed, your domain is ready to be registered.
+8. Click **Confirm** and pay the fee to register your domain.
 
 After the registration transaction is complete, your RNS domain name is ready to use.
 
