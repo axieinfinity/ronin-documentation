@@ -106,24 +106,7 @@ const sidebars = {
         // Become a delegator
         'delegators/onboarding/become-delegator',
         // Stake
-        {
-          type: 'category',
-          label: 'Stake',
-          link: {
-            type: 'generated-index',
-            title: 'Stake',
-            description: 'Manage your RON stake.',
-            slug: '/delegators/stake',
-          },
-          items: [
-            // Stake more
-            'delegators/stake/increase',
-            // Move stake
-            'delegators/stake/move',
-            // Withdraw stake
-            'delegators/stake/withdraw',
-          ],
-        },
+        'delegators/stake/stake',
         // Claim rewards
         {
           type: 'doc',

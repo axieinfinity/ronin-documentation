@@ -14,7 +14,7 @@ affected in any way.
 No, you would need to [claim](./rewards/claim.mdx) RON rewards with your Ronin Wallet.
 
 ### 3. Can I unstake whenever I want without any penalties? {#3}
-Yes, you can [unstake](./stake/withdraw.mdx) from a validator at any time without penalties as long as three days have passed since you last staked in to this validator.
+Yes, you can [unstake](./stake/stake.mdx#withdraw-stake) from a validator at any time without penalties as long as three days have passed since you last staked in to this validator.
 
 ### 4. If I delegate to a validator today, would I receive the reward by the end of day? {#4}
 Each day's validator is finalized at 00:00 UTC. If you delegate today, your stake will take effect at 00:00 UTC the next day. This is the time you start earning rewards.
