@@ -331,7 +331,7 @@ const sidebars = {
         'rns/concepts/names-pricing',
         {
           type: 'category',
-          label: 'Register an RNS domain',
+          label: 'Register',
           link: {
             type: 'generated-index',
             description: 'Guides to register your RNS domain name.',
@@ -346,7 +346,6 @@ const sidebars = {
         'rns/manage',
         'rns/trade',
         'rns/reference/faq',
-        'rns/reference/glossary',
       ],
     },
     // Community

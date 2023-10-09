@@ -1,22 +1,31 @@
 ---
 description: Register a regular RNS domain name.
 slug: regular
-title: Register a regular name
+title: Register a regular RNS name
+toc_min_heading_level: 2
+toc_max_heading_level: 2
 ---
 
 ## Overview
 
-This guide shows how to register a regular RNS domain. Regular RNS domains are available on a first-come, first-serve basis with a yearly renewal fee. Such names have the status **Available** in the RNS app.
+This guide shows how to register a new `.ron` domain name for your Ronin address.
+
+In Ronin Name Service (RNS), regular names have $0 domain price and are available at a first-come, first-serve basis with a yearly renewal fee. Regular names are labeled as **Available** in the RNS app.
 
 ## Before you start
 
-* Have your Ronin Wallet ready.
-* Learn about pricing for regular domains.
+### Ronin Wallet
 
-## Register a regular name
+Before registering a regular domain, make sure your Ronin Wallet is set up.
+
+### Naming guidelines
+
+Your RNS name must be over three characters long and contain only alphanumeric characters. That means letters from A to Z and numbers from 0 to 9.
+
+## Register a regular domain
 
 1. Open the RNS app.
-2. Search for the domain you want to register.
+2. Search for the domain you want to register. If it's already registered by someone else, try [making an offer](./../trade.md#make-an-offer) to the owner.
 3. Click the domain name. You can see the domain price and yearly renewal fee, as well as past activities with this domain name.
 4. Click **Register now** to begin registration. The registrar requires two transactions to register a domain name: request and registration.
 5. At the request transaction, select the number of years you want to register this domain for. The price changes based on how many years you selected. The minimum duration for the registration is 1 year.
@@ -28,8 +37,8 @@ After the registration transaction is complete, your RNS domain name is ready to
 
 ## View your domains
 
-Go to **My account > My domains** to view all your domain names.
+Go to **My account > My domains** to view and manage your domain names.
 
 ## See also
 
-* [Domain names and pricing](./../concepts/names-pricing.md)
+* [Manage](./../manage.md)

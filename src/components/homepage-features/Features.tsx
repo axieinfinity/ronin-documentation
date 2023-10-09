@@ -5,6 +5,7 @@ import { Card } from './Card'
 import CoinIcon from './coins.svg'
 import LaptopCodeIcon from './laptop-code.svg'
 import ListViewIcon from './list-view.svg'
+import RnsShieldIcon from './rns.svg'
 import SignDirectionIcon from './signs-direction.svg'
 import UserShieldIcon from './user-shield.svg'
 
@@ -47,7 +48,7 @@ const featureList = [
   },
   {
     title: 'RNS',
-    Icon: LaptopCodeIcon,
+    Icon: RnsShieldIcon,
     link: {
       href: '/docs/rns',
       title: 'RNS',
