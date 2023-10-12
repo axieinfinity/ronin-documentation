@@ -15,6 +15,7 @@ This guide demonstrates how to run a bridge operator node on the mainnet using D
 
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
+* [Zstandard](https://github.com/facebook/zstd)
 
 ### Ethereum endpoint
 
@@ -140,7 +141,7 @@ The size of your Ronin node will also grow over time.
   ```
 
   This compose file defines three services:
-  
+
      * `node`, which pulls a Ronin node image from the GitHub Container Registry.
      * `bridge`, which pulls a bridge image.
      * `db`, which builds a Postgres database for the bridge.
@@ -159,7 +160,7 @@ The size of your Ronin node will also grow over time.
 
   # The name of your node that you want displayed on https://stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
-  
+
   # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
   NODE_IMAGE=NODE_IMAGE
 
@@ -168,16 +169,16 @@ The size of your Ronin node will also grow over time.
 
   # Your bridge operator private key without the 0x prefix
   BRIDGE_OPERATOR_PRIVATE_KEY=BRIDGE_OPERATOR_PRIVATE_KEY
-  
+
   # If you're a governor, uncomment this line and replace with your bridge voter key, without the 0x prefix
   # BRIDGE_VOTER_PRIVATE_KEY=BRIDGE_VOTER_PRIVATE_KEY
 
   # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
-  
+
   DB_NAME=bridge
   DB_USERNAME=postgres
-  
+
   # The Postgres database password
   DB_PASSWORD=DB_PASSWORD
 
@@ -203,11 +204,11 @@ The size of your Ronin node will also grow over time.
   RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
 
-6. (Optional) Download the snapshot:
+6. (Optional) Download the snapshot from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot)
 
   ```
   cd ~/ronin-bridge/chaindata/data/ronin/
-  curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
+  wget -q -O - <snapshot URL> | tar -I zstd -xvf -
   mv <uncompressed data> chaindata
   ```
 

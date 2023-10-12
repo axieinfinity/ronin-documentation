@@ -101,7 +101,7 @@ The size of your Ronin node will also grow over time.
   ```
   # The name of your node that you want displayed on https://stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
-  
+
   # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
   NODE_IMAGE=NODE_IMAGE
 
@@ -112,12 +112,12 @@ The size of your Ronin node will also grow over time.
 
   NETWORK_ID=2020
   GASPRICE=20000000000
-  
+
   CONFIG_PATH=config.mainnet.json
   VERBOSITY=3
 
   CHAIN_STATS_WS_SERVER=stats.roninchain.com
-  CHAIN_STATS_WS_SECRET=xQj2MZPaN6  
+  CHAIN_STATS_WS_SECRET=xQj2MZPaN6
 
   RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
