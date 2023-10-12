@@ -1,6 +1,7 @@
 ---
 description: Slashing rules for validators and bridge operators.
 slug: overview
+title: Slashing rules
 ---
 
 import doubleSign from './assets/double-sign.png';
@@ -11,9 +12,8 @@ import bridSlashTierOne from './assets/bridge-tier-1.png';
 import bridSlashTierTwo from './assets/bridge-tier-2.png';
 import relayingSlash from './assets/relaying-slash.png';
 
-# Slashing rules
-
 ## Overview
+
 Slashing is a mechanism that governs the behavior of validators on
 the Ronin blockchain.
 
@@ -36,11 +36,13 @@ from midnight to midnight UTC.
 :::
 
 ## Double-sign validator
-It's a serious error when a validator signs more than one block with the same height.
+
+It's a serious violation when a validator signs more than one block with the same height.
 Anyone can submit a slash request with the double-sign evidence, which
 should contain the two block headers with the same height, sealed by
 the same validator. Upon verifying the evidence, the offending
 validator is penalized as follows:
+
 * The validator is jailed for $2^{63}-1$ blocks and can't be a
 validator in the future.
 * The validator is slashed the minimum staking amount of
@@ -52,6 +54,7 @@ The validator's status is set to **In jail**.
 <img src={doubleSign} width={1224} />
 
 ## Unavailability validator
+
 The performance of Ronin relies on the ability of everyone in the
 validator set to produce blocks on time when it's their turn.
 If a validator misses their turn, it affects the performance of
@@ -63,6 +66,7 @@ validator. If the number of missed blocks exceeds a predefined threshold,
 the validator gets slashed.
 
 ### Tier 1 validator slashing
+
 If a validator misses more than 100 blocks in a day, the validator doesn't earn
 commission and the staking reward on that day.
 The validator's status is set to **Punished**.
@@ -70,6 +74,7 @@ The validator's status is set to **Punished**.
 <img src={valSlashTierOne} width={1224} />
 
 ### Tier 2 validator slashing
+
 If a validator misses more than 500 blocks in a day, the following penalties apply:
 * The validator doesn't earn commission and the staking reward on that day.
 * The validator is slashed 1,000 of self-delegated RON.
@@ -82,6 +87,7 @@ has sufficient credit score, they can [bail out](bailout.mdx) of jail.
 <img src={valSlashTierTwo} width={1224} />
 
 ### Tier 3 validator slashing
+
 After getting bailed out, if the validator
 misses 100 more blocks on the same day, the following penalties apply:
 * The reward after bailout is removed.
@@ -93,12 +99,29 @@ the validator can't bail out.
 
 <img src={valSlashTierThree} width={1224} />
 
+## Fast finality slashing
+
+In the [fast finality mechanism](https://github.com/axieinfinity/REPs/blob/main/REP-0003.md#rep-0003-optimistic-fast-finality),
+it's a serious violation when a validator publishes two distinct votes
+for the same height. The evidence can be submitted by anyone who notices
+the malicious behavior. Upon verifying the evidence, the offending
+validator is penalized as follows:
+
+* The validator is jailed for $2^{63}-1$ blocks and can't be a
+validator in the future.
+* The validator is slashed for 250,000 of
+self-delegated RON.
+
+The validator's status is set to **In Jail**.
+
 ## Unavailability bridge operator
+
 The system slashes bridge operators for not providing enough signatures.
 This is checked against a smart contract that records the
 number of the bridge operators' votes.
 
 ### Tier 1 operator slashing
+
 If a bridge operator misses more than 10% votes in a day,
 the operator doesn't earn the bridge reward on that day.
 The operator's status is set to **Punished**.
@@ -106,6 +129,7 @@ The operator's status is set to **Punished**.
 <img src={bridSlashTierOne} width={1224} />
 
 ### Tier 2 operator slashing
+
 If a bridge operator misses more than 30% votes in a day, the operator doesn't
 earn any rewards (commission, staking reward, bridge reward) on that day.
 The operator's status is set to **Punished**.
@@ -113,9 +137,11 @@ The operator's status is set to **Punished**.
 <img src={bridSlashTierTwo} width={1224} />
 
 ## Relaying slash
+
 If a Governing Validator doesn’t sync the set of bridge
 operators to the Ethereum chain for three consecutive days,
 the following penalties apply:
+
 * The validator is slashed 10,000 of self-delegated RON.
 * The validator doesn't earn commission on the day of slashing.
 
@@ -124,6 +150,7 @@ The validator's status is set to **Punished**.
 <img src={relayingSlash} width={1224} />
 
 ## Multiple slashes
+
 Validators might experience multiple concurrent slashes if they have issues
 with both their validator node and bridge operator node, and the relaying
 responsibilities of the Governing Validator.

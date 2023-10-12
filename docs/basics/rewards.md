@@ -1,8 +1,9 @@
 ---
 description: Rewards earned by validators and delegators.
+title: Rewards
 ---
 
-# Rewards
+## Overview
 
 On Ronin, token holders stake their RON to participate in validator selection and in exchange, token holders earn rewards for their service.
 

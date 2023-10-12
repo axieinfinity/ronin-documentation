@@ -56,7 +56,7 @@ To download the latest image, follow these steps:
 1. In the `.env` file, set `BRIDGE_IMAGE` to the following:
 
     ```
-    ghcr.io/axieinfinity/bridge:v0.2.5-e5a7f57
+    ghcr.io/axieinfinity/bridge:v0.2.6-1daa149
     ```
 
 2. Save the changes.
