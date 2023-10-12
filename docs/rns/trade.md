@@ -6,7 +6,7 @@ title: Trade
 
 ## Overview
 
-This guide demonstrates how to trade RNS names with other users on Mavis Market.
+This guide demonstrates how to trade RNS names on Mavis Market. You can list your RNS name for sale to other users and make offers to buy names from other users.
 
 ## Sell
 
