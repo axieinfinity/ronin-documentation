@@ -15,6 +15,7 @@ This guide demonstrates how to run a mainnet validator node and a bridge operato
 
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose plugin](https://docs.docker.com/compose/install/)
+* [Zstandard](https://github.com/facebook/zstd)
 
 ### Ethereum endpoint
 
@@ -163,22 +164,22 @@ The size of your node will also grow over time.
 
   # The name of your node that you want displayed on https://stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
-  
+
   # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
   NODE_IMAGE=NODE_IMAGE
-  
+
   # The latest version of the bridge's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
   BRIDGE_IMAGE=BRIDGE_IMAGE
 
   # Your bridge operator private key without the 0x prefix
   BRIDGE_OPERATOR_PRIVATE_KEY=BRIDGE_OPERATOR_PRIVATE_KEY
-  
+
   # If you're a governor, uncomment this line and replace with your bridge voter key, without the 0x prefix
   # BRIDGE_VOTER_PRIVATE_KEY=BRIDGE_VOTER_PRIVATE_KEY
-  
+
   # Your validator private key without the 0x prefix
   VALIDATOR_PRIVATE_KEY=VALIDATOR_PRIVATE_KEY
-  
+
   # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
 
@@ -203,7 +204,7 @@ The size of your node will also grow over time.
 
   DB_NAME=bridge
   DB_USERNAME=postgres
-  
+
   # The Postgres database password
   DB_PASSWORD=DB_PASSWORD
 
@@ -232,11 +233,11 @@ The size of your node will also grow over time.
   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
   ```
 
-6. (Optional) Download the snapshot:
+6. (Optional) Download the snapshot from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot)
 
   ```
   cd ~/ronin/chaindata/data/ronin/
-  curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
+  wget -q -O - <snapshot URL> | tar -I zstd -xvf -
   mv <uncompressed data> chaindata
   ```
 
@@ -245,7 +246,7 @@ The size of your node will also grow over time.
   ```
   cd ~/ronin && docker-compose up -d
   ```
-  
+
   This command pulls a Ronin node image, a bridge image, a Postgres database, and starts the services you defined.
 
 8. After a few minutes, check the status of your node on the [Ronin Network Status](https://stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.

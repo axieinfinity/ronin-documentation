@@ -34,7 +34,7 @@ These requirements are rough guidelines, and each node operator
 should monitor their node to ensure good performance for the intended task.
 The size of your node will also grow over time.
 
-## Install the node 
+## Install the node
 
 1. Set up directories:
 
@@ -113,13 +113,13 @@ The size of your node will also grow over time.
   ```
   # The name of your node that you want displayed on https://stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
-  
+
   # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
   NODE_IMAGE=NODE_IMAGE
 
   # Your validator private key without the 0x prefix
   VALIDATOR_PRIVATE_KEY=VALIDATOR_PRIVATE_KEY
-  
+
   # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
 
@@ -165,11 +165,11 @@ The size of your node will also grow over time.
      - Saigon testnet: `enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com`
      - Mainnet: `enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com`
 
-6. (Optional) Download the snapshot:
+6. (Optional) Download the snapshot from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot)
 
   ```
   cd ~/ronin/chaindata/data/ronin/
-  curl <chaindata latest check here https://github.com/axieinfinity/ronin-snapshot> -o chaindata.tar && tar -xvf chaindata.tar
+  wget -q -O - <snapshot URL> | tar -I zstd -xvf -
   mv <uncompressed data> chaindata
   ```
 
