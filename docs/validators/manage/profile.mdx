@@ -13,20 +13,21 @@ your account > **My profile**.
 <img src={profile} width={280} />
 
 If you’re a Standard Validator or a Validator Candidate, 
-your profile has a set of three different addresses:
+your profile has a set of the following addresses and details:
+
 * **Admin address.** The address used to manage your profile, 
 staking activities, and claiming rewards.
 * **Validator address.** The address used for producing blocks. 
 This address is displayed to delegators and also called “consensus address”.
 * **Bridge operator address.** The address used for operating
 [Ronin Bridge](https://bridge.roninchain.com/).
+* **Bridge governor address.** The address used to vote on changes to the bridge, such as pausing the bridge or adding bridge operators.
+* **Finality vote key.** This is the [cryptographic key](./../manage/fast-finality.md) used to vote
+for blocks in the fast finality mechanism.
 
-If you’re a Governing Validator, your profile has an additional 
-two addresses:
-* **Chain governor address.** The address used to 
+If you’re a Governing Validator, your profile has an additional address: 
+**Chain governor address.** This address is used to 
 [create proposals](./../governance/create.mdx) and
-[vote](./../governance/vote.mdx) on changes.
-* **Bridge voter address.** The address used for syncing
-the set of bridge operators.
+[vote](./../governance/vote.mdx) on changes to the validator set.
 
 <img src={governingAddresses} width={416} />

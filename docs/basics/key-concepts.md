@@ -1,6 +1,6 @@
 ---
 description: Key concepts and some examples to help you speak blockchain and Ronin. 
-title: Key concepts
+title: Glossary
 ---
 
 ## A
@@ -106,6 +106,12 @@ While this varies depending on the blockchain protocol, an epoch generally refer
 ### Ethereum
 
 Ethereum launched in 2015 as a decentralized, blockchain-based global supercomputer to serve as the foundation for an ecosystem of interoperable, decentralized applications (dApps) powered by token economies and smart contracts. Assets and applications designed on Ethereum are built with self-executing smart contracts that remove the need for an intermediary. The network is fueled by its native cryptocurrency ether (ETH), which is used to pay network transaction fees.
+
+## F
+
+### Fast finality
+
+Fast finality refers to the speed at which the finality of a transaction can be determined. In the context of a blockchain, finality refers to the point at which a transaction is considered irrevocable. Once a transaction has achieved finality, it cannot be reversed or altered. On Ronin, fast finality is introduced in [REP-0003: Optimistic Fast Finality](https://github.com/axieinfinity/REPs/blob/main/REP-0003.md#rep-0003-optimistic-fast-finality).
 
 ## G
 

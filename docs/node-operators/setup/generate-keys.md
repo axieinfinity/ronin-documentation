@@ -10,7 +10,7 @@ Each validator node requires private keys for signing blocks and consensus messa
 
 The required private keys include a BLS key and an ECDSA key. The keys are named after digital signature schemes: Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh–Lynn–Shacham (BLS), respectively.
 
-- The BLS key is used for producing finality votes. Validators who produce finality vote receive a reward. If a validator fails to produce a finality vote, no slashing penalty applies.
+- The BLS key is used for producing finality votes. Validators who produce finality votes receive a reward.
 - The ECDSA key is used for signing blocks.
 
 ## Generate a BLS key
@@ -153,4 +153,5 @@ ECDSA keys can also be generated using [Ronin Wallet](https://wallet.roninchain.
 
 ## See also
 
+- [REP-0003: Optimistic Fast Finality](https://github.com/axieinfinity/REPs/blob/main/REP-0003.md#rewards)
 - [Build a Ronin CLI](./cli.md)

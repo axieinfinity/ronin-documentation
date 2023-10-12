@@ -134,22 +134,7 @@ const sidebars = {
         // Become a validator
         'validators/onboarding/become-validator',
         // Stake
-        {
-          type: 'category',
-          label: 'Stake',
-          link: {
-            type: 'generated-index',
-            title: 'Stake',
-            description: 'Manage your RON stake.',
-            slug: '/validators/stake',
-          },
-          items: [
-            // Increase stake
-            'validators/stake/increase',
-            // Withdraw stake
-            'validators/stake/withdraw',
-          ],
-        },
+        'validators/stake/stake',
         // Claim rewards
         'validators/rewards/claim',
         // Manage your account
@@ -165,6 +150,8 @@ const sidebars = {
           items: [
             // View profile
             'validators/manage/profile',
+            // Update finality vote key
+            'validators/manage/fast-finality',
             // Change commission rate
             'validators/manage/commission',
             // Schedule maintenance
