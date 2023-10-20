@@ -1,6 +1,6 @@
 ---
 description: Buy a high-demand RNS domain name at auction.
-slug: auctioned
+slug: /rns/register/auctioned
 title: Buy an RNS name at auction
 toc_min_heading_level: 2
 toc_max_heading_level: 2

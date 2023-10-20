@@ -21,7 +21,7 @@ To set a primary name for the first time, take these steps:
 3. Sign the transaction.
 
 :::info
-You can also set a domain name as primary during [registration](./register/regular.md).
+You can also set a domain name as primary during [registration](./guides/register/regular.md).
 :::
 
 To set a primary name the next time, take these steps:

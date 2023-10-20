@@ -338,9 +338,9 @@ const sidebars = {
             slug: '/rns/register',
           },
           items: [
-            'rns/register/regular',
-            'rns/register/auctioned',
-            'rns/register/protected',
+            'rns/guides/register/regular',
+            'rns/guides/register/auctioned',
+            'rns/guides/register/protected',
           ],
         },
         'rns/manage',

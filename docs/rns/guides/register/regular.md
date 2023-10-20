@@ -1,6 +1,6 @@
 ---
 description: Register a regular RNS domain name.
-slug: regular
+slug: /rns/register/regular
 title: Register a regular RNS name
 toc_min_heading_level: 2
 toc_max_heading_level: 2
