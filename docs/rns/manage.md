@@ -1,7 +1,7 @@
 ---
 description: Manage the RNS names that you own.
 slug: manage
-title: Manage
+title: Manage RNS names
 ---
 
 ## Overview
@@ -60,10 +60,6 @@ To quickly extend your primary name's registration, go to your account and click
    * Renewal fee times the requested number of years.
    * 15% tax on the current domain price. **Note:** If the domain you're extending is about to expire and there is a valid offer to buy the domain from another user, then 15% tax is derived from the new price.
 6. Sign the transaction to make payment.
-
-## View your biddings
-
-If you placed a bid on an RNS name at placed bids to Go to **My account > My biddings** to view all your biddings and their status.
 
 ## View your favorite domains
 

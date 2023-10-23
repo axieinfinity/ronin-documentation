@@ -12,23 +12,40 @@ This guide shows how to buy a high-demand `.ron` domain name at an auction.
 
 In Ronin Name Service (RNS), auctioned names are unregistered names that may receive large amounts of interest, such as `buy.ron` and `insurance.ron`. Sky Mavis distributes such names at domain auctions.
 
-To participate in a domain auction, participants place bids. If someone outbids you during the auction, your bid is immediately refunded and you may place another bid. When the auction ends, the bidder with the highest bid wins. The winner gets the domain and is exempt from renewal fees for the first year. After winning the name, the owner of the name can extend its registration.
+Here's how a domain auction works:
 
-In the RNS app, auctioned names have the following labels:
+* To participate in the auction, participants place bids.
+* If someone outbids you during the auction, your bid is immediately refunded and you may place another bid.
+* When the auction ends, the bidder with the highest bid wins. The winning bid is the domain price.
+* The winner gets the domain and is exempt from renewal fees for the first year.
+* After winning the name, the owner of the name can extend its registration.
+
+### Statuses
+
+In the RNS app, auctioned names have the following statuses:
 
 * **Awaiting auction:** Domain name is in the auctioned list but no auction is scheduled in the near future.
-* **Auction coming soon:** Domain name doesn't have a starting price and auction date yet, but the auction is announced.
-* **Auction:** Domain name has a starting price and goes up for auction on the specified date.
-* **Auctioning:** Domain name is open for bidding, which can last up to 7 days. If no one places a bid during this period, the domain's status becomes **Awaiting auction** until another auction opens.
+* **Upcoming auction:** Domain name doesn't have a starting price yet but the auction's date is announced.
+* **Auctioning:** An action is open and the domain name is open for bidding. If no one places a bid during the auction, the domain's status becomes **Awaiting auction** until another auction opens.
+
+### Renewal fee
+
+Following is the renewal fee range for auctioned RNS names.
+
+| Name length | Renewal fee |
+|---|---|
+| 5+ characters | $5/year |
+| 4 characters | $100/year |
+| 3 characters | $300/year |
 
 ## Before you start
 
-Before registering an auctioned domain, make sure your Ronin Wallet is set up.
+Before registering a regular domain, install [Ronin Wallet](https://wallet.roninchain.com) and create an account.
 
 ## Register an auctioned domain
 
 1. Open the RNS app.
-2. Search for the domain you want to register.
+2. Browse the available collections on the **Collections** page.
 3. Click the domain name to open its info page. The page displays the starting price of the domain as well as the current highest bid with the history of past bids.
 4. Click **Place a bid** to participate in the auction.
 :::info Minimum bid
@@ -36,12 +53,12 @@ How much to bid is at your discretion, but there's a minimum markup of 10%, whic
 :::
 5. Enter your bid amount and click **Place a bid** to make payment.
 
-Your bid is now placed and locked until the auction ends. If you win the auction, your bid is transferred to the RNS registrar and you become the owner of the domain name for 1 year. You can [extend the registration](./../manage.md#extend-your-registration) for another 2 years for the maximum of 3 years at a time.
+Your bid is now placed and locked until the auction ends. If you win the auction, your bid is transferred to the RNS registrar and you become the owner of the domain name for 1 year. You can [extend the registration](./../../manage.md#extend-your-registration) for another 2 years for the maximum of 3 years at a time.
 
-## View your biddings
+## Track your biddings
 
-Go to **My account > My biddings** to view all your biddings and their status.
+If you placed a bid on an RNS name at placed bids to Go to **My account > My biddings** to view all your biddings and their status. If the bid is active, then you're the leading bidder. If you're outbid, you lose the auction and the bid is refunded.
 
 ## See also
 
-* [Manage your RNS name](./../manage.md)
+* [Manage RNS names](./../../manage.md)

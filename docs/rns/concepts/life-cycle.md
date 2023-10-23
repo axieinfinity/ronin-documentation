@@ -1,7 +1,7 @@
 ---
 description: Learn about the life cycle of a domain in RNS.
 slug: /rns/life-cycle
-title: Domain life cycle
+title: About RNS domain life cycle
 ---
 
 ## Overview

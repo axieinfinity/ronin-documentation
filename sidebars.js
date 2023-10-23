@@ -327,25 +327,31 @@ const sidebars = {
         id: 'rns/overview', 
       },
       items: [
-        'rns/concepts/life-cycle',
-        'rns/concepts/names-pricing',
         {
           type: 'category',
-          label: 'Register',
+          label: 'Register an RNS name',
           link: {
             type: 'generated-index',
-            description: 'Guides to register your RNS domain name.',
+            description: 'Guides to register different categories of RNS names.',
             slug: '/rns/register',
           },
           items: [
+            // Register a regular RNS name
             'rns/guides/register/regular',
+            // Buy an RNS name at auction
             'rns/guides/register/auctioned',
+            // Register a protected RNS name
             'rns/guides/register/protected',
           ],
         },
+        // Manage RNS names
         'rns/manage',
+        // Trade RNS names
         'rns/trade',
-        'rns/reference/faq',
+        // About RNS domain life cycle
+        'rns/concepts/life-cycle',
+        // About RNS names and pricing
+        'rns/concepts/names-and-pricing',
       ],
     },
     // Community

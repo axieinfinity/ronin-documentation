@@ -1,7 +1,7 @@
 ---
 description: Buy or sell RNS names on Mavis Market.
 slug: trade
-title: Trade
+title: Trade RNS names
 ---
 
 ## Overview

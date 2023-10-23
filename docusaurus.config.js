@@ -76,6 +76,20 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        // Global tags
+        {name: 'keywords', content: 'web3, dapp, ronin, axie, axs, ron'},
+
+        // Facebook meta tags
+        {name: 'og:url', content: 'https://docs.roninchain.com'},
+        {name: 'og:type', content: 'website'},
+        // {name: 'og:image', content: '/img/thumbnail.png'},
+        // Twitter meta tags
+        {name: 'twitter:card', content: 'summary_large_image'},
+        {name: 'twitter:domain', content: 'docs.roninchain.com'},
+        {name: 'twitter:url', content: 'https://docs.roninchain.com'},
+        // {name: 'twitter:image', content: '/img/thumbnail.png'},
+      ],
       algolia: {
         appId: 'RXU5ZAVMCJ',
         apiKey: '46141953dde60ffc0242ca8e0252dbe8',
