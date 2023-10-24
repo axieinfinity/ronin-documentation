@@ -29,19 +29,21 @@ Before registering a regular domain, install [Ronin Wallet](https://wallet.ronin
 This section explains how to register your protected domain name in the RNS app.
 
 1. Open the RNS app and connect the Ronin Wallet to which your domain name is mapped.
-2. Search for your reserved domain name.
-3. Click **Confirm** to begin registration.
-4. Select the number of years you want to register the domain for. The renewal fee changes based on how many years you selected. The minimum duration for the registration is 1 year. Notice that the name is set as primary by default, which means that it's linked to your Ronin address.
+![search](../../assets/protected/search.png)
+1. Search for your protected domain name, and then select it to open the domain info page.
+![choose](../../assets/protected/choose.png)
+1. The info page displays the renewal fee, domain tier, as well as other details. Click **Register now** to begin. The RNS registrar requires one transaction to register a protected name: a registration transaction.
+![register](../../assets/protected/register.png)
+1. Select the number of years you want to register the domain for (1). The renewal fee changes based on how many years you selected. The minimum duration for the registration is 1 year. Notice that the name is set as primary by default (2), which means that it's linked to your Ronin address.
 :::tip
 We recommend registering your RNS name for multiple years so that you don't lose the domain name if you forget to renew or if you run into any potential payment issues.
 :::
-5. Click **Confirm** and pay the renewal fee to register the domain.
+1. Click **Confirm** and pay the renewal fee to register the domain.
+![confirm](../../assets/protected/confirm.png)
+1. After the registration transaction is complete, your RNS domain name is successfully registered.
+![success](../../assets/protected/success.png)
 
-After the registration is complete, your RNS domain name is ready for use across the entire Ronin ecosystem.
-
-## View your domains
-
-Go to **My account > My domains** to view your domain names.
+You can now use this RNS name across the entire Ronin ecosystem. To view and manage all your RNS names, click **Go to My Domains**.
 
 ## See also
 

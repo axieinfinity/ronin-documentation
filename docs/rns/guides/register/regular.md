@@ -27,7 +27,7 @@ Following is the renewal fee range for regular RNS names.
 Following are the guidelines to be observed when choosing an RNS name:
 
 * Domains can contain the English-language letters a-z, and the digits 0-9.
-* Hyphens can also be used but not at the beginning and at the end of a domain name. Two hyphens together are not permitted either.
+* Hyphens can also be used but not at the beginning and at the end of a domain name. Two hyphens together aren't permitted either.
 * The minimum length is 3 characters.
 * Domain names are case-sensitive and can only contain lowercase letters.
 * Domain names cannot be related to Sky Mavis products (such as `axieinfinity.ron`) and trademarks (unless you pass trademark verification).
@@ -39,20 +39,29 @@ Before registering a regular domain, install [Ronin Wallet](https://wallet.ronin
 ## Register a regular domain
 
 1. Open the RNS app.
-2. Search for the domain you want to register. If it's already registered by someone else, try [making an offer](./../trade.md#make-an-offer) to the owner.
-3. Click the domain name to open its info dialog. The dialog displays the renewal fee.
-4. Select the number of years you want to register the domain for. The renewal fee changes based on how many years you selected. The minimum duration for the registration is 1 year. Notice that the name is set as primary by default, which means that it's linked to your Ronin address.
+![search](../../assets/regular/search.png)
+1. Search for the domain you want to register, and then select it to open the domain info page.
+![choose](../../assets/regular/choose.png)
+1. The info page displays the renewal fee, domain tier, as well as other details. Click **Register now** to begin. The RNS registrar requires two transactions to register a regular name: request and registration.
+![domain-info](../../assets/regular/domain-info.png)
+1. At the request transaction, select the number of years you want to register the domain for (1).
 :::tip
 We recommend registering your RNS name for multiple years so that you don't lose the domain name if you forget to renew or if you run into any potential payment issues.
 :::
-5. Click **Request** and wait for a few seconds to confirm your request. As soon as it's confirmed, your domain is ready to be registered.
-6. Click **Confirm** and pay the renewal fee to register the domain.
+The renewal fee changes based on how many years you want to register the domain for. The minimum duration for the registration is 1 year. **Note:** This name is *set as primary* by default (2), which means that it's linked to your Ronin address.
+![register](../../assets/regular/register.png)
+1. Click **Request** to prompt the request transaction.
+![request](../../assets/regular/request.png)
+   Wait for a few seconds to get your request confirmed. As soon as it's confirmed, your domain is ready to be registered.
+![wait](../../assets/regular/wait.png)
+1. Click **Confirm** to register the domain.
+![confirm](../../assets/regular/confirm.png)
+1. At the registration transaction, click **Confirm** to pay the renewal fee.
+![transact](../../assets/regular/transact.png)
+1. After the registration transaction is complete, your RNS domain name is successfully registered.
+![success](../../assets/regular/success.png)
 
-After the registration is complete, your RNS domain name is ready for use across the entire Ronin ecosystem.
-
-## View your domains
-
-Go to **My account > My domains** to view and manage your domain names.
+You can now use this RNS name across the entire Ronin ecosystem. To view and manage all your RNS names, click **Go to My Domains**.
 
 ## See also
 

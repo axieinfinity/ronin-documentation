@@ -45,15 +45,22 @@ Before registering a regular domain, install [Ronin Wallet](https://wallet.ronin
 ## Register an auctioned domain
 
 1. Open the RNS app.
-2. Browse the available collections on the **Collections** page.
-3. Click the domain name to open its info page. The page displays the starting price of the domain as well as the current highest bid with the history of past bids.
-4. Click **Place a bid** to participate in the auction.
+![search](../../assets/auctioned/search.png)
+1. Search for the domain you want to register, and then select it to open the domain info page. You can also browse the available collections on the **Collections** page.
+![choose](../../assets/auctioned/choose.png)
+1. The info page displays the starting price of the domain (1), the current highest bid (2), and the history of past bids (3).
+![domain-info](../../assets/auctioned/domain-info.png)
+1. Click **Place a bid** to participate in the auction.
 :::info Minimum bid
 How much to bid is at your discretion, but there's a minimum markup of 10%, which means 10% of the starting price if you're the first bidder or 10% of the highest bid if you're not. For example, if the starting price is 5 RON, then your bid has to be least 5 RON + 10% of 5 RON = 5.5 RON.
 :::
-5. Enter your bid amount and click **Place a bid** to make payment.
+![place-bid](../../assets/auctioned/place-bid.png)
+1. Enter your bid amount (1) and click **Place a bid** (2) to make payment.
+![confirm-bid](../../assets/auctioned/confirm-bid.png)
+1. Your bid is now placed and locked until the auction ends. If you wish to be notified about the status of your bid, click **Yes, notify me**. Make sure that notifications are enabled in Ronin Wallet on your phone.
+![success](../../assets/auctioned/success.png)
 
-Your bid is now placed and locked until the auction ends. If you win the auction, your bid is transferred to the RNS registrar and you become the owner of the domain name for 1 year. You can [extend the registration](./../../manage.md#extend-your-registration) for another 2 years for the maximum of 3 years at a time.
+If you win the auction, your bid is transferred to the RNS registrar and you become the owner of the domain name for 1 year. You can [extend the registration](./../../manage.md#extend-your-registration) for another 2 years for the maximum of 3 years at a time.
 
 ## Track your biddings
 
