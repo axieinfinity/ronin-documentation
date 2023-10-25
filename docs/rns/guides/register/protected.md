@@ -12,12 +12,12 @@ This guide shows how to register a protected `.ron` domain name.
 
 Protected names are reserved by Sky Mavis for its official partners and key community members, and aren't available to anyone else. Such names have the status **Protected** in the RNS app.
 
-A protected name offers direct support from Sky Mavis to prevent anyone from squatting or misusing your name. The renewal fee for protected names is fixed and is not affected by the market.
+Protected RNS names offer direct support from Sky Mavis to prevent anyone from squatting or misusing your name. Their renewal fees are fixed and not affected by the market.
 
-If you're our official partner or a key community member, it's likely that we already reserved your RNS name. To claim this reserved name, follow the steps in this guide.
+If you are an official partner or key community member, we may have reserved your RNS name. To claim it, follow the steps in this guide.
 
 :::caution
-The RNS name and its yearly fee is protected as long as the owner doesn't sell it or transfer it to another wallet. If they do, the name becomes a regular name, where the yearly fee is charged per the name length.
+As long as the owner does not sell or transfer their RNS name to another wallet, the name and its yearly fee are protected. If the name is sold or transferred, it is no longer protected, but the renewal fee remains unchanged.
 :::
 
 ## Before you start
@@ -43,7 +43,7 @@ We recommend registering your RNS name for multiple years so that you don't lose
 1. After the registration transaction is complete, your RNS domain name is successfully registered.
 ![success](../../assets/protected/success.png)
 
-You can now use this RNS name across the entire Ronin ecosystem. To view and manage all your RNS names, click **Go to My Domains**.
+You can now use this RNS name across the entire Ronin ecosystem. To view and manage your RNS names, click **Go to My Domains**.
 
 ## See also
 

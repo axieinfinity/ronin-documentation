@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This guide shows how to register a new `.ron` domain name for your Ronin address.
 
-In Ronin Name Service (RNS), regular names are available at a first-come, first-serve basis with a yearly renewal fee, which is based on the domain name's length. Regular names have the status **Available** in the RNS app.
+In Ronin Name Service (RNS), regular names are available on a first-come, first-served basis with a yearly renewal fee that depends on the domain name's length. Regular names have the status **Available** in the RNS app.
 
 ### Renewal fee
 
@@ -61,7 +61,7 @@ The renewal fee changes based on how many years you want to register the domain 
 1. After the registration transaction is complete, your RNS domain name is successfully registered.
 ![success](../../assets/regular/success.png)
 
-You can now use this RNS name across the entire Ronin ecosystem. To view and manage all your RNS names, click **Go to My Domains**.
+You can now use this RNS name across the entire Ronin ecosystem. To view and manage your RNS names, click **Go to My Domains**.
 
 ## See also
 

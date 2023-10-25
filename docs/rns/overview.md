@@ -21,9 +21,9 @@ By using the RNS name instead of the Ronin address, you can send funds and NFTs 
 There are four categories of domain names in RNS:
 
 * **Regular names:** Unregistered domain names, available on a first-come, first-served basis, with a yearly renewal fee.
-* **Auctioned names:** These are high-demand RNS names that may receive large amounts of interest, such as buy.ron and insurance.ron. Sky Mavis distributes such names during an auction as a means to reduce domain name squatting.
-* **Protected names:** These are RNS names that we’ve reserved for our official partners and some key community members. For example, Sky Mavis makes sure that `battlebears.ron` isn't available to anyone—except the Battle Bears team. This protects our communities from bad actors.
-* **Blacklisted names:** These are RNS names with negative connotations, sensitive themes, or deceptive potential that aren't for sale. An example of a blacklisted name would be `freeaxies.ron` because it can be used to mislead the Axie community. Sky Mavis prohibits the creation of RNS names like these to protect our communities from bad actors.
+* **Auctioned names:** High-demand RNS names that may receive large amounts of interest, such as buy.ron and insurance.ron. Sky Mavis distributes such names during an auction as a means to reduce domain name squatting.
+* **Protected names:** Names reserved for official partners and some key community members. For example, Sky Mavis makes sure that `battlebears.ron` isn't available to anyone—except the Battle Bears team. This protects our communities from bad actors.
+* **Blacklisted names:** Names with negative connotations, sensitive themes, or deceptive potential that aren't for sale. An example of a blacklisted name would be `freeaxies.ron` because it can be used to mislead the Axie community. Sky Mavis prohibits the creation of RNS names like these to protect our communities from bad actors.
 
 ## Domain pricing
 

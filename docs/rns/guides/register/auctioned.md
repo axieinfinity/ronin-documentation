@@ -10,15 +10,13 @@ toc_max_heading_level: 2
 
 This guide shows how to buy a high-demand `.ron` domain name at an auction.
 
-In Ronin Name Service (RNS), auctioned names are unregistered names that may receive large amounts of interest, such as `buy.ron` and `insurance.ron`. Sky Mavis distributes such names at domain auctions.
+Ronin Name Service (RNS) holds domain auctions for unregistered names that are likely to receive high interest, such as `buy.ron` and `insurance.ron`.
 
-Here's how a domain auction works:
+To participate in a domain auction, participants place bids. If someone outbids you during the auction, your bid is immediately refunded, and you may place another bid.
 
-* To participate in the auction, participants place bids.
-* If someone outbids you during the auction, your bid is immediately refunded and you may place another bid.
-* When the auction ends, the bidder with the highest bid wins. The winning bid is the domain price.
-* The winner gets the domain and is exempt from renewal fees for the first year.
-* After winning the name, the owner of the name can extend its registration.
+When the auction ends, the bidder with the highest bid wins. The winning bid is the price of the domain.
+
+The winner receives the domain and is exempt from renewal fees for the first year. After winning the domain, the owner can extend its registration.
 
 ### Statuses
 
