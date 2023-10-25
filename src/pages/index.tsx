@@ -7,7 +7,7 @@ import styles from './index.module.scss'
 
 const Home: React.FC = () => {
   return (
-    <Layout title={`Home`} description='Ronin documentation'>
+    <Layout title={`Home`} description='Welcome to the Ronin chain documentation.'>
       <div className={styles.background}>
         <header className={styles.heroBanner}>
           <h1 className={styles.heroBannerHeading}>Welcome to Ronin</h1>
