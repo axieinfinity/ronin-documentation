@@ -21,4 +21,3 @@ This table describes the Ronin Name Service (RNS) name categories and pricing in
 * [Register a regular RNS name](./../guides/register/regular.md)
 * [Buy an RNS name at auction](./../guides/register/auctioned.md)
 * [Register a protected RNS name](./../guides/register/protected.md)
-* [About RNS domain life cycle](life-cycle.md)

@@ -348,8 +348,6 @@ const sidebars = {
         'rns/manage',
         // Trade RNS names
         'rns/trade',
-        // About RNS domain life cycle
-        'rns/concepts/life-cycle',
         // About RNS names and pricing
         'rns/concepts/names-and-pricing',
       ],

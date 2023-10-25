@@ -8,30 +8,49 @@ title: Manage RNS names
 
 After you registered your RNS name, managing it is easy. Click your connected wallet in the top right corner to open your account, and select **My domains** to access and edit all your registered domain names.
 
-On the **My domains** tab, you can sort your registered domains by status, domain length, expiration date, and more. Select a domain to access the domain management page. From there, you can set the domain as primary and extend your domain registration.
+On the **My domains** tab, you can sort your RNS domains by status, domain length, expiration date, and more. Click **Manage** on a domain access the domain management page. From there, you can set the domain as primary and extend your domain registration.
+
+![my-domains](assets/manage/my-domains.png)
 
 ## Set primary RNS name
 
 Your Ronin address can serve as the record address for one or multiple RNS domains. You can use one of these domains as your *primary* name on the Ronin network. A primary name is the one that appears as your identity across all Ronin ecosystem dApps supporting RNS, including the Ronin Wallet. You can have only one primary name at a time, but you can change it as needed.
 
-To set a primary name for the first time, take these steps:
+### First time
+
+To set a primary RNS name for the first time, take these steps:
 
 1. Go to your account and click **Select primary name** at the top.
-2. Select the domain you want to set as primary, and click **Confirm**.
-3. Sign the transaction.
+![first-primary](assets/manage/first-primary.png)
+1. Select the domain you want to set as primary.
+![first-select](assets/manage/first-select.png)
+1. Click **Confirm**.
+![first-confirm](assets/manage/confirm-primary.png)
+1. Sign the transaction. After that, this name is successfully set as primary.
+![success](assets/manage/success-set-as-primary.png)
 
 :::info
 You can also set a domain name as primary during [registration](./guides/register/regular.md).
 :::
 
-To set a primary name the next time, take these steps:
+### Next time
 
-1. On the **My domains** tab, select the domain name that you want to set as primary.
-2. Click **Manage** to open the domain management page.
-3. Click **Set as primary**, then **Confirm**.
-4. Sign the transaction.
+To set a primary RNS name the next time, after you purchase another RNS name, take these steps:
 
-To remove a primary name, go to your account and click **Remove**.
+1. On the **My domains** tab, select the domain name that you want to set as primary, and then click **Manage** to open the domain management page.
+![select-domain](assets/manage/select-domain.png)
+1. Click **Set as primary**.
+![set-as-primary](assets/manage/set-as-primary.png)
+1. Click **Confirm**.
+![confirm-primary](assets/manage/confirm-primary.png)
+1. Sign the transaction. After that, this name is successfully set as primary.
+![success](assets/manage/success-set-as-primary.png)
+
+### Remove primary name
+
+To remove the primary name, select the domain and click **Remove**.
+
+![remove](assets/manage/remove.png)
 
 ## Extend your registration
 
@@ -43,27 +62,32 @@ To quickly extend your primary name's registration, go to your account and click
 
 ### Extend a regular or protected name
 
-1. On the **My domains** tab, select the domain name that you want to extend.
-2. Click **Manage** to open the domain management page.
-3. Click **Extend**.
-4. Select the number of years you want to extend this domain for.
-5. Review the total fee, which includes only the renewal fee times the requested number of years.
-6. Sign the transaction to make payment.
+1. On the **My domains** tab, locate the domain name that you want to extend, and then click **Extend** to open the domain extension dialog.
+![find-extend-regular](assets/manage/find-extend-regular.png)
+1. Select the number of years you want to extend the registration for (1). Review the total fee, which includes only the renewal fee times the requested number of years. Click **Extend** to confirm the registration extension (2).
+![extend-regular](assets/manage/extend-regular.png)
+1. Sign the transaction to make payment. Your RNS name registration is successfully extended.
+![success-extend](assets/manage/success-extend.png)
 
 ### Extend an auctioned name
 
-1. On the **My domains** tab, select the domain name that you want to extend.
-2. Click **Manage** to open the domain management page.
-3. Click **Extend**.
-4. Select the number of years you want to extend this domain for. Extension is possible for up to 3 years at a time. For example, when you win a name at an auction, you don't need to pay the renewal fee for the first year. This means that you can extend this registration for another 2 years, to the total of 3 years.
-5. Review the total fee, which includes the following:
+1. On the **My domains** tab, locate the auctioned domain name that you want to extend, and then click **Extend** to open the domain extension dialog.
+![find-extend-auctioned](assets/manage/find-extend-auctioned.png)
+1. Select the number of years you want to extend the registration for. Extension is possible for up to 3 years at a time. For example, when you win a name at an auction, you don't need to pay the renewal fee for the first year. This means that you can extend this registration for another 2 years, to the total of 3 years.
+![extend-auctioned-duration](assets/manage/extend-auctioned-duration.png)
+1. Review the total fee, which includes the following:
    * Renewal fee times the requested number of years.
-   * 15% tax on the current domain price. **Note:** If the domain you're extending is about to expire and there is a valid offer to buy the domain from another user, then 15% tax is derived from the new price.
-6. Sign the transaction to make payment.
+   * 15% tax on the current domain price. **Note:** If the domain you're extending is about to expire and someone else made an offer to buy this domain at a higher price, then 15% tax is based on the price in the offer.
+![extend-auctioned-fees](assets/manage/extend-auctioned-fees.png)
+1. Click **Extend** to confirm the registration extension.
+![confirm-auctioned-extension](assets/manage/confirm-extend-auctioned.png)
+1. Sign the transaction to make payment. Your RNS name registration is successfully extended.
+![success-extend](assets/manage/success-extend.png)
 
 ## View your favorite domains
 
-You can add any RNS name to favorites to keep track of its status, for example. To view all your favorite domains, go to the **Favorites** tab.
+You can add any RNS name to favorites to keep track of its status, for example. To view all your favorite domains, go to the **Favourites** tab.
+![favorites](assets/manage/favorites.png)
 
 ## See also
 
