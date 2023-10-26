@@ -208,6 +208,20 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Bridge operators',
+      link: {
+        type: 'generated-index',
+        description: 'Run a bridge operator node, create and vote on proposals, and understand the applicable slashing rules.',
+        slug: '/bridge-operators',
+      },
+      items: [
+        'bridge-operators/setup',
+        'bridge-operators/governance',
+        'bridge-operators/slashing',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Node operators',
       link: {
         type: 'doc',
