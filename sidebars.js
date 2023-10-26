@@ -215,8 +215,32 @@ const sidebars = {
         slug: '/bridge-operators',
       },
       items: [
-        'bridge-operators/setup',
-        'bridge-operators/governance',
+        {
+          type: 'category',
+          label: 'Setup',
+          link: {
+            type: 'generated-index',
+            description: 'Instructions for running a bridge operator node and upgrading its software to the latest version.',
+            slug: '/bridge-operators/setup',
+          },
+          items: [
+            'bridge-operators/setup/run-bridge',
+            'bridge-operators/setup/upgrade-bridge',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Governance',
+          link: {
+            type: 'generated-index',
+            description: 'Create and vote on proposals.',
+            slug: '/bridge-operators/governance',
+          },
+          items: [
+            'bridge-operators/governance/create-proposal',
+            'bridge-operators/governance/vote-on-proposal',
+          ],
+        },
         'bridge-operators/slashing',
       ],
     },
