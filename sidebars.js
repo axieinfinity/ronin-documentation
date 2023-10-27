@@ -215,6 +215,7 @@ const sidebars = {
         slug: '/bridge-operators',
       },
       items: [
+        'bridge-operators/overview',
         {
           type: 'category',
           label: 'Setup',
