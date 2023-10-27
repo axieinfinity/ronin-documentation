@@ -1,22 +1,24 @@
 ---
 description: Hardware recommendations and methods of installation.
-title: Before you start
+title: Overview
+tags:
+- decoupling
 ---
 
 import DocCardList from '@theme/DocCardList';
 import {findSidebarItem} from '@site/src/sidebarUtils';
 
-# Introduction to node installation
+## Introduction to node installation
 
 If you’re interested in setting up a node on the Ronin mainnet,
 here are some hardware recommendations and guides on different
 methods of installation.
 
 :::info
-For testnet installation guides, see [Saigon testnet](./../testnet/).
+For testnet installation guides, see [Saigon testnet](./testnet/).
 :::
 
-## Prerequisites
+## Hardware requirements
 
 To run a reliable, performant node on the Ronin mainnet, we suggest that the node’s hardware profile should match or exceed the following specifications:
 
@@ -51,7 +53,7 @@ In a combined setup, the validator and the bridge are defined in the same `docke
 
 Follow this guide for a combined setup:
 <DocCardList items={[
-    findSidebarItem('/docs/node-operators/mainnet/combined'),
+    findSidebarItem('/docs/validators/setup/mainnet/combined'),
     ]} />
 
 #### Standalone setup
@@ -62,6 +64,6 @@ In a standalone setup, the validator node and the bridge operator are defined in
 
 Follow these guides for a standalone setup:
 <DocCardList items={[
-    findSidebarItem('/docs/node-operators/mainnet/validator'),
-    findSidebarItem('/docs/node-operators/mainnet/bridge'),
+    findSidebarItem('/docs/validators/setup/mainnet/validator'),
+    findSidebarItem('/docs/bridge-operators/setup/run-bridge'),
     ]} />

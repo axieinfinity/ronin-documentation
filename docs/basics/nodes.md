@@ -1,9 +1,9 @@
 ---
-description: Types of nodes on Ronin.
-title: Introduction to nodes
+description: Learn about the different types of nodes you can run.
+title: Nodes
 ---
 
-# Introduction to nodes
+## Overview
 
 There are two types of nodes on Ronin:
 
@@ -34,13 +34,3 @@ A validator node starts life as a full node, but has also “registered” itsel
 ## What is a bridge operator node?
 
 A *bridge operator node* ([GitHub](https://github.com/axieinfinity/bridge-v2)), also referred to as the bridge operator, is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge—the blockchain bridge that facilitates asset transfers between Ronin and other EVM-based chains.
-
-:::caution
-On Ronin, each validator is required to run a validator node and a bridge operator node. The latter is required to facilitate asset transfers on Ronin Bridge. A validator who doesn't run a bridge operator is not eligible for the block reward.
-:::
-
-## Run a node
-
-See [Before you start](./setup/introduction.md) for information on how to set up or configure a node, and check out the [Resources](./resources/) section for further information.
-
-To learn about the rewards available to validators, see [Rewards](./../basics/rewards.md).

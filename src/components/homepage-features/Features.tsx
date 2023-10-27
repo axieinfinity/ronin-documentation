@@ -37,22 +37,13 @@ const featureList = [
     },
   },
   {
-    title: 'Node operators',
+    title: 'Bridge operators',
     Icon: SignDirectionIcon,
-    description: <>Set up and operate your Ronin nodes.</>,
+    description: <>Run a bridge operator node.</>,
     link: {
-      href: '/docs/node-operators',
-      title: 'Node operators',
+      href: '/docs/bridge-operators',
+      title: 'Bridge operators',
     },
-  },
-  {
-    title: 'Developers',
-    Icon: LaptopCodeIcon,
-    link: {
-      href: '/docs/developers/portal',
-      title: 'Developers',
-    },
-    description: <>Build your decentralized application on Ronin.</>,
   },
   {
     title: 'Community',

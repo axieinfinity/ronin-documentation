@@ -41,7 +41,7 @@ Boneh–Lynn–Shacham (BLS) is a digital signature method used for verifying th
 
 The BLS key is what the validator uses to produce finality votes. Validators who produce finality vote receive a reward. If a validator fails to produce a finality vote, no slashing penalty applies.
 
-To attach a BLS key to a validator, either a new validator must be created or an existing validator must be [updated](./../node-operators/setup/generate-keys.md) with this key.
+To attach a BLS key to a validator, either a new validator must be created or an existing validator must be [updated](./../validators/setup/generate-keys.md) with this key.
 
 ### Bridge
 
@@ -49,7 +49,7 @@ A blockchain bridge—also known as a cross-chain bridge—allows independent bl
 
 ### Bridge operator
 
-A bridge operator is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge. On Ronin, each validator is required to run a [bridge operator node](#bridge-operator-node) alongside the [validator node](#validator-node).
+A bridge operator is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge.
 
 ## C
 
@@ -158,11 +158,7 @@ On Ronin, the node types are as follows:
 * Bridge operator node
 
 For more information about the Ronin nodes and the bridge operator, see
-[Introduction to nodes](./../node-operators/introduction.md).
-
-### Node operator
-
-A node operator is an individual or institution that sets up and configure nodes for the validator. The node operator and validator might actually be the same person or entity, but this documentation makes a distinction between these roles for clarity. For example, see sections [Node operators](/docs/node-operators) and [Validators](/docs/validators).
+[Nodes](nodes.md).
 
 ## P
 

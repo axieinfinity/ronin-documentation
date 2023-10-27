@@ -1,6 +1,6 @@
 ---
 description: Install a testnet validator and bridge on one machine using Docker.
-slug: /node-operators/testnet/combined
+slug: /validators/setup/testnet/combined
 tags:
   - docker-testnet
 ---
@@ -170,10 +170,10 @@ The size of your node will also grow over time.
   # The name of your node that you want displayed on https://saigon-stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
 
-  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/validators/setup/upgrade-validator
   NODE_IMAGE=NODE_IMAGE
   
-  # The latest version of the bridge's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  # The latest version of the bridge's image as listed in https://docs.roninchain.com/docs/bridge-operators/setup/upgrade-bridge
   BRIDGE_IMAGE=BRIDGE_IMAGE
 
   # Your bridge operator private key without the 0x prefix
@@ -240,7 +240,7 @@ The size of your node will also grow over time.
   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
   ```
 
-6. (Optional) Download the snapshot:
+1. (Optional) Download the snapshot:
 
   ```
   cd ~/ronin/chaindata/data/ronin/

@@ -144,15 +144,10 @@ const config = {
             label: 'Validators',
             to: 'docs/validators',
           },
-          // Node operators
+          // Bridge operators
           {
-            label: 'Node operators',
-            to: 'docs/node-operators',
-          },
-          // Developers
-          {
-            label: 'Developers',
-            to: 'docs/developers/portal',
+            label: 'Bridge operators',
+            to: 'docs/bridge-operators',
           },
           // Community
           {

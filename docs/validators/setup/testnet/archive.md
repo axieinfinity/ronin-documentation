@@ -1,13 +1,13 @@
 ---
-description: Install a mainnet archive node using Docker.
-slug: /node-operators/mainnet/archive
+description: Install a testnet archive node using Docker.
+slug: /validators/setup/testnet/archive
 tags:
-  - docker-mainnet
+  - docker-testnet
 ---
 
 # Run an archive node
 
-This guide demonstrates how to run an archive node on the mainnet using Docker.
+This guide demonstrates how to run an archive node on the Saigon testnet using Docker.
 
 ## Prerequisites
 
@@ -18,11 +18,11 @@ This guide demonstrates how to run an archive node on the mainnet using Docker.
 
 ### System requirements
 
-Recommended system requirements for running an archive node on the mainnet:
+Recommended system requirements for running an archive node on the Saigon testnet:
 
-* 8-core CPU
-* 32 GB RAM
-* 7 TB high-speed SSD
+* 4-core CPU
+* 8 GB RAM
+* 250 GB SSD
 * x86-64 architecture
 
 These hardware requirements are rough guidelines, and each node operator
@@ -46,12 +46,12 @@ The size of your Ronin node will also grow over time.
   ```
 
   Create a directory for chain data:
-
+  
   ```
   mkdir -p chaindata/data/ronin
   ```
 
-2. Create a file called `docker-compose.yml`:
+2. Create a file called `docker-compose`:
 
   ```
   vim docker-compose.yml
@@ -85,7 +85,14 @@ The size of your Ronin node will also grow over time.
         - VERBOSITY=${VERBOSITY}
         - MINE=false
         - GASPRICE=${GASPRICE}
+        - GENESIS_PATH=${GENESIS_PATH}
         - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
+        - BLS_PASSWORD=${BLS_PASSWORD}
+        - BLS_PRIVATE_KEY=${BLS_PRIVATE_KEY}
+        - BLS_AUTO_GENERATE=${BLS_AUTO_GENERATE}
+        - ENABLE_FAST_FINALITY=${ENABLE_FAST_FINALITY}
+        - ENABLE_FAST_FINALITY_SIGN=${ENABLE_FAST_FINALITY_SIGN}
+        - BLS_SHOW_PRIVATE_KEY=${BLS_SHOW_PRIVATE_KEY}
   ```
 
   This compose file defines the `node` service, which pulls a Ronin node image from the GitHub Container Registry.
@@ -99,35 +106,43 @@ The size of your Ronin node will also grow over time.
 5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
   ```
-  # The name of your node that you want displayed on https://stats.roninchain.com/
+  # The name of your node that you want displayed on https://saigon-stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
 
-  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/validators/setup/upgrade-validator
   NODE_IMAGE=NODE_IMAGE
 
   # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
+  
+  # Whether to participate in the finality vote broadcast
+  ENABLE_FAST_FINALITY=true
 
-  BOOTNODES=enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303
+  # Whether to produce the finality vote
+  ENABLE_FAST_FINALITY_SIGN=false
 
-  NETWORK_ID=2020
+  BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
+
+  NETWORK_ID=2021
   GASPRICE=20000000000
 
-  CONFIG_PATH=config.mainnet.json
+  DEPLOYMENT=test
+
   VERBOSITY=3
 
-  CHAIN_STATS_WS_SERVER=stats.roninchain.com
   CHAIN_STATS_WS_SECRET=xQj2MZPaN6
+  CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
+  GENESIS_PATH=testnet.json
 
   RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
 
-6. Start the node:
+1. Start the node:
 
   ```
   cd ~/ronin && docker-compose up -d
   ```
-
+  
   This command pulls a Ronin node image and starts the service you defined.
 
-7. After a few minutes, check the status of your node on the [Ronin Network Status](https://stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
+7. After a few minutes, check the status of your node on the [Ronin Network Status](https://saigon-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.

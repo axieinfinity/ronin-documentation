@@ -231,9 +231,8 @@ After a PR is closed, your working branch is deleted.
 | `/docs/basics`         | General information about Ronin.                                                                                |
 | `/docs/community`      | Ronin socials, contribution guide, and community initiatives.                                                   |
 | `/docs/delegators`     | Documentation for delegators.                                                                                   |
-| `/docs/developers`     | A page that points to the Ronin developer documentation published on the Sky Mavis developer documentation hub. |
-| `/docs/node-operators` | Documentation for node operators.                                                                               |
-| `/docs/validators`     | Documentation for validators.                                                                                   |
+| `/docs/validators`     | Documentation for validators.         |
+| `/docs/bridge-operators` | Documentation for bridge operators.                                                                           |
 
 ### Sidebar
 
@@ -312,7 +311,7 @@ that existing top-level category.
 * Most top-level categories have an auto-generated layout with a brief
   introduction at the top and the list of doc cards that represent the
   categories and pages inside that top-level category. There are exceptions,
-  however. For example, the [Node operators](./node-operators/index.mdx) category is a
+  however. For example, the [validator index](./validators/index.mdx) page is a
   manually written page, where doc cards are displayed using a custom helper,
   and organized into sections using headings.
 
@@ -454,7 +453,7 @@ the concepts covered in this topic.
 
 * [Slashing rules](./validators/slashing/slashing.mdx)
 * [Rewards](./basics/rewards.md)
-* [Introduction to nodes](./node-operators/introduction.md)
+* [Nodes](./basics/nodes.md)
 * Concept topics within another page: [Bailout](./validators/slashing/bailout.mdx)
 
 #### Task
@@ -514,11 +513,11 @@ this task and the concepts that it involves.
 ##### Examples
 
 * [Become a delegator](./delegators/onboarding/become-delegator.mdx)
-* [Run a validator node](./node-operators/setup/mainnet/validator.md)
+* [Run a validator node](./validators/setup/mainnet/validator.md)
 * [Claim rewards](./validators/rewards/claim.mdx)
 * Task topics within other pages:
   * [Check your credit score](./validators/slashing/bailout.mdx#check-your-credit-score)
-  * [Use secure communication](./node-operators/resources/security.md#use-secure-communication)
+  * [Use secure communication](./validators/setup/security.md#use-secure-communication)
 
 #### Reference
 
@@ -572,10 +571,10 @@ the concepts covered in this topic.
 
 ##### Examples
 
-* [Ronin mainnet](./node-operators/resources/parameters/mainnet.md)
+* [Ronin mainnet](./validators/setup/parameters/mainnet.md)
 * [Security audits](./basics/audits.md)
 * Reference topics within other pages:
-  * [Command reference](./node-operators/setup/cli.md#command-reference)
+  * [Command reference](./validators/setup/cli.md#command-reference)
   * [RON unlock schedule](./basics/tokenomics.md#ron-unlock-schedule)
 
 #### Troubleshooting
@@ -634,7 +633,7 @@ to the product.
 
 ##### Example
 
-[Build a Ronin CLI](./node-operators/setup/cli.md)
+[Build a Ronin CLI](./validators/setup/cli.md)
 
 #### Tutorial
 

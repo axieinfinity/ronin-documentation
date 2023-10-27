@@ -1,7 +1,13 @@
 ---
-title: Upgrade bridge operator version
-description: Get the latest version of the node's software.
+title: Upgrade bridge version
+description: Get the latest version of the bridge's software.
 ---
+
+## Overview
+
+This page describes how to get the latest version of the node's software.
+
+## Bridge operator
 
 Every bridge release is published on
 [GitHub](https://github.com/axieinfinity/bridge-v2/releases). To find the Docker
@@ -16,3 +22,7 @@ To download the latest image, follow these steps:
     ```
 2. Save the changes.
 3. Run `docker-compose up -d`.
+
+## See also
+
+* [Upgrade validator version]

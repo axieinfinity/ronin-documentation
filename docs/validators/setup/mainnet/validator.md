@@ -1,14 +1,15 @@
 ---
 description: Install a standalone mainnet validator node using Docker.
-slug: /node-operators/mainnet/validator
+slug: /validators/setup/mainnet/validator
+title: Run a validator
 tags:
-  - docker-mainnet
+- docker-mainnet
+- decoupling
 ---
 
-# Run a standalone validator
+## Overview
 
 This guide demonstrates how to run a validator node on the mainnet using Docker.
-As a validator, you're required to run a bridge operator node as well as the validator node. Therefore, after you install the validator following the steps in this guide, proceed to set up your [bridge operator node](./bridge.md).
 
 ## Prerequisites
 
@@ -114,7 +115,7 @@ The size of your node will also grow over time.
   # The name of your node that you want displayed on https://stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
 
-  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/validators/setup/upgrade-validator
   NODE_IMAGE=NODE_IMAGE
 
   # Your validator private key without the 0x prefix
@@ -191,4 +192,4 @@ The size of your node will also grow over time.
 
 ## Next step
 
-Install and run a bridge operator as described in [Run a bridge operator node](./bridge.md).
+Install and run a bridge operator as described in [Run a bridge operator node](./../../../bridge-operators/setup/run-bridge.md).

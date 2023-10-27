@@ -1,8 +1,11 @@
 ---
-description: Latest software for Ronin nodes and bridge operator.
+description: Latest software for Ronin nodes.
+title: Upgrade validator version
+tags:
+- decoupling
 ---
 
-# Latest versions
+## Overview
 
 This page describes how to get the latest version of the node's software.
 
@@ -44,20 +47,6 @@ To download the latest image for your node, follow these steps:
 2. Save the changes.
 3. Run `docker-compose up -d`.
 
-## Bridge operator
+## See also
 
-Every bridge release is published on
-[GitHub](https://github.com/axieinfinity/bridge-v2/releases). To find the Docker
-image for each release, visit
-[Docker Hub](https://hub.docker.com/r/axieinfinity/bridge/tags).
-
-To download the latest image, follow these steps:
-
-1. In the `.env` file, set `BRIDGE_IMAGE` to the following:
-
-    ```
-    ghcr.io/axieinfinity/bridge:v0.2.6-1daa149
-    ```
-
-2. Save the changes.
-3. Run `docker-compose up -d`.
+* [Upgrade bridge operator version](./../../bridge-operators/setup/upgrade-bridge.md)

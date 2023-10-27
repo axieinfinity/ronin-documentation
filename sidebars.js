@@ -45,6 +45,8 @@ const sidebars = {
         'basics/white-paper',
         // Tokenomics
         'basics/tokenomics',
+        // Nodes
+        'basics/nodes',
         // Rewards
         'basics/rewards',
         // Security audits
@@ -126,11 +128,85 @@ const sidebars = {
       type: 'category',
       label: 'Validators',
       link: {
-        type: 'generated-index',
-        description: 'Register as a validator, stake tokens, claim rewards, and manage your validator profile.',
-        slug: '/validators',
+        type: 'doc',
+        id: 'validators/index',        
       },
       items: [
+        {
+          type: 'category',
+          label: 'Run a node',
+          link: {
+            type: 'generated-index',
+            description: 'Documentation for running and maintaining Ronin nodes.',
+            slug: '/validators/setup'
+          },
+          items: [
+            'validators/setup/overview',
+            {
+              type: 'category',
+              label: 'Mainnet',
+              link: {
+                type: 'generated-index',
+                slug: '/validators/setup/mainnet',
+                description: 'Node installation guides for the Ronin mainnet.'
+              },
+              items: [
+                // Run a validator and bridge together
+                'validators/setup/mainnet/combined',
+                // Run a validator
+                'validators/setup/mainnet/validator',
+                // Run a full node
+                'validators/setup/mainnet/non-validator',
+                // Run an archive node
+                'validators/setup/mainnet/archive',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Saigon testnet',
+              link: {
+                type: 'generated-index',
+                title: 'Saigon testnet',
+                description: 'Node installation guides for the Saigon testnet.',
+                slug: '/validators/setup/testnet',
+              },
+              items: [
+                // Run a validator and bridge together
+                'validators/setup/testnet/combined',
+                // Run a non-validator-node
+                'validators/setup/testnet/non-validator',
+                // Run a full archive node
+                'validators/setup/testnet/archive',
+              ],
+            },
+            // Generate keys
+            'validators/setup/generate-keys',
+            // Install Ronin CLI
+            'validators/setup/cli',
+            // Latest version
+            'validators/setup/upgrade-validator',
+            // Network parameters
+            {
+              type: 'category',
+              label: 'Network parameters',
+              link: {
+                type: 'generated-index',
+                title: 'Network parameters',
+                slug: '/validators/setup/parameters',
+              },
+              items: [
+                // Ronin mainnet
+                'validators/setup/parameters/mainnet',
+                // Saigon testnet
+                'validators/setup/parameters/testnet',
+              ],
+            },
+            // Security hardening
+            'validators/setup/security',
+            // FAQ
+            'validators/faq',
+          ],
+        },
         // Become a validator
         'validators/onboarding/become-validator',
         // Stake
@@ -244,105 +320,6 @@ const sidebars = {
         },
         'bridge-operators/slashing',
       ],
-    },
-    {
-      type: 'category',
-      label: 'Node operators',
-      link: {
-        type: 'doc',
-        id: 'node-operators/index',        
-      },
-      items: [
-        // Introduction
-        'node-operators/introduction',
-        {
-          type: 'category',
-          label: 'Setup',
-          link: {
-            type: 'generated-index',
-            title: 'Setup',
-            slug: '/node-operators/mainnet',
-            description: 'Node installation guides for the Ronin mainnet.'
-          },
-          items: [
-            // Setup introduction
-            'node-operators/setup/introduction',
-            // Latest version
-            'node-operators/setup/latest',
-            // Run a validator and bridge together
-            'node-operators/setup/mainnet/combined',
-            // Run a standalone validator
-            'node-operators/setup/mainnet/validator',
-            // Run a standalone bridge
-            'node-operators/setup/mainnet/bridge',
-            // Run a full node
-            'node-operators/setup/mainnet/non-validator',
-            // Run an archive node
-            'node-operators/setup/mainnet/archive',
-            // Generate keys
-            'node-operators/setup/generate-keys',
-            // Install Ronin CLI
-            'node-operators/setup/cli',
-          ],
-        },
-        // Resources
-        {
-          type: 'category',
-          label: 'Resources',
-          link: {
-            type: 'generated-index',
-            title: 'Resources',
-            slug: '/node-operators/resources',
-            description: 'Resources for node operators.'
-          },
-          items: [
-            // Network parameters
-            {
-              type: 'category',
-              label: 'Network parameters',
-              link: {
-                type: 'generated-index',
-                title: 'Network parameters',
-                slug: '/node-operators/resources/parameters',
-              },
-              items: [
-                // Ronin mainnet
-                'node-operators/resources/parameters/mainnet',
-                // Saigon testnet
-                'node-operators/resources/parameters/testnet',
-              ],
-            },
-            // Security hardening
-            'node-operators/resources/security',
-            // FAQ
-            'node-operators/resources/faq',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Saigon testnet',
-          link: {
-            type: 'generated-index',
-            title: 'Saigon testnet',
-            description: 'Node installation guides for the Saigon testnet.',
-            slug: '/node-operators/testnet',
-          },
-          items: [
-            // Run a validator and bridge together
-            'node-operators/setup/testnet/combined',
-            // Run a non-validator-node
-            'node-operators/setup/testnet/non-validator',
-            // Run a full archive node
-            'node-operators/setup/testnet/archive',
-          ],
-        },
-      ],
-    },
-    // Developers
-    {
-      type: 'doc',
-      label: 'Developers',
-      id: 'developers/portal',
     },
     // Community
     {

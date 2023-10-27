@@ -1,13 +1,15 @@
 ---
-description: Install a testnet archive node using Docker.
-slug: /node-operators/testnet/archive
+description: Install a testnet non-validator node using Docker.
+slug: /validators/setup/testnet/non-validator
 tags:
   - docker-testnet
 ---
 
-# Run an archive node
+# Run a non-validator node
 
-This guide demonstrates how to run an archive node on the Saigon testnet using Docker.
+This guide demonstrates how to run a non-validator node on the Saigon
+testnet using Docker. A non-validator node is also known as an RPC
+(remote procedure call) node.
 
 ## Prerequisites
 
@@ -18,22 +20,22 @@ This guide demonstrates how to run an archive node on the Saigon testnet using D
 
 ### System requirements
 
-Recommended system requirements for running an archive node on the Saigon testnet:
+Recommended system requirements for running a non-validator node on the Saigon testnet:
 
-* 4-core CPU
+* 4 CPU cores
 * 8 GB RAM
-* 250 GB SSD
+* 100 GB SSD
 * x86-64 architecture
 
 These hardware requirements are rough guidelines, and each node operator
 should monitor their node to ensure good performance for the intended task.
-The size of your Ronin node will also grow over time.
+The size of your node will also grow over time.
 
 ## Install the node
 
 1. Set up directories:
 
-  Create a ronin directory:
+  Create a node directory:
 
   ```
   mkdir ~/ronin
@@ -45,13 +47,13 @@ The size of your Ronin node will also grow over time.
   cd ~/ronin
   ```
 
-  Create a directory for chain data:
-  
+  Create a chain data directory:
+
   ```
   mkdir -p chaindata/data/ronin
   ```
 
-2. Create a file called `docker-compose`:
+2. Create a file called `docker-compose.yml`:
 
   ```
   vim docker-compose.yml
@@ -75,7 +77,7 @@ The size of your Ronin node will also grow over time.
         - 30303:30303/udp
         - 6060:6060
       volumes:
-        - ~/.ronin/chaindata:/ronin
+        - ~/ronin/chaindata:/ronin
       environment:
         - SYNC_MODE=full
         - PASSWORD=${PASSWORD}
@@ -83,7 +85,7 @@ The size of your Ronin node will also grow over time.
         - NETWORK_ID=${NETWORK_ID}
         - RONIN_PARAMS=${RONIN_PARAMS}
         - VERBOSITY=${VERBOSITY}
-        - MINE=false
+        - MINE=${MINE}
         - GASPRICE=${GASPRICE}
         - GENESIS_PATH=${GENESIS_PATH}
         - ETHSTATS_ENDPOINT=${INSTANCE_NAME}:${CHAIN_STATS_WS_SECRET}@${CHAIN_STATS_WS_SERVER}:443
@@ -108,41 +110,57 @@ The size of your Ronin node will also grow over time.
   ```
   # The name of your node that you want displayed on https://saigon-stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
-
-  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/validators/setup/upgrade-validator
   NODE_IMAGE=NODE_IMAGE
 
   # The password used to encrypt the node's private key file
   PASSWORD=PASSWORD
-  
+
   # Whether to participate in the finality vote broadcast
   ENABLE_FAST_FINALITY=true
 
   # Whether to produce the finality vote
   ENABLE_FAST_FINALITY_SIGN=false
 
-  BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
+  MINE=false
 
+  BOOTNODES=enode://77e9cfce2d4c01c61115591984ca4012923c29846a7b66c775fed0cc8fe5f41b304a71e3e9433e067ea7ef86701c13992fefacf9e223786c62c530a7110e8142@35.224.85.190:30303
+  
   NETWORK_ID=2021
   GASPRICE=20000000000
-
-  DEPLOYMENT=test
-
   VERBOSITY=3
 
   CHAIN_STATS_WS_SECRET=xQj2MZPaN6
   CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
-  GENESIS_PATH=testnet.json
 
-  RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
+  CONFIG_PATH=config.testnet.json
+  GENESIS_PATH=testnet.json
+  DEPLOYMENT=test
+  
+  RONIN_PARAMS=--http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
 
-6. Start the node:
+1. (Optional) Download the snapshot:
+
+  ```
+  cd ~/.skymavis/chaindata/data/ronin/
+  curl https://storage.googleapis.com/testnet-chaindata/chaindata-22-3-2023.tar -o chaindata.tar && tar -xvf chaindata.tar
+  mv chaindata-22-3-2023 chaindata
+  ```
+
+7. Start the node:
 
   ```
   cd ~/ronin && docker-compose up -d
   ```
-  
+
   This command pulls a Ronin node image and starts the service you defined.
 
-7. After a few minutes, check the status of your node on the [Ronin Network Status](https://saigon-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
+8. Review the log:
+
+  ```
+  docker logs node -f --tail 100
+  ```
+
+9. After a few minutes, check the status of your node on the [Ronin Network Status](https://saigon-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.

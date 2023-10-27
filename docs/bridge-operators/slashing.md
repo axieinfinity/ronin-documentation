@@ -1,6 +1,8 @@
 ---
 title: Bridge operator slashing
 sidebar_label: Slashing for bridge operators
+tags:
+- decoupling
 ---
 
 import bridSlashTierOne from './assets/bridge-tier-1.png';

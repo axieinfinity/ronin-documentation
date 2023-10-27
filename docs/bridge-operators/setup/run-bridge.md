@@ -2,7 +2,8 @@
 description: Run a bridge operator node on the Ronin mainnet.
 title: Run a bridge operator
 tags:
-  - docker-mainnet
+- docker-mainnet
+- decoupling
 ---
 
 ## Overview
@@ -23,7 +24,7 @@ You need an Ethereum RPC endpoint to listen for events from Ethereum chain and s
 
 ### Private keys
 
-Generate two private keys as described in [Generate keys](./../../node-operators/setup/generate-keys.md):
+Generate two private keys as described in [Generate keys](./../../validators/setup/generate-keys.md):
 
 * One key for the bridge voter (if you're a governor)
 * One key for the bridge operator
@@ -161,10 +162,10 @@ The size of your Ronin node will also grow over time.
   # The name of your node that you want displayed on https://stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
 
-  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/validators/setup/upgrade-validator
   NODE_IMAGE=NODE_IMAGE
 
-  # The latest version of the bridge's image as listed in https://docs.roninchain.com/docs/node-operators/setup/latest
+  # The latest version of the bridge's image as listed in https://docs.roninchain.com/docs/bridge-operators/setup/upgrade-bridge
   BRIDGE_IMAGE=BRIDGE_IMAGE
 
   # Your bridge operator private key without the 0x prefix
@@ -204,7 +205,7 @@ The size of your Ronin node will also grow over time.
   RONIN_PARAMS=--http.api eth,net,web3,consortium --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
 
-6. (Optional) Download the snapshot from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot)
+1. (Optional) Download the snapshot from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot)
 
   ```
   cd ~/ronin-bridge/chaindata/data/ronin/

@@ -12,7 +12,7 @@ This guide demonstrates how to add a *finality vote key* to your profile. The fi
 
 ## Before you start
 
-To obtain your finality vote key, you need to [generate a BLS key pair](./../../node-operators/setup/generate-keys.md#generate-a-bls-key). The public BLS key is your finality vote key.
+To obtain your finality vote key, you need to [generate a BLS key pair](./../setup/generate-keys.md). The public BLS key is your finality vote key.
 
 ## Add the key to your profile
 
