@@ -1,15 +1,21 @@
 ---
-description: On-chain governance overview.
+description: On-chain governance overview for validators.
+title: Overview
 ---
 
-# Overview
-Ronin's governance process is conducted via a decentralized voting
-mechanism. Each Governing Validator has a corresponding chain governor
-account. Governors are empowered to vote for proposals such as
-adding or removing Governing Validators, upgrading contracts,
-changing thresholds, and more.
+## Validator governance
 
-The way it works is a a governor [creates](./create.mdx) a new proposal
+Ronin's governance process is conducted via a decentralized voting
+mechanism.
+
+Governing Validators can propose and vote on the following types of changes:
+
+* Upgrade smart contracts
+* Change thresholds
+* Add Governing Validators
+* Remove Governing Validators
+
+First, a governor [creates](./create.mdx) a new proposal
 for other governors to [vote](./vote.mdx) on. If at least 70% of the
 governors approve the proposal, the change is applied.
 

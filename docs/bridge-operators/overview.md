@@ -1,9 +1,10 @@
 ---
-sidebar_label: Overview
-title: About bridge operator
+title: Bridge operators
 tags:
 - decoupling
 ---
+
+## Overview
 
 A *bridge operator node* ([GitHub](https://github.com/axieinfinity/bridge-v2)), also referred to as the bridge operator, is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge—the blockchain bridge that facilitates asset transfers between Ronin and other EVM-based chains.
 

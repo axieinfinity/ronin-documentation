@@ -286,15 +286,13 @@ const sidebars = {
       type: 'category',
       label: 'Bridge operators',
       link: {
-        type: 'generated-index',
-        description: 'Run a bridge operator node, create and vote on proposals, and understand the applicable slashing rules.',
-        slug: '/bridge-operators',
+        type: 'doc',
+        id: 'bridge-operators/overview',        
       },
       items: [
-        'bridge-operators/overview',
         {
           type: 'category',
-          label: 'Setup',
+          label: 'Run a node',
           link: {
             type: 'generated-index',
             description: 'Instructions for running a bridge operator node and upgrading its software to the latest version.',
@@ -309,9 +307,8 @@ const sidebars = {
           type: 'category',
           label: 'Governance',
           link: {
-            type: 'generated-index',
-            description: 'Create and vote on proposals.',
-            slug: '/bridge-operators/governance',
+            type: 'doc',
+            id: 'bridge-operators/governance/overview',        
           },
           items: [
             'bridge-operators/governance/create-proposal',
