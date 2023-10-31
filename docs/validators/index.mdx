@@ -12,14 +12,18 @@ import {findSidebarItem} from '@site/src/sidebarUtils';
 ### Ronin mainnet
 
 <DocCardList items={[
-    findSidebarItem('/docs/validators/setup/overview'),
-    findSidebarItem('/docs/validators/setup/mainnet'),
+    findSidebarItem('/docs/validators/setup/mainnet/run-validator'),
+    findSidebarItem('/docs/validators/setup/mainnet/run-combined'),
+    findSidebarItem('/docs/validators/setup/mainnet/run-non-validator'),
+    findSidebarItem('/docs/validators/setup/mainnet/run-archive'),
     ]} />
 
 ### Saigon testnet
 
 <DocCardList items={[
-    findSidebarItem('/docs/validators/setup/testnet'),
+    findSidebarItem('/docs/validators/setup/testnet/run-combined'),
+    findSidebarItem('/docs/validators/setup/testnet/run-non-validator'),
+    findSidebarItem('/docs/validators/setup/testnet/run-archive'),
     ]} />
 
 ## Register as a validator
@@ -28,8 +32,36 @@ import {findSidebarItem} from '@site/src/sidebarUtils';
     findSidebarItem('/docs/validators/onboarding/become-validator'),
     ]} />
 
-## Manage your account
+## Manage your validator account
 
 <DocCardList items={[
-    findSidebarItem('/docs/validators/manage'),
+    findSidebarItem('/docs/validators/manage/add-finality-vote-key'),
+    findSidebarItem('/docs/validators/manage/change-commission'),
+    findSidebarItem('/docs/validators/manage/claim-rewards'),
+    findSidebarItem('/docs/validators/manage/increase-withdraw-stake'),
+    findSidebarItem('/docs/validators/manage/renounce-role'),
+    findSidebarItem('/docs/validators/manage/schedule-maintenance'),
+    findSidebarItem('/docs/validators/manage/take-emergency-exit'),
+    findSidebarItem('/docs/validators/manage/view-activity'),
+    findSidebarItem('/docs/validators/manage/view-analytics'),
+    findSidebarItem('/docs/validators/manage/view-profile'),
+    ]} />
+
+## Slashing rules
+
+<DocCardList items={[
+    findSidebarItem('/docs/validators/slashing'),
+    ]} />
+
+## Governance
+
+<DocCardList items={[
+    findSidebarItem('/docs/validators/governance/create-proposal'),
+    findSidebarItem('/docs/validators/governance/vote-on-proposal'),
+    ]} />
+
+## FAQ
+
+<DocCardList items={[
+    findSidebarItem('/docs/validators/validator-faq'),
     ]} />

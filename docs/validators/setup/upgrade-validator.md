@@ -7,7 +7,19 @@ tags:
 
 ## Overview
 
-This page describes how to get the latest version of the node's software.
+This page describes how to get the latest version of the Ronin node's software.
+
+Upgrades are usually backwards-compatible and can contain performance
+improvements, bug fixes or new features. It's recommended that every node is
+upgraded as soon as possible.
+
+An upgrade, however, can also be a hardfork, which is usually not
+backwards-compatible. If your node fails to upgrade before a hardfork block
+occurs, the data on your node can differ from that on the network. Therefore,
+it's critical to upgrade your node before a hardfork occurs. All Ronin-planned
+hardforks are announced seven days in advance on our
+[Discord](https://discord.gg/roninnetwork) and
+[Ronin Newsletter](https://blog.roninchain.com).
 
 ## Ronin node
 
@@ -49,4 +61,4 @@ To download the latest image for your node, follow these steps:
 
 ## See also
 
-* [Upgrade bridge operator version](./../../bridge-operators/setup/upgrade-bridge.md)
+* [Upgrade bridge operator version](./../../bridge-operators/setup/upgrade-bridge-operator.md)

@@ -1,5 +1,7 @@
 ---
 title: Slashing for bridge operators
+sidebar_label: Slashing rules
+description: List of slashing rules applicable to bridge operators. 
 tags:
 - decoupling
 ---
@@ -41,4 +43,4 @@ The operator's status is set to **Punished**.
 
 ## See also
 
-* [Slashing for validators](./../validators/slashing/slashing.mdx)
+* [Slashing for validators](./../validators/slashing.mdx)

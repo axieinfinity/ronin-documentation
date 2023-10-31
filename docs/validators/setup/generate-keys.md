@@ -6,6 +6,8 @@ title: Generate private keys
 import extension from './assets/extension.png';
 import mobile from './assets/mobile.png';
 
+## Overview
+
 Each validator node requires private keys for signing blocks and consensus messages sent to the other validators in the network.
 
 The required private keys include a BLS key and an ECDSA key. The keys are named after digital signature schemes: Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh–Lynn–Shacham (BLS), respectively.

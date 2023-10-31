@@ -1,6 +1,6 @@
 ---
-description: Hardware recommendations and methods of installation.
-title: Overview
+description: Hardware recommendations and methods of installation for validator nodes.
+title: Validator node
 tags:
 - decoupling
 ---
@@ -8,7 +8,7 @@ tags:
 import DocCardList from '@theme/DocCardList';
 import {findSidebarItem} from '@site/src/sidebarUtils';
 
-## Introduction to node installation
+## Overview
 
 If you’re interested in setting up a node on the Ronin mainnet,
 here are some hardware recommendations and guides on different
@@ -53,7 +53,7 @@ In a combined setup, the validator and the bridge are defined in the same `docke
 
 Follow this guide for a combined setup:
 <DocCardList items={[
-    findSidebarItem('/docs/validators/setup/mainnet/combined'),
+    findSidebarItem('/docs/validators/setup/mainnet/run-combined'),
     ]} />
 
 #### Standalone setup
@@ -64,6 +64,6 @@ In a standalone setup, the validator node and the bridge operator are defined in
 
 Follow these guides for a standalone setup:
 <DocCardList items={[
-    findSidebarItem('/docs/validators/setup/mainnet/validator'),
-    findSidebarItem('/docs/bridge-operators/setup/run-bridge'),
+    findSidebarItem('/docs/validators/setup/mainnet/run-validator'),
+    findSidebarItem('/docs/bridge-operators/setup/run-bridge-operator'),
     ]} />

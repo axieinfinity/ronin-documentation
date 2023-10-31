@@ -15,8 +15,11 @@ General overview of Ronin and its basic concepts.
     findSidebarItem('/docs/basics/key-concepts'),
     findSidebarItem('/docs/basics/white-paper'),
     findSidebarItem('/docs/basics/tokenomics'),
-    findSidebarItem('/docs/basics/rewards'),
     findSidebarItem('/docs/basics/nodes'),
+    findSidebarItem('/docs/basics/rewards'),
+    findSidebarItem('/docs/basics/audits'),
+    findSidebarItem('/docs/basics/roles'),
+    findSidebarItem('/docs/basics/dapps'),
     ]} />
 
 ## Stake RON
@@ -25,42 +28,36 @@ Use your RON tokens, purchase more RON,
 delegate your stake and transfer it between validators.
 
 <DocCardList items={[ 
-    findSidebarItem('/docs/delegators/onboarding/buy-ron'),
+    findSidebarItem('/docs/delegators/manage/buy-ron'),
     findSidebarItem('/docs/delegators/onboarding/become-delegator'),
-    findSidebarItem('/docs/delegators/stake'),
-    findSidebarItem('/docs/delegators/rewards/claim'),
-    findSidebarItem('/docs/delegators/manage/activity'),
-    findSidebarItem('/docs/delegators/manage/track'),
-    findSidebarItem('/docs/delegators/faq'),
+    findSidebarItem('/docs/delegators/manage/increase-withdraw-stake'),
+    findSidebarItem('/docs/delegators/manage/claim-rewards'),
+    findSidebarItem('/docs/delegators/manage/view-activity'),
+    findSidebarItem('/docs/delegators/manage/track-validators'),
+    findSidebarItem('/docs/delegators/delegator-faq'),
     ]} />
 
 ## Run a validator node
 
-Become a validator, change commission,
-claim rewards, manage stake, and maintain the validator's profile.
-
-<DocCardList items={[ 
-    findSidebarItem('/docs/validators/onboarding/become-validator'),
-    findSidebarItem('/docs/validators/stake'),
-    findSidebarItem('/docs/validators/rewards/claim'),
-    findSidebarItem('/docs/validators/manage'),
-    findSidebarItem('/docs/validators/slashing'),
-    findSidebarItem('/docs/validators/governance'),
-    findSidebarItem('/docs/validators/faq'),
-    ]} />
-
-## Install your Ronin node 
-
-Set up and configure your Ronin nodes
-(validator, non-validator, archive)
-and a bridge operator node.
-
-Start with the introduction guides, and continue from there:
+Run a validator node, register as a validator, claim rewards, and manage your validator account.
 
 <DocCardList items={[
     findSidebarItem('/docs/validators/setup/overview'),
-    findSidebarItem('/docs/validators/setup/mainnet'),
-    findSidebarItem('/docs/validators/setup/testnet'),
+    findSidebarItem('/docs/validators/onboarding/become-validator'),
+    findSidebarItem('/docs/validators/manage'),
+    findSidebarItem('/docs/validators/governance/overview'),
+    findSidebarItem('/docs/validators/slashing'),
+    findSidebarItem('/docs/validators/validator-faq'),
+    ]} />
+
+## Run a bridge operator node
+
+Run a bridge operator node, propose and vote on changes to the bridge.
+
+<DocCardList items={[
+    findSidebarItem('/docs/bridge-operators/setup/overview'),
+    findSidebarItem('/docs/bridge-operators/governance/overview'),
+    findSidebarItem('/docs/bridge-operators/slashing'),
     ]} />
 
 ## Build on Ronin

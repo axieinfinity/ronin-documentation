@@ -147,7 +147,7 @@ const config = {
           // Bridge operators
           {
             label: 'Bridge operators',
-            to: 'docs/bridge-operators/overview',
+            to: 'docs/bridge-operators',
           },
           // Community
           {
