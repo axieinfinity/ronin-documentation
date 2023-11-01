@@ -170,7 +170,6 @@ The size of your node will also grow over time.
   ```
   cd ~/ronin/chaindata/data/ronin/
   wget -q -O - <snapshot URL> | tar -I zstd -xvf -
-  mv <uncompressed data> chaindata
   ```
 
 7. Start the node:
