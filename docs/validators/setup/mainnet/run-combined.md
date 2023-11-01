@@ -141,6 +141,9 @@ The size of your node will also grow over time.
         - RONIN_TRANSACTION_CHECK_PERIOD=${RONIN_TRANSACTION_CHECK_PERIOD}
         - RONIN_MAX_PROCESSING_TASKS=${RONIN_MAX_PROCESSING_TASKS}
         - ETHEREUM_GET_LOGS_BATCH_SIZE=${ETHEREUM_GET_LOGS_BATCH_SIZE}
+        - BRIDGE_STATS_URL=${BRIDGE_STATS_URL}
+        - BRIDGE_STATS_NODE_NAME=${BRIDGE_STATS_NODE_NAME}
+        - BRIDGE_STATS_SECRET=${BRIDGE_STATS_SECRET}
       depends_on:
         - db
         - node
@@ -228,10 +231,14 @@ The size of your node will also grow over time.
 
   VERBOSITY=3
 
-  CHAIN_STATS_WS_SERVER=stats.roninchain.com
-  CHAIN_STATS_WS_SECRET=xQj2MZPaN6
+  CHAIN_STATS_WS_SECRET=WSyDMrhRBe111
+  CHAIN_STATS_WS_SERVER=ronin-stats-ws.roninchain.com
 
   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
+  
+  BRIDGE_STATS_NODE_NAME=<your_node_name>
+  BRIDGE_STATS_URL=wss://ronin-stats-ws.roninchain.com/bridge
+  BRIDGE_STATS_SECRET=WSyDMrhRBe111
   ```
 
 1. (Optional) Download the snapshot from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot)
@@ -239,7 +246,6 @@ The size of your node will also grow over time.
   ```
   cd ~/ronin/chaindata/data/ronin/
   wget -q -O - <snapshot URL> | tar -I zstd -xvf -
-  mv <uncompressed data> chaindata
   ```
 
 7. Start the node:
@@ -250,7 +256,7 @@ The size of your node will also grow over time.
 
   This command pulls a Ronin node image, a bridge image, a Postgres database, and starts the services you defined.
 
-8. After a few minutes, check the status of your node on the [Ronin Network Status](https://stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
+8. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
 
 9. Review the log for the validator and the bridge (the node should sync to the latest block for making the bridge work).
 

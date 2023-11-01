@@ -116,8 +116,8 @@ The size of your Ronin node will also grow over time.
   CONFIG_PATH=config.mainnet.json
   VERBOSITY=3
 
-  CHAIN_STATS_WS_SERVER=stats.roninchain.com
-  CHAIN_STATS_WS_SECRET=xQj2MZPaN6
+  CHAIN_STATS_WS_SECRET=WSyDMrhRBe111
+  CHAIN_STATS_WS_SERVER=ronin-stats-ws.roninchain.com
 
   RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals
   ```
@@ -130,4 +130,4 @@ The size of your Ronin node will also grow over time.
 
   This command pulls a Ronin node image and starts the service you defined.
 
-7. After a few minutes, check the status of your node on the [Ronin Network Status](https://stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
+7. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
