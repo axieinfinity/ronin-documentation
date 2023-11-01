@@ -6,7 +6,7 @@ toc_max_heading_level: 2
 slug: 'community/contribute/guide'
 ---
 
-## Welcome to the contribution guide
+## Overview
 
 Thank you for your interest in contributing to the Ronin documentation project. Any contribution you make will be visible on [docs.roninchain.com](https://docs.roninchain.com).
 
@@ -43,7 +43,7 @@ Contributions](https://github.com/firstcontributions/first-contributions) guide.
 You can contribute to Ronin documentation in a few ways:
 
 * Open an issue in the
-  [repository](https://github.com/axieinfinity/ronin-document) if you noticed
+  [repository](https://github.com/axieinfinity/ronin-documentation) if you noticed
   something that needs updating.
 * Discuss the documentation and other things Ronin on our Discord server.
 * Make changes to existing content and write new content through pull requests.
@@ -118,7 +118,7 @@ create a working branch and submit a pull request.
 
 ### Work with a pull request
 
-After you're done with the changes, create a PR:
+After you're done with the changes, create a pull request (PR):
 
 * Write the title for the PR following the [naming convention](#naming-conventions).
 * Fill out the PR template so that Ronin maintainers can review your PR.
@@ -163,27 +163,26 @@ generator. To preview changes as you edit the files, you can run a local
 development server that serves the Ronin documentation site and reflects the
 latest changes:
 
-1. Clone the [Ronin documentation repository](https://github.com/axieinfinity/ronin-document)
+1. Clone the [ronin-documentation](https://github.com/axieinfinity/ronin-documentation)
    by running the following command:
 
    ```bash
-   git clone git@github.com:axieinfinity/ronin-document.git
+   git clone git@github.com:axieinfinity/ronin-documentation.git
    ```
 
-2. Install the dependencies.
-3. Navigate to the `ronin-document` directory:
+2. Navigate to the `ronin-documentation` directory:
 
    ```bash
-   cd ronin-document
+   cd ronin-documentation
    ```
 
-4. Install the project:
+3. Install the project:
 
    ```bash
    yarn install
    ```
 
-5. Start the local server:
+4. Start the local server:
 
    ```bash
    yarn start
@@ -220,10 +219,9 @@ After a PR is closed, your working branch is deleted.
 ### Directories
 
 * Content is written in Markdown files, which reside in the `/docs` directory.
-* Inside each directory is an `assets` directory where screenshots and diagrams
-  are stored.
+* Screenshots and diagrams are stored in `assets` directories throughout the `/docs` folder.
 * Markdown files contain [front matter](https://docusaurus.io/docs/next/create-doc#doc-front-matter).
-* The files in the `/docs` directory are further organized by category as
+* The files in the `/docs` are further organized by category as
   described in the following table:
 
 | Directory              | Purpose                                                                                                         |
@@ -231,9 +229,9 @@ After a PR is closed, your working branch is deleted.
 | `/docs/basics`         | General information about Ronin.                                                                                |
 | `/docs/community`      | Ronin socials, contribution guide, and community initiatives.                                                   |
 | `/docs/delegators`     | Documentation for delegators.                                                                                   |
-| `/docs/developers`     | A page that points to the Ronin developer documentation published on the Sky Mavis developer documentation hub. |
-| `/docs/node-operators` | Documentation for node operators.                                                                               |
 | `/docs/validators`     | Documentation for validators.                                                                                   |
+| `/docs/bridge-operators` | Documentation for bridge operators.                                                                               |
+| `/docs/rns` | Documentation for Ronin Name Service (RNS).                                                                               |
 
 ### Sidebar
 
@@ -307,14 +305,12 @@ contained in it and the content is broken down into multiple nested categories.
 If the content can fit in any existing top-level category, it should belong in
 that existing top-level category.
 
-* Top-level categories are equally important to one another, except for
-  [Developers](./developers/portal.mdx), which contains only one page.
-* Most top-level categories have an auto-generated layout with a brief
-  introduction at the top and the list of doc cards that represent the
-  categories and pages inside that top-level category. There are exceptions,
-  however. For example, the [Node operators](./node-operators/index.mdx) category is a
-  manually written page, where doc cards are displayed using a custom helper,
-  and organized into sections using headings.
+Most top-level categories have an auto-generated layout with a brief
+introduction at the top and the list of doc cards that represent the
+categories and pages inside that top-level category. There are exceptions,
+however. For example, the [Validators](./validators/index.mdx) category is a
+manually written page, where doc cards are displayed using a custom helper,
+and organized into sections using headings.
 
 #### Category
 
