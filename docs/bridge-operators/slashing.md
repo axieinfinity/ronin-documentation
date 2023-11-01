@@ -36,7 +36,7 @@ The operator's status is set to **Punished**.
 ### Tier 2 operator slashing
 
 If a bridge operator misses more than 30% votes in a day, the operator doesn't
-earn any rewards (commission, staking reward, bridge reward) on that day.
+earn any rewards for the next 5 days.
 The operator's status is set to **Punished**.
 
 <img src={bridSlashTierTwo} width={1224} />

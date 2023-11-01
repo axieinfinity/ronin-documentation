@@ -33,9 +33,9 @@ Generate two private keys as described in [Generate keys](./../../validators/set
 
 Recommended system requirements for running a bridge operator on the mainnet:
 
-* 8-core CPU
-* 32 GB RAM
-* 700 GB high-speed SSD
+* 4-core CPU
+* 8 GB RAM
+* 100 GB high-speed SSD
 * x86-64 architecture
 
 These requirements are rough guidelines, and each node operator

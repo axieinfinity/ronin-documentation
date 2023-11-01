@@ -24,9 +24,9 @@ To run a reliable, performant node on the Ronin mainnet, we suggest that the nod
 
 |   Validator node          |   Non-validator node      |   Archive node         |   Bridge operator         |
 |---------------------------|---------------------------|------------------------|---------------------------|
-|   8-core CPU              |   6-core CPU              |   8-core CPU           |   8-core CPU              |
-|   32 GB RAM               |   25 GB RAM               |   32 GB RAM            |   32 GB RAM               |
-|   700 GB high-speed SSD   |   700 GB high-speed SSD   |   7 TB high-speed SSD  |   700 GB high-speed SSD   |
+|   8-core CPU              |   6-core CPU              |   8-core CPU           |   4-core CPU              |
+|   32 GB RAM               |   25 GB RAM               |   32 GB RAM            |   8 GB RAM                |
+|   700 GB high-speed SSD   |   700 GB high-speed SSD   |   7 TB high-speed SSD  |   100 GB high-speed SSD   |
 |   x86-64 architecture     |   x86-64 architecture     |   x86-64 architecture  |   x86-64 architecture     |
 
 These hardware requirements are rough guidelines, and each node operator should monitor their node to ensure good performance for the intended task. The size of your Ronin node will also grow over time.
