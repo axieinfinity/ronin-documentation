@@ -141,6 +141,9 @@ The size of your node will also grow over time.
         - RONIN_TRANSACTION_CHECK_PERIOD=${RONIN_TRANSACTION_CHECK_PERIOD}
         - RONIN_MAX_PROCESSING_TASKS=${RONIN_MAX_PROCESSING_TASKS}
         - ETHEREUM_GET_LOGS_BATCH_SIZE=${ETHEREUM_GET_LOGS_BATCH_SIZE}
+        - BRIDGE_STATS_URL=${BRIDGE_STATS_URL}
+        - BRIDGE_STATS_NODE_NAME=${BRIDGE_STATS_NODE_NAME}
+        - BRIDGE_STATS_SECRET=${BRIDGE_STATS_SECRET}
       depends_on:
         - db
         - node
@@ -232,6 +235,10 @@ The size of your node will also grow over time.
   CHAIN_STATS_WS_SERVER=ronin-stats-ws.roninchain.com
 
   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
+  
+  BRIDGE_STATS_NODE_NAME=<your_node_name>
+  BRIDGE_STATS_URL=wss://ronin-stats-ws.roninchain.com/bridge
+  BRIDGE_STATS_SECRET=WSyDMrhRBe111
   ```
 
 1. (Optional) Download the snapshot from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot)
