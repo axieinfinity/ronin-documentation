@@ -1,5 +1,7 @@
 ---
 description: Ronin's living white paper.
+tags:
+- decoupling
 ---
 
 # White paper
@@ -152,7 +154,7 @@ While we encourage validators to be online and produce blocks in turn,
 technical issues can still happen. A validator might be well-performing,
 but if their machine suddenly crashes, they get slashed and jailed.
 Ronin's credit score system awards validators with credits that can be
-used to [bail out](./../validators/slashing/bailout.mdx)
+used to [bail out](./../validators/slashing.mdx#bailout)
 of jail in the event of tier 2 validator slashing.
 
 Here's how this system works:
@@ -176,7 +178,7 @@ misses 100 more blocks on the same day, the following penalties apply:
 This time, the validator can't bail out.
 
 :::info Temporary maintenance mode
-Validators can [schedule](./../validators/manage/maintenance.mdx) temporary maintenance, during which they don't get slashed for unavailability.
+Validators can [schedule](./../validators/manage/schedule-maintenance.mdx) temporary maintenance, during which they don't get slashed for unavailability.
 :::
 
 ### Unavailability bridge operator

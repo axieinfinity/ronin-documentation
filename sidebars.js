@@ -36,36 +36,19 @@ const sidebars = {
           id: 'basics/introduction',
         },
         // Key concepts
-        {
-          type: 'doc',
-          label: 'Key concepts',
-          id: 'basics/key-concepts',
-        },
+        'basics/key-concepts',
         // White paper
         'basics/white-paper',
         // Tokenomics
         'basics/tokenomics',
+        // Nodes
+        'basics/nodes',
         // Rewards
         'basics/rewards',
         // Security audits
         'basics/audits',
         // Roles
-        {
-          type: 'category',
-          label: 'Roles',
-          link: {
-            type: 'generated-index',
-            title: 'Roles',
-            description: 'The main actors on Ronin.',
-            slug: '/basics/roles',
-          },
-          items: [
-            // Validator
-            'basics/roles/validator',
-            // Delegator
-            'basics/roles/delegator',
-          ],
-        },
+        'basics/roles',
         // dApps
         {
           type: 'category',
@@ -96,29 +79,36 @@ const sidebars = {
       type: 'category',
       label: 'Delegators',
       link: {
-        type: 'generated-index',
-        description: 'Stake tokens, delegate your stake to validators, and claim rewards.',
-        slug: '/delegators',
+        type: 'doc',
+        id: 'delegators/index',        
       },
       items: [
-        // Buy RON
-        'delegators/onboarding/buy-ron',
         // Become a delegator
         'delegators/onboarding/become-delegator',
-        // Stake
-        'delegators/stake/stake',
-        // Claim rewards
         {
-          type: 'doc',
-          label: 'Claim rewards',
-          id: 'delegators/rewards/claim',
+          type: 'category',
+          label: 'Manage delegator account',
+          link: {
+            type: 'generated-index',
+            title: 'Manage your delegator account', 
+            description: 'Buy RON, increase or withdraw your stake, claim rewards, and more.',
+            slug: '/delegators/manage',
+          },
+          items: [
+            // Buy RON
+            'delegators/manage/buy-ron',
+            // Stake
+            'delegators/manage/increase-withdraw-stake',
+            // Claim rewards
+            'delegators/manage/claim-rewards',
+            // Track validators
+            'delegators/manage/track-validators',
+            // View activity
+            'delegators/manage/view-activity',
+          ],
         },
-        // Track validators
-        'delegators/manage/track',
-        // View activity
-        'delegators/manage/activity',
         // FAQ
-        'delegators/faq',
+        'delegators/delegator-faq',
       ],
     },
     // Validators
@@ -126,137 +116,61 @@ const sidebars = {
       type: 'category',
       label: 'Validators',
       link: {
-        type: 'generated-index',
-        description: 'Register as a validator, stake tokens, claim rewards, and manage your validator profile.',
-        slug: '/validators',
-      },
-      items: [
-        // Become a validator
-        'validators/onboarding/become-validator',
-        // Stake
-        'validators/stake/stake',
-        // Claim rewards
-        'validators/rewards/claim',
-        // Manage your account
-        {
-          type: 'category',
-          label: 'Manage your account',
-          link: {
-            type: 'generated-index',
-            title: 'Manage your account', 
-            description: "Features for managing your validator's account.",
-            slug: '/validators/manage',
-          },
-          items: [
-            // View profile
-            'validators/manage/profile',
-            // Update finality vote key
-            'validators/manage/fast-finality',
-            // Change commission rate
-            'validators/manage/commission',
-            // Schedule maintenance
-            'validators/manage/maintenance',
-            // View analytics
-            'validators/manage/analytics',
-            // View activity
-            'validators/manage/activity',
-            // Renounce role
-            'validators/manage/renounce',
-            // Emergency exit
-            'validators/manage/emergency-exit',
-          ],
-        },
-        // Slashing and bailout
-        {
-          type: 'category',
-          label: 'Slashing',
-          link: {
-            type: 'generated-index',
-            title: 'Slashing',
-            description: 'Learn about the slashing rules and options for a bailout.',
-            slug: '/validators/slashing',
-          },
-          items: [
-            // Slashing
-            'validators/slashing/slashing',
-            // Bailout
-            'validators/slashing/bailout',
-          ],
-        },
-        // Governance
-        {
-          type: 'category',
-          label: 'Governance',
-          link: {
-            type: 'generated-index',
-            title: 'Governance', 
-            description: 'On-chain governance through proposals raised and voted on by Governing Validators.',
-            slug: '/validators/governance',
-          },
-          items: [
-            // Overview
-            'validators/governance/overview',
-            // Create a proposal
-            'validators/governance/create',
-            // Vote on a proposal
-            'validators/governance/vote',
-          ],
-        },
-        // FAQ
-        'validators/faq',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Node operators',
-      link: {
         type: 'doc',
-        id: 'node-operators/index',        
+        id: 'validators/index',        
       },
       items: [
-        // Introduction
-        'node-operators/introduction',
         {
           type: 'category',
-          label: 'Setup',
+          label: 'Run a node',
           link: {
-            type: 'generated-index',
-            title: 'Setup',
-            slug: '/node-operators/mainnet',
-            description: 'Node installation guides for the Ronin mainnet.'
+            type: 'doc',
+            id: 'validators/setup/overview',   
           },
           items: [
-            // Setup introduction
-            'node-operators/setup/introduction',
-            // Latest version
-            'node-operators/setup/latest',
-            // Run a validator and bridge together
-            'node-operators/setup/mainnet/combined',
-            // Run a standalone validator
-            'node-operators/setup/mainnet/validator',
-            // Run a standalone bridge
-            'node-operators/setup/mainnet/bridge',
-            // Run a full node
-            'node-operators/setup/mainnet/non-validator',
-            // Run an archive node
-            'node-operators/setup/mainnet/archive',
+            {
+              type: 'category',
+              label: 'Mainnet',
+              link: {
+                type: 'generated-index',
+                slug: '/validators/setup/mainnet',
+                description: 'Node installation guides for the Ronin mainnet.'
+              },
+              items: [
+                // Run a validator and bridge together
+                'validators/setup/mainnet/run-combined',
+                // Run a validator
+                'validators/setup/mainnet/run-validator',
+                // Run a full node
+                'validators/setup/mainnet/run-non-validator',
+                // Run an archive node
+                'validators/setup/mainnet/run-archive',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Saigon testnet',
+              link: {
+                type: 'generated-index',
+                title: 'Saigon testnet',
+                description: 'Node installation guides for the Saigon testnet.',
+                slug: '/validators/setup/testnet',
+              },
+              items: [
+                // Run a validator and bridge together
+                'validators/setup/testnet/run-combined',
+                // Run a non-validator-node
+                'validators/setup/testnet/run-non-validator',
+                // Run a full archive node
+                'validators/setup/testnet/run-archive',
+              ],
+            },
             // Generate keys
-            'node-operators/setup/generate-keys',
+            'validators/setup/generate-keys',
             // Install Ronin CLI
-            'node-operators/setup/cli',
-          ],
-        },
-        // Resources
-        {
-          type: 'category',
-          label: 'Resources',
-          link: {
-            type: 'generated-index',
-            title: 'Resources',
-            slug: '/node-operators/resources',
-            description: 'Resources for node operators.'
-          },
-          items: [
+            'validators/setup/cli',
+            // Latest version
+            'validators/setup/upgrade-validator',
             // Network parameters
             {
               type: 'category',
@@ -264,46 +178,109 @@ const sidebars = {
               link: {
                 type: 'generated-index',
                 title: 'Network parameters',
-                slug: '/node-operators/resources/parameters',
+                slug: '/validators/setup/parameters',
               },
               items: [
                 // Ronin mainnet
-                'node-operators/resources/parameters/mainnet',
+                'validators/setup/parameters/mainnet',
                 // Saigon testnet
-                'node-operators/resources/parameters/testnet',
+                'validators/setup/parameters/testnet',
               ],
             },
             // Security hardening
-            'node-operators/resources/security',
-            // FAQ
-            'node-operators/resources/faq',
+            'validators/setup/security',
+          ],
+        },
+        // Become a validator
+        'validators/onboarding/become-validator',
+        // Manage your account
+        {
+          type: 'category',
+          label: 'Manage validator account',
+          link: {
+            type: 'generated-index',
+            title: 'Manage your validator account', 
+            description: 'Guides for increasing or withdrawing your stake, claiming rewards, and managing your validator account.',
+            slug: '/validators/manage',
+          },
+          items: [
+            // Add finality vote key
+            'validators/manage/add-finality-vote-key',
+            // Change commission rate
+            'validators/manage/change-commission',
+            // Claim rewards
+            'validators/manage/claim-rewards',
+            // Increase or move stake
+            'validators/manage/increase-withdraw-stake',
+            // Renounce role
+            'validators/manage/renounce-role',
+            // Schedule maintenance period
+            'validators/manage/schedule-maintenance',
+            // Take emergency exit
+            'validators/manage/take-emergency-exit',
+            // View activity
+            'validators/manage/view-activity',
+            // View analytics
+            'validators/manage/view-analytics',
+            // View profile
+            'validators/manage/view-profile',            
+          ],
+        },
+        // Slashing
+        'validators/slashing',
+        // Governance
+        {
+          type: 'category',
+          label: 'Governance',
+          link: {
+            type: 'doc',
+            id: 'validators/governance/overview',        
+          },
+          items: [
+            // Create a proposal
+            'validators/governance/create-proposal',
+            // Vote on a proposal
+            'validators/governance/vote-on-proposal',
+          ],
+        },
+        // FAQ
+        'validators/validator-faq',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Bridge operators',
+      link: {
+        type: 'doc',
+        id: 'bridge-operators/index',   
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Run a node',
+          link: {
+            type: 'doc',
+            id: 'bridge-operators/setup/overview',   
+          },
+          items: [
+            'bridge-operators/setup/run-bridge-operator',
+            'bridge-operators/setup/upgrade-bridge-operator',
           ],
         },
         {
           type: 'category',
-          label: 'Saigon testnet',
+          label: 'Governance',
           link: {
-            type: 'generated-index',
-            title: 'Saigon testnet',
-            description: 'Node installation guides for the Saigon testnet.',
-            slug: '/node-operators/testnet',
+            type: 'doc',
+            id: 'bridge-operators/governance/overview',        
           },
           items: [
-            // Run a validator and bridge together
-            'node-operators/setup/testnet/combined',
-            // Run a non-validator-node
-            'node-operators/setup/testnet/non-validator',
-            // Run a full archive node
-            'node-operators/setup/testnet/archive',
+            'bridge-operators/governance/create-proposal',
+            'bridge-operators/governance/vote-on-proposal',
           ],
         },
+        'bridge-operators/slashing',
       ],
-    },
-    // Developers
-    {
-      type: 'doc',
-      label: 'Developers',
-      id: 'developers/portal',
     },
     // Community
     {

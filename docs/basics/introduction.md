@@ -42,4 +42,4 @@ To increase Ronin's decentralization, we launched an update integrating Delegate
 
 DPoS is a consensus mechanism where token holders delegate their stake to select validators. These validators verify transactions, produce new blocks, and receive rewards for their work. Token holders can vote for themselves or delegate stake to a representative. The more tokens a validator receives, the higher their chance of selection. Rewards for producing blocks are shared between validators and delegators (who delegate stake to validators).
 
-Furthermore, as RON staking is required for validators, we implement [slashing](./../validators/slashing/slashing.mdx) rules to penalize validators who act maliciously. Slashing deters improper behavior by penalizing validators who do not produce new blocks or attempt to cheat the system.
+Furthermore, as RON staking is required for validators, we implement [slashing](./../validators/slashing.mdx) rules to penalize validators who act maliciously. Slashing deters improper behavior by penalizing validators who do not produce new blocks or attempt to cheat the system.
