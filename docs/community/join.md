@@ -12,8 +12,8 @@ Stay informed on the latest Ronin news, events, and programs:
 
 ## Newsletter
 
-Sign up for [Ronin Newsletter](https://blog.roninchain.com)
+Sign up for the [Ronin Newsletter](https://blog.roninchain.com).
 
 ## Support
 
-Visit [Ronin Zendesk](https://support.roninchain.com)
+Visit [Ronin Zendesk](https://support.roninchain.com).
