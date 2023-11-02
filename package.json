@@ -18,6 +18,7 @@
     "@algolia/client-search": "^4.17.0",
     "@docusaurus/core": "^2.4.1",
     "@docusaurus/module-type-aliases": "^2.4.1",
+    "@docusaurus/plugin-client-redirects": "^3.0.0",
     "@docusaurus/plugin-google-gtag": "^2.4.1",
     "@docusaurus/preset-classic": "^2.4.1",
     "@docusaurus/theme-mermaid": "^2.4.1",
