@@ -35,25 +35,17 @@ const config = {
 
   plugins: [
     'docusaurus-plugin-sass',
-    '@docusaurus/plugin-client-redirects',
+    ['@docusaurus/plugin-client-redirects',
     {
-      redirects: [
-        // /docs/ -> /
-        {
-          to: '/',
-          from: '/docs',
-        },
-      ],
       createRedirects(existingPath) {
-        if (existingPath.includes('/docs')) {
-          // Redirect from /docs to /
+        if (existingPath.includes('/')) {
           return [
-            existingPath.replace('/'),
+            '/docs' + existingPath
           ];
         }
         return undefined; // Return a falsy value: no redirect created
       },
-    },
+    },]
   ],
   presets: [
     [
