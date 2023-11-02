@@ -174,16 +174,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Ronin Discord',
+                label: 'Discord',
                 href: 'https://discord.gg/roninnetwork',
               },
               {
-                label: 'Ronin X',
+                label: 'X',
                 href: 'https://twitter.com/ronin_network',
               },
               {
                 type: 'link',
-                label: 'Ronin Newsletter',
+                label: 'Blog',
                 href: 'https://blog.roninchain.com/',
               },
             ],

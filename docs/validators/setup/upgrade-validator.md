@@ -18,7 +18,7 @@ backwards-compatible. If your node fails to upgrade before a hardfork block
 occurs, the data on your node can differ from that on the network. Therefore,
 it's critical to upgrade your node before a hardfork occurs. All Ronin-planned
 hardforks are announced seven days in advance on our
-[Discord](https://discord.gg/roninnetwork) and
+[Discord](https://discord.gg/roninnetwork) server and the
 [Ronin Newsletter](https://blog.roninchain.com).
 
 ## Ronin node
