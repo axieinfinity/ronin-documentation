@@ -13,7 +13,7 @@ const featureList = [
     title: 'Basics',
     Icon: ListViewIcon,
     link: {
-      href: '/docs/basics',
+      href: '/basics',
       title: 'Basics',
     },
     description: <>Learn the basics of Ronin.</>,
@@ -22,7 +22,7 @@ const featureList = [
     title: 'Delegators',
     Icon: CoinIcon,
     link: {
-      href: '/docs/delegators',
+      href: '/delegators',
       title: 'Delegators',
     },
     description: <>Stake RON and delegate your stake to validators to earn rewards.</>,
@@ -32,7 +32,7 @@ const featureList = [
     Icon: BoxTickIcon,
     description: <>Become a validator to earn rewards and secure the network.</>,
     link: {
-      href: '/docs/validators',
+      href: '/validators',
       title: 'Validators',
     },
   },
@@ -41,7 +41,7 @@ const featureList = [
     Icon: SignDirectionIcon,
     description: <>Run a bridge operator node.</>,
     link: {
-      href: '/docs/bridge-operators',
+      href: '/bridge-operators',
       title: 'Bridge operators',
     },
   },
@@ -50,7 +50,7 @@ const featureList = [
     Icon: UserShieldIcon,
     description: <>Join the Ronin community and stay up to date with latest news.</>,
     link: {
-      href: '/docs/community/join',
+      href: '/community/join',
       title: 'Community',
     },
   },

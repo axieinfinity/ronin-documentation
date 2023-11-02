@@ -131,7 +131,7 @@ The size of your Ronin node will also grow over time.
   # Your Ethereum RPC endpoint
   ETHEREUM_ENDPOINT=ETHEREUM_ENDPOINT
 
-  # The latest version of the bridge's image as listed in https://docs.roninchain.com/docs/bridge-operators/setup/upgrade-bridge-operator
+  # The latest version of the bridge's image as listed in https://docs.roninchain.com/bridge-operators/setup/upgrade-bridge-operator
   BRIDGE_IMAGE=BRIDGE_IMAGE
 
   # Your bridge operator private key without the 0x prefix
@@ -162,7 +162,7 @@ The size of your Ronin node will also grow over time.
   BRIDGE_STATS_SECRET=WSyDMrhRBe111
   ```
 
-6. Start the bridge operator
+1. Start the bridge operator
 
   ```
   cd ~/ronin-bridge && docker-compose up -d

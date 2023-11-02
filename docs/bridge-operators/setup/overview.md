@@ -13,8 +13,8 @@ A *bridge operator node* ([GitHub](https://github.com/axieinfinity/bridge-v2)), 
 
 We offer two different methods of installing nodes:
 
-* The [Docker](/docs/tags/docker-mainnet) method describes the installation of Ronin nodes as Docker instances, for those comfortable with Docker.
-* The [CLI](/docs/tags/cli) (command line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build your node using Ronin CLI](./../../validators/setup/cli.md).
+* The [Docker](/tags/docker-mainnet) method describes the installation of Ronin nodes as Docker instances, for those comfortable with Docker.
+* The [CLI](/tags/cli) (command line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build your node using Ronin CLI](./../../validators/setup/cli.md).
 
 ## Next steps
 

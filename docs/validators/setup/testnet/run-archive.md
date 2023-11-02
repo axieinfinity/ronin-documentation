@@ -109,7 +109,7 @@ The size of your Ronin node will also grow over time.
   # The name of your node that you want displayed on https://saigon-stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
 
-  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/validators/setup/upgrade-validator
+  # The latest version of the node's image as listed in https://docs.roninchain.com/validators/setup/upgrade-validator
   NODE_IMAGE=NODE_IMAGE
 
   # The password used to encrypt the node's private key file

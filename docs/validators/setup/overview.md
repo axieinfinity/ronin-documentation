@@ -35,8 +35,8 @@ These hardware requirements are rough guidelines, and each node operator should 
 
 We offer two different methods of installing nodes:
 
-* The [Docker](/docs/tags/docker-mainnet) method describes the installation of Ronin nodes as Docker instances, for those comfortable with Docker. Two different approaches to setting up your nodes using Docker are described in the following sections.
-* The [CLI](/docs/tags/cli) (command line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build your node using Ronin CLI](./../setup/cli.md).
+* The [Docker](/tags/docker-mainnet) method describes the installation of Ronin nodes as Docker instances, for those comfortable with Docker. Two different approaches to setting up your nodes using Docker are described in the following sections.
+* The [CLI](/tags/cli) (command line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build your node using Ronin CLI](./../setup/cli.md).
 
 ### Choose an approach
 
@@ -53,7 +53,7 @@ In a combined setup, the validator and the bridge are defined in the same `docke
 
 Follow this guide for a combined setup:
 <DocCardList items={[
-    findSidebarItem('/docs/validators/setup/mainnet/run-combined'),
+    findSidebarItem('/validators/setup/mainnet/run-combined'),
     ]} />
 
 #### Standalone setup
@@ -64,6 +64,6 @@ In a standalone setup, the validator node and the bridge operator are defined in
 
 Follow these guides for a standalone setup:
 <DocCardList items={[
-    findSidebarItem('/docs/validators/setup/mainnet/run-validator'),
-    findSidebarItem('/docs/bridge-operators/setup/run-bridge-operator'),
+    findSidebarItem('/validators/setup/mainnet/run-validator'),
+    findSidebarItem('/bridge-operators/setup/run-bridge-operator'),
     ]} />

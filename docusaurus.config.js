@@ -11,12 +11,18 @@ const currentYear = new Date().getFullYear()
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ronin Docs',
-  tagline: 'Lets build together',
+  tagline: 'Stake and earn rewards on Ronin',
+  favicon: 'img/favicon.ico',
+
+  // Set the production url of your site here
   url: 'https://docs.roninchain.com',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  
   organizationName: 'axieinfinity', // Usually your GitHub org/user name.
   projectName: 'ronin-documentation', // Usually your repo name.
 
@@ -40,6 +46,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          routeBasePath: '/',
           editUrl: `https://github.com/axieinfinity/ronin-documentation/edit/main`,
           editLocalizedFiles: false,
           editCurrentVersion: false,
@@ -127,32 +134,32 @@ const config = {
           // Get started
           {
             label: 'Get started',
-            to: '/docs/get-started',
+            to: '/get-started',
           },
           // Basics
           {
             label: 'Basics',
-            to: 'docs/basics',
+            to: 'basics',
           },
           // Delegators
           {
             label: 'Delegators',
-            to: 'docs/delegators',
+            to: 'delegators',
           },
           // Validators
           {
             label: 'Validators',
-            to: 'docs/validators',
+            to: 'validators',
           },
           // Bridge operators
           {
             label: 'Bridge operators',
-            to: 'docs/bridge-operators',
+            to: 'bridge-operators',
           },
           // Community
           {
             label: 'Community',
-            to: 'docs/community/join',
+            to: 'community/join',
           },
           // Search
           {
@@ -172,13 +179,13 @@ const config = {
                 href: 'https://discord.gg/roninnetwork',
               },
               {
-                label: 'Ronin Twitter',
+                label: 'Ronin X',
                 href: 'https://twitter.com/ronin_network',
               },
               {
                 type: 'link',
-                label: "Ronin's Newsletter",
-                href: 'https://roninblockchain.substack.com/',
+                label: 'Ronin Newsletter',
+                href: 'https://blog.roninchain.com/',
               },
             ],
           },

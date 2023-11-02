@@ -169,10 +169,10 @@ The size of your node will also grow over time.
   # The name of your node that you want displayed on https://stats.roninchain.com/
   INSTANCE_NAME=INSTANCE_NAME
 
-  # The latest version of the node's image as listed in https://docs.roninchain.com/docs/validators/setup/upgrade-validator
+  # The latest version of the node's image as listed in https://docs.roninchain.com/validators/setup/upgrade-validator
   NODE_IMAGE=NODE_IMAGE
 
-  # The latest version of the bridge's image as listed in https://docs.roninchain.com/docs/bridge-operators/setup/upgrade-bridge-operator
+  # The latest version of the bridge's image as listed in https://docs.roninchain.com/bridge-operators/setup/upgrade-bridge-operator
   BRIDGE_IMAGE=BRIDGE_IMAGE
 
   # Your bridge operator private key without the 0x prefix
