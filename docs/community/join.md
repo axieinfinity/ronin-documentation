@@ -7,13 +7,13 @@ title: Community
 
 Stay informed on the latest Ronin news, events, and programs:
 
-* [Ronin Discord](https://discord.gg/roninnetwork)
-* [Ronin Twitter](https://twitter.com/ronin_network)
+* [Discord](https://discord.gg/roninnetwork)
+* [X](https://twitter.com/ronin_network)
 
-## Newsletter
+## Blog
 
-Sign up to [Ronin's Newsletter](https://roninblockchain.substack.com/)
+Sign up for the [Ronin Newsletter](https://blog.roninchain.com).
 
 ## Support
 
-Visit [Ronin Zendesk](https://support.roninchain.com)
+Visit [Ronin Zendesk](https://support.roninchain.com).

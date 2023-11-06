@@ -1,8 +1,9 @@
 ---
 description: Rewards earned by validators and delegators.
+title: Rewards
 ---
 
-# Rewards
+## Overview
 
 On Ronin, token holders stake their RON to participate in validator selection and in exchange, token holders earn rewards for their service.
 
@@ -73,4 +74,4 @@ Following is a sensitivity analysis of the annual percentage rate (APR) for the 
 
 ## Bridge reward
 
-Ronin allocates 1,000,000 RON to fund the reward for the first year. This reward is divided among bridge operator nodes. After the first year, we plan to separate the bridge from the consensus, that is, validators are not required to run bridge operator nodes.
+Ronin allocates 1,000,000 RON to fund the reward for the first year. This reward is divided among bridge operator nodes.

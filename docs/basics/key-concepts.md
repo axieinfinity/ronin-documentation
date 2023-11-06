@@ -1,6 +1,6 @@
 ---
 description: Key concepts and some examples to help you speak blockchain and Ronin. 
-title: Key concepts
+title: Glossary
 ---
 
 ## A
@@ -41,7 +41,7 @@ Boneh–Lynn–Shacham (BLS) is a digital signature method used for verifying th
 
 The BLS key is what the validator uses to produce finality votes. Validators who produce finality vote receive a reward. If a validator fails to produce a finality vote, no slashing penalty applies.
 
-To attach a BLS key to a validator, either a new validator must be created or an existing validator must be [updated](./../node-operators/setup/generate-keys.md) with this key.
+To attach a BLS key to a validator, either a new validator must be created or an existing validator must be [updated](./../validators/setup/generate-keys.md) with this key.
 
 ### Bridge
 
@@ -49,7 +49,7 @@ A blockchain bridge—also known as a cross-chain bridge—allows independent bl
 
 ### Bridge operator
 
-A bridge operator is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge. On Ronin, each validator is required to run a [bridge operator node](#bridge-operator-node) alongside the [validator node](#validator-node).
+A bridge operator is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge.
 
 ## C
 
@@ -107,6 +107,12 @@ While this varies depending on the blockchain protocol, an epoch generally refer
 
 Ethereum launched in 2015 as a decentralized, blockchain-based global supercomputer to serve as the foundation for an ecosystem of interoperable, decentralized applications (dApps) powered by token economies and smart contracts. Assets and applications designed on Ethereum are built with self-executing smart contracts that remove the need for an intermediary. The network is fueled by its native cryptocurrency ether (ETH), which is used to pay network transaction fees.
 
+## F
+
+### Fast finality
+
+Fast finality refers to the speed at which the finality of a transaction can be determined. In the context of a blockchain, finality refers to the point at which a transaction is considered irrevocable. Once a transaction has achieved finality, it cannot be reversed or altered. On Ronin, fast finality is introduced in [REP-0003: Optimistic Fast Finality](https://github.com/axieinfinity/REPs/blob/main/REP-0003.md#rep-0003-optimistic-fast-finality).
+
 ## G
 
 ### Gas
@@ -152,11 +158,7 @@ On Ronin, the node types are as follows:
 * Bridge operator node
 
 For more information about the Ronin nodes and the bridge operator, see
-[Introduction to nodes](./../node-operators/introduction.md).
-
-### Node operator
-
-A node operator is an individual or institution that sets up and configure nodes for the validator. The node operator and validator might actually be the same person or entity, but this documentation makes a distinction between these roles for clarity. For example, see sections [Node operators](/docs/node-operators) and [Validators](/docs/validators).
+[Nodes](nodes.md).
 
 ## P
 

@@ -1,5 +1,6 @@
 ---
 description: Register as a Validator Candidate.
+title: Register as a validator
 ---
 
 import becomeValidator from './assets/become-validator.png';
@@ -10,14 +11,17 @@ import stepFour from './assets/onboarding-step-4.png'
 import stepFive from './assets/onboarding-step-5.png'
 import stepSix from './assets/onboarding-step-6.png'
 
-# Become a validator
+## Overview
+
 This page explains how to register as a validator on Ronin.
 After following the steps in this guide, you'll become a
 Validator Candidate and have a chance to be selected as a
 Standard Validator on the next day.
 
 ## Validator roles
+
 There are three validator roles:
+
 * **Validator Candidate.** The role you get after following the steps
 in this guide.
 * **Standard Validator.** Every day, at least 10 Validator Candidates
@@ -30,10 +34,11 @@ validators by default, and they account for more than half of the
 total validator set.
 
 ## Prerequisites
-* Prepare at least 250,000 RON for the initial stake.
-* Prepare 100 RON as a starting balance to maintain the bridge. 
+
+Before registering as a Validator Candidate, make sure that you have at least 250,000 RON for the initial stake.
 
 ## Register
+
 1. Go to [Validator Dashboard](https://validator.roninchain.com/) > **Become a Validator**. 
 <img src={becomeValidator} width={1280} />
 
@@ -42,20 +47,16 @@ It's also highly recommended that you read the
 [white paper](./../../basics/white-paper.md).
 <img src={stepOne} width={1280} />
 
-3. Set up your validator and bridge operator nodes.
+3. Set up your validator node.
 <img src={stepTwo} width={1280} />
 
 4. Fill in your addresses and specify the commission rate.
 <img src={stepThree} width={1280} />
 
-5. Deposit 100 RON into the bridge operator address. This address
-is used to automatically sign transactions on the bridge every epoch,
-and having a starting balance there will help you avoid
-[slashing](./../slashing/slashing.mdx#unavailability-bridge-operator)
-if you end up being selected as a validator. 
+5. Provide the initial stake of RON.
 <img src={stepFour} width={1280} />
 
-6. Provide the initial stake of RON.
+6. Enter your fast finality vote key—see [Add finality vote key](./../manage/add-finality-vote-key.mdx) for details.
 <img src={stepFive} width={1280} />
 
 Congratulations, you're now a Validator Candidate.
