@@ -41,9 +41,9 @@ Some RNS names are considered more desirable and valuable than others, and are p
 
 The tier of a domain name is determined by the following formula: `X = 0.5 x domain price + annual renewal fee`. As such, there are three domain tiers:
 
-* Tier 1 (yellow): X >= $200
-* Tier 2 (blue): $200 > X >= $10
-* Tier 3 (green): $10 > X >= 0
+* Tier 1 (yellow): X &#8805; &#36;200
+* Tier 2 (blue): &#36;200 &gt; X &#8805; &#36;10
+* Tier 3 (green): &#36;10 &gt; X &#8805; 0
 
 Only regular and auctioned domains are tiered based on this formula. Protected names also have a color card—purple—but their prices are set by Sky Mavis.
 

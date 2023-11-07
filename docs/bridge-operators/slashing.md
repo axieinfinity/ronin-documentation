@@ -25,7 +25,7 @@ number of the bridge operators' votes.
 
 ### Tier 1 operator slashing
 
-If a bridge operator misses more than 10% votes in a day,
+If a bridge operator misses more than $10\%$ votes in a day,
 the operator doesn't earn the bridge reward on that day.
 The operator's status is set to **Punished**.
 
@@ -33,7 +33,7 @@ The operator's status is set to **Punished**.
 
 ### Tier 2 operator slashing
 
-If a bridge operator misses more than 30% votes in a day, the operator doesn't
+If a bridge operator misses more than $30\%$ votes in a day, the operator doesn't
 earn any rewards for the next 5 days.
 The operator's status is set to **Punished**.
 

@@ -32,8 +32,8 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-loadable": "^5.5.0",
-    "rehype-katex": "5",
-    "remark-math": "^3.0.1",
+    "rehype-katex": "7",
+    "remark-math": "6",
     "sass": "^1.49.9",
     "webpack": "^5.80.0"
   },
