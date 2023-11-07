@@ -12,7 +12,7 @@ This guide shows how to buy a high-value `.ron` name at an auction.
 
 Sky Mavis holds domain auctions for unregistered RNS names that are likely to be highly sought-after, such as `adventure.ron` and `moonshard.ron`.
 
-To participate in a domain auction, participants place bids. If someone outbids you during the auction, your bid is immediately refunded, and you may place another bid.
+To take part in a domain auction, participants place bids. If someone outbids you during the auction, your bid is immediately refunded, and you may place another bid.
 
 When the auction ends, the bidder with the highest bid wins. The winning bid is the price of the domain.
 
@@ -20,9 +20,9 @@ The winner receives the domain and is exempt from renewal fees for the first yea
 
 In RNS, auctioned domains are listed as follows:
 
-* **Awaiting auction:** Domain name is in the auctioned list but no auction is scheduled in the near future.
-* **Upcoming auction:** Domain name doesn't have a starting price yet but the auction's date is announced.
-* **Auctioning:** An action is open and the domain name is open for bidding. If no one places a bid during the auction, the domain's status becomes **Awaiting auction** until another auction opens.
+* **Awaiting auction:** Domain name that's in the auctioned list but does not have a scheduled auction in the near future.
+* **Upcoming auction:** Domain name that doesn't have a starting price yet but has an announced auction date.
+* **Auctioning:** Domain name that's being auctioned and is open for bidding. If no one places a bid during the auction, the domain's status becomes **Awaiting auction** until another auction opens.
 
 ### Renewal fee
 
@@ -52,10 +52,10 @@ Before registering an auctioned domain, install [Ronin Wallet](https://wallet.ro
 ![domain-info](../../assets/auctioned/domain-info.png)
 1. Click **Place a bid** to participate in the auction.
    :::info
-   How much to bid is at your discretion, but there's a minimum markup of 10%. This means 10% of the starting price if you're the first bidder or 10% of the highest bid if you're not. For example, if the starting price is 5 RON, then your bid has to be least 5 RON + 10% of 5 RON = 5.5 RON.
+   How much to bid is up to you, but there's a minimum markup of 10%. This means 10% of the starting price if you're the first bidder or 10% of the highest bid if you're not. For example, if the starting price is 5 RON, then your bid has to be least 5 RON + 10% of 5 RON = 5.5 RON.
    :::
    ![place-bid](../../assets/auctioned/place-bid.png)
-1. Enter your bid amount (1) and click **Place a bid** (2) to make payment.
+2. Enter your bid amount (1) and click **Place a bid** (2) to make payment.
 ![confirm-bid](../../assets/auctioned/confirm-bid.png)
 1. Your bid is now placed and locked until the auction ends. To keep track of your bid and the auction in general, download the Ronin Wallet app and enable notifications.
 ![success](../../assets/auctioned/success.png)
@@ -64,7 +64,7 @@ If you win the auction, your bid is transferred to the RNS registrar and you bec
 
 ## Track your biddings
 
-If you placed a bid on an RNS name at placed bids to Go to **My account > My biddings** to view all your biddings and their status. If the bid is active, then you're the leading bidder. If you're outbid, you lose the auction and the bid is refunded.
+To view your biddings and their status, go to **My account > My biddings**. If the bid is active, then you're the leading bidder. If you're outbid, you lose the auction and the bid is refunded.
 
 ![biddings](../../assets/auctioned/biddings.png)
 

@@ -30,8 +30,8 @@ The price of an RNS domain name depends on the following factors:
 
 * **Renewal fee:** A fee charged for the registration duration, in years. This is a fixed fee based on the length of the domain name, applying only to regular and protected names. For protected names, Sky Mavis sets the amount individually for each registrant.
 * Additional fees applied to auctioned domains:
-  * **Domain price:** The price for an auctioned domain is set by the market during the auction: the first participant makes a starting bid, then someone else makes a higher bid, and so on.
-  * **Reservation fee**: 15% of the auctioned domain's price. This fee applies only to auctioned names and is charged when you renew the domain name after it expires.
+  * **Domain price:** Set by the market during the auction. The first participant makes a starting bid, then someone else makes a higher bid, and so on.
+  * **Reservation fee:** 15% of the auctioned domain's price. This fee applies only to auctioned names and is charged when you renew the domain name after it expires.
 
 ## Domain tiers
 
