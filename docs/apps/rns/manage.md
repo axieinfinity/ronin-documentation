@@ -10,7 +10,7 @@ After you registered your RNS name, managing it is easy. In your account, select
 
 ![my-domains](assets/manage/my-domains.png)
 
-Click **Manage** on a domain to open its management page. From there, you can set the domain as primary and extend your domain's registration period.
+Click **Manage** on a domain to open its management page. From there, you can set this domain as primary and renew its registration.
 
 ![manage-domain](assets/manage/manage-domain.png)
 
@@ -54,15 +54,15 @@ To remove your primary name, select the domain and click **Remove**. After you r
 
 ![remove](assets/manage/remove-primary.png)
 
-## Extend your registration
+## Renew your domain
 
 ### Grace period
 
-You can extend your domain's registration period at any time during the existing registration and within 90 days after it expires, which known as the *grace period*. During the grace period, the domain name is reserved only for its previous owner to renew it, and it can't be set as primary. 
+You can renew your domain's registration at any time during the existing registration and within 90 days after it expires, also known as the *grace period*. During the grace period, the domain name is reserved only for its previous owner to renew it, and it can't be set as primary.
 
 After the grace period, the domain name becomes available for anyone to register. The domain may still appear in your domain list, but you are no longer the owner. However, you can buy the domain back at any time.
 
-### Extend a regular or protected name
+### Renew a regular or protected name
 
 :::tip
 To quickly renew your primary name, go to your account, then **My domains > Extend**.
@@ -76,11 +76,11 @@ To quickly renew your primary name, go to your account, then **My domains > Exte
 1. Sign the transaction to make payment. Your RNS name registration is successfully renewed.
 ![success-extend](assets/manage/success-extend.png)
 
-### Extend an auctioned name
+### Renew an auctioned name
 
 1. On the **My domains** tab, locate the auctioned domain name that you want to renew, and then click **Extend**..
 ![find-extend-auctioned](assets/manage/find-extend-auctioned.png)
-1. Select the number of years of registration you want to purchase. You can renew an auctioned domain for up to 3 years at a time, depending on the current expiration date. For example, if you just won the domain at an auction, it comes with a 1-year registration. You can immediately renew this domain for another 2 years, for the total of 3 years. 
+1. Select the number of years of registration you want to purchase. You can renew an auctioned domain for up to 3 years at a time, depending on the current expiration date. For example, if you just won the domain at an auction, it comes with a 1-year registration. You can immediately renew this domain for another 2 years, for the total of 3 years.
 ![extend-auctioned-duration](assets/manage/extend-auctioned-duration.png)
 1. Review the total amount payable, which includes the following:
    * Renewal fee times the requested number of years.
@@ -98,4 +98,4 @@ You can add any RNS name to favorites to keep track of its status, for example. 
 
 ## See also
 
-* [Trade](./trade.md)
+* [Trade RNS names](./trade.md)

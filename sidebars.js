@@ -57,14 +57,14 @@ const sidebars = {
       label: 'Apps',
       link: {
         type: 'generated-index',
-        description: 'Apps in the Ronin ecosystem.',
+        description: 'Documentation for apps in the Ronin ecosystem.',
         slug: '/apps',
       },
       items: [
         // RNS
         {
           type: 'category',
-          label: 'RNS',
+          label: 'Ronin Name Service',
           link: {
             type: 'doc',
             id: 'apps/rns/overview', 
@@ -91,6 +91,8 @@ const sidebars = {
             'apps/rns/manage',
             // Trade RNS names
             'apps/rns/trade',
+            // RNS FAQ
+            'apps/rns/reference/faq',
           ],
         },
         // Ronin Bridge

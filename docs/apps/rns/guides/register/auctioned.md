@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 This guide shows how to buy a high-value `.ron` name at an auction.
 
-Ronin Name Service (RNS) holds domain auctions for unregistered names that are likely to receive high interest, such as `adventure.ron` and `moonshard.ron`.
+Sky Mavis holds domain auctions for unregistered RNS names that are likely to be highly sought-after, such as `adventure.ron` and `moonshard.ron`.
 
 To participate in a domain auction, participants place bids. If someone outbids you during the auction, your bid is immediately refunded, and you may place another bid.
 
@@ -18,9 +18,7 @@ When the auction ends, the bidder with the highest bid wins. The winning bid is 
 
 The winner receives the domain and is exempt from renewal fees for the first year. After winning the domain, the owner can extend its registration.
 
-### Statuses
-
-In the RNS app, auctioned names have the following statuses:
+In RNS, auctioned domains are listed as follows:
 
 * **Awaiting auction:** Domain name is in the auctioned list but no auction is scheduled in the near future.
 * **Upcoming auction:** Domain name doesn't have a starting price yet but the auction's date is announced.
@@ -38,7 +36,7 @@ Following is the renewal fee range for auctioned RNS names.
 
 ## Before you start
 
-Before registering a regular domain, install [Ronin Wallet](https://wallet.roninchain.com) and create an account.
+Before registering an auctioned domain, install [Ronin Wallet](https://wallet.roninchain.com) and create an account.
 
 ## Register an auctioned domain
 
