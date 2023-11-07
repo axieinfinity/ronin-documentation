@@ -1,8 +1,6 @@
 ---
 description: List of frequently asked questions for delegators.
 title: Delegator FAQ
-tags:
-- decoupling
 ---
 
 ## 1. What if my delegated validator is slashed? {#1}

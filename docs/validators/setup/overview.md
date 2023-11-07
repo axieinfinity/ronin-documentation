@@ -1,8 +1,6 @@
 ---
 description: Hardware recommendations and methods of installation for validator nodes.
 title: Validator node
-tags:
-- decoupling
 ---
 
 import DocCardList from '@theme/DocCardList';

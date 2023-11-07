@@ -1,5 +1,5 @@
 ---
-title: Ronin Bridge
+title: Bridge
 description: Transfer tokens between Ethereum and Ronin.
 ---
 

@@ -1,8 +1,6 @@
 ---
 description: Hardware recommendations and methods of installation for bridge operator nodes.
 title: Bridge operator node
-tags:
-- decoupling
 ---
 
 ## Overview

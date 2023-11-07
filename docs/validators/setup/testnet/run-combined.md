@@ -3,7 +3,6 @@ description: Run a testnet validator and bridge operator on one machine using Do
 title: Run a validator and bridge operator together
 tags:
 - docker-testnet
-- decoupling
 ---
 
 ## Overview

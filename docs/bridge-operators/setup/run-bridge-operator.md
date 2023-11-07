@@ -3,7 +3,6 @@ description: Run a bridge operator node on the Ronin mainnet.
 title: Run a bridge operator
 tags:
 - docker-mainnet
-- decoupling
 ---
 
 ## Overview

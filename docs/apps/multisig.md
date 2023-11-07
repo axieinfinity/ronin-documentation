@@ -1,5 +1,5 @@
 ---
-title: Ronin Safe
+title: Multisig Wallet
 description: Confirm transactions with multiple parties for increased security.
 ---
 
