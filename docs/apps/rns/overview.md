@@ -19,10 +19,10 @@ By using your RNS name instead of your Ronin address, you can send funds and NFT
 
 There are four categories of domain names in RNS:
 
-* **Regular names:** Unregistered domain names, available on a first-come, first-served basis, with an annual renewal fee.
-* **Auctioned names:** RNS names that may be highly sought after, such as `adventure.ron` and `moonshard.ron`. Such names are distributed at auctions where the highest bidder wins.
-* **Protected names:** Names reserved for official partners and some key community members. For example, Sky Mavis makes sure that `battlebears.ron` isn't available to anyone—except the Battle Bears team. This protects our communities from bad actors.
-* **Blacklisted names:** Names with negative connotations, sensitive themes, or deceptive potential. Such names aren't available for registration.
+* **Regular names:** These unregistered domain names, available on a first-come, first-served basis, come with an annual renewal fee.
+* **Auctioned names:** These highly sought-after RNS names, such as `adventure.ron` and `moonshard.ron`, are distributed through auctions where the highest bidder wins.
+* **Protected names:** Names reserved for official partners and key community members. For instance, Sky Mavis ensures that `battlebears.ron` remains exclusive to the Battle Bears team, safeguarding our communities from malicious actors.
+* **Blacklisted names:** Names with negative connotations, sensitive themes, or deceptive potential that aren't available for registration.
 
 ## Domain price
 
