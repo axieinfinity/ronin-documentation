@@ -15,6 +15,10 @@ Ronin Name Service (RNS) is a distributed naming system based on the Ronin block
 
 By using your RNS name instead of your Ronin address, you can send funds and NFTs to a human-readable name vs. the long string of numbers and characters. RNS is integrated with games, wallets, and dApps, making your `.ron` domain name a unique callsign across the entire Ronin ecosystem.
 
+:::info Developer documentation
+Looking to use RNS in your dApp? Visit our [developer documentation](https://docs.skymavis.com/ronin/rns).
+:::
+
 ## Domain name categories
 
 There are four categories of domain names in RNS:
