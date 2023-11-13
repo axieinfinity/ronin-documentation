@@ -14,7 +14,7 @@ In Ronin Name Service (RNS), regular names are available on a first-come, first-
 
 ### Renewal fee
 
-Following is the renewal fee range for regular RNS names.
+Following is the annual renewal fee for regular RNS names.
 
 | Name length | Renewal fee |
 |---|---|

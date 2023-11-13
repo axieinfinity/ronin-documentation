@@ -26,7 +26,7 @@ In RNS, auctioned domains are listed as follows:
 
 ### Renewal fee
 
-Following is the renewal fee range for auctioned RNS names.
+Following is the annual renewal fee for auctioned RNS names.
 
 | Name length | Renewal fee |
 |---|---|
@@ -36,7 +36,7 @@ Following is the renewal fee range for auctioned RNS names.
 
 ### Starting price
 
-The starting price of an auctioned domain is calculated in RON. Internally, it's $5 for 5-character, $100 for 4-character, and $300 for 3-character names. RNS, however, converts the USD value to RON using the RON moving average price for the last 7 days, by the time auction starts.
+The starting price of an auctioned domain is calculated in RON. Internally, it's \$5 for 5-character names and above, \$100 for 4-character names, and \$300 for 3-character names. Externally, RNS converts the USD value to RON using the RON [moving average](https://en.wikipedia.org/wiki/Moving_average) price for the last 7 days, by the time auction starts.
 
 ## Before you start
 
