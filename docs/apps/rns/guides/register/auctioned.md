@@ -36,7 +36,7 @@ Following is the annual renewal fee for auctioned RNS names.
 
 ### Starting price
 
-The starting price of an auctioned domain is calculated in RON. Internally, it's \$5 for 5-character names and above, \$100 for 4-character names, and \$300 for 3-character names. Externally, RNS converts the USD value to RON using the RON [moving average](https://en.wikipedia.org/wiki/Moving_average) price for the last 7 days, by the time auction starts.
+The starting price of an auctioned domain is calculated in RON. Internally, it's \$5 for five-character names and above, \$100 for four-character names, and \$300 for three-character names. Externally, RNS converts the USD value to RON using the RON [moving average](https://en.wikipedia.org/wiki/Moving_average) price for the last 7 days, by the time auction starts.
 
 ## Before you start
 

@@ -39,19 +39,23 @@ The price of an RNS domain name depends on the following factors:
 
 ## Domain tiers
 
-RNS employs *domain tiers* to indicate the rarity of a domain name, which is determined by the characters that make up the name, and its value, which is determined by market price.
+RNS uses *domain tiers* to indicate the rarity and value of domain names based on their character composition and market price.
 
-You can quickly see the domain's tier based on its color card, which can be yellow, blue, or green.
+The domain's tier is easily identified by its color card, which can be yellow, blue, or green. Domain tiers apply to all RNS names except protected names and special names, such as those owned by active creators, community members, and Mystic owners. These special domain names also have a unique color card—purple—but their prices are directly set by Sky Mavis.
 
 ![tiers](assets/domain-tiers.png)
 
-The tier of a domain is determined by the following formula: `X = 0.5 x domain price + annual renewal fee`. As such, there are three tiers:
+The domain's tier is determined using the following formula: `X = 0.5 x domain price + annual renewal fee`. As such, there are three tiers:
 
 * Tier 1 (yellow): X &#8805; &#36;200
-* Tier 2 (blue): &#36;200 &gt; X &#8805; &#36;10
-* Tier 3 (green): &#36;10 &gt; X &#8805; 0
+* Tier 2 (blue): &#36;200 &gt; X &#8805; &#36;50
+* Tier 3 (green): &#36;50 &gt; X &#8805; 0
 
-Domain tiers apply to all RNS names except protected names and special names, such as active creators, communnity members, and Mystic owners. Such domain names also have a color card—purple—but their prices are set by Sky Mavis.
+Each tier typically contains the following groups of domains:
+
+* Tier 1: This tier includes three-character names, auctioned names with the value of X of at least $200, and some community and creator names.
+* Tier 2: This tier comprises two-character names and auctioned names with the value of X between $50 and $200.
+* Tier 3: The remaining RNS names fall into this tier.
 
 ## Next steps
 

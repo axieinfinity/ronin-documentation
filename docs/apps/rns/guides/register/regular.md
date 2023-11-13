@@ -28,7 +28,7 @@ Following are the guidelines to be observed when choosing an RNS name:
 
 * Domains can contain the English-language letters a-z, and the digits 0-9.
 * Hyphens can also be used but not at the beginning and at the end of a domain name. Two hyphens together aren't permitted either.
-* The minimum length is 3 characters.
+* The minimum length is three characters.
 * Domain names are case-sensitive and can only contain lowercase letters.
 
 ## Before you start
