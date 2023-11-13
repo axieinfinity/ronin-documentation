@@ -16,7 +16,7 @@ Ronin Name Service (RNS) is a distributed naming system based on the Ronin block
 By using your RNS name instead of your Ronin address, you can send funds and NFTs to a human-readable name vs. the long string of numbers and characters. RNS is integrated with games, wallets, and dApps, making your `.ron` domain name a unique callsign across the entire Ronin ecosystem.
 
 :::info Developer documentation
-Looking to use RNS in your dApp? Visit our [developer documentation](https://docs.skymavis.com/ronin/rns).
+Looking to use RNS in your dApp? Visit [RNS developer documentation](https://docs.skymavis.com/ronin/rns).
 :::
 
 ## Domain name categories
@@ -39,17 +39,19 @@ The price of an RNS domain name depends on the following factors:
 
 ## Domain tiers
 
-Some RNS names are considered more desirable and valuable than others, and are priced to be more expensive based on market demand. To distinguish these domains, we use the concept of *domain tiers*. You can quickly see the domain's tier based on its color card, which can be yellow, blue, or green.
+RNS employs *domain tiers* to indicate the rarity of a domain name, which is determined by the characters that make up the name, and its value, which is determined by market price.
+
+You can quickly see the domain's tier based on its color card, which can be yellow, blue, or green.
 
 ![tiers](assets/domain-tiers.png)
 
-The tier of a domain name is determined by the following formula: `X = 0.5 x domain price + annual renewal fee`. As such, there are three domain tiers:
+The tier of a domain is determined by the following formula: `X = 0.5 x domain price + annual renewal fee`. As such, there are three tiers:
 
 * Tier 1 (yellow): X &#8805; &#36;200
 * Tier 2 (blue): &#36;200 &gt; X &#8805; &#36;10
 * Tier 3 (green): &#36;10 &gt; X &#8805; 0
 
-Only regular and auctioned domains are tiered based on this formula. Protected names also have a color card—purple—but their prices are set by Sky Mavis.
+Domain tiers apply to all RNS names except protected names and special names, such as active creators, communnity members, and Mystic owners. Such domain names also have a color card—purple—but their prices are set by Sky Mavis.
 
 ## Next steps
 

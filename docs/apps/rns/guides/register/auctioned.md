@@ -34,6 +34,10 @@ Following is the renewal fee range for auctioned RNS names.
 | 4 characters | $100/year |
 | 3 characters | $300/year |
 
+### Starting price
+
+The starting price of an auctioned domain is calculated in RON. Internally, it's $5 for 5-character, $100 for 4-character, and $300 for 3-character names. RNS, however, converts the USD value to RON using the RON moving average price for the last 7 days, by the time auction starts.
+
 ## Before you start
 
 Before registering an auctioned domain, install [Ronin Wallet](https://wallet.roninchain.com) and create an account.
@@ -48,14 +52,14 @@ Before registering an auctioned domain, install [Ronin Wallet](https://wallet.ro
 ![collection-details](../../assets/auctioned/collection-details.png)
    Alternatively, you can enter the domain name in the search field on the home page of the RNS app.
    ![choose](../../assets/auctioned/choose.png)
-1. The info page displays the starting price of the domain (1), the current highest bidder (2), and the history of bids (3).
+1. The info page displays the [starting price](#starting-price) of the domain (1), the current highest bidder (2), and the history of bids (3).
 ![domain-info](../../assets/auctioned/domain-info.png)
 1. Click **Place a bid** to participate in the auction.
    :::info
    How much to bid is up to you, but there's a minimum markup of 10%. This means 10% of the starting price if you're the first bidder or 10% of the highest bid if you're not. For example, if the starting price is 5 RON, then your bid has to be least 5 RON + 10% of 5 RON = 5.5 RON.
    :::
    ![place-bid](../../assets/auctioned/place-bid.png)
-2. Enter your bid amount (1) and click **Place a bid** (2) to make payment.
+1. Enter your bid amount (1) and click **Place a bid** (2) to make payment.
 ![confirm-bid](../../assets/auctioned/confirm-bid.png)
 1. Your bid is now placed and locked until the auction ends. To keep track of your bid and the auction in general, download the Ronin Wallet app and enable notifications.
 ![success](../../assets/auctioned/success.png)
