@@ -53,8 +53,8 @@ The domain's tier is determined using the following formula: `X = 0.5 x domain p
 
 Each tier typically contains the following groups of domains:
 
-* Tier 1: This tier includes three-character names, auctioned names with the value of X of at least $200, and some community and creator names.
-* Tier 2: This tier comprises two-character names and auctioned names with the value of X between $50 and $200.
+* Tier 1: This tier includes three-character names, auctioned names with the value of X of at least \$200, and some community and creator names.
+* Tier 2: This tier comprises two-character names and auctioned names with the value of X between \$50 and \$200.
 * Tier 3: The remaining RNS names fall into this tier.
 
 ## Next steps
