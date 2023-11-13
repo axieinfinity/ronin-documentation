@@ -37,11 +37,11 @@ Before registering a regular domain, install [Ronin Wallet](https://wallet.ronin
 
 ## Register a regular domain
 
-1. Open the [RNS app](https://id.roninchain.com).
-![search](../../assets/regular/search.png)
+1. Open the [RNS app](https://id.roninchain.com) and connect your Ronin Wallet.
+![connect-wallet](../../assets/regular/connect-wallet.png)
 1. Search for the domain you want to register, and then select it to open the domain info page.
-![choose](../../assets/regular/choose.png)
-1. The info page displays the renewal fee, domain tier, as well as other details. Click **Register now** to begin. The RNS registrar requires two transactions to register a regular name: request and registration.
+![search](../../assets/regular/search.png)
+1. The info page displays the renewal fee, domain tier, as well as other details. Click **Register now** to begin. The RNS registrar requires two transactions to register a regular name: *request transaction* and *registration transaction*.
 ![domain-info](../../assets/regular/domain-info.png)
 1. At the request transaction, select the duration of your registration period in years (1).
    :::tip

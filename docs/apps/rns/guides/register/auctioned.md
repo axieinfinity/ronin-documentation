@@ -44,14 +44,14 @@ Before registering an auctioned domain, install [Ronin Wallet](https://wallet.ro
 
 ## Register an auctioned domain
 
-1. Open the [RNS app](https://id.roninchain.com).
-![search](../../assets/auctioned/search.png)
+1. Open the [RNS app](https://id.roninchain.com) and connect your Ronin Wallet.
+![connect-wallet](../../assets/auctioned/connect-wallet.png)
 1. Select the **Collections** page (1) and browse the available collections (2).
 ![collections](../../assets/auctioned/collections.png)
 1. Select the domain you like from any collection to open the domain info page.
 ![collection-details](../../assets/auctioned/collection-details.png)
    Alternatively, you can enter the domain name in the search field on the home page of the RNS app.
-   ![choose](../../assets/auctioned/choose.png)
+   ![search](../../assets/auctioned/search.png)
 1. The info page displays the [starting price](#starting-price) of the domain (1), the current highest bidder (2), and the history of bids (3).
 ![domain-info](../../assets/auctioned/domain-info.png)
 1. Click **Place a bid** to participate in the auction.
