@@ -191,7 +191,7 @@ docker-compose logs node | head -n 20
 
 Verify that the account address in the response matches your registered consensus address.
 
-```
+```bash
 node       | Using account acf8bf98d1632e602d0b1761771049af21dd6597
 ```
 
