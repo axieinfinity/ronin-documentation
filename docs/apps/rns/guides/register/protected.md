@@ -15,7 +15,7 @@ Protected names, which are reserved by Sky Mavis for its official partners and k
 Sky Mavis provides direct support to prevent anyone from squatting or misusing your protected name. Renewal fees for protected RNS names are fixed and not affected by the market.
 
 :::caution
-As long as the owner doesn't sell or transfer their RNS name to another wallet, the name and its annual fee are protected. If the name is sold or transferred, it's no longer considered *protected*, but its renewal fee remains unchanged.
+As long as the owner doesn't sell or transfer their RNS name to another wallet, the name and its annual fee are protected. If the name is sold or transferred, it loses its *protected* status, though the renewal fee remains unchanged.
 :::
 
 ## Before you start
