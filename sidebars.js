@@ -35,6 +35,8 @@ const sidebars = {
           label: 'Introduction to Ronin',
           id: 'basics/introduction',
         },
+        // Buy RON
+        'basics/buy-ron',
         // Key concepts
         'basics/key-concepts',
         // White paper
@@ -128,8 +130,6 @@ const sidebars = {
             slug: '/delegators/manage',
           },
           items: [
-            // Buy RON
-            'delegators/manage/buy-ron',
             // Stake
             'delegators/manage/increase-withdraw-stake',
             // Claim rewards
