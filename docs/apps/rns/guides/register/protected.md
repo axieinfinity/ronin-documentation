@@ -12,11 +12,15 @@ This guide shows how to register a protected `.ron` domain name.
 
 Protected names, which are reserved by Sky Mavis for its official partners and key community members, are not available to anyone else. In RNS, these names are listed as **Protected**.
 
-Sky Mavis provides direct support to prevent anyone from squatting or misusing your protected name. Renewal fees for protected RNS names are fixed and not affected by the market.
+Sky Mavis provides direct support to prevent anyone from squatting or misusing your protected name.
 
 :::caution
 As long as the owner doesn't sell or transfer their RNS name to another wallet, the name and its annual fee are protected. If the name is sold or transferred, it loses its *protected* status, though the renewal fee remains unchanged.
 :::
+
+### Renewal fee
+
+The annual renewal fees for protected RNS names are predetermined and are not affected by market fluctuations.
 
 ## Before you start
 
