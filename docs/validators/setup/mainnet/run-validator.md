@@ -62,7 +62,7 @@ The size of your node will also grow over time.
 
 3. Paste the following into `docker-compose.yml`:
 
-   ```bash
+   ```yaml
    version: "3"
    services:
      node:
@@ -83,7 +83,6 @@ The size of your node will also grow over time.
          - SYNC_MODE=full
          - PASSWORD=${PASSWORD}
          - PRIVATE_KEY=${VALIDATOR_PRIVATE_KEY}
-         - BOOTNODES=${BOOTNODES}
          - NETWORK_ID=${NETWORK_ID}
          - RONIN_PARAMS=${RONIN_PARAMS}
          - VERBOSITY=${VERBOSITY}
@@ -98,7 +97,7 @@ The size of your node will also grow over time.
          - BLS_SHOW_PRIVATE_KEY=${BLS_SHOW_PRIVATE_KEY}
    ```
 
-   This compose file defines the `node` service, which pulls the Ronin node image from the GitHub Container Registry.  
+   This compose file defines the `node` service, which pulls the Ronin node image from the GitHub Container Registry.
 4. Create an `.env` file to store configuration parameters for the service:
 
    ```bash
@@ -141,7 +140,6 @@ The size of your node will also grow over time.
  
    MINE=true
  
-   BOOTNODES=enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303
    NETWORK_ID=2020
    GASPRICE=20000000000
    VERBOSITY=3
@@ -149,21 +147,14 @@ The size of your node will also grow over time.
    CHAIN_STATS_WS_SECRET=WSyDMrhRBe111
    CHAIN_STATS_WS_SERVER=ronin-stats-ws.roninchain.com
  
-   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000
+   RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000 --discovery.dns enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com
    ```
 
-   An alternative to setting the boot node is to use  node discovery via DNS (see [REP-0005](https://github.com/axieinfinity/REPs/blob/main/REP-0005.md)). In the `.env` file, make the following changes:
-     1. Delete the `BOOTNODES=...` line.
-     2. Append `--discovery.dns enrtree://...` at the end of the `RONIN_PARAMS` line.
-
-   We provide a DNS node list for node operators:
-   * Saigon testnet: `enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com`
-   * Mainnet: `enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com`
-6. (Optional) Download the snapshot from [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot)
+6. (Optional) Download the snapshot from the [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repo:
 
    ```bash
    cd ~/ronin/chaindata/data/ronin/
-   wget -q -O - <snapshot URL> | tar -I zstd -xvf -
+   wget -q -O - <snapshot URL from the README file in the repo> | tar -I zstd -xvf -
    ```
 
 7. Start the node:
@@ -192,7 +183,7 @@ docker-compose logs node | head -n 20
 Verify that the account address in the response matches your registered consensus address.
 
 ```bash
-node       | Using account acf8bf98d1632e602d0b1761771049af21dd6597
+node | Using account acf8bf98d1632e602d0b1761771049af21dd6597
 ```
 
 Also, check the node's availability on
