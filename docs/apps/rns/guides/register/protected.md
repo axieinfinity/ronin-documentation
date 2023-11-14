@@ -48,12 +48,7 @@ You can now see your unique RNS name everywhere across the Ronin ecosystem. To v
 
 ### Non-verified business
 
-As a non-verified business looking to register a protected RNS name with Sky Mavis, you can provide us the following information:
-
-* DNS TXT record
-* Trademark documentation
-
-To begin verification, send an email to [info@skymavis.com](mailto:info@skymavis.com).
+To verify your business for a protected name registration, send an email to [info@skymavis.com](mailto:info@skymavis.com) and we'll guide you through the process.
 
 ## See also
 
