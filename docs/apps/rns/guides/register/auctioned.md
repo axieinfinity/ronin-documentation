@@ -16,7 +16,7 @@ To take part in a domain auction, participants place bids. If someone outbids yo
 
 When the auction ends, the bidder with the highest bid wins. The winning bid is the price of the domain.
 
-The winner receives the domain and is exempt from renewal fees for the first year. After winning the domain, the owner can extend its registration.
+The winner receives the domain and is exempt from paying the renewal fee for the first year. After winning the domain, the owner can extend its registration.
 
 In RNS, auctioned domains are listed as follows:
 
@@ -64,7 +64,7 @@ Before registering an auctioned domain, install [Ronin Wallet](https://wallet.ro
 1. Your bid is now placed and locked until the auction ends. To keep track of your bid and the auction in general, download the Ronin Wallet app and enable notifications.
 ![success](../../assets/auctioned/success.png)
 
-If you win the auction, your bid is transferred to the RNS registrar and you become the owner of the domain name for 1 year.
+If you win the auction, your bid is transferred to the RNS registrar, and you become the owner of the domain name without having to pay the renewal fee for the first year.
 
 ## Track your biddings
 
