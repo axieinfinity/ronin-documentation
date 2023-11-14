@@ -2,8 +2,6 @@
 description: Home of the Ronin Name Service (RNS) documentation.
 slug: /apps/rns
 title: RNS
-toc_min_heading_level: 2
-toc_max_heading_level: 2
 ---
 
 ## Overview

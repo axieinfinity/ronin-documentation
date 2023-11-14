@@ -2,8 +2,6 @@
 description: Register a protected RNS domain name for your business.
 slug: /apps/rns/register/protected
 title: Register a protected RNS name
-toc_min_heading_level: 2
-toc_max_heading_level: 2
 ---
 
 ## Overview
