@@ -74,4 +74,4 @@ To view your biddings and their status, go to **My account > My biddings**. If t
 
 ## See also
 
-* [Extend your registration](./../../manage.md#extend-your-registration)
+* [Manage your RNS names](./../../manage.md)
