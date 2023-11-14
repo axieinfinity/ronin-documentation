@@ -2,8 +2,6 @@
 title: Slashing for validators
 sidebar_label: Slashing rules
 description: List of slashing rules that apply to validators and instructions for bailing out of jail. 
-tags:
-- decoupling
 ---
 
 import doubleSign from './assets/double-sign.png';
@@ -81,7 +79,7 @@ The validator's status is set to **Punished**.
 If a validator misses more than 500 blocks in a day, the following penalties apply:
 * The validator doesn't earn commission and the staking reward on that day.
 * The validator is slashed 1,000 of self-delegated RON.
-* The validator is jailed for $\approx$ 2 days (57,600 blocks) and is
+* The validator is jailed for about 2 days (57,600 blocks) and is
 banned from the validator set while in jail.
 
 The validator's status is set to **In Jail**. If the validator
@@ -95,7 +93,7 @@ After getting bailed out, if the validator
 misses 100 more blocks on the same day, the following penalties apply:
 * The reward after bailout is removed.
 * The validator is slashed 1,000 of self-delegated RON.
-* The validator is jailed for $\approx$ 2 days (57,600 blocks).
+* The validator is jailed for about 2 days (57,600 blocks).
 
 The validator's status is set to **In Jail**, and this time,
 the validator can't bail out.
@@ -164,9 +162,9 @@ self-stake amount.
 2. Locate the warning banner and select **Bail out**.
 <img src={stepOne} width={1224} /> 
 
-3. Review the terms of bailout submit the request. 
+3. Review the terms of bailout and click **Submit**. 
 <img src={stepTwo} width={400} />
 
-If you bail out on the same day you got slashed, you still receive 50%
+If you bail out on the same day you got slashed, you still receive $50\%$
 of the commission and staking reward from the time you bailed
 out until the end of the day.

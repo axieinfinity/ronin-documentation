@@ -6,7 +6,7 @@ description: What is Ronin?
 
 ## What is Ronin?
 
-Ronin is an EVM blockchain specifically forged for gaming. Launched by Sky Mavis, the creator of Web3’s breakout title Axie Infinity which has generated over $1.3B in revenue, Ronin is the only blockchain proven to scale a single game to accommodate millions of daily active users and has processed over $4B in NFT volumes. Ronin optimizes for near-instant transactions and negligible fees that enable millions of in-game transactions to occur seamlessly, making it the leading choice for Web3 games.
+Ronin is an EVM blockchain specifically forged for gaming. Launched by Sky Mavis, the creator of Web3’s breakout title Axie Infinity which has generated over &#36;1.3B in revenue, Ronin is the only blockchain proven to scale a single game to accommodate millions of daily active users and has processed over &#36;4B in NFT volumes. Ronin optimizes for near-instant transactions and negligible fees that enable millions of in-game transactions to occur seamlessly, making it the leading choice for Web3 games.
 
 ## What makes Ronin unique as a blockchain?
 
@@ -20,7 +20,7 @@ Ronin cuts out the bloat found in other permissionless blockchains. We put in ef
 
 ### Ronin is backed by Sky Mavis
 
-Sky Mavis are the creators of the #1 NFT project by adoption and all-time volume—Axie Infinity. Our experience building and scaling Axie Infinity has given us unique insights into product development, community building, and go-to-market which can be leveraged by partners deploying on the network. We offer advisory support and grants to help reduce risk and improve odds of success for games looking to launch.
+Sky Mavis are the creators of the leading NFT project by adoption and all-time volume—Axie Infinity. Our experience building and scaling Axie Infinity has given us unique insights into product development, community building, and go-to-market which can be leveraged by partners deploying on the network. We offer advisory support and grants to help reduce risk and improve odds of success for games looking to launch.
 
 ### Ronin is secure
 

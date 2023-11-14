@@ -35,6 +35,8 @@ const sidebars = {
           label: 'Introduction to Ronin',
           id: 'basics/introduction',
         },
+        // Buy RON
+        'basics/buy-ron',
         // Key concepts
         'basics/key-concepts',
         // White paper
@@ -49,29 +51,62 @@ const sidebars = {
         'basics/audits',
         // Roles
         'basics/roles',
-        // dApps
+      ],
+    },
+    // Apps
+    {
+      type: 'category',
+      label: 'Apps',
+      link: {
+        type: 'generated-index',
+        description: 'Documentation for apps in the Ronin ecosystem.',
+        slug: '/apps',
+      },
+      items: [
+        // RNS
         {
           type: 'category',
-          label: 'dApps',
+          label: 'Ronin Name Service',
           link: {
-            type: 'generated-index',
-            title: 'dApps',
-            description: 'Decentralized applications (dApps) on Ronin.',
-            slug: '/basics/dapps',
+            type: 'doc',
+            id: 'apps/rns/overview', 
           },
           items: [
-            // Ronin Bridge
-            'basics/dapps/ronin-bridge',
-            // Ronin Explorer
-            'basics/dapps/ronin-explorer',
-            // RON Staking
-            'basics/dapps/ron-staking',
-            // Ronin Safe
-            'basics/dapps/multisig',
-            // Katana DEX
-            'basics/dapps/katana',
+            {
+              type: 'category',
+              label: 'Register an RNS name',
+              link: {
+                type: 'generated-index',
+                description: 'Guides to register different categories of RNS names.',
+                slug: 'apps/rns/register',
+              },
+              items: [
+                // Register a regular RNS name
+                'apps/rns/guides/register/regular',
+                // Buy an RNS name at auction
+                'apps/rns/guides/register/auctioned',
+                // Register a protected RNS name
+                'apps/rns/guides/register/protected',
+              ],
+            },
+            // Manage RNS names
+            'apps/rns/manage',
+            // Trade RNS names
+            'apps/rns/trade',
+            // RNS FAQ
+            'apps/rns/reference/faq',
           ],
         },
+        // Ronin Bridge
+        'apps/ronin-bridge',
+        // Ronin Explorer
+        'apps/ronin-explorer',
+        // RON Staking
+        'apps/ron-staking',
+        // Ronin Safe
+        'apps/multisig',
+        // Katana DEX
+        'apps/katana',
       ],
     },
     // Delegators
@@ -95,8 +130,6 @@ const sidebars = {
             slug: '/delegators/manage',
           },
           items: [
-            // Buy RON
-            'delegators/manage/buy-ron',
             // Stake
             'delegators/manage/increase-withdraw-stake',
             // Claim rewards
@@ -296,7 +329,6 @@ const sidebars = {
           label: 'Contribute',
           link: {
             type: 'generated-index',
-            title: 'Contribute',
             description: 'Contribute to the Ronin documentation.',
             slug: '/community/contribute',
           },

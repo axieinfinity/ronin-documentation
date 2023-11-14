@@ -1,8 +1,6 @@
 ---
 description: List of frequently asked questions for validators.
 title: Validator FAQ
-tags:
-- decoupling
 ---
 
 import multisig from './assets/multisig.png';

@@ -1,10 +1,10 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
-
-const math = require('remark-math')
-const katex = require('rehype-katex')
 
 const currentYear = new Date().getFullYear()
 
@@ -54,9 +54,9 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
           routeBasePath: '/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           editUrl: `https://github.com/axieinfinity/ronin-documentation/edit/main`,
           editLocalizedFiles: false,
           editCurrentVersion: false,
@@ -83,11 +83,8 @@ const config = {
   ],
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      href: '/katex/katex.min.css',
       type: 'text/css',
-      integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-      crossorigin: 'anonymous',
     },
   ],
   themeConfig:
@@ -151,6 +148,11 @@ const config = {
             label: 'Basics',
             to: 'basics',
           },
+          // Apps
+          {
+            label: 'Apps',
+            to: 'apps',
+          },
           // Delegators
           {
             label: 'Delegators',
@@ -203,16 +205,16 @@ const config = {
             title: 'Links',
             items: [
               {
-                label: 'RON Staking',
+                label: 'Developer docs',
+                href: 'https://docs.skymavis.com/ronin/overview',
+              },
+              {
+                label: 'RON staking',
                 href: 'https://app.roninchain.com/staking/',
               },
               {
-                label: 'Validator Dashboard',
+                label: 'Validator dashboard',
                 href: 'https://validator.roninchain.com/',
-              },
-              {
-                label: 'Developer documentation',
-                href: 'https://docs.skymavis.com/ronin/overview',
               },
             ],
           },

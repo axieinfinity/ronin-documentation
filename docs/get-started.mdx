@@ -6,12 +6,13 @@ title: Get started
 import DocCardList from '@theme/DocCardList'; 
 import {findSidebarItem} from '@site/src/sidebarUtils';
 
-## Learn about Ronin
+## Get started with Ronin
 
 General overview of Ronin and its basic concepts.
 
 <DocCardList items={[ 
     findSidebarItem('/basics/introduction'),
+    findSidebarItem('/basics/buy-ron'),
     findSidebarItem('/basics/key-concepts'),
     findSidebarItem('/basics/white-paper'),
     findSidebarItem('/basics/tokenomics'),
@@ -19,7 +20,17 @@ General overview of Ronin and its basic concepts.
     findSidebarItem('/basics/rewards'),
     findSidebarItem('/basics/audits'),
     findSidebarItem('/basics/roles'),
-    findSidebarItem('/basics/dapps'),
+    ]} />
+
+## Use Ronin apps
+
+<DocCardList items={[ 
+    findSidebarItem('/apps/rns'),
+    findSidebarItem('/apps/ronin-bridge'),
+    findSidebarItem('/apps/ronin-explorer'),
+    findSidebarItem('/apps/katana'),
+    findSidebarItem('/apps/ron-staking'),
+    findSidebarItem('/apps/multisig'),
     ]} />
 
 ## Stake RON
@@ -28,7 +39,6 @@ Use your RON tokens, purchase more RON,
 delegate your stake and transfer it between validators.
 
 <DocCardList items={[ 
-    findSidebarItem('/delegators/manage/buy-ron'),
     findSidebarItem('/delegators/onboarding/become-delegator'),
     findSidebarItem('/delegators/manage/increase-withdraw-stake'),
     findSidebarItem('/delegators/manage/claim-rewards'),
