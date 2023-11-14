@@ -47,7 +47,7 @@ Before registering a regular domain, install [Ronin Wallet](https://wallet.ronin
    :::tip
    We recommend registering your RNS name for multiple years to avoid losing the domain to someone else.
    :::
-   The renewal fee changes based on how many years you want to register the domain for. The minimum duration for the registration is 1 year. **Note:** This name is *set as primary* by default (2), which means that it's displayed as your RNS name in all the RNS-enabled apps.
+   The renewal fee changes based on how many years you want to register the domain for. The minimum duration for the registration is 1 year. **Note:** This name is *set as primary* by default (2), which means that it's displayed as your RNS name in all the RNS-enabled apps and wallets.
 ![register](../../assets/regular/register.png)
 1. Click **Request** to prompt the request transaction.
 ![request](../../assets/regular/request.png)
