@@ -107,7 +107,7 @@ The size of your node will also grow over time.
 5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
    ```text
-   # The name of your node that you want displayed on https://stats.roninchain.com/
+   # The name of your node that you want displayed on https://ronin-stats.roninchain.com/
    INSTANCE_NAME=INSTANCE_NAME
  
    # The latest version of the node's image as listed in https://docs.roninchain.com/validators/setup/upgrade-validator
@@ -185,6 +185,3 @@ Verify that the account address in the response matches your registered consensu
 ```bash
 node | Using account acf8bf98d1632e602d0b1761771049af21dd6597
 ```
-
-Also, check the node's availability on
-[Ronin Network Status](https://stats.roninchain.com/).

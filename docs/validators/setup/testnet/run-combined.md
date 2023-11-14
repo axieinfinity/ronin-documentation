@@ -167,7 +167,7 @@ The size of your node will also grow over time.
    # Your Ethereum RPC endpoint
    ETHEREUM_ENDPOINT=ETHEREUM_ENDPOINT
  
-   # The name of your node that you want displayed on https://saigon-stats.roninchain.com/
+   # The name of your node that you want displayed on https://ronin-stats.roninchain.com/
    INSTANCE_NAME=INSTANCE_NAME
  
    # The latest version of the node's image as listed in https://docs.roninchain.com/validators/setup/upgrade-validator
@@ -252,7 +252,7 @@ The size of your node will also grow over time.
    ```
   
    This command pulls a Ronin node image, a bridge image, a Postgres database, and starts the services you defined.
-1. After a few minutes, check the status of your node on the [Ronin Network Status](https://saigon-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
+1. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
 
 1. Review the log for the validator and the bridge (the node should sync to the latest block for making the bridge work).
 

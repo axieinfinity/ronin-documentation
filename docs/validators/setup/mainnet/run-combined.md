@@ -169,7 +169,7 @@ The size of your node will also grow over time.
    # Your Ethereum RPC endpoint
    ETHEREUM_ENDPOINT=ETHEREUM_ENDPOINT
  
-   # The name of your node that you want displayed on https://stats.roninchain.com/
+   # The name of your node that you want displayed on https://ronin-stats.roninchain.com/
    INSTANCE_NAME=INSTANCE_NAME
  
    # The latest version of the node's image as listed in https://docs.roninchain.com/validators/setup/upgrade-validator
