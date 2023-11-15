@@ -50,6 +50,16 @@ Made an offer, but had second thoughts? You can cancel your offer anytime by cli
 
 ![cancel](assets/trade/cancel.png)
 
+## Transfer
+
+To transfer an RNS name, for example as a gift, follow these steps:
+
+1. Go to **Ronin Wallet > Collectibles > RNS**.
+2. Choose the RNS name and select **Transfer**.
+3. Enter the recipient's address and sign the transaction.
+
+The recipient will see the RNS name appear in their Ronin Wallet, on the **Collectibles** tab.
+
 ## See also
 
 * [Manage RNS names](./manage.md)
