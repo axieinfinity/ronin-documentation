@@ -50,7 +50,11 @@ If you have more than one RNS domain, follow these steps to set a different doma
 
 ### Remove a primary name
 
-To remove your primary name, select the domain and click **Remove**. After you remove the name, RNS starts to display your Ronin address instead until you set another domain as primary. Any transactions sent to your previous primary name will resolve to the owner of the name at that time.
+To remove your primary name, select the domain and click **Remove**. After you remove the name, RNS starts to display your Ronin address instead until you set another domain as primary.
+
+:::info
+Any transactions sent to your previous primary name will resolve to the owner of the name at that time.
+:::
 
 ![remove](assets/manage/remove-primary.png)
 

@@ -22,7 +22,7 @@ After you entered the necessary information, click **Confirm listing** to comple
 
 If the owner lists a domain on Mavis Market and the listed price exceeds the current domain price, then, when another user buys the domain, the domain price changes to the listed price, also known as the *last sales price*.
 
-Mavis Market charges a 2.5% service fee for a successful sale. For example, if someone buys your domain for 100 RON, you receive 97.5 WRON.
+Mavis Market charges a 2.5% service fee for a successful sale. For example, if someone buys your domain for 100 RON, you receive 97.5 RON.
 
 ### Edit your listing
 
@@ -40,7 +40,7 @@ When someone makes a few offers on your listing, you can view all of them at onc
 
 Every newly registered (minted) RNS domain is searchable on Mavis Market.
 
-If you want to purchase an RNS domain registered by someone else, you can make an offer to the owner. Enter the amount of WETH or WRON you wish to offer, select the duration of the offer, and click **Make offer**.
+If you want to purchase an RNS domain registered by someone else, you can make an offer to the owner. Enter the amount of WRON you wish to offer, select the duration of the offer, and click **Make offer**.
 
 ![make](assets/trade/make.png)
 
