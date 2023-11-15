@@ -8,7 +8,7 @@ title: Register a protected RNS name
 
 This guide shows how to register a protected `.ron` domain name.
 
-Protected names are reserved for brands and businesses by Sky Mavis and cannot be purchased by anyone else. Sky Mavis provides direct support to prevent anyone from claiming or misusing your protected RNS name. Protected names are listed as **Protected** in the RNS app.
+Protected names are reserved for Sky Mavis's official partners as well as and brands and businesses, and cannot be purchased by anyone else. We provide direct support to prevent anyone from claiming or misusing your protected RNS name. Protected names are listed as **Protected** in the RNS app.
 
 :::caution
 As long as the owner doesn't sell or transfer their protected RNS name to another wallet, the name and its annual fee are protected. If the name is sold or transferred, it loses its *protected* status.
@@ -46,7 +46,7 @@ You can now see your unique RNS name everywhere across the Ronin ecosystem. To v
 
 ### Non-verified business
 
-To verify your business for a protected name registration, send an email to [info@skymavis.com](mailto:info@skymavis.com) and we'll guide you through the process.
+To verify your business for a protected name registration, send an email to [support@roninchain.com](mailto:support@roninchain.com) and we'll guide you through the process.
 
 ## See also
 

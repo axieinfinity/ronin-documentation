@@ -50,7 +50,11 @@ If you have more than one RNS domain, follow these steps to set a different doma
 
 ### Remove a primary name
 
-To remove your primary name, select the domain and click **Remove**. After you remove the name, RNS starts to display your Ronin address instead until you set another domain as primary. Any transactions sent to your previous primary name will resolve to the owner of the name at that time.
+To remove your primary name, select the domain and click **Remove**. After you remove the name, RNS starts to display your Ronin address instead until you set another domain as primary.
+
+:::info
+Any transactions sent to your previous primary name will resolve to the owner of the name at that time.
+:::
 
 ![remove](assets/manage/remove-primary.png)
 
@@ -58,9 +62,16 @@ To remove your primary name, select the domain and click **Remove**. After you r
 
 ### Grace period
 
-You can renew your domain's registration at any time during the existing registration and within 90 days after it expires, also known as the *grace period*. During the grace period, the domain name is reserved only for its previous owner to renew it, and it can't be set as primary.
+You can renew your domain at any time during the existing registration and within 90 days after the registration expires. This 90-day period is also known as the *grace period*.
 
-After the grace period, the domain name becomes available for anyone to register. The domain may still appear in your domain list, but you are no longer the owner. However, you can buy the domain back at any time.
+To learn when your domain's grace period ends, look for the **Grace ends** on the domain management page.
+
+![grace-period](assets/manage/grace-period.png)
+
+Key points:
+
+* During the grace period, the domain is reserved only for its previous owner to renew it, and it can't be set as primary.
+* After the grace period, the domain becomes available for anyone to register. It may still appear in your domain list, but you are no longer its owner. However, you can buy this domain back at any time.
 
 ### Renew a regular or protected name
 
