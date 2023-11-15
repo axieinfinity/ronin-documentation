@@ -52,13 +52,23 @@ Made an offer, but had second thoughts? You can cancel your offer anytime by cli
 
 ## Transfer
 
-To transfer an RNS name, for example as a gift, follow these steps:
+You can transfer an RNS name as a gift using Ronin Wallet or Mavis Market.
 
-1. Go to **Ronin Wallet > Collectibles > RNS**.
+### Ronin Wallet
+
+1. Go to **Ronin Wallet**, select **Collectibles** (mobile app) or **NFTs** (browser extenstion), and then select **RNS**.
 2. Choose the RNS name and select **Transfer**.
 3. Enter the recipient's address and sign the transaction.
 
-The recipient will see the RNS name appear in their Ronin Wallet, on the **Collectibles** tab.
+The RNS name you transferred will appear in the recipient's Ronin Wallet, on the **Collectibles** tab.
+
+### Mavis Market
+
+1. Go to [Mavis Market](https://marketplace.skymavis.com), select your profile in the top right-hand corner, and then select **My Profile**.
+2. Choose the RNS name on the **Inventory** tab and select **Gift**.
+3. Enter the recipient's address and sign the transaction.
+
+The RNS name you transferred will appear in the recipient's Ronin Wallet, on the **Collectibles** tab.
 
 ## See also
 
