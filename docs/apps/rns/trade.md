@@ -12,13 +12,13 @@ This guide demonstrates how to trade RNS domains on the Mavis Market marketplace
 
 ### List for sale
 
-You can list your RNS name on Mavis Market at a fixed price. Click **List for sale**, choose the duration of the sale, and set the price.
+You can list your RNS name on Mavis Market at a fixed price.
 
-![list](assets/trade/list.png)
-
-After you entered the necessary information, click **Confirm listing** to complete your listing.
-
-![confirm-listing](assets/trade/confirm-listing.png)
+1. Click **List for sale** and sign the transaction to allow Mavis Market to use your NFT.
+   ![list](assets/trade/list.png)
+1. Choose the duration of the sale and set the price. Click **Confirm listing** to complete your listing.
+   ![confirm-listing](assets/trade/confirm-listing.png)
+1. Sign the transaction once more to list your domain.
 
 If the owner lists a domain on Mavis Market and the listed price exceeds the current domain price, then, when another user buys the domain, the domain price changes to the listed price, also known as the *last sales price*.
 
