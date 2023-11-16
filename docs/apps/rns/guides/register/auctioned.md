@@ -6,15 +6,11 @@ title: Buy an RNS name at auction
 
 ## Overview
 
-This guide shows how to buy a high-value `.ron` name at an auction.
+This guide shows how to buy a high-value `.ron` name at an auction. Sky Mavis holds domain auctions for unregistered RNS names that are likely to be highly sought-after, such as `adventure.ron` and `moonshard.ron`.
 
-Sky Mavis holds domain auctions for unregistered RNS names that are likely to be highly sought-after, such as `adventure.ron` and `moonshard.ron`.
+To take part in a domain auction, participants place bids. If someone outbids you during the auction, your bid is immediately refunded, and you may place another bid. When the auction ends, the bidder with the highest bid wins. The winning bid is the price of the domain. The winner receives the domain and is exempt from paying the renewal fee for the first year. After winning the domain, the owner can extend its registration.
 
-To take part in a domain auction, participants place bids. If someone outbids you during the auction, your bid is immediately refunded, and you may place another bid.
-
-When the auction ends, the bidder with the highest bid wins. The winning bid is the price of the domain.
-
-The winner receives the domain and is exempt from paying the renewal fee for the first year. After winning the domain, the owner can extend its registration.
+If no bids are placed on an auctioned RNS name by the time the auction ends, the name is for future auctions.
 
 In RNS, auctioned domains are listed as follows:
 

@@ -1,5 +1,5 @@
 ---
-description: Manage the RNS names that you own.
+description: Manage your RNS names.
 slug: /apps/rns/manage
 title: Manage RNS names
 ---
