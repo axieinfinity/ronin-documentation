@@ -3,7 +3,6 @@ description: Run a testnet validator and bridge operator on one machine using Do
 title: Run a validator and bridge operator together
 tags:
 - docker-testnet
-- decoupling
 ---
 
 ## Overview
@@ -231,30 +230,30 @@ The size of your node will also grow over time.
    MINE=true
    
    VERBOSITY=3
- 
+
+   CHAIN_STATS_WS_SECRET=xQj2MZPaN72
    CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
-   CHAIN_STATS_WS_SECRET=xQj2MZPaN6
  
    RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000 --discovery.dns enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com
    ```
 
-1. (Optional) Download the snapshot from the [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repo:
+2. (Optional) Download the snapshot from the [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repo:
 
    ```bash
    cd ~/ronin/chaindata/data/ronin/
    wget -q -O - <snapshot URL from the README file in the repo> | tar -I zstd -xvf -
    ```
 
-1. Start the node:
+3. Start the node:
 
    ```bash
    cd ~/ronin && docker-compose up -d
    ```
   
    This command pulls a Ronin node image, a bridge image, a Postgres database, and starts the services you defined.
-1. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
+4. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
 
-1. Review the log for the validator and the bridge (the node should sync to the latest block for making the bridge work).
+5. Review the log for the validator and the bridge (the node should sync to the latest block for making the bridge work).
 
    ```bash
    docker logs node -f --tail 100

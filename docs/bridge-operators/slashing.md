@@ -2,8 +2,6 @@
 title: Slashing for bridge operators
 sidebar_label: Slashing rules
 description: List of slashing rules applicable to bridge operators. 
-tags:
-- decoupling
 ---
 
 import bridSlashTierOne from './assets/bridge-tier-1.png';

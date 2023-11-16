@@ -1,8 +1,6 @@
 ---
 description: Latest software for Ronin nodes.
 title: Upgrade validator version
-tags:
-- decoupling
 ---
 
 ## Overview

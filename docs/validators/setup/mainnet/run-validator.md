@@ -3,7 +3,6 @@ description: Run a validator node on the Ronin mainnet.
 title: Run a validator
 tags:
 - docker-mainnet
-- decoupling
 ---
 
 ## Overview

@@ -127,7 +127,7 @@ The size of your node will also grow over time.
    GASPRICE=20000000000
    VERBOSITY=3
  
-   CHAIN_STATS_WS_SECRET=xQj2MZPaN6
+   CHAIN_STATS_WS_SECRET=xQj2MZPaN72
    CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
  
    CONFIG_PATH=config.testnet.json

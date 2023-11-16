@@ -126,8 +126,9 @@ The size of your Ronin node will also grow over time.
  
    VERBOSITY=3
  
-   CHAIN_STATS_WS_SECRET=xQj2MZPaN6
+   CHAIN_STATS_WS_SECRET=xQj2MZPaN72
    CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
+   
    GENESIS_PATH=testnet.json
  
    RONIN_PARAMS=--gcmode archive --http.api eth,net,web3 --txpool.pricelimit 20000000000 --txpool.nolocals --discovery.dns enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com

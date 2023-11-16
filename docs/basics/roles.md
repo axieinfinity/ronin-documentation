@@ -1,8 +1,6 @@
 ---
 title: Roles
 description: Who are delegators, validators, and bridge operators, and what they do.
-tags:
-- decoupling
 ---
 
 ## Delegator

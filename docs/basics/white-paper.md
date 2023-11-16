@@ -1,7 +1,5 @@
 ---
 description: Ronin's living white paper.
-tags:
-- decoupling
 ---
 
 # White paper
