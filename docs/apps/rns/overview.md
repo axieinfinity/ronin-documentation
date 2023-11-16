@@ -1,5 +1,5 @@
 ---
-description: Home of the Ronin Name Service (RNS) documentation.
+description: Register, manage, and trade your RNS names.
 slug: /apps/rns
 title: RNS
 ---
