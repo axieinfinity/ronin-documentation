@@ -25,3 +25,7 @@ After the grace period, the domain name becomes available for anyone to register
 ## 5. Can I register an RNS subdomain? {#5}
 
 For the time being, you can only register second-level domains of the form `hello.ron`. Subdomains such as `say.hello.ron` are not supported.
+
+## 6. What happens when an auction ends and nobody placed a bid? {#6}
+
+If no bids are placed on an auctioned RNS name by the time the auction ends, the name is reserved for future auctions.
