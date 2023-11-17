@@ -10,6 +10,7 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           files: docs
+          fail_on_error: true
     env:
       # Required
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
