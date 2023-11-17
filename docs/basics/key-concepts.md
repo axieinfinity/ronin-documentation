@@ -37,7 +37,7 @@ A blockchain is a public ledger of transactions that is maintained and verified 
 
 ### BLS key
 
-Boneh–Lynn–Shacham (BLS) is a digital signature method used for verifying the authenticity of digital messages or documents. 
+Boneh-Lynn-Shacham (BLS) is a digital signature method used for verifying the authenticity of digital messages or documents. 
 
 The BLS key is what the validator uses to produce finality votes. Validators who produce finality vote receive a reward. If a validator fails to produce a finality vote, no slashing penalty applies.
 

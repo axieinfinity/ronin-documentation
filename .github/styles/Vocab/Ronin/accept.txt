@@ -10,6 +10,8 @@ mainnet
 node
 node operator
 non-validator node
+OIDC
+OpenID Connect
 RON
 RON Staking
 Ronin
@@ -17,7 +19,9 @@ Ronin Block Explorer
 Ronin Bridge
 Ronin CLI
 Ronin mainnet
+Ronin Name Service
 Ronin Wallet
+RNS
 Saigon testnet
 Standard Validator
 testnet
