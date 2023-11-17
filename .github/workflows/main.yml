@@ -1,4 +1,4 @@
-name: reviewdog
+name: Editorial review
 on: [pull_request]
 
 jobs:
