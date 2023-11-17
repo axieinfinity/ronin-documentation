@@ -6,7 +6,8 @@ title: Trade RNS names
 
 import rwTransferRns from './assets/trade/rw-transfer-rns.png';
 import rwTransferRnsNext from './assets/trade/rw-transfer-rns-next.png';
-import rwTransferRnsComplete from './assets/trade/rw-transfer-rns-complete.png';
+import rwTransferRnsRoninAddComplete from './assets/trade/rw-transfer-ronin-add-complete.png';
+import rwTransferRnsNameComplete from './assets/trade/rw-transfer-rns-name-complete.png';
 
 ## Overview
 
@@ -35,7 +36,6 @@ To make a change to your listing, you need to cancel the existing listing and su
 ### Accept an offer
 
 When someone makes a few offers on your listing, you can view all of them at once. To accept an offer, click **Accept offer** on the offer you wish to accept. Payment is only accepted in WRON, not RON.
-
 ![accept](assets/trade/accept.png)
 
 ## Buy an RNS name
@@ -45,13 +45,11 @@ When someone makes a few offers on your listing, you can view all of them at onc
 Every newly registered (minted) RNS domain is searchable on Mavis Market.
 
 If you want to purchase an RNS domain registered by someone else, you can make an offer to the owner. Enter the amount of WRON you wish to offer, select the duration of the offer, and click **Make offer**.
-
 ![make](assets/trade/make.png)
 
 ### Cancel an offer
 
 Made an offer, but had second thoughts? You can cancel your offer anytime by clicking **Cancel offer**, then **Confirm cancelling**.
-
 ![cancel](assets/trade/cancel.png)
 
 ## Gift an RNS name {#gift-rns}
@@ -61,14 +59,18 @@ To gift an RNS name, simply transfer it to the recipient's Ronin address using a
 ### Transfer an RNS name via Ronin Wallet {#gift-rns-ronin-wallet}
 
 1. Open **Ronin Wallet**, select **Collectibles** (mobile app) or **NFTs** (browser extenstion), and then select **RNS**.
-   
+
    <img src={rwTransferRns} width={300} />
 2. Choose the RNS name you want to transfer, and then select **Transfer**.
    
    <img src={rwTransferRnsNext} width={300} />
 3. Enter the recipient's address and select **Next**.
    
-   <img src={rwTransferRnsComplete} width={300} />
+   <img src={rwTransferRnsRoninAddComplete} width={300} />
+
+   Or use the exact RNS name of the recipient, including the `.ron` part.
+   
+   <img src={rwTransferRnsNameComplete} width={300} />
 4. Sign the transaction to complete the transfer.
 
 ### Gift an RNS name via Mavis Market {#gift-rns-mavis-market}
@@ -80,7 +82,9 @@ To gift an RNS name, simply transfer it to the recipient's Ronin address using a
 3. Select **Gift**.
    ![mm-gift-rns-next](assets/trade/mm-gift-rns-next.png)
 4. Enter the recipient's address and click **Gift**.
-   ![mm-gift-rns-complete](assets/trade/mm-gift-rns-complete.png)
+   ![mm-gift-rns-ronin-add-complete](assets/trade/mm-gift-rns-ronin-add-complete.png)
+   Or use the exact RNS name of the recipient, including the `.ron` part.
+   ![mm-gift-rns-name-complete](assets/trade/mm-gift-rns-name-complete.png)
 5. Sign the transaction to complete the transfer.
 
 ### Gift an RNS name via Ronin Gifting Portal
