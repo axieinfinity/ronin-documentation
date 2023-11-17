@@ -350,7 +350,7 @@ title: Get started as a developer
 ---
 ```
 
-Defintions:
+Definitions:
 
 * `description` is used in the head metadata and on the
   [doc card](https://docusaurus.io/docs/sidebar/items#embedding-generated-index-in-doc-page).
@@ -453,10 +453,10 @@ the concepts covered in this topic.
 
 ##### Examples of explanation topics
 
-* [Slashing rules](./validators/slashing/slashing.mdx)
+* [Slashing rules](./validators/slashing.mdx)
 * [Rewards](./basics/rewards.md)
-* [Introduction to nodes](./node-operators/introduction.md)
-* Explanation topics within another page: [Bailout](./validators/slashing/bailout.mdx)
+* [Nodes](./basics/nodes.md)
+* Explanation topics within another page: [Bailout](./validators/slashing.mdx#bailout)
 
 #### How-to guide
 
@@ -523,11 +523,11 @@ this task and the concepts that it involves.
 ##### Examples of how-to guides
 
 * [Become a delegator](./delegators/onboarding/become-delegator.mdx)
-* [Run a validator node](./node-operators/setup/mainnet/validator.md)
-* [Claim rewards](./validators/rewards/claim.mdx)
+* [Run a validator node](./validators/setup/mainnet/run-validator.md)
+* [Claim rewards](./validators/manage/claim-rewards.mdx)
 * Task topics within other pages:
-  * [Check your credit score](./validators/slashing/bailout.mdx#check-your-credit-score)
-  * [Use secure communication](./node-operators/resources/security.md#use-secure-communication)
+  * [Check your credit score](./validators/slashing.mdx#check-your-credit-score)
+  * [Use secure communication](./validators/setup/security.md#use-secure-communication)
 
 #### Reference
 
@@ -585,10 +585,10 @@ the concepts covered in this topic.
 
 ##### Examples of reference topics
 
-* [Ronin mainnet](./node-operators/resources/parameters/mainnet.md)
+* [Ronin mainnet](./validators/setup/parameters/mainnet.md)
 * [Security audits](./basics/audits.md)
 * Reference topics within other pages:
-  * [Command reference](./node-operators/setup/cli.md#command-reference)
+  * [Command reference](./validators/setup/cli.md#command-reference)
   * [RON unlock schedule](./basics/tokenomics.md#ron-unlock-schedule)
 
 #### Troubleshooting

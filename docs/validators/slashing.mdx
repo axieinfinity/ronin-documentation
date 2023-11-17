@@ -1,0 +1,170 @@
+---
+title: Slashing for validators
+sidebar_label: Slashing rules
+description: List of slashing rules that apply to validators and instructions for bailing out of jail. 
+---
+
+import doubleSign from './assets/double-sign.png';
+import valSlashTierOne from './assets/validator-tier-1.png';
+import valSlashTierTwo from './assets/validator-tier-2.png';
+import valSlashTierThree from './assets/validator-tier-3.png';
+import relayingSlash from './assets/relaying-slash.png';
+
+import creditScore from './assets/credit-score.png';
+import stepOne from './assets/validator-tier-2.png';
+import stepTwo from './assets/confirm-bailout.png';
+
+## Overview
+
+This page describes the slashing rules that apply to Ronin validators and describes how to bail out of jail when such option is available.
+
+Slashing is a mechanism that governs the behavior of validators on
+the Ronin blockchain. Each validator is required to keep the node
+online and up to date with the network, and to produce the correct
+block when it comes to their turn.
+
+If a node is unavailable when needed or shows signs of malicious
+behavior, it is subjected to penalties such as the the following:
+* Reward slashing. Withholding rewards that the node would've 
+otherwise earned.
+* RON slashing. Charging a fixed amount of RON tokens from 
+the self-stake. Slashed RON then go to back to the reward pool.
+* Temporary or permanent ban from the network, or _jailing_.
+
+:::note 
+A "day" in the slashing rules refers to the period
+from midnight to midnight UTC.
+:::
+
+### Double-sign validator
+
+It's a serious violation when a validator signs more than one block with the same height.
+Anyone can submit a slash request with the double-sign evidence, which
+should contain the two block headers with the same height, sealed by
+the same validator. Upon verifying the evidence, the offending
+validator is penalized as follows:
+
+* The validator is jailed for $2^{63}-1$ blocks and can't be a
+validator in the future.
+* The validator is slashed the minimum staking amount of
+self-delegated RON.
+* The validator doesn't earn commission and the staking reward while in jail.
+
+The validator's status is set to **In jail**.
+
+<img src={doubleSign} width={1224} />
+
+### Unavailability validator
+
+The performance of Ronin relies on the ability of everyone in the
+validator set to produce blocks on time when it's their turn.
+If a validator misses their turn, it affects the performance of
+the entire system. Thus, we implemented a mechanism that penalizes
+validators who miss too many blocks.
+
+We use a smart contract to record the number of missed blocks for each
+validator. If the number of missed blocks exceeds a predefined threshold,
+the validator gets slashed.
+
+#### Tier 1 validator slashing
+
+If a validator misses more than 100 blocks in a day, the validator doesn't earn
+commission and the staking reward on that day.
+The validator's status is set to **Punished**.
+
+<img src={valSlashTierOne} width={1224} />
+
+#### Tier 2 validator slashing
+
+If a validator misses more than 500 blocks in a day, the following penalties apply:
+* The validator doesn't earn commission and the staking reward on that day.
+* The validator is slashed 1,000 of self-delegated RON.
+* The validator is jailed for about 2 days (57,600 blocks) and is
+banned from the validator set while in jail.
+
+The validator's status is set to **In Jail**. If the validator
+has sufficient credit score, they can [bail out](#bailout) of jail.
+
+<img src={valSlashTierTwo} width={1224} />
+
+#### Tier 3 validator slashing
+
+After getting bailed out, if the validator
+misses 100 more blocks on the same day, the following penalties apply:
+* The reward after bailout is removed.
+* The validator is slashed 1,000 of self-delegated RON.
+* The validator is jailed for about 2 days (57,600 blocks).
+
+The validator's status is set to **In Jail**, and this time,
+the validator can't bail out.
+
+<img src={valSlashTierThree} width={1224} />
+
+### Fast finality slashing
+
+In the [fast finality mechanism](https://github.com/axieinfinity/REPs/blob/main/REP-0003/REP-0003.md),
+it's a serious violation when a validator publishes two distinct votes
+for the same height. The evidence can be submitted by anyone who notices
+the malicious behavior. Upon verifying the evidence, the offending
+validator is penalized as follows:
+
+* The validator is jailed for $2^{63}-1$ blocks and can't be a
+validator in the future.
+* The validator is slashed for 250,000 of
+self-delegated RON.
+
+The validator's status is set to **In Jail**.
+
+### Relaying slash
+
+If a Governing Validator doesn’t sync the set of bridge
+operators to the Ethereum chain for three consecutive days,
+the following penalties apply:
+
+* The validator is slashed 10,000 of self-delegated RON.
+* The validator doesn't earn commission on the day of slashing.
+
+The validator's status is set to **Punished**.
+
+<img src={relayingSlash} width={1224} />
+
+### Multiple slashes
+
+Validators might experience multiple concurrent slashes if they have issues
+with both their validator node and bridge operator node, and the relaying
+responsibilities of the Governing Validator.
+
+## Bailout
+
+If you're in [tier 2 validator slashing](#tier-2-validator-slashing), you can bail out
+of jail at any time using your credit score.
+  
+Here's how the credit score system works:
+* All validators start with 0 credit score.
+* Every day, each validator (who is not in jail) is given 50 credits 
+if they miss no block. The validator loses 1 credit for every missed block.
+* The maximum number of credits for a validator is 600.
+* It takes 2 credits to bail out for each epoch.
+
+### Check your credit score
+
+1. Go to [Validator Dashboard](https://validator.roninchain.com/) >
+**My Staking**.
+2. Find your credit score under **CREDIT SCORE**, next to your total
+self-stake amount.
+<img src={creditScore} width={1280} />
+
+### Use credit score to bail out
+
+1. Go to [Validator Dashboard](https://validator.roninchain.com/) >
+**My Staking**.
+
+2. Locate the warning banner and select **Bail out**.
+<img src={stepOne} width={1224} /> 
+
+3. Review the terms of bailout and click **Submit**. 
+<img src={stepTwo} width={400} />
+
+If you bail out on the same day you got slashed, you still receive $50\%$
+of the commission and staking reward from the time you bailed
+out until the end of the day.

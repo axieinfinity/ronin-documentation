@@ -1,22 +1,28 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
-
-const math = require('remark-math')
-const katex = require('rehype-katex')
 
 const currentYear = new Date().getFullYear()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ronin Docs',
-  tagline: 'Lets build together',
+  tagline: 'Stake and earn rewards on Ronin',
+  favicon: 'img/favicon.ico',
+
+  // Set the production url of your site here
   url: 'https://docs.roninchain.com',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  
   organizationName: 'axieinfinity', // Usually your GitHub org/user name.
   projectName: 'ronin-documentation', // Usually your repo name.
 
@@ -29,7 +35,17 @@ const config = {
 
   plugins: [
     'docusaurus-plugin-sass',
-    // require.resolve('docusaurus-lunr-search'),
+    ['@docusaurus/plugin-client-redirects',
+    {
+      createRedirects(existingPath) {
+        if (existingPath.includes('/')) {
+          return [
+            '/docs' + existingPath
+          ];
+        }
+        return undefined; // Return a falsy value: no redirect created
+      },
+    },]
   ],
   presets: [
     [
@@ -38,8 +54,9 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          routeBasePath: '/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           editUrl: `https://github.com/axieinfinity/ronin-documentation/edit/main`,
           editLocalizedFiles: false,
           editCurrentVersion: false,
@@ -66,11 +83,8 @@ const config = {
   ],
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      href: '/katex/katex.min.css',
       type: 'text/css',
-      integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-      crossorigin: 'anonymous',
     },
   ],
   themeConfig:
@@ -127,37 +141,37 @@ const config = {
           // Get started
           {
             label: 'Get started',
-            to: '/docs/get-started',
+            to: '/get-started',
           },
           // Basics
           {
             label: 'Basics',
-            to: 'docs/basics',
+            to: 'basics',
+          },
+          // Apps
+          {
+            label: 'Apps',
+            to: 'apps',
           },
           // Delegators
           {
             label: 'Delegators',
-            to: 'docs/delegators',
+            to: 'delegators',
           },
           // Validators
           {
             label: 'Validators',
-            to: 'docs/validators',
+            to: 'validators',
           },
-          // Node operators
+          // Bridge operators
           {
-            label: 'Node operators',
-            to: 'docs/node-operators',
-          },
-          // Developers
-          {
-            label: 'Developers',
-            to: 'docs/developers/portal',
+            label: 'Bridge operators',
+            to: 'bridge-operators',
           },
           // Community
           {
             label: 'Community',
-            to: 'docs/community/join',
+            to: 'community/join',
           },
           // Search
           {
@@ -173,17 +187,17 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Ronin Discord',
+                label: 'Discord',
                 href: 'https://discord.gg/roninnetwork',
               },
               {
-                label: 'Ronin Twitter',
+                label: 'X',
                 href: 'https://twitter.com/ronin_network',
               },
               {
                 type: 'link',
-                label: "Ronin's Newsletter",
-                href: 'https://roninblockchain.substack.com/',
+                label: 'Blog',
+                href: 'https://blog.roninchain.com/',
               },
             ],
           },
@@ -191,16 +205,16 @@ const config = {
             title: 'Links',
             items: [
               {
-                label: 'RON Staking',
+                label: 'Developer docs',
+                href: 'https://docs.skymavis.com/ronin/overview',
+              },
+              {
+                label: 'RON staking',
                 href: 'https://app.roninchain.com/staking/',
               },
               {
-                label: 'Validator Dashboard',
+                label: 'Validator dashboard',
                 href: 'https://validator.roninchain.com/',
-              },
-              {
-                label: 'Developer documentation',
-                href: 'https://docs.skymavis.com/ronin/overview',
               },
             ],
           },

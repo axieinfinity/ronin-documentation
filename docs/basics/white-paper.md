@@ -31,7 +31,7 @@ In Ronin, a set of validators is selected using DPoS. Then, validators take turn
 
 Any token holder can register as a Validator Candidate. They can also play the role of delegators by staking their tokens to the Validator Candidates. At the beginning of each day, the system updates the staking of validators and delegators. After that, the system selects a set of 22 validators, which includes 12 Governing Validators, and 10 Standard Validators chosen among the Validator Candidates with the highest votes (staked amount).
 
-During the day, some validators might be temporarily removed from the validator set. For example, due to "jailing", which is a form of slashing, or because of scheduled maintenance. These changes are updated every epoch, where one epoch consists of 200 blocks or $\approx10$ minutes.
+During the day, some validators might be temporarily removed from the validator set. For example, due to *jailing*, which is a form of slashing, or because of scheduled maintenance. These changes are updated every epoch, where one epoch consists of 200 blocks or around 10 minutes.
 
 ### Staking and delegation
 
@@ -48,7 +48,7 @@ Here's the core logic of staking:
 
 ### Governing Validators
 
-While increasing the decentralization of the network, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than 51% of the tokens can take over the blockchain.
+While increasing the decentralization of the network, the validator selection process via staking also enables a new vector of attacks. An attacker that controls more than $51\%$ of the tokens can take over the blockchain.
 
 The group of 12 Governing Validators chosen by the community and Sky Mavis is meant to help prevent such attacks. Because the Governing Validators take 12/22 slots in the validator set, the attackers cannot control the majority of the validators and take over the blockchain.
 
@@ -60,7 +60,7 @@ On Ronin, each validator is required to run a validator node and a bridge operat
 
 ### Security and finality
 
-The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than N/3 Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time being 3 seconds, the users should wait for 45 seconds to confirm transactions in a block.
+The [Clone attack paper](https://arxiv.org/abs/1902.10244) shows that the PoA-based systems can tolerate less than $N/3$ Byzantine validators. To confirm a transaction, the users are encouraged to wait until receiving at least $2N/3+1$ sealed blocks. With $N=22$ validators and block time being 3 seconds, the users should wait for 45 seconds to confirm transactions in a block.
 
 To perform the Clone attack, the Byzantine validators must create two blocks on the same block height, also known as double-sign. This behavior can be detected by other validators in the system. Thus, we use a [slashing mechanism](#slashing-rules) to penalize Byzantine validators. This mechanism exposes malicious validators in a short time and makes the Clone attack non-beneficial.
 
@@ -68,11 +68,11 @@ To perform a non-detectable attack—when the Byzantine validators can only seal
 
 ## Rewards
 
-Out of the total supply of 1,000,000,000 RON tokens, 25% are allocated to fund the staking reward. According to the [RON unlock schedule](./tokenomics.md#ron-unlock-schedule), the rewards are set to be allocated over 108 months.
+Out of the total supply of 1,000,000,000 RON tokens, $25\%$ are allocated to fund the staking reward. According to the [RON unlock schedule](./tokenomics.md#ron-unlock-schedule), the rewards are set to be allocated over 108 months.
 
 ### Rewards for validators and delegators
 
-Validators have two sources of rewards: transaction fees and 90% of the staking reward. When the validator generates a block, they earn the transaction fees in that block and some fixed amount of the staking reward.
+Validators have two sources of rewards: transaction fees and $90\%$ of the staking reward. When the validator generates a block, they earn the transaction fees in that block and some fixed amount of the staking reward.
 
 * The reward is not sent to the validator right away, but is distributed and accumulated on a smart contract.
 * At the end of each day, the smart contract allocates the reward to the validator and their delegators. The allocation happens only to
@@ -81,7 +81,7 @@ validators who are eligible to receive the reward (not being slashed).
 
 Each validator can set a commission rate that indicates the percentage of the self-allocated reward. The remaining reward is allocated based on the staked amount.
 
-For example, consider validator A with the commission rate of 10%. This validator self-delegates $1000$ RON. There are three delegators—B, C, and D, who delegate their tokens to validator A with the amounts of $500$ RON, $250$ RON, and $250$ RON, respectively. The total amount of staked tokens to validator A is therefore $1000+500+250+250=2000$ RON. If a reward of $10$ tokens is given to validator A and their delegators, here's how this reward is allocated:
+For example, consider validator A with the commission rate of $10\%$. This validator self-delegates 1000 RON. There are three delegators—B, C, and D, who delegate their tokens to validator A with the amounts of 500 RON, 250 RON, and 250 RON, respectively. The total amount of staked tokens to validator A is therefore $1000+500+250+250=2000$ RON. If a reward of 10 tokens is given to validator A and their delegators, here's how this reward is allocated:
 
 * Validator A receives $10\times10\%+10\times90\%\times1000\div2000=5.5$ tokens.
 * Delegator B receives $10\times90\%\times500\div2000=2.25$ tokens.
@@ -90,7 +90,7 @@ For example, consider validator A with the commission rate of 10%. This validato
 
 ### Rewards for bridge operators
 
-Bridge operators receive 10\% of the staking reward, which is distributed at the end of each day based on the number of votes from the bridge operators on that day.
+Bridge operators receive $10\%$ of the staking reward, which is distributed at the end of each day based on the number of votes from the bridge operators on that day.
 
 ## Slashing rules
 
@@ -144,7 +144,7 @@ If a validator misses more than 500 blocks in a day, the following penalties app
 
 * The validator doesn't earn commission and the staking reward on that day.
 * The validator is slashed 1,000 of self-delegated RON.
-* The validator is jailed for $\approx$ 2 days (57,600 blocks) and is
+* The validator is jailed for about 2 days (57,600 blocks) and is
 banned from the validator set while in jail.
 
 :::info Credit score and bailout system
@@ -152,7 +152,7 @@ While we encourage validators to be online and produce blocks in turn,
 technical issues can still happen. A validator might be well-performing,
 but if their machine suddenly crashes, they get slashed and jailed.
 Ronin's credit score system awards validators with credits that can be
-used to [bail out](./../validators/slashing/bailout.mdx)
+used to [bail out](./../validators/slashing.mdx#bailout)
 of jail in the event of tier 2 validator slashing.
 
 Here's how this system works:
@@ -171,12 +171,12 @@ misses 100 more blocks on the same day, the following penalties apply:
 
 * The reward after bailout is removed.
 * The validator is slashed 1,000 of self-delegated RON.
-* The validator is jailed for $\approx$ 2 days (57,600 blocks).
+* The validator is jailed for about 2 days (57,600 blocks).
 
 This time, the validator can't bail out.
 
 :::info Temporary maintenance mode
-Validators can [schedule](./../validators/manage/maintenance.mdx) temporary maintenance, during which they don't get slashed for unavailability.
+Validators can [schedule](./../validators/manage/schedule-maintenance.mdx) temporary maintenance, during which they don't get slashed for unavailability.
 :::
 
 ### Unavailability bridge operator
@@ -187,12 +187,12 @@ number of the bridge operators' votes.
 
 #### Tier 1 operator slashing
 
-If a bridge operator misses more than 10% votes in a day, the operator
+If a bridge operator misses more than $10\%$ votes in a day, the operator
 doesn't earn the bridge reward on that day.
 
 #### Tier 2 operator slashing
 
-If a bridge operator misses more than 30% votes in a day,
+If a bridge operator misses more than $30\%$ votes in a day,
 the operator doesn't earn any rewards
 (commission, staking reward, bridge reward) on that day.
 
