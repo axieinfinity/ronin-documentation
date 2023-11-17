@@ -3,10 +3,12 @@ bridge
 bridge operator
 bridge operator node
 delegator
+EVM
 full node
 Governing Validator
 Katana
 mainnet
+NFT
 node
 node operator
 non-validator node
@@ -25,6 +27,7 @@ RNS
 Saigon testnet
 Standard Validator
 testnet
+UTC
 validator
 Validator Candidate
 Validator Dashboard

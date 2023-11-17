@@ -10,7 +10,7 @@ import mobile from './assets/mobile.png';
 
 Each validator node requires private keys for signing blocks and consensus messages sent to the other validators in the network.
 
-The required private keys include a BLS key and an ECDSA key. The keys are named after digital signature schemes: Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh-Lynn-Shacham (BLS), respectively.
+The required private keys include a BLS key and an ECDSA key. The keys are named after digital signature schemes, Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh-Lynn-Shacham (BLS), respectively.
 
 * The BLS key is used for producing finality votes. Validators who produce finality votes receive a reward.
 * The ECDSA key is used for signing blocks.
@@ -102,7 +102,7 @@ If you want to view the BLS private key, do the following:
 
 ## Generate an ECDSA key
 
-You can generate an ECDSA key pair using the Ronin CLI or the Ronin Wallet app or extension.
+You can generate an ECDSA key pair using the Ronin command-line tool (CLI) or the Ronin Wallet app or extension.
 
 ### Generate an ECDSA key using the CLI
 
