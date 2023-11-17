@@ -130,7 +130,7 @@ After you're done with the changes, create a pull request (PR):
 ### Next steps
 
 After you address feedback from maintainers, your PR will be merged and your contributions will be visible on [docs.roninchain.com](https://docs.roninchain.com).
-Congratulations, you're a full-blown contributor!
+Congratulations, you're a full-blown contributor.
 
 ### Naming conventions
 
@@ -153,7 +153,7 @@ When writing the `short description` part, follow these guidelines:
 
 * Don't capitalize the first letter, reserve that for proper nouns (product
   names, for example).
-* Use the imperative, present tense: "change" not "changed" nor "changes".
+* Use the imperative, present tense: "change" not "changed" nor "changes."
 * Don't add a period (.) at the end.
 
 ## Run locally
@@ -405,7 +405,7 @@ readers' understanding, not to teach concepts or lay down step-by-step instructi
 
 An explanation topic works well when:
 
-* It answers questions "What is this?", "Why should I use it?", "How does it
+* It answers questions "What is this?," "Why should I use it?," "How does it
   work?"
 * It gives context to a subject or topic that your readers might not have.
 * It provides essential facts, background, and diagrams to help your readers
@@ -424,8 +424,8 @@ To write an explanation topic, use the
 
 ###### About title metadata in explanation topics
 
-To write a title for an explanation topic, use "About + noun" or "About + noun phrase", where to describe
-the subject. For example: "About events", "About data quality."
+To write a title for an explanation topic, use "About + noun" or "About + noun phrase," where to describe
+the subject. For example: "About events," "About data quality."
 
 ###### About the "Overview" section in explanations
 
@@ -483,8 +483,8 @@ To write a task, use the [task](./community/contribute/templates.md#task) templa
 ###### About title metadata in how-to guides
 
 To write a title for a how-to guide, start with a verb.
-For example, "Get started", "Integrate with Ronin VRF", "Authenticate users
-with OIDC and Sky Mavis Account". The outcome of the task should be clear
+For example, "Get started," "Integrate with Ronin VRF," "Authenticate users
+with OIDC and Sky Mavis Account." The outcome of the task should be clear
 to the user from the title alone.
 
 ###### About the "Overview" section in how-to guides
@@ -496,7 +496,7 @@ able to do after completing the steps.
 
 Explain what knowledge the user needs to have, or what configuration they must
 complete, before starting the task. Use imperative sentences, for example, "Read
-the explanation topic" or "Download and install the app".
+the explanation topic" or "Download and install the app."
 
 ###### About the "task name" section
 
@@ -555,8 +555,8 @@ To write a reference topic, use the [reference](./community/contribute/templates
 
 To write a title for a reference topic, use nouns that clearly describe the
 contents of the topic. Make sure that the title is accessible to users who are
-just getting started. For example, "Slashing rules", "Network parameters", "User
-roles".
+just getting started. For example, "Slashing rules," "Network parameters," "User
+roles."
 
 ###### About the "Overview" section in reference topics
 
@@ -569,7 +569,7 @@ all the entries defined in the topic have in common.
   are documenting. You might find it helpful to organize the contents using
   tables, lists, interactive object-schemas. For example, if you're writing a
   reference page for an API endpoint, you might define sections such as "General
-  requirements", "Request parameters", and "Responses". The format  might be
+  requirements," "Request parameters," and "Responses." The format  might be
   different for each section—"General requirements" might be a list, while
   "Request parameters" and "Responses" are tables.
 * Use the "don't repeat yourself" (DRY) method and re-use content if it's
@@ -682,7 +682,7 @@ Include two-three actionable next steps that the user can take after completing 
 
 Quickstarts enable a user to quickly complete a discrete, focused task by illustrating a workflow with only essential steps, in about five minutes or 600 words. Quickstarts can be used for quickly getting set up with a new tool, or for quickly completing another task. For more complex tasks, use a tutorial.
 
-Quickstarts are useful when someone already understands the feature or product and is ready to try it out. Users of quickstarts are not looking for an explanation and don't need to be convinced to use the product––they just want instructions quickly. Users who don't understand a step are willing to dig deeper in a separate doc.
+Quickstarts are useful when someone already understands the feature or product and is ready to try it out. Users of quickstarts are not looking for an explanation and don't need to be convinced to use the product-they just want instructions quickly. Users who don't understand a step are willing to dig deeper in a separate doc.
 
 ##### Quickstart template
 
@@ -692,7 +692,7 @@ To write a quickstart guide, use the [quickstart](./community/contribute/templat
 
 ###### About title metadata in quickstarts
 
-* When the guide helps someone get started with a new tool, preface the title with "Quickstart". For example, "Quickstart for Sky Mavis Account."
+* When the guide helps someone get started with a new tool, preface the title with "Quickstart." For example, "Quickstart for Sky Mavis Account."
 * For other use cases, follow the title guidelines for procedures and omit the word "Quickstart."
 
 ###### About the "Overview" section in quickstarts

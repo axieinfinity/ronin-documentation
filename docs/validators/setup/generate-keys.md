@@ -10,10 +10,10 @@ import mobile from './assets/mobile.png';
 
 Each validator node requires private keys for signing blocks and consensus messages sent to the other validators in the network.
 
-The required private keys include a BLS key and an ECDSA key. The keys are named after digital signature schemes: Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh–Lynn–Shacham (BLS), respectively.
+The required private keys include a BLS key and an ECDSA key. The keys are named after digital signature schemes, Elliptic Curve Digital Signature Algorithm (ECDSA) and Boneh-Lynn-Shacham (BLS), respectively.
 
-- The BLS key is used for producing finality votes. Validators who produce finality votes receive a reward.
-- The ECDSA key is used for signing blocks.
+* The BLS key is used for producing finality votes. Validators who produce finality votes receive a reward.
+* The ECDSA key is used for signing blocks.
 
 ## Generate a BLS key
 
@@ -22,7 +22,8 @@ You can generate a BLS key pair using the Ronin CLI or your node's Docker image.
 ### Generate using the CLI
 
 1. Build Ronin from the source code:
-   ```
+
+   ```bash
    $ git clone https://github.com/axieinfinity/ronin
    $ cd ronin
    $ make ronin
@@ -30,13 +31,13 @@ You can generate a BLS key pair using the Ronin CLI or your node's Docker image.
 
 2. Add `./build/bin/ronin` to the `$PATH` environment variable. You can do this by adding the following line to your `$HOME/.profile` or `/etc/profile` (for a system-wide installation):
 
-   ```
+   ```bash
    export PATH=$PATH:/path/to/ronin
    ```
 
    If run from the `ronin` directory, then the command is as follows:
-    
-   ```
+
+   ```bash
    export PATH=$PATH:./build/bin/ronin
    ```
 
@@ -44,7 +45,7 @@ You can generate a BLS key pair using the Ronin CLI or your node's Docker image.
 
 3. Generate a BLS key pair:
 
-   ```
+   ```bash
    $ mkdir bls_keystore
    $ echo "input_your_password" > bls_password
    $ ronin account generatebls --secret
@@ -52,7 +53,7 @@ You can generate a BLS key pair using the Ronin CLI or your node's Docker image.
 
    The output is the following:
 
-   ```
+   ```bash
    Successfully generated BLS key
    Public key: {your_public_key}
    Secret key: {your_private_key}
@@ -62,25 +63,25 @@ You can generate a BLS key pair using the Ronin CLI or your node's Docker image.
 
    To reveal the public key, run this command:
 
-   ```
-   $ ronin account listbls
+   ```bash
+   ronin account listbls
    ```
 
    The output is the following:
 
-   ```
+   ```bash
    BLS public key #0: {your_public_key}
    ```
 
    To reveal both the public key and private key, run this command:
 
+   ```bash
+   ronin account listbls --secret
    ```
-   $ ronin account listbls --secret
-   ```
-    
+
    The output is the following:
 
-   ```
+   ```bash
    BLS public key #0: {your_public_key}
    BLS secret key #0: {your_private_key}
    ```
@@ -101,9 +102,9 @@ If you want to view the BLS private key, do the following:
 
 ## Generate an ECDSA key
 
-You can generate an ECDSA key pair using the Ronin CLI or the Ronin Wallet app or extension.
+You can generate an ECDSA key pair using the Ronin command-line tool (CLI) or the Ronin Wallet app or extension.
 
-### Generate using the CLI
+### Generate an ECDSA key using the CLI
 
 #### Prerequisites
 
@@ -114,8 +115,8 @@ on the official website.
 #### Steps
 
 1. Compile the `ethkey` tool from the Ronin source code by running the following commands:
-   
-   ```
+
+   ```bash
    $ git clone https://github.com/axieinfinity/ronin
    $ cd ronin
    $ go get ./...
@@ -125,20 +126,20 @@ on the official website.
 
    The output is similar to the following:
 
-   ```
+   ```bash
    -rwxr-xr-x 1 user staff 16306850 Mar 23 18:13 ethkey
    ```
 
 2. Generate the key pair and set a password:
 
-   ```
-   $ ./ethkey generate your_private_key_name
+   ```bash
+   ./ethkey generate your_private_key_name
    ```
 
 3. Reveal the key pair:
 
-   ```
-   $ ./ethkey inspect --private your_private_key_name
+   ```bash
+   ./ethkey inspect --private your_private_key_name
    ```
 
 ### Generate using Ronin Wallet
@@ -147,13 +148,13 @@ ECDSA keys can also be generated using [Ronin Wallet](https://wallet.roninchain.
 
 #### Browser extension
 
-<img src={extension} width={1440} />
+<img src={extension} width={1200} />
 
 #### Mobile app
 
-<img src={mobile} width={1440} />
+<img src={mobile} width={1200} />
 
 ## See also
 
-- [REP-0003: Optimistic Fast Finality](https://github.com/axieinfinity/REPs/blob/main/REP-0003.md#rewards)
-- [Build a Ronin CLI](./cli.md)
+* [REP-0003: Optimistic Fast Finality](https://github.com/axieinfinity/REPs/blob/main/REP-0003.md#rewards)
+* [Build a Ronin CLI](./cli.md)
