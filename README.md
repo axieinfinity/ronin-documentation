@@ -1,8 +1,8 @@
 ## Ronin chain documentation
 
-This repository contains Ronin documentation deployed at
-[docs.roninchain.com](https://docs.roninchain.com). The documentation is built
-with [Docusaurus](https://docusaurus.io/), a static site generator.
+This repository contains the documentation for the Ronin chain, which is available online at
+[docs.roninchain.com](https://docs.roninchain.com). The website is built
+using [Docusaurus](https://docusaurus.io/), a static site generator.
 
 ## Local development
 
