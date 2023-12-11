@@ -150,7 +150,7 @@ const config = {
           },
           // Apps
           {
-            label: 'Apps',
+            label: 'dApps',
             to: 'apps',
           },
           // Delegators

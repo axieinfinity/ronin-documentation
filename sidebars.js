@@ -53,13 +53,13 @@ const sidebars = {
         'basics/roles',
       ],
     },
-    // Apps
+    // dApps
     {
       type: 'category',
-      label: 'Apps',
+      label: 'dApps',
       link: {
         type: 'generated-index',
-        description: 'Documentation for apps in the Ronin ecosystem.',
+        description: 'User guides for selected dApps in the Ronin ecosystem.',
         slug: '/apps',
       },
       items: [

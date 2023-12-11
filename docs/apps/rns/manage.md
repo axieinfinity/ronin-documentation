@@ -18,7 +18,7 @@ Click **Manage** on a domain to open its management page. From there, you can se
 
 Your Ronin address can serve as the owner for one or multiple RNS names. You can use one of these domains as your *primary* name. A primary name is the one that shows up across RNS-enabled apps and wallets wherever your Ronin address is usually displayed. You can have only one primary name at a time, but you can change it whenever you want.
 
-### Set a primary name
+### Set your primary name {#set-a-primary-name}
 
 After you just bought your first RNS domain name, follow these steps to set it as primary.
 
@@ -35,7 +35,7 @@ After you just bought your first RNS domain name, follow these steps to set it a
 You can also set a domain name as primary during the [registration](./guides/register/regular.md).
 :::
 
-### Change a primary name
+### Change your primary name {#change-a-primary-name}
 
 If you have more than one RNS domain, follow these steps to set a different domain as primary.
 
@@ -48,7 +48,7 @@ If you have more than one RNS domain, follow these steps to set a different doma
 1. Sign the transaction. After that, this name is successfully set as primary.
 ![success](assets/manage/success-set-as-primary.png)
 
-### Remove a primary name
+### Remove your primary name {#remove-a-primary-name}
 
 To remove your primary name, select the domain and click **Remove**. After you remove the name, RNS starts to display your Ronin address instead until you set another domain as primary.
 

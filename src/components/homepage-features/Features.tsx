@@ -16,16 +16,16 @@ const featureList = [
       href: '/basics',
       title: 'Basics',
     },
-    description: <>Learn about the Ronin chain.</>,
+    description: <>Learn the basics Ronin chain.</>,
   },
   {
-    title: 'Apps',
+    title: 'dApps',
     Icon: AppsIcon,
     link: {
       href: '/apps',
-      title: 'Apps',
+      title: 'dApps',
     },
-    description: <>Get the most out of the apps in the Ronin ecosystem.</>,
+    description: <>Learn how to use Ronin's decentralized apps.</>,
   },
   {
     title: 'Delegators',
@@ -34,7 +34,7 @@ const featureList = [
       href: '/delegators',
       title: 'Delegators',
     },
-    description: <>Stake RON tokens and delegate your stake to validators to earn rewards.</>,
+    description: <>Stake your RON tokens to validators to earn rewards.</>,
   },
   {
     title: 'Validators',
@@ -48,7 +48,7 @@ const featureList = [
   {
     title: 'Bridge operators',
     Icon: SignDirectionIcon,
-    description: <>Run a bridge operator node.</>,
+    description: <>Run a bridge operator node to earn rewards.</>,
     link: {
       href: '/bridge-operators',
       title: 'Bridge operators',
@@ -57,7 +57,7 @@ const featureList = [
   {
     title: 'Community',
     Icon: UserShieldIcon,
-    description: <>Join the Ronin community and stay up to date with the latest news.</>,
+    description: <>Join Ronin social and discover other ways to be part of the community.</>,
     link: {
       href: '/community/join',
       title: 'Community',

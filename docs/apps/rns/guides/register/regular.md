@@ -35,19 +35,18 @@ Before registering a regular domain, install [Ronin Wallet](https://wallet.ronin
 
 ## Register a regular domain
 
-1. Open the [RNS app](https://id.roninchain.com) and connect your Ronin Wallet.
+1. Open the [RNS app](https://id.roninchain.com).
+1. Connect your Ronin Wallet.
 ![connect-wallet](../../assets/regular/connect-wallet.png)
 1. Search for the domain you want to register, and then select it to open the domain info page.
 ![search](../../assets/regular/search.png)
-1. The info page displays the renewal fee, domain tier, as well as other details. Click **Register now** to begin. The RNS registrar requires two transactions to register a regular name: *request transaction* and *registration transaction*.
+1. The info page displays the renewal fee, domain tier, as well as other details. The RNS registrar requires two transactions to register a regular name: *request transaction* and *registration transaction*. Click **Register now** to begin.
 ![domain-info](../../assets/regular/domain-info.png)
-1. At the request transaction, select the duration of your registration period in years (1).
-   :::tip
-   We recommend registering your RNS name for multiple years to avoid losing the domain to someone else.
-   :::
-   The renewal fee changes based on how many years you want to register the domain for. The minimum duration for the registration is 1 year. **Note:** This name is *set as primary* by default (2), which means that it's displayed as your RNS name in all the RNS-enabled apps and wallets.
-![register](../../assets/regular/register.png)
-1. Click **Request** to prompt the request transaction.
+1. At the request transaction, complete the following steps:
+   1. Select the duration of your registration period in years (1). The minimum duration is 1 year. We recommend registering your RNS name for multiple years to avoid losing the domain to someone else.
+   2. Optionally, set this domain as your *primary name* (2). If you do so, the domain will be displayed as your RNS name in all the RNS-enabled apps and wallets.
+      ![register](../../assets/regular/register.png)
+2. Click **Request**, then confirm the request transaction.
 ![request](../../assets/regular/request.png)
    Wait for a few seconds to get your request confirmed. As soon as it's confirmed, your domain is ready to be registered.
 ![wait](../../assets/regular/wait.png)
