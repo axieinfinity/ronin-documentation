@@ -118,7 +118,7 @@ const sidebars = {
         id: 'delegators/index',        
       },
       items: [
-        // Become a delegator
+        // Stake RON
         'delegators/onboarding/become-delegator',
         {
           type: 'category',

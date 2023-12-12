@@ -522,7 +522,7 @@ this task and the concepts that it involves.
 
 ##### Examples of how-to guides
 
-* [Become a delegator](./delegators/onboarding/become-delegator.mdx)
+* [Stake RON](./delegators/onboarding/become-delegator.mdx)
 * [Run a validator node](./validators/setup/mainnet/run-validator.md)
 * [Claim rewards](./validators/manage/claim-rewards.mdx)
 * Task topics within other pages:

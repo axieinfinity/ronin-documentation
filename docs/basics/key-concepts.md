@@ -233,7 +233,7 @@ Staking is the process through which a Ronin user "stakes" or locks their crypto
 
 Ronin's DPoS allows users to commit their RON as votes, where voting power is proportional to the number of coins held. These votes are then used to elect a number of validators who manage the blockchain on behalf of their voters, ensuring security and consensus. The staking reward is distributed to these elected validators, who then redistribute part of the reward to the users who staked their tokens proportionally to their individual contributions.
 
-For instructions on staking on Ronin, see [Become a delegator](../delegators/onboarding/become-delegator.mdx).
+For instructions on staking on Ronin, see [Stake RON](../delegators/onboarding/become-delegator.mdx).
 
 ## T
 
