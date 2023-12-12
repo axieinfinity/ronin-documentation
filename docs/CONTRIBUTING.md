@@ -522,7 +522,7 @@ this task and the concepts that it involves.
 
 ##### Examples of how-to guides
 
-* [Become a delegator](./delegators/onboarding/become-delegator.mdx)
+* [Stake RON](./delegators/onboarding/become-delegator.mdx)
 * [Run a validator node](./validators/setup/mainnet/run-validator.md)
 * [Claim rewards](./validators/manage/claim-rewards.mdx)
 * Task topics within other pages:
@@ -772,8 +772,8 @@ more text here...
 
 Ronin uses the [Google](https://github.com/errata-ai/google) style for the
 [Google developer documentation style guide](https://developers.google.com/style).
-The style definitions are located in the `/static/styles` directory,
-and the Vale config lives in `/.vale.ini`.
+The style definitions are located in the `./github/styles` directory,
+and the Vale config lives in `.vale.ini`.
 
 ## Self-review checklist
 
@@ -790,8 +790,7 @@ checklist:
   the style guide.
 * [ ] Ensure technical accuracy of the content. Try to test your tasks and run
   all commands by yourself.
-* [ ] Run [Vale](#run-vale) in your Markdown files to check adherence to the
-  [style guide](./community/contribute/style-guide.md).  
+* [ ] Run [Vale](#run-vale) to lint your Markdown files.
 * [ ] Spot and fix any grammar and spelling errors. Vale might not highlight
   those.
 * [ ] If there are any failing checks in your PR, such as broken links,
