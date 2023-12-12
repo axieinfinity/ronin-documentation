@@ -563,7 +563,7 @@ roles."
 Write one or two paragraphs summarizing the main idea of the topic. Explain what
 all the entries defined in the topic have in common.
 
-###### About the "subset of reference entries" section
+###### About the "Reference entry" section
 
 * The structure of reference topics varies based on what kind of information you
   are documenting. You might find it helpful to organize the contents using
@@ -578,7 +578,7 @@ all the entries defined in the topic have in common.
 * For consistency in longer reference pages, consider using H2 headers for each
   section, and H3 headers for subsections.
 
-###### About the "See also" section
+###### About the "See also" section in reference topics
 
 Include a bulleted list of related pages to extend the user's understanding of
 the concepts covered in this topic.
@@ -599,6 +599,8 @@ A troubleshooting topic should be the final topic on a page. If a page has more
 than five troubleshooting topics, put the content on a separate page that has
 troubleshooting information exclusively. The title can be `Troubleshoot <feature>`
 and in the sidebar, you can use just the word `Troubleshoot`.
+
+##### Troubleshooting guidelines
 
 A troubleshooting topic can be one of three types:
 

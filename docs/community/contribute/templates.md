@@ -74,8 +74,8 @@ in this topic. -->
 * [Page title](Page URL)
 ```
 
-For guidelines on writing concept topics, see
-[Content model](./../../CONTRIBUTING.md#explanation).
+For guidelines on writing explanation topics, see
+[Explanation guidelines](./../../CONTRIBUTING.md#explanation-guidelines).
 
 ## How-to guide
 
@@ -109,7 +109,7 @@ in this topic. -->
 ```
 
 For guidelines on writing task topics, see
-[Content model](./../../CONTRIBUTING.md#how-to-guide).
+[How-to guide guidelines](./../../CONTRIBUTING.md#how-to-guide-guidelines).
 
 ## Reference
 
@@ -123,7 +123,7 @@ description: Write a brief intro to give readers a quick understanding of what's
 
 <!-- An optional section to briefly describe the main idea of the page. -->
 
-## {subset of reference entries}
+## Reference entry
 
 <!-- A table or other structured presentation of entries. For instructions, refer to
 https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference. -->
@@ -138,7 +138,7 @@ in this topic. -->
 ```
 
 For guidelines on writing reference topics, see
-[Content model](./../../CONTRIBUTING.md#reference).
+[Reference guidelines](./../../CONTRIBUTING.md#reference-guidelines).
 
 ## Troubleshooting
 
@@ -191,9 +191,9 @@ description: Write a brief intro to give readers a quick understanding of what's
 
 <!-- An optional section to summarize what the entries on the page have in common. -->
 
-## {subset of errors}
+## Subset of errors
 
-### {error message or error description}
+### Error message or error description
 
 <!-- Write the section title as the error message or its description.
 Use the following structure to describe the error:
@@ -208,7 +208,7 @@ To resolve, {action}." -->
 ```
 
 For guidelines on writing troubleshooting topics, see
-[Content model](./../../CONTRIBUTING.md#troubleshooting).
+[Troubleshooting guidelines](./../../CONTRIBUTING.md#troubleshooting-guidelines).
 
 ## Quickstart
 
@@ -225,7 +225,7 @@ description: Write a brief intro to give readers a quick understanding of what's
 - Clearly stating prerequisites and prior knowledge needed.
 - Stating what the user accomplishes or builds. -->
 
-## Part 1: Do this thing
+## Step 1: Do this thing
 
 <!-- In one sentence, describe what the user does in this step. -->
 <!-- Steps should break down the tasks the user completes in sequential order. -->
@@ -236,18 +236,18 @@ description: Write a brief intro to give readers a quick understanding of what's
 <!-- A step may require the user to perform several tasks - break those tasks down into chunks, allowing the user to scan quickly to find their place if they navigated away from this screen to perform the task. Write the steps of the task following the instructions in
 https://developers.google.com/style/procedures. -->
 
-## Part 2: Do the next thing
+## Step 2: Do the next thing
 
 <!-- Rinse and repeat, adding steps and tasks until the tutorial is complete. -->
 <!-- Remember to show code snippets in context. -->
 
 ## Next steps
 
-<!-- Provide a quick recap of what has been accomplished in the quick start as a means of transitioning to the next step. Include two-three actionable next steps that the user take after completing the quickstart. Always link to a concept related to this product. -->
+<!-- Provide a quick recap of what has been accomplished in the quickstart as a means of transitioning to the next step. Include two-three actionable next steps that the user take after completing the quickstart. Always link to a concept related to this product. -->
 ```
 
 For guidelines on writing quickstarts, see
-[Content model](./../../CONTRIBUTING.md#quickstart).
+[Quickstart guidelines](./../../CONTRIBUTING.md#quickstart-guidelines).
 
 ## Tutorial
 
@@ -293,4 +293,4 @@ this tutorial. -->
 ```
 
 For guidelines on writing tutorials, see
-[Content model](./../../CONTRIBUTING.md#tutorial).
+[Tutorial guidelines](./../../CONTRIBUTING.md#tutorial-guidelines).
