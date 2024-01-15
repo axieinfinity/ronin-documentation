@@ -5,13 +5,44 @@ description: A dApp for transferring tokens between Ethereum and Ronin.
 
 ## Overview
 
-Ronin Bridge is an app for transferring tokens between the Ethereum chain and Ronin. It's a multi-signature bridge, which means that multiple bridge operators must approve a transaction before it can be executed. Multi-sig improves the security and trustworthiness of cross-chain transactions, and prevents any single party from acting maliciously or making unauthorized changes to the transaction.
+Ronin Bridge is an app for transferring tokens between the Ethereum chain and Ronin. When you initiate a transaction on Ronin Bridge, This is a multi-signature bridge, meaning that multiple bridge operators must approve a transaction before it's finalized. This multi-signature approach improves the security and trustworthiness of cross-chain transactions, and prevents any single party from acting maliciously or making unauthorized changes.
 
-Link: [https://bridge.roninchain.com](https://bridge.roninchain.com).
+Link: [https://app.roninchain.com/bridge](https://app.roninchain.com/bridge)
 
-## Withdrawal tier limits
+## Supported wallets
 
-Withdrawing funds from Ronin Bridge involves a tiered system based on the transaction value. The following table outlines the default daily limit per token for each tier:
+Ronin Bridge supports the following wallets:
+
+* Ronin Wallet
+* Metamask Wallet
+* Trust Wallet
+
+For example, you can deposit an NFT from your Metamask wallet to your Ronin Wallet, or withdraw an amount of AXS from Ronin Wallet to Trust Wallet.
+
+## Supported assets
+
+This section lists the digital assets that you can deposit and withdraw with Ronin Bridge.
+
+### ERC20 tokens
+
+Ronin Bridge supports deposit and withdrawal of the following ERC20 tokens:
+
+* Deposit: ETH, AXS, SLP, USDC, AEC, AGG, BANANA
+* Withdrawal: WETH, AXS, SLP, USDC, AGG, BANANA
+
+[Withdrawal limits](#withdrawal-limits) apply.
+
+### NFTs
+
+Ronin Bridge supports deposit and withdrawal of the following NFTs:
+
+* Pixels Land Farm
+* Cyberkongz VX
+* Cyberkongz Genkai
+
+## Withdrawal limits
+
+Withdrawing funds through Ronin Bridge involves a *tiered system* based on the transaction value. The following table outlines the default daily limit per token for each tier:
 
 |        | AXS       | WETH    | SLP           | USDC        | AGG |
 | ------ | --------- | ------- | ------------- | ----------- | --- |
