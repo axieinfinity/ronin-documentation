@@ -69,13 +69,13 @@ The size of your node will also grow over time.
    mkdir -p chaindata/data/ronin
    ```
 
-2. Create a file called `docker-compose.yml`:
+1. Create a file called `docker-compose.yml`: 
 
    ```bash
    vim docker-compose.yml
    ```
 
-3. Paste the following into `docker-compose.yml`:
+1. Paste the following into `docker-compose.yml`:
 
    ```yaml
    version: "3"
@@ -154,13 +154,13 @@ The size of your node will also grow over time.
      * `bridge`, which pulls a bridge image.
      * `db`, which builds a Postgres database for the bridge.
 
-4. Create an `.env` file to store configuration parameters for the services:
+1. Create an `.env` file to store configuration parameters for the services:
 
    ```bash
    vim .env
    ```
 
-5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
+1. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
 
    ```text
    # Your Ethereum RPC endpoint
@@ -237,23 +237,23 @@ The size of your node will also grow over time.
    RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000 --discovery.dns enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com
    ```
 
-6. (Optional) Download the snapshot from the [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repo:
+1. (Optional) Download the snapshot from the [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repo:
 
    ```bash
    cd ~/ronin/chaindata/data/ronin/
    wget -q -O - <snapshot URL from the README file in the repo> | tar -I zstd -xvf -
    ```
 
-7. Start the node:
+1. Start the node:
 
    ```bash
    cd ~/ronin && docker-compose up -d
    ```
   
    This command pulls a Ronin node image, a bridge image, a Postgres database, and starts the services you defined.
-8. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
+1. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page, the **Testnet** section. If it's green, the node is connected and up to date with the network.
 
-9.  Review the log for the validator and the bridge (the node should sync to the latest block for making the bridge work).
+1. Review the log for the validator and the bridge (the node should sync to the latest block for making the bridge work).
 
    ```bash
    docker logs node -f --tail 100
