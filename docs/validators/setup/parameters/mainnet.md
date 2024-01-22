@@ -1,7 +1,5 @@
 ---
 description: Parameters of the Ronin mainnet.
-tags:
-  - params-mainnet
 ---
 
 # Ronin mainnet
@@ -30,18 +28,18 @@ For today's validator set, visit [RON Staking](https://app.roninchain.com/stakin
 
 Whitelist:
 
-```
+```bash
 0x0000000000000000000000000000000000000033
 ```
 
 Blacklist:
 
-```
+```bash
 0x313b24994c93FA0471CB4D7aB796b07467041806
 ```
 
 Validators:
 
-```
+```bash
 0x0000000000000000000000000000000000000011
 ```
