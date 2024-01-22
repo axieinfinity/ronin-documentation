@@ -127,7 +127,7 @@ The size of your Ronin node will also grow over time.
    VERBOSITY=3
  
    CHAIN_STATS_WS_SECRET=xQj2MZPaN72
-   CHAIN_STATS_WS_SERVER=saigon-stats.roninchain.com
+   CHAIN_STATS_WS_SERVER=ronin-stats-ws.roninchain.com
    
    GENESIS_PATH=testnet.json
  
