@@ -98,7 +98,22 @@ const sidebars = {
           ],
         },
         // Ronin Bridge
-        'apps/ronin-bridge',
+        {
+          type: 'category',
+          label: 'Ronin Bridge',
+          link: {
+            type: 'doc',
+            id: 'apps/ronin-bridge/overview', 
+          },
+          items: [
+            // Deposit NFTs
+            'apps/ronin-bridge/guides/deposit',
+            // Withdraw NFTs
+            'apps/ronin-bridge/guides/withdraw',
+            // Token withdrawal limits
+            'apps/ronin-bridge/reference/withdrawal-limits',
+          ]
+        },
         // Ronin Explorer
         'apps/ronin-explorer',
         // RON Staking
