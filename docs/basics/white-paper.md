@@ -2,7 +2,9 @@
 description: Ronin's living white paper.
 ---
 
-# White paper
+## Overview
+
+This is the Ronin chain's white paper. As a living document, it's a work in progress and can be updated in the future without prior notice.
 
 ## Motivation
 
@@ -210,7 +212,3 @@ If a Governing Validator doesn't sync the set of bridge operators to the Ethereu
 
 * The validator is slashed 10,000 of self-delegated RON.
 * The validator doesn't earn commission on the day of slashing.
-
-:::note Disclaimer
-This white paper is a work in progress and can be updated in the future.
-:::
