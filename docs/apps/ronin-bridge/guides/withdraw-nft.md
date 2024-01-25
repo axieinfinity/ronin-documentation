@@ -8,11 +8,11 @@ This guide describes how to withdraw an NFT (non-fungible token) from your Ronin
 
 ## Prerequisites
 
-[Ronin Wallet](wallet.roninchain.com)
+[Ronin Wallet](https://wallet.roninchain.com)
 
 ## Step 1. Fill in the details
 
-1. Open the [Ronin Bridge](app.roninchain.com/bridge) app and select the **Withdraw NFTs** tab.
+1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app and select the **Withdraw NFTs** tab.
 2. Connect your Ronin Wallet using the browser extension or mobile app for your device. When done, your Ronin address displays in the **From** field as the address you want to withdraw the NFT from.
 3. In the **To** field, enter the Ethereum address of the wallet you want to transfer the NFT to.
 

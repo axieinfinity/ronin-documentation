@@ -90,9 +90,9 @@ const sidebars = {
               ],
             },
             // Manage RNS names
-            'apps/rns/manage',
+            'apps/rns/guides/manage',
             // Trade RNS names
-            'apps/rns/trade',
+            'apps/rns/guides/trade',
             // RNS FAQ
             'apps/rns/reference/faq',
           ],
@@ -107,9 +107,9 @@ const sidebars = {
           },
           items: [
             // Deposit NFTs
-            'apps/ronin-bridge/guides/deposit',
+            'apps/ronin-bridge/guides/deposit-nft',
             // Withdraw NFTs
-            'apps/ronin-bridge/guides/withdraw',
+            'apps/ronin-bridge/guides/withdraw-nft',
             // Token withdrawal limits
             'apps/ronin-bridge/reference/withdrawal-limits',
           ]
