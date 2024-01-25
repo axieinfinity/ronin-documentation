@@ -109,4 +109,4 @@ You can add any RNS name to favorites to keep track of its status, for example. 
 
 ## See also
 
-* [Trade RNS names](trade.mdx)
+[Trade RNS names](trade.mdx)

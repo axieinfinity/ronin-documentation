@@ -68,4 +68,4 @@ To view your biddings and their status, go to **My account > My biddings**. If t
 
 ## See also
 
-* [Manage your RNS names](./../../manage.md)
+[Manage your RNS names](../manage.md)

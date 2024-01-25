@@ -106,10 +106,14 @@ const sidebars = {
             id: 'apps/ronin-bridge/overview', 
           },
           items: [
+            // Deposit ERC20 tokens
+            'apps/ronin-bridge/guides/token-deposit',
+            // Withdraw ERC20 tokens
+            'apps/ronin-bridge/guides/token-withdraw',
             // Deposit NFTs
-            'apps/ronin-bridge/guides/deposit-nft',
+            'apps/ronin-bridge/guides/nft-deposit',
             // Withdraw NFTs
-            'apps/ronin-bridge/guides/withdraw-nft',
+            'apps/ronin-bridge/guides/nft-withdraw',
             // Token withdrawal limits
             'apps/ronin-bridge/reference/withdrawal-limits',
           ]

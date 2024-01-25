@@ -52,4 +52,4 @@ To verify your business for a protected name registration, send an email to [sup
 
 ## See also
 
-* [Manage your RNS names](./../../manage.md)
+[Manage your RNS names](../manage.md)
