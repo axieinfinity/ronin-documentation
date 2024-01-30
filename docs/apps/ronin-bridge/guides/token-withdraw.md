@@ -5,7 +5,7 @@ title: Withdraw ERC20 tokens
 
 ## Overview
 
-This guide describes how to withdraw an ERC20 token from your Ronin Wallet to an address on Ethereum. The supported tokens include ETH, AXS, SLP, USDC, AGG, and АЕС.
+This guide describes how to withdraw an ERC20 token from your Ronin Wallet to an address on Ethereum. The supported tokens include WETH, AXS, SLP, USDC, AGG, and АЕС.
 
 ## Prerequisites
 
@@ -14,22 +14,66 @@ This guide describes how to withdraw an ERC20 token from your Ronin Wallet to an
 
 ## Step 1. Fill in the details
 
-1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app and select the **Withdraw** tab.
-2. Connect your Ronin Wallet using the browser extension or mobile app for your device. When done, you can see your Ronin address in the **From** field as the sender of the token.
-3. In the **To** field, enter the Ethereum address that you want to transfer the token to.
+1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app on the **Deposit** tab.
+2. Switch to the **Withdraw** tab by selecting the button between the **From** and **To** fields.
+
+   ![token-withdrawal-1](../assets/token-withdrawal-1.png)
+
+3. In the **From** field, connect your Ronin Wallet using the browser extension or mobile app for your device.
+
+   ![token-withdrawal-2](../assets/token-withdrawal-2.png)
+
+4. In the **To** field, enter the Ethereum address that you want to transfer the token to.
+
+   ![token-withdrawal-3](../assets/token-withdrawal-3.png)
 
 Double-check the recipient address to avoid sending your tokens to the wrong destination.
 
-## Step 2. Select the token and amount
+## Step 2. Choose the token and amount
 
-1. Choose the ERC20 token that you want to withdraw.
-2. Enter the withdrawal amount manually or select **Max** to withdraw the entire balance of this token available in your wallet.
+:::info Spending cap
+When you bridge an ERC20 token for the first time, you need to authorize the bridge to transfer the specified amount of tokens on your behalf. This amount is referred to as your *spending cap*. In the beginning, your spending cap is always zero, so whatever amount you input, you'll need to approve the cap equal to that amount.
+
+If the bridging amount exceeds your current spending cap, the bridge will request you to approve again to update the spending cap.
+
+After you use up your current spending cap (for example, by transferring 30 AXS and the 70 AXS with a spending cap of 100 AXS) you'll need approve a new spending cap the next time you make a transfer. Note that on Ronin Wallet, the spending cap can't be more than the current balance of the token in your wallet.
+:::
+
+1. Choose the ERC20 token that you want to withdraw, then enter the withdrawal amount manually or select **Max** to withdraw the entire balance of this token available in your wallet.
+
+   ![token-withdrawal-4](../assets/token-withdrawal-4.png)
+
+2. When prompted, approve a new spending cap by selecting **Approve**.
+
+   ![token-withdrawal-5](../assets/token-withdrawal-5.png)
+
+3. Sign the transaction in your Ronin Wallet.
 
 ## Step 3. Confirm the withdrawal
 
-1. To withdraw your tokens, select **Submit withdrawal**.
-2. Review the transaction details, including the gas fees associated with the withdrawal. If everything looks correct, select **Confirm**. Make sure you have enough RON in your Ronin Wallet to cover the fees.
+1. Review the transaction details, including the gas fees associated with the withdrawal. Make sure you have enough ETH in your Ethereum wallet to cover the fees. If everything looks correct, select **Submit withdrawal**.
+
+   ![token-withdrawal-6](../assets/token-withdrawal-6.png)
+
+2. Sign the transaction in your Ronin Wallet.
+3. Select **Connect Wallet** and connect your wallet that's linked to the recipient address.
+
+   ![token-withdrawal-7](../assets/token-withdrawal-7.png)
+
+4. Wait for the transaction to be confirmed by the network. Be patient, however, as transactions can take some time to complete, depending on network congestion and gas fees.
+
+   ![token-withdrawal-8](../assets/token-withdrawal-8.png)
+
+5. When the amount is ready to be withdrawn, select **Withdraw** to transfer the tokens to your Ethereum address.
+
+   ![token-withdrawal-9](../assets/token-withdrawal-9.png)
+
+6. Sign the transaction in your connected Ethereum wallet to receive the tokens.
 
 ## Step 4. Receive your tokens on Ethereum
 
-After the transaction is confirmed by the network, you can check the wallet that you use with the specified Ethereum address to verify that the tokens have arrived successfully. Be patient, as transactions can sometimes take several minutes to complete, depending on network congestion and transaction fees.
+The withdrawal is now complete.
+
+![token-withdrawal-10](../assets/token-withdrawal-10.png)
+
+You can check your connected wallet to verify that the tokens have arrived successfully.
