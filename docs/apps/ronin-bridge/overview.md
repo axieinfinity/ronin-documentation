@@ -6,13 +6,13 @@ title: Ronin Bridge
 
 ## Overview
 
-Ronin Bridge is an app for transferring tokens between the Ethereum chain and Ronin. When you initiate a transaction on Ronin Bridge, This is a multi-signature bridge, meaning that multiple bridge operators must approve a transaction before it's finalized. This multi-signature approach improves the security and trustworthiness of cross-chain transactions, and prevents any single party from acting maliciously or making unauthorized changes.
+Ronin Bridge ([https://app.roninchain.com/bridge](https://app.roninchain.com/bridge)) is an app for transferring ERC20 tokens and NFTs (non-fungible tokens) between Ethereum and the Ronin chain.
 
-Link: [https://app.roninchain.com/bridge](https://app.roninchain.com/bridge)
+![bridge-home](./assets/bridge-home.png)
 
-## Deposit NFTs using Ronin Bridge
+This is a multi-signature bridge, which means that when you make a transaction, multiple bridge operators have to approve it before it's finalized. This approach makes the bridge a secure choice for cross-chain transactions, preventing any single party from acting maliciously or making unauthorized changes.
 
-## Supported wallets
+## Wallets you can use
 
 Ronin Bridge supports the following wallets:
 
@@ -22,23 +22,32 @@ Ronin Bridge supports the following wallets:
 
 For example, you can deposit an NFT from your Metamask wallet to your Ronin Wallet, or withdraw an amount of AXS from Ronin Wallet to Trust Wallet.
 
-## Supported assets
-
-This section lists the digital assets that you can deposit and withdraw with Ronin Bridge.
+## Assets you can transfer
 
 ### ERC20 tokens
 
-Ronin Bridge supports deposit and withdrawal of the following ERC20 tokens:
+With Ronin Bridge, you can deposit and withdraw the following ERC20 tokens:
 
 * Deposit: ETH, AXS, SLP, USDC, AEC, AGG, BANANA
 * Withdrawal: WETH, AXS, SLP, USDC, AGG, BANANA
 
-[Withdrawal limits](#withdrawal-limits) apply.
+Withdrawal limits apply. For more information, see [Withdrawal limits](./reference/withdrawal-limits.md).
 
 ### NFTs
 
-Ronin Bridge supports deposit and withdrawal of the following NFTs:
+As for NFTs, the bridge supports deposit and withdrawal for the following collections:
 
 * Pixels Land Farm
 * Cyberkongz VX
 * Cyberkongz Genkai
+
+## RNS support
+
+When transferring assets to Ronin addresses, your can use both standard `0x...` Ronin addresses or an RNS (Ronin Name Service) domain names, such as `axieinfinity.ron`. Note that the RNS name must be an exact match for the underlying address to be detected.
+
+## User guides
+
+* [Deposit NFTs](./guides/nft-deposit.md)
+* [Withdraw NFTs](./guides/nft-withdraw.md)
+* [Deposit ERC20 tokens](./guides/token-deposit.md)
+* [Withdraw ERC20 tokens](./guides/token-withdraw.md)

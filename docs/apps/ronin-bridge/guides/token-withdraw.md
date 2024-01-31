@@ -31,7 +31,7 @@ Double-check the recipient address to avoid sending your tokens to the wrong des
 
 ## Step 2. Choose the token and amount
 
-:::info Spending cap
+:::note Spending cap
 When you bridge an ERC20 token for the first time, you need to authorize the bridge to transfer the specified amount of tokens on your behalf. This amount is referred to as your *spending cap*. In the beginning, your spending cap is always zero, so whatever amount you input, you'll need to approve the cap equal to that amount.
 
 If the bridging amount exceeds your current spending cap, the bridge will request you to approve again to update the spending cap.
@@ -43,7 +43,7 @@ After you use up your current spending cap (for example, by transferring 30 AXS 
 
    ![token-withdrawal-4](../assets/token-withdrawal-4.png)
 
-2. When prompted, approve a new spending cap by selecting **Approve**.
+2. When prompted, select **Approve** to approve the new spending cap for the selected token.
 
    ![token-withdrawal-5](../assets/token-withdrawal-5.png)
 
@@ -68,11 +68,11 @@ After you use up your current spending cap (for example, by transferring 30 AXS 
 
    ![token-withdrawal-9](../assets/token-withdrawal-9.png)
 
-6. Sign the transaction in your connected Ethereum wallet to receive the tokens.
+6. Sign the transaction in your connected Ethereum wallet to receive the transfer.
 
 ## Step 4. Receive your tokens on Ethereum
 
-The withdrawal is now complete.
+When the withdrawal is complete, you'll see a "Withdrawal completed" window.
 
 ![token-withdrawal-10](../assets/token-withdrawal-10.png)
 
