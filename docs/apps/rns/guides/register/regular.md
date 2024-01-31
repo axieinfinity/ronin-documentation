@@ -61,4 +61,4 @@ You can now see your unique RNS name everywhere across the Ronin ecosystem. To v
 
 ## See also
 
-* [Manage your RNS names](./../../manage.md)
+* [Manage your RNS names](../manage.md)
