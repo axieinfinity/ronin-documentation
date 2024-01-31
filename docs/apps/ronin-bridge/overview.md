@@ -6,7 +6,7 @@ title: Ronin Bridge
 
 ## Overview
 
-Ronin Bridge ([https://app.roninchain.com/bridge](https://app.roninchain.com/bridge)) is an app for transferring ERC20 tokens and NFTs (non-fungible tokens) between Ethereum and the Ronin chain.
+Ronin Bridge ([app.roninchain.com/bridge](https://app.roninchain.com/bridge)) is an app for transferring ERC20 tokens and NFTs (non-fungible tokens) between Ethereum and the Ronin chain.
 
 ![bridge-home](./assets/bridge-home.png)
 
