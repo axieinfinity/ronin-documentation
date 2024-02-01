@@ -47,7 +47,7 @@ After you use up your current spending cap (for example, by transferring 30 AXS 
 
    ![token-withdrawal-5](../assets/token-withdrawal-5.png)
 
-3. Sign the transaction in your Ronin Wallet.
+3. When prompted, sign the transaction in your Ronin Wallet.
 
 ## Step 3. Confirm the withdrawal
 
@@ -55,7 +55,7 @@ After you use up your current spending cap (for example, by transferring 30 AXS 
 
    ![token-withdrawal-6](../assets/token-withdrawal-6.png)
 
-2. Sign the transaction in your Ronin Wallet.
+2. When prompted, sign the transaction in your Ronin Wallet.
 3. Select **Connect Wallet** and connect your wallet that's linked to the recipient address.
 
    ![token-withdrawal-7](../assets/token-withdrawal-7.png)
@@ -68,7 +68,7 @@ After you use up your current spending cap (for example, by transferring 30 AXS 
 
    ![token-withdrawal-9](../assets/token-withdrawal-9.png)
 
-6. Sign the transaction in your connected Ethereum wallet to receive the transfer.
+6. When prompted, sign the transaction in your connected Ethereum wallet to receive the transfer.
 
 ## Step 4. Receive your tokens on Ethereum
 

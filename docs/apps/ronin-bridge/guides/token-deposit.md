@@ -34,7 +34,7 @@ Choose the ERC20 token that you want to deposit, then enter the amount manually 
 1. Review the transaction details, including the gas fees associated with the deposit. Make sure you have enough ETH in your Ethereum wallet to cover the fees. If everything looks correct, select **Deposit**.
    ![token-deposit-4](../assets/token-deposit-4.png)
 
-2. Sign the transaction in your connected wallet.
+2. When prompted, sign the transaction in your connected wallet.
 3. Wait for the transaction to be confirmed by the network. Be patient, however, as transactions can take some time to complete, depending on network congestion and gas fees.
 
    ![token-deposit-5](../assets/token-deposit-5.png)

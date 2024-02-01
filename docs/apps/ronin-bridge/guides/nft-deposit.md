@@ -71,7 +71,7 @@ This way, your future transfers will not require approvals.
 
    ![nft-deposit-8](../assets/nft-deposit-8.png)
 
-2. Sign the transaction in your connected wallet.
+2. When prompted, sign the transaction in your connected wallet.
 3. Wait for the transaction to be confirmed by the network. Be patient, however, as transactions can take some time to complete, depending on network congestion and gas fees.
 
    ![nft-deposit-9](../assets/nft-deposit-9.png)

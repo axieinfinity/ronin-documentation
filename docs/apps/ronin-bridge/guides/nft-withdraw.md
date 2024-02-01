@@ -77,7 +77,7 @@ This way, your future transfers will not require approvals.
 
    ![nft-withdrawal-10](../assets/nft-withdrawal-10.png)
 
-2. Sign the transaction in your Ronin Wallet.
+2. When prompted, sign the transaction in your Ronin Wallet.
 3. Select **Connect Wallet** and connect your wallet that's linked to the recipient address.
 4. Wait for the transaction to be confirmed by the network. Be patient, however, as transactions can take some time to complete, depending on network congestion and gas fees.
 
@@ -87,7 +87,7 @@ This way, your future transfers will not require approvals.
 
    ![nft-withdrawal-12](../assets/nft-withdrawal-12.png)
 
-6. Sign the transaction in your connected Ethereum wallet to receive the transfer.
+6. When prompted, sign the transaction in your connected Ethereum wallet to receive the transfer.
 
 ## Step 5. Receive your NFT on Ethereum
 
