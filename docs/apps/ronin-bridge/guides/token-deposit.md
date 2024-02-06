@@ -17,6 +17,10 @@ This guide describes how to deposit an ERC20 token from your Ethereum wallet int
 1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app and select the **Deposit** tab.
 2. In the **From** field, connect your Ethereum wallet that you want to transfer the token from. The supported wallets include Metamask and Trust Wallet.
 
+   :::info
+   If you access the bridge through the mobile Ronin Wallet, you can only connect an Ethereum wallet that was imported to Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+   :::
+
    ![token-deposit-1](../assets/token-deposit-1.png)
 
 3. In the **To** field, enter the Ronin address or RNS name that you want to deposit the token into. Note that for RNS names, you need to enter the complete name, such as "example.ron."

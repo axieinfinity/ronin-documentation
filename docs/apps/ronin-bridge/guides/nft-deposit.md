@@ -17,6 +17,10 @@ This guide describes how to deposit an NFT (non-fungible token) from your Ethere
 1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app and select the **Deposit NFTs** tab.
 2. In the **From** field, connect your Ethereum wallet that you want to transfer the NFT from. The supported wallets include Metamask and Trust Wallet.
 
+   :::info
+   If you access the bridge through the mobile Ronin Wallet, you can only connect an Ethereum wallet that was imported to Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+   :::
+
    ![nft-deposit-1](../assets/nft-deposit-1.png)
 
 3. In the **To** field, enter your Ronin address that you want to deposit the NFT into.
