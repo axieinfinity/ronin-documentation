@@ -25,8 +25,8 @@ This guide describes how to withdraw an NFT (non-fungible token) from your Ronin
 
 4. In the **To** field, enter the Ethereum address that you want to transfer the NFT to.
 
-   :::info
-   If you access the bridge through the mobile Ronin Wallet, then you can enter any Ethereum address as the recipient, but only the imported wallet can pay gas fees associated with the transaction. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+   :::info[Ronin Wallet mobile app]
+   While you can specify any Ethereum address as the recipient, only your imported wallet will cover the gas fees for the transaction. For details on importing wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
    :::
 
    ![nft-withdrawal-3](../assets/nft-withdrawal-3.png)

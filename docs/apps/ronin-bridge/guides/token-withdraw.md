@@ -25,8 +25,8 @@ This guide describes how to withdraw an ERC20 token from your Ronin Wallet to an
 
 4. In the **To** field, enter the Ethereum address that you want to transfer the token to.
 
-   :::info
-   If you access the bridge through the mobile Ronin Wallet, then you can enter any Ethereum address as the recipient, but only the imported wallet can pay gas fees associated with the transaction. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+   :::info[Ronin Wallet mobile app]
+   Ronin Wallet mobile app users: While you can specify any Ethereum address as the recipient, only your imported wallet will cover the gas fees for the transaction. For details on importing wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
    :::
 
    ![token-withdrawal-3](../assets/token-withdrawal-3.png)
@@ -35,12 +35,12 @@ Double-check the recipient address to avoid sending your tokens to the wrong des
 
 ## Step 2. Choose the token and amount
 
-:::note Spending cap
-When you bridge an ERC20 token for the first time, you need to authorize the bridge to transfer the specified amount of tokens on your behalf. This amount is referred to as your *spending cap*. In the beginning, your spending cap is always zero, so whatever amount you input, you'll need to approve the cap equal to that amount.
+:::info
+First-time bridging ERC20 tokens requires setting a spending cap, initially set to zero. Enter your desired bridging amount, and approve the corresponding spending cap.
 
-If the bridging amount exceeds your current spending cap, the bridge will request you to approve again to update the spending cap.
+For future bridgings exceeding your current cap, re-approval is needed to update the limit.
 
-After you use up your current spending cap (for example, by transferring 30 AXS and the 70 AXS with a spending cap of 100 AXS) you'll need approve a new spending cap the next time you make a transfer. Note that on Ronin Wallet, the spending cap can't be more than the current balance of the token in your wallet.
+Remember, the cap can't exceed your wallet's token balance.
 :::
 
 1. Choose the ERC20 token that you want to withdraw, then enter the withdrawal amount manually or select **Max** to withdraw the entire balance of this token available in your wallet.
