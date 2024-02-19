@@ -74,8 +74,6 @@ This way, your future transfers will not require approvals.
 
 1. Review the transaction details, including the gas fees associated with the withdrawal. Make sure you have enough ETH in your Ethereum wallet to cover the fees. If everything looks correct, select **Submit withdrawal**.
 
-   **Note:** In the Ronin Wallet mobile app, only your imported wallet can pay the gas fees.
-
    ![nft-withdrawal-10](../assets/nft-withdrawal-10.png)
 
 2. When prompted, sign the transaction in your Ronin Wallet.
@@ -83,8 +81,18 @@ This way, your future transfers will not require approvals.
 
    <details>
       <summary>
-        How to connect your Ethereum wallet in the Ronin Wallet mobile app
+        How to withdraw to your Ethereum wallet in the Ronin Wallet mobile app
       </summary>
+      You have two options of paying the gas fees. One option is to pay directly using your imported wallet. The other option is to copy the transaction hash, open it in your browser, and connect any other Ethereum account to pay the fees.
+
+      To pay using another wallet, follow these steps:
+      <ol>
+      <li>Select the icon to copy the transaction hash.</li>
+      <li>Paste the link in your browser, select **Withdraw**, and then connect your other Ethereum wallet to pay the fees.</li>
+      </ol>
+      <div>![ronin-wallet-mobile-withdrawal-external](../assets/ronin-wallet-mobile-withdrawal-external.png)</div>
+
+      To pay using your imported wallet, follow these steps:
       <ol>
       <li>Select ***Connect Wallet***.</li>
       <li>Select the multichain Ronin Mobile 2.0.</li>

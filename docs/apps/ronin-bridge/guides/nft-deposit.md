@@ -21,7 +21,7 @@ If you access Ronin Bridge through the Ronin Wallet mobile app, then you can onl
         How to connect your imported Ethereum wallet in the Ronin Wallet mobile app
       </summary>
       <ol>
-      <li>On the **Deposit Tokens** tab, select **From**.</li>
+      <li>On the **Deposit** tab, select **From**.</li>
       <li>Select the multichain Ronin Mobile 2.0.</li>
       <li>Confirm the network switch to Ethereum.</li>
       <li>Open the network switch menu.</li>
