@@ -1,7 +1,7 @@
 ---
 description: Daily withdrawal limits per token on Ronin Bridge.
 slug: /apps/ronin-bridge/withdrawal-limits
-title: Withdrawal limits
+title: Token withdrawal limits
 ---
 
 Withdrawing funds through Ronin Bridge involves a *tiered system* based on the transaction value. The following table outlines the default daily limit per token for each tier:

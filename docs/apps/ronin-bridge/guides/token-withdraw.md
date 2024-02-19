@@ -9,8 +9,7 @@ This guide describes how to withdraw an ERC20 token from your Ronin Wallet to an
 
 ## Prerequisites
 
-* An address on Ronin and the [Ronin Wallet](https://wallet.roninchain.com) extension or mobile app.
-* An address on Ethereum and a wallet linked to it, such as [Metamask](https://metamask.io/) or [Trust Wallet](https://trustwallet.com/).
+If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets that were imported into Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Fill in the details
 
@@ -23,11 +22,7 @@ This guide describes how to withdraw an ERC20 token from your Ronin Wallet to an
 
    ![token-withdrawal-2](../assets/token-withdrawal-2.png)
 
-4. In the **To** field, enter the Ethereum address that you want to transfer the token to.
-
-   :::info[Ronin Wallet mobile app]
-   Ronin Wallet mobile app users: While you can specify any Ethereum address as the recipient, only your imported wallet will cover the gas fees for the transaction. For details on importing wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
-   :::
+4. In the **To** field, enter the Ethereum address that you want to transfer the token to. **Note:** In the mobile Ronin Wallet app, you can enter any Ethereum address, but only your imported wallet will cover the gas fees for the transaction.
 
    ![token-withdrawal-3](../assets/token-withdrawal-3.png)
 
@@ -57,10 +52,25 @@ Remember, the cap can't exceed your wallet's token balance.
 
 1. Review the transaction details, including the gas fees associated with the withdrawal. Make sure you have enough ETH in your Ethereum wallet to cover the fees. If everything looks correct, select **Submit withdrawal**.
 
+   **Note:** In the Ronin Wallet mobile app, only your imported wallet can pay the gas fees.
+
    ![token-withdrawal-6](../assets/token-withdrawal-6.png)
 
 2. When prompted, sign the transaction in your Ronin Wallet.
-3. Select **Connect Wallet** and connect your wallet that's linked to the recipient address.
+3. Select **Connect Wallet** and connect your Ethereum wallet.
+
+   <details>
+      <summary>
+        How to connect your Ethereum wallet in the Ronin Wallet mobile app
+      </summary>
+      <ol>
+      <li>Select ***Connect Wallet***.</li>
+      <li>Select the multichain Ronin Mobile 2.0.</li>
+      <li>Confirm the network switch to Ethereum.</li>
+      <li>Select **Withdraw**. </li>
+      </ol>
+      <div>![ronin-wallet-mobile-withdrawal](../assets/ronin-wallet-mobile-withdrawal.png)</div>
+   </details>
 
    ![token-withdrawal-7](../assets/token-withdrawal-7.png)
 

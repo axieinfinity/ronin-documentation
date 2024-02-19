@@ -9,8 +9,7 @@ This guide describes how to withdraw an NFT (non-fungible token) from your Ronin
 
 ## Prerequisites
 
-* An address on Ronin and the [Ronin Wallet](https://wallet.roninchain.com) extension or mobile app.
-* An address on Ethereum and a wallet linked to it, such as [Metamask](https://metamask.io/) or [Trust Wallet](https://trustwallet.com/).
+If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets that were imported into Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Fill in the details
 
@@ -23,11 +22,7 @@ This guide describes how to withdraw an NFT (non-fungible token) from your Ronin
 
    ![nft-withdrawal-2](../assets/nft-withdrawal-2.png)
 
-4. In the **To** field, enter the Ethereum address that you want to transfer the NFT to.
-
-   :::info[Ronin Wallet mobile app]
-   While you can specify any Ethereum address as the recipient, only your imported wallet will cover the gas fees for the transaction. For details on importing wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
-   :::
+4. In the **To** field, enter the Ethereum address that you want to transfer the NFT to. **Note:** In the mobile Ronin Wallet app, you can enter any Ethereum address, but only your imported wallet will cover the gas fees for the transaction.
 
    ![nft-withdrawal-3](../assets/nft-withdrawal-3.png)
 
@@ -79,10 +74,26 @@ This way, your future transfers will not require approvals.
 
 1. Review the transaction details, including the gas fees associated with the withdrawal. Make sure you have enough ETH in your Ethereum wallet to cover the fees. If everything looks correct, select **Submit withdrawal**.
 
+   **Note:** In the Ronin Wallet mobile app, only your imported wallet can pay the gas fees.
+
    ![nft-withdrawal-10](../assets/nft-withdrawal-10.png)
 
 2. When prompted, sign the transaction in your Ronin Wallet.
-3. Select **Connect Wallet** and connect your wallet that's linked to the recipient address.
+3. Select **Connect Wallet** and connect your Ethereum wallet.
+
+   <details>
+      <summary>
+        How to connect your Ethereum wallet in the Ronin Wallet mobile app
+      </summary>
+      <ol>
+      <li>Select ***Connect Wallet***.</li>
+      <li>Select the multichain Ronin Mobile 2.0.</li>
+      <li>Confirm the network switch to Ethereum.</li>
+      <li>Select **Withdraw**.</li>
+      </ol>
+      <div>![ronin-wallet-mobile-withdrawal](../assets/ronin-wallet-mobile-withdrawal.png)</div>
+   </details>
+
 4. Wait for the transaction to be confirmed by the network. Be patient, however, as transactions can take some time to complete, depending on network congestion and gas fees.
 
    ![nft-withdrawal-11](../assets/nft-withdrawal-11.png)

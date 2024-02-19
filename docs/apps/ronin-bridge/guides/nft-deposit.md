@@ -9,18 +9,27 @@ This guide describes how to deposit an NFT (non-fungible token) from your Ethere
 
 ## Prerequisites
 
-* An address on Ronin and the [Ronin Wallet](https://wallet.roninchain.com) extension or mobile app.
-* An address on Ethereum and a wallet linked to it, such as [Metamask](https://metamask.io/) or [Trust Wallet](https://trustwallet.com/).
-* If you're a Ronin Wallet mobile app user, import your sender Ethereum wallet into the app before making a deposit. For instructions, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets that were imported into Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Fill in the details
 
 1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app and select the **Deposit NFTs** tab.
-2. In the **From** field, connect your Ethereum wallet that you want to transfer the NFT from. The supported wallets include Metamask and Trust Wallet.
+2. In the **From** field, connect the Ethereum wallet that you want to transfer the NFT from. In the mobile Ronin Wallet app, select your imported Ethereum wallet.
 
-   :::info[Ronin Wallet mobile app]
-   To connect your sender Ethereum wallet, import it into your Ronin Wallet app first. For details on importing wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
-   :::
+   <details>
+      <summary>
+        How to connect your imported Ethereum wallet in the Ronin Wallet mobile app
+      </summary>
+      <ol>
+      <li>On the **Deposit Tokens** tab, select **From**.</li>
+      <li>Select the multichain Ronin Mobile 2.0.</li>
+      <li>Confirm the network switch to Ethereum.</li>
+      <li>Open the network switch menu.</li>
+      <li>Select the correct Ethereum address that you want to deposit from. In this example, it's an imported Metamask wallet.</li>
+      <li>The address appears in the **From** field.</li>
+      </ol>
+      <div>![ronin-wallet-mobile-deposit](../assets/ronin-wallet-mobile-deposit.png)</div>
+   </details>
 
    ![nft-deposit-1](../assets/nft-deposit-1.png)
 
