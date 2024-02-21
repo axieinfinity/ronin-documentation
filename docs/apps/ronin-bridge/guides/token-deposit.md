@@ -5,11 +5,16 @@ title: Deposit ERC20 tokens
 
 ## Overview
 
-This guide describes how to deposit an ERC20 token from your Ethereum wallet into your address on the Ronin chain. The supported tokens include ETH, AXS, SLP, USDC, AGG, and АЕС.
+This guide describes how to use Ronin Bridge to deposit ERC20 tokens from an Ethereum wallet to an address on the Ronin chain. The supported tokens include ETH, AXS, SLP, USDC, AGG, and АЕС.
+
+You can access Ronin Bridge in two ways:
+
+* On a computer, by opening the link [app.roninchain.com/bridge](https://app.roninchain.com/bridge) in your web browser.
+* In the Ronin Wallet mobile app, by selecting Ronin Bridge in the dApp browser.
 
 ## Prerequisites
 
-If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets that were imported into Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Fill in the details
 

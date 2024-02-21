@@ -9,7 +9,7 @@ This guide describes how to withdraw an NFT (non-fungible token) from your Ronin
 
 ## Prerequisites
 
-If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets that were imported into Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Fill in the details
 
@@ -74,7 +74,7 @@ This way, your future transfers will not require approvals.
 
 1. Review the transaction details, including the gas fees associated with the withdrawal. Make sure you have enough ETH in your Ethereum wallet to cover the fees. If everything looks correct, select **Submit withdrawal**.
 
-   ![nft-withdrawal-10](../assets/nft-withdrawal-10.png)
+   ![nft-withdrawal-9](../assets/nft-withdrawal-9.png)
 
 2. When prompted, sign the transaction in your Ronin Wallet.
 3. Select **Connect Wallet** and connect your Ethereum wallet.
@@ -94,13 +94,15 @@ This way, your future transfers will not require approvals.
 
       To pay using your imported wallet, follow these steps:
       <ol>
-      <li>Select ***Connect Wallet***.</li>
+      <li>Select **Connect Wallet**.</li>
       <li>Select the multichain Ronin Mobile 2.0.</li>
       <li>Confirm the network switch to Ethereum.</li>
       <li>Select **Withdraw**.</li>
       </ol>
       <div>![ronin-wallet-mobile-withdrawal](../assets/ronin-wallet-mobile-withdrawal.png)</div>
    </details>
+
+   ![nft-withdrawal-10](../assets/nft-withdrawal-10.png)
 
 4. Wait for the transaction to be confirmed by the network. Be patient, however, as transactions can take some time to complete, depending on network congestion and gas fees.
 

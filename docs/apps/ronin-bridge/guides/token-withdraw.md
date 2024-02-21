@@ -9,7 +9,7 @@ This guide describes how to withdraw an ERC20 token from your Ronin Wallet to an
 
 ## Prerequisites
 
-If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets that were imported into Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Fill in the details
 
@@ -74,7 +74,7 @@ Remember, the cap can't exceed your wallet's token balance.
 
       To pay using your imported wallet, follow these steps:
       <ol>
-      <li>Select ***Connect Wallet***.</li>
+      <li>Select **Connect Wallet**.</li>
       <li>Select the multichain Ronin Mobile 2.0.</li>
       <li>Confirm the network switch to Ethereum.</li>
       <li>Select **Withdraw**.</li>

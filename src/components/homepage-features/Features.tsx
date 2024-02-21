@@ -16,7 +16,7 @@ const featureList = [
       href: '/basics',
       title: 'Basics',
     },
-    description: <>Learn the basics Ronin chain.</>,
+    description: <>Familiarize yourself with the basics of the Ronin chain.</>,
   },
   {
     title: 'dApps',
@@ -25,7 +25,7 @@ const featureList = [
       href: '/apps',
       title: 'dApps',
     },
-    description: <>Learn how to use Ronin's decentralized apps.</>,
+    description: <>Learn how to use apps in the Ronin ecosystem.</>,
   },
   {
     title: 'Delegators',
@@ -57,7 +57,7 @@ const featureList = [
   {
     title: 'Community',
     Icon: UserShieldIcon,
-    description: <>Join Ronin social and discover other ways to be part of the community.</>,
+    description: <>Join our socials and discover other ways to get involved.</>,
     link: {
       href: '/community/join',
       title: 'Community',

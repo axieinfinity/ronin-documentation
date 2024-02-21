@@ -9,7 +9,7 @@ This guide describes how to deposit an NFT (non-fungible token) from your Ethere
 
 ## Prerequisites
 
-If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets that were imported into Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Fill in the details
 
@@ -21,14 +21,14 @@ If you access Ronin Bridge through the Ronin Wallet mobile app, then you can onl
         How to connect your imported Ethereum wallet in the Ronin Wallet mobile app
       </summary>
       <ol>
-      <li>On the **Deposit** tab, select **From**.</li>
+      <li>On the **Deposit NFT** tab, select **From**.</li>
       <li>Select the multichain Ronin Mobile 2.0.</li>
       <li>Confirm the network switch to Ethereum.</li>
       <li>Open the network switch menu.</li>
       <li>Select the correct Ethereum address that you want to deposit from. In this example, it's an imported Metamask wallet.</li>
       <li>The address appears in the **From** field.</li>
       </ol>
-      <div>![ronin-wallet-mobile-deposit](../assets/ronin-wallet-mobile-deposit.png)</div>
+      <div>![ronin-wallet-mobile-nft-deposit](../assets/ronin-wallet-mobile-nft-deposit.png)</div>
    </details>
 
    ![nft-deposit-1](../assets/nft-deposit-1.png)
