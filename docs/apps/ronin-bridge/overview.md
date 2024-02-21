@@ -33,7 +33,7 @@ With Ronin Bridge, you can deposit and withdraw the following ERC20 tokens:
 
 Withdrawal limits apply. For more information, see [Withdrawal limits](./reference/withdrawal-limits.md).
 
-### NFTs
+### ERC721 tokens
 
 As for NFTs, the bridge supports deposit and withdrawal for the following collections:
 
@@ -47,7 +47,7 @@ When transferring assets to Ronin addresses, your can use both standard `0x...` 
 
 ## User guides
 
-* [Deposit NFTs](./guides/nft-deposit.md)
-* [Withdraw NFTs](./guides/nft-withdraw.md)
-* [Deposit ERC20 tokens](./guides/token-deposit.md)
-* [Withdraw ERC20 tokens](./guides/token-withdraw.md)
+* [Deposit an NFT](./guides/nft-deposit.md)
+* [Withdraw an NFT](./guides/nft-withdraw.md)
+* [Deposit an ERC20 token](./guides/token-deposit.md)
+* [Withdraw an ERC20 token](./guides/token-withdraw.md)
