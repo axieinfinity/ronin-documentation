@@ -5,7 +5,7 @@ title: Withdraw an ERC20 token
 
 ## Overview
 
-This guide describes how to use Ronin Bridge to send an ERC20 token from your Ronin Wallet to an Ethereum wallet. For information on supported Ethereum wallets and ERC20 tokens, see [Ronin Bridge](../overview.md).
+This guide describes how to use Ronin Bridge to send an ERC20 token from your Ronin Wallet to an Ethereum wallet. For information on supported ERC20 tokens, see [Supported assets](../overview.md#supported-assets).
 
 ## Prerequisites
 

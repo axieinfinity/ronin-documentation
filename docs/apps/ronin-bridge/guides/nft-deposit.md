@@ -5,7 +5,7 @@ title: Deposit an NFT
 
 ## Overview
 
-This guide describes how to use Ronin Bridge to send an NFT (non-fungible token) from an Ethereum wallet to your Ronin Wallet. For information on supported Ethereum wallets and NFT collections, see [Ronin Bridge](../overview.md).
+This guide describes how to use Ronin Bridge to send an NFT (non-fungible token) from an Ethereum wallet to your Ronin Wallet. For information on supported NFT collections, see [Supported assets](../overview.md#supported-assets).
 
 ## Prerequisites
 
