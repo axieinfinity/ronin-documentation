@@ -90,15 +90,34 @@ const sidebars = {
               ],
             },
             // Manage RNS names
-            'apps/rns/manage',
+            'apps/rns/guides/manage',
             // Trade RNS names
-            'apps/rns/trade',
+            'apps/rns/guides/trade',
             // RNS FAQ
             'apps/rns/reference/faq',
           ],
         },
         // Ronin Bridge
-        'apps/ronin-bridge',
+        {
+          type: 'category',
+          label: 'Ronin Bridge',
+          link: {
+            type: 'doc',
+            id: 'apps/ronin-bridge/overview', 
+          },
+          items: [
+            // Deposit ERC20 tokens
+            'apps/ronin-bridge/guides/token-deposit',
+            // Withdraw ERC20 tokens
+            'apps/ronin-bridge/guides/token-withdraw',
+            // Deposit NFTs
+            'apps/ronin-bridge/guides/nft-deposit',
+            // Withdraw NFTs
+            'apps/ronin-bridge/guides/nft-withdraw',
+            // Token withdrawal limits
+            'apps/ronin-bridge/reference/withdrawal-limits',
+          ]
+        },
         // Ronin Explorer
         'apps/ronin-explorer',
         // RON Staking
