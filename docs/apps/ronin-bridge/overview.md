@@ -12,36 +12,42 @@ Ronin Bridge ([app.roninchain.com/bridge](https://app.roninchain.com/bridge)) is
 
 This is a multi-signature bridge, which means that when you make a transaction, multiple bridge operators have to approve it before it's finalized. This approach makes the bridge a secure choice for cross-chain transactions, preventing any single party from acting maliciously or making unauthorized changes.
 
-## Wallets you can use
+## Supported wallets
 
 Ronin Bridge supports the following wallets:
 
-* Ronin Wallet
-* Metamask Wallet
-* Trust Wallet
+* [Ronin Wallet](https://wallet.roninchain.com/)
+* [Metamask Wallet](https://metamask.io/)
+* [Trust Wallet](https://trustwallet.com/)
 
-## Assets you can transfer
+## Supported assets
 
 ### ERC20 tokens
 
-With Ronin Bridge, you can deposit and withdraw the following ERC20 tokens:
+With Ronin Bridge, you can transfer the following ERC20 tokens:
 
-* Deposit: ETH, AXS, SLP, USDC, AEC, AGG, BANANA
-* Withdrawal: WETH, AXS, SLP, USDC, AGG, BANANA
+* Deposit: ETH, AXS, SLP, USDC, AGG, PIXEL, AEC
+* Withdrawal: WETH, AXS, SLP, USDC, AGG, PIXEL
 
 Withdrawal limits apply. For more information, see [Withdrawal limits](./reference/withdrawal-limits.md).
 
 ### NFTs
 
-With Ronin Bridge, you can deposit and withdraw the following NFTs (non-fungible tokens):
+With Ronin Bridge, you can transfer NFTs (non-fungible tokens) from the following collections:
 
 * Pixels Land Farm
 * Cyberkongz VX
 * Cyberkongz Genkai
 
-## RNS support
+## RNS compatibility
 
-When sending your assets to a Ronin address, your can use both the standard `0x...` spelling or enter an RNS (Ronin Name Service) domain names, such as `axieinfinity.ron`. **Note:** Make sure to enter the entire RNS name, including the `.ron` part.
+When sending a token to an address on Ronin, you can either enter the standard wallet address, such as "0x...", or its RNS (Ronin Name Service) representation, such as "comingsoon.ron".
+
+**Note:** Make sure to enter the entire RNS name, including the ".ron" part.
+
+![bridge-rns](./assets/bridge-rns.png)
+
+For more information about RNS, see [Register an RNS name](../rns/guides/register/regular.md).
 
 ## User guides
 

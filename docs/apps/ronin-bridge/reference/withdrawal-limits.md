@@ -4,15 +4,15 @@ slug: /apps/ronin-bridge/withdrawal-limits
 title: Token withdrawal limits
 ---
 
-Withdrawing funds through Ronin Bridge involves a *tiered system* based on the transaction value. The following table outlines the default daily limit per token for each tier:
+Withdrawing funds with Ronin Bridge has different tiers based on the amount and type of token you're moving. The bigger the amount, the more bridge operator approvals are needed. See the following table for details:
 
-|        | AXS       | WETH    | SLP           | USDC        | AGG |
-| ------ | --------- | ------- | ------------- | ----------- | --- |
-| Daily limit per token | Capped at 500,000 | Capped at 4,500 | Capped at 2,000,000,000 | Capped at 2,500,000 | Capped at 500,000,000 |
-| Tier 1 | < 100,000 | < 1,000 | < 300,000,000 | < 1,000,000 | < 200,000,000 |
-| Tier 2 | ≥ 100,000 | ≥ 1,000 | ≥ 300,000,000 | ≥ 1,000,000 | ≥ 200,000,000 |
-| Tier 3\* | ≥ 400,000 | ≥ 4,000 | ≥ 1,500,000,000 | ≥ 2,000,000 | ≥ 800,000,000 |
+| Token       | Daily limit per token | Tier 1 | Tier 2 | Tier 3 |
+| ------ | --------- | ------- | ------------- | ----------- |
+| **AXS** | Capped at 500,000 | < 100,000 | ≥ 100,000 | ≥ 400,000 |
+| **WETH** | Capped at 4,500 | < 1,000 | ≥ 1,000 | ≥ 4,000 |
+| **SLP** | Capped at 2,000,000,000 | < 300,000,000 | ≥ 300,000,000 | ≥ 1,500,000,000 |
+| **USDC** | Capped at 2,500,000 | < 1,000,000 | ≥ 1,000,000 | ≥ 2,000,000 |
+| **AGG** | Capped at 500,000,000 | < 200,000,000 | ≥ 200,000,000 | ≥ 800,000,000 |
+| **PIXEL** | Capped at 300,000,000 | < 100,000,000 | ≥ 100,000,000 | ≥ 400,000,000 |
 
-\*Tier 3 transactions aren't counted toward the daily limit per token, because they require human review.
-
-For Tier 1 transactions, 70% of validators need to approve automatically. Tier 2 requires 90% automated approval. Tier 3 requires both 90% automated approval and a manual review with a fee of around 0.001% of the transaction value.
+**Note:** Higher amounts (Tier 3) require manual review for security and have a fee of around 0.001% of the transaction value. These transactions aren't counted toward the daily limit per token.
