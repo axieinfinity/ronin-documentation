@@ -1,5 +1,5 @@
 ---
-description: Rewards earned by validators and delegators.
+description: Rewards earned by validators, delegators, and bridge operators.
 title: Rewards
 ---
 
@@ -25,7 +25,7 @@ The rewards are divided into the *staking reward* and the *bridge reward*. Ronin
 
 Validators receive a staking reward and a transaction fee for their block generation efforts. Validators share the staking reward and the transaction fee with their delegators—token holders who delegated their stakes to the validator. Each validator can set a commission rate that indicates the percentage of the self-allocated reward. The remaining reward is allocated to the delegators based on the amount that they have staked.
 
-### Validator's commission
+### Validator's reward
 
 Validators receive some commission for running validator nodes to generate new blocks. The validators' commission is independent of the staked amount.
 
@@ -42,7 +42,7 @@ Following is a sensitivity analysis of the expected annual commission for the fi
 | Year 7          | 31,818 | 63,636  | 95,455  | 127,273 |
 | Year 8          | 13,636 | 27,273  | 40,909  | 54,545  |
 
-### Delegation's reward
+### Delegator's reward
 
 Delegators share the reward based on the staked amount and the commission rate.
 
@@ -72,6 +72,10 @@ Following is a sensitivity analysis of the annual percentage rate (APR) for the 
 | Year 7                         | 3.45%  | 2.76%  | 2.30%  | 2.33%  |
 | Year 8                         | 1.45%  | 1.16%  | 0.97%  | 0.98%  |
 
-## Bridge reward
+### Bridge operator's reward
 
-Ronin allocates 1,000,000 RON to fund the reward for the first year. This reward is divided among bridge operator nodes.
+Bridge operators receive $10\%$ of the staking reward, which is distributed at the end of each day based on the number of votes from the bridge operators on that day.
+
+## Transaction fees
+
+When the validator generates a block, they earn the transaction fees in that block.

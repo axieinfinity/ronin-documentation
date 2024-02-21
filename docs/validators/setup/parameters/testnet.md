@@ -1,7 +1,5 @@
 ---
 description: Parameters of the Saigon testnet.
-tags:
-  - params-testnet
 ---
 
 # Saigon testnet
@@ -25,7 +23,7 @@ For today's validator set, see [RON Staking](https://saigon-app.roninchain.com/s
 
 ## Contracts
 
-```
+```bash
 RoninGovernanceAdmin: 0x8a320aFb578BEed1A5BB08823CF9A5f60Ea694f4
 RoninTrustedOrganizationProxy: 0x7f46c5DD5f13FF0dd973317411d70800db248e7d
 MaintenanceProxy: 0x4016C80D97DDCbe4286140446759a3f0c1d20584

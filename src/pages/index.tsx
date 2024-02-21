@@ -10,10 +10,7 @@ const Home: React.FC = () => {
     <Layout title={`Home`} description='Ronin Chain Documentation'>
       <div className={styles.background}>
         <header className={styles.heroBanner}>
-          <h1 className={styles.heroBannerHeading}>Welcome to Ronin</h1>
-          <p className={styles.heroBannerSubHeading}>
-            Let&apos;s build together
-          </p>
+          <h1 className={styles.heroBannerHeading}>Welcome to the Ronin chain documentation</h1>
         </header>
         <main className={styles.main}>
           <div>

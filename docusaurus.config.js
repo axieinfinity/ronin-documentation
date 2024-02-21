@@ -213,8 +213,8 @@ const config = {
                 href: 'https://app.roninchain.com/staking/',
               },
               {
-                label: 'Validator dashboard',
-                href: 'https://validator.roninchain.com/',
+                label: 'Ronin brand kit',
+                href: 'https://drive.google.com/drive/folders/1ZM0R6fd13IhvBpTFwOBebYZqmTxQNgJi',
               },
             ],
           },
