@@ -13,7 +13,7 @@ If you access Ronin Bridge through the Ronin Wallet mobile app, then you can onl
 
 ## Step 1. Fill in the details
 
-1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app on the **Deposit** tab.
+1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app.
 2. Switch to the **Withdraw** tab by selecting the button between the **From** and **To** fields.
    ![token-withdrawal-1](../assets/token-withdrawal-1.png)
 3. In the **From** field, connect your Ronin Wallet using the browser extension or mobile app for your device.

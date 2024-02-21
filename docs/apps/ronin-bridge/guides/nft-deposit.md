@@ -13,7 +13,7 @@ If you access Ronin Bridge through the Ronin Wallet mobile app, then you can onl
 
 ## Step 1. Fill in the details
 
-1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app and select the **Deposit NFTs** tab.
+1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app select the **NFTs** tab.
 2. In the **From** field, connect the Ethereum wallet that you want to transfer the NFT from. In the mobile Ronin Wallet app, select your imported Ethereum wallet.
    ![nft-deposit-1](../assets/nft-deposit-1.png)
 3. In the **To** field, enter your Ronin address that you want to deposit the NFT into.

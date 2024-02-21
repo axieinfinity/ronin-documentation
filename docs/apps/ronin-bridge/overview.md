@@ -20,8 +20,6 @@ Ronin Bridge supports the following wallets:
 * Metamask Wallet
 * Trust Wallet
 
-For example, you can deposit an NFT from your Metamask wallet to your Ronin Wallet, or withdraw an amount of AXS from Ronin Wallet to Trust Wallet.
-
 ## Assets you can transfer
 
 ### ERC20 tokens
@@ -33,9 +31,9 @@ With Ronin Bridge, you can deposit and withdraw the following ERC20 tokens:
 
 Withdrawal limits apply. For more information, see [Withdrawal limits](./reference/withdrawal-limits.md).
 
-### ERC721 tokens
+### NFTs
 
-As for NFTs, the bridge supports deposit and withdrawal for the following collections:
+With Ronin Bridge, you can deposit and withdraw the following NFTs (non-fungible tokens):
 
 * Pixels Land Farm
 * Cyberkongz VX
@@ -43,7 +41,7 @@ As for NFTs, the bridge supports deposit and withdrawal for the following collec
 
 ## RNS support
 
-When transferring assets to Ronin addresses, your can use both standard `0x...` Ronin addresses or an RNS (Ronin Name Service) domain names, such as `axieinfinity.ron`. Note that the RNS name must be an exact match for the underlying address to be detected.
+When sending your assets to a Ronin address, your can use both the standard `0x...` spelling or enter an RNS (Ronin Name Service) domain names, such as `axieinfinity.ron`. **Note:** Make sure to enter the entire RNS name, including the `.ron` part.
 
 ## User guides
 

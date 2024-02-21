@@ -13,7 +13,7 @@ If you access Ronin Bridge through the Ronin Wallet mobile app, then you can onl
 
 ## Step 1. Fill in the details
 
-1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app on the **Deposit NFTs** tab.
+1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app.
 2. Switch to the **Withdraw NFTs** tab by selecting the button between the **From** and **To** fields.
    ![nft-withdrawal-1](../assets/nft-withdrawal-1.png)
 3. In the **From** field, connect your Ronin Wallet using the browser extension or mobile app.

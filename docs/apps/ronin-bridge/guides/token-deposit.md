@@ -13,7 +13,7 @@ If you access Ronin Bridge through the Ronin Wallet mobile app, then you can onl
 
 ## Step 1. Fill in the details
 
-1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app and select the **Deposit** tab.
+1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app.
 2. In the **From** field, connect the Ethereum wallet that you want to transfer the token from. In the mobile Ronin Wallet app, select your imported Ethereum wallet.
    ![token-deposit-1](../assets/token-deposit-1.png)
 3. In the **To** field, enter the Ronin address or RNS name that you want to deposit the token into. **Note:** To transfer to an RNS name, you need to enter the full domain name, such as "example.ron."
