@@ -37,11 +37,11 @@ To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wa
 
 ## Step 3. Approve the NFT
 
-To deposit an NFT, you need to grant Ronin Bridge permission to transfer it, which is also referred to as *approval*. You have two ways to do it: approve an individual token every time you make a transfer, or approve all tokens for this transfer and other transfers in the future.
+To deposit an NFT, you need to grant Ronin Bridge permission to transfer it, which is also referred to as *approval*. You have two ways to do it: approve a single token or approve all tokens.
 
 ### Approve a single token
 
-You can choose to grant permission to each individual NFT that you transfer:
+Approving a single token means that every time you transfer an NFT, you will need to approve each token individually. So when you transfer another token in the future, you will need to approve it again.
 
 1. With the NFT selected, click **Approve NFT**.
    ![nft-deposit-5](../assets/nft-deposit-5.png)
@@ -53,7 +53,7 @@ When you make another transfer in the future, you will need to approve it again.
 
 ### Approve all tokens
 
-Alternatively, grant access to all your tokens at once to bypass the single token approval step in the future:
+Approving all tokens means that you only need to grant approval once, and your future NFT transfers will not require any approval.
 
 1. Select the NFT you want to transfer, and then click **Approve NFT**.
    ![nft-deposit-5](../assets/nft-deposit-5.png)
@@ -61,7 +61,7 @@ Alternatively, grant access to all your tokens at once to bypass the single toke
    ![nft-deposit-7](../assets/nft-deposit-7.png)
 3. When prompted, sign the transaction in your connected wallet.
 
-This way, your future transfers will not require approvals.
+You can revoke token approval by using the [Token Revoke](https://ronin.axiedao.org/revoke/) tool.
 
 ## Step 4. Confirm your deposit
 
