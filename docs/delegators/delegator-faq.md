@@ -9,13 +9,13 @@ You do not receive a staking reward while your validator is
 [slashed](./../validators/slashing.mdx), but your stake is not
 affected in any way.
 
-## 2. Do RON rewards automatically re-stake to my validator? {#2}
+## 2. Will my staking rewards automatically re-stake to my validator? {#2}
 
-No, you would need to [claim](./manage/claim-rewards.mdx) RON rewards with your Ronin Wallet.
+You can manually [restake](./manage/claim-rewards.mdx) the rewards to your favorite validator.
 
-## 3. Can I unstake whenever I want without any penalties? {#3}
+## 3. Can I withdraw my stake whenever I want without any penalties? {#3}
 
-Yes, you can [unstake](./manage/increase-withdraw-stake.mdx#withdraw-stake) from a validator at any time without penalties as long as three days have passed since you last staked in to this validator.
+Yes, you can [withdraw your stake](./manage/manage-stake.mdx#withdraw-stake) from a validator at any time without penalties as long as three days have passed since you last staked in to this validator.
 
 ## 4. If I delegate to a validator today, would I receive the reward by the end of day? {#4}
 

@@ -3,65 +3,52 @@ description: Stake your RON tokens to a validator to earn staking rewards.
 title: Stake RON
 ---
 
-import myStaking from './assets/my-staking.png';
-import stepOne from './assets/connect-wallet.png';
-import stepTwo from './assets/delegate.png';
-import stepThree from './assets/enter-amount.png';
-import stepFour from './assets/confirm-transaction.png';
-import transactionSuccess from './assets/transaction-success.png';
-import validatorDetails from './assets/validator-details.png';
+import dashboard from '../assets/dashboard.png';
+import stepOne from '../assets/staking-step-1.png';
+import stepTwo from '../assets/staking-step-2.png'; 
+import stepThree from '../assets/staking-step-3.png';
+import stakingConfirm from '../assets/staking-confirm.png';
+
 
 ## Overview
 
-This guide demonstrates how to stake your RON tokens to a validator
-and how to view all your stakes. Staking is also referred to as "delegation," wherein you delegate your stake of RON to a validator to earn staking rewards. 
+Stake your RON with your favorite validator to help secure the network while simultaneously earning some great rewards. 
 
-The instruction is provided in
-two formats: [video](#video) and [text](#text).
+This guide shows how to stake your RON tokens to your favorite validators to help secure the network and earn staking rewards. Staking is also referred to as "delegation," named after the Delegated Proof of Stake (DPoS) consensus mechanism used by the Ronin network.
 
 ## Before you start
 
 [Have RON tokens](./../../basics/buy-ron.mdx) in your Ronin Wallet.
 
-## Stake RON
+## Stake your RON
 
-### Video instruction {#video}
-
-Learn how to stake your RON with this official staking tutorial.
-<div class='embed-container'><iframe src='https://www.youtube.com/embed/rCSA6edBub8' frameborder='0' allowfullscreen></iframe></div>
-
-### Text instruction {#text}
-
-1. Go to [RON staking](https://app.roninchain.com/staking) >
-**Connect wallet**.
+1. Go to the [RON staking](https://app.roninchain.com/staking) page and click the
+**Connect wallet** button in the top right corner.
    <img src={stepOne} width={1440} />
 
-2. Switch to the **All validators** tab, then pick a validator
-you want to delegate your stake to, and then select **Delegate**.
+2. On the **All validators** tab, choose a validator to stake your RON with, and then select **Delegate**.
    <img src={stepTwo} width={1440} />
 
-   To learn more about a validator before making a decision,
-   open the details page by selecting the validator's name
-   from the list. For more ways to learn about a validator,
-   see [Track validators](./../manage/track-validators.mdx).
-   <img src={validatorDetails} width={1440} />
+   Can't decide which validator to stake with? Here are some things to consider:
+   * A higher uptime means the validator is more reliable by keeping their node consistently running.
+   * A higher interest rate means greater staking rewards.
+   * If you're staking to a validator candidate, then a larger total stake means a higher chance that this validator will be selected to confirm blocks the next day.
+   
+   You can also learn more about a validator by clicking their name.
 
-3. Enter the amount manually or choose **Max** to stake all available RON,
-and then select **Delegate**. Expand the estimated annual rewards to
-reveal your estimated monthly and daily earnings.
+3. Enter the amount of RON to stake, then click **Delegate**.
    <img src={stepThree} width={400} />
 
-4. Confirm the transaction.
-   <img src={stepFour} width={400} />
+4. Confirm the transaction in your Ronin Wallet.
+   <img src={stakingConfirm} width={300} />
 
-## View your stake
+## View your staking dashboard
 
-To view the list of validators that you staked to,
-go to [RON staking](https://app.roninchain.com/staking) > **My staking**.
+To view your staking activities, visit the [RON staking](https://app.roninchain.com/staking) page and select the **My staking** tab.
+This shows you how much RON you staked and with which validators. This is also where you can also [claim and restake](./../manage/claim-rewards.mdx) your staking rewards.
 
-<img src={myStaking} width={1440} />
+<img src={dashboard} width={1440} />
 
 ## See also
 
-* [Claim rewards](./../manage/claim-rewards.mdx)
-* [Increase, move, or remove your stake](./../manage/increase-withdraw-stake.mdx)
+[Increase, withdraw, or move your stake](./../manage/manage-stake.mdx)

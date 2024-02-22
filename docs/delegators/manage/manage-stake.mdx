@@ -1,0 +1,105 @@
+---
+description: Increase, move, or withdraw your RON stake.
+title: Manage your stake
+---
+
+import confirmTransaction from '../assets/confirm-transaction.png'
+import delegateConfirm from '../assets/delegate-confirm.png'
+
+import stepOne from '../assets/increase-stake-step-1.png'
+import stepTwo from '../assets/increase-stake-step-2.png'
+
+import moveStepOne from '../assets/move-step-1.png'
+import moveStepTwo from '../assets/move-step-2.png'
+import moveCountdown from '../assets/move-countdown.png'
+import moveConfirm from '../assets/move-confirm.png'
+
+import withdrawStepOne from '../assets/withdraw-step-1.png'
+import withdrawStepTwo from '../assets/withdraw-step-2.png'
+import withdrawConfirm from '../assets/withdraw-confirm.png'
+import withdrawCountdown from '../assets/withdraw-countdown.png'
+
+## Overview
+
+This page demonstrates how to increase you withdraw your stake from your current validator, or move it to another validator.
+
+## Before you start
+
+Make sure you [staked RON](./../onboarding/become-delegator.mdx).
+
+## Increase your stake with a validator
+
+After staking your RON tokens to a validator, you can increase your stake with this validator to earn higher rewards.
+
+1. Go to the [RON staking](https://app.roninchain.com/staking) page and select
+the **My staking** tab.
+
+1. Find the validator with whom you want to increase the stake,
+click the three docs expand the options, and then select **Delegate**.
+    <img src={stepOne} width={1440} />
+
+1. Enter the amount manually or choose **Max** to stake all your
+available RON, and then select **Delegate** once more. The estimated rewards are
+calculated based on your APR (annual percentage rate),
+so you can see how much RON will return from this stake.
+    <img src={stepTwo} width={400} />
+
+1. Confirm the transaction in your Ronin Wallet.
+    <img src={delegateConfirm} width={300} />
+
+## Withdraw your stake from a validator
+
+You can withdraw your stake at any time and without penalties. The only condition is
+that three or more days have passed since you last staked in
+to this validator.
+
+1. Go to the [RON staking](https://app.roninchain.com/staking) page and select
+the **My staking** tab.
+
+2. Select the validator from whom you want to withdraw the stake,
+expand the options, and then select **Withdraw stake**.
+    <img src={withdrawStepOne} width={1440} />
+
+    If you're still in the three-day waiting period,
+the system shows how long you need to wait until
+withdrawal is possible.
+    <img src={withdrawCountdown} width={300} />
+
+    :::tip
+    To withdraw your entire stake from this validator, click **Max**, then click **Withdraw & undelegate**.
+    :::
+
+3. Enter the amount manually and select **Withdraw**.
+    <img src={withdrawStepTwo} width={400} />
+
+4. Confirm the transaction in your Ronin Wallet.
+    <img src={withdrawConfirm} width={300} />
+
+
+## Move your stake to another validator
+
+You can move your stake to a different validator at any time and
+without penalties. The only condition is that three or more days have passed since you last
+staked to this validator.
+
+1. Go to the [RON staking](https://app.roninchain.com/staking) page and select
+the **My staking** tab.
+
+2. Select the validator from whom you want to move the stake,
+expand the options, and then select **Move stake**.
+    <img src={moveStepOne} width={1440} />
+
+    If you're still in the three-day waiting period,
+the system shows how long you need to wait until
+moving the stake is possible.
+    <img src={moveCountdown} width={304} />
+
+3. Enter the amount manually and select **Move stake**.
+    <img src={moveStepTwo} width={400} />
+
+    :::tip
+    To move your entire stake out of this validator, click **Max**, then click **Move stake & undelegate**.
+    :::
+
+4. Confirm the transaction in your Ronin Wallet.
+    <img src={moveConfirm} width={300} />
