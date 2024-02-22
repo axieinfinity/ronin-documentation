@@ -1,23 +1,32 @@
 ---
-description: Deposit NFTs from a compatible Ethereum wallet into Ronin Wallet using Ronin Bridge.
+description: Transfer NFTs from Ethereum to Ronin using Ronin Bridge.
+slug: /apps/ronin-bridge/deposit-nft
 title: Deposit an NFT
+toc_max_heading_level: 2
 ---
 
 ## Overview
 
-This guide describes how to use Ronin Bridge to send an NFT (non-fungible token) from an Ethereum wallet to your Ronin Wallet. For information on supported NFT collections, see [Supported assets](../overview.md#supported-assets).
+This guide describes how to use Ronin Bridge to send an NFT (non-fungible token) from your Ethereum wallet, such as MetaMask or Trust Wallet, to an address on the Ronin chain.
 
 ## Prerequisites
 
-If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand. For more information, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand.
 
-## Step 1. Fill in the details
+To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
-1. Open the [Ronin Bridge](https://app.roninchain.com/bridge) app select the **NFTs** tab.
-2. In the **From** field, connect the Ethereum wallet that you want to transfer the NFT from. In the mobile Ronin Wallet app, select your imported Ethereum wallet.
+## Step 1. Add the sender and recipient addresses
+
+1. Open [Ronin Bridge](https://app.roninchain.com/bridge) and select the **NFTs** tab.
+   ![nft-deposit-0](../assets/nft-deposit-0.png)
+2. In the **From** field, connect the Ethereum wallet that you want to transfer the NFT from. The supported wallets include MetaMask and Trust Wallet.
    ![nft-deposit-1](../assets/nft-deposit-1.png)
-3. In the **To** field, enter your Ronin address that you want to deposit the NFT into.
+3. In the **To** field, enter the Ronin address that you want to deposit the NFT into. You can also enter the RNS (Ronin Name Service) domain name linked to the address, such as "example.ron". Make sure to specify the *full RNS name* including the ".ron" part, so that the system can recognize the linked address.
    ![nft-deposit-2](../assets/nft-deposit-2.png)
+   :::note[RNS integration]
+   If the recipient address has an RNS name linked to it, the **To** field will automatically show the RNS name instead of the address.
+   ![nft-deposit-rns](../assets/nft-deposit-rns.png)
+   :::
 
 ## Step 2. Select the NFT to deposit
 
@@ -26,9 +35,9 @@ If you access Ronin Bridge through the Ronin Wallet mobile app, then you can onl
 2. In the collection, select the specific NFT.
    ![nft-deposit-4](../assets/nft-deposit-4.png)
 
-## Step 3. Authorize the bridge to transfer your NFT
+## Step 3. Approve the NFT
 
-To deposit an NFT, you need to grant Ronin Bridge permission to transfer it, which is also referred to as *approval*. You have two ways to do it: approve a single token or approve all tokens.
+To deposit an NFT, you need to grant Ronin Bridge permission to transfer it, which is also referred to as *approval*. You have two ways to do it: approve an individual token every time you make a transfer, or approve all tokens for this transfer and other transfers in the future.
 
 ### Approve a single token
 
@@ -54,7 +63,7 @@ Alternatively, grant access to all your tokens at once to bypass the single toke
 
 This way, your future transfers will not require approvals.
 
-## Step 4. Deposit your NFT
+## Step 4. Confirm your deposit
 
 1. Review the transaction details, including the gas fees associated with the deposit. Make sure you have enough ETH in your Ethereum wallet to cover the fees. If everything looks correct, select **Deposit**.
    ![nft-deposit-8](../assets/nft-deposit-8.png)

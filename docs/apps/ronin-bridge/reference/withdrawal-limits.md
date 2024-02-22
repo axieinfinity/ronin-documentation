@@ -1,6 +1,7 @@
 ---
 description: Daily withdrawal limits per token on Ronin Bridge.
 slug: /apps/ronin-bridge/withdrawal-limits
+sidebar_label: Withdrawal limits
 title: Token withdrawal limits
 ---
 

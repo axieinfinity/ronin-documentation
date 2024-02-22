@@ -12,6 +12,13 @@ Ronin Bridge ([app.roninchain.com/bridge](https://app.roninchain.com/bridge)) is
 
 This is a multi-signature bridge, which means that when you make a transaction, multiple bridge operators have to approve it before it's finalized. This approach makes the bridge a secure choice for cross-chain transactions, preventing any single party from acting maliciously or making unauthorized changes.
 
+## User guides
+
+* [Deposit an ERC20 token](./guides/deposit-token.md)
+* [Withdraw an ERC20 token](./guides/withdraw-token.md)
+* [Deposit an NFT](./guides/deposit-nft.md)
+* [Withdraw an NFT](./guides/withdraw-nft.md)
+
 ## Supported wallets
 
 Ronin Bridge supports the following wallets:
@@ -31,7 +38,7 @@ With Ronin Bridge, you can transfer the following ERC20 tokens:
 
 Withdrawal limits apply. For more information, see [Withdrawal limits](./reference/withdrawal-limits.md).
 
-### NFTs
+### ERC721 tokens (NFTs)
 
 With Ronin Bridge, you can transfer NFTs (non-fungible tokens) from the following collections:
 
@@ -39,19 +46,12 @@ With Ronin Bridge, you can transfer NFTs (non-fungible tokens) from the followin
 * Cyberkongz VX
 * Cyberkongz Genkai
 
-## RNS compatibility
+## Ronin Name Service integration
 
-When sending a token to an address on Ronin, you can either enter the standard wallet address, such as "0x...", or its RNS (Ronin Name Service) representation, such as "comingsoon.ron".
+When sending a token to an address on Ronin, you can either enter the standard wallet address that starts with "0x...", or an RNS (Ronin Name Service) name, such as "example.ron".
 
-**Note:** Make sure to enter the entire RNS name, including the ".ron" part.
+Make sure to specify the *full RNS name* including the ".ron" part, so that the system can recognize the linked address.
 
 ![bridge-rns](./assets/bridge-rns.png)
 
 For more information about RNS, see [Register an RNS name](../rns/guides/register/regular.md).
-
-## User guides
-
-* [Deposit an NFT](./guides/nft-deposit.md)
-* [Withdraw an NFT](./guides/nft-withdraw.md)
-* [Deposit an ERC20 token](./guides/token-deposit.md)
-* [Withdraw an ERC20 token](./guides/token-withdraw.md)
