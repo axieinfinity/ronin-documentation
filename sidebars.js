@@ -35,8 +35,8 @@ const sidebars = {
           label: 'Introduction to Ronin',
           id: 'basics/introduction',
         },
-        // Buy RON
-        'basics/buy-ron',
+        // Acquire RON
+        'basics/acquire-ron',
         // Key concepts
         'basics/key-concepts',
         // White paper
