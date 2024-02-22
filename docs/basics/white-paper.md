@@ -1,5 +1,6 @@
 ---
 description: Ronin's living white paper.
+title: White paper
 ---
 
 ## Overview
