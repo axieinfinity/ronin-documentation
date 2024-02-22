@@ -139,26 +139,12 @@ const sidebars = {
       items: [
         // Stake RON
         'delegators/onboarding/become-delegator',
-        {
-          type: 'category',
-          label: 'Manage delegator account',
-          link: {
-            type: 'generated-index',
-            title: 'Manage your delegator account', 
-            description: 'Buy RON, increase or withdraw your stake, claim rewards, and more.',
-            slug: '/delegators/manage',
-          },
-          items: [
-            // Stake
-            'delegators/manage/increase-withdraw-stake',
-            // Claim rewards
-            'delegators/manage/claim-rewards',
-            // Track validators
-            'delegators/manage/track-validators',
-            // View activity
-            'delegators/manage/view-activity',
-          ],
-        },
+        // Manage your stake
+        'delegators/manage/manage-stake',
+        // Claim or restake your rewards
+        'delegators/manage/claim-rewards',
+        // Track your validators
+        'delegators/manage/track-validators',
         // FAQ
         'delegators/delegator-faq',
       ],
