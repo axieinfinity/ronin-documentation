@@ -11,7 +11,7 @@ affected in any way.
 
 ## 2. Will my staking rewards automatically re-stake to my validator? {#2}
 
-You can manually [restake](./manage/claim-rewards.mdx) the rewards to your favorite validator.
+You can manually [restake](./manage/claim-rewards.mdx#restake-your-rewards) the rewards to your favorite validator.
 
 ## 3. Can I withdraw my stake whenever I want without any penalties? {#3}
 
