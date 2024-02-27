@@ -29,4 +29,11 @@ You will receive a notification seven days before the validator's renunciation d
 
 ## 7. How can I know if a validator is well-performing? {#7}
 
-Look at the validator's uptime, annual percentage rate (APR), and total stake. An active node has high uptime, while an appealing interest rate means greater rewards. A large total stake also helps increase the chance this validator will be selected in the coming days.
+When choosing a validator to stake with, consider the following factors to maximize your RON rewards:
+
+* A higher uptime means the validator is more reliable by keeping their node consistently running.
+* A higher annual performance rate (APR) means greater staking rewards.
+* If you're staking to a validator candidate, then a larger total stake means a higher chance that this validator will be one of the 10 validators chosen for block confirmation the next day.
+* Governing Validators (marked with a green checkmark) are guaranteed to always be chosen as validators.
+
+You can always learn more about a validator by clicking their name in the list of validators on the [RON Staking](https://app.roninchain.com/staking) page.
