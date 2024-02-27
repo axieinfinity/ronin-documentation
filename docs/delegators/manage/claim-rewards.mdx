@@ -1,6 +1,6 @@
 ---
 description: Claim your staking rewards to your Ronin Wallet or restake them to a validator.
-title: Claim or restake your rewards
+title: Claim or restake your staking rewards
 ---
 import claimStepOne from '../assets/claim-step-1.png'
 import claimStepTwo from '../assets/claim-step-2.png'
@@ -13,6 +13,17 @@ import restakeConfirm from '../assets/restake-confirm.png'
 ## Overview
 
 This page describes how to claim your RON staking rewards or restake them to your favorite validator.
+
+## How staking rewards are calculated
+
+Your rewards are calculated based on your lowest balance per day. This means that if it's your first day to delegate, you will not
+receive any rewards for that period because your lowest balance for that day is zero.
+If it's not your first day to delegate, then consider this example:
+imagine that your current stake is 1000. If you withdraw 600 RON, then by the end of the day,
+you will only receive rewards based on the 400 RON left in your stake.
+
+Other things to consider is that you will only get rewards if the validators you chose to delegate to get selected for block confirmation for that day.
+You might also get less or no rewards at all if your chosen validator is punished due to being unavailable or due to malicious activities.
 
 ## Claim your rewards
 
@@ -29,7 +40,7 @@ today.
 4. Confirm the transaction in your Ronin Wallet.
    <img src={claimConfirm} width={300} />
 
-After you claim the reward, the next claim will be available at around 00:00 UTC 
+You can claim staking rewards once per day. After claiming, the next claim will be available at around 00:00 UTC 
 the next day.
 
 ## Restake your rewards
@@ -46,3 +57,7 @@ Instead of claiming the RON staking rewards to your Ronin Wallet, you can restak
    <img src={restakeConfirm} width={300} />
 
 After the transaction is confirmed, you succefully restaked your RON rewards.
+
+## See also
+
+[Increase, withdraw, or move your stake](manage-stake.mdx)

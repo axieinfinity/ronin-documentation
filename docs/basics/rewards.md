@@ -5,11 +5,14 @@ title: Rewards
 
 ## Overview
 
-On Ronin, token holders stake their RON to participate in validator selection and in exchange, token holders earn rewards for their service.
+On Ronin, token holders stake their RON to participate in validator selection and in exchange, earn rewards for their service.
 
-The rewards are divided into the *staking reward* and the *bridge reward*. Ronin allocates 180,000,000 RON for the staking reward and 1,000,000 RON for the bridge reward. This is to ensure that the network is seeded well enough until transaction fees gain traction. These rewards are primarily meant to jump-start the network, while the protocol is intended to sustain itself on transaction fees.
+The rewards are divided into the *staking rewards* and the *bridge rewards*. Ronin allocates 180,000,000 RON for the staking rewards and 1,000,000 RON for the bridge rewards. This is to ensure that the network is seeded well enough until transaction fees gain traction. These rewards are primarily meant to jump-start the network, while the protocol is intended to sustain itself on transaction fees.
 
-|         Year        	| Staking reward 	| Bridge reward 	|
+<details>
+<summary>Expand to see the reward allocation table</summary>
+
+|         Year        	| Staking reward (RON)	| Bridge reward (RON)	|
 |:-------------------:	|:--------------:	|:-------------:	|
 |          1          	|   30,000,000   	|   1,000,000   	|
 |          2          	|   30,000,000   	|               	|
@@ -21,15 +24,20 @@ The rewards are divided into the *staking reward* and the *bridge reward*. Ronin
 |          8          	|    6,000,000   	|               	|
 | Total allocated RON 	|   180,000,000  	|               	|
 
-## Staking reward
+</details>
 
-Validators receive a staking reward and a transaction fee for their block generation efforts. Validators share the staking reward and the transaction fee with their delegators—token holders who delegated their stakes to the validator. Each validator can set a commission rate that indicates the percentage of the self-allocated reward. The remaining reward is allocated to the delegators based on the amount that they have staked.
+## Rewards for validators
 
-### Validator's reward
+For their block confirmation efforts, validators receive *staking rewards* and *transaction fees*. A validator shares the staking reward and the transaction fees with their delegators—token holders who staked their RON with this validator.
 
-Validators receive some commission for running validator nodes to generate new blocks. The validators' commission is independent of the staked amount.
+### Commission from staking rewards
 
-Following is a sensitivity analysis of the expected annual commission for the first 8 years, given the commission rate ranging from 5% to 20%.
+Each validator can set a commission rate, which is a percentage of the staking rewards that they get to keep. The rest is shared with the delegators based on the amount of RON each delegator staked to this validator. The higher the stake, the bigger the reward for the delegator.
+
+<details>
+<summary>Expand to see the expected annual commission amount</summary>
+
+The following table is a sensitivity analysis of the expected annual commission for the first 8 years, considering the commission rate ranging from 5% to 20%.
 
 | Commission rate | 5%     | 10%     | 15%     | 20%     |
 | --------------- | ------ | ------- | ------- | ------- |
@@ -42,13 +50,28 @@ Following is a sensitivity analysis of the expected annual commission for the fi
 | Year 7          | 31,818 | 63,636  | 95,455  | 127,273 |
 | Year 8          | 13,636 | 27,273  | 40,909  | 54,545  |
 
-### Delegator's reward
+</details>
 
-Delegators share the reward based on the staked amount and the commission rate.
+### Transaction fees for block generation
 
-Following is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering commission rate ranging from 5% to 20%, and the staked supply of 50%.
+When the validator generates a block, they earn transaction fees for all the transactions in the block.
 
-| Commission rate | 5%     | 10%   | 15%   | 20%   |
+## Rewards for delegators
+
+For staking RON to a validator, a delegator earns the staking reward that is correspondent to the amount that was staked and the commission rate of the validator.
+
+The rewards for a delegator are calculated based on their lowest balance per day. This means that if it's the delegator's first day to delegate, they will not receive any rewards for that period as their lowest balance for that day is zero.
+
+The delegator will only get rewards if the validators they chose to delegate to get selected for block confirmation for that day. Governing Validators (marked with a green checkmark) are guaranteed to always be chosen as validators, along with 10 validators with the highest staked amount. The delegator should factor in the status of the validator or the amount of RON staked to them in consideration when choosing a validator.
+
+The delegator may get less or no rewards if their chosen validator is punished due to being unavailable (validator nodes are expected to be always online and up to date) or due to malicious activities. The delegator should look at the stats such as the uptime percentage in the validator list to choose a reliable validator to maximize their RON rewards.
+
+<details>
+<summary>Expand to see a breakdown of the annual percentage rate</summary>
+
+The following table is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering the commission rate ranging from 5% to 20%, and the staked supply of 50%.
+
+| Commission rate, % | 5%     | 10%   | 15%   | 20%   |
 | --------------- | ------ | ----- | ----- | ----- |
 | Year 1          | 19.19% | 18.18% | 17.17% | 16.16% |
 | Year 2          | 12.17% | 11.53% | 10.89% | 10.25% |
@@ -59,9 +82,9 @@ Following is a sensitivity analysis of the annual percentage rate (APR) for the 
 | Year 7          | 2.76%  | 2.62%  | 2.47%  | 2.33%  |
 | Year 8          | 1.16%  | 1.10%  | 1.04%  | 0.98%  |
 
-Following is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering the staked supply ranging from 40% to 70%, and  the commission rate of 5%.
+The following table is a sensitivity analysis of the annual percentage rate (APR) for the first 8 years, considering the staked supply ranging from 40% to 70%, and the commission rate of 5%.
 
-| % of circulating supply staked | 40%   | 50%   | 60%   | 70%   |
+| Circulating supply staked, % | 40%   | 50%   | 60%   | 70%   |
 | ------------------------------ | ----- | ----- | ----- | ----- |
 | Year 1                         | 23.99% | 19.19% | 15.99% | 16.16% |
 | Year 2                         | 15.21% | 12.17% | 10.14% | 10.25% |
@@ -72,10 +95,8 @@ Following is a sensitivity analysis of the annual percentage rate (APR) for the 
 | Year 7                         | 3.45%  | 2.76%  | 2.30%  | 2.33%  |
 | Year 8                         | 1.45%  | 1.16%  | 0.97%  | 0.98%  |
 
-### Bridge operator's reward
+</details>
 
-Bridge operators receive $10\%$ of the staking reward, which is distributed at the end of each day based on the number of votes from the bridge operators on that day.
+## Rewards for bridge operators
 
-## Transaction fees
-
-When the validator generates a block, they earn the transaction fees in that block.
+Bridge operators receive 10\% of the staking rewards, which is distributed at the end of each day based on the number of votes from the bridge operators on that day.
