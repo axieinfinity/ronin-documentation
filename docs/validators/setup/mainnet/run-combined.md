@@ -128,24 +128,24 @@ The size of your node will also grow over time.
        restart: always
        container_name: bridge
        environment:
-         - RONIN_RPC=${RPC_ENDPOINT}
+         - LISTENERS__RONIN__RPCURL=${LISTENERS__RONIN__RPCURL}
          - RONIN_BRIDGE_VOTER_KEY=${BRIDGE_VOTER_PRIVATE_KEY}
-         - RONIN_BRIDGE_OPERATOR_KEY=${BRIDGE_OPERATOR_PRIVATE_KEY}
-         - ETHEREUM_RPC=${ETHEREUM_ENDPOINT}
-         - DB_HOST=db
-         - DB_NAME=${DB_NAME}
-         - DB_PORT=5432
-         - DB_USERNAME=${DB_USERNAME}
-         - DB_PASSWORD=${DB_PASSWORD}
+         - LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY=${LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY}
+         - LISTENERS__ETHEREUM__RPCURL=${LISTENERS__ETHEREUM__RPCURL}
+         - DATABASE__HOST=db
+         - DATABASE__DBNAME=${DATABASE__DBNAME}
+         - DATABASE__PORT=5432
+         - DATABASE__USER=${DATABASE__USER}
+         - DATABASE__PASSWORD=${DATABASE__PASSWORD}
          - VERBOSITY=${VERBOSITY}
          - CONFIG_PATH=${CONFIG_PATH}
-         - RONIN_TASK_INTERVAL=${RONIN_TASK_INTERVAL}
-         - RONIN_TRANSACTION_CHECK_PERIOD=${RONIN_TRANSACTION_CHECK_PERIOD}
-         - RONIN_MAX_PROCESSING_TASKS=${RONIN_MAX_PROCESSING_TASKS}
-         - ETHEREUM_GET_LOGS_BATCH_SIZE=${ETHEREUM_GET_LOGS_BATCH_SIZE}
-         - BRIDGE_STATS_URL=${BRIDGE_STATS_URL}
-         - BRIDGE_STATS_NODE_NAME=${BRIDGE_STATS_NODE_NAME}
-         - BRIDGE_STATS_SECRET=${BRIDGE_STATS_SECRET}
+         - LISTENERS__RONIN__TASKINTERVAL=${LISTENERS__RONIN__TASKINTERVAL}
+         - LISTENERS__RONIN__TRANSACTIONCHECKPERIOD=${LISTENERS__RONIN__TRANSACTIONCHECKPERIOD}
+         - LISTENERS__RONIN__MAXPROCESSINGTASKS=${LISTENERS__RONIN__MAXPROCESSINGTASKS}
+         - LISTENERS__ETHEREUM__GETLOGSBATCHSIZE=${LISTENERS__ETHEREUM__GETLOGSBATCHSIZE}
+         - LISTENERS__RONIN__STATS__NODE=${LISTENERS__RONIN__STATS__NODE}
+         - LISTENERS__RONIN__STATS__HOST=${LISTENERS__RONIN__STATS__HOST}
+         - LISTENERS__RONIN__STATS__SECRET=${LISTENERS__RONIN__STATS__SECRET}
        depends_on:
          - db
          - node
@@ -166,7 +166,7 @@ The size of your node will also grow over time.
 
    ```text
    # Your Ethereum RPC endpoint
-   ETHEREUM_ENDPOINT=ETHEREUM_ENDPOINT
+   LISTENERS__ETHEREUM__RPCURL=LISTENERS__ETHEREUM__RPCURL
  
    # The name of your node that you want displayed on https://ronin-stats.roninchain.com/
    INSTANCE_NAME=INSTANCE_NAME
@@ -178,7 +178,7 @@ The size of your node will also grow over time.
    BRIDGE_IMAGE=BRIDGE_IMAGE
  
    # Your bridge operator private key without the 0x prefix
-   BRIDGE_OPERATOR_PRIVATE_KEY=BRIDGE_OPERATOR_PRIVATE_KEY
+   LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY=LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY
  
    # If you're a governor, uncomment this line and replace with your bridge voter key, without the 0x prefix
    # BRIDGE_VOTER_PRIVATE_KEY=BRIDGE_VOTER_PRIVATE_KEY
@@ -208,20 +208,20 @@ The size of your node will also grow over time.
    # Whether to show the raw BLS private key after decryption
    BLS_SHOW_PRIVATE_KEY=false
  
-   DB_NAME=bridge
-   DB_USERNAME=postgres
+   DATABASE__DBNAME=bridge
+   DATABASE__USER=postgres
  
    # The Postgres database password
-   DB_PASSWORD=DB_PASSWORD
+   DATABASE__PASSWORD=DATABASE__PASSWORD
  
-   RPC_ENDPOINT=http://node:8545
+   LISTENERS__RONIN__RPCURL=http://node:8545
  
    CONFIG_PATH=config.mainnet.json
  
-   RONIN_TASK_INTERVAL=3
-   RONIN_TRANSACTION_CHECK_PERIOD=50
-   RONIN_MAX_PROCESSING_TASKS=200
-   ETHEREUM_GET_LOGS_BATCH_SIZE=100
+   LISTENERS__RONIN__TASKINTERVAL=3s
+   LISTENERS__RONIN__TRANSACTIONCHECKPERIOD=50s
+   LISTENERS__RONIN__MAXPROCESSINGTASKS=200
+   LISTENERS__ETHEREUM__GETLOGSBATCHSIZE=100
  
    NETWORK_ID=2020
  
@@ -236,9 +236,9 @@ The size of your node will also grow over time.
  
    RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000 --discovery.dns enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com
    
-   BRIDGE_STATS_NODE_NAME=<your_node_name>
-   BRIDGE_STATS_URL=wss://ronin-stats-ws.roninchain.com/bridge
-   BRIDGE_STATS_SECRET=WSyDMrhRBe111
+   LISTENERS__RONIN__STATS__NODE=<your_node_name>
+   LISTENERS__RONIN__STATS__HOST=wss://ronin-stats-ws.roninchain.com/bridge
+   LISTENERS__RONIN__STATS__SECRET=WSyDMrhRBe111
    ```
 
 1. (Optional) Download the snapshot from the [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repo:
