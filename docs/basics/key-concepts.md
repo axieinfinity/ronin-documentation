@@ -9,7 +9,7 @@ title: Glossary
 
 A blockchain address is used to send and receive funds of digital assets on a blockchain network. Every blockchain has wallet addresses in some form, and most look like a long string of letters and numbers.
 
-For example, a Ronin address looks something like this: ronin:50460c4cd74094cd591455cad457e99c4ab8be0.
+For example, a Ronin address looks something like this: `0x50460c4cd74094cd591455cad457e99c4ab8be0`.
 
 ## B
 
