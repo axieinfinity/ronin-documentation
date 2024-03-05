@@ -30,7 +30,7 @@ To download the latest image, follow these steps:
 
 1. In the `.env` file, set `BRIDGE_IMAGE` to the following:
     ```
-    ghcr.io/ronin-chain/bridge:v0.2.8-c6c64ee
+    ghcr.io/ronin-chain/bridge:v0.2.9-61da305
     ```
 2. Save the changes.
 3. Run `docker-compose up -d`.
