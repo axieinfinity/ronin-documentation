@@ -4,30 +4,31 @@ title: View profile
 ---
 
 import profile from './assets/profile.png';
-import governingAddresses from './assets/governing-addresses.png';
+import standardProfile from './assets/standard-validator-profile.png';
+import governorProfile from './assets/governing-validator-profile.png';
 
-View the list of addresses linked to your validator account on
-[Validator Dashboard](https://validator.roninchain.com) >
-your account > **My profile**.
+Your validator profile is where you can view and modify the addresses linked to your validator account.
+To access your profile, go to [Validator Dashboard](https://validator.roninchain.com) and click **My profile**.
 
 <img src={profile} width={280} />
 
 If you’re a Standard Validator or a Validator Candidate, 
-your profile has a set of the following addresses and details:
+your profile contains the following addresses:
 
-* **Admin address.** The address used to manage your profile, 
-staking activities, and claiming rewards.
+<img src={standardProfile} width={400} />
+
+* **Admin address.** The address used to manage your profile and 
+staking activities, and to claim rewards. You can change this address. For more information, see [Change your admin address](address.mdx#admin).
 * **Validator address.** The address used for producing blocks. 
 This address is displayed to delegators and also called “consensus address”.
 * **Bridge operator address.** The address used for operating
 [Ronin Bridge](https://bridge.roninchain.com/).
 * **Bridge governor address.** The address used to vote on changes to the bridge, such as pausing the bridge or adding bridge operators.
-* **Finality vote key.** This is the [cryptographic key](add-finality-vote-key.mdx) used to vote
-for blocks in the fast finality mechanism.
+* **Finality vote key.** This is the [cryptographic key](finality-vote-key.mdx) used to vote
+for blocks in the fast finality mechanism. You can change this key. For more information, see [Change your finality vote key](finality-vote-key.mdx#change).
 
-If you’re a Governing Validator, your profile has an additional address: 
-**Chain governor address.** This address is used to 
+If you’re a Governing Validator, your profile has an additional **Governing validator address,** used to 
 [create proposals](./../governance/create-proposal.mdx) and
 [vote](./../governance/vote-on-proposal.mdx) on changes to the validator set.
 
-<img src={governingAddresses} width={416} />
+<img src={governorProfile} width={400} />
