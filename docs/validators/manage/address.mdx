@@ -1,6 +1,6 @@
 ---
-description: Change your admin address on Ronin.
-title: Change admin address
+description: Change the addresses in your validator profile.
+title: Change your addresses
 ---
 
 import profile from './assets/profile.png';
@@ -9,7 +9,11 @@ import changeStepTwo from './assets/change-admin-address-2.png';
 
 ## Overview
 
-This guide describes how to change your admin address, which is the address you use to manage your profile and staking activities, and to claim self-staking rewards.
+This guide describes how to change the addresses in your validator profile.
+
+## Change your admin address {#admin}
+
+You can change your admin address, used for managing your profile, staking activities, and claiming rewards.
 
 Key points:
 
@@ -17,8 +21,6 @@ Key points:
 * Staking rewards will be sent to your new admin address starting the next day.
 * Your current stake amount will be automatically transferred to the new admin address.
 * Any unclaimed rewards from your old admin address will remain there, and you can claim them at any time by logging in with the old admin address.
-
-## Change your admin address {#admin}
 
 1. Open the [Validator Dashboard](https://validator.roninchain.com), then go to your account, and then click **My profile**.
    <img src={profile} width={280} />
@@ -29,6 +31,8 @@ Key points:
 3. Paste your new admin address.
    <img src={changeStepTwo} width={400} />
 
-4. Save the changes.
+4. Save the change and sign the transaction.
 
-There's a cooldown period of 24 hours after changing the admin address. That means you will not able to modify the admin address again until 24 hours after the last change.
+:::info[Cooldown period]
+After changing your admin address or fast finality vote key, there's a 24-hour cooldown period. During this time, you won't be able to modify either value until 24 hours after the last change.
+:::
