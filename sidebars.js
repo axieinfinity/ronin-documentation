@@ -242,10 +242,12 @@ const sidebars = {
             slug: '/validators/manage',
           },
           items: [
-            // Add finality vote key
-            'validators/manage/add-finality-vote-key',
+            // Add or change finality vote key
+            'validators/manage/finality-vote-key',
             // Change commission rate
             'validators/manage/change-commission',
+            // Change admin address
+            'validators/manage/address',
             // Claim rewards
             'validators/manage/claim-rewards',
             // Increase or move stake

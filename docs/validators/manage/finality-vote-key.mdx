@@ -1,0 +1,101 @@
+---
+description: Add a fast finality vote key to your profile. 
+title: Add or change finality vote key
+---
+
+import profile from './assets/profile.png';
+import addStepOne from './assets/add-finality-key-1.png';
+import addStepTwo from './assets/add-finality-key-2.png';
+import editStepOne from './assets/edit-finality-key-1.png';
+import editStepTwo from './assets/edit-finality-key-2.png';
+
+## Overview
+
+This guide demonstrates how to add a *finality vote key* to your profile. The finality vote key is used to vote for blocks in the [fast finality mechanism](https://github.com/axieinfinity/REPs/blob/main/REP-0003.md#rewards). If you're an active Ronin validator, you need to have this key added in order to have the Fast Finality Reward transferred to your admin address by the end of the day.
+
+## Prerequisites
+
+### Generate a BLS key pair
+
+Before you add a finality vote key, you need to generate a BLS key pair. The BLS key pair consists of a private key and a public key. The public BLS key is your finality vote key. For more information, see the [Generate BLS key pair](./../setup/generate-keys.md) guide.
+
+### Generate proof of possession
+
+To prove that you own the finality vote key, you need to generate a proof of possession. The proof of possession is a signature of the public key using the private key.
+There are two ways to generate the proof of posession: using the Ronin CLI or using the Docker image.
+
+#### Generate using Ronin CLI
+
+1. Ensure you have the encrypted BLS private key and password in your current directory:
+   ```bash
+   > tree
+   .
+   ├── bls_keystore
+   │   └── all-accounts.keystore.json
+   └── bls_password
+   ```
+
+2. Run the following command to generate the proof of possession: 
+   ```bash
+   ronin account generate-bls-proof
+   ```
+
+The command will return the BLS public key and the corresponding proof:
+```bash
+BLS public key #0: {redacted}
+BLS proof #0: {redacted}
+```
+
+#### Generate using Docker image
+
+1. In the `.env` file of your node's Docker image, add the following line:
+   ```text
+   GENERATE_BLS_PROOF=true
+   ```
+
+2. Run the following command to start the node:
+   ```bash
+   docker-compose up -d
+   ```
+
+3. Run the following command to view the logs:
+   ```bash
+   docker-compose logs node
+   ```
+   
+The logs will return the BLS public key and the corresponding proof:
+
+```bash
+BLS public key #0: {redacted}
+BLS proof #0: {redacted}
+```
+
+## Add a finality vote key {#add}
+
+1. Open the [Validator Dashboard](https://validator.roninchain.com), then go to your account, and then click **My profile**.
+   <img src={profile} width={280} />
+
+2. In the **Finality Vote Key** field, click **Add key**.
+   <img src={addStepOne} width={400} />
+
+3. Paste your BLS public key and the proof of posession.
+   <img src={addStepTwo} width={400} />
+
+4. Save the change and confirm the transaction.
+
+## Change your finality vote key {#change}
+
+1. Open the Validator Dashboard, then go to your account, and then click **My profile**.
+   <img src={profile} width={280} />
+
+2. In the **Finality Vote Key** field, click the edit icon.
+   <img src={editStepOne} width={400} />
+
+3. Paste your new BLS public key and the proof of posession.
+   <img src={editStepTwo} width={400} />
+
+4. Save the change and confirm the transaction.
+
+:::info[Cooldown period]
+After changing your admin address or fast finality vote key, there's a 24-hour cooldown period. During this time, you won't be able to modify either value until 24 hours after the last change.
+:::
