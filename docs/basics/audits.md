@@ -1,21 +1,23 @@
 ---
-description: List of security audits undertaken by Ronin.
+description: Links to Ronin network's security audit reports.
+title: Security audits
 ---
 
-# Security audits
+## Overview
 
-List of Ronin's security audit reports.
+Links to Ronin's security audit reports in PDF.
 
 ## Ronin Bridge
 
-* [Verichains Public Audit Report - Ronin Bridge - v1.1/pdf](./assets/audits/Verichains-Audit-Ronin-Bridge-v1.1.pdf)
-* [Certik Audit for Axie Infinity - v8.pdf](./assets/audits/CertiK-Audit-for-Axie-Infinity---Audit-v8.pdf)
+* [Beosin - Ronin Bridge - Smart Contract Security Audit](./assets/audits/Ronin-Bridge_202309081700.pdf)
+* [Verichains Public Audit Report - Ronin Bridge - v1.1](./assets/audits/Verichains-Audit-Ronin-Bridge-v1.1.pdf)
+* [Certik Audit for Axie Infinity - v8](./assets/audits/CertiK-Audit-for-Axie-Infinity---Audit-v8.pdf)
 
 ## Ronin Wallet
 
-* [Verichains Public Audit Report - Ronin Mobile Wallet - v1.1.pdf](./assets/audits/Verichains-Audit-Ronin-Mobile-Wallet-v1.1.pdf)
-* [Verichains Public Audit Report - Ronin Wallet Extension - v1.1.pdf](./assets/audits/Verichains-Audit-Report-Ronin-Wallet-Extension-v1.1.pdf)
+* [Verichains Public Audit Report - Ronin Mobile Wallet - v1.1](./assets/audits/Verichains-Audit-Ronin-Mobile-Wallet-v1.1.pdf)
+* [Verichains Public Audit Report - Ronin Wallet Extension - v1.1](./assets/audits/Verichains-Audit-Report-Ronin-Wallet-Extension-v1.1.pdf)
 
-## Ronin DPoS
+## DPoS consensus
 
-* [Certik Audit for Ronin DPoS Contracts.pdf](./assets/audits/CertiK-Audit-for-Ronin-DPoS-Contracts.pdf)
+[Certik Audit for Ronin DPoS Contracts](./assets/audits/CertiK-Audit-for-Ronin-DPoS-Contracts.pdf)
