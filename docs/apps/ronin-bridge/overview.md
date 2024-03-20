@@ -24,8 +24,9 @@ This is a multi-signature bridge, which means that when you make a transaction, 
 Ronin Bridge supports the following wallets:
 
 * [Ronin Wallet](https://wallet.roninchain.com/)
-* [Metamask Wallet](https://metamask.io/)
+* [MetaMask](https://metamask.io/)
 * [Trust Wallet](https://trustwallet.com/)
+* [Coinbase Wallet](https://www.coinbase.com/wallet)
 
 ## Supported assets
 
@@ -33,8 +34,8 @@ Ronin Bridge supports the following wallets:
 
 With Ronin Bridge, you can transfer the following ERC20 tokens:
 
-* Deposit: ETH, AXS, SLP, USDC, AGG, PIXEL, AEC
-* Withdrawal: WETH, AXS, SLP, USDC, AGG, PIXEL
+* Deposit: ETH, AXS, SLP, USDC, AGG, PIXEL, BANANA, AEC
+* Withdrawal: WETH, AXS, SLP, USDC, AGG, PIXEL, BANANA
 
 Withdrawal limits apply. For more information, see [Withdrawal limits](./reference/withdrawal-limits.md).
 
@@ -42,15 +43,15 @@ Withdrawal limits apply. For more information, see [Withdrawal limits](./referen
 
 With Ronin Bridge, you can transfer NFTs (non-fungible tokens) from the following collections:
 
-* Pixels Land Farm
-* Cyberkongz VX
 * Cyberkongz Genkai
+* Cyberkongz VX
+* Pixels Farm Land (coming soon)
 
-## Ronin Name Service integration
+## RNS compatible
 
-When sending a token to an address on Ronin, you can either enter the standard wallet address that starts with "0x...", or an RNS (Ronin Name Service) name, such as "example.ron".
+When sending a token or NFT to an address on the Ronin chain, you can enter either a standard crypto address that starts with "0x...", or an RNS (Ronin Name Service) name, such as "example.ron".
 
-Make sure to specify the *full RNS name* including the ".ron" part, so that the system can recognize the linked address.
+Make sure to type in the *full RNS name* including the ".ron" part, so that the system can recognize the linked address.
 
 ![bridge-rns](./assets/bridge-rns.png)
 

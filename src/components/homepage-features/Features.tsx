@@ -54,15 +54,6 @@ const featureList = [
       title: 'Bridge operators',
     },
   },
-  {
-    title: 'Community',
-    Icon: UserShieldIcon,
-    description: <>Join our socials and discover other ways to get involved.</>,
-    link: {
-      href: '/community/join',
-      title: 'Community',
-    },
-  },
 ]
 
 export const Features: React.FC = () => {

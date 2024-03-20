@@ -19,7 +19,7 @@ To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wa
 
 1. Open [Ronin Bridge](https://app.roninchain.com/bridge) and select the **NFTs** tab.
    ![nft-deposit-0](../assets/nft-deposit-0.png)
-2. In the **From** field, connect the Ethereum wallet that you want to transfer the NFT from. The supported wallets include MetaMask and Trust Wallet.
+2. In the **From** field, connect the Ethereum wallet that you want to transfer the NFT from. The supported wallets include MetaMask, Trust Wallet, and Coinbase.
    ![nft-deposit-1](../assets/nft-deposit-1.png)
 3. In the **To** field, enter the Ronin address that you want to deposit the NFT into. You can also enter the RNS (Ronin Name Service) domain name linked to the address, such as "example.ron". Make sure to specify the *full RNS name* including the ".ron" part, so that the system can recognize the linked address.
    ![nft-deposit-2](../assets/nft-deposit-2.png)

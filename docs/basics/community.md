@@ -10,10 +10,10 @@ Stay informed on the latest Ronin news, events, and programs:
 * [Discord](https://discord.gg/roninnetwork)
 * [X](https://twitter.com/ronin_network)
 
-## Blog
+## Ronin blog
 
-Sign up for the [Ronin Newsletter](https://blog.roninchain.com).
+Sign up for the [Ronin blog](https://roninchain.com/blog).
 
 ## Support
 
-Visit [Ronin Zendesk](https://support.roninchain.com).
+Submit a support request on [support.roninchain.com](https://support.roninchain.com).

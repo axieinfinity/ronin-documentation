@@ -51,6 +51,26 @@ const sidebars = {
         'basics/audits',
         // Roles
         'basics/roles',
+        // Community
+        'basics/community',
+        // Contribute to the documentation
+        {
+          type: 'category',
+          label: 'Contribute to the documentation',
+          link: {
+            type: 'generated-index',
+            description: 'Contribute to the Ronin documentation.',
+            slug: '/basics/contribute',
+          },
+          items: [
+            // Contribution guide
+            'CONTRIBUTING',
+            // Content style guide
+            'basics/contribute/style-guide',
+            // Content templates
+            'basics/contribute/templates',
+          ],
+        },
       ],
     },
     // dApps
@@ -320,38 +340,6 @@ const sidebars = {
           ],
         },
         'bridge-operators/slashing',
-      ],
-    },
-    // Community
-    {
-      type: 'category',
-      label: 'Community',
-      link: {
-        type: 'doc',
-        id: 'community/join', 
-      },
-      items: [
-        {
-          type: 'category',
-          label: 'Contribute',
-          link: {
-            type: 'generated-index',
-            description: 'Contribute to the Ronin documentation.',
-            slug: '/community/contribute',
-          },
-          items: [
-            // Contribution guide
-            'CONTRIBUTING',
-            // Content style guide
-            'community/contribute/style-guide',
-            // Content templates
-            'community/contribute/templates',
-          ],
-        },
-        // 'community/bug-bounty',
-        // 'community/council',
-        // 'community/governance',
-        // 'community/grants',
       ],
     },
   ],
