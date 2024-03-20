@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        * Before submitting an issue, read the [Contribution guide](https://docs.roninchain.com/docs/community/contribute/guide).
+        * Before submitting an issue, read the [Contribution guide](https://docs.roninchain.com/docs/basics/contribute/guide).
         * Check if someone hasn't already opened a similar [issue](https://github.com/axieinfinity/ronin-documentation/issues).
 
   - type: checkboxes

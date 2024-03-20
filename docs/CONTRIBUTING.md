@@ -3,7 +3,7 @@ title: Contribution guide
 description: Guidelines for contributing to Ronin documentation.
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-slug: 'community/contribute/guide'
+slug: 'basics/contribute/guide'
 ---
 
 ## Overview
@@ -229,7 +229,6 @@ After a PR is closed, your working branch is deleted.
 | `/docs/apps`         | Documentation for dApps within the Ronin ecosystem.                                                                                |
 | `/docs/basics`         | General information about Ronin.                                                                                |
 | `/docs/bridge-operators` | Documentation for bridge operators.                                                                               |
-| `/docs/community`      | Ronin socials, contribution guide, and community initiatives.                                                   |
 | `/docs/delegators`     | Documentation for delegators.                                                                                   |
 | `/docs/validators`     | Documentation for validators.                                                                                   |
 
@@ -418,7 +417,7 @@ An explanation topic works well when:
 ##### Explanation template
 
 To write an explanation topic, use the
-[explanation](./community/contribute/templates.md#explanation) template.
+[explanation](./basics/contribute/templates.md#explanation) template.
 
 ##### Explanation guidelines
 
@@ -476,7 +475,7 @@ A how-to guide works well when:
 
 ##### How-to guide template
 
-To write a task, use the [task](./community/contribute/templates.md#task) template.
+To write a task, use the [task](./basics/contribute/templates.md#task) template.
 
 ##### How-to guide guidelines
 
@@ -547,7 +546,7 @@ A reference topic works well when:
 
 ##### Reference template
 
-To write a reference topic, use the [reference](./community/contribute/templates.md#reference) template.
+To write a reference topic, use the [reference](./basics/contribute/templates.md#reference) template.
 
 ##### Reference guidelines
 
@@ -609,7 +608,7 @@ A troubleshooting topic can be one of three types:
 This topic introduces the troubleshooting section of a page.
 
 To create this topic, use the
-[Introductory topic](./community/contribute/templates.md#introductory-topic)
+[Introductory topic](./basics/contribute/templates.md#introductory-topic)
 template.
 
 *A troubleshooting task*
@@ -618,7 +617,7 @@ The format is similar to the standard task, and the title follows the same verb
 and noun pattern, such as “Debug a Ronin node."
 
 To create this topic, use the
-[troubleshooting task](./community/contribute/templates.md#troubleshooting-task) template.
+[troubleshooting task](./basics/contribute/templates.md#troubleshooting-task) template.
 
 *A troubleshooting reference*
 
@@ -627,7 +626,7 @@ workarounds, consider organizing them as a table. To write a title for a
 troubleshooting reference, consider including at least a partial error message. 
 
 To create this topic, use the
-[troubleshooting reference](./community/contribute/templates.md#troubleshooting-reference)
+[troubleshooting reference](./basics/contribute/templates.md#troubleshooting-reference)
 template.
 
 #### Tutorial
@@ -640,7 +639,7 @@ Tutorials are useful when someone has a basic understanding of the product and i
 
 ##### Tutorial template
 
-To write a tutorial, use the [tutorial](./community/contribute/templates.md#tutorial) template.
+To write a tutorial, use the [tutorial](./basics/contribute/templates.md#tutorial) template.
 
 ##### Tutorial guidelines
 
@@ -688,7 +687,7 @@ Quickstarts are useful when someone already understands the feature or product a
 
 ##### Quickstart template
 
-To write a quickstart guide, use the [quickstart](./community/contribute/templates.md#quickstart) template.
+To write a quickstart guide, use the [quickstart](./basics/contribute/templates.md#quickstart) template.
 
 ##### Quickstart guidelines
 
@@ -726,7 +725,7 @@ If it exists, link to any relevant troubleshooting content rather than including
 
 ## Content style guide
 
-Ronin documentation adheres to the [content style guide](./community/contribute/style-guide.md).
+Ronin documentation adheres to the [content style guide](./basics/contribute/style-guide.md).
 
 ## Documentation linter
 
@@ -783,7 +782,7 @@ As a documentation contributor, you should always review your PR against this
 checklist:
 
 * [ ] If you created a new page, make sure that it uses one of the
-  [templates](./community/contribute/templates.md).
+  [templates](./basics/contribute/templates.md).
 * [ ] Make sure that screenshots and diagrams are stored in the `assets`
   directory in the category where the Markdown file is.
 * [ ] Compare your PR's output in the preview environment to confirm that the

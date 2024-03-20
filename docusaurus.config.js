@@ -168,10 +168,9 @@ const config = {
             label: 'Bridge operators',
             to: 'bridge-operators',
           },
-          // Community
           {
-            label: 'Community',
-            to: 'community/join',
+            label: 'Support',
+            to: 'https://support.roninchain.com/hc/en-us',
           },
           // Search
           {
