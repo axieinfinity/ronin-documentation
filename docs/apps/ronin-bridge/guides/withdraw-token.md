@@ -1,5 +1,5 @@
 ---
-description: Transfer ERC20 tokens from Ronin to Ethereum using Ronin Bridge.
+description: Bridge ERC20 tokens from Ronin to Ethereum using Ronin Bridge.
 slug: /apps/ronin-bridge/withdraw-token
 title: Withdraw an ERC20 token
 ---
@@ -22,9 +22,9 @@ To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wa
    ![token-withdrawal-1](../assets/token-withdrawal-1.png)
 3. In the **From** field, connect your Ronin Wallet using the browser extension or mobile app for your device.
    ![token-withdrawal-2](../assets/token-withdrawal-2.png)
-4. In the **To** field, enter the Ethereum address that you want to transfer the token to. Double-check the recipient address to avoid sending your tokens to the wrong destination.
+4. In the **To** field, enter the Ethereum address that you want to bridge the token to. Double-check the recipient address to avoid sending your tokens to the wrong destination.
    :::note[Ronin Wallet app]
-   If you access Ronin Bridge through the Ronin Wallet mobile app, then you can enter any Ethereum address as a recipient, but only your imported Ethereum wallet can pay the gas fees for the transaction.
+   If you access Ronin Bridge through the Ronin Wallet mobile app, then you can enter any Ethereum address as a recipient, but only your imported Ethereum wallet can pay gas in ETH for the transaction.
    :::
    ![token-withdrawal-3](../assets/token-withdrawal-3.png)
 
@@ -34,7 +34,7 @@ To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wa
    ![token-withdrawal-4](../assets/token-withdrawal-4.png)
 2. When prompted, select **Approve** to approve the new spending cap for the selected token.
    :::note[Spending cap]
-   When you transfer an ERC20 token for the first time, you need to set a spending cap. To do that, enter your desired transfer amount, then follow instructions on the screen to approve the cap. When you make another transfer with the amount that exceeds your current cap, you will need to approve a new spending cap corresponding to the higher amount.
+   When you bridge an ERC20 token for the first time, you need to set a spending cap. To do that, enter your desired token amount, then follow instructions on the screen to approve the cap. In the future, when you bridge an amount that exceeds your current cap, you will need to approve a new spending cap corresponding to the higher amount.
    :::
    ![token-withdrawal-5](../assets/token-withdrawal-5.png)
 3. When prompted, sign the transaction in your Ronin Wallet.
@@ -48,9 +48,9 @@ To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wa
    ![token-withdrawal-7](../assets/token-withdrawal-7.png)
 4. Wait for the transaction to be confirmed by the network. Be patient, however, as transactions can take some time to complete, depending on network congestion and gas fees.
    ![token-withdrawal-8](../assets/token-withdrawal-8.png)
-5. When the amount is ready to be withdrawn, select **Withdraw** to transfer the tokens to your Ethereum address.
+5. When the amount is ready to be withdrawn, select **Withdraw** to bridge the tokens to your Ethereum address.
    ![token-withdrawal-9](../assets/token-withdrawal-9.png)
-6. When prompted, sign the transaction in your connected Ethereum wallet to receive the transfer.
+6. When prompted, sign the transaction in your connected Ethereum wallet to receive the tokens.
 
 ## Step 4. Receive the tokens in your Ethereum wallet
 

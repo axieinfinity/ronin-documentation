@@ -1,5 +1,5 @@
 ---
-description: Transfer NFTs from Ronin to Ethereum using Ronin Bridge.
+description: Bridge NFTs from Ronin to Ethereum using Ronin Bridge.
 slug: /apps/ronin-bridge/withdraw-nft
 title: Withdraw an NFT
 toc_max_heading_level: 2
@@ -11,7 +11,7 @@ This guide describes how to use Ronin Bridge to send an NFT (non-fungible token)
 
 ## Prerequisites
 
-If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand. 
+If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand.
 
 To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
@@ -23,9 +23,9 @@ To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wa
    ![nft-withdrawal-1](../assets/nft-withdrawal-1.png)
 3. In the **From** field, connect your Ronin Wallet using the browser extension or mobile app.
    ![nft-withdrawal-2](../assets/nft-withdrawal-2.png)
-4. In the **To** field, enter the Ethereum address that you want to transfer the NFT to. Double-check the recipient address to avoid sending your NFT to the wrong destination.
+4. In the **To** field, enter the Ethereum address that you want to bridge the NFT to. Double-check the recipient address to avoid sending your NFT to the wrong destination.
    :::note[Ronin Wallet app]
-   If you access Ronin Bridge through the Ronin Wallet mobile app, then you can enter any Ethereum address as a recipient, but only your imported Ethereum wallet can pay the gas fees for the transaction.
+   If you access Ronin Bridge through the Ronin Wallet mobile app, then you can enter any Ethereum address as a recipient, but only your imported Ethereum wallet can pay gas in ETH for the transaction.
    :::
    ![nft-withdrawal-3](../assets/nft-withdrawal-3.png)
 
@@ -38,11 +38,11 @@ To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wa
 
 ## Step 3. Approve the NFT
 
-To withdraw an NFT, you need to grant Ronin Bridge permission to transfer it, which is also referred to as *approval*. You have two ways to do it: approve a single token or approve all tokens.
+To withdraw an NFT, you need to grant Ronin Bridge permission to bridge it, which is also referred to as *approval*. You have two ways to do it: approve a single token or approve all tokens.
 
 ### Approve a single token
 
-Approving a single token means that every time you transfer an NFT, you will need to approve each token individually. So when you transfer another token in the future, you will need to approve it again.
+Approving a single token means that every time you bridge an NFT, you will need to approve each token individually. So when you bridge another token in the future, you will need to approve it again.
 
 1. With the NFT selected, click **Approve NFT**.
    ![nft-withdrawal-6](../assets/nft-withdrawal-6.png)
@@ -51,9 +51,9 @@ Approving a single token means that every time you transfer an NFT, you will nee
 
 ### Approve all tokens
 
-Approving all tokens means that you only need to grant approval once, and your future NFT transfers will not require any approval.
+Approving all tokens means that you only need to grant approval once, and your future NFT bridges will not require any approval.
 
-1. Select the NFT you want to transfer, then click **Approve NFT**.
+1. Select the NFT you want to bridge, then click **Approve NFT**.
    ![nft-withdrawal-6](../assets/nft-withdrawal-6.png)
 2. Select **All tokens**.
    ![nft-withdrawal-8](../assets/nft-withdrawal-8.png)
@@ -62,16 +62,16 @@ You can revoke token approval by using the [Token Revoke](https://ronin.axiedao.
 
 ## Step 4. Confirm your withdrawal
 
-1. Review the transaction details, including the gas fees associated with the withdrawal. Make sure you have enough ETH in your Ethereum wallet to cover the fees. If everything looks correct, select **Submit withdrawal**.
+1. Review the transaction details, including the gas associated with the withdrawal. Make sure you have enough ETH in your Ethereum wallet to pay gas. If everything looks correct, select **Submit withdrawal**.
    ![nft-withdrawal-9](../assets/nft-withdrawal-9.png)
 2. When prompted, sign the transaction in your Ronin Wallet.
 3. Select **Connect Wallet** and connect your Ethereum wallet.
    ![nft-withdrawal-10](../assets/nft-withdrawal-10.png)
 4. Wait for the transaction to be confirmed by the network. Be patient, however, as transactions can take some time to complete, depending on network congestion and gas fees.
    ![nft-withdrawal-11](../assets/nft-withdrawal-11.png)
-5. When the NFT is ready to be withdrawn, select **Withdraw** to transfer it to your Ethereum address.
+5. When the NFT is ready to be withdrawn, select **Withdraw** to bridge it to your Ethereum address.
    ![nft-withdrawal-12](../assets/nft-withdrawal-12.png)
-6. When prompted, sign the transaction in your connected Ethereum wallet to receive the transfer.
+6. When prompted, sign the transaction in your connected Ethereum wallet to receive the token.
 
 ## Step 5. Receive the NFT in your Ethereum wallet
 

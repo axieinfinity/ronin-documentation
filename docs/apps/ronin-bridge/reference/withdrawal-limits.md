@@ -17,4 +17,6 @@ Withdrawing funds with Ronin Bridge has different tiers based on the amount and 
 | **PIXEL** | Capped at 300,000,000 | < 100,000,000 | ≥ 100,000,000 | ≥ 400,000,000 |
 | **BANANA** | Capped at 500,000 | < 100,000 | ≥ 100,000 | ≥ 600,000 |
 
-**Note:** Higher amounts (Tier 3) require manual review for security and have a fee of around 0.001% of the transaction value. These transactions aren't counted toward the daily limit per token.
+:::note
+Higher amounts (Tier 3) require manual review for security and have a fee of around 0.001% of the transaction value. These transactions aren't counted toward the daily limit per token.
+:::
