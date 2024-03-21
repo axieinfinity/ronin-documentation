@@ -1,5 +1,5 @@
 ---
-description: Transfer ERC20 tokens from Ethereum to Ronin using Ronin Bridge.
+description: Bridge ERC20 tokens from Ethereum to Ronin using Ronin Bridge.
 slug: /apps/ronin-bridge/deposit-token
 title: Deposit an ERC20 token
 ---
@@ -18,7 +18,7 @@ To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wa
 
 1. Open [Ronin Bridge](https://app.roninchain.com/bridge).
    ![token-deposit-0](../assets/token-deposit-0.png)
-2. In the **From** field, connect the Ethereum wallet that you want to transfer the token from. The supported wallets include MetaMask, Trust Wallet, and Coinbase.
+2. In the **From** field, connect the Ethereum wallet that you want to bridge the token from. The supported wallets include MetaMask, Trust Wallet, and Coinbase.
    ![token-deposit-1](../assets/token-deposit-1.png)
 3. In the **To** field, enter the Ronin address that you want to deposit the token into. You can also enter the RNS (Ronin Name Service) domain name linked to the address, such as "example.ron". Make sure to specify the *full RNS name* including the ".ron" part, so that the system can recognize the linked address.
    ![token-deposit-2](../assets/token-deposit-2.png)
@@ -29,12 +29,12 @@ To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wa
 
 ## Step 2. Choose the token and amount
 
-Choose the ERC20 token that you want to deposit, then enter the amount manually or select **Max** to transfer the entire balance of this token available in your connected wallet.
+Choose the ERC20 token that you want to deposit, then enter the amount manually or select **Max** to bridge the entire balance of this token available in your connected wallet.
 ![token-deposit-3](../assets/token-deposit-3.png)
 
 ## Step 3. Confirm your deposit
 
-1. Review the transaction details, including the gas fees associated with the deposit. Make sure you have enough ETH in your Ethereum wallet to cover the fees. If everything looks correct, select **Deposit**.
+1. Review the transaction details, including the gas fees associated with the deposit. Make sure you have enough ETH in your Ethereum wallet to pay gas. If everything looks correct, select **Deposit**.
    ![token-deposit-4](../assets/token-deposit-4.png)
 2. When prompted, sign the transaction in your connected wallet.
 3. Wait for the transaction to be confirmed by the network. Be patient, however, as transactions can take some time to complete, depending on network congestion and gas fees.

@@ -32,7 +32,7 @@ Ronin Bridge supports the following wallets:
 
 ### ERC20 tokens
 
-With Ronin Bridge, you can transfer the following ERC20 tokens:
+With Ronin Bridge, you can bridge the following ERC20 tokens:
 
 * Deposit: ETH, AXS, SLP, USDC, AGG, PIXEL, BANANA, AEC
 * Withdrawal: WETH, AXS, SLP, USDC, AGG, PIXEL, BANANA
