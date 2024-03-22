@@ -14,6 +14,6 @@ Key features:
 * Farm: Stake liquidity pool (LP) tokens to farm RON.
 * Analytics: Check your earned fees.
 
-Link: [katana.roninchain.com](https://katana.roninchain.com)
+Visit Katana at [katana.roninchain.com](https://katana.roninchain.com).
 
 <img src={katana} width={1200} />

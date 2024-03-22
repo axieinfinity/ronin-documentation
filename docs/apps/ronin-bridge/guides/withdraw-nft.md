@@ -7,17 +7,15 @@ toc_max_heading_level: 2
 
 ## Overview
 
-This guide describes how to use Ronin Bridge to send an NFT (non-fungible token) from your Ronin Wallet to an address on Ethereum.
+This guide describes how to use Ronin Bridge to send an NFT (non-fungible token) from your Ronin Wallet to an Ethereum address.
 
 ## Prerequisites
 
-If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand.
-
-To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+If you access Ronin Bridge on mobile, remember to import your Ethereum address to your mobile Ronin Wallet. To learn how to do that, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Add the sender and recipient addresses
 
-1. Open [Ronin Bridge](https://app.roninchain.com/bridge) and select the **NFTs** tab.
+1. Go to [https://app.roninchain.com/bridge](https://app.roninchain.com/bridge), then select the **NFTs** tab.
    ![nft-withdrawal-0](../assets/nft-deposit-0.png)
 2. Switch to the withdrawal feature by selecting the button between the **From** and **To** fields.
    ![nft-withdrawal-1](../assets/nft-withdrawal-1.png)

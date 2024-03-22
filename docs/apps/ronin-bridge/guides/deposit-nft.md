@@ -7,19 +7,17 @@ toc_max_heading_level: 2
 
 ## Overview
 
-This guide describes how to use Ronin Bridge to send an NFT (non-fungible token) from your Ethereum wallet, such as MetaMask or Trust Wallet, to an address on the Ronin chain.
+This guide describes how to use Ronin Bridge to send an NFT (non-fungible token) from your Ethereum address to your Ronin Wallet.
 
 ## Prerequisites
 
-If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand.
-
-To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+If you access Ronin Bridge on mobile, remember to import your Ethereum address to your mobile Ronin Wallet. To learn how to do that, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Add the sender and recipient addresses
 
-1. Open [Ronin Bridge](https://app.roninchain.com/bridge) and select the **NFTs** tab.
+1. Go to [https://app.roninchain.com/bridge](https://app.roninchain.com/bridge), then select the **NFTs** tab.
    ![nft-deposit-0](../assets/nft-deposit-0.png)
-2. In the **From** field, connect the Ethereum wallet that you want to bridge the NFT from. The supported wallets include MetaMask, Trust Wallet, and Coinbase.
+2. In the **From** field, connect the Ethereum wallet that you want to bridge the NFT from.
    ![nft-deposit-1](../assets/nft-deposit-1.png)
 3. In the **To** field, enter the Ronin address that you want to deposit the NFT into. You can also enter the RNS (Ronin Name Service) domain name linked to the address, such as "example.ron". Make sure to specify the *full RNS name* including the ".ron" part, so that the system can recognize the linked address.
    ![nft-deposit-2](../assets/nft-deposit-2.png)

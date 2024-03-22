@@ -13,6 +13,6 @@ Key features:
 * [Manage your stake](./../delegators/manage/manage-stake.mdx): RON holders can increase or withdraw their stake from a validator, or move it to a different validator.
 * [Claim or restake your rewards](./../delegators/manage/claim-rewards.mdx): RON holders can claim rewards for staking their tokens.
 
-Link: [app.roninchain.com/staking](https://app.roninchain.com/staking)
+Visit the staking app at [app.roninchain.com/staking](https://app.roninchain.com/staking).
 
 <img src={ronStaking} width={1200} />
