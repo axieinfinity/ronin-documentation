@@ -21,3 +21,7 @@ Links to Ronin's security audit reports in PDF.
 ## DPoS consensus
 
 [Certik Audit for Ronin DPoS Contracts](./assets/audits/CertiK-Audit-for-Ronin-DPoS-Contracts.pdf)
+
+## Marketplace smart contracts
+
+[Verichains Public Audit Report - Ronin Marketplace - v.1.0](./assets/audits/Verichains-Audit-Ronin-Marketplace-v1.0.pdf)
