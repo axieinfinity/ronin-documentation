@@ -6,13 +6,11 @@ title: Withdraw an ERC20 token
 
 ## Overview
 
-This guide describes how to use Ronin Bridge to send an ERC20 token from your Ronin Wallet to an address on Ethereum.
+This guide describes how to use Ronin Bridge to send an ERC20 token from your Ronin Wallet to an Ethereum address.
 
 ## Prerequisites
 
-If you access Ronin Bridge through the Ronin Wallet mobile app, then you can only connect Ethereum wallets imported into your Ronin Wallet beforehand.
-
-To import your Ethereum wallets, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
+If you access Ronin Bridge on mobile, remember to import your Ethereum address to your mobile Ronin Wallet. To learn how to do that, see [Importing Your MetaMask Wallet to Ronin Wallet](https://support.roninchain.com/hc/en-us/articles/14862812718107-Importing-Your-MetaMask-Wallet-to-Ronin-Wallet).
 
 ## Step 1. Add the sender and recipient addresses
 

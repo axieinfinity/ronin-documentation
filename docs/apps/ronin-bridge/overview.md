@@ -34,22 +34,22 @@ Ronin Bridge supports the following wallets:
 
 With Ronin Bridge, you can bridge the following ERC20 tokens:
 
-* Deposit: ETH, AXS, SLP, USDC, AGG, PIXEL, BANANA, AEC
-* Withdrawal: WETH, AXS, SLP, USDC, AGG, PIXEL, BANANA
+* Deposit (from Ethereum to Ronin): AEC, AGG, APRS, AXS, BANANA, ETH, PIXEL, SLP, USDC, YGG
+* Withdrawal (from Ronin to Ethereum): AGG, AXS, APRS, BANANA, PIXEL, SLP, USDC, WETH, YGG
 
 Withdrawal limits apply. For more information, see [Withdrawal limits](./reference/withdrawal-limits.md).
 
 ### ERC721 tokens (NFTs)
 
-With Ronin Bridge, you can transfer NFTs (non-fungible tokens) from the following collections:
+With Ronin Bridge, you can bridge NFTs (non-fungible tokens) from the following collections:
 
 * Cyberkongz Genkai
 * Cyberkongz VX
 * Pixels Farm Land (coming soon)
 
-## RNS compatible
+## RNS-compatible
 
-When sending a token or NFT to an address on the Ronin chain, you can enter either a standard crypto address that starts with "0x...", or an RNS (Ronin Name Service) name, such as "example.ron".
+When bringing a token or NFT to an address on the Ronin chain, you can enter either a standard crypto address that starts with "0x...", or an RNS (Ronin Name Service) name, such as "example.ron".
 
 Make sure to type in the *full RNS name* including the ".ron" part, so that the system can recognize the linked address.
 
