@@ -1,6 +1,6 @@
 ---
 description: Install the Ronin CLI and compile a node binary from source.
-title: Run a node using the Ronin CLI
+title: Build your node using the Ronin CLI
 tags:
   - cli
 ---
@@ -10,11 +10,9 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-This guide demonstrates how to build a Ronin CLI (command-line tool) and compile the node binary on your own instead of using a packed binary from Docker. With the CLI tool, you can install the Ronin node and configure it as a non-validator node (default), validator node, or archive node.
+This guide demonstrates how to compile a Ronin node binary on your own using the Ronin CLI, instead of running a packed binary from Docker. With the CLI, you configure and run a full (non-validator) node, validator node, or archive node.
 
-## Before you start
-
-To build the Ronin CLI, you need to install the following dependencies:
+## Prerequisites
 
 * Golang 1.20 or later (follow the instructions at [https://go.dev/doc/install](https://go.dev/doc/install))
 * C compiler
@@ -55,7 +53,7 @@ ronin init genesis/mainnet.json --datadir /ronin/data
 Whenever you build or upgrade a node that includes a new hardfork, you must initialize the genesis block by running this command.
 :::
 
-## Step 3. Start a node
+## Step 3. Start the node
 
 To start a full (non-validator) Ronin node, run the following command:
 
