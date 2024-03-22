@@ -1,6 +1,6 @@
 ---
 description: Install the Ronin CLI and compile a node binary from source.
-title: Build your node using the Ronin CLI
+title: Build your node using Ronin CLI
 tags:
   - cli
 ---
