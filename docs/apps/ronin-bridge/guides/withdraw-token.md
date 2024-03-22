@@ -14,7 +14,7 @@ If you access Ronin Bridge on mobile, remember to import your Ethereum address t
 
 ## Step 1. Add the sender and recipient addresses
 
-1. Open [Ronin Bridge](https://app.roninchain.com/bridge).
+1. Go to [https://app.roninchain.com/bridge](https://app.roninchain.com/bridge).
    ![token-withdrawal-0](../assets/token-deposit-0.png)
 2. Switch to the withdrawal feature by selecting the button between the **From** and **To** fields.
    ![token-withdrawal-1](../assets/token-withdrawal-1.png)

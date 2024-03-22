@@ -15,7 +15,7 @@ If you access Ronin Bridge on mobile, remember to import your Ethereum address t
 
 ## Step 1. Add the sender and recipient addresses
 
-1. Open [Ronin Bridge](https://app.roninchain.com/bridge) and select the **NFTs** tab.
+1. Go to [https://app.roninchain.com/bridge](https://app.roninchain.com/bridge), then select the **NFTs** tab.
    ![nft-withdrawal-0](../assets/nft-deposit-0.png)
 2. Switch to the withdrawal feature by selecting the button between the **From** and **To** fields.
    ![nft-withdrawal-1](../assets/nft-withdrawal-1.png)

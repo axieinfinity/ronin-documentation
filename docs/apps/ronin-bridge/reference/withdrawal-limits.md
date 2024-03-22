@@ -2,10 +2,16 @@
 description: Daily withdrawal limits per token on Ronin Bridge.
 slug: /apps/ronin-bridge/withdrawal-limits
 sidebar_label: Withdrawal limits
-title: Token withdrawal limits
+title: Withdrawal limits
 ---
 
-Withdrawing funds with Ronin Bridge has different tiers based on the amount and type of token you're moving. The bigger the amount, the more bridge operator approvals are needed. See the following table for details:
+## Overview
+
+Withdrawing funds with Ronin Bridge has different tiers based on the amount and type of token you're moving. The bigger the amount, the more bridge operator approvals are needed.
+
+## Withdrawal limits
+
+See the following table for details on token withdrawal limits.
 
 | Token       | Daily limit per token | Tier 1 | Tier 2 | Tier 3 |
 | ------ | --------- | ------- | ------------- | ----------- |
