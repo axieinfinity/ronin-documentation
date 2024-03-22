@@ -1,9 +1,12 @@
 ---
-description: Build a CLI tool and compile a node binary from source.
-title: Build a Ronin CLI
+description: Install the Ronin CLI and compile a node binary from source.
+title: Run a node using the Ronin CLI
 tags:
   - cli
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Overview
 
@@ -18,43 +21,33 @@ To build the Ronin CLI, you need to install the following dependencies:
 
 ## Step 1. Build locally
 
-1. Clone the Ronin repository:
+1. Build the binary from the source code:
+  
+    ```bash
+    git clone git@github.com:axieinfinity/ronin.git
+    cd ronin
+    make ronin
+    ```
 
-  ```
-  git clone git@github.com:axieinfinity/ronin.git
-  ```
+    The last command creates a `ronin` binary inside the `.build/bin` directory.
 
-2. Go to the `ronin` directory:
+1. To run the binary without specifying the binary location in each command, make sure to add the Ronin binary path in the `$PATH` environment variable.
 
-  ```
-  cd ronin
-  ```
+    ```bash
+    export PATH=$PATH:/path/to/ronin
+    ```
 
-3. Build the binary:
+    If run from the `ronin` directory, then the command is as follows:
 
-  ```
-  make ronin
-  ```
-
-  This command creates a `ronin` binary inside the `.build/bin` directory.
-
-4. To run the binary without specifying the binary location in each command, make sure to add the Ronin binary path in the `$PATH` environment variable.
-
-  ```
-  export PATH=$PATH:/path/to/ronin
-  ```
-
-  If run from the `ronin` directory, then the command is as follows:
-    
-  ```
-  export PATH=$PATH:./build/bin/ronin
-  ```
+    ```bash
+    export PATH=$PATH:./build/bin/ronin
+    ```
 
 ## Step 2. Initialize the genesis block
 
 Initialize the genesis block to set up the origin state of the chain. The genesis files are located in the repository's `genesis` directory, and include the path where you store the node's data—for example, `/ronin/data`.
 
-```
+```bash
 ronin init genesis/mainnet.json --datadir /ronin/data
 ```
 
@@ -62,24 +55,48 @@ ronin init genesis/mainnet.json --datadir /ronin/data
 Whenever you build or upgrade a node that includes a new hardfork, you must initialize the genesis block by running this command.
 :::
 
-## Step 3. Start the node
+## Step 3. Start a node
 
-Run the following command to start a full (non-validator) Ronin node on the mainnet:
+To start a full (non-validator) Ronin node, run the following command:
 
+<Tabs groupId="networks">
+  <TabItem value="mainnet" label="Mainnet" default>
+
+  ```bash
+  ronin --http.api eth,net,web3,consortium --networkid 2020 --discovery.dns enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com --datadir /ronin/data \ --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
+  ```
+
+  </TabItem>
+  <TabItem value="testnet" label="Testnet" default>
+
+  ```bash
+  ronin --http.api eth,net,web3,consortium --networkid 2021 --discovery.dns enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com --datadir /ronin/data \ --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
+  ```
+
+  </TabItem>
+</Tabs>
+
+This command starts `ronin` in full sync mode (default, can be changed with the `--syncmode` flag), causing it to download more data in exchange for avoiding processing the entire history of the Ronin network, which is very CPU-intensive.
+
+### Configuration
+
+Instead of passing numerous flags to the `ronin` binary, you can pass a configuration file as follows:
+
+```bash
+ronin --config /path/to/your_config.toml
 ```
-ronin --networkid 2020 \
---bootnodes enode://cfa5f00c55eba79f359c9d95f5c0b2bb8e173867ffbb6e212c6799a52918502519e56650970e34caf1cd17418d4da46c3243588578886c3b4f8c42d1934bf108@104.198.242.88:30303,enode://f500391c41906a1dae249df084a3d1659fe602db671730b2778316114a5f7df44a0c6864a8dfffdc380fc81c6965dd911338e0e2591eb78a506857015d166250@34.135.18.26:30303,enode://fc7b8ceafe16e6f79ab2da3e73d0a3163d0c28efe0778863102f8f27758986fe28c1540a9a0bbdff29ab93ad1c5803462efe6c98165bbb404d9d099a55f1d2c9@130.211.208.201:30303 \
---datadir /ronin/data \
---port 30303 \
---http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' \
---ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*'
+
+To get an idea of how the file should look like, use the `dumpconfig` subcommand to export your existing configuration:
+
+```bash
+ronin --your-favourite-flags dumpconfig
 ```
 
 ## Command reference
 
 ### Synopsis
 
-```
+```bash
 ronin [options] [command] [command options] [arguments...]
 ```
 
@@ -87,7 +104,7 @@ Use `ronin [command] help` for information on a specific command.
 
 ### Available commands
 
-```   
+```plaintext
 account                            Manage accounts
 attach                             Start an interactive JavaScript environment (connect to node)
 console                            Start an interactive JavaScript environment
@@ -115,33 +132,37 @@ help, h                            Shows a list of commands or help for one comm
 
 ### Ethereum options
 
-```
-  --config value                      TOML configuration file
-  --datadir value                     Data directory for the databases and store (default: "/Users/mac/Library/Ethereum")
-  --datadir.ancient value             Data directory for ancient chain segments (default = inside chaindata)
-  --datadir.minfreedisk value         Minimum free disk space in MB, once reached triggers auto shut down (default = --cache.gc converted to MB, 0 = disabled)
-  --keystore value                    Directory for the keystore (default = inside the datadir)
-  --usb                               Enable monitoring and management of USB hardware wallets
-  --pcscdpath value                   Path to the smartcard daemon (pcscd) socket file
-  --networkid value                   Explicitly set network id (integer)(For testnets: use --ropsten, --rinkeby, --goerli instead) (default: 1)
-  --mainnet                           Ethereum mainnet
-  --goerli                            Görli network: pre-configured proof-of-authority test network
-  --rinkeby                           Rinkeby network: pre-configured proof-of-authority test network
-  --ropsten                           Ropsten network: pre-configured proof-of-work test network
-  --sepolia                           Sepolia network: pre-configured proof-of-work test network
-  --syncmode value                    Blockchain sync mode ("fast", "full", "snap" or "light") (default: snap)
-  --exitwhensynced                    Exits after block synchronisation completes
-  --gcmode value                      Blockchain garbage collection mode ("full", "archive") (default: "full")
-  --txlookuplimit value               Number of recent blocks to maintain transactions index for (default = about one year, 0 = entire chain) (default: 2350000)
-  --ethstats value                    Reporting URL of a ethstats service (nodename:secret@host:port)
-  --identity value                    Custom node name
-  --lightkdf                          Reduce -derivation RAM & CPU usage at some expense of KDF strength
-  --whitelist value                   Comma-separated block number-to-hash mappings to enforce (<number>=<hash>)
+```plaintext
+--config value                      TOML configuration file
+--datadir value                     Data directory for the databases and store (default: "~/Library/Ethereum")
+--datadir.ancient value             Data directory for ancient chain segments (default = inside chaindata)
+--datadir.minfreedisk value         Minimum free disk space in MB, once reached triggers auto shut down (default = --cache.gc converted to MB, 0 = disabled)
+--keystore value                    Directory for the keystore (default = inside the datadir)
+--usb                               Enable monitoring and management of USB hardware wallets
+--pcscdpath value                   Path to the smartcard daemon (pcscd) socket file
+--networkid value                   Explicitly set network id (integer)(For testnets: use --ropsten, --rinkeby, --goerli instead) (default: 1)
+--mainnet                           Ethereum mainnet
+--goerli                            Görli network: pre-configured proof-of-authority test network
+--rinkeby                           Rinkeby network: pre-configured proof-of-authority test network
+--ropsten                           Ropsten network: pre-configured proof-of-work test network
+--sepolia                           Sepolia network: pre-configured proof-of-work test network
+--syncmode value                    Blockchain sync mode ("fast", "full", "snap" or "light") (default: snap)
+--exitwhensynced                    Exits after block synchronisation completes
+--gcmode value                      Blockchain garbage collection mode ("full", "archive") (default: "full")
+--txlookuplimit value               Number of recent blocks to maintain transactions index for (default = about one year, 0 = entire chain) (default: 2350000)
+--ethstats value                    Reporting URL of a ethstats service (nodename:secret@host:port)
+--identity value                    Custom node name
+--lightkdf                          Reduce -derivation RAM & CPU usage at some expense of KDF strength
+--whitelist value                   Comma-separated block number-to-hash mappings to enforce (<number>=<hash>)
+--overrideChainConfig               force override chainconfig
+--monitor.doublesign                Enable double sign monitoring
+--internaltxs                       Enable storing internal transactions to db
+--ronin.disable                     Disable ronin p2p protocol
 ```
   
 ### Light client options
 
-```
+```plaintext
 --light.serve value                 Maximum percentage of time allowed for serving LES requests (multi-threaded processing allows values over 100) (default: 0)
 --light.ingress value               Incoming bandwidth limit for serving light clients (kilobytes/sec, 0 = unlimited) (default: 0)
 --light.egress value                Outgoing bandwidth limit for serving light clients (kilobytes/sec, 0 = unlimited) (default: 0)
@@ -155,7 +176,7 @@ help, h                            Shows a list of commands or help for one comm
 
 ### Developer chain options
 
-```
+```plaintext
 --dev                               Ephemeral proof-of-authority network with a pre-funded developer account, mining enabled
 --dev.period value                  Block period to use in developer mode (0 = mine only if transaction pending) (default: 0)
 --dev.gaslimit value                Initial block gas limit (default: 11500000)
@@ -163,7 +184,7 @@ help, h                            Shows a list of commands or help for one comm
 
 ### Ethash options
 
-```
+```plaintext
 --ethash.cachedir value             Directory to store the ethash verification caches (default = inside the datadir)
 --ethash.cachesinmem value          Number of recent ethash caches to keep in memory (16MB each) (default: 2)
 --ethash.cachesondisk value         Number of recent ethash caches to keep on disk (16MB each) (default: 3)
@@ -176,7 +197,7 @@ help, h                            Shows a list of commands or help for one comm
 
 ### Transaction pool options
 
-```
+```plaintext
 --txpool.locals value               Comma-separated accounts to treat as locals (no flush, priority inclusion)
 --txpool.nolocals                   Disables price exemptions for locally submitted transactions
 --txpool.journal value              Disk journal for local transaction to survive node restarts (default: "transactions.rlp")
@@ -192,7 +213,7 @@ help, h                            Shows a list of commands or help for one comm
 
 ### Performance tuning options
 
-```
+```plaintext
 --cache value                       Megabytes of memory allocated to internal caching (default = 4096 mainnet full node, 128 light mode) (default: 1024)
 --cache.database value              Percentage of cache memory allowance to use for database io (default: 50)
 --cache.trie value                  Percentage of cache memory allowance to use for trie caching (default = 15% full mode, 30% archive mode) (default: 15)
@@ -206,16 +227,17 @@ help, h                            Shows a list of commands or help for one comm
   
 ### Account options
 
-```
+```plaintext
 --unlock value                      Comma-separated list of accounts to unlock
 --password value                    Password file to use for non-interactive password input
 --signer value                      External signer (url or path to ipc file)
 --allow-insecure-unlock             Allow insecure account unlocking when account-related RPCs are exposed by http
+--enable-signing-methods            Enable RPC signing methods
 ```
- 
+
 ### API and console options
 
-```
+```plaintext
 --ipcdisable                        Disable the IPC-RPC server
 --ipcpath value                     Filename for IPC socket/pipe within the datadir (explicit paths escape it)
 --http                              Enable the HTTP-RPC server
@@ -223,29 +245,31 @@ help, h                            Shows a list of commands or help for one comm
 --http.port value                   HTTP-RPC server listening port (default: 8545)
 --http.api value                    API's offered over the HTTP-RPC interface
 --http.rpcprefix value              HTTP path path prefix on which JSON-RPC is served. Use '/' to serve on all paths.
---http.corsdomain value             Comma-separated list of domains from which to accept cross origin requests (browser enforced)
---http.vhosts value                 Comma-separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
+--http.corsdomain value             Comma separated list of domains from which to accept cross origin requests (browser enforced)
+--http.vhosts value                 Comma separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
 --ws                                Enable the WS-RPC server
 --ws.addr value                     WS-RPC server listening interface (default: "localhost")
 --ws.port value                     WS-RPC server listening port (default: 8546)
 --ws.api value                      API's offered over the WS-RPC interface
 --ws.rpcprefix value                HTTP path prefix on which JSON-RPC is served. Use '/' to serve on all paths.
 --ws.origins value                  Origins from which to accept websockets requests
+--ws.readbuffer value               ReadBuffer for Websocket Server default 1024 bytes (default: 1024)
+--ws.writebuffer value              WriteBuffer for Websocket Server default 1024 bytes (default: 1024)
 --graphql                           Enable GraphQL on the HTTP-RPC server. Note that GraphQL can only be started if an HTTP server is started as well.
---graphql.corsdomain value          Comma-separated list of domains from which to accept cross origin requests (browser enforced)
---graphql.vhosts value              Comma-separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
+--graphql.corsdomain value          Comma separated list of domains from which to accept cross origin requests (browser enforced)
+--graphql.vhosts value              Comma separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
 --rpc.gascap value                  Sets a cap on gas that can be used in eth_call/estimateGas (0=infinite) (default: 50000000)
 --rpc.evmtimeout value              Sets a timeout used for eth_call (0=infinite) (default: 5s)
 --rpc.txfeecap value                Sets a cap on transaction fee (in ether) that can be sent via the RPC APIs (0 = no cap) (default: 1)
 --rpc.allow-unprotected-txs         Allow for unprotected (non EIP155 signed) transactions to be submitted via RPC
 --jspath loadScript                 JavaScript root path for loadScript (default: ".")
 --exec value                        Execute JavaScript statement
---preload value                     Comma-separated list of JavaScript files to preload into the console
+--preload value                     Comma separated list of JavaScript files to preload into the console
 ```
 
 ### Networking options
 
-```
+```plaintext
 --bootnodes value                   Comma-separated enode URLs for P2P discovery bootstrap
 --discovery.dns value               Sets DNS discovery entry points (use "" to disable DNS)
 --port value                        Network listening port (default: 30303)
@@ -255,14 +279,13 @@ help, h                            Shows a list of commands or help for one comm
 --nodiscover                        Disables the peer discovery mechanism (manual peer addition)
 --v5disc                            Enables the experimental RLPx V5 (Topic Discovery) mechanism
 --netrestrict value                 Restricts network communication to the given IP networks (CIDR masks)
---node value                        P2P node  file
 --nodekey value                     P2P node key file
 --nodehex value                     P2P node as hex (for testing)
 ```
 
 ### Miner options
 
-```
+```plaintext
 --mine                              Enable mining
 --miner.threads value               Number of CPU threads to use for mining (default: 0)
 --miner.notify value                Comma-separated HTTP URL list to notify of new work packages
@@ -273,11 +296,13 @@ help, h                            Shows a list of commands or help for one comm
 --miner.extradata value             Block extra data set by the miner (default = client version)
 --miner.recommit value              Time interval to recreate the block being mined (default: 3s)
 --miner.noverify                    Disable remote sealing verification
+--miner.leftover value              The interval block with transactions needs committing before empty block is produced (default: 200ms)
+--miner.blocksizereserve value      Reserved block size when committing transactions to block (default: 500000)
 ```
 
 ### Gas price oracle options
 
-```
+```plaintext
 --gpo.blocks value                  Number of recent blocks to check for gas prices (default: 20)
 --gpo.percentile value              Suggested gas price is the given percentile of a set of recent transaction gas prices (default: 60)
 --gpo.maxprice value                Maximum transaction priority fee (or gasprice before London fork) to be recommended by gpo (default: 500000000000)
@@ -286,13 +311,13 @@ help, h                            Shows a list of commands or help for one comm
   
 ### Virtual machine options
 
-```
+```plaintext
 --vmdebug                           Record information useful for VM and contract debugging
 ```
 
 ### Logging and debugging options
 
-```
+```plaintext
 --fakepow                           Disables proof-of-work verification
 --nocompaction                      Disables db compaction after import
 --verbosity value                   Logging verbosity: 0=silent, 1=error, 2=warn, 3=info, 4=debug, 5=detail (default: 3)
@@ -311,7 +336,7 @@ help, h                            Shows a list of commands or help for one comm
 
 ### Metrics and stats options
 
-```
+```plaintext
 --metrics                              Enable metrics collection and reporting
 --metrics.expensive                    Enable expensive metrics collection and reporting
 --metrics.addr value                   Enable stand-alone metrics HTTP server listening interface (default: "127.0.0.1")
@@ -327,19 +352,36 @@ help, h                            Shows a list of commands or help for one comm
 --metrics.influxdb.bucket value        InfluxDB bucket name to push reported metrics to (v2 only) (default: "geth")
 --metrics.influxdb.organization value  InfluxDB organization name (v2 only) (default: "geth")
 ```
-  
-### Aliased (deprecated) options
 
-```
---nousb                             Disables monitoring for and managing USB hardware wallets (deprecated)
+### Profiling options
+
+```plaintext
+--pyroscope.enabled                     Enable pyroscope - profiling tool
+--pyroscope.app.name value              Set application that is displayed in pyroscope UI
+--pyroscope.server value                Pyroscope server address (default: "http://localhost:4040")
+--pyroscope.blockprofilerate value      Get the fraction of goroutine blocking events (default: 5)
+--pyroscope.mutexprofilefraction value  Get the fraction of mutex contention events (default: 5)
 ```
 
-### Miscellaneous options
+### Fast finality options
 
+```plaintext
+--votepool.maxcurvoteperblock value  The maximum finality vote per current block (default: 22)
+  --finality.enable                    Enable fast finality vote
+  --finality.enablesign                Enable fast finality vote signing
+  --finality.blspasswordpath value     The path to bls wallet password file (default: "bls_password")
+  --finality.blswalletpath value       The path to bls wallet secret key (default: "bls_keystore")
+  --override.arrowglacier value        Manually specify Arrow Glacier fork-block, overriding the bundled setting (default: 0)
+  --readiness                          Enable Readiness on the HTTP-RPC server. Note that Readiness can only be started if an HTTP server is started as well.
+  --readiness.prometheus value         Prometheus address for collecting metric (default: "localhost:9090")
+  --readiness.block.lag value          The block lag for deciding the readiness is success or fail (default: 5)
 ```
+
+### Other options
+
+```plaintext
 --snapshot                          Enables snapshot-database mode (default = enable)
 --bloomfilter.size value            Megabytes of memory allocated to bloom-filter for pruning (default: 2048)
 --help, -h                          show help
 --catalyst                          Catalyst mode (eth2 integration testing)
---override.arrowglacier value       Manually specify Arrow Glacier fork-block, overriding the bundled setting (default: 0)
 ```
