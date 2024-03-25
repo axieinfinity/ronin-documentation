@@ -16,6 +16,7 @@ See the following table for details on token withdrawal limits.
 | Token       | Daily limit per token | Tier 1 | Tier 2 | Tier 3 |
 | ------ | --------- | ------- | ------------- | ----------- |
 | **AGG** | Capped at 500,000,000 | < 200,000,000 | ≥ 200,000,000 | ≥ 800,000,000 |
+| **APRS** | Capped at 30,000,000 | < 10,000,000 | ≥ 10,000,000 | ≥ 40,000,000 |
 | **AXS** | Capped at 500,000 | < 100,000 | ≥ 100,000 | ≥ 400,000 |
 | **BANANA** | Capped at 500,000 | < 100,000 | ≥ 100,000 | ≥ 600,000 |
 | **PIXEL** | Capped at 300,000,000 | < 100,000,000 | ≥ 100,000,000 | ≥ 400,000,000 |
