@@ -179,7 +179,7 @@ misses 100 more blocks on the same day, the following penalties apply:
 This time, the validator can't bail out.
 
 :::info Temporary maintenance mode
-Validators can [schedule](./../validators/manage/schedule-maintenance.mdx) temporary maintenance, during which they don't get slashed for unavailability.
+Validators can [schedule](./../validators/manage/maintenance.mdx) temporary maintenance, during which they don't get slashed for unavailability.
 :::
 
 ### Unavailability bridge operator
