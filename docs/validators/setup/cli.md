@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-This guide demonstrates how to compile a Ronin node binary on your own using the Ronin CLI, instead of running a packed binary from Docker. With the CLI, you configure and run a full (non-validator) node, validator node, or archive node.
+This guide demonstrates how to compile a Ronin node binary on your own using the Ronin CLI, instead of running a packed binary from Docker. With the CLI, you can configure and run a full (non-validator) node.
 
 ## Prerequisites
 
@@ -74,7 +74,7 @@ To start a full (non-validator) Ronin node, run the following command:
   </TabItem>
 </Tabs>
 
-This command starts `ronin` in full sync mode, causing it to download more data in exchange for avoiding processing the entire history of the Ronin network.
+This command starts `ronin` in full sync mode, causing it to download all blocks from the start of the Ronin network and execute all transactions in these blocks.
 
 ### Configuration
 
