@@ -61,20 +61,20 @@ To start a full (non-validator) Ronin node, run the following command:
   <TabItem value="mainnet" label="Mainnet" default>
 
   ```bash
-  ronin --http.api eth,net,web3,consortium --networkid 2020 --discovery.dns enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com --datadir /ronin/data \ --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
+  ronin --http.api eth,net,web3,consortium --networkid 2020 --discovery.dns enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com --datadir /ronin/data --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
   ```
 
   </TabItem>
   <TabItem value="testnet" label="Testnet" default>
 
   ```bash
-  ronin --http.api eth,net,web3,consortium --networkid 2021 --discovery.dns enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com --datadir /ronin/data \ --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
+  ronin --http.api eth,net,web3,consortium --networkid 2021 --discovery.dns enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com --datadir /ronin/data --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
   ```
 
   </TabItem>
 </Tabs>
 
-This command starts `ronin` in full sync mode (default, can be changed with the `--syncmode` flag), causing it to download more data in exchange for avoiding processing the entire history of the Ronin network, which is very CPU-intensive.
+This command starts `ronin` in full sync mode, causing it to download more data in exchange for avoiding processing the entire history of the Ronin network.
 
 ### Configuration
 
@@ -144,7 +144,6 @@ help, h                            Shows a list of commands or help for one comm
 --rinkeby                           Rinkeby network: pre-configured proof-of-authority test network
 --ropsten                           Ropsten network: pre-configured proof-of-work test network
 --sepolia                           Sepolia network: pre-configured proof-of-work test network
---syncmode value                    Blockchain sync mode ("fast", "full", "snap" or "light") (default: snap)
 --exitwhensynced                    Exits after block synchronisation completes
 --gcmode value                      Blockchain garbage collection mode ("full", "archive") (default: "full")
 --txlookuplimit value               Number of recent blocks to maintain transactions index for (default = about one year, 0 = entire chain) (default: 2350000)
