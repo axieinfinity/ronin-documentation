@@ -160,11 +160,11 @@ const sidebars = {
         // Stake RON
         'delegators/onboarding/become-delegator',
         // Manage your stake
-        'delegators/manage/manage-stake',
+        'delegators/manage/stake',
         // Claim or restake your rewards
         'delegators/manage/claim-rewards',
         // Track your validators
-        'delegators/manage/track-validators',
+        'delegators/manage/validators',
         // FAQ
         'delegators/delegator-faq',
       ],
@@ -262,28 +262,30 @@ const sidebars = {
             slug: '/validators/manage',
           },
           items: [
-            // Add or change finality vote key
-            'validators/manage/finality-vote-key',
-            // Change commission rate
-            'validators/manage/change-commission',
-            // Change admin address
-            'validators/manage/address',
-            // Claim rewards
-            'validators/manage/claim-rewards',
-            // Increase or move stake
-            'validators/manage/increase-withdraw-stake',
-            // Renounce role
-            'validators/manage/renounce-role',
-            // Schedule maintenance period
-            'validators/manage/schedule-maintenance',
-            // Take emergency exit
-            'validators/manage/take-emergency-exit',
             // View activity
             'validators/manage/view-activity',
             // View analytics
             'validators/manage/view-analytics',
-            // View profile
-            'validators/manage/view-profile',            
+            // View profile details
+            'validators/manage/view-profile',
+            // Claim rewards
+            'validators/manage/claim-rewards',
+            // Increase or move stake
+            'validators/manage/stake',
+            // Add or change finality vote key
+            'validators/manage/finality',
+            // Change commission rate
+            'validators/manage/commission',
+            // Change admin address
+            'validators/manage/addresses',
+            // Schedule maintenance
+            'validators/manage/maintenance',
+            // Early exit maintenance
+            'validators/manage/maintenance-exit',
+            // Renounce validator role
+            'validators/manage/renounce',
+            // Request emergency exit
+            'validators/manage/emergency-exit',
           ],
         },
         // Slashing

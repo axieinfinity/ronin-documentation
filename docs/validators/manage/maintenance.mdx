@@ -1,0 +1,19 @@
+---
+title: Schedule maintenance
+description: Plan a maintenance period for your node.
+---
+
+import stepOne from './assets/schedule-maintenance-step-1.png';
+import stepTwo from './assets/schedule-maintenance-step-2.png';
+
+Sometimes, you need to take your node offline for maintenance. You can schedule a maintenance period in advance to let other users know when your node will be down. Because up to three validators can enter maintenance at the same time, you may need to align with the other validators to avoid schedule overlaps. After the maintenance ends, you'll need to wait at least three days before scheduling the next one.
+
+1. Open the [Validator Dashboard](https://validator.roninchain.com), then select your account, and then click **Maintenance mode**.
+   <img src={stepOne} width={280} />
+
+2. Specify the maintenance duration in epochs, where 1 epoch equals 200 blocks.
+You can choose from the valid start epoch, then decide on the end epoch.
+   <img src={stepTwo} width={416} />
+
+3. After you submit the request, the system will display the status
+and duration of the maintenance period.

@@ -13,7 +13,7 @@ You can manually [restake](./manage/claim-rewards.mdx#restake-your-rewards) the 
 
 ## 3. Can I withdraw my stake whenever I want without any penalties? {#3}
 
-You can [withdraw your stake](./manage/manage-stake.mdx#withdraw-stake) from one of your validators at any time without penalties, as long as it's been three or more days since you last staked with this validator.
+You can [withdraw your stake](./manage/stake.mdx#withdraw-stake) from one of your validators at any time without penalties, as long as it's been three or more days since you last staked with this validator.
 
 ## 4. If I stake RON with a validator today, when will I receive the rewards? {#4}
 
@@ -25,7 +25,7 @@ Your RON stake with new validator will start producing rewards from around 00:00
 
 ## 6. How do I know if my validator is renouncing? {#6}
 
-You will receive a notification seven days before the validator's renunciation date. For more ways to keep track of your validators, see [Track validators](./manage/track-validators.mdx).
+You will receive a notification seven days before the validator's renunciation date. For more ways to keep track of your validators, see [Track validators](./manage/validators.mdx).
 
 ## 7. How can I know if a validator is well-performing? {#7}
 
