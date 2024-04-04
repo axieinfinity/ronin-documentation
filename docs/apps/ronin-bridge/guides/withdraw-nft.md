@@ -36,27 +36,15 @@ If you access Ronin Bridge on mobile, remember to import your Ethereum address t
 
 ## Step 3. Approve the NFT
 
-To withdraw an NFT, you need to grant Ronin Bridge permission to bridge it, which is also referred to as *approval*. You have two ways to do it: approve a single token or approve all tokens.
-
-### Approve a single token
-
-Approving a single token means that every time you bridge an NFT, you will need to approve each token individually. So when you bridge another token in the future, you will need to approve it again.
+When a smart contract interacts with an NFT in your wallet, you may be prompted to approve the token.
 
 1. With the NFT selected, click **Approve NFT**.
    ![nft-withdrawal-6](../assets/nft-withdrawal-6.png)
-2. Select **Single token**.
+2. Select **Single token** to grant access to a single NFT.
    ![nft-withdrawal-7](../assets/nft-withdrawal-7.png)
-
-### Approve all tokens
-
-Approving all tokens means that you only need to grant approval once, and your future NFT bridges will not require any approval.
-
-1. Select the NFT you want to bridge, then click **Approve NFT**.
-   ![nft-withdrawal-6](../assets/nft-withdrawal-6.png)
-2. Select **All tokens**.
+   Or select **All tokens** to grant access to all tokens from that collection. You can revoke your approval later using the [Token Revoke](https://ronin.axiedao.org/revoke/) tool.
    ![nft-withdrawal-8](../assets/nft-withdrawal-8.png)
-
-You can revoke token approval by using the [Token Revoke](https://ronin.axiedao.org/revoke/) tool.
+3. When prompted, sign the transaction in your connected wallet.
 
 ## Step 4. Confirm your withdrawal
 
