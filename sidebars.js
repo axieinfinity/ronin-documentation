@@ -138,14 +138,31 @@ const sidebars = {
             'apps/ronin-bridge/reference/withdrawal-limits',
           ]
         },
+        // Katana DEX
+        {
+          type: 'category',
+          label: 'Katana',
+          link: {
+            type: 'doc',
+            id: 'apps/katana/overview', 
+          },
+          items: [
+            // Get started
+            'apps/katana/guides/get-started',
+            // Swap
+            'apps/katana/guides/swap',
+            // Pool
+            'apps/katana/guides/pool',
+            // Farm
+            'apps/katana/guides/farm',
+          ]
+        },
         // Ronin Explorer
         'apps/ronin-explorer',
         // RON Staking
         'apps/ron-staking',
         // Ronin Safe
         'apps/multisig',
-        // Katana DEX
-        'apps/katana',
       ],
     },
     // Delegators

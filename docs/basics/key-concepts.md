@@ -25,7 +25,7 @@ For example, a Ronin block contains information about the date, time, and number
 
 ### Block explorer
 
-A block explorer is a software interface that enables users to access real-time blockchain information like transactions, blocks, addresses, nodes, and balances on a particular network. On Ronin, the explorer software is called [Ronin Block Explorer](https://app.roninchain.com/dashboard).
+A block explorer is a software interface that enables users to access real-time blockchain information like transactions, blocks, addresses, nodes, and balances on a particular network. On Ronin, the explorer software is called [Ronin Block Explorer](https://app.roninchain.com/).
 
 ### Block reward
 
@@ -45,7 +45,7 @@ To attach a BLS key to a validator, either a new validator must be created or an
 
 ### Bridge
 
-A blockchain bridge—also known as a cross-chain bridge—allows independent blockchains to communicate with each other. This allows users to transfer crypto assets from one blockchain to another, including tokens, wrapped cryptocurrencies, and non-fungible tokens (NFTs). For example, [Ronin Bridge](https://bridge.roninchain.com/) is used for asset transfer between the Ronin chain and the Ethereum mainnet.
+A blockchain bridge—also known as a cross-chain bridge—allows independent blockchains to communicate with each other. This allows users to transfer crypto assets from one blockchain to another, including tokens, wrapped cryptocurrencies, and non-fungible tokens (NFTs). For example, [Ronin Bridge](https://app.roninchain.com/bridge) is used for asset transfer between the Ronin chain and the Ethereum mainnet.
 
 ### Bridge operator
 
@@ -129,9 +129,9 @@ A hard fork is a software update that is not backwards compatible. In blockchain
 
 ### Katana
 
-Every blockchain has its own flagship decentralized exchange (DEX), a place where users are able to swap tokens freely within the ecosystem. Ethereum has [Uniswap](https://uniswap.org/), Matic has [Quickswap](https://quickswap.exchange/) and Ronin has [Katana](https://katana.roninchain.com/#/swap). Better known as “Ronin DEX”, Katana allows users to swap between tokens within the Axie Infinity ecosystem without leaving the Ronin blockchain.
+Every blockchain has its own flagship decentralized exchange (DEX), a place where users are able to swap tokens freely within the ecosystem. Ethereum has [Uniswap](https://uniswap.org/), Matic has [QuickSwap](https://quickswap.exchange/) and Ronin has [Katana](https://katana.roninchain.com/#/swap).
 
-The DEX has 3 liquidity pools (SLP/WETH, AXS/WETH, RON/WETH) where users can opt to become liquidity providers (LPs) by staking the relevant pairing. Liquidity providers receive 0.25% of each trade that taps into the pool, proportionate to their pool share.
+The DEX has liquidity pools (such as SLP/WETH, AXS/WETH, RON/WETH) where users can become liquidity providers (LPs) by staking the relevant pairing. Liquidity providers receive 0.3% of each trade that taps into the pool, proportionate to their pool share.
 
 ## M
 
@@ -190,18 +190,17 @@ Developed by Sky Mavis, Ronin is an Ethereum-linked chain on which Axie Infinity
 
 ### Ronin Wallet
 
-Ronin Wallet is the primary wallet used for the Ronin network. It is where the standard tokens RON, RRC20, and RRC721 are kept. The wallet is available as a Chrome extension for desktop and as an app on mobile devices
+Ronin Wallet is the primary wallet used for the Ronin network. It's where the standard ERC20 and ERC721 tokens, including RON, are kept. The wallet is available as a browser extension for Google Chrome and as a mobile app for smartphones on Android and iOS.
 
 With the Ronin wallet, users can exchange the standard tokens, and send and receive cryptocurrencies and NFTs without paying high gas fees.
-The ERC-20 tokens supported by the Ronin Wallet include Ronin Wrapped Ether (WETH), Smooth Love Portion (SLP), Axie Infinity Shard (AXS), USDC, Axie Egg Coin (AEC), SLP-WETH, RON-WETH, and USDC-WETH. While the ERC-721 tokens supported on the wallet include Land Plot, Land Item, and Axie.
 
 Ronin Wallet is a non-custodial wallet that allows only the owner of the wallet to have absolute influence and access to the funds in the wallet.
 
-Ronin Wallet has 3 important features:
+Ronin Wallet has three important features:
 
-* The wallet address, which consists of numbers and characters used to send and receive assets between two wallets.
-* The passphrase, which is a security key likened to a password. The passphrase consists of any 12 English keywords and is required to perform the wallet recovery operation.
-* The private key is a string format to connect to a crypto account, similar to the password of a bank account.
+* The wallet address that consists of numbers and characters used to send and receive assets between two wallets.
+* The passphrase - a security key likened to a password. The passphrase consists of any 12 English keywords and is required to perform the wallet recovery operation.
+* The private key - a string of characters used to connect to a crypto account, similar to the password of a bank account.
 
 ### RPC
 
