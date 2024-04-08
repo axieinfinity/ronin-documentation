@@ -24,19 +24,19 @@ Katana DEX is an Automated Market Maker (AMM). This means it's always ready to b
     <img src={swapFrom} width={1000} />
     You can click either of the token selection boxes to reveal the full list of supported tokens.
     <img src={swapToList} width={1000} />
-    After you choose the swap pair, you will see the tokens listed on the **Swap** panel. The top token is the token you have in your wallet. The bottom token is the one you want to swap your token with.
+    After choosing the swap pair, you can see the tokens listed on the **Swap** panel. The top token is the token you have in your wallet. The bottom token is the one you want to swap your token with.
 3. Enter the amount to swap: when you type in on one of the fields, the other populates based on the current exchange rate between the tokens.
 4. Optionally, switch the top and bottom tokens.
 5. When you are ready to swap, click the **Swap** button.
     <img src={swapTo} width={1000} />
 6. In the **Confirm Swap** pop-up, review the details of your swap:
-    1. The tokens to be swapped. Ensure that the amounts are correct.
+    1. The tokens to swap: ensure that the amounts are correct.
     2. Detailed swap information:
         * **Liquidity provider fee:** the fees allocated to LP provider (0.3% of the transaction value).
         * **Route:** the trading route taken for your order. It can be a direct "token A to token B" route, or there might be a bridge token in the middle, such as "token A through token B to token C." Direct route might not always be the cheapest.
         * **Price impact:** estimation of the slippage to expect based on your order size and market movements. This gives you an idea of how much you can receive.
-        * **Minimum received:** the minimum amount of tokens you'll receive based on slippage tolerance. This is the worst-case scenario, anything below this results in a failed transaction.
-        * **Slippage tolerance:** Highest percent of price movement of the transaction. Anything higher than this value results in failed transaction.
+        * **Minimum received:** the lowest amount of tokens you can receive based on slippage tolerance. This is the worst-case scenario. Anything less than this value results in a failed transaction.
+        * **Slippage tolerance:** the highest percent of price movement of the transaction. Anything greater than this value results in a failed transaction.
 7. Click **Confirm Swap** to start the swap.
     <img src={swapConfirmDetails} width={1000} />
    Confirm the transaction in your Ronin Wallet.
