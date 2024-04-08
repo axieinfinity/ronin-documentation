@@ -13,58 +13,42 @@ import swapCompleted from '../assets/katana-swap-completed.png'
 
 ## Overview
 
-Swapping is the action of you trading one of your tokens for another token via a Decentralized Exchange (DEX for short). DEXs are apps that allow people to exchange between any two assets without the need of a traditional bank or other trusted third party by using smart contracts.
+Swapping is the action of trading one of your tokens for another token via a Decentralized Exchange (DEX). DEXs are apps that allow people to exchange between any two assets by using smart contracts, without the need of a traditional bank or other trusted third party.
 
-Katana DEX is an Automated Market Maker. This means it is always ready to buy and sell any tokens immediately.
+Katana DEX is an Automated Market Maker (AMM). This means it's always ready to buy and sell any tokens immediately.
 
-## How to swap tokens
+## Swap tokens
 
-On the Katana swap page., you'll be presented with a simple Swap panel. You will first need to choose which tokens you want to swap from (top) and which to swap to (bottom).
+1. Go to the [Katana DEX](https://katana.roninchain.com/swap) page and connect your Ronin Wallet.
+2. Choose the tokens you want to swap from and to.
+    <img src={swapFrom} width={1000} />
+    You can click either of the token selection boxes to reveal the full list of supported tokens.
+    <img src={swapToList} width={1000} />
+    After you choose the swap pair, you will see the tokens listed on the **Swap** panel. The top token is the token you have in your wallet. The bottom token is the one you want to swap your token with.
+3. Enter the amount to swap: when you type in on one of the fields, the other populates based on the current exchange rate between the tokens.
+4. Optionally, switch the top and bottom tokens.
+5. When you are ready to swap, click the **Swap** button.
+    <img src={swapTo} width={1000} />
+6. In the **Confirm Swap** pop-up, review the details of your swap:
+    1. The tokens to be swapped. Ensure that the amounts are correct.
+    2. Detailed swap information:
+        * **Liquidity provider fee:** the fees allocated to LP provider (0.3% of the transaction value).
+        * **Route:** the trading route taken for your order. It can be a direct "token A to token B" route, or there might be a bridge token in the middle, such as "token A through token B to token C." Direct route might not always be the cheapest.
+        * **Price impact:** estimation of the slippage to expect based on your order size and market movements. This gives you an idea of how much you can receive.
+        * **Minimum received:** the minimum amount of tokens you'll receive based on slippage tolerance. This is the worst-case scenario, anything below this results in a failed transaction.
+        * **Slippage tolerance:** Highest percent of price movement of the transaction. Anything higher than this value results in failed transaction.
+7. Click **Confirm Swap** to start the swap.
+    <img src={swapConfirmDetails} width={1000} />
+   Confirm the transaction in your Ronin Wallet.
+    <img src={swapConfirmTxn} width={1000} />
 
-<img src={swapFrom} width={1000} />
-
-You may click on either of the token selection boxes to reveal the full supported tokens. Choose the tokens you want to swap from and to.
-
-<img src={swapToList} width={1000} />
-
-Once you've chosen the swap pair, you will see them listed on the Swap panel. The top token is for the token you have in your wallet. The bottom token is for the one you want to swap your token with.
-
-1. Specify how much you are swapping for (type in on one of the fields, the other will populate based on the current exchange rate between the tokens)
-2. Switch the top and bottom tokens
-3. Swap: when you are ready to swap, click this button
-
-<img src={swapTo} width={1000} />
-
-Once you've clicked the Swap button, you'll be presented with a "Confirm Swap" pop-up.
-
-There are 3 sections in the Confirm Swap pop-ups:
-
-* The tokens to be swapped. Ensure that the amounts are correct
-* Detailed swap information:
-    * Liquidity provider fee: The fees allocated to LP provider (0.3%)
-    * Route: The trading route taken for your order. It could be direct (Token A -> Token B) or there might be a bridge (Token A -> Token B -> Token C). Direct route might not always be the cheapest.
-    * Price Impact: Estimation of the slippage to expect based on your order size and market movements. This gives you an idea of how much you will likely receive.
-    * Minimum received: The minimum amount of tokens you'll receive based on slippage tolerance. This is the worst case scenario, anything below this will result in a failed transaction.
-    * Slippage tolerance: Maximum % of price movement of the transaction, anything above that will result in failed transaction.
-* Confirm Swap button
-
-Click on the Confirm Swap button when you have checked everything.
-
-<img src={swapConfirmDetails} width={1000} />
-
-The Ronin wallet window will appear. Check that all details are correct and click confirm.
-
-<img src={swapConfirmTxn} width={1000} />
-
-A "Transaction submitted" pop-up will appear after you clicked confirm. Here you may click on Close or View on Explorer to view the transaction details in the Ronin Chain Explorer.
-
+A **Transaction submitted** pop-up indicates that your transaction is submitted to the blockchain. You can close this pop-up or click **View on Explorer** to view the transaction details in the Ronin Chain Explorer.
 <img src={swapTxnSubmitted} width={1000} />
 
-Once the transaction is completed, you will see a banner appear on the browser window's top-right, just below the wallet button. You may also click on "View on Explorer" to view the transaction details.
-
+After a few seconds, your transaction is confirmed. You can see a banner appear on the browser window's top-right.
 <img src={swapCompleted} width={1000} />
 
-Congratulations! You have successfully swapped your tokens.
+Congratulations. You just swapped your tokens.
 
 ## Video guide
 
