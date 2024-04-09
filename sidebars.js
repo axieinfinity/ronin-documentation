@@ -83,6 +83,8 @@ const sidebars = {
         slug: '/apps',
       },
       items: [
+        // Token Revoke
+        'apps/revoke',
         // RNS
         {
           type: 'category',

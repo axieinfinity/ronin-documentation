@@ -1,0 +1,41 @@
+---
+description: Review and revoke your token approvals for dApps in the Ronin ecosystem.
+sidebar_label: Revoke
+title: Ronin Token Revoke
+slug: /apps/revoke/
+---
+
+import approvalList from './assets/approval-list.png'
+import confirmConnection from './assets/confirm-connection.png'
+import connectToWallet from './assets/connect-to-wallet.png'
+import revokeApproval from './assets/revoke-approval.png'
+import revokeSuccess from './assets/revoke-success.png'
+
+## Overview
+
+Ronin Token Revoke ("Revoke" for short) is a tool built for revoking approvals that you previoisly granted to a Ronin dApp's smart contract to handle your digital assets, such as tokens and NFTs. 
+
+:::info
+The Revoke tool can't be used for revoking signatures or dApp connections with your wallet.
+:::
+
+## Revoke a token approval
+
+To revoke a token approval, follow these steps:
+
+1. Open the [Revoke](https://ronin.axiedao.org/revoke/) tool and click **Connect to Ronin Wallet**.
+   <img src = {connectToWallet} width={1000} />
+
+2. If this is your first time connecting to the AxieDAO (Decentralized Autonomous Organization) website, then in your Ronin Wallet, grant permission by clicking **Next**, then **Connect**.
+   <img src = {confirmConnection} width={1000} />
+
+3. Review the list of token approvals associated with your connected Ronin address, sorted by dApp. Each approval has a link to the respective smart contract that handles the token.
+   <img src = {approvalList} width={1000} />
+
+4. Find the approval that you want to revoke, then click **Revoke,** and then confirm the transaction in your wallet.
+   <img src = {revokeApproval} width={1000} />
+
+5. After a few seconds, the approval's status changes to **Revoked** and a confirmation pop-up appears indicating that the revoke transaction is completed.
+   <img src = {revokeSuccess} width={1000} />
+
+Done. You have successfully revoked the token approval for the selected dApp. If you want to use the same dApp after revoking its token approval, you'll be asked to approve once again.
