@@ -14,13 +14,13 @@ If you access Ronin Bridge on mobile, remember to import your Ethereum address t
 
 ## Step 1. Add the sender and recipient addresses
 
-1. Go to [https://app.roninchain.com/bridge](https://app.roninchain.com/bridge).
+1. Open [Ronin Bridge](https://app.roninchain.com/bridge).
    ![token-withdrawal-0](../assets/token-deposit-0.png)
 2. Switch to the withdrawal feature by selecting the button between the **From** and **To** fields.
    ![token-withdrawal-1](../assets/token-withdrawal-1.png)
-3. In the **From** field, connect your Ronin Wallet using the browser extension or mobile app for your device.
+3. Select the **From** field and connect your Ronin Wallet using the browser extension or mobile app for your device.
    ![token-withdrawal-2](../assets/token-withdrawal-2.png)
-4. In the **To** field, enter the Ethereum address that you want to bridge the token to. Double-check the recipient address to avoid sending your tokens to the wrong destination.
+4. Select the **To** field and enter the Ethereum address that you want to bridge the token to. Double-check the recipient address to avoid sending your tokens to the wrong destination.
    :::note[Ronin Wallet app]
    If you access Ronin Bridge through the Ronin Wallet mobile app, then you can enter any Ethereum address as a recipient, but only your imported Ethereum wallet can pay gas in ETH for the transaction.
    :::
