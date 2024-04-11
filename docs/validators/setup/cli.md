@@ -1,6 +1,6 @@
 ---
-description: Install the Ronin CLI and compile a node binary from source.
-title: Build your node using Ronin CLI
+description: Build a node from source and run it using the Ronin CLI.
+title: Build a node from source
 tags:
   - cli
 ---
@@ -10,71 +10,98 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-This guide demonstrates how to compile a Ronin node binary on your own using the Ronin CLI, instead of running a packed binary from Docker. With the CLI, you can configure and run a full (non-validator) node.
+This guide demonstrates how to compile a Ronin binary on your own using the Ronin CLI (command-line interface), instead of running a packed binary from Docker. With the Ronin CLI, you can run a full node (default) or an archive node (retaining all historical state).
 
 ## Prerequisites
 
 * Golang 1.20 or later (follow the instructions at [https://go.dev/doc/install](https://go.dev/doc/install))
 * C compiler
 
-## Step 1. Build locally
+## Step 1. Download Ronin source
 
-1. Build the binary from the source code:
-  
-    ```bash
-    git clone git@github.com:axieinfinity/ronin.git
-    cd ronin
-    make ronin
-    ```
-
-    The last command creates a `ronin` binary inside the `.build/bin` directory.
-
-1. To run the binary without specifying the binary location in each command, make sure to add the Ronin binary path in the `$PATH` environment variable.
-
-    ```bash
-    export PATH=$PATH:/path/to/ronin
-    ```
-
-    If run from the `ronin` directory, then the command is as follows:
-
-    ```bash
-    export PATH=$PATH:./build/bin/ronin
-    ```
-
-## Step 2. Initialize the genesis block
-
-Initialize the genesis block to set up the origin state of the chain. The genesis files are located in the repository's `genesis` directory, and include the path where you store the node's data—for example, `/ronin/data`.
+To download the Ronin source code, clone the GitHub repository. We recommend that you create a home `ronin` directory first and download all the Ronin-related software there:
 
 ```bash
-ronin init genesis/mainnet.json --datadir /ronin/data
+mkdir -p ~/roninchain && cd ~/roninchain
+git clone git@github.com:axieinfinity/ronin.git
 ```
 
-:::caution
-Whenever you build or upgrade a node that includes a new hardfork, you must initialize the genesis block by running this command.
-:::
+## Step 2. Build the binary
 
-## Step 3. Start the node
+Create a `ronin` binary from source:
+  
+```bash
+cd ronin
+make ronin
+```
 
-To start a full (non-validator) Ronin node, run the following command:
+The `make ronin` command creates a `ronin` binary in the `.build/bin` directory.
+
+## Step 3. Add the binary to PATH
+
+To run the `ronin` binary without specifying its location in each command, add the directory where the binary is located to your `$PATH` environment variable:
+
+```bash
+export PATH=$PATH:/path-to-ronin-binary/
+```
+
+If run from the `ronin` directory that you cloned, then the command is as follows:
+
+```bash
+export PATH=$PATH:./build/bin/
+```
+
+## Step 4. Initialize the genesis block
+
+To set up the origin state of the chain, initialize the genesis block. In your command, include the path to the genesis files located in the repository's `genesis` directory, and the path where you store the node's data, such as `~/roninchain/data`.
 
 <Tabs groupId="networks">
   <TabItem value="mainnet" label="Mainnet" default>
 
   ```bash
-  ronin --http.api eth,net,web3,consortium --networkid 2020 --discovery.dns enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com --datadir /ronin/data --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
+  ronin init genesis/mainnet.json --datadir ~/roninchain/data
   ```
 
   </TabItem>
   <TabItem value="testnet" label="Testnet" default>
 
   ```bash
-  ronin --http.api eth,net,web3,consortium --networkid 2021 --discovery.dns enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com --datadir /ronin/data --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
+  ronin init genesis/testnet.json --datadir ~/roninchain/data
   ```
 
   </TabItem>
 </Tabs>
 
-This command starts `ronin` in full sync mode, causing it to download all blocks from the start of the Ronin network and execute all transactions in these blocks.
+Whenever you build the node or upgrade the software with a new hardfork, always initialize the genesis block by running the preceding command.
+
+## Step 5. Run the node
+
+To run a full (non-validator) Ronin node, use the following command:
+
+<Tabs groupId="networks">
+  <TabItem value="mainnet" label="Mainnet" default>
+
+  ```bash
+  ronin --http.api eth,net,web3,consortium --networkid 2020 --discovery.dns enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com --datadir ~/roninchain/data --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
+  ```
+
+  </TabItem>
+  <TabItem value="testnet" label="Testnet" default>
+
+  ```bash
+  ronin --http.api eth,net,web3,consortium --networkid 2021 --discovery.dns enrtree://AJCNIAXQIPO55NW3QE2NUBBDMPYZDOQUCAEUS65NHQFMUUFES5KOW@saigon.nodes.roninchain.com --datadir ~/roninchain/data --port 30303 --http --http.corsdomain '*' --http.addr 0.0.0.0 --http.port 8545 --http.vhosts '*' --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins '*' 
+  ```
+
+  </TabItem>
+</Tabs>
+
+This command starts `ronin` in `full` sync mode, causing it to download all blocks from the start of the Ronin network and execute all transactions in these blocks.
+
+To run an archive node, modify the preceding command by adding the `--syncmode full` and `--gcmode archive` flags:
+
+```bash
+ronin --syncmode full --gcmode archive --http.api ...
+```
 
 ### Configuration
 
