@@ -180,7 +180,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Run a node',
+          label: 'Setup',
           link: {
             type: 'doc',
             id: 'validators/setup/overview',   
@@ -319,14 +319,14 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Run a node',
+          label: 'Setup',
           link: {
             type: 'doc',
             id: 'bridge-operators/setup/overview',   
           },
           items: [
-            'bridge-operators/setup/run-bridge-operator',
-            'bridge-operators/setup/upgrade-bridge-operator',
+            'bridge-operators/setup/run-bridge',
+            'bridge-operators/setup/upgrade-bridge',
           ],
         },
         {

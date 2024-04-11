@@ -1,11 +1,11 @@
 ---
 description: Get the latest version of the bridge's software.
-title: Upgrade bridge operator version
+title: Upgrade bridge software
 ---
 
 ## Overview
 
-This page describes how to get the latest version of the bridge operator node's software.
+This page describes how to get the latest version of the software for your bridge node.
 
 Upgrades are usually backwards-compatible and can contain performance
 improvements, bug fixes or new features. It's recommended that every node is
@@ -19,7 +19,7 @@ hardforks are announced seven days in advance on
 our [Discord](https://discord.gg/roninnetwork) server and
 the [Ronin Newsletter](https://blog.roninchain.com).
 
-## Bridge operator
+## Upgrade bridge version
 
 Every bridge release is published on
 [GitHub](https://github.com/ronin-chain/bridge-v2/releases). To find the Docker
@@ -28,13 +28,11 @@ image for each release, visit
 
 To download the latest image, follow these steps:
 
-1. In the `.env` file, set `BRIDGE_IMAGE` to the following:
-    ```
-    ghcr.io/ronin-chain/bridge:v0.2.9-61da305
-    ```
+1. In your `.env` file, set `BRIDGE_IMAGE` to the following:
+
+   ```bash
+   ghcr.io/ronin-chain/bridge:v0.2.9-61da305
+   ```
+
 2. Save the changes.
 3. Run `docker-compose up -d`.
-
-## See also
-
-* [Upgrade validator version](./../../validators/setup/upgrade-validator.md)

@@ -7,7 +7,7 @@ import multisig from './assets/multisig.png';
 
 ## 1. What should I do after registering as a Validator Candidate? {#1}
 
-After [becoming](onboarding/become-validator.mdx) a Validator Candidate, there’s a chance that you get selected as a Standard Validator the next day. To avoid slashing, you need to make sure that your nodes are online and up to date, and the balance in your bridge operator node must be a minimum of 100 RON.
+After [becoming](onboarding/become-validator.mdx) a Validator Candidate, there’s a chance that you get selected as a Standard Validator the next day. To avoid slashing, you need to make sure that your nodes are online and up to date, and the balance in your bridge node must be a minimum of 100 RON.
 
 ## 2. How to increase the chance of getting selected as a Standard Validator? {#2}
 

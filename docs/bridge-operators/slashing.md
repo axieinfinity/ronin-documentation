@@ -10,9 +10,9 @@ import bridSlashTierTwo from './assets/bridge-tier-2.png';
 ## Overview
 
 Slashing is a mechanism that governs the behavior of validators and bridge operators on
-the Ronin blockchain. This page describes the slashing rules for bridge operators. 
+the Ronin blockchain. This page describes the slashing rules for bridge operators.
 
-:::note 
+:::note
 A "day" in the slashing rules refers to the period
 from midnight to midnight UTC.
 :::
@@ -41,4 +41,4 @@ The operator's status is set to **Punished**.
 
 ## See also
 
-* [Slashing for validators](./../validators/slashing.mdx)
+[Slashing for validators](./../validators/slashing.mdx)

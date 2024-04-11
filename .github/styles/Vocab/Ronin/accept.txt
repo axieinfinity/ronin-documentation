@@ -2,7 +2,7 @@
 archive node
 bridge
 bridge operator
-bridge operator node
+bridge node
 delegator
 EVM
 full node

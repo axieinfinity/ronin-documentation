@@ -1,8 +1,7 @@
 ---
-description: Parameters of the Ronin mainnet.
+description: Specifications of the Ronin mainnet.
+title: Ronin mainnet
 ---
-
-# Ronin mainnet
 
 ## Parameters
 
@@ -32,7 +31,7 @@ Whitelist:
 0x0000000000000000000000000000000000000033
 ```
 
-Blacklist:
+Denylist:
 
 ```bash
 0x313b24994c93FA0471CB4D7aB796b07467041806

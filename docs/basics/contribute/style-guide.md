@@ -26,13 +26,13 @@ terms and their usage.
 | archive node         | An archive node retains all historical data right back to genesis.                                                                  |
 | bridge               | Run a validator and a bridge together.                                                                                              |
 | bridge operator      | A bridge operator is a type of node used for acknowledging events on Ronin Bridge.                                                  |
-| bridge operator node | Each validator is expected to run two nodes—a validator node and a bridge operator node.                                            |
+| bridge node | Each validator is expected to run two nodes—a validator node and a bridge node node.                                            |
 | delegator            | To become a delegator, go to **RON Staking > All validators > Delegate**.                                                           |
 | full node            | Validator and non-validator are considered _full_ nodes—they store full blockchain data.                                            |
 | Governing Validator  | Beside the 12 Governing Validators, top 10 Validator Candidates with the highest staked amount are selected as Standard Validators. |
 | Katana               | Katana, also known as the Katana DEX, is a decentralized exchange for Ronin.                                                        |
 | mainnet              | To run a node on the mainnet, make sure to comply with the minimum hardware requirements.                                           |
-| node                 | Each validator is expected to run two nodes—a validator node and a bridge operator node.                                            |
+| node                 | Each validator is expected to run two nodes—a validator node and a bridge node.                                            |
 | node operator        | A node operator is an individual or institution that sets up and configure nodes for the validator.                                 |
 | non-validator node   | A non-validator node is also known as an RPC node.                                                                                  |
 | RON                  | Deposit 50 RON to your bridge address.                                                                                              |
@@ -46,7 +46,7 @@ terms and their usage.
 | Saigon testnet       | Run a validator node on the Saigon testnet.                                                                                         |
 | Standard Validator   | Beside the 12 Governing Validators, top 10 Validator Candidates with the highest staked amount are selected as Standard Validators. |
 | testnet              | The testnet has different hardware requirements for running a node.                                                                 |
-| validator            | Each validator is expected to run two nodes—a validator node and a bridge operator node.                                            |
+| validator            | Each validator is expected to run two nodes—a validator node and a bridge node.                                            |
 | Validator Candidate  | Beside the 12 Governing Validators, top 10 Validator Candidates with the highest staked amount are selected as Standard Validators. |
 | Validator Dashboard  | To view your performance analytics, go to **Validator Dashboard > Analytics**.                                                      |
 | validator node       | Run a validator node on the Ronin mainnet.                                                                                          |

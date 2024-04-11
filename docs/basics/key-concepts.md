@@ -143,7 +143,7 @@ A mainnet is a fully developed and released version of a blockchain network. Thi
 
 ### Node
 
-A node is a computer that performs a certain function on a blockchain network
+A node is essentially a computer that performs a certain function on a blockchain network
 and runs client software in order to do so. Some nodes validate transactions,
 while others observe activity on the blockchain. Nodal network structure is
 also a key aspect of maintaining security on a blockchain network.
@@ -155,10 +155,9 @@ On Ronin, the node types are as follows:
     * Validator node
     * Non-validator node
   * Archive node
-* Bridge operator node
+* Bridge node
 
-For more information about the Ronin nodes and the bridge operator, see
-[Nodes](nodes.md).
+For more information about nodes, see [Nodes](nodes.md).
 
 ## P
 

@@ -1,36 +1,47 @@
 ---
-description: Run a bridge operator node on the Ronin mainnet.
-title: Run a bridge operator
+description: Run a bridge node on the Ronin mainnet.
+title: Run a bridge node
 tags:
 - docker-mainnet
 ---
 
 ## Overview
 
-This guide demonstrates how to run a bridge operator node on the mainnet using Docker.
+This guide demonstrates how to run a bridge node on the Ronin mainnet using Docker.
 
-## Before you start
+To be eligible for running a bridge node, you need to go through a governance process that requires approval of at least 70% of the current bridge operators.
+Only the bridge operators selected by Sky Mavis and community can run bridge nodes.
+
+## Prerequisites
 
 ### Docker
 
-* [Docker Engine](https://docs.docker.com/engine/install/)
-* [Docker Compose plugin](https://docs.docker.com/compose/install/)
-* [Zstandard](https://github.com/facebook/zstd)
+Install Docker Engine and the Docker Compose plugin:
 
-### Ethereum endpoint
+* [Docker Engine](https://docs.docker.com/engine/)
+* [Docker Compose](https://docs.docker.com/compose/)
 
-You need an Ethereum RPC endpoint to listen for events from Ethereum chain and send events to Ethereum. This can be an [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint), Infura or any other Ethereum RPC endpoint.
+### RPC endpoints
+
+Have two RPC endpoints:
+
+* Ronin RPC endpoint for listening and sending events on the Ronin chain.
+  * Ronin mainnet: `https://api.roninchain.com/rpc`
+  * Saigon testnet: `https://saigon-testnet.roninchain.com/rpc`
+* Ethereum RPC endpoint for listening and sending events on the Ethereum chain, such as [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint) or Infura.
 
 ### Private keys
 
-Generate two private keys as described in [Generate keys](./../../validators/setup/generate-keys.md):
+Generate private keys:
 
-* One key for the bridge voter (if you're a governor)
-* One key for the bridge operator
+* Generate a key for the bridge operator.
+* If you're a Governing Validator, generate one more key for the bridge voter.
+
+For instructions, see [Generate keys](./../../validators/setup/generate-keys.md).
 
 ### System requirements
 
-Recommended system requirements for running a bridge operator on the mainnet:
+Recommended system requirements for running a bridge on the mainnet:
 
 * 4-core CPU
 * 8 GB RAM
@@ -39,38 +50,20 @@ Recommended system requirements for running a bridge operator on the mainnet:
 
 These requirements are rough guidelines, and each node operator
 should monitor their node to ensure good performance for the intended task.
-The size of your Ronin node will also grow over time.
 
 ## Run the node
 
-1. Create a bridge directory:
+1. Set up a directory for the bridge and two nested directories for its data and the Docker configuration:
 
    ```bash
-   mkdir ~/ronin-bridge
+   mkdir -p ~/ronin-bridge/{data,docker}
+   cd ~/ronin-bridge/docker/
    ```
 
-   Go to the newly created directory:
-
-   ```bash
-   cd ~/ronin-bridge
-   ```
-
-   Create a directory for bridge data:
-
-   ```bash
-   mkdir -p data
-   ```
-
-1. Create a file called `docker-compose.yml`:
-
-   ```bash
-   vim docker-compose.yml
-   ```
-
-1. Paste the following into `docker-compose.yml`:
+2. In the `docker` directory, create a `docker-compose.yaml` file with the following configuration:
 
    ```yaml
-   version: "3"
+   version: "3.1"
    services:
      db:
        image: postgres:14.3
@@ -111,42 +104,36 @@ The size of your Ronin node will also grow over time.
          - db
    ```
 
-   This compose file defines three services:
+   This compose file defines two services:
 
-     * `bridge`, which pulls a bridge image.
-     * `db`, which builds a Postgres database for the bridge.
+     * `bridge` that build the bridge service.
+     * `db` that builds a Postgres database for the bridge.
 
-1. Create an `.env` file to store configuration parameters for the services:
-
-   ```bash
-   vim .env
-   ```
-
-1. Paste the following into `.env` and replace placeholder values (like *`BRIDGE_STATS_NODE_NAME`*) with your bridge's information:
+3. In the same directory, create an `.env` file and add the following content, replacing the `<...>` placeholder values with your information:
 
    ```text
    # Your Ethereum RPC endpoint
-   LISTENERS__ETHEREUM__RPCURL=LISTENERS__ETHEREUM__RPCURL
+   LISTENERS__ETHEREUM__RPCURL=<your_ethereum_rpc_endpoint>
  
-   # The latest version of the bridge's image as listed in https://docs.roninchain.com/bridge-operators/setup/upgrade-bridge-operator
-   BRIDGE_IMAGE=BRIDGE_IMAGE
+   # The latest version of the bridge's image as listed in https://docs.roninchain.com/bridge-operators/setup/upgrade-bridge
+   BRIDGE_IMAGE=<your_bridge_image_version>
  
    # Your bridge operator private key without the 0x prefix
-   LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY=LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY
+   LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY=<your_bridge_operator_private_key>
  
    # If you're a governor, uncomment this line and replace with your bridge voter key, without the 0x prefix
-   # BRIDGE_VOTER_PRIVATE_KEY=BRIDGE_VOTER_PRIVATE_KEY
+   # BRIDGE_VOTER_PRIVATE_KEY=<your_bridge_voter_private_key>
  
    DATABASE__DBNAME=bridge
    DATABASE__USER=postgres
  
    # The Postgres database password
-   DATABASE__PASSWORD=DATABASE__PASSWORD
+   DATABASE__PASSWORD=<your_db_password>
  
    CONFIG_PATH=config.mainnet.json
    VERBOSITY=3
  
-   LISTENERS__RONIN__RPCURL=<replace_your_rpc_endpoint>
+   LISTENERS__RONIN__RPCURL=<your_ronin_rpc_endpoint>
  
    LISTENERS__RONIN__TASKINTERVAL=3s
    LISTENERS__RONIN__TRANSACTIONCHECKPERIOD=50s
@@ -159,15 +146,16 @@ The size of your Ronin node will also grow over time.
    LISTENERS__RONIN__STATS__SECRET=WSyDMrhRBe111
    ```
 
-1. Start the bridge operator
+4. Start the bridge node:
 
    ```bash
    cd ~/ronin-bridge && docker-compose up -d
    ```
 
-   This command pulls a Ronin node image, a bridge image, a Postgres database, and starts the services you defined.
-1. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
-1. Review the log for the bridge.
+   This command pulls the bridge image and a Postgres database, and starts the services you defined.
+
+5. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
+6. Review the log for the bridge.
 
    ```bash
    docker logs node -f --tail 100
@@ -182,9 +170,11 @@ Whenever you wish to verify that your node is working, run the following comman
 docker-compose logs bridge | head -n 20
 ```
 
-Verify that the operator account address in the response matches your registered
+Make sure that the "Operator account" address in the response matches your registered
 bridge operator address. If you're a Governing Validator, also check that the
-voter account address matches the registered bridge voter address.
+"Voter account" address matches your registered bridge voter address.
+
+Here's an example:
 
 ```bash
 bridge     | INFO [03-22|07:59:10.368] [RoninListener] Operator account         address=0x2e82D2b56f858f79DeeF11B160bFC4631873da2B

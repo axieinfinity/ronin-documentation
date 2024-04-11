@@ -65,22 +65,22 @@ Validators who fail to fulfill their responsibilities are subject to [slashing](
 
 ## Bridge operator
 
-A bridge operator is someone who runs a *bridge operator node* to manage deposit and withdrawal events on Ronin Bridge. The purpose of Ronin Bridge is facilitating asset transfers between Ronin and other Ethereum Virtual Machine (EVM)-based chains. 
+A bridge operator is someone who runs a *bridge node* to listen for deposit and withdrawal events on Ronin Bridge and relay the events to other users, and govern the bridge with the other bridge operators through a governance process.
 
 ### Bridge operator responsibilities
 
 Bridge operators are in charge of the following:
 
-* Operating a bridge operator node.
+* Operating a bridge node.
 * Governing Ronin Bridge.
 
-#### Operating a bridge operator node
+#### Operating a bridge node
 
-Bridge operators run a bridge operator node and keep the node's software up to date.
+Bridge operators run a bridge node and keep the node's software up to date.
 
 ### Governance
 
-Bridge operators can propose and vote on changes to Ronin Bridge, such as pausing the bridge and adding or removing other bridge operators.
+Bridge operators can propose and vote on changes to the Ronin Bridge, such as pausing the bridge and adding or removing other bridge operators.
 
 ### Slashing rules
 
