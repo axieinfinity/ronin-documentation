@@ -35,7 +35,7 @@ cd ronin
 make ronin
 ```
 
-The `make ronin` command creates a `ronin` binary in the `.build/bin` directory.
+The `make ronin` command creates a `ronin` binary in the `./build/bin` directory.
 
 ## Step 3. Add the binary to PATH
 
