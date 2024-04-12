@@ -23,33 +23,14 @@ Install Docker Engine and the Docker Compose plugin:
 
 ### RPC endpoints
 
-Have two RPC endpoints:
+Have two RPC endpoints ready:
 
-* Ronin RPC endpoint for listening and sending events on the Ronin chain.
-  * Ronin mainnet: `https://api.roninchain.com/rpc`
-  * Saigon testnet: `https://saigon-testnet.roninchain.com/rpc`
+* Ronin RPC endpoint for listening and sending events on the mainnet: `https://api.roninchain.com/rpc`.
 * Ethereum RPC endpoint for listening and sending events on the Ethereum chain, such as [Alchemy](https://www.alchemy.com/overviews/private-rpc-endpoint) or Infura.
 
-### Private keys
+### Private key
 
-Generate private keys:
-
-* Generate a key for the bridge operator.
-* If you're a Governing Validator, generate one more key for the bridge voter.
-
-For instructions, see [Generate keys](./../../validators/setup/generate-keys.md).
-
-### System requirements
-
-Recommended system requirements for running a bridge on the mainnet:
-
-* 4-core CPU
-* 8 GB RAM
-* 100 GB high-speed SSD
-* x86-64 architecture
-
-These requirements are rough guidelines, and each node operator
-should monitor their node to ensure good performance for the intended task.
+Generate a private key for operating the bridge node. For instructions, see [Generate keys](./../../validators/setup/generate-keys.md).
 
 ## Run the node
 
@@ -60,7 +41,7 @@ should monitor their node to ensure good performance for the intended task.
    cd ~/ronin-bridge/docker/
    ```
 
-2. In the `docker` directory, create a `docker-compose.yaml` file with the following configuration:
+2. In the `docker` directory, create a `docker-compose.yml` file with the following configuration:
 
    ```yaml
    version: "3.1"
@@ -83,7 +64,6 @@ should monitor their node to ensure good performance for the intended task.
        container_name: bridge
        environment:
          - LISTENERS__RONIN__RPCURL=${LISTENERS__RONIN__RPCURL}
-         - RONIN_BRIDGE_VOTER_KEY=${BRIDGE_VOTER_PRIVATE_KEY}
          - LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY=${LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY}
          - LISTENERS__ETHEREUM__RPCURL=${LISTENERS__ETHEREUM__RPCURL}
          - DATABASE__HOST=db
@@ -106,42 +86,41 @@ should monitor their node to ensure good performance for the intended task.
 
    This compose file defines two services:
 
-     * `bridge` that build the bridge service.
+     * `bridge` that pulls a bridge image.
      * `db` that builds a Postgres database for the bridge.
 
-3. In the same directory, create an `.env` file and add the following content, replacing the `<...>` placeholder values with your information:
+3. In the `docker` directory, create an `.env` file and add the following content, replacing the `<...>` placeholder values with your information:
 
    ```text
    # Your Ethereum RPC endpoint
-   LISTENERS__ETHEREUM__RPCURL=<your_ethereum_rpc_endpoint>
+   LISTENERS__ETHEREUM__RPCURL=<ETHEREUM_RPC_ENDPOINT>
  
    # The latest version of the bridge's image as listed in https://docs.roninchain.com/bridge-operators/setup/upgrade-bridge
-   BRIDGE_IMAGE=<your_bridge_image_version>
+   BRIDGE_IMAGE=<BRIDGE_IMAGE>
  
    # Your bridge operator private key without the 0x prefix
-   LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY=<your_bridge_operator_private_key>
- 
-   # If you're a governor, uncomment this line and replace with your bridge voter key, without the 0x prefix
-   # BRIDGE_VOTER_PRIVATE_KEY=<your_bridge_voter_private_key>
+   LISTENERS__RONIN__SECRET__BRIDGEOPERATOR__PLAINPRIVATEKEY=<BRIDGE_OPERATOR_PRIVATE_KEY>
  
    DATABASE__DBNAME=bridge
    DATABASE__USER=postgres
  
    # The Postgres database password
-   DATABASE__PASSWORD=<your_db_password>
+   DATABASE__PASSWORD=<DATABASE_PASSWORD>
  
    CONFIG_PATH=config.mainnet.json
    VERBOSITY=3
- 
-   LISTENERS__RONIN__RPCURL=<your_ronin_rpc_endpoint>
+
+   # Ronin RPC endpoint
+   LISTENERS__RONIN__RPCURL=<RONIN_RPC_ENDPOINT>
  
    LISTENERS__RONIN__TASKINTERVAL=3s
    LISTENERS__RONIN__TRANSACTIONCHECKPERIOD=50s
    LISTENERS__RONIN__MAXPROCESSINGTASKS=200
    LISTENERS__ETHEREUM__GETLOGSBATCHSIZE=100
  
- 
-   LISTENERS__RONIN__STATS__NODE=<your_node_name>
+   # The name of your node that you want displayed on https://ronin-stats.roninchain.com/
+   LISTENERS__RONIN__STATS__NODE=<NODE_NAME>
+   
    LISTENERS__RONIN__STATS__HOST=wss://ronin-stats-ws.roninchain.com/bridge
    LISTENERS__RONIN__STATS__SECRET=WSyDMrhRBe111
    ```
@@ -171,12 +150,10 @@ docker-compose logs bridge | head -n 20
 ```
 
 Make sure that the "Operator account" address in the response matches your registered
-bridge operator address. If you're a Governing Validator, also check that the
-"Voter account" address matches your registered bridge voter address.
+bridge operator address.
 
 Here's an example:
 
 ```bash
 bridge     | INFO [03-22|07:59:10.368] [RoninListener] Operator account         address=0x2e82D2b56f858f79DeeF11B160bFC4631873da2B
-bridge     | INFO [03-22|07:59:10.368] [RoninListener] Voter account            address=0x2295EdAA6BD5c07fB3227628c62Af12248106667
 ```

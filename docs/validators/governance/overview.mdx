@@ -9,14 +9,13 @@ mechanism.
 
 Governing Validators can propose and vote on the following types of changes:
 
-* Upgrade smart contracts
-* Change thresholds
+* Update smart contracts
 * Add Governing Validators
 * Remove Governing Validators
 
 A governor creates a new proposal
 for other governors to vote on. If at least 70% of the
-governors approve the proposal, the change is applied.
+governors approve the proposal, the change is approved and executed.
 
 The governance voting method is serial by design: only one governance
 vote can be held at a time, and that vote must be completed before moving
@@ -25,14 +24,11 @@ to a new vote.
 Conceptually, you can think of the governor as a cold wallet while the
 validator is a hot wallet.
 
-:::tip
-Store your governor credentials in a hardware wallet and use them only
-when a vote is required. This way, attackers have a much harder
-time accessing your validator nodes, and the overall risk of network
-exploitation is significantly reduced.
+:::caution
+For enhanced security, store your governor credentials in a hardware wallet and use them only
+when a vote is required.
 :::
 
 ## Next steps
 
-* [Create a proposal](create-proposal.mdx)
-* [Vote on a proposal](vote-on-proposal.mdx)
+[Create and vote on proposals](./proposals.mdx)

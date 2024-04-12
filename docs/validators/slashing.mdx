@@ -8,7 +8,6 @@ import doubleSign from './assets/double-sign.png';
 import valSlashTierOne from './assets/validator-tier-1.png';
 import valSlashTierTwo from './assets/validator-tier-2.png';
 import valSlashTierThree from './assets/validator-tier-3.png';
-import relayingSlash from './assets/relaying-slash.png';
 
 import creditScore from './assets/credit-score.png';
 import stepOne from './assets/validator-tier-2.png';
@@ -115,25 +114,6 @@ self-delegated RON.
 
 The validator's status is set to **In Jail**.
 
-### Relaying slash
-
-If a Governing Validator doesn’t sync the set of bridge
-operators to the Ethereum chain for three consecutive days,
-the following penalties apply:
-
-* The validator is slashed 10,000 of self-delegated RON.
-* The validator doesn't earn commission on the day of slashing.
-
-The validator's status is set to **Punished**.
-
-<img src={relayingSlash} width={1224} />
-
-### Multiple slashes
-
-Validators might experience multiple concurrent slashes if they have issues
-with both their validator node and bridge node, and the relaying
-responsibilities of the Governing Validator.
-
 ## Bailout
 
 If you're in [tier 2 validator slashing](#tier-2-validator-slashing), you can bail out
@@ -165,6 +145,6 @@ self-stake amount.
 3. Review the terms of bailout and click **Submit**. 
 <img src={stepTwo} width={400} />
 
-If you bail out on the same day you got slashed, you still receive $50\%$
+If you bail out on the same day you got slashed, you still receive 50%
 of the commission and staking reward from the time you bailed
 out until the end of the day.

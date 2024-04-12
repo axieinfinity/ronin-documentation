@@ -13,53 +13,31 @@ This guide demonstrates how to run a validator node on the mainnet using Docker.
 
 ### Docker
 
-* Install [Docker Engine](https://docs.docker.com/engine/install/)
-* Install [Docker Compose plugin](https://docs.docker.com/compose/install/)
+Install Docker Engine and the Docker Compose plugin:
+
+* [Docker Engine](https://docs.docker.com/engine/)
+* [Docker Compose](https://docs.docker.com/compose/)
 
 ### Private key
 
-Generate a private key for your validator node as described in [Generate keys](./../generate-keys.md).
-
-### System requirements
-
-Recommended system requirements for running a validator node on the mainnet:
-
-* 8-core CPU
-* 32 GB RAM
-* 700 GB high-speed SSD
-* x86-64 architecture
-
-These requirements are rough guidelines, and each node operator
-should monitor their node to ensure good performance for the intended task.
-The size of your node will also grow over time.
+Generate a private key for your validator node. For more information, see [Generate keys](../generate-keys.md).
 
 ## Run the node
 
 1. Set up directories:
 
    ```bash
-   mkdir ~/ronin
-   ```
-
-   Go to the newly created directory:
-
-   ```bash
+   mkdir -p ~/ronin/docker
    cd ~/ronin
    ```
 
-   Create a chain data directory:
+   Create a directory for chain data:
 
    ```bash
    mkdir -p chaindata/data/ronin
    ```
 
-2. Create a file called `docker-compose.yml`:
-
-   ```bash
-   vim docker-compose.yml
-   ```
-
-3. Paste the following into `docker-compose.yml`:
+2. In the `docker` directory, create a `docker-compose.yml` file with the following configuration:
 
    ```yaml
    version: "3"
@@ -96,34 +74,28 @@ The size of your node will also grow over time.
          - BLS_SHOW_PRIVATE_KEY=${BLS_SHOW_PRIVATE_KEY}
    ```
 
-   This compose file defines the `node` service, which pulls the Ronin node image from the GitHub Container Registry.
-4. Create an `.env` file to store configuration parameters for the service:
-
-   ```bash
-   vim .env
-   ```
-
-5. Paste the following into `.env` and replace placeholder values (like *`INSTANCE_NAME`*) with your node's information:
+   This compose file defines the `node` service that pulls a Ronin node image from the GitHub Container Registry.
+3. In the `docker` directory, create an `.env` file and add the following content, replacing the `<...>` placeholder values with your information:
 
    ```text
    # The name of your node that you want displayed on https://ronin-stats.roninchain.com/
-   INSTANCE_NAME=INSTANCE_NAME
+   INSTANCE_NAME=<INSTANCE_NAME>
  
    # The latest version of the node's image as listed in https://docs.roninchain.com/validators/setup/upgrade-validator
-   NODE_IMAGE=NODE_IMAGE
+   NODE_IMAGE=<NODE_IMAGE>
  
    # Your validator private key without the 0x prefix
-   VALIDATOR_PRIVATE_KEY=VALIDATOR_PRIVATE_KEY
+   VALIDATOR_PRIVATE_KEY=<VALIDATOR_PRIVATE_KEY>
  
    # The password used to encrypt the node's private key file
-   PASSWORD=PASSWORD
+   PASSWORD=<PASSWORD>
  
    # BLS Wallet features
    # Your BLS private key without the 0x prefix
-   BLS_PRIVATE_KEY=BLS_PRIVATE_KEY_WITHOUT_0x
+   BLS_PRIVATE_KEY=<BLS_PRIVATE_KEY>
  
    # The password used to encrypt the BLS private key file
-   BLS_PASSWORD=BLS_PASSWORD
+   BLS_PASSWORD=<BLS_PASSWORD>
  
    # Whether to participate in the finality vote broadcast
    ENABLE_FAST_FINALITY=true
@@ -149,27 +121,27 @@ The size of your node will also grow over time.
    RONIN_PARAMS=--http.api eth,net,web3,consortium --miner.gaslimit 100000000 --miner.gasreserve 10000000 --discovery.dns enrtree://AIGOFYDZH6BGVVALVJLRPHSOYJ434MPFVVQFXJDXHW5ZYORPTGKUI@nodes.roninchain.com
    ```
 
-6. (Optional) Download the snapshot from the [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repo:
+4. (Optional) Download the snapshot from the [ronin-snapshot](https://github.com/axieinfinity/ronin-snapshot) repo:
 
    ```bash
    cd ~/ronin/chaindata/data/ronin/
    wget -q -O - <snapshot URL from the README file in the repo> | tar -I zstd -xvf -
    ```
 
-7. Start the node:
+5. Start the node:
 
    ```bash
    cd ~/ronin && docker-compose up -d
    ```
 
    This command pulls a Ronin node image and starts the service you defined.
-8. Review the log:
+6. Review the log:
 
    ```bash
    docker logs node -f --tail 100
    ```
 
-9. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
+7. After a few minutes, check the status of your node on the [Ronin Network Status](https://ronin-stats.roninchain.com/) page. If it's green, the node is connected and up to date with the network.
 
 ## Verify the node is working
 

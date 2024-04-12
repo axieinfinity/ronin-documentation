@@ -299,10 +299,8 @@ const sidebars = {
             id: 'validators/governance/overview',        
           },
           items: [
-            // Create a proposal
-            'validators/governance/create-proposal',
-            // Vote on a proposal
-            'validators/governance/vote-on-proposal',
+            // Create and vote on proposals
+            'validators/governance/proposals',
           ],
         },
         // FAQ
@@ -329,6 +327,9 @@ const sidebars = {
             'bridge-operators/setup/upgrade-bridge',
           ],
         },
+        // Slashing
+        'bridge-operators/slashing',
+        // Governance
         {
           type: 'category',
           label: 'Governance',
@@ -337,11 +338,10 @@ const sidebars = {
             id: 'bridge-operators/governance/overview',        
           },
           items: [
-            'bridge-operators/governance/create-proposal',
-            'bridge-operators/governance/vote-on-proposal',
+            // Create and vote on proposals
+            'bridge-operators/governance/proposals',
           ],
         },
-        'bridge-operators/slashing',
       ],
     },
   ],
