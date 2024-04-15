@@ -1,5 +1,6 @@
 ---
 description: Hardware recommendations and methods of installation for validator nodes.
+sidebar_label: Setup
 title: Validator node
 ---
 
@@ -18,14 +19,25 @@ For testnet installation guides, see [Saigon testnet](./testnet/).
 
 ## Hardware requirements
 
-To run a reliable, performant node on the Ronin mainnet, we suggest that the node’s hardware profile should match or exceed the following specifications:
+To run a reliable, performant node, we suggest that the node’s hardware profile should match or exceed the following specifications:
 
-|   Validator node          |   Non-validator node      |   Archive node         |   Bridge operator         |
+### Ronin mainnet
+
+|   Validator node          |   Non-validator node      |   Archive node         |   Bridge node         |
 |---------------------------|---------------------------|------------------------|---------------------------|
 |   8-core CPU              |   6-core CPU              |   8-core CPU           |   4-core CPU              |
 |   32 GB RAM               |   25 GB RAM               |   32 GB RAM            |   8 GB RAM                |
 |   700 GB high-speed SSD   |   700 GB high-speed SSD   |   7 TB high-speed SSD  |   100 GB high-speed SSD   |
 |   x86-64 architecture     |   x86-64 architecture     |   x86-64 architecture  |   x86-64 architecture     |
+
+### Saigon testnet
+
+|   Validator node          |   Non-validator node      |   Archive node         |   Bridge node         |
+|---------------------------|---------------------------|------------------------|---------------------------|
+|   2-core CPU              |   6-core CPU              |   4-core CPU           |   -              |
+|   8 GB RAM               |   8 GB RAM               |   8 GB RAM            |   -                |
+|   100 GB high-speed SSD   |   100 GB high-speed SSD   |   250 GB SSD  |   -   |
+|   x86-64 architecture     |   x86-64 architecture     |   x86-64 architecture  |   -     |
 
 These hardware requirements are rough guidelines, and each node operator should monitor their node to ensure good performance for the intended task. The size of your Ronin node will also grow over time.
 
@@ -34,7 +46,7 @@ These hardware requirements are rough guidelines, and each node operator should 
 We offer two different methods of installing nodes:
 
 * The [Docker](/tags/docker-mainnet) method describes the installation of Ronin nodes as Docker instances, for those comfortable with Docker. Two different approaches to setting up your nodes using Docker are described in the following sections.
-* The [CLI](/tags/cli) (command line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build your node using Ronin CLI](./../setup/cli.md).
+* The [CLI](/tags/cli) (command-line interface) method uses a CLI tool to compile your own node binary from source. For more information, see [Build a node from source](./../setup/cli.md).
 
 ### Choose an approach
 
@@ -56,12 +68,12 @@ Follow this guide for a combined setup:
 
 #### Standalone setup
 
-In a standalone setup, the validator node and the bridge operator are defined in two different `docker-compose.yml` configurations and run on two machines, respectively. In this approach, a non-validator node runs alongside the bridge component, allowing you to isolate the resources between the validator and the bridge for enhanced reliability and security.
+In a standalone setup, the validator node and the bridge node are defined in two different `docker-compose.yml` configurations and run on two machines, respectively.
 
 ![standalone-setup](./assets/standalone-setup.svg)
 
 Follow these guides for a standalone setup:
 <DocCardList items={[
     findSidebarItem('/validators/setup/mainnet/run-validator'),
-    findSidebarItem('/bridge-operators/setup/run-bridge-operator'),
+    findSidebarItem('/bridge-operators/setup/run-bridge'),
     ]} />

@@ -1,8 +1,7 @@
 ---
-description: Parameters of the Saigon testnet.
+description: Specifications of the Saigon testnet.
+title: Saigon testnet
 ---
-
-# Saigon testnet
 
 ## Parameters
 

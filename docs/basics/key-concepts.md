@@ -47,9 +47,13 @@ To attach a BLS key to a validator, either a new validator must be created or an
 
 A blockchain bridge—also known as a cross-chain bridge—allows independent blockchains to communicate with each other. This allows users to transfer crypto assets from one blockchain to another, including tokens, wrapped cryptocurrencies, and non-fungible tokens (NFTs). For example, [Ronin Bridge](https://bridge.roninchain.com/) is used for asset transfer between the Ronin chain and the Ethereum mainnet.
 
+### Bridge node
+
+A bridge node is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge.
+
 ### Bridge operator
 
-A bridge operator is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge.
+A bridge operator is an individual or institution that runs a bridge node.
 
 ## C
 
@@ -143,7 +147,7 @@ A mainnet is a fully developed and released version of a blockchain network. Thi
 
 ### Node
 
-A node is a computer that performs a certain function on a blockchain network
+A node is essentially a computer that performs a certain function on a blockchain network
 and runs client software in order to do so. Some nodes validate transactions,
 while others observe activity on the blockchain. Nodal network structure is
 also a key aspect of maintaining security on a blockchain network.
@@ -155,10 +159,9 @@ On Ronin, the node types are as follows:
     * Validator node
     * Non-validator node
   * Archive node
-* Bridge operator node
+* Bridge node
 
-For more information about the Ronin nodes and the bridge operator, see
-[Nodes](nodes.md).
+For more information about nodes, see [Nodes](nodes.md).
 
 ## P
 
@@ -251,9 +254,7 @@ In a blockchain context, a transaction (TX) generally refers to the sending and 
 
 A validator is an individual or institution that validates transactions and generates blocks within a blockchain by running a validator node. Blockchain protocols have their own parameters for what constitutes an acceptable validator and how it operates.
 
-There are three types of validators on Ronin: Validator Candidates, Standard Validators, and Governing Validators. Standard Validators participate in block production and operate Ronin Bridge. Governing Validators act as Standard Validators but also govern the network through proposals.
-
-In this documentation, a distinction is made between a validator and a node operator. The former is responsible for managing the validator's profile, claiming rewards, and performing other GUI-related tasks, while the latter is in charge of setting up and running the client software on the node.
+There are three types of validators on Ronin: Validator Candidates, Standard Validators, and Governing Validators. Standard Validators participate in block production. Governing Validators govern the Ronin network through creating and voting on proposals, in addition to producing blocks like Standard Validators do.
 
 It's also common to use the term "validator" to refer to the validator node itself.
 

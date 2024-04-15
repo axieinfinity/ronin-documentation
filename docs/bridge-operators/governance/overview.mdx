@@ -1,28 +1,36 @@
 ---
 description: Overview of on-chain governance for bridge operators.
 sidebar_label: Overview
-title: Bridge operator governance
+title: Bridge governance
 ---
 
-Ronin's governance process is conducted via a decentralized voting
-mechanism. Each bridge operator has a corresponding bridge operator
-address. 
+The bridge's governance process is conducted via a decentralized voting
+mechanism. Each bridge operator a corresponding bridge governor
+address that is used for proposing and voting.
 
 Bridge operators can propose and vote on the following types of changes:
 
 * Pause the bridge
 * Add bridge operators
 * Remove bridge operators
+* Update withdrawal thresholds
 
 A bridge operator creates a new proposal
-for other operators to vote on. If at least 70% of the
-operators approve the proposal, the change is applied.
+for the other operators to vote on. If at least 70% of the
+operators approve the proposal, the change is approved and executed.
 
 The governance voting method is serial by design: only one governance
 vote can be held at a time, and that vote must be completed before moving
-to a new vote. 
+to a new vote.
+
+Conceptually, you can think of the governor as a cold wallet while the
+validator is a hot wallet.
+
+:::caution
+For enhanced security, store your governor credentials in a hardware wallet and use them only
+when a vote is required.
+:::
 
 ## Next steps
 
-* [Create a proposal](./create-proposal.mdx)
-* [Vote on a proposal](./vote-on-proposal.mdx)
+[Create and vote on proposals](./proposals.mdx)

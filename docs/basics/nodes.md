@@ -11,13 +11,13 @@ There are two types of nodes on Ronin:
   * Non-validator node
   * Validator node
   * Archive node
-* Bridge operator node
+* Bridge node
 
 The following section describes each type in detail.
 
 ## What is a Ronin node?
 
-The Ronin node ([GitHub](https://github.com/axieinfinity/ronin)) is the building block of the Ronin network infrastructure. Nodes connect together to conduct consensus on transactions, maintain the ledger, and provide other useful functions.
+A Ronin node ([GitHub](https://github.com/axieinfinity/ronin)) is the building block of the Ronin network infrastructure. Nodes connect together to conduct consensus on transactions, maintain the ledger, and provide other useful functions.
 
 The Ronin node can be configured in three different ways depending on the purpose:
 
@@ -29,8 +29,8 @@ subsequent block, and earning RON tokens as a reward. These are the nodes that a
 
 Validator and non-validator are considered *full* nodes—they store full blockchain data, which is periodically pruned so the node does not store all state data back to genesis. The archive node, on the other hand, stores all of the information that a full node does but also builds an archive of historical states all the way back to genesis.
 
-A validator node starts life as a full node, but has also “registered” itself to the network as a validator, which means that it may now accept RON token stake and potentially be included in the validator set that conduct network consensus.
+A validator node starts its life as a full node, but has also “registered” itself to the network as a validator, which means that it may now accept RON token stake and potentially be included in the validator set that conduct network consensus.
 
-## What is a bridge operator node?
+## What is a bridge node?
 
-A *bridge operator node* ([GitHub](https://github.com/axieinfinity/bridge-v2)), also referred to as the bridge operator, is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge—the blockchain bridge that facilitates asset transfers between Ronin and other EVM-based chains.
+A *bridge node* ([GitHub](https://github.com/axieinfinity/bridge-v2)) is a type of node used for acknowledging deposit and withdrawal events on Ronin Bridge—the blockchain bridge that facilitates asset transfers between Ronin and Ethereum.
